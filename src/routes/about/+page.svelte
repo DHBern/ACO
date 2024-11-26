@@ -167,15 +167,15 @@
 	<div class="grid grid-cols-3 gap-2">
 		<div>
 			<p>Deutsche Forschungsgemeinschaft (DFG)</p>
-			<img src="/images/kg_projekt_ephesus.jpg" alt="Logo DFG" class="w-[200px]" />
+			<img src="/logos/logo-dfg.jpg" alt="Logo DFG" class="w-[200px]" />
 		</div>
 		<div>
 			<p>Universität Bonn</p>
-			<img src="/images/kg_projekt_ephesus.jpg" alt="Logo Universität Bonn" class="w-[200px]" />
+			<img src="/logos/logo-unibonn.jpg" alt="Logo Universität Bonn" class="w-[200px]" />
 		</div>
 		<div>
 			<p>Universität Bern</p>
-			<img src="/images/kg_projekt_ephesus.jpg" alt="Logo Universität Bern" class="w-[200px]" />
+			<img src="/logos/logo-unibe.jpg" alt="Logo Universität Bern" class="w-[200px]" />
 		</div>
 	</div>
 </div>
