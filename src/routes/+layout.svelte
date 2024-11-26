@@ -6,7 +6,7 @@
 
 <!-- Menu -->
 <nav
-	class="items-between absolute left-0 top-0 flex h-[80px] w-full flex-row justify-start gap-12 bg-blue-100"
+	class="items-between absolute left-0 top-0 flex h-[80px] w-full flex-row justify-start gap-12 bg-[#105766] text-white"
 >
 	<button
 		onclick={() => {
