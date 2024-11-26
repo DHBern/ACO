@@ -1,4 +1,4 @@
-<div class="prose prose-invert">
+<div class="prose">
 	<h1>ACO</h1>
 	<h2>Die Akten des Konzils von Ephesus 431</h2>
 	<p>
