@@ -11,6 +11,4 @@
 		gefördert und ist als Langfristvorhaben auf einen Zeitraum von zehn Jahren angesetzt
 		(2016–2026).
 	</p>
-	<p>delete me</p>
-	 @SF
 </div>
