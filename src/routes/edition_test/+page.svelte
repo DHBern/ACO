@@ -103,11 +103,22 @@
 	}
 
 	function handleMarkClick(ev) {
-		const ids = JSON.parse(ev.target.getAttribute('note_ids'));
+		if (!ev.target.hasAttribute('note_id')) return;
+
+		// accepted `note_id`s:
+		// - 1: string,
+		// - 2: stringified array of strings
+
+		let ids = [];
+		try {
+			ids = JSON.parse(ev.target.getAttribute('note_id'));
+		} catch (error) {
+			ids = [ev.target.getAttribute('note_id')];
+		}
+
 		switch (ids.length) {
 			case 0:
 				return;
-				break;
 			case 1:
 				changeSelectedNote(ids[0]);
 				moveNote(ids[0]);
@@ -315,7 +326,7 @@
 		id="containerMainText"
 		class={['maintext relative col-span-1 col-start-2', { copyWithoutLinebreaks }]}
 		onclick={(ev) => {
-			console.log(ev.target);
+			// console.log(ev.target);
 			handleMarkClick(ev);
 		}}
 	>
