@@ -59,7 +59,6 @@
 		// Remove line numbers
 		return text.replace(/<a[^>]*[line|page]="[^"]*"[^>]*><\/a>/g, '').trim();
 	}
-	function insertNoteSpan(texts, note_id) {}
 
 	function extractNotes(text) {
 		// Match noteIds
@@ -85,7 +84,7 @@
 
 		// Insert line-number as text at every 5th line
 		const numbersText = linesText.replace(/<a line='(\d+)'><\/a>/g, (match, lineNumber) => {
-			return `<a class="line-number" href="${lineNumber}" line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='buffer'>_________</span>"}</a>`;
+			return `<a class="line-number" href="${lineNumber}" line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='buffer'>___</span>"}</a>`;
 			// return `<a class="line-number ${lineNumber % 5 ? 'line-number-hidden' : ''}" href="${lineNumber}" line="${lineNumber}">${lineNumber}<span class='buffer'>___</span></a>`;
 		});
 
@@ -289,7 +288,7 @@
 
 <div
 	id="scrollContainer"
-	class="grid h-screen w-full grid-cols-[90px,700px,50px,600px] overflow-x-hidden overflow-y-scroll border border-r-black"
+	class="grid h-screen w-full grid-cols-[90px,750px,60px,600px] overflow-x-hidden overflow-y-scroll border border-r-black"
 >
 	<!-- Metadata -->
 	<div
@@ -398,11 +397,17 @@
 		}
 	}
 	:global(a.line-number::after) {
-		content: '●●';
-		color: white;
+		content: '';
+		background-image: url(/icons/link.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-left: 10px;
+		width: 1em; /* Adjust width as needed */
+		height: 1em; /* This makes it scale with line-height */
+		display: none;
 	}
 	:global(a.line-number:hover::after) {
-		color: grey;
+		display: inline-block;
 	}
 	:global(.buffer) {
 		user-select: none;
