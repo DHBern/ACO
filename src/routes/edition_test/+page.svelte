@@ -15,13 +15,15 @@
 	let notes = $derived(data.notes);
 
 	const MARGIN_NOTEBOX = 10; // in px
-	let selectedNote = $state('');
+	let selectedNote = $state({ id: '' });
 	let popupNoteIds = $state([]);
+	$inspect(popupNoteIds);
 	let copyWithoutLinebreaks = $state(false);
 
 	// Measuring Offsets and Overlaps
 	// Note: .offsetTop and .style.top are measured relative to the next *positioned* parent. So make sure that this is the parent column.
-	// Note: .offsetTop contains a snapshot and is unreliable, when using css-transitions on the .top property! To work around this, instead use transform.translateY() and restrict the css-transition to the transform property.
+	// Note: .top is fixed at the reference height in the text while for the offset transform.translateY is used.
+	// Note: .offsetTop and .transform.translateY return a snapshot of a potentially moving element. Hence, they are unreliable together with css-transitions. As a workaround the offset is also stored in an additional attribute "instantTranslateY" which can be read from at any time.
 	function setTranslateY(el, value) {
 		if (!el) return;
 		el.style.transform = `translateY(${value}px)`;
@@ -50,14 +52,68 @@
 		return getOffsetTopAtTop(el) + el?.offsetHeight + 2 * MARGIN_NOTEBOX;
 	}
 
-	function generateMainText(text) {
-		// Transform lib-number
-		// text = text.replace(/<a\ lib='(I+)'><\/a>/g, (match, libNumber) => {
-		// 	return `<a class="lib-number" lib="${libNumber}">Buch ${libNumber}</a>`;
-		// });
+	function insertSomeNoteSpans(text) {
+		//!CHECK this function was written by ChatGPT. It works but it seems a bit redundant in the bottom part. Maybe this can be simplified.
 
+		let openIds = []; // Stack to track open <note_start> IDs
+		let result = ''; // Final transformed text
+		let lastIndex = 0; // Track last processed position
+
+		text.replace(
+			/<note_start note_id='([^']*)'><\/note_start>|<note_end note_id='([^']*)'><\/note_end>/g,
+			(match, startId, endId, offset) => {
+				// Capture text before this match
+				let precedingText = text.slice(lastIndex, offset);
+				if (precedingText.trim()) {
+					// Avoid wrapping empty spaces
+					let idsAttribute =
+						openIds.length > 1 ? `[${openIds.map((id) => `"${id}"`).join(',')}]` : openIds[0] || '';
+					if (idsAttribute) {
+						result += `<span ${openIds.length > 1 ? "class='multiple-ids'" : ''} note_ids='${idsAttribute}'>${precedingText}</span>`;
+					} else {
+						result += precedingText; // Preserve text without wrapping
+					}
+				}
+
+				if (startId) {
+					// Handle <note_start> tag
+					openIds.push(startId);
+					result += `<note_start note_id='${startId}'></note_start>`;
+				} else if (endId) {
+					// Handle <note_end> tag
+					result += `</span><note_end note_id='${endId}'></note_end>`;
+					openIds = openIds.filter((id) => id !== endId); // Remove closed ID
+				}
+
+				lastIndex = offset + match.length;
+			}
+		);
+
+		// Append remaining text after last match
+		let remainingText = text.slice(lastIndex);
+		if (remainingText.trim()) {
+			let idsAttribute =
+				openIds.length > 1 ? `[${openIds.map((id) => `"${id}"`).join(',')}]` : openIds[0] || '';
+			if (idsAttribute) {
+				result += `<span note_ids='${idsAttribute}'>${remainingText}</span>`;
+			} else {
+				result += remainingText;
+			}
+		}
+
+		return result.replace(/<\/span><note_end/g, '</span> <note_end'); // Ensure proper spacing before <note_end> tags
+	}
+
+	function generateMainText(text) {
 		// Remove line numbers
-		return text.replace(/<a[^>]*[line|page]="[^"]*"[^>]*><\/a>/g, '').trim();
+		text = text.replace(/<a[^>]*[line|page]="[^"]*"[^>]*><\/a>/g, '');
+		// Insert spans
+		text = insertSomeNoteSpans(text);
+		// Transform lib-number
+		text = text.replace(/<a\ lib='(I+)'><\/a>/g, (match, libNumber) => {
+			return `<a class="lib-number" lib="${libNumber}">Buch ${libNumber}</a>`;
+		});
+		return text.trim();
 	}
 
 	function extractNotes(text) {
@@ -103,24 +159,29 @@
 	}
 
 	function handleMarkClick(ev) {
-		if (!ev.target.hasAttribute('note_id')) return;
-
-		// accepted `note_id`s:
+		if (!ev.target.hasAttribute('note_ids')) {
+			unselectNote();
+			return;
+		}
+		// accepted `note_ids`s:
 		// - 1: string,
 		// - 2: stringified array of strings
 
 		let ids = [];
+		// console.log('yuuuh', JSON.parse(ev.target.getAttribute('note_ids')));
+
 		try {
-			ids = JSON.parse(ev.target.getAttribute('note_id'));
+			//!FIX
+			ids = JSON.parse(ev.target.getAttribute('note_ids'));
 		} catch (error) {
-			ids = [ev.target.getAttribute('note_id')];
+			ids = [ev.target.getAttribute('note_ids')];
 		}
 
 		switch (ids.length) {
 			case 0:
 				return;
 			case 1:
-				changeSelectedNote(ids[0]);
+				selectNote(ids[0]);
 				moveNote(ids[0]);
 				break;
 			default:
@@ -129,33 +190,29 @@
 	}
 
 	function handleNoteClick(id) {
-		changeSelectedNote(id);
+		selectNote(id);
 		moveNote(id);
-		insertNoteSpan(mainTexts, id);
+		// insertNoteSpan(mainTexts, id);
 	}
 	function handlePopupClick(id) {
-		changeSelectedNote(id);
+		selectNote(id);
 		moveNote(id);
 		popupNoteIds = [];
 	}
 
-	function changeSelectedNote(id) {
-		// Remove old highlights
-		if (selectedNote) {
-			const elNoteRefPrev = document.querySelector(`note_start[note_id=${selectedNote}]`);
-			const elNoteEndPrev = document.querySelector(`note_end[note_id=${selectedNote}]`);
+	function unselectNote() {
+		console.log('unselecting: ', selectedNote.id);
+
+		// Remove highlight class on <note_start> and <note_end>
+		if (selectedNote.id) {
+			const elNoteRefPrev = document.querySelector(`note_start[note_id=${selectedNote.id}]`);
+			const elNoteEndPrev = document.querySelector(`note_end[note_id=${selectedNote.id}]`);
+			// elSpan?.classList.parent.
 			elNoteRefPrev?.classList.remove('highlighted');
 			elNoteEndPrev?.classList.remove('highlighted');
 		}
 
-		// Change highlight of notebox
-		const elNoteRefNew = document.querySelector(`note_start[note_id=${id}]`);
-		const elNoteEndNew = document.querySelector(`note_end[note_id=${id}]`);
-		elNoteRefNew?.classList.add('highlighted');
-		elNoteEndNew?.classList.add('highlighted');
-
-		// Mark note (with span)
-		// -- step 1: Remove existing spans
+		// Remove the span
 		const spans = document.querySelectorAll(`span[type='note']`);
 		spans.forEach((span) => {
 			if (span) {
@@ -165,6 +222,21 @@
 				span.remove(); // Remove the empty span
 			}
 		});
+	}
+	function selectNote(id) {
+		console.log('select note id', id);
+		// Remove old highlights
+		unselectNote();
+
+		// Change highlight of notebox
+		const elNoteRefNew = document.querySelector(`note_start[note_id=${id}]`);
+		const elNoteEndNew = document.querySelector(`note_end[note_id=${id}]`);
+		elNoteRefNew?.classList.add('highlighted');
+		elNoteEndNew?.classList.add('highlighted');
+
+		// Mark note (with span)
+		// -- step 1: Remove existing spans
+		unselectNote();
 
 		// -- step 2: Insert new span
 		const noteStart = document.querySelector(`note_start[note_id='${id}']`);
@@ -174,6 +246,7 @@
 			const wrapper = document.createElement('span');
 			wrapper.setAttribute('type', 'note');
 			wrapper.setAttribute('note_id', id);
+			wrapper.classList.add('note--selected'); //! FIX
 
 			// Get all content between note_start and note_end
 			let currentNode = noteStart.nextSibling;
@@ -189,10 +262,12 @@
 		}
 
 		// Update state
-		selectedNote = id;
+		selectedNote.id = id;
+		console.log(selectedNote.id);
 	}
 
 	function moveNote(id) {
+		console.log('move note id', id);
 		const elNoteRef = document.querySelector(`note_start[note_id=${id}]`);
 		const elNoteBox = document.querySelector(`.notebox[note_id=${id}]`);
 		const elContainerMainText = document.querySelector('#containerMainText');
@@ -269,7 +344,7 @@
 	});
 </script>
 
-<div class="flex justify-center align-middle">
+<div class="flex w-full justify-center align-middle">
 	<div class="flex justify-center align-middle">
 		<Switch
 			name="toggleCopyWithoutLinebreaks"
@@ -277,17 +352,21 @@
 			bind:checked={copyWithoutLinebreaks}
 			onCheckedChange={console.log}
 		/>
-		<p>Mit Zeilenumbrüchen kopieren</p>
+		<p>Ohne Zeilenumbrüche kopieren</p>
 	</div>
 </div>
 
+<!-- Popups for multiple notes over same place -->
 {#if popupNoteIds.length > 0}
-	<div class="absolute bottom-0 top-0">
+	<div
+		class="popup-noteselector fixed left-5 top-1/2 z-10 rounded-md border-2 border-white bg-sky-200 p-5"
+	>
 		<ul>
-			{#each popupNotesIds as id}
+			{#each popupNoteIds as id}
 				<li>
 					<a
-						onclick={(id) => {
+						onclick={() => {
+							console.log(id);
 							handlePopupClick(id);
 						}}>{id}</a
 					>
@@ -358,7 +437,7 @@
 					class={[
 						`notebox absolute my-[${MARGIN_NOTEBOX}px] rounded-md border-2 p-3 transition-transform duration-500`,
 						// `notebox absolute my-[${MARGIN_NOTEBOX}px] rounded-md border-2 p-3`,
-						selectedNote === note.id && 'highlighted'
+						selectedNote.id === note.id && 'highlighted'
 					]}
 					onclick={() => {
 						handleNoteClick(note.id);
@@ -389,10 +468,6 @@
 		white-space: nowrap;
 	}
 
-	:global(.maintext p span) {
-		background-color: yellow;
-		color: red;
-	}
 	:global(.lib-number) {
 		text-align: center;
 		font-weight: 600;
@@ -433,21 +508,52 @@
 		font-weight: 800;
 		margin-right: 4px;
 	}
+	:global(span[note_ids]) {
+		/* text-decoration: underline; */
+		/* text-decoration-color: rgb(20, 186, 64); */
+		/* text-decoration-thickness: 2px; */
+		background-color: rgb(255, 255, 221);
+		cursor: pointer;
+
+		/* multiple ids (*= selects substrings) */
+		/* &[note_ids*=','] { */
+		&.multiple-ids {
+			background-color: rgb(255, 255, 0);
+			/* text-decoration-color: blueviolet; */
+		}
+	}
+	/* :global(.maintext p span.note--selected) { */
+	:global(.maintext span.selected) {
+		/* :global(.maintext p span) { */
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-decoration-color: rgb(148, 255, 207);
+	}
 	:global(note_start::before, note_end::before) {
 		color: blue;
 		margin-right: 1px;
 		margin-left: 3px;
 	}
 	:global(note_start::before) {
-		content: '[●';
+		/* content: '[●'; */
 	}
 	:global(note_end::before) {
-		content: '●]';
+		/* content: '●]'; */
 	}
 	:global(note_start.highlighted::before, note_end.highlighted::before) {
 		color: red;
 	}
 	:global(.notebox.highlighted) {
-		border-color: orange;
+		border-color: rgb(148, 255, 207);
+		background-color: rgb(224, 255, 241);
+	}
+	:global(a) {
+		color: blue;
+	}
+	:global(.popup-noteselector a) {
+		cursor: pointer;
+	}
+	:global(reg_link) {
+		color: red;
 	}
 </style>
