@@ -1,6 +1,6 @@
 <script>
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
-
+	import { copyWithoutLinebreaks } from '../../globals.svelte.js';
 	import {
 		ID_CONTAINER_SETTINGS,
 		ID_CONTAINER_MAIN,
@@ -12,8 +12,6 @@
 
 	let dochead = $state(data.dochead);
 	let doctitle = $state(data.doctitle);
-
-	let copyWithoutLinebreaks = $state(false);
 </script>
 
 <div id={ID_CONTAINER_SETTINGS} class="flex w-full justify-center align-middle">
@@ -21,7 +19,7 @@
 		<Switch
 			name="toggleCopyWithoutLinebreaks"
 			active="bg-primary-500"
-			bind:checked={copyWithoutLinebreaks}
+			bind:checked={copyWithoutLinebreaks.value}
 		/>
 		<p>Ohne Zeilenumbrüche kopieren</p>
 	</div>

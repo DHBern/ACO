@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { copyWithoutLinebreaks } from '../../../globals.svelte';
 
 	import Note from './Note.svelte';
 	import Text from './Text.svelte';
@@ -21,7 +22,7 @@
 		ID_CONTAINER_TEXT
 	} from '$lib/constants/constants';
 
-	let { data, copyWithoutLinebreaks } = $props();
+	let { data } = $props();
 
 	let allNotes = $state(data.notes);
 	let selectedNote = $state({ id: '' });
@@ -55,7 +56,10 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	id={ID_CONTAINER_TEXT}
-	class={['maintext relative col-span-1 col-start-2', { copyWithoutLinebreaks }]}
+	class={[
+		'maintext relative col-span-1 col-start-2',
+		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+	]}
 	onclick={(ev) => {
 		handleMarkClick(ev, selectedNote, multiMarkPopupIds);
 	}}
@@ -71,13 +75,12 @@
 		{@html generateLineNumbers(unit)}
 	{/each}
 </div>
-
 <!-- Notes -->
 <div
 	id={ID_CONTAINER_NOTES}
 	class={[
 		'relative col-span-1 col-start-4 mt-0 transition-all duration-1000',
-		{ copyWithoutLinebreaks }
+		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >
 	{#each allunits as unit}
