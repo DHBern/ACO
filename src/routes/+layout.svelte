@@ -43,6 +43,6 @@
 	>
 </nav>
 <!-- Content -->
-<div class="absolute left-0 top-[80px] h-[calc(100%-80px)] bg-white p-5">
+<div class="absolute left-0 top-[80px] h-[calc(100%-80px)] w-full bg-white p-5">
 	{@render children()}
 </div>
