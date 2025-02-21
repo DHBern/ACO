@@ -4,8 +4,6 @@
 	let { note, selectedNote } = $props();
 </script>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	note_id={note.id}
 	class={[
@@ -17,6 +15,11 @@
 		handleNoteClick(note.id);
 		selectedNote.id = note.id;
 	}}
+	onkeydown={(e) => (e.key === 'Enter' || e.key === ' ' ? handleNoteClick(note.id) : null)}
+	role="button"
+	tabindex="0"
+	aria-pressed={selectedNote.id === note.id}
+	aria-label="Focus note"
 >
 	{@html note.content}
 </div>
