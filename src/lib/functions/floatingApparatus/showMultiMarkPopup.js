@@ -1,11 +1,12 @@
 import { ID_CONTAINER_TEXT, OFFSET_POPUP } from './constants';
+import { tick } from 'svelte';
 
 export function showMultiMarkPopup(ids, multiMarkPopupIds, elMark) {
 	// Feed ids to state, which will trigger popup-component
 	multiMarkPopupIds.ids = ids;
 
-	// Wait some time to make sure that popup exists
-	setTimeout(() => {
+	// Make sure that popup exists
+	tick().then(() => {
 		const elPopup = document.querySelector('.multimark-popup');
 		const elContainer = document.querySelector(`#${ID_CONTAINER_TEXT}`);
 		const rectMark = elMark.getBoundingClientRect();
@@ -16,5 +17,5 @@ export function showMultiMarkPopup(ids, multiMarkPopupIds, elMark) {
 		elPopup.style.top = `${rectMark.top - rectContainer.top + OFFSET_POPUP}px`;
 		elPopup.style.left = `${rectMark.left + window.scrollX}px`;
 		elPopup.style.display = 'block';
-	}, 100);
+	});
 }
