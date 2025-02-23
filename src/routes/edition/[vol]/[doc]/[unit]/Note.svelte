@@ -29,10 +29,10 @@
 		border-color: #94ffcf;
 		background-color: #e0fff1;
 	}
-	:global(.notebox p) {
+	.notebox :global(p) {
 		padding-top: 15px;
 	}
-	:global(.notebox a) {
+	.notebox :global(a) {
 		color: blue;
 	}
 </style>

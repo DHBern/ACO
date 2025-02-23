@@ -18,6 +18,3 @@
 		{/each}
 	</ul>
 </div>
-
-<style>
-</style>

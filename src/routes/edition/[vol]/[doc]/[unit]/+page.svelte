@@ -100,23 +100,13 @@
 {/if}
 
 <style>
-	:global(p) {
-		padding-top: 15px;
-	}
-
-	:global(.lib-number) {
+	:global(a.lib-number) {
 		text-align: center;
 		font-weight: 600;
 	}
 	:global(a.line-number, a.page-number) {
 		user-select: none;
 		margin-right: 8px;
-	}
-	:global(a.line-number-hidden) {
-		color: white;
-		&:hover {
-			color: grey;
-		}
 	}
 	:global(a.line-number::after) {
 		content: '';
@@ -131,7 +121,13 @@
 	:global(a.line-number:hover::after) {
 		display: inline-block;
 	}
-	:global(.buffer) {
+	:global(a.line-number-hidden) {
+		color: white;
+		&:hover {
+			color: grey;
+		}
+	}
+	:global(.lineNumBuffer) {
 		user-select: none;
 		color: white;
 	}

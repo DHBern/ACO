@@ -43,12 +43,8 @@
 </div>
 
 <style>
-	:global(#containerDocTitle p) {
+	#containerDocTitle :global(p) {
 		font-weight: 700;
 		text-align: center;
-	}
-
-	:global(p) {
-		padding-top: 15px;
 	}
 </style>

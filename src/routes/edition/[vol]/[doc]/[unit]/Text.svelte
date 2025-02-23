@@ -8,15 +8,6 @@
 </div>
 
 <style>
-	/* :global(.nowrap p) {
-		white-space: nowrap;
-	} */
-
-	/* Prevent selecting <br /> on copy-paste */
-	:global(.copyWithoutLinebreaks br) {
-		user-select: none;
-	}
-
 	:global(span[type='head_key']) {
 		font-weight: 800;
 		margin-right: 4px;
@@ -49,8 +40,5 @@
 
 	:global(.multimark-popup a) {
 		cursor: pointer;
-	}
-	:global(reg_link) {
-		color: red;
 	}
 </style>

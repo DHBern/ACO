@@ -1,3 +1,15 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+p {
+	padding-top: 15px;
+}
+/* :global(.nowrap p) {
+	white-space: nowrap;
+} */
+
+/* Prevent selecting <br /> on copy-paste */
+.copyWithoutLinebreaks br {
+	user-select: none;
+}
