@@ -4,8 +4,8 @@ import { setTranslateY } from './setTranslateY';
 export function placeNotes(ids) {
 	let offsetSum = 0;
 	ids.forEach((id) => {
-		const elNoteBox = document.querySelector(`.notebox[note_id=${id}]`);
-		const elNoteRef = document.querySelector(`note_start[note_id=${id}]`);
+		const elNoteBox = document.querySelector(`.notebox[data-id=${id}]`);
+		const elNoteRef = document.querySelector(`.note-start[data-id=${id}]`);
 		const offsetRef = elNoteRef?.offsetTop;
 
 		// Move to reference height

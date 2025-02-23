@@ -4,8 +4,8 @@ import { getInstantOffsetTop } from './getInstantOffsetTop';
 import { ID_CONTAINER_TEXT } from './constants';
 
 export function moveNote(id) {
-	const elNoteRef = document.querySelector(`note_start[note_id=${id}]`);
-	const elNoteBox = document.querySelector(`.notebox[note_id=${id}]`);
+	const elNoteRef = document.querySelector(`.note-start[data-id=${id}]`);
+	const elNoteBox = document.querySelector(`.notebox[data-id=${id}]`);
 	const elContainerText = document.querySelector(`#${ID_CONTAINER_TEXT}`);
 	const elContainer = document.querySelector('#scrollContainer');
 

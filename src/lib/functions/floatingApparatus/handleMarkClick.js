@@ -15,9 +15,9 @@ export function handleMarkClick(ev, selectedNote, multiMarkPopupIds) {
 	let ids = [];
 	try {
 		//!FIX
-		ids = JSON.parse(ev.target.getAttribute('note_ids'));
+		ids = JSON.parse(ev.target.dataset.ids);
 	} catch (error) {
-		ids = [ev.target.getAttribute('note_ids')];
+		ids = [ev.target.dataset.ids];
 	}
 
 	switch (ids.length) {

@@ -5,7 +5,7 @@
 </script>
 
 <div
-	note_id={note.id}
+	data-id={note.id}
 	class={[
 		`notebox word-wrap absolute max-w-[700px] rounded-md border-4 bg-white p-3 transition-transform duration-500`,
 		selectedNote.id === note.id && 'highlighted'

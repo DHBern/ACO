@@ -4,7 +4,7 @@ function insertNoteSpans(text) {
 	let lastIndex = 0;
 
 	text.replace(
-		/<note_start note_id='([^']*)'><\/note_start>|<note_end note_id='([^']*)'><\/note_end>/g,
+		/<span\s+class=['"]note-start['"]\s+data-id=['"]([^']*)['"]><\/span>|<span\s+class=['"]note-end['"]\s+data-id=['"]([^']*)['"]><\/span>/g,
 		(match, startId, endId, offset) => {
 			// Capture text before this match
 			let precedingText = text.slice(lastIndex, offset);
@@ -12,19 +12,20 @@ function insertNoteSpans(text) {
 				let idsAttribute = JSON.stringify(openIds);
 				if (openIds.length > 0) {
 					let multiIdsClass = openIds.length > 1 ? 'multiple-ids' : '';
-					result += `<span class='mark ${multiIdsClass}' note_ids=${idsAttribute}>${precedingText}</span>`;
+					let myclass = ['mark', multiIdsClass].filter(Boolean).join(' ');
+					result += `<span class='${myclass}' data-ids=${idsAttribute}>${precedingText}</span>`;
 				} else {
 					result += precedingText; // Preserve text without wrapping
 				}
 			}
 
 			if (startId) {
-				// Handle <note_start> tag
+				// Handle note-start tag
 				openIds.push(startId);
-				result += `<note_start note_id='${startId}'></note_start>`;
+				result += `<span class='note-start' data-id='${startId}'></span>`;
 			} else if (endId) {
-				// Handle <note_end> tag
-				result += `</span><note_end note_id='${endId}'></note_end>`;
+				// Handle note-end tag
+				result += `</span><span class='note-end' data-id='${endId}'></span>`;
 				openIds = openIds.filter((id) => id !== endId); // Remove closed ID
 			}
 
