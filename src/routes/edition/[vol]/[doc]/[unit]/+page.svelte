@@ -96,7 +96,7 @@
 
 <!-- Popups for multiple notes over same place -->
 {#if multiMarkPopupIds.ids.length > 0}
-	<MultiMarkPopup {multiMarkPopupIds} {selectedNote}></MultiMarkPopup>
+	<MultiMarkPopup {multiMarkPopupIds} {selectedNote} />
 {/if}
 
 <style>

@@ -13,7 +13,7 @@ export function showMultiMarkPopup(ids, multiMarkPopupIds, elMark) {
 
 		//! Replace this with propper Skeleton Popover Component
 		elPopup.style.display = 'none';
-		elPopup.style.top = `${rectMark.top - rectContainer.top + window.scrollY + OFFSET_POPUP}px`;
+		elPopup.style.top = `${rectMark.top - rectContainer.top + OFFSET_POPUP}px`;
 		elPopup.style.left = `${rectMark.left + window.scrollX}px`;
 		elPopup.style.display = 'block';
 	}, 100);
