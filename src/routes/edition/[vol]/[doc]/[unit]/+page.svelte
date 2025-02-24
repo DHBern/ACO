@@ -52,8 +52,6 @@
 </div>
 
 <!-- Main Text -->
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	id={ID_CONTAINER_TEXT}
 	class={[
@@ -63,6 +61,13 @@
 	onclick={(ev) => {
 		handleMarkClick(ev, selectedNote, multiMarkPopupIds);
 	}}
+	onkeydown={(e) =>
+		e.key === 'Enter' || e.key === ' '
+			? handleMarkClick(ev, selectedNote, multiMarkPopupIds)
+			: null}
+	role="button"
+	tabindex="0"
+	aria-label="Select/Deselect annotated text"
 >
 	{#each allunits as unit, idx}
 		<Text text={mainTexts[idx]}></Text>
