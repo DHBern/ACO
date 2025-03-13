@@ -35,6 +35,8 @@
 		"@skeletonlabs/skeleton-svelte": "^1.0.0",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/typography": "^0.5.15",
-		"@tailwindcss/vite": "^4.0.14"
+		"@tailwindcss/vite": "^4.0.14",
+		"cookie": "^1.0.2",
+		"esbuild": "^0.25.1"
 	}
 }
