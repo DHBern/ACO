@@ -4,6 +4,7 @@
 
 p {
 	padding-top: 15px;
+	color: black
 }
 /* :global(.nowrap p) {
 	white-space: nowrap;
