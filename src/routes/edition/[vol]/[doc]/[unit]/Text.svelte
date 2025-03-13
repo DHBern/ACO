@@ -8,7 +8,7 @@
 </div>
 
 <style>
-	:global(span[type='head_key']) {
+	:global(span[data-type='head_key']) {
 		font-weight: 800;
 		margin-right: 4px;
 	}
