@@ -21,7 +21,7 @@
 
 <div
 	id="containerDocHead"
-	class="grid h-screen w-full grid-cols-[90px,750px,60px,600px] overflow-x-hidden overflow-y-scroll border border-r-black pb-24"
+	class="grid h-screen w-full grid-cols-[90px_750px_60px_600px] overflow-x-hidden overflow-y-scroll border border-r-black pb-24"
 >
 	<!-- Document Head (Metadata) -->
 	<div id="containerDocHead" class="col-span-3 col-start-1 m-5 bg-slate-50 p-5 shadow-xl">
