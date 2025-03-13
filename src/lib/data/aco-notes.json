@@ -1,0 +1,98 @@
+{
+	"notesData": {
+		"CV166": {
+			"libIII-6": {
+				"CV166-III-6-1-6-erinnert-wird": {
+					"document": "CV166",
+					"doc_unit": "libIII-6",
+					"line_start": 1,
+					"line_end": 6,
+					"text_start": "Erinnert",
+					"text_end": "wird",
+					"note_content": "<p>Vgl. <a href='' data-type='external_ref' source='loofs'>Loofs</a>, <a href='' data-type='external_ref' source='nestoriana'>Nestoriana S. 354,12-18</a></p>"
+				},
+				"CV166-III-6-14-14-ergibt-habe": {
+					"document": "CV166",
+					"doc_unit": "libIII-6",
+					"line_start": "14",
+					"line_end": "14",
+					"text_start": "ergibt",
+					"text_end": "habe",
+					"note_content": "<p>Eine solche Union wurde zwar in dieser Formulierung (εἷς ἐξ ἀμφοῖν) in der vorliegenden Schrift bisher nur einmal oben<a href='./CV166/libII-Praef?line=68' data-type='internal_ref' document='CV166' doc_unit='libII-Praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a>, der Sache nach jedoch in der Tat schon häufiger postuliert (z.B. noch kurz zuvor <a href='./CV166/libIII-5?line=18' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='18' line_end='19' >CV166,III,5,18–19</a >). Insgesamt betrachtet greift Kyrill allerdings tatsächlich auch auf die hier genutzte Formulierung des Öfteren zurück (vgl. z.B. <a href='./CV4/3?page=15' data-type='internal_ref' document='CV4' doc_unit='3' page_start='15' page_end='16'>CV4,3,15–16</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' aco_page='27' aco_doc_unit='2' aco_doc='23'>ACO 1,1,1 S. 27,2 [Dok. 23]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV7,25,29–30</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc='39'>ACO 1,1,1 S. 58,10 [Dok. 39]</a>;<a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV169,51</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc=''>ACO 1,1,1 S. 129,27</a>).</p>"
+				},
+				"CV166-III-6-24-24--hypostasen": {
+					"document": "CV166",
+					"doc_unit": "libIII-6",
+					"line_start": "14",
+					"line_end": "14",
+					"text_start": "",
+					"text_end": "Hypostasen",
+					"note_content": "<p>In der Handschrift stand hier eigentlich φύσεων. ὑποστάσεων wurde nachträglich darüber gesetzt.</p>"
+				},
+				"CV166-III-6-33-36-dann-wird": {
+					"document": "CV166",
+					"doc_unit": "libIII-6",
+					"line_start": 33,
+					"line_end": 36,
+					"text_start": "Dann",
+					"text_end": "wird",
+					"note_content": "<p>Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='4'> CV166,III,5,2–4</a>.</p>"
+				},
+				"CV166-III-6-34-34-fürchtest-recht": {
+					"document": "CV166",
+					"doc_unit": "libIII-24",
+					"line_start": 24,
+					"line_end": 24,
+					"text_start": "fürchtest",
+					"text_end": "Recht",
+					"note_content": "<p>Der Text scheint hier eine Lücke aufzuweisen. Zum einen fehlt das bei Kyrillregelmäßig auf die Junktur καὶ μάλα folgende Adverb, zum anderen vermisst man einen Ausdruck,von dem der Infinitiv παρατρέπεσθαι abhängen könnte. <a href='' data-type='external_ref' source='agellio_1607'>Agellio (1607)</a>hat, um zumindest das zweiteDesiderat auszugleichen, ἀναγκαῖον vorgeschlagen. Schwartz schlägt, beide Mängel bedenkend,ὀρθῶς οὐ φάμεν vor. Die Übersetzung versucht, den unvollständigen Satz mit eigenen Ergänzungenin einen unmittelbaren Zusammenhang mit dem Nestoriuszitat, dessen Wortmaterial er enthält, zusetzen (vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='2'>CV166,III,5,2</a>).</p>"
+				},
+				"CV166-III-6-39-41-dass-gelten": {
+					"document": "CV166",
+					"doc_unit": "libIII-6",
+					"line_start": 39,
+					"line_end": 41,
+					"text_start": "dass",
+					"text_end": "gelten",
+					"note_content": "<p>Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libII-13' line_start='3' line_end='3'>CV166,II,13,3</a>u. <a href='' data-type='internal_ref' document='CV166' doc_unit='libII-14' line_start='6' line_end='7'>CV166,II,14,6-7</a>.</p>"
+				},
+				"CV166-III-6-42-42-das-frömmigkeit": {
+					"document": "CV166",
+					"doc_unit": "libIII-6",
+					"line_start": 42,
+					"line_end": 42,
+					"text_start": "das",
+					"text_end": "Frömmigkeit",
+					"note_content": "<p>Vgl. <a href='' data-type='external_ref' source='1_tim'>1 Tim 3,16</a>.</p>"
+				},
+				"CV166-III-latetest": {
+					"document": "CV166",
+					"doc_unit": "libIII-6",
+					"line_start": 0,
+					"line_end": 0,
+					"text_start": "foo",
+					"text_end": "bar",
+					"note_content": "<p>Hi there, this is just a test</p>"
+				},
+				"CV166-IV-pre-start": {
+					"document": "CV166",
+					"doc_unit": "libIV-pre",
+					"line_start": 0,
+					"line_end": 0,
+					"text_start": "foo",
+					"text_end": "bar",
+					"note_content": "<p>Hi there,jawef jkaöwfe jkewaölf jkewalöf jkeawölf jkewaölf jakweflö jewakföl awjfkewlaöf jkewalöf jakewlfö jewakföl wajkfeölewaf test</p>"
+				},
+				"CV166-III-6-deleteme": {
+					"document": "CV166",
+					"doc_unit": "libIV-pre",
+					"line_start": 0,
+					"line_end": 0,
+					"text_start": "foo",
+					"text_end": "bar",
+					"note_content": "<p>Hi there,jawef jkaöwfe jkewaölf jkewalöf jkeawölf jkewaölf jakweflö jewakföl awjfkewlaöf jkewalöf jakewlfö jewakföl wajkfeölewaf test</p>"
+				}
+			}
+		}
+	}
+}
