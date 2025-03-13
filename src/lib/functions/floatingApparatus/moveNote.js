@@ -1,12 +1,11 @@
 import { setTranslateY } from './setTranslateY';
 import { getInstantTranslateY } from './getInstantTranslateY';
 import { getInstantOffsetTop } from './getInstantOffsetTop';
-import { ID_CONTAINER_TEXT } from './constants';
 
 export function moveNote(id) {
 	const elNoteRef = document.querySelector(`.note-start[data-id=${id}]`);
 	const elNoteBox = document.querySelector(`.notebox[data-id=${id}]`);
-	const elContainerText = document.querySelector(`#${ID_CONTAINER_TEXT}`);
+	const elContainerText = document.querySelector(`#containerText`);
 	const elContainer = document.querySelector('#scrollContainer');
 
 	// Move entire column (via marginTop)

@@ -15,13 +15,6 @@
 
 	import { placeNotes, handleMarkClick } from '$lib/functions/floatingApparatus';
 
-	import {
-		ID_CONTAINER_LINENUMS,
-		ID_CONTAINER_NOTES,
-		ID_CONTAINER_PAGENUMS,
-		ID_CONTAINER_TEXT
-	} from '$lib/constants/constants';
-
 	let { data } = $props();
 
 	let allNotes = $state(data.notes);
@@ -45,7 +38,7 @@
 </script>
 
 <!-- Page Numbers -->
-<div id={ID_CONTAINER_PAGENUMS} class="col-span-1 col-start-1">
+<div id="containerPageNums" class="col-span-1 col-start-1">
 	{#each allunits as unit}
 		{@html generatePageNumbers(unit)}
 	{/each}
@@ -53,7 +46,7 @@
 
 <!-- Main Text -->
 <div
-	id={ID_CONTAINER_TEXT}
+	id="containerText"
 	class={[
 		'maintext relative col-span-1 col-start-2',
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
@@ -75,14 +68,14 @@
 </div>
 
 <!-- Line Numbers -->
-<div id={ID_CONTAINER_LINENUMS} class="col-span-1 col-start-3">
+<div id="containerLineNums" class="col-span-1 col-start-3">
 	{#each allunits as unit}
 		{@html generateLineNumbers(unit)}
 	{/each}
 </div>
 <!-- Notes -->
 <div
-	id={ID_CONTAINER_NOTES}
+	id="containerNotes"
 	class={[
 		'relative col-span-1 col-start-4 mt-0 transition-all duration-1000',
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
@@ -105,15 +98,16 @@
 {/if}
 
 <style>
-	:global(a.lib-number) {
+	#containerText :global(a.lib-number) {
 		text-align: center;
 		font-weight: 600;
 	}
-	:global(a.line-number, a.page-number) {
+	#containerLineNums :global(a.line-number), 
+	#containerLineNums :global(a.page-number) {
 		user-select: none;
 		margin-right: 8px;
 	}
-	:global(a.line-number::after) {
+	#containerLineNums :global(a.line-number::after) {
 		content: '';
 		background-image: url(/icons/link.svg);
 		background-size: contain;
@@ -123,16 +117,16 @@
 		height: 1em; /* This makes it scale with line-height */
 		display: none;
 	}
-	:global(a.line-number:hover::after) {
+	#containerLineNums :global(a.line-number:hover::after) {
 		display: inline-block;
 	}
-	:global(a.line-number-hidden) {
+	#containerLineNums :global(a.line-number-hidden) {
 		color: white;
 		&:hover {
 			color: grey;
 		}
 	}
-	:global(.lineNumBuffer) {
+	#containerLineNums :global(.lineNumBuffer) {
 		user-select: none;
 		color: white;
 	}

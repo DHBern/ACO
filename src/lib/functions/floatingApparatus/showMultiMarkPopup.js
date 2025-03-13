@@ -1,4 +1,4 @@
-import { ID_CONTAINER_TEXT, OFFSET_POPUP } from './constants';
+import { OFFSET_POPUP } from './constants';
 import { tick } from 'svelte';
 
 export function showMultiMarkPopup(ids, multiMarkPopupIds, elMark) {
@@ -8,7 +8,7 @@ export function showMultiMarkPopup(ids, multiMarkPopupIds, elMark) {
 	// Make sure that popup exists
 	tick().then(() => {
 		const elPopup = document.querySelector('.multimark-popup');
-		const elContainer = document.querySelector(`#${ID_CONTAINER_TEXT}`);
+		const elContainer = document.querySelector(`#containerText`);
 		const rectMark = elMark.getBoundingClientRect();
 		const rectContainer = elContainer.getBoundingClientRect();
 
