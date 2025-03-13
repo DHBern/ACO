@@ -13,5 +13,6 @@ export { unselectMarks } from './unselectMarks';
 // Handle interaction with notes, marks and popups
 export { handleNoteClick } from './handleNoteClick';
 export { handleMarkClick } from './handleMarkClick';
+export { handleNotMarkClick } from './handleNotMarkClick';
 export { handlePopupClick } from './handlePopupClick';
 export { showMultiMarkPopup } from './showMultiMarkPopup';

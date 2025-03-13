@@ -51,19 +51,9 @@
 		'maintext relative col-span-1 col-start-2',
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
-	onclick={(ev) => {
-		handleMarkClick(ev, selectedNote, multiMarkPopupIds);
-	}}
-	onkeydown={(e) =>
-		e.key === 'Enter' || e.key === ' '
-			? handleMarkClick(ev, selectedNote, multiMarkPopupIds)
-			: null}
-	role="button"
-	tabindex="0"
-	aria-label="Select/Deselect annotated text"
 >
 	{#each allunits as unit, idx}
-		<Text text={mainTexts[idx]}></Text>
+		<Text text={mainTexts[idx]} {selectedNote} {multiMarkPopupIds}></Text>
 	{/each}
 </div>
 

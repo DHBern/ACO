@@ -1,23 +1,14 @@
 import { selectMark } from './selectMark';
-import { unselectMarks } from './unselectMarks';
 import { moveNote } from './moveNote';
 import { showMultiMarkPopup } from './showMultiMarkPopup';
 
 export function handleMarkClick(ev, selectedNote, multiMarkPopupIds) {
-	// no mark clicked
-	if (!ev.target.classList.contains('mark')) {
-		multiMarkPopupIds.ids = [];
-		selectedNote.id = '';
-		unselectMarks();
-		return;
-	}
-
 	let ids = [];
 	try {
 		//!FIX
-		ids = JSON.parse(ev.target.dataset.ids);
+		ids = JSON.parse(ev.currentTarget.dataset.ids);
 	} catch (error) {
-		ids = [ev.target.dataset.ids];
+		ids = [ev.currentTarget.dataset.ids];
 	}
 
 	switch (ids.length) {
