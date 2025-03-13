@@ -4,7 +4,7 @@
 	let { text, selectedNote, multiMarkPopupIds } = $props();
 
 	function handleTextClick(ev) {
-		if (selectedNote.id && !ev.target.classList.contains("mark")) {
+		if (selectedNote.id && !ev.target.closest('[data-type="mark"]')) {
 			handleNotMarkClick(selectedNote, multiMarkPopupIds)
 		}
 	}
@@ -54,21 +54,21 @@
 			background-color: rgb(255, 255, 153);
 		}
 	}
-	:global(span.mark.highlighted) {
+	:global(span[data-type=mark].highlighted) {
 		background-color: rgba(148, 255, 207, 0.491);
 	}
-	:global(.note-start::before, .note-end::before) {
+	:global([data-type=note-start]::before, [data-type=note-end]::before) {
 		color: blue;
 		margin-right: 1px;
 		margin-left: 3px;
 	}
-	:global(.note-start::before) {
+	:global([data-type=note-start]::before) {
 		/* content: '[●'; */
 	}
-	:global(.note-end::before) {
+	:global([data-type=note-end]::before) {
 		/* content: '●]'; */
 	}
-	:global(.note-start.highlighted::before, .note-end.highlighted::before) {
+	:global([data-type=note-start].highlighted::before, [data-type=note-end].highlighted::before) {
 		color: red;
 	}
 

@@ -4,7 +4,7 @@ function insertNoteSpans(text) {
 	let lastIndex = 0;
 
 	text.replace(
-		/<span\s+class=['"]note-start['"]\s+data-id=['"]([^']*)['"]><\/span>|<span\s+class=['"]note-end['"]\s+data-id=['"]([^']*)['"]><\/span>/g,
+		/<span\s+data-type=['"]note-start['"]\s+data-id=['"]([^']*)['"]><\/span>|<span\s+data-type=['"]note-end['"]\s+data-id=['"]([^']*)['"]><\/span>/g,
 		(match, startId, endId, offset) => {
 			// Capture text before this match
 			let precedingText = text.slice(lastIndex, offset);
@@ -12,8 +12,8 @@ function insertNoteSpans(text) {
 				let idsAttribute = JSON.stringify(openIds);
 				if (openIds.length > 0) {
 					let multiIdsClass = openIds.length > 1 ? 'multiple-ids' : '';
-					let myclass = ['mark', multiIdsClass].filter(Boolean).join(' ');
-					result += `<span class='${myclass}' data-ids=${idsAttribute}>${precedingText}</span>`;
+					let classes = [multiIdsClass].filter(Boolean).join(' ');
+					result += `<span class='${classes}' data-type='mark' data-ids=${idsAttribute}>${precedingText}</span>`;
 				} else {
 					result += precedingText; // Preserve text without wrapping
 				}
@@ -22,10 +22,10 @@ function insertNoteSpans(text) {
 			if (startId) {
 				// Handle note-start tag
 				openIds.push(startId);
-				result += `<span class='note-start' data-id='${startId}'></span>`;
+				result += `<span data-type='note-start' data-id='${startId}'></span>`;
 			} else if (endId) {
 				// Handle note-end tag
-				result += `</span><span class='note-end' data-id='${endId}'></span>`;
+				result += `</span><span data-type='note-end' data-id='${endId}'></span>`;
 				openIds = openIds.filter((id) => id !== endId); // Remove closed ID
 			}
 
@@ -49,7 +49,7 @@ export function generateMainText(text) {
 	text = insertNoteSpans(text);
 	// Transform lib-number
 	text = text.replace(/<a\ lib='(I+)'><\/a>/g, (match, libNumber) => {
-		return `<a class="lib-number" lib="${libNumber}">Buch ${libNumber}</a>`;
+		return `<a data-type="lib-number" lib="${libNumber}">Buch ${libNumber}</a>`;
 	});
 	return text.trim();
 }

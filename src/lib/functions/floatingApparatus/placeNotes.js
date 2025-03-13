@@ -5,7 +5,7 @@ export function placeNotes(ids) {
 	let offsetSum = 0;
 	ids.forEach((id) => {
 		const elNoteBox = document.querySelector(`.notebox[data-id=${id}]`);
-		const elNoteRef = document.querySelector(`.note-start[data-id=${id}]`);
+		const elNoteRef = document.querySelector(`[data-type=note-start][data-id=${id}]`);
 		const offsetRef = elNoteRef?.offsetTop;
 
 		// Move to reference height
