@@ -88,36 +88,19 @@
 {/if}
 
 <style>
-	#containerText :global(a.lib-number) {
-		text-align: center;
-		font-weight: 600;
-	}
+	@reference "tailwindcss";
+
 	#containerLineNums :global(a.line-number), 
 	#containerLineNums :global(a.page-number) {
-		user-select: none;
-		margin-right: 8px;
+		@apply select-none mr-2;
 	}
 	#containerLineNums :global(a.line-number::after) {
-		content: '';
-		background-image: url(/icons/link.svg);
-		background-size: contain;
-		background-repeat: no-repeat;
-		margin-left: 10px;
-		width: 1em; /* Adjust width as needed */
-		height: 1em; /* This makes it scale with line-height */
-		display: none;
+		@apply content-[""] bg-[url(/icons/link.svg)] bg-contain bg-no-repeat ml-2 w-4 h-4 hidden;
 	}
 	#containerLineNums :global(a.line-number:hover::after) {
-		display: inline-block;
-	}
-	#containerLineNums :global(a.line-number-hidden) {
-		color: white;
-		&:hover {
-			color: grey;
-		}
+		@apply inline-block;
 	}
 	#containerLineNums :global(.lineNumBuffer) {
-		user-select: none;
-		color: white;
+		@apply select-none text-white;
 	}
 </style>

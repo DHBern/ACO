@@ -42,37 +42,30 @@
 </div>
 
 <style>
+	@reference "tailwindcss"
+
 	:global(span[data-type='head_key']) {
-		font-weight: 800;
-		margin-right: 4px;
+		@apply weight-bold mr-1;
 	}
 	:global(span[data-ids]) {
-		background-color: rgb(255, 255, 221);
-		cursor: pointer;
-
-		&.multiple-ids {
-			background-color: rgb(255, 255, 153);
-		}
+		@apply cursor-pointer bg-[#ffffdd] [&.multiple-ids]:bg-[#ffff99];
 	}
 	:global(span[data-type=mark].highlighted) {
-		background-color: rgba(148, 255, 207, 0.491);
+		@apply bg-[#94ffcf7d];
 	}
 	:global([data-type=note-start]::before, [data-type=note-end]::before) {
-		color: blue;
-		margin-right: 1px;
-		margin-left: 3px;
+		@apply text-blue-600 mr-[1px] ml-[3px];
 	}
 	:global([data-type=note-start]::before) {
-		/* content: '[●'; */
+		/* @apply content-["[●"]; */
 	}
 	:global([data-type=note-end]::before) {
-		/* content: '●]'; */
+		/* @apply content-["●]"]; */
 	}
 	:global([data-type=note-start].highlighted::before, [data-type=note-end].highlighted::before) {
-		color: red;
+		@apply text-red-500;
 	}
-
 	:global(.multimark-popup a) {
-		cursor: pointer;
+		@apply cursor-pointer;
 	}
 </style>

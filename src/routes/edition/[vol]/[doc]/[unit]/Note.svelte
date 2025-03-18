@@ -7,7 +7,9 @@
 <div
 	data-id={note.id}
 	class={[
-		`notebox word-wrap absolute max-w-[700px] rounded-md border-4 bg-white p-3 transition-transform duration-500`,
+		`notebox word-wrap absolute max-w-[700px] rounded-md border-4 bg-white p-3 
+		[&.highlighted]:border-green-400 [&.highlighted]:bg-green-200 
+		transition-transform duration-500`,
 		selectedNote.id === note.id && 'highlighted'
 	]}
 	style={`margin-top:${MARGIN_NOTEBOX}px; margin-bottom:${MARGIN_NOTEBOX}px`}
@@ -25,14 +27,14 @@
 </div>
 
 <style>
-	.notebox.highlighted {
-		border-color: #94ffcf;
-		background-color: #e0fff1;
-	}
-	.notebox :global(p) {
-		padding-top: 15px;
-	}
-	.notebox :global(a) {
-		color: blue;
+	@reference "tailwindcss";
+
+	.notebox {
+		:global(p) {
+			@apply pt-4 text-gray-600;
+		}
+		:global(a) {
+			@apply text-blue-700;
+		}
 	}
 </style>
