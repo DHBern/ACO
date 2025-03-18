@@ -1,6 +1,226 @@
 {
-	"textData": {
-		"CV166": {
+	"textData": [
+		{
+			"slug": "CPal20",
+			"num": "Dok 1",
+			"type": "book",
+			"title": "Nestorius’ erste Predigt gegen den θεοτόκος-Titel (sermo 9)",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV18",
+			"num": "Dok 2",
+			"type": "book",
+			"title": "Contestatio gegen die Kleriker von Konstantinopel",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV19",
+			"num": "Dok 3",
+			"type": "book",
+			"title": "Homilie des Proklos von Kyzikos",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CPal22",
+			"num": "Dok 4",
+			"type": "book",
+			"title": "Nestorius’ Antwort auf die Homilie des Proklos von Kyzikos (sermo 27)",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV1",
+			"num": "Dok 5",
+			"type": "book",
+			"title": "Kyrills Brief an die ägyptischen Mönche",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CPal21",
+			"num": "Dok 6",
+			"type": "book",
+			"title": "Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10)",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CVer3",
+			"num": "Dok 7",
+			"type": "book",
+			"title": "Nestorius’ erster Brief an Coelestin",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV22",
+			"num": "Dok 8",
+			"type": "book",
+			"title": "Kyrills Brief an die Apokrisiare in Konstantinopel",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV20",
+			"num": "Dok 9",
+			"type": "book",
+			"title": "Kyrills Brief an einen Anhänger des Nestorius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV21",
+			"num": "Dok 10",
+			"type": "book",
+			"title": "Kyrills Brief an seine Kritiker",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV16",
+			"num": "Dok 11",
+			"type": "book",
+			"title": "Kyrills Brief an Akakios von Beroia (Ep. 14)",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV17",
+			"num": "Dok 12",
+			"type": "book",
+			"title": "Brief des Akakios von Beroia an Kyrill",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CPal31",
+			"num": "Dok 13",
+			"type": "book",
+			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 20 [Auszüge])",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CPal32",
+			"num": "Dok 14",
+			"type": "book",
+			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 28 [Auszüge])",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CPal33",
+			"num": "Dok 15",
+			"type": "book",
+			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 29 [Auszüge])",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CPal34",
+			"num": "Dok 16",
+			"type": "book",
+			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 30 [Auszüge])",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CPal36",
+			"num": "Dok 17",
+			"type": "book",
+			"title": "Marius Mercators Commonitorium bezüglich Caelestius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV2",
+			"num": "Dok 18",
+			"type": "book",
+			"title": "Kyrills erster Brief an Nestorius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV3",
+			"num": "Dok 19",
+			"type": "book",
+			"title": "Nestorius’ erster Brief an Kyrill",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV143",
+			"num": "Dok 20",
+			"type": "book",
+			"title": "Bittschrift des Diakon Basilius und weiterer Mönche",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CPal35",
+			"num": "Dok 21",
+			"type": "book",
+			"title": "Nestorius’ Brief an Caelestius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CVer4",
+			"num": "Dok 22",
+			"type": "book",
+			"title": "Nestorius’ zweiter Brief an Coelestin",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV4",
+			"num": "Dok 23",
+			"type": "book",
+			"title": "Kyrills zweiter Brief an Nestorius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV5",
+			"num": "Dok 24",
+			"type": "book",
+			"title": "Nestorius’ zweiter Brief an Kyrill",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV166",
+			"num": "Dok 25",
+			"type": "book",
+			"title": "Kyrill, ‚Gegen Nestorius‘",
 			"metaunits": ["head", "title"],
 			"usemelater": [
 				"libI-pre",
@@ -79,49 +299,222 @@
 				"libIV-6",
 				"libIV-7"
 			],
-			"dochead": "<span data-type='head_key'>Edition:</span> Collectio Vaticana 166, ACO I,1,6 S. 13,4–106,41; ältereEdd.: PG 76, Sp. 9–248; Pusey (1965 [=1868–1877]), Bd. 6 S. 54–239<p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5217</p><p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria</p><p><span data-type='head_key'>Datierung:</span> spätestens Mitte 430 Lat.</p><p><span data-type='head_key'>Übersetzungen:</span>–</p><p><span data-type='head_key'>Inhalt:</span> Kyrill unterzieht die Christologie seines GegnersNestorius einer groß angelegten Kritik. Zu diesem Zweck zitiert er zahlreiche ihm anstößigerscheinende Aussagen, die jener im Vorfeld getätigt hatte, und stellt diesen dann seineeigenen Ansichten gegenüber.</p><p><span data-type='head_key'>Literatur:</span> Pusey (1881), S. 1–184.</p>",
-			"doctitle": "<a titles='CV166'></a><p line='1'>Kyrills, des überaus heiligen Erzbischofs von Alexandria,</p><p line='2'>‚Gegen die Schmähungen des Nestorius‘</p><p line='3'>Fünfbändige Widerlegung oder die fünf Bücher des heiligen Kyrill</p>",
-			"libI-pre": "<p><a lib='I'></a></p><p><a page='124'></a></p><p><a line='1'></a>libI-pre Foo bar bal<br /><a line='2'></a> Foooooo aweohjk j.</p>",
-			"libI-1": "<p><a line='1'></a>libI-1 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p><br/>",
-			"libI-2": "<p><a line='1'></a>libI-2 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libI-3": "<p><a line='1'></a>libI-3 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libI-4": "<p><a line='1'></a>libI-4 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libI-5": "<p><a line='1'></a>libI-5 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libI-6": "<p><a line='1'></a>libI-6 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libI-7": "<p><a line='1'></a>libI-7 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libI-8": "<p><a line='1'></a>libI-8 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libI-9": "<p><a line='1'></a>libI-9 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libI-10": "<p><a line='1'></a>libI-10 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-pre": "<p><a line='1'></a>libII-pre Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-1": "<p><a line='1'></a>libII-1 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-2": "<p><a line='1'></a>libII-2 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-3": "<p><a line='1'></a>libII-3 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-4": "<p><a line='1'></a>libII-4 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-5": "<p><a line='1'></a>libII-5 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-6": "<p><a line='1'></a>libII-6 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-7": "<p><a line='1'></a>libII-7 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-8": "<p><a line='1'></a>libII-8 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-9": "<p><a line='1'></a>libII-9 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-10": "<p><a line='1'></a>libII-10 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-11": "<p><a line='1'></a>libII-11 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-12": "<p><a line='1'></a>libII-12 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-13": "<p><a line='1'></a>libII-13 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libII-14": "<p><a line='1'></a>libII-14 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIII-pre": "<p><a line='1'></a>libIII-pre Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIII-1": "<p><a line='1'></a>libIII-1 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIII-2": "<p><a line='1'></a>libIII-2 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIII-3": "<p><a line='1'></a>libIII-3 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIII-4": "<p><a line='1'></a>libIII-4 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIII-5": "<p><a line='1'></a>libIII-5 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIII-6": "<p><a line='1'></a>libIII-6 <span data-type='note-start' data-id='CV166-III-6-1-6-erinnert-wird'></span>Erinnert euch in vollem Umfang auch an das, was immer wieder von mir gesagt <br /><a line='2'></a> worden ist, der ich im Hinblick auf den Herrscher <reglink name='christus'>Christus</reglink> die zweifachen Naturen<br /><a line='3'></a> unterscheide – nämlich durch die zweifache Natur, aber die einheitlicheWürde. Die <br /><a line='4'></a> Autorität der Naturen ist nämlich wegen der Verbindung<i>eine</i>, wobei die Naturen <br /><a line='5'></a> gänzlich in ihrereigentümlichen Ordnung verbleiben, die Würde jedoch, wie ich zuvor<br /><a line='6'></a> sagte, zu einer einheitlichen Autorität verbunden wird.<span data-type='note-end' data-id='CV166-III-6-1-6-erinnert-wird'></span><br /><a line='7'></a> Du bist vermutlich in jeder inscht vn guter Auffassungsgabe, weil dudich dazu <br /><a line='8'></a> entschlossen hast, der göttlich inspirierten Schrift zufolgen, die <i>einen</i> Herrn Jesus <br /><a line='9'></a> <reglink name='christus'>Christus</reglink> nennt und nicht separat den aus der Nachkommenschaft Abrahams [Stam- <br /><a line='10'></a> menden] und den aus Gott, dem Vater,[gezeugten] Logos bestimmt. Daneben ist es <br /><a line='11'></a> aber auch nötig, Folgendeszu bedenken. Eine Sache ist nämlich die Gottheit, eine <br /><a line='12'></a> andere aber dieuns entsprechende Menschheit dem Prinzip nach, das den Naturen<a page='227'></a><br /><a line='13'></a> innewohnt. Durch einen Zusammenschluss aber, der auf einer wahrhaftenEinung<br /><a line='14'></a> basiert,<span data-type='note-start' data-id='CV166-III-6-14-14-ergibt-habe'></span>[ergibt sich] aus beiden <i>ein</i>  <reglink name='christus'>Christus</reglink>, wie ich immer wieder gesagt habe.<span data-type='note-end' data-id='CV166-III-6-14-14-ergibt-habe'></span>Wenn<br /><a line='15'></a>allerdings die Hypostasen, wie du sagst, in zwei aufgeteilt sind undman sie als separat <br /><a line='16'></a> und für sich existierend betrachtet, wie kommt es[dann] zum Zusammenschluss zu <br /><a line='17'></a><i>einer</i>Person, wenn man nicht eben irgendwie sagt, dass ein Einzelnes einem Einzelnen<br /><a line='18'></a> zu eigen sei, wie zum Beispiel der dazugehörige Leib wohl als etwasder menschlichen <br /><a line='19'></a> Seele Eigenes betrachtet wird, obwohl er im Vergleichzu ihr von anderer Art ist? Seele <br /><a line='20'></a> und Leib sind wohl schließlich nichtdasselbe.<br /><a line='21'></a> Doch vielleicht wird jemand sagen: ‚Warum wird die heilige undverehrte Trinität in <br /><a line='22'></a> drei Hypostasen unterschieden, bringt aber<i>eine</i> Natur der Gottheit hervor?‘ Weil, <br /><a line='23'></a> möchte ichsagen, die Identität im Hinblick auf das Wesen, die mit Notwendigkeit <br /><a line='24'></a><span data-type='note-start' data-id='CV166-III-6-24-24--hypostasen'></span>dem Unterschied der Hypostasen<span data-type='note-end' data-id='CV166-III-6-24-24--hypostasen'></span>folgt, den Geist der Gläubigen zu <i>einer</i> Natur der<br /><a line='25'></a> Gottheit hinaufführt. Weil aber im Falle des Immanuel die Gottheit imVergleich mit <br /><a line='26'></a> der Menschheit etwas anderes ist, wenn wir nicht sagen,dass der Leib auf Grundlage <br /><a line='27'></a> einer wahren Einung dem Logos zu eigengeworden ist, wie sollte [da] <i>eine</i> Person von <br /><a line='28'></a> beidenhervorgebracht werden, wenn uns jede der beiden Hypostasen Eigenes mit sich<br /><a line='29'></a> bringt unter der Annahme, dass sie separiert vorliege? Und wenn dasAngenommene <br /><a line='30'></a> dem nicht zu eigen geworden ist, der angenommen hat, wirdeine Verbindung, die <br /><a line='31'></a> einfach auf Grundlage eines Zusammenschlusseszustande kommt, der allein in Würde<br /><a line='32'></a>und Autorität begründet ist, nicht ausreichen, den einen und alleinigen <reglink name='christus'>Christus</reglink><br /><a line='33'></a> hervorzubringen, der in einer Person Gott und zugleich Mensch ist.<span data-type='note-start' data-id='CV166-III-6-33-36-dann-wird'></span>Dann erst, erst in<br /><a line='34'></a> diesem Moment<span data-type='note-start' data-id='CV166-III-6-34-34-fürchtest-recht'></span>&lt;fürchtest&gt; du auch völlig zu Recht&gt;<span data-type='note-end' data-id='CV166-III-6-34-34-fürchtest-recht'></span>, dich ‚von dem Glauben an ihn<br /><a line='35'></a> abzuwenden‘, auch wenn er dem Fleisch nach als ‚aus derNachkommenschaft Abra- <br /><a line='36'></a> hams stammend‘ aufgefasst wird.<span data-type='note-end' data-id='CV166-III-6-33-36-dann-wird'></span>Wenn du aber, indem du sagst, dass es einen und ei-<br /><a line='37'></a> nen anderen gebe, und außerdem behauptest, dass man den Glauben demder Nach- <br /><a line='38'></a> kommenschaft Abrahams entstammenden entgegenbringen müsse,sollst du wissen, <br /><a line='39'></a> und zwar ganz gewiss,<span data-type='note-start' data-id='CV166-III-6-39-41-dass-gelten'></span>dass du den Vorwurf der Menschenverehrung auf dein eigenes <br /><a line='40'></a> Hauptausgießt, obwohl du es von dir zurückweist, und das durchaus berechtigt, als<br /><a line='41'></a> Menschenverehrer zu gelten.<span data-type='note-end' data-id='CV166-III-6-39-41-dass-gelten'></span>Da er aber überhaupt wenig von dem, was zu bedenken<a page='228'></a><br /><a line='42'></a> angemessen wäre, bedacht hat, verunglimpft er<span data-type='note-start' data-id='CV166-III-6-42-42-das-frömmigkeit'></span>das große Geheimnis der Frömmigkeit<span data-type='note-end' data-id='CV166-III-6-42-42-das-frömmigkeit'></span><br /><a line='43'></a> auch auf andere Weise und fügt unmittelbar an:<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error <span data-type='note-start' data-id='CV166-III-latetest'></span>sit voluptatem accusantium<span data-type='note-end' data-id='CV166-III-latetest'></span> doloremque</p>",
-			"libIV-pre": "<p><a line='1'></a>libIV-pre <span data-type='note-start' data-id='CV166-IV-pre-start'></span>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem<span data-type='note-end' data-id='CV166-IV-pre-start'></span> accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIV-1": "<p><a line='1'></a>libIV-1 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIV-2": "<p><a line='1'></a>libIV-2 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIV-3": "<p><a line='1'></a>libIV-3 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIV-4": "<p><a line='1'></a>libIV-4 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIV-5": "<p><a line='1'></a>libIV-5 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIV-6": "<p><a line='1'></a>libIV-6 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
-			"libIV-7": "<p><a line='1'></a>libIV-6 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>"
+			"content": {
+				"head": "<span data-type='head_key'>Edition:</span> Collectio Vaticana 166, ACO I,1,6 S. 13,4–106,41; ältereEdd.: PG 76, Sp. 9–248; Pusey (1965 [=1868–1877]), Bd. 6 S. 54–239<p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5217</p><p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria</p><p><span data-type='head_key'>Datierung:</span> spätestens Mitte 430 Lat.</p><p><span data-type='head_key'>Übersetzungen:</span>–</p><p><span data-type='head_key'>Inhalt:</span> Kyrill unterzieht die Christologie seines GegnersNestorius einer groß angelegten Kritik. Zu diesem Zweck zitiert er zahlreiche ihm anstößigerscheinende Aussagen, die jener im Vorfeld getätigt hatte, und stellt diesen dann seineeigenen Ansichten gegenüber.</p><p><span data-type='head_key'>Literatur:</span> Pusey (1881), S. 1–184.</p>",
+				"title": "<a titles='CV166'></a><p line='1'>Kyrills, des überaus heiligen Erzbischofs von Alexandria,</p><p line='2'>‚Gegen die Schmähungen des Nestorius‘</p><p line='3'>Fünfbändige Widerlegung oder die fünf Bücher des heiligen Kyrill</p>",
+				"libI-pre": "<p><a lib='I'></a></p><p><a page='124'></a></p><p><a line='1'></a>libI-pre Foo bar bal<br /><a line='2'></a> Foooooo aweohjk j.</p>",
+				"libI-1": "<p><a line='1'></a>libI-1 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p><br/>",
+				"libI-2": "<p><a line='1'></a>libI-2 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libI-3": "<p><a line='1'></a>libI-3 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libI-4": "<p><a line='1'></a>libI-4 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libI-5": "<p><a line='1'></a>libI-5 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libI-6": "<p><a line='1'></a>libI-6 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libI-7": "<p><a line='1'></a>libI-7 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libI-8": "<p><a line='1'></a>libI-8 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libI-9": "<p><a line='1'></a>libI-9 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libI-10": "<p><a line='1'></a>libI-10 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-pre": "<p><a line='1'></a>libII-pre Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-1": "<p><a line='1'></a>libII-1 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-2": "<p><a line='1'></a>libII-2 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-3": "<p><a line='1'></a>libII-3 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-4": "<p><a line='1'></a>libII-4 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-5": "<p><a line='1'></a>libII-5 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-6": "<p><a line='1'></a>libII-6 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-7": "<p><a line='1'></a>libII-7 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-8": "<p><a line='1'></a>libII-8 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-9": "<p><a line='1'></a>libII-9 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-10": "<p><a line='1'></a>libII-10 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-11": "<p><a line='1'></a>libII-11 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-12": "<p><a line='1'></a>libII-12 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-13": "<p><a line='1'></a>libII-13 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libII-14": "<p><a line='1'></a>libII-14 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIII-pre": "<p><a line='1'></a>libIII-pre Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIII-1": "<p><a line='1'></a>libIII-1 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIII-2": "<p><a line='1'></a>libIII-2 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIII-3": "<p><a line='1'></a>libIII-3 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIII-4": "<p><a line='1'></a>libIII-4 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIII-5": "<p><a line='1'></a>libIII-5 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIII-6": "<p><a line='1'></a>libIII-6 <span data-type='note-start' data-id='CV166-III-6-1-6-erinnert-wird'></span>Erinnert euch in vollem Umfang auch an das, was immer wieder von mir gesagt <br /><a line='2'></a> worden ist, der ich im Hinblick auf den Herrscher <reglink name='christus'>Christus</reglink> die zweifachen Naturen<br /><a line='3'></a> unterscheide – nämlich durch die zweifache Natur, aber die einheitlicheWürde. Die <br /><a line='4'></a> Autorität der Naturen ist nämlich wegen der Verbindung<i>eine</i>, wobei die Naturen <br /><a line='5'></a> gänzlich in ihrereigentümlichen Ordnung verbleiben, die Würde jedoch, wie ich zuvor<br /><a line='6'></a> sagte, zu einer einheitlichen Autorität verbunden wird.<span data-type='note-end' data-id='CV166-III-6-1-6-erinnert-wird'></span><br /><a line='7'></a> Du bist vermutlich in jeder inscht vn guter Auffassungsgabe, weil dudich dazu <br /><a line='8'></a> entschlossen hast, der göttlich inspirierten Schrift zufolgen, die <i>einen</i> Herrn Jesus <br /><a line='9'></a> <reglink name='christus'>Christus</reglink> nennt und nicht separat den aus der Nachkommenschaft Abrahams [Stam- <br /><a line='10'></a> menden] und den aus Gott, dem Vater,[gezeugten] Logos bestimmt. Daneben ist es <br /><a line='11'></a> aber auch nötig, Folgendeszu bedenken. Eine Sache ist nämlich die Gottheit, eine <br /><a line='12'></a> andere aber dieuns entsprechende Menschheit dem Prinzip nach, das den Naturen<a page='227'></a><br /><a line='13'></a> innewohnt. Durch einen Zusammenschluss aber, der auf einer wahrhaftenEinung<br /><a line='14'></a> basiert,<span data-type='note-start' data-id='CV166-III-6-14-14-ergibt-habe'></span>[ergibt sich] aus beiden <i>ein</i>  <reglink name='christus'>Christus</reglink>, wie ich immer wieder gesagt habe.<span data-type='note-end' data-id='CV166-III-6-14-14-ergibt-habe'></span>Wenn<br /><a line='15'></a>allerdings die Hypostasen, wie du sagst, in zwei aufgeteilt sind undman sie als separat <br /><a line='16'></a> und für sich existierend betrachtet, wie kommt es[dann] zum Zusammenschluss zu <br /><a line='17'></a><i>einer</i>Person, wenn man nicht eben irgendwie sagt, dass ein Einzelnes einem Einzelnen<br /><a line='18'></a> zu eigen sei, wie zum Beispiel der dazugehörige Leib wohl als etwasder menschlichen <br /><a line='19'></a> Seele Eigenes betrachtet wird, obwohl er im Vergleichzu ihr von anderer Art ist? Seele <br /><a line='20'></a> und Leib sind wohl schließlich nichtdasselbe.<br /><a line='21'></a> Doch vielleicht wird jemand sagen: ‚Warum wird die heilige undverehrte Trinität in <br /><a line='22'></a> drei Hypostasen unterschieden, bringt aber<i>eine</i> Natur der Gottheit hervor?‘ Weil, <br /><a line='23'></a> möchte ichsagen, die Identität im Hinblick auf das Wesen, die mit Notwendigkeit <br /><a line='24'></a><span data-type='note-start' data-id='CV166-III-6-24-24--hypostasen'></span>dem Unterschied der Hypostasen<span data-type='note-end' data-id='CV166-III-6-24-24--hypostasen'></span>folgt, den Geist der Gläubigen zu <i>einer</i> Natur der<br /><a line='25'></a> Gottheit hinaufführt. Weil aber im Falle des Immanuel die Gottheit imVergleich mit <br /><a line='26'></a> der Menschheit etwas anderes ist, wenn wir nicht sagen,dass der Leib auf Grundlage <br /><a line='27'></a> einer wahren Einung dem Logos zu eigengeworden ist, wie sollte [da] <i>eine</i> Person von <br /><a line='28'></a> beidenhervorgebracht werden, wenn uns jede der beiden Hypostasen Eigenes mit sich<br /><a line='29'></a> bringt unter der Annahme, dass sie separiert vorliege? Und wenn dasAngenommene <br /><a line='30'></a> dem nicht zu eigen geworden ist, der angenommen hat, wirdeine Verbindung, die <br /><a line='31'></a> einfach auf Grundlage eines Zusammenschlusseszustande kommt, der allein in Würde<br /><a line='32'></a>und Autorität begründet ist, nicht ausreichen, den einen und alleinigen <reglink name='christus'>Christus</reglink><br /><a line='33'></a> hervorzubringen, der in einer Person Gott und zugleich Mensch ist.<span data-type='note-start' data-id='CV166-III-6-33-36-dann-wird'></span>Dann erst, erst in<br /><a line='34'></a> diesem Moment<span data-type='note-start' data-id='CV166-III-6-34-34-fürchtest-recht'></span>&lt;fürchtest&gt; du auch völlig zu Recht&gt;<span data-type='note-end' data-id='CV166-III-6-34-34-fürchtest-recht'></span>, dich ‚von dem Glauben an ihn<br /><a line='35'></a> abzuwenden‘, auch wenn er dem Fleisch nach als ‚aus derNachkommenschaft Abra- <br /><a line='36'></a> hams stammend‘ aufgefasst wird.<span data-type='note-end' data-id='CV166-III-6-33-36-dann-wird'></span>Wenn du aber, indem du sagst, dass es einen und ei-<br /><a line='37'></a> nen anderen gebe, und außerdem behauptest, dass man den Glauben demder Nach- <br /><a line='38'></a> kommenschaft Abrahams entstammenden entgegenbringen müsse,sollst du wissen, <br /><a line='39'></a> und zwar ganz gewiss,<span data-type='note-start' data-id='CV166-III-6-39-41-dass-gelten'></span>dass du den Vorwurf der Menschenverehrung auf dein eigenes <br /><a line='40'></a> Hauptausgießt, obwohl du es von dir zurückweist, und das durchaus berechtigt, als<br /><a line='41'></a> Menschenverehrer zu gelten.<span data-type='note-end' data-id='CV166-III-6-39-41-dass-gelten'></span>Da er aber überhaupt wenig von dem, was zu bedenken<a page='228'></a><br /><a line='42'></a> angemessen wäre, bedacht hat, verunglimpft er<span data-type='note-start' data-id='CV166-III-6-42-42-das-frömmigkeit'></span>das große Geheimnis der Frömmigkeit<span data-type='note-end' data-id='CV166-III-6-42-42-das-frömmigkeit'></span><br /><a line='43'></a> auch auf andere Weise und fügt unmittelbar an:<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error<br/>Sed ut perspiciatis, unde omnis iste natus error <span data-type='note-start' data-id='CV166-III-latetest'></span>sit voluptatem accusantium<span data-type='note-end' data-id='CV166-III-latetest'></span> doloremque</p>",
+				"libIV-pre": "<p><a line='1'></a>libIV-pre <span data-type='note-start' data-id='CV166-IV-pre-start'></span>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem<span data-type='note-end' data-id='CV166-IV-pre-start'></span> accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIV-1": "<p><a line='1'></a>libIV-1 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIV-2": "<p><a line='1'></a>libIV-2 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIV-3": "<p><a line='1'></a>libIV-3 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIV-4": "<p><a line='1'></a>libIV-4 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIV-5": "<p><a line='1'></a>libIV-5 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIV-6": "<p><a line='1'></a>libIV-6 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+				"libIV-7": "<p><a line='1'></a>libIV-6 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>"
+			}
+		},
+		{
+			"slug": "CPal29",
+			"num": "Dok 26",
+			"type": "book",
+			"title": "Kyrill, Exzerpte aus den Schriften des Nestorius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV144",
+			"num": "Dok 27",
+			"type": "book",
+			"title": "Kyrills Brief an Coelestin",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CU4",
+			"num": "Dok 28",
+			"type": "book",
+			"title": "Kyrills Memorandum an Poseidonios",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CVer1",
+			"num": "Dok 29",
+			"type": "book",
+			"title": "Coelestins Brief an Kyrill",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CVer2",
+			"num": "Dok 30",
+			"type": "book",
+			"title": "Coelestins Brief an Nestorius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CVer5",
+			"num": "Dok 31",
+			"type": "book",
+			"title": "Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CVer6",
+			"num": "Dok 32",
+			"type": "book",
+			"title": "Coelestins Brief an Johannes von Antiochia, Juvenal von Jerusalem, Rufus von Thessaloniki und Flavian von Philippi",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV13",
+			"num": "Dok 33",
+			"type": "book",
+			"title": "Kyrills Brief an Johannes von Antiochia",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV15",
+			"num": "Dok 34",
+			"type": "book",
+			"title": "Kyrills Brief an Juvenal von Jerusalem",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV14",
+			"num": "Dok 35",
+			"type": "book",
+			"title": "Brief des Johannes von Antiochia an Nestorius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV6",
+			"num": "Dok 36",
+			"type": "book",
+			"title": "Kyrills dritter Brief an Nestorius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV24",
+			"num": "Dok 37",
+			"type": "book",
+			"title": "Kyrills Brief an Klerus und Volk von Konstantinopel",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV145",
+			"num": "Dok 38",
+			"type": "book",
+			"title": "Kyrills Brief an die Mönche in Konstantinopel",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV7",
+			"num": "Dok 39",
+			"type": "book",
+			"title": "Kyrills Rede über den rechten Glauben an Theodosius",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV150",
+			"num": "Dok 40",
+			"type": "book",
+			"title": "Kyrills Rede an die Herrinnen",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV149",
+			"num": "Dok 41",
+			"type": "book",
+			"title": "Kyrills Rede an die Augustae über den Glauben",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV25",
+			"num": "Dok 42",
+			"type": "book",
+			"title": "Sacra an Kyrill und die Metropoliten, durch welche die Synode in Ephesus einberufen wird",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV8",
+			"num": "Dok 43",
+			"type": "book",
+			"title": "Sacra an Kyrill",
+			"metaunits": [],
+			"units": [],
+			"content": {}
+		},
+		{
+			"slug": "CV23",
+			"num": "Dok 44",
+			"type": "book",
+			"title": "Sacra an Akakios von Beroia und andere",
+			"metaunits": [],
+			"units": [],
+			"content": {}
 		}
-	}
+	]
 }

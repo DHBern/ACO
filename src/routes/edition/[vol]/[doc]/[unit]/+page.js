@@ -1,33 +1,23 @@
-// import { textData, notesData } from '$lib/data/content';
-import { textData } from '$lib/data/aco-text.json';
-import { notesData } from '$lib/data/aco-notes.json';
+import { textData as tData, notesData as nData } from '$lib/data/content';
 
 /** @type {import('./$types').PageLoad} */
-export function load({ fetch, params }) {
-	// For later
-	//!! Now this leads to: "Cannot use relative URL (/json/aco-text.json) with global fetch — use `event.fetch` instead: https://svelte.dev/docs/kit/web-standards#fetch-apis"
-	// const textData = await textData;
-	// const notesData = await notesData;
-
-	// Alternative for localhost
-	// const { textData } = await fetch(`/json/aco-text.json`).then((r) => {
-	// 	return r.json();
-	// });
-	// const { notesData } = await fetch(`/json/aco-notes.json`).then((r) => {
-	// 	return r.json();
-	// });
-
+export async function load({ fetch, params }) {
+	const textData = await tData;
+	const notesData = await nData;
+	
 	// URL Parameters
-	const doc = params.doc;
-	const unit = params.unit;
-
+	const slug_doc = params.doc;
+	const slug_unit = params.unit;
+	
 	// Get corresponding data
-	const textunit = textData?.[doc]?.[unit] || '';
-	const notes = notesData?.[doc]?.[unit] || {};
+	const document = textData.find(({ slug: s }) => s === slug_doc);
+	const note = notesData[slug_doc];
+	const textunit = document[slug_unit] || '';
+	const notes = note[slug_unit] || {};
 
 	// Workaround until dynamic unit-loading is in place (delete later)
-	const allunits = textData?.[doc].units.map((unit) => {
-		return textData?.[doc][unit];
+	const allunits = document.units.map((unit) => {
+		return document.content[unit];
 	});
 
 	return {
