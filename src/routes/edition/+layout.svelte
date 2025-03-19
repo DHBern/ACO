@@ -3,6 +3,6 @@
 </script>
 
 <!-- Content -->
-<div class="left-0 top-[80px] h-[calc(100%-80px)] px-[10%] p-5">
+<div class="absolute left-0 top-[80px] h-[calc(100%-80px)] px-[10%] p-5">
 	{@render children()}
 </div>
