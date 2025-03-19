@@ -7,9 +7,8 @@
 <div
 	data-id={note.id}
 	class={[
-		`notebox word-wrap absolute max-w-[700px] rounded-md border-4 bg-slate-50 dark:bg-slate-700 p-3 
-		[&.highlighted]:border-green-400 [&.highlighted]:bg-green-200 
-		transition-transform duration-500`,
+		`notebox word-wrap absolute max-w-[700px] rounded-md border-4 bg-white transition-transform  
+		duration-500 dark:bg-[var(--aco-teal-light)] dark:bg-slate-400`,
 		selectedNote.id === note.id && 'highlighted'
 	]}
 	style={`margin-top:${MARGIN_NOTEBOX}px; margin-bottom:${MARGIN_NOTEBOX}px`}
@@ -23,18 +22,13 @@
 	aria-pressed={selectedNote.id === note.id}
 	aria-label="Focus note"
 >
-	{@html note.content}
+	<div
+		class="h-full w-full bg-[var(--aco-teal-light)]/10 p-3 **:pt-4 **:text-gray-200 **:[&_a]:text-[var(--aco-link)] in-[&.highlighted]:border-[var(--aco-teal-light)] in-[&.highlighted]:bg-[var(--aco-teal-light)]"
+	>
+		{@html note.content}
+	</div>
 </div>
 
 <style>
 	@reference "tailwindcss";
-
-	.notebox {
-		:global(p) {
-			@apply pt-4 text-gray-600;
-		}
-		:global(a) {
-			@apply text-blue-700;
-		}
-	}
 </style>

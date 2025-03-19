@@ -17,7 +17,7 @@
 		<ul>
 			{#each docs[type] as doc}
 				<li
-					class="mb-2 font-semibold text-[var(--aco-teal-secondary)] hover:text-[var(--aco-orange)]"
+					class="mb-2 font-semibold text-[var(--aco-teal-light)] hover:text-[var(--aco-orange)]"
 				>
 					<a
 						href="#"
@@ -29,7 +29,7 @@
 
 						<span class="ml-2 text-sm text-[var(--aco-orange)]">
 							(
-							<span class="text-[var(--aco-orange-secondary)]">{doc.slug}</span> |
+							<span class="text-[var(--aco-orange-light)]">{doc.slug}</span> |
 							<span class="">{doc.num}</span>
 							)
 						</span>
