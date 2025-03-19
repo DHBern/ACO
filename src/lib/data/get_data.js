@@ -1,6 +1,13 @@
 // Import local JSON files
-export { textData } from './aco-text.json';
-export { notesData } from './aco-notes.json';
+import { textData as tData } from './aco-text.json';
+import { notesData as nData } from './aco-notes.json';
+
+const textData = await tData;
+const notesData = await nData;
+
+export {textData};
+export {notesData};
+
 
 // Get JSON from Web-API
 // import { api } from '$lib/constants/constants';

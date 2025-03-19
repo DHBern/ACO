@@ -1,9 +1,7 @@
-import { textData as tData } from '$lib/data/content';
+import { textData } from '$lib/data/get_data';
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch, params }) {
-	const textData = await tData;
-
 	// URL Parameters
 	const slug_vol = params.vol;
 	const slug_doc = params.doc;

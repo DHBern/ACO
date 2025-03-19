@@ -1,10 +1,7 @@
-import { textData as tData, notesData as nData } from '$lib/data/content';
+import { textData, notesData } from '$lib/data/get_data';
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch, params }) {
-	const textData = await tData;
-	const notesData = await nData;
-	
 	// URL Parameters
 	const slug_doc = params.doc;
 	const slug_unit = params.unit;
@@ -12,8 +9,8 @@ export async function load({ fetch, params }) {
 	// Get corresponding data
 	const document = textData.find(({ slug: s }) => s === slug_doc);
 	const note = notesData[slug_doc];
-	const textunit = document[slug_unit] || '';
-	const notes = note[slug_unit] || {};
+	const textunit = document?.[slug_unit] || '';
+	const notes = note?.[slug_unit] || {};
 
 	// Workaround until dynamic unit-loading is in place (delete later)
 	const allunits = document.units.map((unit) => {
