@@ -3,16 +3,16 @@
 		{
 			"slug": "CPal20",
 			"num": "Dok 1",
-			"type": "book",
+			"type": "CPal",
 			"title": "Nestorius’ erste Predigt gegen den θεοτόκος-Titel (sermo 9)",
 			"metaunits": [],
-			"units": [],
+			"units": ["test"],
 			"content": {}
 		},
 		{
 			"slug": "CV18",
 			"num": "Dok 2",
-			"type": "book",
+			"type": "CV",
 			"title": "Contestatio gegen die Kleriker von Konstantinopel",
 			"metaunits": [],
 			"units": [],
@@ -21,7 +21,7 @@
 		{
 			"slug": "CV19",
 			"num": "Dok 3",
-			"type": "book",
+			"type": "CV",
 			"title": "Homilie des Proklos von Kyzikos",
 			"metaunits": [],
 			"units": [],
@@ -30,7 +30,7 @@
 		{
 			"slug": "CPal22",
 			"num": "Dok 4",
-			"type": "book",
+			"type": "CPal",
 			"title": "Nestorius’ Antwort auf die Homilie des Proklos von Kyzikos (sermo 27)",
 			"metaunits": [],
 			"units": [],
@@ -39,7 +39,7 @@
 		{
 			"slug": "CV1",
 			"num": "Dok 5",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an die ägyptischen Mönche",
 			"metaunits": [],
 			"units": [],
@@ -48,7 +48,7 @@
 		{
 			"slug": "CPal21",
 			"num": "Dok 6",
-			"type": "book",
+			"type": "CPal",
 			"title": "Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10)",
 			"metaunits": [],
 			"units": [],
@@ -57,7 +57,7 @@
 		{
 			"slug": "CVer3",
 			"num": "Dok 7",
-			"type": "book",
+			"type": "CVer",
 			"title": "Nestorius’ erster Brief an Coelestin",
 			"metaunits": [],
 			"units": [],
@@ -66,7 +66,7 @@
 		{
 			"slug": "CV22",
 			"num": "Dok 8",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an die Apokrisiare in Konstantinopel",
 			"metaunits": [],
 			"units": [],
@@ -75,7 +75,7 @@
 		{
 			"slug": "CV20",
 			"num": "Dok 9",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an einen Anhänger des Nestorius",
 			"metaunits": [],
 			"units": [],
@@ -84,7 +84,7 @@
 		{
 			"slug": "CV21",
 			"num": "Dok 10",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an seine Kritiker",
 			"metaunits": [],
 			"units": [],
@@ -93,7 +93,7 @@
 		{
 			"slug": "CV16",
 			"num": "Dok 11",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an Akakios von Beroia (Ep. 14)",
 			"metaunits": [],
 			"units": [],
@@ -102,7 +102,7 @@
 		{
 			"slug": "CV17",
 			"num": "Dok 12",
-			"type": "book",
+			"type": "CV",
 			"title": "Brief des Akakios von Beroia an Kyrill",
 			"metaunits": [],
 			"units": [],
@@ -111,7 +111,7 @@
 		{
 			"slug": "CPal31",
 			"num": "Dok 13",
-			"type": "book",
+			"type": "CPal",
 			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 20 [Auszüge])",
 			"metaunits": [],
 			"units": [],
@@ -120,7 +120,7 @@
 		{
 			"slug": "CPal32",
 			"num": "Dok 14",
-			"type": "book",
+			"type": "CPal",
 			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 28 [Auszüge])",
 			"metaunits": [],
 			"units": [],
@@ -129,7 +129,7 @@
 		{
 			"slug": "CPal33",
 			"num": "Dok 15",
-			"type": "book",
+			"type": "CPal",
 			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 29 [Auszüge])",
 			"metaunits": [],
 			"units": [],
@@ -138,7 +138,7 @@
 		{
 			"slug": "CPal34",
 			"num": "Dok 16",
-			"type": "book",
+			"type": "CPal",
 			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 30 [Auszüge])",
 			"metaunits": [],
 			"units": [],
@@ -147,7 +147,7 @@
 		{
 			"slug": "CPal36",
 			"num": "Dok 17",
-			"type": "book",
+			"type": "CPal",
 			"title": "Marius Mercators Commonitorium bezüglich Caelestius",
 			"metaunits": [],
 			"units": [],
@@ -156,7 +156,7 @@
 		{
 			"slug": "CV2",
 			"num": "Dok 18",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills erster Brief an Nestorius",
 			"metaunits": [],
 			"units": [],
@@ -165,7 +165,7 @@
 		{
 			"slug": "CV3",
 			"num": "Dok 19",
-			"type": "book",
+			"type": "CV",
 			"title": "Nestorius’ erster Brief an Kyrill",
 			"metaunits": [],
 			"units": [],
@@ -174,7 +174,7 @@
 		{
 			"slug": "CV143",
 			"num": "Dok 20",
-			"type": "book",
+			"type": "CV",
 			"title": "Bittschrift des Diakon Basilius und weiterer Mönche",
 			"metaunits": [],
 			"units": [],
@@ -183,7 +183,7 @@
 		{
 			"slug": "CPal35",
 			"num": "Dok 21",
-			"type": "book",
+			"type": "CPal",
 			"title": "Nestorius’ Brief an Caelestius",
 			"metaunits": [],
 			"units": [],
@@ -192,7 +192,7 @@
 		{
 			"slug": "CVer4",
 			"num": "Dok 22",
-			"type": "book",
+			"type": "CVer",
 			"title": "Nestorius’ zweiter Brief an Coelestin",
 			"metaunits": [],
 			"units": [],
@@ -201,7 +201,7 @@
 		{
 			"slug": "CV4",
 			"num": "Dok 23",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills zweiter Brief an Nestorius",
 			"metaunits": [],
 			"units": [],
@@ -210,7 +210,7 @@
 		{
 			"slug": "CV5",
 			"num": "Dok 24",
-			"type": "book",
+			"type": "CV",
 			"title": "Nestorius’ zweiter Brief an Kyrill",
 			"metaunits": [],
 			"units": [],
@@ -219,7 +219,7 @@
 		{
 			"slug": "CV166",
 			"num": "Dok 25",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrill, ‚Gegen Nestorius‘",
 			"metaunits": ["head", "title"],
 			"usemelater": [
@@ -348,7 +348,7 @@
 		{
 			"slug": "CPal29",
 			"num": "Dok 26",
-			"type": "book",
+			"type": "CPal",
 			"title": "Kyrill, Exzerpte aus den Schriften des Nestorius",
 			"metaunits": [],
 			"units": [],
@@ -357,7 +357,7 @@
 		{
 			"slug": "CV144",
 			"num": "Dok 27",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an Coelestin",
 			"metaunits": [],
 			"units": [],
@@ -366,7 +366,7 @@
 		{
 			"slug": "CU4",
 			"num": "Dok 28",
-			"type": "book",
+			"type": "CU",
 			"title": "Kyrills Memorandum an Poseidonios",
 			"metaunits": [],
 			"units": [],
@@ -375,7 +375,7 @@
 		{
 			"slug": "CVer1",
 			"num": "Dok 29",
-			"type": "book",
+			"type": "CVer",
 			"title": "Coelestins Brief an Kyrill",
 			"metaunits": [],
 			"units": [],
@@ -384,7 +384,7 @@
 		{
 			"slug": "CVer2",
 			"num": "Dok 30",
-			"type": "book",
+			"type": "CVer",
 			"title": "Coelestins Brief an Nestorius",
 			"metaunits": [],
 			"units": [],
@@ -393,7 +393,7 @@
 		{
 			"slug": "CVer5",
 			"num": "Dok 31",
-			"type": "book",
+			"type": "CVer",
 			"title": "Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
 			"metaunits": [],
 			"units": [],
@@ -402,7 +402,7 @@
 		{
 			"slug": "CVer6",
 			"num": "Dok 32",
-			"type": "book",
+			"type": "CVer",
 			"title": "Coelestins Brief an Johannes von Antiochia, Juvenal von Jerusalem, Rufus von Thessaloniki und Flavian von Philippi",
 			"metaunits": [],
 			"units": [],
@@ -411,7 +411,7 @@
 		{
 			"slug": "CV13",
 			"num": "Dok 33",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an Johannes von Antiochia",
 			"metaunits": [],
 			"units": [],
@@ -420,7 +420,7 @@
 		{
 			"slug": "CV15",
 			"num": "Dok 34",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an Juvenal von Jerusalem",
 			"metaunits": [],
 			"units": [],
@@ -429,7 +429,7 @@
 		{
 			"slug": "CV14",
 			"num": "Dok 35",
-			"type": "book",
+			"type": "CV",
 			"title": "Brief des Johannes von Antiochia an Nestorius",
 			"metaunits": [],
 			"units": [],
@@ -438,7 +438,7 @@
 		{
 			"slug": "CV6",
 			"num": "Dok 36",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills dritter Brief an Nestorius",
 			"metaunits": [],
 			"units": [],
@@ -447,7 +447,7 @@
 		{
 			"slug": "CV24",
 			"num": "Dok 37",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an Klerus und Volk von Konstantinopel",
 			"metaunits": [],
 			"units": [],
@@ -456,7 +456,7 @@
 		{
 			"slug": "CV145",
 			"num": "Dok 38",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Brief an die Mönche in Konstantinopel",
 			"metaunits": [],
 			"units": [],
@@ -465,7 +465,7 @@
 		{
 			"slug": "CV7",
 			"num": "Dok 39",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Rede über den rechten Glauben an Theodosius",
 			"metaunits": [],
 			"units": [],
@@ -474,7 +474,7 @@
 		{
 			"slug": "CV150",
 			"num": "Dok 40",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Rede an die Herrinnen",
 			"metaunits": [],
 			"units": [],
@@ -483,7 +483,7 @@
 		{
 			"slug": "CV149",
 			"num": "Dok 41",
-			"type": "book",
+			"type": "CV",
 			"title": "Kyrills Rede an die Augustae über den Glauben",
 			"metaunits": [],
 			"units": [],
@@ -492,7 +492,7 @@
 		{
 			"slug": "CV25",
 			"num": "Dok 42",
-			"type": "book",
+			"type": "CV",
 			"title": "Sacra an Kyrill und die Metropoliten, durch welche die Synode in Ephesus einberufen wird",
 			"metaunits": [],
 			"units": [],
@@ -501,7 +501,7 @@
 		{
 			"slug": "CV8",
 			"num": "Dok 43",
-			"type": "book",
+			"type": "CV",
 			"title": "Sacra an Kyrill",
 			"metaunits": [],
 			"units": [],
@@ -510,7 +510,7 @@
 		{
 			"slug": "CV23",
 			"num": "Dok 44",
-			"type": "book",
+			"type": "CV",
 			"title": "Sacra an Akakios von Beroia und andere",
 			"metaunits": [],
 			"units": [],
