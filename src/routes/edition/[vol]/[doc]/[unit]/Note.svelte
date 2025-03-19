@@ -7,7 +7,7 @@
 <div
 	data-id={note.id}
 	class={[
-		`notebox word-wrap absolute max-w-[700px] rounded-md border-4 bg-white p-3 
+		`notebox word-wrap absolute max-w-[700px] rounded-md border-4 bg-slate-50 dark:bg-slate-700 p-3 
 		[&.highlighted]:border-green-400 [&.highlighted]:bg-green-200 
 		transition-transform duration-500`,
 		selectedNote.id === note.id && 'highlighted'

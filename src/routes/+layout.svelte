@@ -6,7 +6,7 @@
 
 <!-- Menu -->
 <nav
-	class="items-between absolute left-0 top-0 flex h-[80px] w-full flex-row justify-start gap-12 bg-[#105766] text-white"
+	class="items-between absolute left-0 top-0 flex h-[80px] w-full flex-row justify-start gap-12 bg-[#105766] text-slate-50"
 >
 	<button
 		onclick={() => {
@@ -42,7 +42,8 @@
 		}}>Suche</button
 	>
 </nav>
+
 <!-- Content -->
-<div class="absolute left-0 top-[80px] h-[calc(100%-80px)] w-full bg-white p-5">
+<div class="bg-slate-200 dark:bg-slate-900">
 	{@render children()}
 </div>

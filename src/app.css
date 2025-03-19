@@ -27,14 +27,13 @@
 }
 
 p {
-	padding-top: 15px;
-	color: black
+  @apply pt-4 dark:text-white not-dark:text-black;
 }
-/* :global(.nowrap p) {
-	white-space: nowrap;
-} */
+:global(.nowrap p) {
+	@apply whitespace-nowrap;
+}
 
 /* Prevent selecting <br /> on copy-paste */
 .copyWithoutLinebreaks br {
-	user-select: none;
+	@apply select-none;
 }

@@ -101,6 +101,6 @@
 		@apply inline-block;
 	}
 	#containerLineNums :global(.lineNumBuffer) {
-		@apply select-none text-white;
+		@apply select-none text-black/0;
 	}
 </style>
