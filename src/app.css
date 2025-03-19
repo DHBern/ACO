@@ -26,6 +26,12 @@
   }
 }
 
+:root {
+  --aco-teal: #105766;
+  --aco-secondary: #4b828d;
+}
+
+
 p {
   @apply pt-4 dark:text-white not-dark:text-black;
 }
