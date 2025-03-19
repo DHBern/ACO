@@ -31,7 +31,7 @@
 	</div>
 
 	<!-- Document Title -->
-	<div id="containerDocTitle" class="col-span-1 col-start-2 my-12 **:font-bold **:text-center">
+	<div id="containerDocTitle" class="col-span-1 col-start-3 my-12 **:font-bold **:text-center">
 		{@html doctitle}
 	</div>
 
