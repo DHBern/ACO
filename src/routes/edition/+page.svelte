@@ -1,5 +1,5 @@
 <script>
-	import Content from "./Content.svelte"
+	import TOC from "./TOC.svelte"
 </script>
 
-<Content />
+<TOC />
