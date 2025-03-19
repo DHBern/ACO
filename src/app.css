@@ -64,6 +64,7 @@
   --aco-link: #00d5ff;
 }
 
+
 p {
 	@apply text-lg pt-4 not-dark:text-black dark:text-white;
 }
