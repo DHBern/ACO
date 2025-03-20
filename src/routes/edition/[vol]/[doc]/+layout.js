@@ -17,10 +17,12 @@ export async function load({ fetch, params, url }) {
 		meta: doc?.content.head || "",
 		title: doc?.content.title || "",
 	}
+	const docContent = doc?.content || null
 
 	return {
 		slug_doc,
 		line,
-		docMetadata
+		docMetadata,
+		docContent
 	};
 }

@@ -17,55 +17,55 @@
 
 	let { data } = $props();
 
+	let groupedUnits = $state(data.groupedUnits);
+
 	let selectedNote = $state({ id: '' });
 	let multiMarkPopupIds = $state({ ids: [], target: undefined });
 
 	// let mainTexts = $derived(
-	// 	data.groupedUnits.map((unit) => {
+	// 	groupedUnits.map((unit) => {
 	// 		return generateMainText(unit.text);
 	// 	})
 	// );
 
 	function handleResetMultiMark(ev) {
 		if (
-				!ev.target.classList.contains('multimark-popup') &&
-				!(multiMarkPopupIds.ids.length > 0 && ev.target.classList.contains('multiple-ids'))
-			) {
-				multiMarkPopupIds.ids = [];
-			}
+			!ev.target.classList.contains('multimark-popup') &&
+			!(multiMarkPopupIds.ids.length > 0 && ev.target.classList.contains('multiple-ids'))
+		) {
+			multiMarkPopupIds.ids = [];
+		}
 	}
 
 	onMount(() => {
 		// Extract note-ids from text and place note-boxes at initial positions
-		$effect(()=>{
-
-			data.groupedUnits.forEach((unit) => {
+		$effect(() => {
+			groupedUnits.forEach((unit) => {
 				const ids = extractNoteIds(unit.text);
 				placeNotes(ids);
 			});
-		})
-		
+		});
+
 		// Scrolling to lines and units
-		$effect(()=>{
+		$effect(() => {
 			const elLine = document.querySelector(`[data-line="${data.line}"]`);
 			if (elLine) {
 				elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			}
-		})
-		$effect(()=>{
+		});
+		$effect(() => {
 			const elLine = document.querySelector(`[data-unit="${data.slug_unit}"]`);
 			if (elLine) {
 				elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			}
-		})
-		
+		});
+
 		// Event Listeners
 		document.body.addEventListener('click', handleResetMultiMark);
-		
+
 		return () => {
 			document.body.removeEventListener('click', handleResetMultiMark);
-		}
-		
+		};
 	});
 </script>
 
@@ -73,7 +73,7 @@
 <div
 	class="containerPageNums col-span-1 col-start-1 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
 >
-	{#each data.groupedUnits as unit}
+	{#each groupedUnits as unit}
 		{@html generatePageNumbers(unit.text)}
 	{/each}
 </div>
@@ -82,7 +82,7 @@
 <div
 	class="containerLineNums col-span-1 col-start-2 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
 >
-	{#each data.groupedUnits as unit}
+	{#each groupedUnits as unit}
 		{@html generateLineNumbers(unit.text)}
 	{/each}
 </div>
@@ -95,8 +95,23 @@
 			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 		]}
 >
-	{#each data.groupedUnits as unit}
-		<Unit {unit} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupIds}></Unit>
+	{#each groupedUnits as unit (unit.slug)}
+		<Unit slug={unit.slug} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupIds}
+		></Unit>
+		<button
+		class="bg-red-300 rounded p-5 min-w-[50px] mx-auto"
+			type="button"
+			onclick={() => {
+				const lastUnit = groupedUnits[groupedUnits.length-1];
+				console.log(lastUnit)
+				groupedUnits.push({
+					slug: lastUnit.nextSlug,
+					nextSlug: data.docMetadata.slugs[data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1] || null,
+					text: data.docContent[lastUnit.nextSlug] || '',
+					notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || []
+				});
+			}}>LOAD {groupedUnits[groupedUnits.length-1].nextSlug}</button
+		>
 	{/each}
 </div>
 
@@ -108,7 +123,7 @@
 			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 		]}
 >
-	{#each data.groupedUnits as unit}
+	{#each groupedUnits as unit}
 		<!-- //! Dont do this twice! -->
 		{@const notes = extractNoteIds(unit.text).map((id) => ({
 			id: id,

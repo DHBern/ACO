@@ -18,7 +18,7 @@ export async function load({ fetch, params }) {
 			text: doc.content[slug] || '',
 			notes: notesData[slug_doc]?.[slug] || []
 		}
-	}) 
+	})
 
 	// Workaround until dynamic unit-loading is in place (delete later)
 	// const units = doc.units.map((unit) => {
@@ -27,6 +27,8 @@ export async function load({ fetch, params }) {
 
 	return {
 		slug_unit,
-		groupedUnits
+		slug_doc,
+		groupedUnits,
+		notesData
 	};
 }
