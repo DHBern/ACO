@@ -44,11 +44,18 @@
 	{/each}
 </div>
 
+<!-- Line Numbers -->
+<div id="containerLineNums" class="col-span-1 col-start-2">
+	{#each allunits as unit}
+		{@html generateLineNumbers(unit)}
+	{/each}
+</div>
+
 <!-- Main Text -->
 <div
 	id="containerText"
 	class={[
-		'maintext relative col-span-1 col-start-2',
+		'maintext relative col-span-1 col-start-3',
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >
@@ -57,12 +64,6 @@
 	{/each}
 </div>
 
-<!-- Line Numbers -->
-<div id="containerLineNums" class="col-span-1 col-start-3">
-	{#each allunits as unit}
-		{@html generateLineNumbers(unit)}
-	{/each}
-</div>
 <!-- Notes -->
 <div
 	id="containerNotes"
