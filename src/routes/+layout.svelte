@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
+	import { Switch, Slider } from '@skeletonlabs/skeleton-svelte';
 	import '../app.css';
 	let { children } = $props();
+	let mystate = $state(true);
+	let value = $state([40]);
 </script>
 
 <!-- Menu -->
@@ -47,13 +49,14 @@
 		document.documentElement.classList.toggle("dark");
 	}}>Toggle Dark </button>
 
-	<!-- <Switch name="Dark Mode" onCheckedChange={()=>{
-		document.documentElement.classList.toggle("dark");
-	}} /> -->
 
 </nav>
 
 <!-- Content -->
-<div class="p-10">
+<div class="p-10 pt-200">
+	<Slider name="example" {value} onValueChange={(e) => (value = e.value)} />
+	<Switch name="Dark Mode" checked={mystate} onCheckedChange={()=>{
+		document.documentElement.classList.toggle("dark");
+	}} />
 	{@render children()}
 </div>
