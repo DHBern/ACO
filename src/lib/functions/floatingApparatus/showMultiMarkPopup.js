@@ -8,7 +8,7 @@ export function showMultiMarkPopup(ids, multiMarkPopupIds, elMark) {
 	// Make sure that popup exists
 	tick().then(() => {
 		const elPopup = document.querySelector('.multimark-popup');
-		const elContainer = document.querySelector(`#containerText`);
+		const elContainer = document.querySelector(`.containerText`);
 		const rectMark = elMark.getBoundingClientRect();
 		const rectContainer = elContainer.getBoundingClientRect();
 

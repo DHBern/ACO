@@ -5,11 +5,11 @@ import { getInstantOffsetTop } from './getInstantOffsetTop';
 export function moveNote(id) {
 	const elNoteRef = document.querySelector(`[data-type=note-start][data-id=${id}]`);
 	const elNoteBox = document.querySelector(`.notebox[data-id=${id}]`);
-	const elContainerText = document.querySelector(`#containerText`);
-	const elContainer = document.querySelector('#containerDocHead');
+	const elContainerText = document.querySelector(`.containerText`);
+	const elContainer = document.querySelector('.containerDocHead');
 
 	// Move entire column (via marginTop)
-	// const elContainerNotes = document.querySelector('#containerNotes');
+	// const elContainerNotes = document.querySelector('.containerNotes');
 	// elContainerNotes.style.marginTop = `${offset}px`;
 
 	// Move noteboxe to reference position (i.e. reset translateY)

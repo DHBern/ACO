@@ -9,7 +9,7 @@
 	let state = $state(false)
 </script>
 
-<!-- <div id="containerSettings" class="flex w-full justify-center align-middle">
+<!-- <div class="containerSettings flex w-full justify-center align-middle">
 	<div class="flex justify-center align-middle">
 		<Switch
 			name="toggleCopyWithoutLinebreaks"
@@ -21,17 +21,14 @@
 	</div>
 </div> -->
 
-<div
-	id="containerDocHead"
-	class="grid h-screen w-full grid-cols-[90px_60px_1fr_1fr] overflow-x-hidden overflow-y-scroll border border-r-black pb-24 px-[5%]"
->
+<div class="containerDocHead grid h-screen w-full grid-cols-[90px_60px_1fr_1fr] overflow-x-hidden overflow-y-scroll border border-r-black pb-24 px-[5%]">
 	<!-- Document Head (Metadata) -->
-	<div id="containerDocHead" class="col-span-4 col-start-1 m-5 bg-slate-50 p-5 shadow-xl">
+	<div class="containerDocHead col-span-4 col-start-1 m-5 bg-slate-50 p-5 shadow-xl">
 		{@html dochead}
 	</div>
 
 	<!-- Document Title -->
-	<div id="containerDocTitle" class="col-span-1 col-start-3 my-12 **:font-bold **:text-center">
+	<div class="containerDocTitle col-span-1 col-start-3 my-12 **:font-bold **:text-center">
 		{@html doctitle}
 	</div>
 

@@ -38,23 +38,21 @@
 </script>
 
 <!-- Page Numbers -->
-<div id="containerPageNums" class="col-span-1 col-start-1">
+<div class="containerPageNums col-span-1 col-start-1">
 	{#each allunits as unit}
 		{@html generatePageNumbers(unit)}
 	{/each}
 </div>
 
 <!-- Line Numbers -->
-<div id="containerLineNums" class="col-span-1 col-start-2">
+<div class="containerLineNums col-span-1 col-start-2">
 	{#each allunits as unit}
 		{@html generateLineNumbers(unit)}
 	{/each}
 </div>
 
 <!-- Main Text -->
-<div
-	id="containerText"
-	class={[
+<div class={"containerText " + [
 		'maintext relative col-span-1 col-start-3',
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
@@ -66,8 +64,7 @@
 
 <!-- Notes -->
 <div
-	id="containerNotes"
-	class={[
+	class={"containerNotes "+[
 		'relative col-span-1 col-start-4 mt-0 transition-all duration-1000',
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
@@ -91,19 +88,19 @@
 <style>
 	@reference "tailwindcss";
 
-	#containerLineNums :global(a.line-number), 
-	#containerLineNums :global(a.page-number) {
-		@apply select-none mr-2;
+	.containerLineNums :global(a.line-number),
+	.containerPageNums :global(a.page-number) {
+		@apply mr-2 select-none;
 	}
 
 	/* Anchors for line-numbers */
-	#containerLineNums :global(a.line-number::after) {
-		@apply content-[""] bg-[url(/icons/link.svg)] bg-contain bg-no-repeat ml-2 w-4 h-4 hidden;
+	.containerLineNums :global(a.line-number::after) {
+		@apply ml-2 hidden h-4 w-4 bg-[url(/icons/link.svg)] bg-contain bg-no-repeat content-[""];
 	}
-	#containerLineNums :global(a.line-number:hover::after) {
+	.containerLineNums :global(a.line-number:hover::after) {
 		@apply inline-block;
 	}
-	#containerLineNums :global(.lineNumBuffer) {
-		@apply select-none text-black/0;
+	.containerLineNums :global(.lineNumBuffer) {
+		@apply text-black/0 select-none;
 	}
 </style>
