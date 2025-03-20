@@ -6,6 +6,8 @@
   Add your theme import for your theme: "cerberus" here
 */
 
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
 @config '../tailwind.config.ts';
 
 /* Apply .dark whenever the dark class is present earlier in the HTML tree */
@@ -27,31 +29,31 @@
 	::file-selector-button {
 		border-color: var(--color-gray-200, currentColor);
 	}
-  @font-face {
+	@font-face {
 		font-family: 'Junicode';
 		src: local('Junicode'), local('Junicode'), local('Junicode'), local('Junicode'),
 			url('/fonts/Junicode.ttf');
 		font-display: swap;
 	}
-  @font-face {
+	@font-face {
 		font-family: 'Junicode-Bold';
-		src: local('Junicode-Bold'), local('Junicode-Bold'), local('Junicode-Bold'), local('Junicode-Bold'),
-			url('/fonts/Junicode-Bold.ttf');
+		src: local('Junicode-Bold'), local('Junicode-Bold'), local('Junicode-Bold'),
+			local('Junicode-Bold'), url('/fonts/Junicode-Bold.ttf');
 		font-weight: bold;
 		font-display: swap;
 	}
-  @font-face {
+	@font-face {
 		font-family: 'Junicode-BoldItalic';
-		src: local('Junicode-BoldItalic'), local('Junicode-BoldItalic'), local('Junicode-BoldItalic'), local('Junicode-BoldItalic'),
-			url('/fonts/Junicode-BoldItalic.ttf');
+		src: local('Junicode-BoldItalic'), local('Junicode-BoldItalic'), local('Junicode-BoldItalic'),
+			local('Junicode-BoldItalic'), url('/fonts/Junicode-BoldItalic.ttf');
 		font-weight: bold;
-    font-style: italic;
+		font-style: italic;
 		font-display: swap;
 	}
-  @font-face {
+	@font-face {
 		font-family: 'Junicode-Italic';
-		src: local('Junicode-Italic'), local('Junicode-Italic'), local('Junicode-Italic'), local('Junicode-Italic'),
-			url('/fonts/Junicode-Italic.ttf');
+		src: local('Junicode-Italic'), local('Junicode-Italic'), local('Junicode-Italic'),
+			local('Junicode-Italic'), url('/fonts/Junicode-Italic.ttf');
 		font-style: italic;
 		font-display: swap;
 	}
@@ -64,11 +66,10 @@
 	--aco-orange: #ac6037;
 	--aco-orange-light: #c1886a;
 	--aco-link: #3ac6e1;
-  	
 }
 
 p {
-	@apply text-lg pt-4 not-dark:text-black dark:text-white;
+	@apply pt-4 text-lg not-dark:text-black dark:text-white;
 }
 .nowrap p {
 	@apply whitespace-nowrap;
@@ -76,15 +77,15 @@ p {
 
 /* Heading */
 span[data-type='head_key'] {
-  @apply font-bold mr-1;
+	@apply mr-1 font-bold;
 }
 
 /* Edition Text */
 span[data-ids] {
-  @apply cursor-pointer bg-[#ffffdd] [&.multiple-ids]:bg-[#ffff99] dark:text-black;
+	@apply cursor-pointer bg-[#ffffdd] dark:text-black [&.multiple-ids]:bg-[#ffff99];
 }
-span[data-type=mark].highlighted {
-  @apply bg-[var(--aco-orange-light)] dark:bg-[var(--aco-orange)];
+span[data-type='mark'].highlighted {
+	@apply bg-[var(--aco-orange-light)] dark:bg-[var(--aco-orange)];
 }
 
 /* span[data-type=note-start]::before {
@@ -96,12 +97,10 @@ span[data-type=note-end]::before {
   @apply content-["●]"];
 } */
 
-
 /* Prevent selecting <br /> on copy-paste */
 .copyWithoutLinebreaks br {
 	@apply select-none;
 }
-
 
 [data-theme='cerberus'] {
 	--heading-font-family: 'Junicode', 'Open Sans', sans-serif;
