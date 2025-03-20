@@ -13,9 +13,9 @@
 </div>
 
 <!-- Settings and Unit-Navigation -->
-<div class="containerSettings flex w-full justify-center align-middle">
+<div class="containerSettings flex flex-col gap-2 w-full justify-center align-middle">
 	<!-- Unit-Navigation -->
-	<div class="containerDocUnits my-5">
+	<div class="containerDocUnits my-5 max-h-60 overflow-y-scroll">
 		{#each data.docMetadata.slugs as slug, idx}
 			<button
 				type="button"
@@ -26,7 +26,7 @@
 	</div>
 	
 	<!-- Settings -->
-	<div class="mx-5 flex justify-center gap-2 align-middle">
+	<div class="my-5 flex justify-center gap-5 align-middle">
 		<Switch
 			name="toggleCopyWithoutLinebreaks"
 			checked={copyWithoutLinebreaks.value}
@@ -46,11 +46,6 @@
 </div>
 
 <div class="h-screen w-full overflow-x-scroll pb-24">
-	<!-- Document Title -->
-	<div class="containerDocTitle col-span-1 col-start-3 my-12 **:text-center **:font-bold">
-		{@html data.docMetadata.title}
-	</div>
-
 	<div class="containerDocContent grid grid-cols-[90px_60px_1fr] lg:grid-cols-[90px_60px_1fr_1fr]">
 		{@render children()}
 	</div>

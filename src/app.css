@@ -89,6 +89,20 @@ span[data-type='head_key'] {
 	@apply bg-[var(--aco-orange-light)] dark:bg-[var(--aco-orange)];
 }
 
+.containerText p {
+	@apply indent-6;
+}
+.containerText [data-type='lib-number'] {
+	@apply text-center font-bold w-full inline-block;
+}
+
+.containerText [data-type='acoTitle'] {
+	@apply text-center font-bold text-lg;
+}
+/* [data-title_line="2"] {
+	@apply text-2xl
+} */
+
 /* span[data-type=note-start]::before {
   @apply text-blue-600 in-[&.highlighted]:text-red-500 mr-[1px] ml-[3px];
   @apply content-["[●"];

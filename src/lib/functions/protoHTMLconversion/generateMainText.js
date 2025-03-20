@@ -44,12 +44,12 @@ function insertNoteSpans(text) {
 
 export function generateMainText(text) {
 	// Remove line numbers
-	text = text.replace(/<a[^>]*[line|page]="[^"]*"[^>]*><\/a>/g, '');
+	text = text.replace(/<a[^>]*[data-line|data-page]="[^"]*"[^>]*><\/a>/g, '');
 	// Insert spans
 	text = insertNoteSpans(text);
 	// Transform lib-number
-	text = text.replace(/<a\ lib='(I+)'><\/a>/g, (match, libNumber) => {
-		return `<a data-type="lib-number" lib="${libNumber}">Buch ${libNumber}</a>`;
+	text = text.replace(/<a\ data-lib='(I+V*)'><\/a>/g, (match, libNumber) => {
+		return `<a data-type="lib-number" data-lib="${libNumber}">Buch ${libNumber}</a>`;
 	});
 	return text.trim();
 }
