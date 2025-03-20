@@ -80,10 +80,10 @@ span[data-type='head_key'] {
 
 /* Edition Text */
 span[data-ids] {
-  @apply cursor-pointer bg-[#ffffdd] [&.multiple-ids]:bg-[#ffff99];
+  @apply cursor-pointer bg-[#ffffdd] [&.multiple-ids]:bg-[#ffff99] dark:text-black;
 }
 span[data-type=mark].highlighted {
-  @apply bg-[var(--aco-orange)]/40;
+  @apply bg-[var(--aco-orange-light)] dark:bg-[var(--aco-orange)];
 }
 
 /* span[data-type=note-start]::before {
