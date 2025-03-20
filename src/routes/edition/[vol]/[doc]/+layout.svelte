@@ -1,6 +1,6 @@
 <script>
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
-	import { copyWithoutLinebreaks } from '../../globals.svelte.js';
+	import { copyWithoutLinebreaks, marksVisible } from '../../globals.svelte.js';
 	import { goto } from '$app/navigation';
 
 	let { data, children } = $props();
@@ -32,8 +32,16 @@
 			checked={copyWithoutLinebreaks.value}
 			onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
 			controlInactive="bg-primary-500"
+		>
+		<p>Fluid-Copy</p>
+		</Switch>
+		<Switch
+			name="toggleMarksVisible"
+			checked={marksVisible.value}
+			onCheckedChange={(e) => (marksVisible.value = e.checked)}
+			controlInactive="bg-primary-500"
 		/>
-		<p>Copy-Mode</p>
+		<p>Markierungen</p>
 	</div>
 </div>
 

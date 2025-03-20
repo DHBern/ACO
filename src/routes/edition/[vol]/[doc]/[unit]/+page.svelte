@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { copyWithoutLinebreaks } from '../../../globals.svelte';
+	import { copyWithoutLinebreaks, marksVisible } from '../../../globals.svelte.js';
 
 	import Note from './Note.svelte';
 	import Text from './Text.svelte';
@@ -43,7 +43,7 @@
 				multiMarkPopupIds.ids = [];
 			}
 		});
-		
+
 		$effect(()=>{
 			console.log('newline', data.line)
 			const elLine = document.querySelector(`[line="${data.line}"]`);

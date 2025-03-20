@@ -5,15 +5,15 @@ import {autoPlacement} from '@floating-ui/dom';
 
 export function updateFunctionFloatingPopover(elMark, elPopup) {
     
-    const middlewareOverflow = {
-        name: 'middleware',
-        async fn(state) {
-          const overflow = await detectOverflow(state, {
-            boundary: document.querySelector('.containerText'),
-                  });
-          return {};
-        },
-      };
+    // const middlewareOverflow = {
+    //     name: 'middleware',
+    //     async fn(state) {
+    //       const overflow = await detectOverflow(state, {
+    //         boundary: document.querySelector('.containerText'),
+    //               });
+    //       return {};
+    //     },
+    //   };
 
     return ()=>{
         computePosition(elMark, elPopup, {

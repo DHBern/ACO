@@ -69,7 +69,7 @@
 }
 
 p {
-	@apply text-lg pt-4 text-black dark:text-white;
+	@apply pt-4 text-lg text-black dark:text-white;
 }
 .nowrap p {
 	@apply whitespace-nowrap;
@@ -81,10 +81,11 @@ span[data-type='head_key'] {
 }
 
 /* Edition Text */
-span[data-ids] {
-	@apply cursor-pointer bg-[#ffffdd] dark:text-black [&.multiple-ids]:bg-[#ffff99];
+.marksVisible span[data-ids] {
+	@apply cursor-pointer bg-[#ffffdd] [&.multiple-ids]:bg-[#ffff99] dark:text-black;
 }
-span[data-type='mark'].highlighted {
+
+.marksVisible span[data-type='mark'].highlighted {
 	@apply bg-[var(--aco-orange-light)] dark:bg-[var(--aco-orange)];
 }
 

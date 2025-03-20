@@ -1,6 +1,6 @@
 import { unselectMarks } from './unselectMarks';
 
-export function handleNotMarkClick(selectedNote, multiMarkPopupIds) {
+export function resetMarkSelection(selectedNote, multiMarkPopupIds) {
 	multiMarkPopupIds.ids = [];
 	selectedNote.id = '';
 	unselectMarks();

@@ -1,43 +1,55 @@
 <script>
-	import { handleMarkClick, handleNotMarkClick } from '$lib/functions/floatingApparatus';
-		
+	import { handleMarkClick, resetMarkSelection } from '$lib/functions/floatingApparatus';
+	import { onMount } from 'svelte';
+	import { marksVisible } from '../../../globals.svelte.js';
+
 	let { text, selectedNote, multiMarkPopupIds } = $props();
 
-	function handleTextClick(ev) {
-		if (selectedNote.id && !ev.target.closest('[data-type="mark"]')) {
-			handleNotMarkClick(selectedNote, multiMarkPopupIds)
+	function handleResetMarkSelection(ev) {
+		if (
+			selectedNote.id &&
+			!ev.target.closest('[data-type="mark"]') &&
+			!ev.target.closest('.notebox')
+		) {
+			console.log('foooo');
+			resetMarkSelection(selectedNote, multiMarkPopupIds);
 		}
 	}
-	
+
 	function handleMarkerClick(ev) {
-		handleMarkClick(ev, selectedNote, multiMarkPopupIds)
+		handleMarkClick(ev, selectedNote, multiMarkPopupIds);
 	}
 
 	function handleMarkerKeyDown(ev) {
 		ev.key === 'Enter' || ev.key === ' '
-		? handleMarkClick(ev, selectedNote, multiMarkPopupIds)
-		: null
+			? handleMarkClick(ev, selectedNote, multiMarkPopupIds)
+			: null;
 	}
 
+	onMount(() => {
+		document.body.addEventListener('click', handleResetMarkSelection);
+		return () => {
+			document.body.removeEventListener('click', handleResetMarkSelection);
+		};
+	});
+
 	function addSpanHandlers(node) {
-		// the node has been mounted in the DOM
-
-		$effect(() => {
-			node.addEventListener("click", handleTextClick)
-			node.querySelectorAll(`span`).forEach(n => n.addEventListener("click",handleMarkerClick))
-			node.querySelectorAll(`span`).forEach(n => n.addEventListener("keydown",handleMarkerKeyDown))
-			return () => {
-				node.addEventListener("click", handleTextClick)
-				node.querySelectorAll(`span`).forEach(n => n.removeEventListener("click", handleMarkerClick))
-				node.querySelectorAll(`span`).forEach(n => n.removeEventListener("keydown", handleMarkerKeyDown))
-			};
-		});
-	};
-
+		node.querySelectorAll(`span`).forEach((n) => n.addEventListener('click', handleMarkerClick));
+		node
+			.querySelectorAll(`span`)
+			.forEach((n) => n.addEventListener('keydown', handleMarkerKeyDown));
+		return () => {
+			node
+				.querySelectorAll(`span`)
+				.forEach((n) => n.removeEventListener('click', handleMarkerClick));
+			node
+				.querySelectorAll(`span`)
+				.forEach((n) => n.removeEventListener('keydown', handleMarkerKeyDown));
+		};
+	}
 </script>
 
-
 <!-- 'whitespace-nowrap' instead of 'truncate' would make text overflow -->
-<div class="truncate" use:addSpanHandlers>
+<div class={['truncate', marksVisible.value && 'marksVisible']} use:addSpanHandlers>
 	{@html text}
 </div>
