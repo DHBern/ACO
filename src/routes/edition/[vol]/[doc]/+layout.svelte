@@ -1,12 +1,16 @@
 <script>
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import { copyWithoutLinebreaks } from '../../globals.svelte.js';
+	import { goto } from '$app/navigation';
 
 	let { data, children } = $props();
 
 	let dochead = $state(data.dochead);
 	let doctitle = $state(data.doctitle);
-	let state = $state(false)
+
+	const units = $state(data.units);
+	console.log(units);
+
 </script>
 
 <!-- <div class="containerSettings flex w-full justify-center align-middle">
@@ -21,16 +25,25 @@
 	</div>
 </div> -->
 
-<div class="containerDocHead grid h-screen w-full grid-cols-[90px_60px_1fr_1fr] overflow-x-scroll pb-24">
-	<!-- Document Head (Metadata) -->
-	<div class="containerDocHead col-span-4 col-start-1 m-5 p-5 shadow-md">
-		{@html dochead}
-	</div>
+<!-- Document Head (Metadata) -->
+<div class="containerDocHead col-span-4 col-start-1 p-5 shadow-md">
+	{@html dochead}
+</div>
 
+<div class="containerDocUnits my-5">
+	{#each units as unit}
+		<button type="button" onclick={()=>(goto(`${unit}`))}
+			class="px-4 py-1 mx-2 rounded-full bg-black text-white">{unit}</button>
+	{/each}
+</div>
+
+<div class="h-screen w-full  overflow-x-scroll pb-24">
 	<!-- Document Title -->
 	<div class="containerDocTitle col-span-1 col-start-3 my-12 **:font-bold **:text-center">
 		{@html doctitle}
 	</div>
 
-	{@render children()}
+	<div class="containerDocContent grid grid-cols-[90px_60px_1fr] lg:grid-cols-[90px_60px_1fr_1fr]">
+		{@render children()}
+	</div>
 </div>

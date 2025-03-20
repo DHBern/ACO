@@ -38,14 +38,14 @@
 </script>
 
 <!-- Page Numbers -->
-<div class="containerPageNums col-span-1 col-start-1">
+<div class="containerPageNums row-start-1 row-span-1 lg:row-start-1 lg:row-span-2 col-span-1 col-start-1">
 	{#each allunits as unit}
 		{@html generatePageNumbers(unit)}
 	{/each}
 </div>
 
 <!-- Line Numbers -->
-<div class="containerLineNums col-span-1 col-start-2">
+<div class="containerLineNums row-start-1 row-span-1 lg:row-start-1 lg:row-span-2 col-span-1 col-start-2">
 	{#each allunits as unit}
 		{@html generateLineNumbers(unit)}
 	{/each}
@@ -53,7 +53,7 @@
 
 <!-- Main Text -->
 <div class={"containerText " + [
-		'maintext relative col-span-1 col-start-3',
+		'maintext relative row-start-1 row-span-1 lg:row-start-1 lg:row-span-2 col-span-1 col-start-3',
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >
@@ -65,7 +65,7 @@
 <!-- Notes -->
 <div
 	class={"containerNotes "+[
-		'relative col-span-1 col-start-4 mt-0 transition-all duration-1000',
+		'relative row-start-2 row-span-1 lg:row-start-1 lg:row-span-2 col-span-3 col-start-1 lg:col-span-1 lg:col-start-4 mt-0 transition-all duration-1000',
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >

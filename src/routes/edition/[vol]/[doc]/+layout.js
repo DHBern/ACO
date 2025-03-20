@@ -11,8 +11,12 @@ export async function load({ fetch, params }) {
 	const dochead = document.content.head;
 	const doctitle = document.content.title;
 
+	const units = document?.units;
+
 	return {
+		slug_doc,
 		dochead,
-		doctitle
+		doctitle,
+		units
 	};
 }
