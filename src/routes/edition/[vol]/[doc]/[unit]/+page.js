@@ -9,17 +9,15 @@ export async function load({ fetch, params }) {
 	// Get corresponding data
 	const document = textData.find(({ slug: s }) => s === slug_doc);
 	const note = notesData[slug_doc];
-	const textunit = document?.[slug_unit] || '';
 	const notes = note?.[slug_unit] || {};
 
 	// Workaround until dynamic unit-loading is in place (delete later)
-	const allunits = document.units.map((unit) => {
+	const units = document.units.map((unit) => {
 		return document.content[unit];
 	});
 
 	return {
-		textunit,
-		allunits,
+		units,
 		notes
 	};
 }

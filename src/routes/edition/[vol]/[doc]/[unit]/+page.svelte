@@ -21,16 +21,16 @@
 	let selectedNote = $state({ id: '' });
 	let multiMarkPopupIds = $state({ ids: [] });
 
-	let allunits = $state(data.allunits);
+	let units = $state(data.units);
 
 	let mainTexts = $derived(
-		allunits.map((unit) => {
+		units.map((unit) => {
 			return generateMainText(unit);
 		})
 	);
 
 	onMount(() => {
-		allunits.forEach((unit) => {
+		units.forEach((unit) => {
 			const ids = extractNoteIds(unit);
 			placeNotes(ids);
 		});
@@ -39,14 +39,14 @@
 
 <!-- Page Numbers -->
 <div class="containerPageNums row-start-1 row-span-1 lg:row-start-1 lg:row-span-2 col-span-1 col-start-1">
-	{#each allunits as unit}
+	{#each units as unit}
 		{@html generatePageNumbers(unit)}
 	{/each}
 </div>
 
 <!-- Line Numbers -->
 <div class="containerLineNums row-start-1 row-span-1 lg:row-start-1 lg:row-span-2 col-span-1 col-start-2">
-	{#each allunits as unit}
+	{#each units as unit}
 		{@html generateLineNumbers(unit)}
 	{/each}
 </div>
@@ -57,7 +57,7 @@
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >
-	{#each allunits as unit, idx}
+	{#each units as unit, idx}
 		<Text text={mainTexts[idx]} {selectedNote} {multiMarkPopupIds}></Text>
 	{/each}
 </div>
@@ -69,7 +69,7 @@
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >
-	{#each allunits as unit}
+	{#each units as unit}
 		{@const notes = extractNoteIds(unit).map((id) => ({
 			id: id,
 			content: allNotes[id]?.note_content

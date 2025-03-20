@@ -8,8 +8,6 @@
 	let dochead = $state(data.dochead);
 	let doctitle = $state(data.doctitle);
 
-	const units = $state(data.units);
-	console.log(units);
 </script>
 
 <!-- Document Head (Metadata) -->
@@ -21,7 +19,7 @@
 <div class="containerSettings flex w-full justify-center align-middle">
 	<!-- Unit-Navigation -->
 	<div class="containerDocUnits my-5">
-		{#each units as unit}
+		{#each data.units as unit}
 			<button
 				type="button"
 				onclick={() => goto(`${unit}`)}
@@ -29,8 +27,8 @@
 			>
 		{/each}
 	</div>
-
-	<!-- Sttings -->
+	
+	<!-- Settings -->
 	<div class="mx-5 flex justify-center gap-2 align-middle">
 		<Switch
 			name="toggleCopyWithoutLinebreaks"
