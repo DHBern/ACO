@@ -63,7 +63,8 @@
 	--aco-teal-light2: #b0c9ce;
 	--aco-orange: #ac6037;
 	--aco-orange-light: #c1886a;
-  --aco-link: #3ac6e1;
+	--aco-link: #3ac6e1;
+  	
 }
 
 p {
@@ -106,4 +107,7 @@ span[data-type=note-end]::before {
 	--heading-font-family: 'Junicode', 'Open Sans', sans-serif;
 	--base-font-family: 'Junicode', 'Open Sans', sans-serif;
 	--anchor-font-family: 'inherit';
+
+	--body-background-color: #e8e8e8;
+	--body-background-color-dark: #404e50;
 }

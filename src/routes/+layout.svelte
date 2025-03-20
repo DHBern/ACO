@@ -54,6 +54,6 @@
 </nav>
 
 <!-- Content -->
-<div class="bg-slate-200 dark:bg-slate-900">
+<div class="p-10">
 	{@render children()}
 </div>
