@@ -1,6 +1,7 @@
 <script>
 	import { handleMarkClick, handleNotMarkClick } from '$lib/functions/floatingApparatus';
-
+	import { Popover } from '@skeletonlabs/skeleton-svelte';
+	
 	let { text, selectedNote, multiMarkPopupIds } = $props();
 
 	function handleTextClick(ev) {
