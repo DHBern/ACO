@@ -16,3 +16,4 @@ export { handleMarkClick } from './handleMarkClick';
 export { handleNotMarkClick } from './handleNotMarkClick';
 export { handlePopupClick } from './handlePopupClick';
 export { showMultiMarkPopup } from './showMultiMarkPopup';
+export { updateFunctionFloatingPopover } from './updateFunctionFloatingPopover';

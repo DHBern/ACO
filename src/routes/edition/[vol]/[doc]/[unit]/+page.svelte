@@ -34,18 +34,31 @@
 			const ids = extractNoteIds(unit);
 			placeNotes(ids);
 		});
+
+		document.body.addEventListener('click', (ev) => {
+			if (
+				!ev.target.classList.contains('multimark-popup') &&
+				!(multiMarkPopupIds.ids.length > 0 && ev.target.classList.contains('multiple-ids'))
+			) {
+				multiMarkPopupIds.ids = [];
+			}
+		});
 	});
 </script>
 
 <!-- Page Numbers -->
-<div class="containerPageNums row-start-1 row-span-1 lg:row-start-1 lg:row-span-2 col-span-1 col-start-1">
+<div
+	class="containerPageNums col-span-1 col-start-1 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
+>
 	{#each units as unit}
 		{@html generatePageNumbers(unit)}
 	{/each}
 </div>
 
 <!-- Line Numbers -->
-<div class="containerLineNums row-start-1 row-span-1 lg:row-start-1 lg:row-span-2 col-span-1 col-start-2">
+<div
+	class="containerLineNums col-span-1 col-start-2 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
+>
 	{#each units as unit}
 		{@html generateLineNumbers(unit)}
 	{/each}

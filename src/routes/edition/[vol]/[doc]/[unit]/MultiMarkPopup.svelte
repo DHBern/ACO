@@ -1,26 +1,18 @@
 <script>
 	import { handlePopupClick } from '$lib/functions/floatingApparatus';
+	import { updateFunctionFloatingPopover } from '$lib/functions/floatingApparatus';
 	import { onMount } from 'svelte';
 	import { autoUpdate } from '@floating-ui/dom';
-	import { computePosition, shift, flip, offset } from '@floating-ui/dom';
 
 	let { multiMarkPopupIds, selectedNote } = $props();
-
 	let popUpElement = $state();
 
 	onMount(() => {
-		const updateFunction = () => {
-			computePosition(multiMarkPopupIds.target, popUpElement, {
-				placement: 'top',
-				middleware: [offset(5), flip(), shift()],
-				strategy: 'absolute'
-			}).then(({ x, y }) => {
-				popUpElement.style.top = `${y}px`;
-				popUpElement.style.left = `${x}px`;
-				popUpElement.style.display = 'block';
-			});
-		};
-		const cleanup = autoUpdate(multiMarkPopupIds.target, popUpElement, updateFunction);
+		const cleanup = autoUpdate(
+			multiMarkPopupIds.target,
+			popUpElement,
+			updateFunctionFloatingPopover(multiMarkPopupIds.target, popUpElement)
+		);
 		return () => {
 			cleanup();
 		};

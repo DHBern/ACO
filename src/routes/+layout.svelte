@@ -10,6 +10,7 @@
 	let { children } = $props();
 	let mystate = $state(true);
 	let value = $state([40]);
+
 </script>
 
 <!-- Menu -->
