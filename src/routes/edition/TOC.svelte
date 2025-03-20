@@ -22,7 +22,7 @@
 					<a
 						href="#"
 						onclick={() => {
-							goto(`edition/1/${doc.slug}/${doc.units[0]}`);
+							goto(`edition/1/${doc.slug}/${doc.unitSlugs[0]}`);
 						}}
 					>
 						<span class="text-lg italic">"{doc.title}"</span>
