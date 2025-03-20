@@ -9,7 +9,7 @@
 
 <!-- Document Head (Metadata) -->
 <div class="containerDocHead col-span-4 col-start-1 p-5 shadow-md">
-	{@html data.dochead}
+	{@html data.docMetadata.meta}
 </div>
 
 <!-- Settings and Unit-Navigation -->
@@ -48,7 +48,7 @@
 <div class="h-screen w-full overflow-x-scroll pb-24">
 	<!-- Document Title -->
 	<div class="containerDocTitle col-span-1 col-start-3 my-12 **:text-center **:font-bold">
-		{@html data.doctitle}
+		{@html data.docMetadata.title}
 	</div>
 
 	<div class="containerDocContent grid grid-cols-[90px_60px_1fr] lg:grid-cols-[90px_60px_1fr_1fr]">

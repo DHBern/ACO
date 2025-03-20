@@ -167,15 +167,15 @@
 	<div class="grid grid-cols-3 gap-2">
 		<div>
 			<p>Deutsche Forschungsgemeinschaft (DFG)</p>
-			<img src="/logos/logo-dfg.jpg" alt="Logo DFG" class="w-[200px]" />
+			<img src="/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif" alt="Logo DFG" class="w-[200px]" />
 		</div>
 		<div>
 			<p>Universität Bonn</p>
-			<img src="/logos/logo-unibonn.jpg" alt="Logo Universität Bonn" class="w-[200px]" />
+			<img src="/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg" alt="Logo Universität Bonn" class="w-[200px]" />
 		</div>
 		<div>
 			<p>Universität Bern</p>
-			<img src="/logos/logo-unibe.jpg" alt="Logo Universität Bern" class="w-[200px]" />
+			<img src="/images-legacy/logos/Logo_Uni_Bern.png" alt="Logo Universität Bern" class="w-[200px]" />
 		</div>
 	</div>
 </div>
