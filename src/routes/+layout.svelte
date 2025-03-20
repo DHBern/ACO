@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import '../app.css';
 	let { children } = $props();
 </script>
@@ -41,6 +42,15 @@
 			goto('/edition/search');
 		}}>Suche</button
 	>
+	
+	<button type="button" onclick={()=>{
+		document.documentElement.classList.toggle("dark");
+	}}>Toggle Dark </button>
+
+	<!-- <Switch name="Dark Mode" onCheckedChange={()=>{
+		document.documentElement.classList.toggle("dark");
+	}} /> -->
+
 </nav>
 
 <!-- Content -->

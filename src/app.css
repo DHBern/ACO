@@ -8,6 +8,9 @@
 
 @config '../tailwind.config.ts';
 
+/* Apply .dark whenever the dark class is present earlier in the HTML tree */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
