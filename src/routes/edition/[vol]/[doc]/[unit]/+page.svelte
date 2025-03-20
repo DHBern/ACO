@@ -95,6 +95,8 @@
 	#containerLineNums :global(a.page-number) {
 		@apply select-none mr-2;
 	}
+
+	/* Anchors for line-numbers */
 	#containerLineNums :global(a.line-number::after) {
 		@apply content-[""] bg-[url(/icons/link.svg)] bg-contain bg-no-repeat ml-2 w-4 h-4 hidden;
 	}

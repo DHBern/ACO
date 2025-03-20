@@ -1,6 +1,6 @@
 export function generatePageNumbers(text) {
 	// Match a-page, p and br tags
-	const matches = text.match(/(<a\ page='\d+'><\/a>)|(<br\s*\/?>)/g);
+	const matches = text.match(/(<a\ page='\d+'><\/a>)|(<\/?p>)|(<br\s*\/?>)/g);
 	const pageText = matches ? matches.join('') : '';
 
 	// Insert page-number as text and add class
