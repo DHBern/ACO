@@ -5,14 +5,11 @@
 
 	let { data, children } = $props();
 
-	let dochead = $state(data.dochead);
-	let doctitle = $state(data.doctitle);
-
 </script>
 
 <!-- Document Head (Metadata) -->
 <div class="containerDocHead col-span-4 col-start-1 p-5 shadow-md">
-	{@html dochead}
+	{@html data.dochead}
 </div>
 
 <!-- Settings and Unit-Navigation -->
@@ -43,7 +40,7 @@
 <div class="h-screen w-full overflow-x-scroll pb-24">
 	<!-- Document Title -->
 	<div class="containerDocTitle col-span-1 col-start-3 my-12 **:text-center **:font-bold">
-		{@html doctitle}
+		{@html data.doctitle}
 	</div>
 
 	<div class="containerDocContent grid grid-cols-[90px_60px_1fr] lg:grid-cols-[90px_60px_1fr_1fr]">

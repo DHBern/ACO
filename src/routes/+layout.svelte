@@ -8,13 +8,12 @@
   	import IconSun from '@lucide/svelte/icons/sun';
 
 	let { children } = $props();
-	let mystate = $state(true);
-	let value = $state([40]);
 
 </script>
 
 <!-- Menu -->
 <header class="flex gap-10 bg-[#105766] text-lg text-slate-50">
+	<!-- ACO-Logo -->
 	<button
 		onclick={() => {
 			goto('/.');
@@ -23,6 +22,7 @@
 		<img src="/logos/logo-aco.png" alt="ACO" class="max-h-full max-w-[100px]" />
 	</button>
 
+	<!-- Top Navigation Bar -->
 	<nav class="flex flex-row justify-start gap-12">
 		<button
 			onclick={() => {

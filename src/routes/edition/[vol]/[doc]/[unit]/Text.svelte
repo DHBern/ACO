@@ -1,7 +1,7 @@
 <script>
 	import { handleMarkClick, handleNotMarkClick } from '$lib/functions/floatingApparatus';
 		
-	let { text, selectedNote, multiMarkPopupIds } = $props();
+	let { data, text, selectedNote, multiMarkPopupIds } = $props();
 
 	function handleTextClick(ev) {
 		if (selectedNote.id && !ev.target.closest('[data-type="mark"]')) {
@@ -33,6 +33,15 @@
 			};
 		});
 	};
+
+	$effect(()=>{
+		console.log('newline', data.line)
+		const elLine = document.querySelector(`[line="${data.line}"]`);
+		if (elLine) {
+			elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	})
+
 </script>
 
 

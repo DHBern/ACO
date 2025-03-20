@@ -9,11 +9,11 @@ export async function load({ fetch, params, url }) {
 	const line = url.searchParams.get('line') || 1;
 
 	// Get corresponding data
-	const document = textData.find(({ slug: s }) => s === slug_doc);
-	const dochead = document.content.head;
-	const doctitle = document.content.title;
+	const doc = textData.find(({ slug: s }) => s === slug_doc);
+	const dochead = doc.content.head;
+	const doctitle = doc.content.title;
 
-	const units = document?.units;
+	const units = doc?.units || [];
 
 	return {
 		slug_doc,
