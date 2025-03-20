@@ -59,7 +59,7 @@
 </header>
 
 <!-- Content -->
-<div class="px-5">
+<div class="px-5 ">
 	{@render children()}
 </div>
 

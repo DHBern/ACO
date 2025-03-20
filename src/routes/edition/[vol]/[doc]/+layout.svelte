@@ -10,24 +10,28 @@
 
 	const units = $state(data.units);
 	console.log(units);
-
 </script>
-
-
 
 <!-- Document Head (Metadata) -->
 <div class="containerDocHead col-span-4 col-start-1 p-5 shadow-md">
 	{@html dochead}
 </div>
 
+<!-- Settings and Unit-Navigation -->
 <div class="containerSettings flex w-full justify-center align-middle">
+	<!-- Unit-Navigation -->
 	<div class="containerDocUnits my-5">
 		{#each units as unit}
-			<button type="button" onclick={()=>(goto(`${unit}`))}
-				class="px-4 py-1 mx-2 rounded-full bg-black text-white">{unit}</button>
+			<button
+				type="button"
+				onclick={() => goto(`${unit}`)}
+				class="mx-2 rounded-full bg-black px-4 py-1 text-white">{unit}</button
+			>
 		{/each}
 	</div>
-	<div class="flex justify-center align-middle mx-5 gap-2">
+
+	<!-- Sttings -->
+	<div class="mx-5 flex justify-center gap-2 align-middle">
 		<Switch
 			name="toggleCopyWithoutLinebreaks"
 			checked={copyWithoutLinebreaks.value}
@@ -38,9 +42,9 @@
 	</div>
 </div>
 
-<div class="h-screen w-full  overflow-x-scroll pb-24">
+<div class="h-screen w-full overflow-x-scroll pb-24">
 	<!-- Document Title -->
-	<div class="containerDocTitle col-span-1 col-start-3 my-12 **:font-bold **:text-center">
+	<div class="containerDocTitle col-span-1 col-start-3 my-12 **:text-center **:font-bold">
 		{@html doctitle}
 	</div>
 
