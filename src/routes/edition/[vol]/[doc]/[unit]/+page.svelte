@@ -43,6 +43,14 @@
 				multiMarkPopupIds.ids = [];
 			}
 		});
+		
+		$effect(()=>{
+			console.log('newline', data.line)
+			const elLine = document.querySelector(`[line="${data.line}"]`);
+			if (elLine) {
+				elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		})
 	});
 </script>
 

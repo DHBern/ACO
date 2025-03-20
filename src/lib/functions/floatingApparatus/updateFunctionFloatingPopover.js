@@ -17,7 +17,7 @@ export function updateFunctionFloatingPopover(elMark, elPopup) {
 
     return ()=>{
         computePosition(elMark, elPopup, {
-            middleware: [autoPlacement({ offset(15), flip(), shift(), allowedPlacements: ['top', 'bottom']})],
+            middleware: [autoPlacement({ allowedPlacements: ['top', 'bottom']}), offset(15), flip(), shift()],
             strategy: 'absolute'
         }).then(({ x, y }) => {
             elPopup.style.top = `${y}px`;
