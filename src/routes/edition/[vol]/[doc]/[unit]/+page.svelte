@@ -19,7 +19,7 @@
 
 	let allNotes = $state(data.notes);
 	let selectedNote = $state({ id: '' });
-	let multiMarkPopupIds = $state({ ids: [] });
+	let multiMarkPopupIds = $state({ ids: [], target: undefined });
 
 	let units = $state(data.units);
 
@@ -52,10 +52,12 @@
 </div>
 
 <!-- Main Text -->
-<div class={"containerText " + [
-		'maintext relative row-start-1 row-span-1 lg:row-start-1 lg:row-span-2 col-span-1 col-start-3',
-		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-	]}
+<div
+	class={'containerText ' +
+		[
+			'maintext relative col-span-1 col-start-3 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1',
+			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+		]}
 >
 	{#each units as unit, idx}
 		<Text text={mainTexts[idx]} {selectedNote} {multiMarkPopupIds}></Text>
@@ -64,10 +66,11 @@
 
 <!-- Notes -->
 <div
-	class={"containerNotes "+[
-		'relative row-start-2 row-span-1 lg:row-start-1 lg:row-span-2 col-span-3 col-start-1 lg:col-span-1 lg:col-start-4 mt-0 transition-all duration-1000',
-		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-	]}
+	class={'containerNotes ' +
+		[
+			'relative col-span-3 col-start-1 row-span-1 row-start-2 mt-0 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
+			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+		]}
 >
 	{#each units as unit}
 		{@const notes = extractNoteIds(unit).map((id) => ({
@@ -85,7 +88,7 @@
 	<MultiMarkPopup {multiMarkPopupIds} {selectedNote} />
 {/if}
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 
 	.containerLineNums :global(a.line-number),
