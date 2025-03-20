@@ -13,28 +13,29 @@
 
 </script>
 
-<!-- <div class="containerSettings flex w-full justify-center align-middle">
-	<div class="flex justify-center align-middle">
-		<Switch
-			name="toggleCopyWithoutLinebreaks"
-			checked={copyWithoutLinebreaks.value}
-			onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
-			controlInactive="bg-primary-500"
-		/>
-		<p>Ohne Zeilenumbrüche kopieren</p>
-	</div>
-</div> -->
+
 
 <!-- Document Head (Metadata) -->
 <div class="containerDocHead col-span-4 col-start-1 p-5 shadow-md">
 	{@html dochead}
 </div>
 
-<div class="containerDocUnits my-5">
-	{#each units as unit}
-		<button type="button" onclick={()=>(goto(`${unit}`))}
-			class="px-4 py-1 mx-2 rounded-full bg-black text-white">{unit}</button>
-	{/each}
+<div class="containerSettings flex w-full justify-center align-middle">
+	<div class="containerDocUnits my-5">
+		{#each units as unit}
+			<button type="button" onclick={()=>(goto(`${unit}`))}
+				class="px-4 py-1 mx-2 rounded-full bg-black text-white">{unit}</button>
+		{/each}
+	</div>
+	<div class="flex justify-center align-middle mx-5 gap-2">
+		<Switch
+			name="toggleCopyWithoutLinebreaks"
+			checked={copyWithoutLinebreaks.value}
+			onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
+			controlInactive="bg-primary-500"
+		/>
+		<p>Copy-Mode</p>
+	</div>
 </div>
 
 <div class="h-screen w-full  overflow-x-scroll pb-24">

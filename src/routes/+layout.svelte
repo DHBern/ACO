@@ -2,6 +2,11 @@
 	import { goto } from '$app/navigation';
 	import { Switch, Slider } from '@skeletonlabs/skeleton-svelte';
 	import '../app.css';
+	
+	// Icons
+	import IconMoon from '@lucide/svelte/icons/moon';
+  	import IconSun from '@lucide/svelte/icons/sun';
+
 	let { children } = $props();
 	let mystate = $state(true);
 	let value = $state([40]);
@@ -45,26 +50,16 @@
 			}}>Suche</button
 		>
 
-		<button
-			type="button"
-			onclick={() => {
-				document.documentElement.classList.toggle('dark');
-			}}
-			>Toggle Dark
-		</button>
+		
+		<Switch name="mode" controlActive="bg-surface-700" onCheckedChange={(e) => {document.documentElement.classList.toggle('dark')}}>
+			{#snippet inactiveChild()}<IconMoon size="14" />{/snippet}
+			{#snippet activeChild()}<IconSun size="14" />{/snippet}
+		</Switch>
 	</nav>
 </header>
 
 <!-- Content -->
 <div class="px-5">
-	<Slider name="example" {value} onValueChange={(e) => (value = e.value)} />
-	<Switch
-		name="Dark Mode"
-		checked={mystate}
-		onCheckedChange={() => {
-			document.documentElement.classList.toggle('dark');
-		}}
-	/>
 	{@render children()}
 </div>
 
