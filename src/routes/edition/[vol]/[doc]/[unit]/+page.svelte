@@ -3,7 +3,7 @@
 	import { copyWithoutLinebreaks, marksVisible } from '../../../globals.svelte.js';
 
 	import Note from './Note.svelte';
-	import Text from './Text.svelte';
+	import Unit from './Unit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 
 	import {
@@ -13,44 +13,59 @@
 		generatePageNumbers
 	} from '$lib/functions/protoHTMLconversion';
 
-	import { placeNotes, handleMarkClick } from '$lib/functions/floatingApparatus';
+	import { placeNotes } from '$lib/functions/floatingApparatus';
 
 	let { data } = $props();
 
-	let allNotes = $state(data.notes);
 	let selectedNote = $state({ id: '' });
 	let multiMarkPopupIds = $state({ ids: [], target: undefined });
 
-	let units = $state(data.units);
+	// let mainTexts = $derived(
+	// 	data.groupedUnits.map((unit) => {
+	// 		return generateMainText(unit.text);
+	// 	})
+	// );
 
-	let mainTexts = $derived(
-		units.map((unit) => {
-			return generateMainText(unit);
-		})
-	);
-
-	onMount(() => {
-		units.forEach((unit) => {
-			const ids = extractNoteIds(unit);
-			placeNotes(ids);
-		});
-
-		document.body.addEventListener('click', (ev) => {
-			if (
+	function handleResetMultiMark(ev) {
+		if (
 				!ev.target.classList.contains('multimark-popup') &&
 				!(multiMarkPopupIds.ids.length > 0 && ev.target.classList.contains('multiple-ids'))
 			) {
 				multiMarkPopupIds.ids = [];
 			}
-		});
+	}
 
+	onMount(() => {
+		// Extract note-ids from text and place note-boxes at initial positions
 		$effect(()=>{
-			console.log('newline', data.line)
-			const elLine = document.querySelector(`[line="${data.line}"]`);
+
+			data.groupedUnits.forEach((unit) => {
+				const ids = extractNoteIds(unit.text);
+				placeNotes(ids);
+			});
+		})
+		
+		// Scrolling to lines and units
+		$effect(()=>{
+			const elLine = document.querySelector(`[data-line="${data.line}"]`);
 			if (elLine) {
 				elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			}
 		})
+		$effect(()=>{
+			const elLine = document.querySelector(`[data-unit="${data.slug_unit}"]`);
+			if (elLine) {
+				elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		})
+		
+		// Event Listeners
+		document.body.addEventListener('click', handleResetMultiMark);
+		
+		return () => {
+			document.body.removeEventListener('click', handleResetMultiMark);
+		}
+		
 	});
 </script>
 
@@ -58,8 +73,8 @@
 <div
 	class="containerPageNums col-span-1 col-start-1 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
 >
-	{#each units as unit}
-		{@html generatePageNumbers(unit)}
+	{#each data.groupedUnits as unit}
+		{@html generatePageNumbers(unit.text)}
 	{/each}
 </div>
 
@@ -67,8 +82,8 @@
 <div
 	class="containerLineNums col-span-1 col-start-2 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
 >
-	{#each units as unit}
-		{@html generateLineNumbers(unit)}
+	{#each data.groupedUnits as unit}
+		{@html generateLineNumbers(unit.text)}
 	{/each}
 </div>
 
@@ -80,8 +95,8 @@
 			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 		]}
 >
-	{#each units as unit, idx}
-		<Text text={mainTexts[idx]} {selectedNote} {multiMarkPopupIds}></Text>
+	{#each data.groupedUnits as unit}
+		<Unit {unit} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupIds}></Unit>
 	{/each}
 </div>
 
@@ -93,10 +108,11 @@
 			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 		]}
 >
-	{#each units as unit}
-		{@const notes = extractNoteIds(unit).map((id) => ({
+	{#each data.groupedUnits as unit}
+		<!-- //! Dont do this twice! -->
+		{@const notes = extractNoteIds(unit.text).map((id) => ({
 			id: id,
-			content: allNotes[id]?.note_content
+			content: unit.notes[id]?.note_content
 		}))}
 		{#each notes as note}
 			<Note {note} {selectedNote}></Note>

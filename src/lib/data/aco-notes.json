@@ -75,7 +75,7 @@
 					"text_end": "bar",
 					"note_content": "<p>Hi there, this is just a test</p>"
 				},
-				"CV166-IV-pre-start": {
+				"CV166-III-6-deleteme": {
 					"document": "CV166",
 					"doc_unit": "libIV-pre",
 					"line_start": 0,
@@ -83,8 +83,10 @@
 					"text_start": "foo",
 					"text_end": "bar",
 					"note_content": "<p>Hi there,jawef jkaöwfe jkewaölf jkewalöf jkeawölf jkewaölf jakweflö jewakföl awjfkewlaöf jkewalöf jakewlfö jewakföl wajkfeölewaf test</p>"
-				},
-				"CV166-III-6-deleteme": {
+				}
+			},
+			"libIV-pre": {
+				"CV166-IV-pre-start": {
 					"document": "CV166",
 					"doc_unit": "libIV-pre",
 					"line_start": 0,

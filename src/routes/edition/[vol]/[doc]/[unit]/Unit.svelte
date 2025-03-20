@@ -3,15 +3,15 @@
 	import { onMount } from 'svelte';
 	import { marksVisible } from '../../../globals.svelte.js';
 
-	let { text, selectedNote, multiMarkPopupIds } = $props();
+	let { slug, text, selectedNote, multiMarkPopupIds } = $props();
 
 	function handleResetMarkSelection(ev) {
 		if (
 			selectedNote.id &&
 			!ev.target.closest('[data-type="mark"]') &&
+			!ev.target.closest('.multimark-popup') &&
 			!ev.target.closest('.notebox')
 		) {
-			console.log('foooo');
 			resetMarkSelection(selectedNote, multiMarkPopupIds);
 		}
 	}
@@ -50,6 +50,6 @@
 </script>
 
 <!-- 'whitespace-nowrap' instead of 'truncate' would make text overflow -->
-<div class={['truncate', marksVisible.value && 'marksVisible']} use:addSpanHandlers>
+<div class={['truncate', marksVisible.value && 'marksVisible']} data-unit={slug} use:addSpanHandlers >
 	{@html text}
 </div>

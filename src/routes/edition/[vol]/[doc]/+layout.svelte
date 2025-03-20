@@ -16,11 +16,11 @@
 <div class="containerSettings flex w-full justify-center align-middle">
 	<!-- Unit-Navigation -->
 	<div class="containerDocUnits my-5">
-		{#each data.units as unit}
+		{#each data.docMetadata.slugs as slug, idx}
 			<button
 				type="button"
-				onclick={() => goto(`${unit}`)}
-				class="mx-2 rounded-full bg-black px-4 py-1 text-white">{unit}</button
+				onclick={() => goto(`${slug}`)}
+				class="mx-2 my-1 rounded-full bg-black px-4 py-1 text-white">{data.docMetadata.labels[idx]}</button
 			>
 		{/each}
 	</div>

@@ -5,6 +5,6 @@
     let { data } = $props();
 
     onMount(() => {
-        goto(`./${data.slug_doc}/${data.units?.[0]}`)
+        goto(`./${data.slug_doc}/${data.docMetadata.slugs?.[0]}`)
     })
 </script>

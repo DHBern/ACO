@@ -10,16 +10,17 @@ export async function load({ fetch, params, url }) {
 
 	// Get corresponding data
 	const doc = textData.find(({ slug: s }) => s === slug_doc);
-	const dochead = doc.content.head;
-	const doctitle = doc.content.title;
-
-	const units = doc?.units || [];
+	
+	const docMetadata = {
+		slugs: doc?.unitSlugs || [],
+		labels: doc?.unitLabels || [],
+		dochead: doc?.content.head || "",
+		doctitle: doc?.content.title || "",
+	}
 
 	return {
 		slug_doc,
-		dochead,
-		doctitle,
-		units, 
-		line
+		line,
+		docMetadata
 	};
 }
