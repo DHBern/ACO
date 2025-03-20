@@ -68,7 +68,7 @@
 }
 
 p {
-	@apply text-lg pt-4 not-dark:text-black dark:text-white;
+	@apply text-lg pt-4 text-black dark:text-white;
 }
 .nowrap p {
 	@apply whitespace-nowrap;

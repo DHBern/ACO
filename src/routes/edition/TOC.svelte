@@ -28,10 +28,10 @@
 						<span class="text-lg italic">"{doc.title}"</span>
 
 						<span class="ml-2 text-sm text-[var(--aco-orange)]">
-							(
-							<span class="text-[var(--aco-orange-light)]">{doc.slug}</span> |
+							<span class="mr-1 text-[var(--aco-orange-light)]">{doc.slug}</span>
+							|
 							<span class="">{doc.num}</span>
-							)
+							
 						</span>
 					</a>
 				</li>

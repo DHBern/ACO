@@ -8,9 +8,7 @@
 </script>
 
 <!-- Menu -->
-<nav
-	class="items-between absolute left-0 top-0 flex h-[80px] w-full flex-row justify-start gap-12 bg-[#105766] text-slate-50"
->
+<header class="flex gap-10 bg-[#105766] text-lg text-slate-50">
 	<button
 		onclick={() => {
 			goto('/.');
@@ -18,45 +16,58 @@
 	>
 		<img src="/logos/logo-aco.png" alt="ACO" class="max-h-full max-w-[100px]" />
 	</button>
-	<button
-		onclick={() => {
-			goto('/about');
-		}}>Über das Projekt</button
-	>
-	<button
-		onclick={() => {
-			goto('/edition');
-		}}>Bände</button
-	>
 
-	<button
-		onclick={() => {
-			goto('/imprint');
-		}}>Impressum</button
-	>
-	<button
-		onclick={() => {
-			goto('/register');
-		}}>Register</button
-	>
-	<button
-		onclick={() => {
-			goto('/edition/search');
-		}}>Suche</button
-	>
-	
-	<button type="button" onclick={()=>{
-		document.documentElement.classList.toggle("dark");
-	}}>Toggle Dark </button>
+	<nav class="flex flex-row justify-start gap-12">
+		<button
+			onclick={() => {
+				goto('/about');
+			}}>Über das Projekt</button
+		>
+		<button
+			onclick={() => {
+				goto('/edition');
+			}}>Bände</button
+		>
 
+		<button
+			onclick={() => {
+				goto('/imprint');
+			}}>Impressum</button
+		>
+		<button
+			onclick={() => {
+				goto('/register');
+			}}>Register</button
+		>
+		<button
+			onclick={() => {
+				goto('/edition/search');
+			}}>Suche</button
+		>
 
-</nav>
+		<button
+			type="button"
+			onclick={() => {
+				document.documentElement.classList.toggle('dark');
+			}}
+			>Toggle Dark
+		</button>
+	</nav>
+</header>
 
 <!-- Content -->
-<div class="p-10 pt-200">
+<div class="px-5">
 	<Slider name="example" {value} onValueChange={(e) => (value = e.value)} />
-	<Switch name="Dark Mode" checked={mystate} onCheckedChange={()=>{
-		document.documentElement.classList.toggle("dark");
-	}} />
+	<Switch
+		name="Dark Mode"
+		checked={mystate}
+		onCheckedChange={() => {
+			document.documentElement.classList.toggle('dark');
+		}}
+	/>
 	{@render children()}
 </div>
+
+<footer class="flex h-110 flex-row justify-center bg-[var(--aco-teal)] align-middle text-slate-50">
+	<p class="text-slate-50">Footer with Logos</p>
+</footer>
