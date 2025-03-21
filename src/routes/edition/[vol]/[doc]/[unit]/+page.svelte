@@ -96,6 +96,7 @@
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >
+{#if data.docMetadata.slugs.findIndex((unit) => unit === groupedUnits[0].prevSlug) - 1}
 	<button
 		class="shadow-4xl m-3 mx-auto block min-w-[50px] bg-red-300 px-5 py-1"
 		type="button"
@@ -124,10 +125,12 @@
 			});
 		}}><span class="font-bold">{groupedUnits[0].prevSlugLabel}</span> laden</button
 	>
+	{/if}
 	{#each groupedUnits as unit (unit.slug)}
 		<Unit slug={unit.slug} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupIds}
 		></Unit>
 	{/each}
+	{#if data.docMetadata.slugs.findIndex((unit) => unit === groupedUnits[groupedUnits.length - 1].nextSlug) + 1}
 	<button
 		class="shadow-4xl m-3 mx-auto block min-w-[50px] bg-red-300 px-5 py-1"
 		type="button"
@@ -155,6 +158,7 @@
 				notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || []
 			});
 		}}><span class="font-bold">{groupedUnits[groupedUnits.length - 1].nextSlugLabel}</span> laden</button	>
+		{/if}
 </div>
 
 <!-- Notes -->
