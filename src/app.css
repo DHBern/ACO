@@ -96,7 +96,7 @@ span[data-type='head_key'] {
 	@apply indent-6;
 }
 .containerText [data-type='lib-number'] {
-	@apply text-center font-bold w-full inline-block;
+	@apply text-center font-bold w-full inline-block mt-10;
 }
 
 .containerText [data-type='acoTitle'] {

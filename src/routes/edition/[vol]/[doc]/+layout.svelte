@@ -31,22 +31,24 @@
 			name="toggleCopyWithoutLinebreaks"
 			checked={copyWithoutLinebreaks.value}
 			onCheckedChange={(e) => {copyWithoutLinebreaks.value = e.checked;}}
-			controlInactive="bg-primary-500"
-		>
-		<p>Fluid-Copy</p>
+			controlActive="bg-surface-700" 
+			controlInactive="bg-surface-200"
+			>
+			<p>Fluid-Copy</p>
 		</Switch>
 		<Switch
 			name="toggleMarksVisible"
 			checked={marksVisible.value}
 			onCheckedChange={(e) => (marksVisible.value = e.checked)}
-			controlInactive="bg-primary-500"
+			controlActive="bg-surface-700" 
+			controlInactive="bg-surface-200"
 		/>
 		<p>Markierungen</p>
 	</div>
 </div>
 
 <div class="h-screen w-full overflow-x-scroll pb-24">
-	<div class="containerDocContent grid grid-cols-[90px_60px_1fr] lg:grid-cols-[90px_60px_1fr_1fr]">
+	<div class="containerDocContent grid grid-cols-[90px_60px_1fr] lg:grid-cols-[80px_20px_auto_1fr] gap-6">
 		{@render children()}
 	</div>
 </div>

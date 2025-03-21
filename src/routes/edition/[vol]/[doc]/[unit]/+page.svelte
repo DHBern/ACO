@@ -96,28 +96,65 @@
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >
+	<button
+		class="shadow-4xl m-3 mx-auto block min-w-[50px] bg-red-300 px-5 py-1"
+		type="button"
+		onclick={(ev) => {
+			const firstUnit = groupedUnits[0];
+			groupedUnits.unshift({
+				slug: firstUnit.prevSlug,
+				prevSlug:
+					data.docMetadata.slugs[
+						data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) - 1 || null
+					] || null,
+				nextSlug:
+					data.docMetadata.slugs[
+						data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) + 1 || null
+					] || null,
+				prevSlugLabel:
+					data.docMetadata.labels[
+						data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) - 1 || null
+					] || null,
+				nextSlugLabel:
+					data.docMetadata.labels[
+						data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) + 1 || null
+					] || null,
+				text: data.docContent[firstUnit.prevSlug] || '',
+				notes: data.notesData[data.slug_doc]?.[firstUnit.prevSlug] || []
+			});
+		}}><span class="font-bold">{groupedUnits[0].prevSlugLabel}</span> laden</button
+	>
 	{#each groupedUnits as unit (unit.slug)}
 		<Unit slug={unit.slug} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupIds}
 		></Unit>
 	{/each}
 	<button
-		class="mx-auto min-w-[50px] rounded bg-red-300 p-5"
+		class="shadow-4xl m-3 mx-auto block min-w-[50px] bg-red-300 px-5 py-1"
 		type="button"
 		onclick={(ev) => {
-			// ev.target.parentElement.removeChild(ev.target);
 			const lastUnit = groupedUnits[groupedUnits.length - 1];
-			console.log(lastUnit);
 			groupedUnits.push({
 				slug: lastUnit.nextSlug,
+				prevSlug:
+					data.docMetadata.slugs[
+						data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) - 1 || null
+					] || null,
 				nextSlug:
 					data.docMetadata.slugs[
-						data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1
+						data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1 || null
+					] || null,
+				prevSlugLabel:
+					data.docMetadata.labels[
+						data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) - 1 || null
+					] || null,
+				nextSlugLabel:
+					data.docMetadata.labels[
+						data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1 || null
 					] || null,
 				text: data.docContent[lastUnit.nextSlug] || '',
 				notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || []
 			});
-		}}>LOAD {groupedUnits[groupedUnits.length - 1].nextSlug}</button
-	>
+		}}><span class="font-bold">{groupedUnits[groupedUnits.length - 1].nextSlugLabel}</span> laden</button	>
 </div>
 
 <!-- Notes -->
