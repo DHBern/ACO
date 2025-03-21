@@ -60,6 +60,9 @@
 }
 
 :root {
+	--aco-gray-1: #ffffff;
+	--aco-gray-2: #f1f1f1;
+	--aco-gray-3: #adadad;
 	--aco-teal: #0f5866;
 	--aco-teal-light: #468b99;
 	--aco-teal-light2: #b0c9ce;
@@ -115,6 +118,11 @@ span[data-type=note-end]::before {
 /* Prevent selecting <br /> on copy-paste */
 .copyWithoutLinebreaks br {
 	@apply select-none;
+}
+
+/* Notes and Popup */
+span[data-type='noteRefString-lines'] {
+	@apply mr-1 font-bold;
 }
 
 [data-theme='cerberus'] {

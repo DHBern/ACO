@@ -64,6 +64,6 @@
 	{@render children()}
 </div>
 
-<footer class="flex h-110 flex-row justify-center bg-[var(--aco-teal)] align-middle text-slate-50">
+<footer class="flex h-50 flex-row justify-center bg-[var(--aco-teal)] align-middle text-slate-50">
 	<p class="text-slate-50">Footer with Logos</p>
 </footer>
