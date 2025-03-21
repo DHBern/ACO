@@ -10,16 +10,18 @@
 	let accordionMetadata = $state(['metadata']);
 </script>
 
+<!-- Title -->
+<h1 class="mb-2 text-4xl text-[var(--aco-orange)]">{@html data.docMetadata.toc_title}</h1>
 <!-- Document Metadata -->
 <Accordion
 	{accordionMetadata}
 	onValueChange={(e) => (accordionMetadata = e.value)}
 	collapsible
-	classes="containerDocHead shadow-md"
+	classes="containerDocHead shadow-md mb-4"
 >
 	<Accordion.Item accordionMetadata="metadata">
 		{#snippet lead()}{/snippet}
-		{#snippet control()}Dokument-Angaben zu {@html data.docMetadata.toc_title}{/snippet}
+		{#snippet control()}<span class="text-xl"><span class="font-bold">Metadaten</span></span>{/snippet}
 		{#snippet panel()}
 			<div class="col-span-4 col-start-1 p-5">
 				{@html data.docMetadata.meta}
@@ -37,7 +39,7 @@
 >
 	<Accordion.Item accordionUnitNav="unitNav">
 		{#snippet lead()}{/snippet}
-		{#snippet control()}Zu Kapitel/Einheit springen{/snippet}
+		{#snippet control()}<span class="font-bold text-xl">Kapitelübersicht</span>{/snippet}
 		{#snippet panel()}
 			<div class="containerDocUnits my-5 max-h-60 overflow-y-scroll">
 				{#each data.docMetadata.slugs as slug, idx (slug)}
