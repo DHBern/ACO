@@ -23,11 +23,6 @@ export async function load({ fetch, params }) {
 		}
 	})
 
-	// Workaround until dynamic unit-loading is in place (delete later)
-	// const units = doc?.units.map((unit) => {
-	// 	return doc?.content[unit];
-	// });
-
 	return {
 		slug_unit,
 		slug_doc,
