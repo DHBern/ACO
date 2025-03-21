@@ -12,10 +12,10 @@
 
 <div class="flex-row flex-wrap pb-30">
 	<h1 class="mb-2 text-4xl">Erster Band</h1>
-	{#each types as type}
+	{#each types as type (type)}
 		<h2 class="mt-10 mb-4 text-2xl font-bold">{type}</h2>
 		<ul>
-			{#each docs[type] as doc}
+			{#each docs[type] as doc (doc.slug)}
 				<li class="mb-2 font-semibold text-[var(--aco-teal-light)] hover:text-[var(--aco-orange)]">
 					<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 						<span class="text-lg italic">"{doc.title}"</span>

@@ -17,14 +17,14 @@
 	let { data } = $props();
 	let groupedUnits = $state(data.groupedUnits);
 	let selectedNote = $state({ slug: '' });
-	let multiMarkPopupIds = $state({ ids: [], target: undefined });
+	let multiMarkPopupSlugs = $state({ slugs: [], target: undefined });
 
 	function handleResetMultiMark(ev) {
 		if (
 			!ev.target.classList.contains('multimark-popup') &&
-			!(multiMarkPopupIds.ids.length > 0 && ev.target.classList.contains('multiple-ids'))
+			!(multiMarkPopupSlugs.slugs.length > 0 && ev.target.classList.contains('multiple-ids'))
 		) {
-			multiMarkPopupIds.ids = [];
+			multiMarkPopupSlugs.slugs = [];
 		}
 	}
 
@@ -64,7 +64,7 @@
 <div
 	class="containerPageNums col-span-1 col-start-1 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
 >
-	{#each groupedUnits as unit}
+	{#each groupedUnits as unit (unit.slug)}
 		{@html generatePageNumbers(unit.text)}
 	{/each}
 </div>
@@ -73,7 +73,7 @@
 <div
 	class="containerLineNums col-span-1 col-start-2 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
 >
-	{#each groupedUnits as unit}
+	{#each groupedUnits as unit (unit.slug)}
 		{@html generateLineNumbers(unit.text)}
 	{/each}
 </div>
@@ -116,7 +116,7 @@
 	>
 	{/if}
 	{#each groupedUnits as unit (unit.slug)}
-		<Unit slug={unit.slug} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupIds}
+		<Unit slug={unit.slug} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupSlugs}
 		></Unit>
 	{/each}
 	{#if data.docMetadata.slugs.findIndex((unit) => unit === groupedUnits[groupedUnits.length - 1].nextSlug) + 1}
@@ -157,18 +157,18 @@
 		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 	]}
 >
-	{#each groupedUnits as unit}
+	{#each groupedUnits as unit (unit.slug)}
 		<!-- //! Dont do this twice! -->
-		{#each extractNoteIds(unit.text) as noteSlug}
+		{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
 			<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
 		{/each}
 	{/each}
 </div>
 
 <!-- Popups for multiple notes over same place -->
-{#if multiMarkPopupIds.ids.length > 0}
+{#if multiMarkPopupSlugs.slugs.length > 0}
 	<MultiMarkPopup
-		{multiMarkPopupIds}
+		{multiMarkPopupSlugs}
 		{selectedNote}
 		notesData={data.notesData}
 		slug_doc={data.slug_doc}

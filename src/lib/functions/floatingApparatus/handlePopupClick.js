@@ -1,9 +1,9 @@
 import { selectMark } from './selectMark';
 import { moveNote } from './moveNote';
 
-export function handlePopupClick(id, selectedNote, multiMarkPopupIds) {
+export function handlePopupClick(id, selectedNote, multiMarkPopupSlugs) {
 	selectMark(id);
 	moveNote(id);
-	multiMarkPopupIds.ids = [];
+	multiMarkPopupSlugs.slugs = [];
 	selectedNote.slug = id;
 }
