@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <div class="grid grid-cols-2 gap-4 pt-24">
 	<div class="prose">
 		<h1 class="mb-12">Einleitung</h1>
@@ -41,12 +45,12 @@
 
 	<div class="pt-24">
 		<img
-			src="/images/IMG_Schwarz_Edition_3.jpg"
+			src="{base}/images/IMG_Schwarz_Edition_3.jpg"
 			alt="Fotografie der Schwartz Edition"
 			class="max-h-[400px] max-w-full"
 		/>
 		<p class="">
-			<img src="/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
+			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
 			Fotografie der Schwartz Edition.
 		</p>
 	</div>
@@ -100,18 +104,18 @@
 	</div>
 
 	<div class="pt-24">
-		<img class="max-h-[400px] max-w-[400px]" src="/images/kg_projekt_ephesus.jpg" alt="" />
+		<img class="max-h-[400px] max-w-[400px]" src="{base}/images/kg_projekt_ephesus.jpg" alt="" />
 		<p>
-			<img src="/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
+			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
 			Projekt Alte Kirchengeschichte_Ephesus Puplic domain SVGRuinen der Marienkirche in Ephesos
 		</p>
 		<img
 			class="max-h-[400px] max-w-[400px]"
-			src="/images/Apse_mosaics,_1_of_4_-_Santa_Maria_Maggiore_-_Rome,_Italy_-_DSC05723.jpg"
+			src="{base}/images/Apse_mosaics,_1_of_4_-_Santa_Maria_Maggiore_-_Rome,_Italy_-_DSC05723.jpg"
 			alt=""
 		/>
 		<p>
-			<img src="/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
+			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
 			Bogen mit Mosaikzyklus in der römischen Kirche Santa Maria Maggiore. Die auf dem Mosaik enthaltenen
 			Motive betonen zum Teil die ‚Gottesmutterschaft‘ Mariens.
 		</p>
@@ -128,7 +132,7 @@
 				Fourvière in Lyon mit Kyrill von Alexandria in der Mitte."
 		/>
 		<p>
-			<img src="/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
+			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
 			Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte.
 		</p>
 		<p>
@@ -167,15 +171,27 @@
 	<div class="grid grid-cols-3 gap-2">
 		<div>
 			<p>Deutsche Forschungsgemeinschaft (DFG)</p>
-			<img src="/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif" alt="Logo DFG" class="w-[200px]" />
+			<img
+				src="{base}/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif"
+				alt="Logo DFG"
+				class="w-[200px]"
+			/>
 		</div>
 		<div>
 			<p>Universität Bonn</p>
-			<img src="/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg" alt="Logo Universität Bonn" class="w-[200px]" />
+			<img
+				src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
+				alt="Logo Universität Bonn"
+				class="w-[200px]"
+			/>
 		</div>
 		<div>
 			<p>Universität Bern</p>
-			<img src="/images-legacy/logos/Logo_Uni_Bern.png" alt="Logo Universität Bern" class="w-[200px]" />
+			<img
+				src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
+				alt="Logo Universität Bern"
+				class="w-[200px]"
+			/>
 		</div>
 	</div>
 </div>

@@ -1,5 +1,4 @@
 <script>
-	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { textData } from '$lib/data/get_data';
 
@@ -18,12 +17,7 @@
 		<ul>
 			{#each docs[type] as doc}
 				<li class="mb-2 font-semibold text-[var(--aco-teal-light)] hover:text-[var(--aco-orange)]">
-					<a
-						href="#"
-						onclick={() => {
-							goto(`${base}/edition/1/${doc.slug}/${doc.unitSlugs[0]}`);
-						}}
-					>
+					<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 						<span class="text-lg italic">"{doc.title}"</span>
 
 						<span class="ml-2 text-sm text-[var(--aco-orange)]">
