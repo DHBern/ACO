@@ -5,7 +5,7 @@ export function generateLineNumbers(text) {
 
 	// Insert line-number as text at every 5th line
 	const numbersText = linesText.replace(/<a data-line='(\d+)'><\/a>/g, (match, lineNumber) => {
-		return `<a class="line-number" href="?line=${lineNumber}" line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='lineNumBuffer'>00 </span>"}</a>`;
+		return `<a class="line-number" href="?line=${lineNumber}" line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='lineNumBuffer'>__</span>"}</a>`;
 	});
 
 	return numbersText;

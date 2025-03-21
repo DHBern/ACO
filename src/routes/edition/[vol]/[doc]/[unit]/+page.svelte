@@ -6,7 +6,7 @@
 	import Unit from './Unit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 	import { placeNotes } from '$lib/functions/floatingApparatus/placeNotes.js';
-	
+
 	import {
 		extractNoteIds,
 		generateMainText,
@@ -184,11 +184,13 @@
 		@apply mr-2 select-none;
 	}
 
-	/* Anchors for line-numbers */
-	.containerLineNums :global(a.line-number::after) {
+	/* Anchors for line-numbers and page-numbers */
+	.containerLineNums :global(a.line-number::after),
+	.containerPageNums :global(a.page-number::after) {
 		@apply ml-2 hidden h-4 w-4 bg-[url(/icons/link.svg)] bg-contain bg-no-repeat content-[""];
 	}
-	.containerLineNums :global(a.line-number:hover::after) {
+	.containerLineNums :global(a.line-number:hover::after),
+	.containerPageNums :global(a.page-number:hover::after) {
 		@apply inline-block;
 	}
 	.containerLineNums :global(.lineNumBuffer) {

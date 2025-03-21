@@ -81,7 +81,7 @@
 
 <div class="h-screen w-full overflow-x-scroll pb-24">
 	<div
-		class="containerDocContent grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[80px_20px_auto_1fr]"
+		class="containerDocContent grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[80px_50px_auto_1fr]"
 	>
 		{@render children()}
 	</div>
