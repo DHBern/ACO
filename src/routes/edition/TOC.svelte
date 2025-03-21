@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	import { textData } from '$lib/data/get_data';
 
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
@@ -16,13 +17,11 @@
 		<h2 class="mt-10 mb-4 text-2xl font-bold">{type}</h2>
 		<ul>
 			{#each docs[type] as doc}
-				<li
-					class="mb-2 font-semibold text-[var(--aco-teal-light)] hover:text-[var(--aco-orange)]"
-				>
+				<li class="mb-2 font-semibold text-[var(--aco-teal-light)] hover:text-[var(--aco-orange)]">
 					<a
 						href="#"
 						onclick={() => {
-							goto(`edition/1/${doc.slug}/${doc.unitSlugs[0]}`);
+							goto(`${base}/edition/1/${doc.slug}/${doc.unitSlugs[0]}`);
 						}}
 					>
 						<span class="text-lg italic">"{doc.title}"</span>
@@ -31,7 +30,6 @@
 							<span class="mr-1 text-[var(--aco-orange-light)]">{doc.slug}</span>
 							|
 							<span class="">{doc.num}</span>
-							
 						</span>
 					</a>
 				</li>
