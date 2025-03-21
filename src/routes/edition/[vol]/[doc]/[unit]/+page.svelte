@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-	import { copyWithoutLinebreaks, marksVisible } from '../../../globals.svelte.js';
+	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
+
+	$inspect(copyWithoutLinebreaks);
 
 	import Note from './Note.svelte';
 	import Unit from './Unit.svelte';
@@ -89,11 +91,10 @@
 
 <!-- Main Text -->
 <div
-	class={'containerText ' +
-		[
-			'maintext relative col-span-1 col-start-3 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1',
-			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-		]}
+	class={[
+		'containerText maintext relative col-span-1 col-start-3 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1',
+		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+	]}
 >
 	{#each groupedUnits as unit (unit.slug)}
 		<Unit slug={unit.slug} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupIds}
@@ -113,7 +114,7 @@
 						data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1
 					] || null,
 				text: data.docContent[lastUnit.nextSlug] || '',
-				notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || [],
+				notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || []
 			});
 		}}>LOAD {groupedUnits[groupedUnits.length - 1].nextSlug}</button
 	>
@@ -121,11 +122,10 @@
 
 <!-- Notes -->
 <div
-	class={'containerNotes ' +
-		[
-			'relative col-span-3 col-start-1 row-span-1 row-start-2 mt-0 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
-			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-		]}
+	class={[
+		'containerNotes relative col-span-3 col-start-1 row-span-1 row-start-2 mt-0 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
+		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+	]}
 >
 	{#each groupedUnits as unit}
 		<!-- //! Dont do this twice! -->
@@ -137,7 +137,13 @@
 
 <!-- Popups for multiple notes over same place -->
 {#if multiMarkPopupIds.ids.length > 0}
-	<MultiMarkPopup {multiMarkPopupIds} {selectedNote} notesData={data.notesData} slug_doc={data.slug_doc} slug_unit={data.slug_unit} />
+	<MultiMarkPopup
+		{multiMarkPopupIds}
+		{selectedNote}
+		notesData={data.notesData}
+		slug_doc={data.slug_doc}
+		slug_unit={data.slug_unit}
+	/>
 {/if}
 
 <style lang="postcss">

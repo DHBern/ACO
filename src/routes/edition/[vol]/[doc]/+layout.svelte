@@ -30,7 +30,7 @@
 		<Switch
 			name="toggleCopyWithoutLinebreaks"
 			checked={copyWithoutLinebreaks.value}
-			onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
+			onCheckedChange={(e) => {copyWithoutLinebreaks.value = e.checked;}}
 			controlInactive="bg-primary-500"
 		>
 		<p>Fluid-Copy</p>
