@@ -1,10 +1,10 @@
 <script>
-    import { goto } from "$app/navigation";
-    import { onMount } from "svelte";
-    
-    let { data } = $props();
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 
-    onMount(() => {
-        goto(`./${data.slug_doc}/${data.docMetadata.slugs?.[0]}`)
-    })
+	let { data } = $props();
+
+	onMount(() => {
+		goto(`./${data.slug_doc}/${data.docMetadata.slugs?.[0]}`);
+	});
 </script>
