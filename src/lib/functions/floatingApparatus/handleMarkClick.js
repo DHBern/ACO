@@ -17,7 +17,7 @@ export function handleMarkClick(ev, selectedNote, multiMarkPopupIds) {
 		case 1:
 			selectMark(ids[0]);
 			moveNote(ids[0]);
-			selectedNote.id = ids[0];
+			selectedNote.slug = ids[0];
 			break;
 		default:
 			showMultiMarkPopup(ids, multiMarkPopupIds, ev.target);

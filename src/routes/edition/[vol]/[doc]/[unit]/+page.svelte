@@ -19,7 +19,7 @@
 
 	let groupedUnits = $state(data.groupedUnits);
 
-	let selectedNote = $state({ id: '' });
+	let selectedNote = $state({ slug: '' });
 	let multiMarkPopupIds = $state({ ids: [], target: undefined });
 
 	// let mainTexts = $derived(
@@ -40,10 +40,10 @@
 	onMount(() => {
 		// Extract note-ids from text and place note-boxes at initial positions
 		$effect(() => {
-			groupedUnits.forEach((unit) => {
-				const ids = extractNoteIds(unit.text);
-				placeNotes(ids);
-			});
+			// groupedUnits.forEach((unit) => {
+			// 	const ids = extractNoteIds(unit.text);
+			// 	placeNotes(ids);
+			// });
 		});
 
 		// Scrolling to lines and units
@@ -98,21 +98,25 @@
 	{#each groupedUnits as unit (unit.slug)}
 		<Unit slug={unit.slug} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupIds}
 		></Unit>
-		<button
-		class="bg-red-300 rounded p-5 min-w-[50px] mx-auto"
-			type="button"
-			onclick={() => {
-				const lastUnit = groupedUnits[groupedUnits.length-1];
-				console.log(lastUnit)
-				groupedUnits.push({
-					slug: lastUnit.nextSlug,
-					nextSlug: data.docMetadata.slugs[data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1] || null,
-					text: data.docContent[lastUnit.nextSlug] || '',
-					notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || []
-				});
-			}}>LOAD {groupedUnits[groupedUnits.length-1].nextSlug}</button
-		>
 	{/each}
+	<button
+		class="mx-auto min-w-[50px] rounded bg-red-300 p-5"
+		type="button"
+		onclick={(ev) => {
+			// ev.target.parentElement.removeChild(ev.target);
+			const lastUnit = groupedUnits[groupedUnits.length - 1];
+			console.log(lastUnit);
+			groupedUnits.push({
+				slug: lastUnit.nextSlug,
+				nextSlug:
+					data.docMetadata.slugs[
+						data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1
+					] || null,
+				text: data.docContent[lastUnit.nextSlug] || '',
+				notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || [],
+			});
+		}}>LOAD {groupedUnits[groupedUnits.length - 1].nextSlug}</button
+	>
 </div>
 
 <!-- Notes -->
@@ -125,19 +129,15 @@
 >
 	{#each groupedUnits as unit}
 		<!-- //! Dont do this twice! -->
-		{@const notes = extractNoteIds(unit.text).map((id) => ({
-			id: id,
-			content: unit.notes[id]?.note_content
-		}))}
-		{#each notes as note}
-			<Note {note} {selectedNote}></Note>
+		{#each extractNoteIds(unit.text) as noteSlug}
+			<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
 		{/each}
 	{/each}
 </div>
 
 <!-- Popups for multiple notes over same place -->
 {#if multiMarkPopupIds.ids.length > 0}
-	<MultiMarkPopup {multiMarkPopupIds} {selectedNote} />
+	<MultiMarkPopup {multiMarkPopupIds} {selectedNote} notesData={data.notesData} slug_doc={data.slug_doc} slug_unit={data.slug_unit} />
 {/if}
 
 <style lang="postcss">

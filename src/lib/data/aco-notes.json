@@ -42,10 +42,11 @@
 				"CV166-III-6-34-34-fürchtest-recht": {
 					"document": "CV166",
 					"doc_unit": "libIII-24",
-					"line_start": 24,
-					"line_end": 24,
+					"line_start": 34,
+					"line_end": 34,
 					"text_start": "fürchtest",
-					"text_end": "Recht",
+					"text_end": "recht",
+					"text_stanotesData": "Recht",
 					"note_content": "<p>Der Text scheint hier eine Lücke aufzuweisen. Zum einen fehlt das bei Kyrillregelmäßig auf die Junktur καὶ μάλα folgende Adverb, zum anderen vermisst man einen Ausdruck,von dem der Infinitiv παρατρέπεσθαι abhängen könnte. <a href='' data-type='external_ref' source='agellio_1607'>Agellio (1607)</a>hat, um zumindest das zweiteDesiderat auszugleichen, ἀναγκαῖον vorgeschlagen. Schwartz schlägt, beide Mängel bedenkend,ὀρθῶς οὐ φάμεν vor. Die Übersetzung versucht, den unvollständigen Satz mit eigenen Ergänzungenin einen unmittelbaren Zusammenhang mit dem Nestoriuszitat, dessen Wortmaterial er enthält, zusetzen (vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='2'>CV166,III,5,2</a>).</p>"
 				},
 				"CV166-III-6-39-41-dass-gelten": {

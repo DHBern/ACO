@@ -1,5 +1,6 @@
 <script>
-	import { handleMarkClick, resetMarkSelection } from '$lib/functions/floatingApparatus';
+	import { handleMarkClick, resetMarkSelection, placeNotes } from '$lib/functions/floatingApparatus';
+	import { extractNoteIds } from '$lib/functions/protoHTMLconversion/extractNoteIds.js';
 	import { onMount } from 'svelte';
 	import { marksVisible } from '../../../globals.svelte.js';
 
@@ -7,7 +8,7 @@
 
 	function handleResetMarkSelection(ev) {
 		if (
-			selectedNote.id &&
+			selectedNote.slug &&
 			!ev.target.closest('[data-type="mark"]') &&
 			!ev.target.closest('.multimark-popup') &&
 			!ev.target.closest('.notebox')
@@ -27,10 +28,17 @@
 	}
 
 	onMount(() => {
+		
+		// Extract note-ids from text and place note-boxes at initial positions
+		placeNotes(extractNoteIds(text));
+		
+		//! Move to +page.svelte?!
 		document.body.addEventListener('click', handleResetMarkSelection);
+		
 		return () => {
 			document.body.removeEventListener('click', handleResetMarkSelection);
 		};
+		
 	});
 
 	function addSpanHandlers(node) {

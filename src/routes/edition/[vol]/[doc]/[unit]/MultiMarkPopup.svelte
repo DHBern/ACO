@@ -3,9 +3,11 @@
 	import { updateFunctionFloatingPopover } from '$lib/functions/floatingApparatus';
 	import { onMount } from 'svelte';
 	import { autoUpdate } from '@floating-ui/dom';
+	import {createNoteReferenceString} from '$lib/functions/protoHTMLconversion/createNoteReferenceString'
 
-	let { multiMarkPopupIds, selectedNote } = $props();
+	let { multiMarkPopupIds, selectedNote, notesData, slug_doc, slug_unit } = $props();
 	let popUpElement = $state();
+	console.log(slug_unit, notesData[slug_doc][slug_unit]);
 
 	onMount(() => {
 		const cleanup = autoUpdate(
@@ -25,11 +27,15 @@
 >
 	<ul>
 		{#each multiMarkPopupIds.ids as id}
+		{@const idMetadata = notesData[slug_doc][slug_unit][id]}
 			<li>
 				<button
 					onclick={() => {
 						handlePopupClick(id, selectedNote, multiMarkPopupIds);
-					}}><p class="color-sky-900">{id}</p></button
+					}}
+					><p class="color-sky-900">
+						{@html createNoteReferenceString(idMetadata.line_start, idMetadata.line_end, idMetadata.text_start, idMetadata.text_end)}
+					</p></button
 				>
 			</li>
 		{/each}
