@@ -16,6 +16,7 @@ export async function load({ fetch, params, url }) {
 		labels: doc?.unitLabels || [],
 		meta: doc?.content.head || "",
 		title: doc?.content.title || "",
+		toc_title: doc?.title || ""
 	}
 	const docContent = doc?.content || null
 

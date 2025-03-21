@@ -2,12 +2,11 @@
 	import { onMount } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
-	$inspect(copyWithoutLinebreaks);
-
 	import Note from './Note.svelte';
 	import Unit from './Unit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
-
+	import { placeNotes } from '$lib/functions/floatingApparatus/placeNotes.js';
+	
 	import {
 		extractNoteIds,
 		generateMainText,
@@ -15,20 +14,10 @@
 		generatePageNumbers
 	} from '$lib/functions/protoHTMLconversion';
 
-	import { placeNotes } from '$lib/functions/floatingApparatus';
-
 	let { data } = $props();
-
 	let groupedUnits = $state(data.groupedUnits);
-
 	let selectedNote = $state({ slug: '' });
 	let multiMarkPopupIds = $state({ ids: [], target: undefined });
-
-	// let mainTexts = $derived(
-	// 	groupedUnits.map((unit) => {
-	// 		return generateMainText(unit.text);
-	// 	})
-	// );
 
 	function handleResetMultiMark(ev) {
 		if (
@@ -42,10 +31,10 @@
 	onMount(() => {
 		// Extract note-ids from text and place note-boxes at initial positions
 		$effect(() => {
-			// groupedUnits.forEach((unit) => {
-			// 	const ids = extractNoteIds(unit.text);
-			// 	placeNotes(ids);
-			// });
+			groupedUnits.forEach((unit) => {
+				const ids = extractNoteIds(unit.text);
+				placeNotes(ids);
+			});
 		});
 
 		// Scrolling to lines and units
