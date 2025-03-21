@@ -19,7 +19,7 @@
 			goto(base + '/.');
 		}}
 	>
-		<img src="/logos/logo-aco.png" alt="ACO" class="max-h-full max-w-[100px]" />
+		<img src="{base}/logos/logo-aco.png" alt="ACO" class="max-h-full max-w-[100px]" />
 	</button>
 
 	<!-- Top Navigation Bar -->
