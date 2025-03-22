@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import { marksVisible } from '../../../globals.svelte.js';
 
-	let { slug, text, selectedNote, multiMarkPopupSlugs } = $props();
+	let { slug, text, unitLabelInline, selectedNote, multiMarkPopupSlugs } = $props();
 
 	function handleResetMarkSelection(ev) {
 		if (
@@ -59,5 +59,5 @@
 
 <!-- 'whitespace-nowrap' instead of 'truncate' would make text overflow -->
 <div class={['truncate', marksVisible.value && 'marksVisible']} data-unit={slug} use:addSpanHandlers >
-	{@html text}
+	{unitLabelInline} {@html text}
 </div>

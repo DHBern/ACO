@@ -104,22 +104,22 @@
 						data.docMetadata.slugs[
 							data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) + 1 || null
 						] || null,
-					prevSlugLabel:
+					prevLabel:
 						data.docMetadata.labels[
 							data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) - 1 || null
 						] || null,
-					nextSlugLabel:
+					nextLabel:
 						data.docMetadata.labels[
 							data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) + 1 || null
 						] || null,
 					text: data.docContent[firstUnit.prevSlug] || '',
 					notes: data.notesData[data.slug_doc]?.[firstUnit.prevSlug] || []
 				});
-			}}><span class="font-bold">{groupedUnits[0].prevSlugLabel}</span> laden</button
+			}}><span class="font-bold">{groupedUnits[0].prevLabel}</span> laden</button
 		>
 	{/if}
 	{#each groupedUnits as unit (unit.slug)}
-		<Unit slug={unit.slug} text={generateMainText(unit.text)} {selectedNote} {multiMarkPopupSlugs}
+		<Unit slug={unit.slug} text={generateMainText(unit.text)} unitLabelInline={unit.labelInline} {selectedNote} {multiMarkPopupSlugs}
 		></Unit>
 	{/each}
 	{#if data.docMetadata.slugs.findIndex((unit) => unit === groupedUnits[groupedUnits.length - 1].nextSlug) + 1}
@@ -138,11 +138,11 @@
 						data.docMetadata.slugs[
 							data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1 || null
 						] || null,
-					prevSlugLabel:
+					prevLabel:
 						data.docMetadata.labels[
 							data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) - 1 || null
 						] || null,
-					nextSlugLabel:
+					nextLabel:
 						data.docMetadata.labels[
 							data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1 || null
 						] || null,
@@ -150,7 +150,7 @@
 					notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || []
 				});
 			}}
-			><span class="font-bold">{groupedUnits[groupedUnits.length - 1].nextSlugLabel}</span> laden</button
+			><span class="font-bold">{groupedUnits[groupedUnits.length - 1].nextLabel}</span> laden</button
 		>
 	{/if}
 </div>

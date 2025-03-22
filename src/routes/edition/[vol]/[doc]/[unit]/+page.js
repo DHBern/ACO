@@ -16,8 +16,8 @@ export async function load({ fetch, params }) {
 			slug: slug,
 			prevSlug: doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug) - 1] || null,
 			nextSlug: doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug) + 1] || null,
-			prevSlugLabel: doc?.unitLabels?.[doc?.unitSlugs.findIndex(unit => unit === slug) - 1] || null,
-			nextSlugLabel: doc?.unitLabels?.[doc?.unitSlugs.findIndex(unit => unit === slug) + 1] || null,
+			prevLabel: doc?.unitLabels?.[doc?.unitSlugs.findIndex(unit => unit === slug) - 1] || null,
+			nextLabel: doc?.unitLabels?.[doc?.unitSlugs.findIndex(unit => unit === slug) + 1] || null,
 			text: doc?.content?.[slug] || '',
 			notes: notesData[slug_doc]?.[slug] || []
 		}
