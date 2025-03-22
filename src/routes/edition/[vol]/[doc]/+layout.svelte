@@ -19,9 +19,9 @@
 	collapsible
 	classes="containerDocHead shadow-md mb-4"
 >
-	<Accordion.Item accordionMetadata="metadata">
+	<Accordion.Item value="metadata">
 		{#snippet lead()}{/snippet}
-		{#snippet control()}<span class="text-xl"><span class="font-bold">Metadaten</span></span>{/snippet}
+		{#snippet control()}<span class="font-bol text-xl">Metadaten</span>{/snippet}
 		{#snippet panel()}
 			<div class="col-span-4 col-start-1 p-5">
 				{@html data.docMetadata.meta}
@@ -37,7 +37,7 @@
 	collapsible
 	classes="containerSettings shadow-md"
 >
-	<Accordion.Item accordionUnitNav="unitNav">
+	<Accordion.Item value="unitNav">
 		{#snippet lead()}{/snippet}
 		{#snippet control()}<span class="font-bold text-xl">Kapitelübersicht</span>{/snippet}
 		{#snippet panel()}

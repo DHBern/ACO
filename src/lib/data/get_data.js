@@ -1,12 +1,13 @@
 // Import local JSON files
 import { textData as tData } from './aco-text.json';
 import { notesData as nData } from './aco-notes.json';
+import { registerData as rData } from './aco-register.json';
 
 const textData = await tData;
 const notesData = await nData;
+const registerData = await rData;
 
-export {textData};
-export {notesData};
+export {textData, notesData, registerData};
 
 
 // Get JSON from Web-API
