@@ -26,7 +26,7 @@
 	class="multimark-popup absolute max-w-[700px] border-4 border-[var(--aco-gray-1)] bg-[var(--aco-gray-1)] transition-transform duration-500 dark:bg-[var(--aco-teal)]"
 	bind:this={popUpElement}
 >
-	<div class="p-1 font-bold">Mehrere Kommentare</div>
+	<div class="p-1 font-bold">Bitte Kommentar wählen</div>
 	<ul
 		class="w-full bg-[var(--aco-teal-light)]/10"
 	>
