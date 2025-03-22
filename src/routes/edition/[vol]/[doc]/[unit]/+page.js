@@ -12,12 +12,14 @@ export async function load({ fetch, params }) {
 	const slug_next_unit = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 1] || null
 
 	let groupedUnits = [slug_unit, slug_next_unit].map((slug)=>{
+		const indexPrev = doc?.unitSlugs.findIndex(unit => unit === slug) - 1;
+		const indexNext = doc?.unitSlugs.findIndex(unit => unit === slug) + 1;
 		return {
 			slug: slug,
-			prevSlug: doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug) - 1] || null,
-			nextSlug: doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug) + 1] || null,
-			prevLabel: doc?.unitLabels?.[doc?.unitSlugs.findIndex(unit => unit === slug) - 1] || null,
-			nextLabel: doc?.unitLabels?.[doc?.unitSlugs.findIndex(unit => unit === slug) + 1] || null,
+			prevSlug: doc?.unitSlugs[indexPrev] || null,
+			nextSlug: doc?.unitSlugs[indexNext] || null,
+			prevLabel: doc?.unitLabels?.[indexPrev] || null,
+			nextLabel: doc?.unitLabels?.[indexNext] || null,
 			text: doc?.content?.[slug] || '',
 			notes: notesData[slug_doc]?.[slug] || []
 		}

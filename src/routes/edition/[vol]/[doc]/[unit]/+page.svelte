@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
+	import LoadButton from './LoadButton.svelte';
 	import Note from './Note.svelte';
 	import Unit from './Unit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
@@ -15,19 +16,21 @@
 	} from '$lib/functions/protoHTMLconversion';
 
 	let { data } = $props();
+
 	let groupedUnits = $state(data.groupedUnits);
 	$effect(() => {
 		groupedUnits = data.groupedUnits;
 	});
+
 	let selectedNote = $state({ slug: '' });
-	let multiMarkPopupSlugs = $state({ slugs: [], target: undefined });
+	let multiMarkPopupStore = $state({ slugs: [], target: undefined, slugUnitTarget: undefined });
 
 	function handleResetMultiMark(ev) {
 		if (
 			!ev.target.classList.contains('multimark-popup') &&
-			!(multiMarkPopupSlugs.slugs.length > 0 && ev.target.classList.contains('multiple-ids'))
+			!(multiMarkPopupStore.slugs.length > 0 && ev.target.classList.contains('multiple-ids'))
 		) {
-			multiMarkPopupSlugs.slugs = [];
+			multiMarkPopupStore.slugs = [];
 		}
 	}
 
@@ -63,122 +66,73 @@
 	});
 </script>
 
-<!-- Page Numbers -->
-<div
-	class="containerPageNums col-span-1 col-start-1 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
->
-	{#each groupedUnits as unit (unit.slug)}
-		{@html generatePageNumbers(unit.text)}
-	{/each}
-</div>
+<!-- Load Button -->
+{#if groupedUnits[0].prevSlug}
+	<LoadButton type="prev" {data} {groupedUnits} classes="row-span-1 row-start-1" />
+{/if}
 
-<!-- Line Numbers -->
-<div
-	class="containerLineNums col-span-1 col-start-2 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1"
->
-	{#each groupedUnits as unit (unit.slug)}
-		{@html generateLineNumbers(unit.text)}
-	{/each}
-</div>
-
-<!-- Main Text -->
-<div
-	class={[
-		'containerText maintext relative col-span-1 col-start-3 row-span-1 row-start-1 lg:row-span-2 lg:row-start-1',
-		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-	]}
->
-	{#if data.docMetadata.slugs.findIndex((unit) => unit === groupedUnits[0].prevSlug) - 1}
-		<button
-			class="shadow-4xl m-3 mx-auto block min-w-[50px] bg-red-300 px-5 py-1"
-			type="button"
-			onclick={(ev) => {
-				const firstUnit = groupedUnits[0];
-				groupedUnits.unshift({
-					slug: firstUnit.prevSlug,
-					prevSlug:
-						data.docMetadata.slugs[
-							data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) - 1 || null
-						] || null,
-					nextSlug:
-						data.docMetadata.slugs[
-							data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) + 1 || null
-						] || null,
-					prevLabel:
-						data.docMetadata.labels[
-							data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) - 1 || null
-						] || null,
-					nextLabel:
-						data.docMetadata.labels[
-							data.docMetadata.slugs.findIndex((unit) => unit === firstUnit.prevSlug) + 1 || null
-						] || null,
-					text: data.docContent[firstUnit.prevSlug] || '',
-					notes: data.notesData[data.slug_doc]?.[firstUnit.prevSlug] || []
-				});
-			}}><span class="font-bold">{groupedUnits[0].prevLabel}</span> laden</button
-		>
-	{/if}
-	{#each groupedUnits as unit (unit.slug)}
-		<Unit slug={unit.slug} text={generateMainText(unit.text)} unitLabelInline={unit.labelInline} {selectedNote} {multiMarkPopupSlugs}
-		></Unit>
-	{/each}
-	{#if data.docMetadata.slugs.findIndex((unit) => unit === groupedUnits[groupedUnits.length - 1].nextSlug) + 1}
-		<button
-			class="shadow-4xl m-3 mx-auto block min-w-[50px] bg-red-300 px-5 py-1"
-			type="button"
-			onclick={(ev) => {
-				const lastUnit = groupedUnits[groupedUnits.length - 1];
-				groupedUnits.push({
-					slug: lastUnit.nextSlug,
-					prevSlug:
-						data.docMetadata.slugs[
-							data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) - 1 || null
-						] || null,
-					nextSlug:
-						data.docMetadata.slugs[
-							data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1 || null
-						] || null,
-					prevLabel:
-						data.docMetadata.labels[
-							data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) - 1 || null
-						] || null,
-					nextLabel:
-						data.docMetadata.labels[
-							data.docMetadata.slugs.findIndex((unit) => unit === lastUnit.nextSlug) + 1 || null
-						] || null,
-					text: data.docContent[lastUnit.nextSlug] || '',
-					notes: data.notesData[data.slug_doc]?.[lastUnit.nextSlug] || []
-				});
-			}}
-			><span class="font-bold">{groupedUnits[groupedUnits.length - 1].nextLabel}</span> laden</button
-		>
-	{/if}
-</div>
-
-<!-- Notes -->
-<div
-	class={[
-		'containerNotes relative col-span-3 col-start-1 row-span-1 row-start-2 mt-0 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
-		copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-	]}
->
-	{#each groupedUnits as unit (unit.slug)}
-		<!-- //! Dont do this twice! -->
-		{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
-			<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
+<!-- Units -->
+<div class="grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[100px_50px_auto_1fr]">
+	<!-- Page Numbers -->
+	<div class="containerPageNums col-span-1 col-start-1">
+		{#each groupedUnits as unit (unit.slug)}
+			{@html generatePageNumbers(unit.text)}
 		{/each}
-	{/each}
-</div>
+	</div>
 
-<!-- Popups for multiple notes over same place -->
-{#if multiMarkPopupSlugs.slugs.length > 0}
-	<MultiMarkPopup
-		{multiMarkPopupSlugs}
-		{selectedNote}
-		notesData={data.notesData}
-		slug_doc={data.slug_doc}
-		slug_unit={data.slug_unit}
-	/>
+	<!-- Line Numbers -->
+	<div class="containerLineNums col-span-1 col-start-2">
+		{#each groupedUnits as unit (unit.slug)}
+			{@html generateLineNumbers(unit.text)}
+		{/each}
+	</div>
+
+	<!-- Main Text -->
+	<div
+		class={[
+			'containerText maintext relative col-span-1 col-start-3',
+			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+		]}
+	>
+		{#each groupedUnits as unit (unit.slug)}
+			<Unit
+				slug={unit.slug}
+				text={generateMainText(unit.text)}
+				unitLabelInline={unit.labelInline}
+				{selectedNote}
+				{multiMarkPopupStore}
+			></Unit>
+		{/each}
+	</div>
+
+	<!-- Notes -->
+	<div
+		class={[
+			'containerNotes relative col-span-3 col-start-1 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
+			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+		]}
+	>
+		{#each groupedUnits as unit (unit.slug)}
+			<!-- //! Dont do this twice! -->
+			{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
+				<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
+			{/each}
+		{/each}
+	</div>
+
+	<!-- Popups for multiple notes over same place -->
+	{#if multiMarkPopupStore.slugs.length > 0}
+		<MultiMarkPopup
+			{multiMarkPopupStore}
+			{selectedNote}
+			notesData={data.notesData}
+			slug_doc={data.slug_doc}
+		/>
+	{/if}
+</div>
+<!-- Load Button -->
+{#if groupedUnits[0].prevSlug}
+	<LoadButton type="next" {data} {groupedUnits} classes="row-span-1 row-start-3" />
 {/if}
 
 <style lang="postcss">

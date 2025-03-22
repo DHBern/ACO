@@ -2,7 +2,7 @@ import { selectMark } from './selectMark';
 import { moveNote } from './moveNote';
 import { showMultiMarkPopup } from './showMultiMarkPopup';
 
-export function handleMarkClick(ev, selectedNote, multiMarkPopupSlugs) {
+export function handleMarkClick(ev, selectedNote, multiMarkPopupStore) {
 	let ids = [];
 	try {
 		//!FIX
@@ -20,6 +20,6 @@ export function handleMarkClick(ev, selectedNote, multiMarkPopupSlugs) {
 			selectedNote.slug = ids[0];
 			break;
 		default:
-			showMultiMarkPopup(ids, multiMarkPopupSlugs, ev.target);
+			showMultiMarkPopup(ids, multiMarkPopupStore, ev.target);
 	}
 }

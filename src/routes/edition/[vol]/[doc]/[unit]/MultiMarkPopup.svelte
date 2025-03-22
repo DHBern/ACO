@@ -5,15 +5,14 @@
 	import { autoUpdate } from '@floating-ui/dom';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
 
-	let { multiMarkPopupSlugs, selectedNote, notesData, slug_doc, slug_unit } = $props();
+	let { multiMarkPopupStore, selectedNote, notesData, slug_doc } = $props();
 	let popUpElement = $state();
-	console.log(slug_unit, notesData[slug_doc][slug_unit]);
 
 	onMount(() => {
 		const cleanup = autoUpdate(
-			multiMarkPopupSlugs.target,
+			multiMarkPopupStore.target,
 			popUpElement,
-			updateFunctionFloatingPopover(multiMarkPopupSlugs.target, popUpElement)
+			updateFunctionFloatingPopover(multiMarkPopupStore.target, popUpElement)
 		);
 		return () => {
 			cleanup();
@@ -30,12 +29,12 @@
 	<ul
 		class="w-full bg-[var(--aco-teal-light)]/10"
 	>
-		{#each multiMarkPopupSlugs.slugs as id (id)}
-			{@const idMetadata = notesData[slug_doc][slug_unit][id]}
+		{#each multiMarkPopupStore.slugs as id (id)}
+			{@const idMetadata = notesData[slug_doc][multiMarkPopupStore.slugUnitTarget][id]}
 			<li class="p-2 hover:bg-[var(--aco-orange-light)]/30">
 				<button
 					onclick={() => {
-						handlePopupClick(id, selectedNote, multiMarkPopupSlugs);
+						handlePopupClick(id, selectedNote, multiMarkPopupStore);
 					}}
 					><p class="m-0 !pt-0 color-sky-900">
 						{@html createNoteReferenceString(

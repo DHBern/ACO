@@ -1,9 +1,10 @@
 import { tick } from 'svelte';
 
-export function showMultiMarkPopup(ids, multiMarkPopupSlugs, elMark) {
+export function showMultiMarkPopup(ids, multiMarkPopupStore, elMark) {
 	// Feed ids to state, which will trigger popup-component
-	multiMarkPopupSlugs.slugs = ids;
-	multiMarkPopupSlugs.target = elMark;
+	multiMarkPopupStore.slugs = ids;
+	multiMarkPopupStore.target = elMark;
+	multiMarkPopupStore.slugUnitTarget = elMark.closest('[data-unit]').dataset.unit;
 
 	// Make sure that popup exists
 	tick().then(() => {

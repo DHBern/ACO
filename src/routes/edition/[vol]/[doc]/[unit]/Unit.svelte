@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import { marksVisible } from '../../../globals.svelte.js';
 
-	let { slug, text, unitLabelInline, selectedNote, multiMarkPopupSlugs } = $props();
+	let { slug, text, unitLabelInline, selectedNote, multiMarkPopupStore } = $props();
 
 	function handleResetMarkSelection(ev) {
 		if (
@@ -13,17 +13,17 @@
 			!ev.target.closest('.multimark-popup') &&
 			!ev.target.closest('.notebox')
 		) {
-			resetMarkSelection(selectedNote, multiMarkPopupSlugs);
+			resetMarkSelection(selectedNote, multiMarkPopupStore);
 		}
 	}
 
 	function handleMarkerClick(ev) {
-		handleMarkClick(ev, selectedNote, multiMarkPopupSlugs);
+		handleMarkClick(ev, selectedNote, multiMarkPopupStore);
 	}
 
 	function handleMarkerKeyDown(ev) {
 		ev.key === 'Enter' || ev.key === ' '
-			? handleMarkClick(ev, selectedNote, multiMarkPopupSlugs)
+			? handleMarkClick(ev, selectedNote, multiMarkPopupStore)
 			: null;
 	}
 
