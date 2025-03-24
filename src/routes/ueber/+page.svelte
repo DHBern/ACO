@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="grid grid-cols-[2fr_1fr] gap-18 pt-24 max-w-[1500px] mx-auto">
+<div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
 	<div class="col-span-1 col-start-1">
 		<div class="w-full">
 			<h1>Einleitung</h1>
@@ -56,7 +56,7 @@
 </div>
 
 <!-- Über dieses Projekt -->
-<div class="grid grid-cols-[2fr_1fr] gap-18 pt-24 max-w-[1500px] mx-auto">
+<div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
 	<div class="">
 		<h1>Über dieses Projekt</h1>
 		<h2>Die Akten des Konzils von Ephesus 431.</h2>
@@ -122,15 +122,15 @@
 </div>
 
 <!-- Ansprechpersonen -->
-<div class="grid grid-cols-[2fr_1fr] gap-18 pt-24 max-w-[1500px] mx-auto">
+<div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
 	<div class="">
 		<h1>Ansprechpersonen</h1>
 		<p>
 			Ansprechpartner für den inhaltlichen Teil dieses Projekt, das seit Januar 2016 als
 			Langfristvorhaben von der DFG gefördert wird, sind:
 		</p>
-		
-		<ul class="**:text-lg font-bold ml-5 mt-2 mb-10">
+
+		<ul class="mt-2 mb-10 ml-5 font-bold **:text-lg">
 			<li>Dr. Thomas Brüggemann (Leiter der Arbeitsstelle)</li>
 			<li>Dr. Sabine Lütkemeyer</li>
 			<li>Dr. Julia Beier</li>
@@ -140,8 +140,8 @@
 			Für die technische Umsetzung ist die die Digital Humanities der Universität Bern
 			verantwortlich:
 		</p>
-		
-		<p class="text-lg font-bold ml-5 mt-2 mb-10">
+
+		<p class="mt-2 mb-10 ml-5 text-lg font-bold">
 			Universität Bern<br />
 			Walter Benjamin Kolleg<br />
 			Digital Humanities<br />
@@ -161,30 +161,30 @@
 			Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte.
 		</p>
 	</div>
-</div>
 
-<!-- Ansprechpersonen -->
-<div class="pt-24">
-	<div class="">
-		<h1>Förderung und Partner</h1>
-	</div>
+	<!-- Ansprechpersonen -->
+	<div>
+		<div class="">
+			<h1>Förderung und Partner</h1>
+		</div>
 
-	<div class="grid grid-cols-3 gap-2">
-		<ul class="**:text-lg font-bold ml-5 mt-2 mb-10">
-			<li>Deutsche Forschungsgemeinschaft (DFG)</li>
-			<li>Universität Bonn</li>
-			<li>Universität Bern</li>
-		</ul>
+		<div class="grid grid-cols-3 gap-2">
+			<ul class="mt-2 mb-10 ml-5 font-bold **:text-lg">
+				<li>Deutsche Forschungsgemeinschaft (DFG)</li>
+				<li>Universität Bonn</li>
+				<li>Universität Bern</li>
+			</ul>
+		</div>
 	</div>
 </div>
 
 <style>
 	@reference "tailwindcss";
 	h1 {
-		@apply text-3xl font-bold text-[var(--aco-orange)] mb-2;
+		@apply mb-2 text-3xl font-bold text-[var(--aco-orange)];
 	}
 	h2 {
-		@apply text-xl font-bold mt-8;
+		@apply mt-8 text-xl font-bold;
 	}
 	h3 {
 		@apply text-lg font-bold;
