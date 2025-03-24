@@ -10,7 +10,7 @@
 	let accordionMetadata = $state(['metadata']);
 </script>
 
-<div class="mx-auto max-w-[1500px] py-24">
+<div class="mx-auto max-w-[1800px] py-24">
 	<!-- Title -->
 	<h1 class="mb-2 text-4xl text-[var(--aco-orange)]">{@html data.docMetadata.toc_title}</h1>
 	<!-- Document Metadata -->
@@ -83,7 +83,7 @@
 		</Switch>
 	</div>
 
-	<div class="h-screen w-full overflow-x-scroll pb-24">
+	<div class="h-screen w-full overflow-x-scroll p-10 pb-24 bg-[var(--aco-gray-2)]">
 		<div class="containerDocContent grid grid-rows-[40px_auto_40px] gap-5">
 			{@render children()}
 		</div>
