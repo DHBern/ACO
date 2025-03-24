@@ -15,7 +15,7 @@
 
 <h1>Dokumente</h1>
 
-<div class="flex-row flex-wrap bg-[var(--aco-gray-2)]">
+<div class="flex-row flex-wrap bg-[var(--aco-gray-2)] dark:bg-[var(--aco-gray-3)]">
 	<Accordion
 		{accordionState}
 		onValueChange={(e) => (accordionState = e.value)}
@@ -24,10 +24,11 @@
 	>
 		<Accordion.Item value="Band 1">
 			{#snippet lead()}{/snippet}
-			{#snippet control()}<span class="text-xl font-bold">Band 1</span>{/snippet}
+			{#snippet control()}<span class="text-xl font-bold text-black dark:text-black">Band 1</span>{/snippet}
 			{#snippet panel()}
 				{#each types as type (type)}
-					<h2 class="mt-10 mb-4">{type}</h2>
+				<div class="pl-15">
+					<h2 class="mt-10 mb-4 text-black dark:text-black">{type}</h2>
 					<ul>
 						{#each docs[type] as doc (doc.slug)}
 							<li
@@ -44,13 +45,14 @@
 							</li>
 						{/each}
 					</ul>
+				</div>
 				{/each}
 			{/snippet}
 		</Accordion.Item>
 		{#each volumeLabels as volumeLabel}
 			<Accordion.Item value={volumeLabel}>
 				{#snippet lead()}{/snippet}
-				{#snippet control()}<span class="text-xl font-bold">{volumeLabel}</span>{/snippet}
+				{#snippet control()}<span class="text-xl font-bold text-black dark:text-black">{volumeLabel}</span>{/snippet}
 				{#snippet panel()}
 					<p>...</p>
 				{/snippet}
