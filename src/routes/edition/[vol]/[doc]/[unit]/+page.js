@@ -10,8 +10,13 @@ export async function load({ fetch, params }) {
 	const doc = textData.find(({ slug: s }) => s === slug_doc);
 	
 	const slug_next_unit = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 1] || null
+	const slug_next_unit2 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 2] || null
+	const slug_next_unit3 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 3] || null
+	const slug_next_unit4 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 4] || null
+	const slug_next_unit5 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 5] || null
 
-	let groupedUnits = [slug_unit, slug_next_unit].map((slug)=>{
+	// let groupedUnits = [slug_unit, slug_next_unit, slug_next_unit2, slug_next_unit3, slug_next_unit4, slug_next_unit5].map((slug)=>{
+	let groupedUnits = [slug_unit].map((slug)=>{
 		const indexPrev = doc?.unitSlugs.findIndex(unit => unit === slug) - 1;
 		const indexNext = doc?.unitSlugs.findIndex(unit => unit === slug) + 1;
 		return {
