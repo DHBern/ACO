@@ -52,7 +52,7 @@
 										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 											<span class="font-bold text-black dark:text-black">{doc.acoNumLabel}:</span>
 											<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-												>"{doc.title}"</span
+												>{doc.title}</span
 											>
 											<span class="ml-1">
 												<span class="text-[var(--aco-orange-light)]">({doc.slug})</span>
@@ -77,7 +77,7 @@
 											<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 												<span class="font-bold text-black dark:text-black">{doc.slug}:</span>
 												<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-													>"{doc.title}"</span
+													>{doc.title}</span
 												>
 												<span class="ml-1">
 													<span class="text-[var(--aco-orange-light)]">({doc.acoNumLabel})</span>
