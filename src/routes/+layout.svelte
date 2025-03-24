@@ -36,19 +36,19 @@
 		>
 
 		<button
+		onclick={() => {
+			goto(base + '/register');
+		}}>Register</button
+		>
+		<button
+		onclick={() => {
+			goto(base + '/edition/search');
+		}}>Suche</button
+		>
+		<button
 			onclick={() => {
 				goto(base + '/imprint');
 			}}>Impressum</button
-		>
-		<button
-			onclick={() => {
-				goto(base + '/register');
-			}}>Register</button
-		>
-		<button
-			onclick={() => {
-				goto(base + '/edition/search');
-			}}>Suche</button
 		>
 
 		<Switch
