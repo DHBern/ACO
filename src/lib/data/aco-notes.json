@@ -1,41 +1,68 @@
 {
 	"notesData": {
 		"CV20": {
-			"text":{
-				"CV20-21-22-Du-getötet": {
-					"text_end": "getötet",
+			"text": {
+				"CV20-4-6-dass-werden": {
+					"text_end": "werden",
 					"doc_unit": "text",
-					"note_content": "<a href=\"\" data-type=\"external_ref\" source=\"FML-bible-OSIS?\">Jes 14,20<\/a>.",
-					"line_end": "22",
-					"text_start": "Du",
-					"line_start": "21",
+					"note_content": "Seine grundlegende Friedfertigkeit hebt Kyrill auch in der lat. Rezension seines zeitnah verfassten Briefes an die Apokrisiare hervor (vgl. <a href='../CPal28/text?line=iii' data-type='internal_ref' document='CPal28' doc_unit='text' line_start='iii' line_end='xi'>CPal28,iii–xi</a>, ACO I,5 S. 54,35–37 [Dok. 8]).",
+					"line_end": "6",
+					"text_start": "dass",
+					"line_start": "4",
+					"document": "CV20"
+				},
+				"CV20-11-12-und-haben": {
+					"text_end": "haben",
+					"doc_unit": "text",
+					"note_content": "Vgl. die berühmt gewordene Junktur <span data-rend='greek'>σκάνδαλον οἰκουμενικόν</span> in Kyrills erstem Brief an Nestorius (<a href='../CV2/3?line=13' data-type='internal_ref' document='CV2' doc_unit='3' line_start='13' line_end='13'>CV2,3,13</a>, ACO I,1,1 S. 24,23f. [Dok. 18]).",
+					"line_end": "12",
+					"text_start": "und",
+					"line_start": "11",
+					"document": "CV20"
+				},
+				"CV20-17-17-Sie-haben": {
+					"text_end": "haben",
+					"doc_unit": "text",
+					"note_content": "Vgl. <a href='' data-type='external_ref' source='FML-bible-OSIS?'>2 Tim 4,7f.</a>.",
+					"line_end": "17",
+					"text_start": "Sie",
+					"line_start": "17",
 					"document": "CV20"
 				},
 				"CV20-15-17-Wir-werden_1": {
 					"text_end": "Werden_1",
 					"doc_unit": "text",
-					"note_content": "Möglicherweise denkt Kyrill bei dem Szenario, das er hier beschreibt, an <a href=\"\" data-type=\"external_ref\" source=\"FML-bible-OSIS?\">1\n                  Joh 4,17<\/a>, wo von der <span data-rend=\"greek\">παρρησία<\/span> der vor dem jüngsten Gericht (<span data-rend=\"greek\">ἐν τῇ ἡμέρᾳ τῆς\n                  κρίσεως<\/span>) Stehenden die Rede ist, welche die <span data-rend=\"greek\">οἱ μυσταγωγούμενοι<\/span> hier zu genießen scheinen.",
+					"note_content": "Möglicherweise denkt Kyrill bei dem Szenario, das er hier beschreibt, an <a href='' data-type='external_ref' source='FML-bible-OSIS?'>1 Joh 4,17</a>, wo von der <span data-rend='greek'>παρρησία</span> der vor dem jüngsten Gericht (<span data-rend='greek'>ἐν τῇ ἡμέρᾳ τῆς κρίσεως</span>) Stehenden die Rede ist, welche die <span data-rend='greek'>οἱ μυσταγωγούμενοι</span> hier zu genießen scheinen.",
 					"line_end": "17",
 					"text_start": "Wir",
 					"line_start": "15",
 					"document": "CV20"
 				},
-				"CV20-28-29-Und-liebenswert": {
-					"text_end": "liebenswert",
+				"CV20-21-22-Du-getötet": {
+					"text_end": "getötet",
 					"doc_unit": "text",
-					"note_content": "Vgl. oben <a href=\"\" data-type=\"internal_ref\" document=\"CV20\" doc_unit=\"text\" line_start=\"4\" line_end=\"5\">CV20,4 – 5<\/a>.",
-					"line_end": "29",
-					"text_start": "Und",
-					"line_start": "28",
+					"note_content": "<a href='' data-type='external_ref' source='FML-bible-OSIS?'>Jes 14,20</a>.",
+					"line_end": "22",
+					"text_start": "Du",
+					"line_start": "21",
 					"document": "CV20"
 				},
 				"CV20-25-27-Kein-worden": {
 					"text_end": "worden",
 					"doc_unit": "text",
-					"note_content": "Zu diesen Vorgängen vgl. auch <a href=\"\" data-type=\"internal_ref\" document=\"CV4\" doc_unit=\"1\" line_start=\"3\" line_end=\"11\">CV4,1,3 – 11<\/a>, ACO I,1,1 S. 25,24–26,6 (Dok. 23); \n                    <a href=\"\" data-type=\"internal_ref\" document=\"CV16\" doc_unit=\"text\" line_start=\"35\" line_end=\"37\">CV16,35 – 37<\/a>, ACO I,1,1 S. 98,30f. (Dok. 11); \n                    <a href=\"\" data-type=\"internal_ref\" document=\"CV22\" doc_unit=\"5\" line_start=\"8\" line_end=\"37\">CV22,5,8 – CV22,6,5<\/a>, ACO I,1,1 S. 111,20–25\n                    (Dok. 8) [[FML: unit-spanning comment; how to resolve this?]]; <a href=\"\" data-type=\"internal_ref\" document=\"CV118\" doc_unit=\"text\" line_start=\"27\" line_end=\"27\">CV118,27<\/a>, ACO I,1,3 S. 88,20–26.",
+					"note_content": "Zu diesen Vorgängen vgl. auch <a href='../CV4/1?line=3' data-type='internal_ref' document='CV4' doc_unit='1' line_start='3' line_end='11'>CV4,1,3 – 11</a>, ACO I,1,1 S. 25,24–26,6 (Dok. 23); <a href='../CV16/text?line=35' data-type='internal_ref' document='CV16' doc_unit='text' line_start='35' line_end='37'>CV16,35 – 37</a>, ACO I,1,1 S. 98,30f. (Dok. 11); <a href='../CV22/5?line=8' data-type='internal_ref' document='CV22' doc_unit='5' line_start='8' line_end='37'>CV22,5,8 – CV22,6,5</a>, ACO I,1,1 S. 111,20–25(Dok. 8) [[FML: unit-spanning comment; how to resolve this?]]; <a href='../CV118/text?line=27' data-type='internal_ref' document='CV118' doc_unit='text' line_start='27' line_end='27'>CV118,27</a>, ACO I,1,3 S. 88,20–26.",
 					"line_end": "27",
 					"text_start": "Kein",
 					"line_start": "25",
+					"document": "CV20"
+				},
+				"CV20-28-29-Und-liebenswert": {
+					"text_end": "liebenswert",
+					"doc_unit": "text",
+					"note_content": "Vgl. oben <a href='../CV20/text?line=4' data-type='internal_ref' document='CV20' doc_unit='text' line_start='4' line_end='5'>CV20,4 – 5</a>.",
+					"line_end": "29",
+					"text_start": "Und",
+					"line_start": "28",
 					"document": "CV20"
 				},
 				"CV20-34-35-Wenn-lieben": {
@@ -47,43 +74,16 @@
 					"line_start": "34",
 					"document": "CV20"
 				},
-				"CV20-4-6-dass-werden": {
-					"text_end": "werden",
-					"doc_unit": "text",
-					"note_content": "Seine grundlegende Friedfertigkeit hebt Kyrill auch in der lat. Rezension seines zeitnah verfassten Briefes an die Apokrisiare hervor (vgl. \n                    <a href=\"\" data-type=\"internal_ref\" document=\"CPal28\" doc_unit=\"text\" line_start=\"iii\" line_end=\"xi\">CPal28,iii–xi<\/a>, ACO I,5 S. 54,35–37 [Dok. 8]).",
-					"line_end": "6",
-					"text_start": "dass",
-					"line_start": "4",
-					"document": "CV20"
-				},
-				"CV20-11-12-und-haben": {
-					"text_end": "haben",
-					"doc_unit": "text",
-					"note_content": "Vgl. die berühmt gewordene Junktur <span data-rend=\"greek\">σκάνδαλον οἰκουμενικόν<\/span> in Kyrills erstem Brief an Nestorius (<a href=\"\" data-type=\"internal_ref\" document=\"CV2\" doc_unit=\"3\" line_start=\"13\" line_end=\"13\">CV2,3,13<\/a>, ACO I,1,1 S. 24,23f. [Dok. 18]).",
-					"line_end": "12",
-					"text_start": "und",
-					"line_start": "11",
-					"document": "CV20"
-				},
-				"CV20-17-17-Sie-haben": {
-					"text_end": "haben",
-					"doc_unit": "text",
-					"note_content": "Vgl. <a href=\"\" data-type=\"external_ref\" source=\"FML-bible-OSIS?\">2 Tim 4,7f.<\/a>.",
-					"line_end": "17",
-					"text_start": "Sie",
-					"line_start": "17",
-					"document": "CV20"
-				},
 				"CV20-42-42-Bis-Wahrheit": {
 					"text_end": "Wahrheit",
 					"doc_unit": "text",
-					"note_content": "Sir 4,28. Mit einem Hinweis, für den Glauben nötigenfalls sogar den Tod in Kauf nehmen zu wollen, enden auch beide Rezensionen des Briefes an die Apokrisiare (vgl. <a href=\"\" data-type=\"internal_ref\" document=\"CV22\" doc_unit=\"8\" line_start=\"35\" line_end=\"41\">CV22,8,35-41<\/a>, ACO I,1,1 S. 112,19f.; <a href=\"\" data-type=\"internal_ref\" document=\"CPal28\" doc_unit=\"text\" line_start=\"xliv\" line_end=\"xlvii\">CPal28,xliv-xlvii<\/a>, ACO I,5 S. 55,4f. [jeweils Dok. 8]).",
+					"note_content": "Sir 4,28. Mit einem Hinweis, für den Glauben nötigenfalls sogar den Tod in Kauf nehmen zu wollen, enden auch beide Rezensionen des Briefes an die Apokrisiare (vgl. <a href='../CV22/8?line=35' data-type='internal_ref' document='CV22' doc_unit='8' line_start='35' line_end='41'>CV22,8,35-41</a>, ACO I,1,1 S. 112,19f.; <a href='../CPal28/text?line=xliv' data-type='internal_ref' document='CPal28' doc_unit='text' line_start='xliv' line_end='xlvii'>CPal28,xliv-xlvii</a>, ACO I,5 S. 55,4f. [jeweils Dok. 8]).",
 					"line_end": "42",
 					"text_start": "Bis",
 					"line_start": "42",
 					"document": "CV20"
 				}
-			} 
+			}
 		},
 		"CV166": {
 			"libIII-5": {},
@@ -95,7 +95,7 @@
 					"line_end": 6,
 					"text_start": "Erinnert",
 					"text_end": "wird",
-					"note_content": "<p>Vgl. <a href='' data-type='external_ref' source='loofs'>Loofs</a>, <a href='' data-type='external_ref' source='nestoriana'>Nestoriana S. 354,12-18</a></p>"
+					"note_content": "Vgl. <a href='' data-type='external_ref' source='loofs'>Loofs</a>, <a href='' data-type='external_ref' source='nestoriana'>Nestoriana S. 354,12-18</a>"
 				},
 				"CV166-III-6-14-14-ergibt-habe": {
 					"document": "CV166",
@@ -104,7 +104,7 @@
 					"line_end": "14",
 					"text_start": "ergibt",
 					"text_end": "habe",
-					"note_content": "<p>Eine solche Union wurde zwar in dieser Formulierung (εἷς ἐξ ἀμφοῖν) in der vorliegenden Schrift bisher nur einmal oben<a href='../CV166/libII-praef?line=68' data-type='internal_ref' document='CV166' doc_unit='libII-praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a>, der Sache nach jedoch in der Tat schon häufiger postuliert (z.B. noch kurz zuvor <a href='../CV166/libIII-5?line=18' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='18' line_end='19' >CV166,III,5,18–19</a >). Insgesamt betrachtet greift Kyrill allerdings tatsächlich auch auf die hier genutzte Formulierung des Öfteren zurück (vgl. z.B. <a href='./CV4/3?page=15' data-type='internal_ref' document='CV4' doc_unit='3' page_start='15' page_end='16'>CV4,3,15–16</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' aco_page='27' aco_doc_unit='2' aco_doc='23'>ACO 1,1,1 S. 27,2 [Dok. 23]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV7,25,29–30</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc='39'>ACO 1,1,1 S. 58,10 [Dok. 39]</a>;<a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV169,51</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc=''>ACO 1,1,1 S. 129,27</a>).</p>"
+					"note_content": "Eine solche Union wurde zwar in dieser Formulierung (εἷς ἐξ ἀμφοῖν) in der vorliegenden Schrift bisher nur einmal oben<a href='../CV166/libII-praef?line=68' data-type='internal_ref' document='CV166' doc_unit='libII-praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a>, der Sache nach jedoch in der Tat schon häufiger postuliert (z.B. noch kurz zuvor <a href='../CV166/libIII-5?line=18' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='18' line_end='19' >CV166,III,5,18–19</a >). Insgesamt betrachtet greift Kyrill allerdings tatsächlich auch auf die hier genutzte Formulierung des Öfteren zurück (vgl. z.B. <a href='./CV4/3?page=15' data-type='internal_ref' document='CV4' doc_unit='3' page_start='15' page_end='16'>CV4,3,15–16</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' aco_page='27' aco_doc_unit='2' aco_doc='23'>ACO 1,1,1 S. 27,2 [Dok. 23]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV7,25,29–30</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc='39'>ACO 1,1,1 S. 58,10 [Dok. 39]</a>;<a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV169,51</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc=''>ACO 1,1,1 S. 129,27</a>)."
 				},
 				"CV166-III-6-24-24--hypostasen": {
 					"document": "CV166",
@@ -113,7 +113,7 @@
 					"line_end": "24",
 					"text_start": "",
 					"text_end": "Hypostasen",
-					"note_content": "<p>In der Handschrift stand hier eigentlich φύσεων. ὑποστάσεων wurde nachträglich darüber gesetzt.</p>"
+					"note_content": "In der Handschrift stand hier eigentlich φύσεων. ὑποστάσεων wurde nachträglich darüber gesetzt."
 				},
 				"CV166-III-6-33-36-dann-wird": {
 					"document": "CV166",
@@ -122,7 +122,7 @@
 					"line_end": 36,
 					"text_start": "Dann",
 					"text_end": "wird",
-					"note_content": "<p>Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='4'> CV166,III,5,2–4</a>.</p>"
+					"note_content": "Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='4'> CV166,III,5,2–4</a>."
 				},
 				"CV166-III-6-34-34-fürchtest-recht": {
 					"document": "CV166",
@@ -132,7 +132,7 @@
 					"text_start": "fürchtest",
 					"text_end": "recht",
 					"text_stanotesData": "Recht",
-					"note_content": "<p>Der Text scheint hier eine Lücke aufzuweisen. Zum einen fehlt das bei Kyrillregelmäßig auf die Junktur καὶ μάλα folgende Adverb, zum anderen vermisst man einen Ausdruck,von dem der Infinitiv παρατρέπεσθαι abhängen könnte. <a href='' data-type='external_ref' source='agellio_1607'>Agellio (1607)</a>hat, um zumindest das zweiteDesiderat auszugleichen, ἀναγκαῖον vorgeschlagen. Schwartz schlägt, beide Mängel bedenkend,ὀρθῶς οὐ φάμεν vor. Die Übersetzung versucht, den unvollständigen Satz mit eigenen Ergänzungenin einen unmittelbaren Zusammenhang mit dem Nestoriuszitat, dessen Wortmaterial er enthält, zusetzen (vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='2'>CV166,III,5,2</a>).</p>"
+					"note_content": "Der Text scheint hier eine Lücke aufzuweisen. Zum einen fehlt das bei Kyrillregelmäßig auf die Junktur καὶ μάλα folgende Adverb, zum anderen vermisst man einen Ausdruck,von dem der Infinitiv παρατρέπεσθαι abhängen könnte. <a href='' data-type='external_ref' source='agellio_1607'>Agellio (1607)</a>hat, um zumindest das zweiteDesiderat auszugleichen, ἀναγκαῖον vorgeschlagen. Schwartz schlägt, beide Mängel bedenkend,ὀρθῶς οὐ φάμεν vor. Die Übersetzung versucht, den unvollständigen Satz mit eigenen Ergänzungenin einen unmittelbaren Zusammenhang mit dem Nestoriuszitat, dessen Wortmaterial er enthält, zusetzen (vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='2'>CV166,III,5,2</a>)."
 				},
 				"CV166-III-6-39-41-dass-gelten": {
 					"document": "CV166",
@@ -141,7 +141,7 @@
 					"line_end": 41,
 					"text_start": "dass",
 					"text_end": "gelten",
-					"note_content": "<p>Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libII-13' line_start='3' line_end='3'>CV166,II,13,3</a>u. <a href='' data-type='internal_ref' document='CV166' doc_unit='libII-14' line_start='6' line_end='7'>CV166,II,14,6-7</a>.</p>"
+					"note_content": "Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libII-13' line_start='3' line_end='3'>CV166,II,13,3</a>u. <a href='' data-type='internal_ref' document='CV166' doc_unit='libII-14' line_start='6' line_end='7'>CV166,II,14,6-7</a>."
 				},
 				"CV166-III-6-42-42-das-frömmigkeit": {
 					"document": "CV166",
@@ -150,7 +150,7 @@
 					"line_end": 42,
 					"text_start": "das",
 					"text_end": "Frömmigkeit",
-					"note_content": "<p>Vgl. <a href='' data-type='external_ref' source='1_tim'>1 Tim 3,16</a>.</p>"
+					"note_content": "Vgl. <a href='' data-type='external_ref' source='1_tim'>1 Tim 3,16</a>."
 				},
 				"CV166-III-latetest": {
 					"document": "CV166",
@@ -159,7 +159,7 @@
 					"line_end": 0,
 					"text_start": "",
 					"text_end": "",
-					"note_content": "<p>Hi there, this is just a test</p>"
+					"note_content": "Hi there, this is just a test"
 				},
 				"CV166-III-6-deleteme": {
 					"document": "CV166",
@@ -168,7 +168,7 @@
 					"line_end": 0,
 					"text_start": "",
 					"text_end": "",
-					"note_content": "<p>Hi there,jawef jkaöwfe jkewaölf jkewalöf jkeawölf jkewaölf jakweflö jewakföl awjfkewlaöf jkewalöf jakewlfö jewakföl wajkfeölewaf test</p>"
+					"note_content": "Hi there,jawef jkaöwfe jkewaölf jkewalöf jkeawölf jkewaölf jakweflö jewakföl awjfkewlaöf jkewalöf jakewlfö jewakföl wajkfeölewaf test"
 				}
 			},
 			"libIV-praef": {
@@ -179,7 +179,7 @@
 					"line_end": 0,
 					"text_start": "",
 					"text_end": "",
-					"note_content": "<p>Hi there,jawef jkaöwfe jkewaölf jkewalöf jkeawölf jkewaölf jakweflö jewakföl awjfkewlaöf jkewalöf jakewlfö jewakföl wajkfeölewaf test</p>"
+					"note_content": "Hi there,jawef jkaöwfe jkewaölf jkewalöf jkeawölf jkewaölf jakweflö jewakföl awjfkewlaöf jkewalöf jakewlfö jewakföl wajkfeölewaf test"
 				}
 			}
 		}

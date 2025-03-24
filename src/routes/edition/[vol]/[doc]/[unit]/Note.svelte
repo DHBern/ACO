@@ -27,7 +27,7 @@
 	<div class="note-header p-1">{@html createNoteReferenceString(noteMetadata.line_start, noteMetadata.line_end, noteMetadata.text_start, noteMetadata.text_end)}</div>
 	<div
 		class="h-full w-full bg-[var(--aco-teal-light)]/10 p-3 **:pt-4 **:[&_a]:text-[var(--aco-link)] in-[&.highlighted]:border-[var(--aco-teal-light)] in-[&.highlighted]:bg-[var(--aco-orange-light)]/40">
-		{@html noteMetadata.note_content}
+		<p>{@html noteMetadata.note_content}</p>
 	</div>
 </div>
 
