@@ -3,6 +3,6 @@
 </script>
 
 <!-- Content -->
-<div class="mt-[80px]">
+<div class="">
 	{@render children()}
 </div>

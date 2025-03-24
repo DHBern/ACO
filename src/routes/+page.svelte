@@ -1,5 +1,6 @@
-<div class="prose">
-	<h1>ACO</h1>
+<div class="py-24 max-w-[1500px] mx-auto">
+
+	<h1>Projekt ACO</h1>
 	<h2>Die Akten des Konzils von Ephesus 431</h2>
 	<p>
 		Das Konzil von Ephesus wurde 431, von Kaiser Theodosius II einberufen. Die Geschehnisse rund um
@@ -12,3 +13,16 @@
 		(2016–2026).
 	</p>
 </div>
+
+<style>
+	@reference "tailwindcss";
+	h1 {
+		@apply text-3xl font-bold text-[var(--aco-orange)] mb-2;
+	}
+	h2 {
+		@apply text-xl font-bold mt-8;
+	}
+	h3 {
+		@apply text-lg font-bold;
+	}
+</style>

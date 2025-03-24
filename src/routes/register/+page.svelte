@@ -68,18 +68,23 @@
 	</Accordion>
 {/snippet}
 
-<div class="m-auto grid w-full grid-cols-2 gap-5 p-5 pt-10">
-	    <div class="col-span-1 col-start-1">
-		<h1 class="text-3xl mb-4 text-[var(--aco-orange)] font-bold">Orte</h1>
-            <div class="overflow-y-scroll h-[70vh]">
-                {@render accordion(placeLabels, placesGrouped, accordionPlaces)}
-            </div>
+<div class="grid w-full grid-cols-2 gap-5 py-24 max-w-[1500px] mx-auto">
+	<h1 class="text-3xl font-bold text-[var(--aco-orange)]">Register</h1>
+	<div class="col-span-2 mb-4">
+		<p class="">Vgl. für detailliertere Angaben den Index bei Schwartz.</p>
+		<p class="">Ortsspeziﬁsche Adjektive sind unter Ortsnamen subsumiert</p>
 	</div>
-	    <div class="col-span-1 col-start-2">
-		<h1 class="text-3xl mb-4 text-[var(--aco-orange)] font-bold">Personen</h1>
-            <div class="overflow-y-scroll h-[70vh]">
-                {@render accordion(peopleLabels, peopleGrouped, accordionPeople)}
-            </div>
+	<div class="col-span-1 col-start-1">
+		<h2 class="mb-4 text-3xl font-bold">Orte</h2>
+		<div class="h-[70vh] overflow-y-scroll bg-[var(--aco-gray-2)] p-3">
+			{@render accordion(placeLabels, placesGrouped, accordionPlaces)}
+		</div>
+	</div>
+	<div class="col-span-1 col-start-2">
+		<h2 class="mb-4 text-3xl font-bold">Personen</h2>
+		<div class="h-[70vh] overflow-y-scroll bg-[var(--aco-gray-2)] p-3">
+			{@render accordion(peopleLabels, peopleGrouped, accordionPeople)}
+		</div>
 	</div>
 </div>
 

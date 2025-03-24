@@ -26,7 +26,7 @@
 	<nav class="flex flex-row justify-start gap-12">
 		<button
 			onclick={() => {
-				goto(base + '/about');
+				goto(base + '/ueber');
 			}}>Über das Projekt</button
 		>
 		<button
@@ -42,12 +42,12 @@
 		>
 		<button
 		onclick={() => {
-			goto(base + '/edition/search');
+			goto(base + '/suche');
 		}}>Suche</button
 		>
 		<button
 			onclick={() => {
-				goto(base + '/imprint');
+				goto(base + '/impressum');
 			}}>Impressum</button
 		>
 
@@ -69,6 +69,33 @@
 	{@render children()}
 </div>
 
-<footer class="flex h-50 flex-row justify-center bg-[var(--aco-teal)] align-middle text-slate-50">
-	<p class="text-slate-50">Footer with Logos</p>
-</footer>
+<footer class="bg-[var(--aco-teal-light)] align-middle text-slate-50 py-5">
+	<div class="p-5">
+		<h1 class="text-black dark:text-black text-lg font-bold">Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar</h1>
+		<p class="text-black dark:text-black font-bold text-md mt-5 ml-5"><strong>Empfohlene Zitierung: </strong> ACO..........</p>
+	</div>
+
+	<div class="w-full flex justify-around my-2">
+		<div>
+			<img
+			src="{base}/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif"
+			alt="Logo DFG"
+			class="max-h-[100px] max-w-[200px]"
+			/>
+		</div>
+		<div>
+			<img
+			src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
+			alt="Logo Universität Bonn"
+			class="max-h-[100px] max-w-[200px]"
+			/>
+		</div>
+		<div>
+			<img
+			src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
+			alt="Logo Universität Bern"
+			class="max-h-[100px] max-w-[200px]"
+			/>
+		</div>
+	</div>
+	</footer>
