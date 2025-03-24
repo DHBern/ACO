@@ -37,9 +37,9 @@ export function moveNote(id) {
 	}
 
 	// Scroll to note
-	elContainer.scrollIntoView({
-		// Important: offsetTop is measured relative to the next *positioned* parent!
-		top: elContainerText.offsetTop + elNoteRef.offsetTop - window.innerHeight * 0.3,
-		behavior: 'smooth'
-	});
+	// elContainer.scrollIntoView({
+	// 	// Important: offsetTop is measured relative to the next *positioned* parent!
+	// 	top: elContainerText.offsetTop + elNoteRef.offsetTop - window.innerHeight * 0.3,
+	// 	behavior: 'smooth'
+	// });
 }
