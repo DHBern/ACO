@@ -29,8 +29,8 @@
 
 	onMount(() => {
 		
-		// Extract note-ids from text and place note-boxes at initial positions
-		placeNotes(extractNoteIds(text));
+		// Place note-boxes at initial positions
+		// placeNotes(extractNoteIds(text));
 		
 		//! Move to +page.svelte?!
 		document.body.addEventListener('click', handleResetMarkSelection);

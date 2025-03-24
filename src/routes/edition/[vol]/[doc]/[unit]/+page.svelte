@@ -37,8 +37,7 @@
 	// Extract note-ids from text and place note-boxes at initial positions
 	$effect(() => {
 		groupedUnits.forEach((unit) => {
-			const ids = extractNoteIds(unit.text);
-			placeNotes(ids);
+			placeNotes(extractNoteIds(unit.text));
 		});
 	});
 
@@ -57,6 +56,7 @@
 	});
 
 	onMount(() => {
+
 		// Event Listeners
 		document.body.addEventListener('click', handleResetMultiMark);
 
@@ -66,74 +66,78 @@
 	});
 </script>
 
-<!-- Load Button -->
-{#if groupedUnits[0].prevSlug}
-	<LoadButton type="prev" {data} {groupedUnits} classes="row-span-1 row-start-1" />
-{/if}
+<div class="grid grid-rows-[1fr_auto_1fr]">
+	<!-- Load Button -->
+	{#if groupedUnits[0].prevSlug}
+		<LoadButton type="prev" {data} {groupedUnits} classes="row-span-1 row-start-1" />
+	{/if}
 
-<!-- Units -->
-<div class="grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[100px_50px_auto_1fr]">
-	<!-- Page Numbers -->
-	<div class="containerPageNums col-span-1 col-start-1">
-		{#each groupedUnits as unit (unit.slug)}
-			{@html generatePageNumbers(unit.text)}
-		{/each}
-	</div>
-
-	<!-- Line Numbers -->
-	<div class="containerLineNums col-span-1 col-start-2">
-		{#each groupedUnits as unit (unit.slug)}
-			{@html generateLineNumbers(unit.text)}
-		{/each}
-	</div>
-
-	<!-- Main Text -->
+	<!-- Units -->
 	<div
-		class={[
-			'containerText maintext relative col-span-1 col-start-3',
-			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-		]}
+		class="row-span-1 row-start-2 grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[100px_50px_auto_1fr]"
 	>
-		{#each groupedUnits as unit (unit.slug)}
-			<Unit
-				slug={unit.slug}
-				text={generateMainText(unit.text)}
-				unitLabelInline={unit.labelInline}
-				{selectedNote}
-				{multiMarkPopupStore}
-			></Unit>
-		{/each}
-	</div>
-
-	<!-- Notes -->
-	<div
-		class={[
-			'containerNotes relative col-span-3 col-start-1 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
-			copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-		]}
-	>
-		{#each groupedUnits as unit (unit.slug)}
-			<!-- //! Dont do this twice! -->
-			{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
-				<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
+		<!-- Page Numbers -->
+		<div class="containerPageNums col-span-1 col-start-1">
+			{#each groupedUnits as unit (unit.slug)}
+				{@html generatePageNumbers(unit.text)}
 			{/each}
-		{/each}
-	</div>
+		</div>
 
-	<!-- Popups for multiple notes over same place -->
-	{#if multiMarkPopupStore.slugs.length > 0}
-		<MultiMarkPopup
-			{multiMarkPopupStore}
-			{selectedNote}
-			notesData={data.notesData}
-			slug_doc={data.slug_doc}
-		/>
+		<!-- Line Numbers -->
+		<div class="containerLineNums col-span-1 col-start-2">
+			{#each groupedUnits as unit (unit.slug)}
+				{@html generateLineNumbers(unit.text)}
+			{/each}
+		</div>
+
+		<!-- Main Text -->
+		<div
+			class={[
+				'containerText maintext relative col-span-1 col-start-3',
+				copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+			]}
+		>
+			{#each groupedUnits as unit (unit.slug)}
+				<Unit
+					slug={unit.slug}
+					text={generateMainText(unit.text)}
+					unitLabelInline={unit.labelInline}
+					{selectedNote}
+					{multiMarkPopupStore}
+				></Unit>
+			{/each}
+		</div>
+
+		<!-- Notes -->
+		<div
+			class={[
+				'containerNotes relative col-span-3 col-start-1 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
+				copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+			]}
+		>
+			{#each groupedUnits as unit (unit.slug)}
+				<!-- //! Dont do this twice! -->
+				{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
+					<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
+				{/each}
+			{/each}
+		</div>
+
+		<!-- Popups for multiple notes over same place -->
+		{#if multiMarkPopupStore.slugs.length > 0}
+			<MultiMarkPopup
+				{multiMarkPopupStore}
+				{selectedNote}
+				notesData={data.notesData}
+				slug_doc={data.slug_doc}
+			/>
+		{/if}
+	</div>
+	<!-- Load Button -->
+	{#if groupedUnits[groupedUnits.length - 1].nextSlug}
+		<LoadButton type="next" {data} {groupedUnits} classes="row-span-1 row-start-3" />
 	{/if}
 </div>
-<!-- Load Button -->
-{#if groupedUnits[0].prevSlug}
-	<LoadButton type="next" {data} {groupedUnits} classes="row-span-1 row-start-3" />
-{/if}
 
 <style lang="postcss">
 	@reference "tailwindcss";
