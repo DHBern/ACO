@@ -75,7 +75,7 @@
 			"slug": "CV20",
 			"num": "Dokument 9",
 			"type": "CV",
-			"title": "Kyrills Brief an einen Anhänger des Nestorius",
+			"title": "___Kyrills Brief an einen Anhänger des Nestorius",
 			"unitSlugs": ["title", "text"],
 			"unitLabels": ["Titel", "Text"],
 			"unitLabelsInline": ["", ""],
@@ -224,7 +224,7 @@
 			"slug": "CV166",
 			"num": "Dok 25",
 			"type": "CV",
-			"title": "Kyrill, ‚Gegen Nestorius‘",
+			"title": "___Kyrill, ‚Gegen Nestorius‘",
 			"unitSlugs": [
 				"title",
 				"libI-praef",
@@ -384,7 +384,7 @@
 			"content": {
 				"head": "<p><span data-type='head_key'>Edition:</span> Collectio Vaticana 166, ACO I,1,6 S. 13,4–106,41; ältereEdd.: PG 76, Sp. 9–248; Pusey (1965 [=1868–1877]), Bd. 6 S. 54–239</p><p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5217</p><p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria</p><p><span data-type='head_key'>Datierung:</span> spätestens Mitte 430 Lat.</p><p><span data-type='head_key'>Übersetzungen:</span>–</p><p><span data-type='head_key'>Inhalt:</span> Kyrill unterzieht die Christologie seines GegnersNestorius einer groß angelegten Kritik. Zu diesem Zweck zitiert er zahlreiche ihm anstößigerscheinende Aussagen, die jener im Vorfeld getätigt hatte, und stellt diesen dann seineeigenen Ansichten gegenüber.</p><p><span data-type='head_key'>Literatur:</span> Pusey (1881), S. 1–184.</p>",
 				"title": "<section data-unit='title'><p data-type='acoTitle'><a data-page='223'></a><a data-line='1'></a><span data-title_line=1>Kyrills, des überaus heiligen Erzbischofs von Alexandria,</span><br /><a data-line='1'></a><span data-title_line=2>‚Gegen die Schmähungen des Nestorius‘</span><br /><a data-line='1'></a><span data-title_line=3>Fünfbändige Widerlegung oder die fünf Bücher des heiligen Kyrill</span></p><br /><br /></section>",
-				"libI-praef": "<section data-unit='libI-praef'><p><a data-lib='I'></a><br /></p><p><a data-line='1'></a>Foo bar bal<br /><a data-line='2'></a> Foooooo aweohjk j.</p></section>",
+				"libI-praef": "<section data-unit='libI-praef'><p><a data-line='1'></a>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a data-line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p></section>",
 				"libI-1": "<section data-unit='libI-1'><p><a data-line='1'></a>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a data-line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p></section>",
 				"libI-2": "<section data-unit='libI-2'><p><a data-line='1'></a>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a data-line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p></section>",
 				"libI-3": "<section data-unit='libI-3'><p><a data-line='1'></a>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><a data-line='2'></a> totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p></section>",
