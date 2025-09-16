@@ -4,8 +4,10 @@
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 	import Abbreviations from './Abbreviations.svelte';
 
-	let accordionState = $state(['Band 1']);
-	
+	let { accordionStateInit = '' } = $props();
+	let accordionState = $state([accordionStateInit]);
+
+	// The first volume is currently hardcoded
 	let volumes = [
 		{ label: 'Band 2', number: 2 },
 		{ label: 'Band 3', number: 3 }
@@ -17,14 +19,12 @@
 	docs.CPal = textData.filter(({ type: t }) => t === 'CPal');
 	docs.CVer = textData.filter(({ type: t }) => t === 'CVer');
 	docs.CU = textData.filter(({ type: t }) => t === 'CU');
-
 </script>
 
 <h1>Dokumente</h1>
-
 <div class="flex-row flex-wrap bg-[var(--aco-gray-2)] dark:bg-[var(--aco-gray-3)]">
 	<Accordion
-		{accordionState}
+		value={accordionState}
 		onValueChange={(e) => (accordionState = e.value)}
 		collapsible
 		classes="containerDocHead shadow-md mb-4"
