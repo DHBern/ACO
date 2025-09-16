@@ -1,7 +1,7 @@
 {
 	"textData": [
 		{
-			"slug": "CPal20",
+			"slug": "doc1",
 			"schwartzSlug": "CPal20",
 			"schwartzSlugNum": "20",
 			"acoNumX": "1",
@@ -12,7 +12,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV18",
+			"slug": "doc2",
 			"schwartzSlug": "CV18",
 			"schwartzSlugNum": "18",
 			"acoNumX": "2",
@@ -24,7 +24,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV19",
+			"slug": "doc3",
 			"schwartzSlug": "CV19",
 			"schwartzSlugNum": "19",
 			"acoNumX": "3",
@@ -36,7 +36,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CPal22",
+			"slug": "doc4",
 			"schwartzSlug": "CPal22",
 			"schwartzSlugNum": "22",
 			"acoNumX": "4",
@@ -48,7 +48,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV1",
+			"slug": "doc5",
 			"schwartzSlug": "CV1",
 			"schwartzSlugNum": "1",
 			"acoNumX": "5",
@@ -60,7 +60,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CPal21",
+			"slug": "doc6",
 			"schwartzSlug": "CPal21",
 			"schwartzSlugNum": "21",
 			"acoNumX": "6",
@@ -72,7 +72,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CVer3",
+			"slug": "doc7",
 			"schwartzSlug": "CVer3",
 			"schwartzSlugNum": "3",
 			"acoNumX": "7",
@@ -84,7 +84,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV22",
+			"slug": "doc8",
 			"schwartzSlug": "CV22",
 			"schwartzSlugNum": "22",
 			"acoNumX": "8",
@@ -96,7 +96,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV20",
+			"slug": "doc9",
 			"schwartzSlug": "CV20",
 			"schwartzSlugNum": "20",
 			"acoNumX": "9",
@@ -113,7 +113,7 @@
 			}
 		},
 		{
-			"slug": "CV21",
+			"slug": "doc10",
 			"schwartzSlug": "CV21",
 			"schwartzSlugNum": "21",
 			"acoNumX": "10",
@@ -125,7 +125,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV16",
+			"slug": "doc11",
 			"schwartzSlug": "CV16",
 			"schwartzSlugNum": "16",
 			"acoNumX": "11",
@@ -137,7 +137,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV17",
+			"slug": "doc12",
 			"schwartzSlug": "CV17",
 			"schwartzSlugNum": "17",
 			"acoNumX": "12",
@@ -149,7 +149,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CPal31",
+			"slug": "doc13",
 			"schwartzSlug": "CPal31",
 			"schwartzSlugNum": "31",
 			"acoNumX": "13",
@@ -161,7 +161,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CPal32",
+			"slug": "doc14",
 			"schwartzSlug": "CPal32",
 			"schwartzSlugNum": "32",
 			"acoNumX": "14",
@@ -173,7 +173,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CPal33",
+			"slug": "doc15",
 			"schwartzSlug": "CPal33",
 			"schwartzSlugNum": "33",
 			"acoNumX": "15",
@@ -185,7 +185,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CPal34",
+			"slug": "doc16",
 			"schwartzSlug": "CPal34",
 			"schwartzSlugNum": "34",
 			"acoNumX": "16",
@@ -197,7 +197,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CPal36",
+			"slug": "doc17",
 			"schwartzSlug": "CPal36",
 			"schwartzSlugNum": "36",
 			"acoNumX": "17",
@@ -209,7 +209,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV2",
+			"slug": "doc18",
 			"schwartzSlug": "CV2",
 			"schwartzSlugNum": "2",
 			"acoNumX": "18",
@@ -221,7 +221,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV3",
+			"slug": "doc19",
 			"schwartzSlug": "CV3",
 			"schwartzSlugNum": "3",
 			"acoNumX": "19",
@@ -233,7 +233,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV143",
+			"slug": "doc20",
 			"schwartzSlug": "CV143",
 			"schwartzSlugNum": "143",
 			"acoNumX": "20",
@@ -245,7 +245,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CPal35",
+			"slug": "doc21",
 			"schwartzSlug": "CPal35",
 			"schwartzSlugNum": "35",
 			"acoNumX": "21",
@@ -257,7 +257,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CVer4",
+			"slug": "doc22",
 			"schwartzSlug": "CVer4",
 			"schwartzSlugNum": "4",
 			"acoNumX": "22",
@@ -269,7 +269,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV4",
+			"slug": "doc23",
 			"schwartzSlug": "CV4",
 			"schwartzSlugNum": "4",
 			"acoNumX": "23",
@@ -281,7 +281,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV5",
+			"slug": "doc24",
 			"schwartzSlug": "CV5",
 			"schwartzSlugNum": "5",
 			"acoNumX": "24",
@@ -293,7 +293,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV166",
+			"slug": "doc25",
 			"schwartzSlug": "CV166",
 			"schwartzSlugNum": "166",
 			"acoNumX": "25",
@@ -508,7 +508,7 @@
 			}
 		},
 		{
-			"slug": "CPal29",
+			"slug": "doc26",
 			"schwartzSlug": "CPal29",
 			"schwartzSlugNum": "29",
 			"acoNumX": "26",
@@ -520,7 +520,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV144",
+			"slug": "doc27",
 			"schwartzSlug": "CV144",
 			"schwartzSlugNum": "144",
 			"acoNumX": "27",
@@ -532,7 +532,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CU4",
+			"slug": "doc28",
 			"schwartzSlug": "CU4",
 			"schwartzSlugNum": "4",
 			"acoNumX": "28",
@@ -544,7 +544,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CVer1",
+			"slug": "doc29",
 			"schwartzSlug": "CVer1",
 			"schwartzSlugNum": "1",
 			"acoNumX": "29",
@@ -556,7 +556,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CVer2",
+			"slug": "doc30",
 			"schwartzSlug": "CVer2",
 			"schwartzSlugNum": "2",
 			"acoNumX": "30",
@@ -568,7 +568,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CVer5",
+			"slug": "doc31",
 			"schwartzSlug": "CVer5",
 			"schwartzSlugNum": "5",
 			"acoNumX": "31",
@@ -580,7 +580,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CVer6",
+			"slug": "doc32",
 			"schwartzSlug": "CVer6",
 			"schwartzSlugNum": "6",
 			"acoNumX": "32",
@@ -592,7 +592,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV13",
+			"slug": "doc33",
 			"schwartzSlug": "CV13",
 			"schwartzSlugNum": "13",
 			"acoNumX": "33",
@@ -604,7 +604,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV15",
+			"slug": "doc34",
 			"schwartzSlug": "CV15",
 			"schwartzSlugNum": "15",
 			"acoNumX": "34",
@@ -616,7 +616,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV14",
+			"slug": "doc35",
 			"schwartzSlug": "CV14",
 			"schwartzSlugNum": "14",
 			"acoNumX": "35",
@@ -628,7 +628,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV6",
+			"slug": "doc36",
 			"schwartzSlug": "CV6",
 			"schwartzSlugNum": "6",
 			"acoNumX": "36",
@@ -640,7 +640,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV24",
+			"slug": "doc37",
 			"schwartzSlug": "CV24",
 			"schwartzSlugNum": "24",
 			"acoNumX": "37",
@@ -652,7 +652,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV145",
+			"slug": "doc38",
 			"schwartzSlug": "CV145",
 			"schwartzSlugNum": "145",
 			"acoNumX": "38",
@@ -664,7 +664,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV7",
+			"slug": "doc39",
 			"schwartzSlug": "CV7",
 			"schwartzSlugNum": "7",
 			"acoNumX": "39",
@@ -676,7 +676,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV150",
+			"slug": "doc40",
 			"schwartzSlug": "CV150",
 			"schwartzSlugNum": "150",
 			"acoNumX": "40",
@@ -688,7 +688,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV149",
+			"slug": "doc41",
 			"schwartzSlug": "CV149",
 			"schwartzSlugNum": "149",
 			"acoNumX": "41",
@@ -700,7 +700,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV25",
+			"slug": "doc42",
 			"schwartzSlug": "CV25",
 			"schwartzSlugNum": "25",
 			"acoNumX": "42",
@@ -712,7 +712,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV8",
+			"slug": "doc43",
 			"schwartzSlug": "CV8",
 			"schwartzSlugNum": "8",
 			"acoNumX": "43",
@@ -724,7 +724,7 @@
 			"content": {}
 		},
 		{
-			"slug": "CV23",
+			"slug": "doc44",
 			"schwartzSlug": "CV23",
 			"schwartzSlugNum": "23",
 			"acoNumX": "44",
