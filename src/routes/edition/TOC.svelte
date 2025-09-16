@@ -22,8 +22,6 @@
 </script>
 
 <h1>Dokumente</h1>
-<h2>{accordionStateInit}</h2>
-<h2>{accordionState}</h2>
 <div class="flex-row flex-wrap bg-[var(--aco-gray-2)] dark:bg-[var(--aco-gray-3)]">
 	<Accordion
 		value={accordionState}
