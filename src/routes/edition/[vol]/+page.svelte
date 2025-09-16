@@ -4,5 +4,5 @@
 </script>
 
 <div class="mx-auto max-w-[1500px] py-24">
-	<TOC accordionStateInit={`Band ${data.vol}`} />
+	<TOC accordionStateInit={data.vol} />
 </div>

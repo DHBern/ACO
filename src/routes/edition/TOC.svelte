@@ -9,8 +9,8 @@
 
 	// The first volume is currently hardcoded
 	let volumes = [
-		{ label: 'Band 2', number: 2 },
-		{ label: 'Band 3', number: 3 }
+		{ slug: 'vol2', label: 'Band 2', number: 2 },
+		{ slug: 'vol3', label: 'Band 3', number: 3 }
 	];
 
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
@@ -22,6 +22,8 @@
 </script>
 
 <h1>Dokumente</h1>
+<h2>{accordionStateInit}</h2>
+<h2>{accordionState}</h2>
 <div class="flex-row flex-wrap bg-[var(--aco-gray-2)] dark:bg-[var(--aco-gray-3)]">
 	<Accordion
 		value={accordionState}
@@ -29,14 +31,14 @@
 		collapsible
 		classes="containerDocHead shadow-md mb-4"
 	>
-		<Accordion.Item value="Band 1" classes="">
+		<Accordion.Item value="vol1" classes="">
 			{#snippet lead()}{/snippet}
 			{#snippet control()}<span class="text-xl font-bold text-black dark:text-black">Band 1</span
 				>{/snippet}
 			{#snippet panel()}
 				<div class="pb-5 pl-13">
 					<a
-						href="{base}/edition/1/vorwort"
+						href="{base}/edition/vol1/vorwort"
 						class="text-lg text-black hover:text-[var(--aco-orange)] dark:text-black"
 						>Vorwort zum ersten Band</a
 					>
@@ -49,7 +51,7 @@
 							<ul>
 								{#each textData.slice().sort((a, b) => a.acoNum - b.acoNum) as doc (doc.slug)}
 									<li class="mb-1 hover:**:text-[var(--aco-orange)]">
-										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
+										<a href="{base}/edition/vol1/{doc.slug}/{doc.unitSlugs[0]}">
 											<span class="font-bold text-black dark:text-black">{doc.acoNumLabel}:</span>
 											<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
 												>{doc.title}</span
@@ -74,7 +76,7 @@
 										.slice()
 										.sort((a, b) => a.schwartzSlugNum - b.schwartzSlugNum) as doc (doc.slug)}
 										<li class="mb-1 hover:**:text-[var(--aco-orange)]">
-											<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
+											<a href="{base}/edition/vol1/{doc.slug}/{doc.unitSlugs[0]}">
 												<span class="font-bold text-black dark:text-black">{doc.slug}:</span>
 												<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
 													>{doc.title}</span
@@ -94,7 +96,7 @@
 		</Accordion.Item>
 
 		{#each volumes as volume}
-			<Accordion.Item value={volume.label}>
+			<Accordion.Item value={volume.slug}>
 				{#snippet lead()}{/snippet}
 				{#snippet control()}<span class="text-xl font-bold text-black dark:text-black"
 						>{volume.label}</span
@@ -102,7 +104,7 @@
 				{#snippet panel()}
 					<div class="pb-10 pl-8">
 						<p class="font-bold text-black hover:text-[var(--aco-teal)] dark:text-black">
-							<a href="{base}/edition/1/vorwort"
+							<a href="{base}/edition/vol1/vorwort"
 								>Vorwort zum {volume.number == 2 ? 'zweiten Band' : 'dritten Band'}</a
 							>
 						</p>
