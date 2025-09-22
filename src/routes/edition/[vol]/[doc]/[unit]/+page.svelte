@@ -73,12 +73,14 @@
 
 	// Scrolling to lines and units
 	$effect(() => {
+		console.log('SCROLL TO LINE');
 		const elLine = document.querySelector(`[data-line="${data.line}"]`);
 		if (elLine) {
 			elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 	});
 	$effect(() => {
+		console.log('SCROLL TO UNIT');
 		const elLine = document.querySelector(`[data-unit="${data.slug_unit}"]`);
 		if (elLine) {
 			elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -98,11 +100,6 @@
 	// rectObserver main text
 	let mainTextContainer = $state<HTMLElement>();
 	const rectMainText = new ElementRect(() => mainTextContainer);
-
-	// Helper function for delay
-	function delay(ms: number) {
-		return new Promise((resolve) => setTimeout(resolve, ms));
-	}
 
 	let loading = $state(false);
 
@@ -135,33 +132,26 @@
 
 	// Load next node
 	let conditionLoadNext = $derived(
-		!loading &&
-			myUnits &&
-			inViewportNext &&
-			inViewportNext.current &&
-			myUnits[myUnits.length - 1].nextSlug
+		!loading && inViewportNext?.current && myUnits[myUnits?.length - 1]?.nextSlug
 	);
-	$effect(() => {
-		untrack(() => myUnits);
-		untrack(() => conditionLoadNext);
-		untrack(() => conditionLoadPrev);
-
-		console.log('TRY', !loading, inViewportNext.current);
-		if (!loading) {
+	$inspect('condition', conditionLoadNext);
+	$inspect('inviewport', inViewportNext.current);
+	$effect.pre(() => {
+		if (conditionLoadNext) {
+			console.log('LOAD NEXT', loading, inViewportNext.current);
 			const slug0 = myUnits[0].prevSlug;
 			const slug = myUnits[myUnits.length - 1].nextSlug;
-			if (conditionLoadNext) {
-				(async () => {
-					loading = true;
-					await delay(500);
-					console.log('NEXT:', slug0, slug, scrollC.y, rectMainText.height);
-					setTimeout(async () => {
-						myUnits = await loadMore(myUnits, 'next', rectMainText, scrollC);
-					}, 500);
+
+			loading = true;
+			console.log('NEXT:', slug0, slug, scrollC.y, rectMainText.height);
+			loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
+				myUnits = value;
+				console.log('DONE LOADING');
+				tick().then(() => {
+					console.log('SETTING LOADING FALSE');
 					loading = false;
-					console.log('DONE LOADING');
-				})();
-			}
+				});
+			});
 		}
 	});
 
@@ -219,6 +209,7 @@
 				]}
 			>
 				{#each myUnits as unit (unit.slug)}
+					{@debug unit}
 					<Unit
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
