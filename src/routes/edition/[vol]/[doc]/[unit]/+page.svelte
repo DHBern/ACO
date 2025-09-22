@@ -7,7 +7,7 @@
 	import Unit from './Unit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 
-	import { IsInViewport, ElementRect, ScrollState } from 'runed';
+	import { IsInViewport, ElementRect, ScrollState, useIntersectionObserver } from 'runed';
 
 	import {
 		extractNoteIds,
@@ -73,14 +73,12 @@
 
 	// Scrolling to lines and units
 	$effect(() => {
-		console.log('SCROLL TO LINE');
 		const elLine = document.querySelector(`[data-line="${data.line}"]`);
 		if (elLine) {
 			elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
 	});
 	$effect(() => {
-		console.log('SCROLL TO UNIT');
 		const elLine = document.querySelector(`[data-unit="${data.slug_unit}"]`);
 		if (elLine) {
 			elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -91,7 +89,19 @@
 	let targetNodePrev = $state<HTMLElement>()!;
 	let targetNodeNext = $state<HTMLElement>()!;
 	let inViewportPrev = new IsInViewport(() => targetNodePrev);
-	let inViewportNext = new IsInViewport(() => targetNodeNext);
+	useIntersectionObserver(
+		() => targetNodeNext,
+		(entries) => {
+			const entry = entries[0];
+			if (!entry) return;
+
+			//node is intersecting!
+
+			loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
+				myUnits = value;
+			});
+		}
+	);
 
 	// scrollObservers container
 	let container = $state<HTMLElement>();
@@ -129,31 +139,6 @@
 	// 		}
 	// 	})();
 	// });
-
-	// Load next node
-	let conditionLoadNext = $derived(
-		!loading && inViewportNext?.current && myUnits[myUnits?.length - 1]?.nextSlug
-	);
-	$inspect('condition', conditionLoadNext);
-	$inspect('inviewport', inViewportNext.current);
-	$effect.pre(() => {
-		if (conditionLoadNext) {
-			console.log('LOAD NEXT', loading, inViewportNext.current);
-			const slug0 = myUnits[0].prevSlug;
-			const slug = myUnits[myUnits.length - 1].nextSlug;
-
-			loading = true;
-			console.log('NEXT:', slug0, slug, scrollC.y, rectMainText.height);
-			loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
-				myUnits = value;
-				console.log('DONE LOADING');
-				tick().then(() => {
-					console.log('SETTING LOADING FALSE');
-					loading = false;
-				});
-			});
-		}
-	});
 
 	onMount(() => {
 		// Event Listeners
