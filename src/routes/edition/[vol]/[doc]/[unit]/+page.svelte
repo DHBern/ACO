@@ -87,9 +87,7 @@
 		}
 	});
 
-	// inViewportObservers for LoadButtons
-	let targetNodePrev = $state<HTMLElement>()!;
-	let targetNodeNext = $state<HTMLElement>()!;
+	const handlePrevUnit = () => {};
 
 	const handleNextUnit = () => {
 		console.log(
@@ -110,35 +108,28 @@
 		});
 	};
 
-	let loading = $state(false);
-	// useIntersectionObserver(
-	// 	() => targetNodePrev,
-	// 	(entries) => {
-	// 		const entry = entries[0];
-	// 		if (!entry) return;
+	// inViewportObservers for LoadButtons
+	let targetNodePrev = $state<HTMLElement>()!;
+	let targetNodeNext = $state<HTMLElement>()!;
+	let inViewportPrev = new IsInViewport(() => targetNodePrev);
+	let inViewportNext = new IsInViewport(() => targetNodeNext);
 
-	// 		//node is intersecting!
-	// 		loadMore(myUnits, 'prev', rectMainText, scrollC).then((value) => {
-	// 			myUnits = value;
-	// 		});
-	// 	}
-	// );
-
-	// useIntersectionObserver(
-	// 	() => targetNodeNext,
-	// 	(entries) => {
-	// 		const entry = entries[0];
-	// 		if (!entry) return;
-
-	// 		//node is intersecting!
-	// 		console.log('TRY', loading);
-	// 		if (!loading) {
-	// 			console.log('UP FOR NEXT');
-	// 			handleNextUnit();
-	// 			loading = false;
-	// 		}
-	// 	}
-	// );
+	$effect.pre(() => {
+		inViewportNext.current; // track changes for effect
+		tick().then(() => {
+			if (inViewportNext.current) {
+				handleNextUnit();
+			}
+		});
+	});
+	$effect.pre(() => {
+		inViewportPrev.current;
+		tick().then(() => {
+			if (inViewportPrev.current) {
+				handlePrevUnit();
+			}
+		});
+	});
 
 	$inspect(myUnits);
 
