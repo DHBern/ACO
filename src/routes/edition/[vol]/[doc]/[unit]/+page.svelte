@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	import { onMount, tick, untrack } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
@@ -18,7 +20,7 @@
 
 	let { data } = $props();
 
-	let myUnits = $derived(data.myUnits);
+	let myUnits = $state(data.myUnits);
 
 	let selectedNote = $state({ slug: '' });
 	let multiMarkPopupStore = $state({ slugs: [], target: undefined, slugUnitTarget: undefined });
@@ -88,20 +90,57 @@
 	// inViewportObservers for LoadButtons
 	let targetNodePrev = $state<HTMLElement>()!;
 	let targetNodeNext = $state<HTMLElement>()!;
-	let inViewportPrev = new IsInViewport(() => targetNodePrev);
-	useIntersectionObserver(
-		() => targetNodeNext,
-		(entries) => {
-			const entry = entries[0];
-			if (!entry) return;
 
-			//node is intersecting!
+	const handleNextUnit = () => {
+		console.log(
+			'NAV TO',
+			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[myUnits.length - 1].nextSlug}`
+		);
+		goto(
+			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[myUnits.length - 1].nextSlug}`,
+			{
+				noScroll: true,
+				keepFocus: true,
+				replaceState: true
+			}
+		);
+		console.log('LOAD MORE', data.slug_unit);
+		loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
+			myUnits = value;
+		});
+	};
 
-			loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
-				myUnits = value;
-			});
-		}
-	);
+	let loading = $state(false);
+	// useIntersectionObserver(
+	// 	() => targetNodePrev,
+	// 	(entries) => {
+	// 		const entry = entries[0];
+	// 		if (!entry) return;
+
+	// 		//node is intersecting!
+	// 		loadMore(myUnits, 'prev', rectMainText, scrollC).then((value) => {
+	// 			myUnits = value;
+	// 		});
+	// 	}
+	// );
+
+	// useIntersectionObserver(
+	// 	() => targetNodeNext,
+	// 	(entries) => {
+	// 		const entry = entries[0];
+	// 		if (!entry) return;
+
+	// 		//node is intersecting!
+	// 		console.log('TRY', loading);
+	// 		if (!loading) {
+	// 			console.log('UP FOR NEXT');
+	// 			handleNextUnit();
+	// 			loading = false;
+	// 		}
+	// 	}
+	// );
+
+	$inspect(myUnits);
 
 	// scrollObservers container
 	let container = $state<HTMLElement>();
@@ -110,35 +149,6 @@
 	// rectObserver main text
 	let mainTextContainer = $state<HTMLElement>();
 	const rectMainText = new ElementRect(() => mainTextContainer);
-
-	let loading = $state(false);
-
-	// Load previous node
-	let conditionLoadPrev = $derived(
-		!loading && myUnits && inViewportPrev && inViewportPrev.current && myUnits[0].prevSlug
-	);
-
-	// $effect(() => {
-	// 	untrack(() => myUnits);
-	// 	untrack(() => conditionLoadNext);
-	// 	untrack(() => conditionLoadPrev);
-
-	// 	(async () => {
-	// 		if (conditionLoadPrev) {
-	// 			loading = true;
-	// 			await delay(200);
-	// 			console.log(
-	// 				'P:',
-	// 				myUnits[0].prevSlug,
-	// 				scrollC.y,
-	// 				scrollC.progress.y,
-	// 				rectMainText.height
-	// 			);
-	// 			myUnits = await loadMore(myUnits, 'prev', rectMainText, scrollC);
-	// 			loading = false;
-	// 		}
-	// 	})();
-	// });
 
 	onMount(() => {
 		// Event Listeners
@@ -194,7 +204,7 @@
 				]}
 			>
 				{#each myUnits as unit (unit.slug)}
-					{@debug unit}
+					<!-- {@debug unit} -->
 					<Unit
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
@@ -232,13 +242,14 @@
 		</div>
 
 		<!-- Load Button -->
+		<!-- loadfunction={(units) => loadMore(units, 'next', rectMainText, scrollC)} -->
 		<LoadButton
 			isDisabled={myUnits[myUnits.length - 1].nextSlug ? false : true}
 			bind:node={targetNodeNext}
 			type="next"
 			{data}
 			{myUnits}
-			loadfunction={(units) => loadMore(units, 'next', rectMainText, scrollC)}
+			loadfunction={handleNextUnit}
 			classes="row-span-1 row-start-3"
 		/>
 	</div>

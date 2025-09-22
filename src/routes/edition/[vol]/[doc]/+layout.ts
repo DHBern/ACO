@@ -20,6 +20,7 @@ export async function load({ fetch, params, url }) {
 	}
 
 	return {
+		slug_vol,
 		slug_doc,
 		line,
 		docMetadata,

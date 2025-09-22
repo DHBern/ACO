@@ -38,6 +38,8 @@ export async function load({ fetch, params }) {
 		slug_unit,
 		slug_doc,
 		myUnits,
-		notesData
+		notesData,
+		unitText, 
+		unitNotes
 	};
 }
