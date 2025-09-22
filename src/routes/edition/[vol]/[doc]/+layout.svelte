@@ -7,7 +7,6 @@
 	import Abbreviations from '../../Abbreviations.svelte';
 
 	let { data, children } = $props();
-	
 </script>
 
 <div class="mx-auto max-w-[1800px] py-24">
@@ -24,7 +23,6 @@
 
 		<!-- Abbreviations -->
 		<Abbreviations />
-
 
 		<!-- Settings -->
 		<div class="my-5 flex justify-center gap-5 align-middle">
@@ -51,9 +49,5 @@
 			</Switch>
 		</div>
 	</div>
-	<div class="h-screen w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24">
-		<div class="containerDocContent grid grid-rows-[40px_auto_40px] gap-5">
-			{@render children()}
-		</div>
-	</div>
+	{@render children()}
 </div>
