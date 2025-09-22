@@ -1,0 +1,816 @@
+{
+	"metaData": [
+		{
+			"slug": "CPal20",
+			"schwartzSlug": "CPal20",
+			"schwartzSlugNum": "20",
+			"acoNumX": "1",
+			"acoNumLabel": "Dok. 1",
+			"type": "CPal",
+			"title": "Nestorius’ erste Predigt gegen den θεοτόκος-Titel (sermo 9)",
+			"unitSlugs": ["test"],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV18",
+			"schwartzSlug": "CV18",
+			"schwartzSlugNum": "18",
+			"acoNumX": "2",
+			"acoNumLabel": "Dok. 2",
+			"type": "CV",
+			"title": "Contestatio gegen die Kleriker von Konstantinopel",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV19",
+			"schwartzSlug": "CV19",
+			"schwartzSlugNum": "19",
+			"acoNumX": "3",
+			"acoNumLabel": "Dok. 3",
+			"type": "CV",
+			"title": "Homilie des Proklos von Kyzikos",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CPal22",
+			"schwartzSlug": "CPal22",
+			"schwartzSlugNum": "22",
+			"acoNumX": "4",
+			"acoNumLabel": "Dok. 4",
+			"type": "CPal",
+			"title": "Nestorius’ Antwort auf die Homilie des Proklos von Kyzikos (sermo 27)",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV1",
+			"schwartzSlug": "CV1",
+			"schwartzSlugNum": "1",
+			"acoNumX": "5",
+			"acoNumLabel": "Dok. 5",
+			"type": "CV",
+			"title": "Kyrills Brief an die ägyptischen Mönche",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CPal21",
+			"schwartzSlug": "CPal21",
+			"schwartzSlugNum": "21",
+			"acoNumX": "6",
+			"acoNumLabel": "Dok. 6",
+			"type": "CPal",
+			"title": "Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10)",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CVer3",
+			"schwartzSlug": "CVer3",
+			"schwartzSlugNum": "3",
+			"acoNumX": "7",
+			"acoNumLabel": "Dok. 7",
+			"type": "CVer",
+			"title": "Nestorius’ erster Brief an Coelestin",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV22",
+			"schwartzSlug": "CV22",
+			"schwartzSlugNum": "22",
+			"acoNumX": "8",
+			"acoNumLabel": "Dok. 8",
+			"type": "CV",
+			"title": "Kyrills Brief an die Apokrisiare in Konstantinopel",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV20",
+			"schwartzSlug": "CV20",
+			"schwartzSlugNum": "20",
+			"acoNumX": "9",
+			"acoNumLabel": "Dok. 9",
+			"type": "CV",
+			"title": "Kyrills Brief an einen Anhänger des Nestorius",
+			"unitSlugs": ["text"],
+			"unitLabels": ["Text"],
+			"unitLabelsInline": [""],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV21",
+			"schwartzSlug": "CV21",
+			"schwartzSlugNum": "21",
+			"acoNumX": "10",
+			"acoNumLabel": "Dok. 10",
+			"type": "CV",
+			"title": "Kyrills Brief an seine Kritiker",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV16",
+			"schwartzSlug": "CV16",
+			"schwartzSlugNum": "16",
+			"acoNumX": "11",
+			"acoNumLabel": "Dok. 11",
+			"type": "CV",
+			"title": "Kyrills Brief an Akakios von Beroia (Ep. 14)",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV17",
+			"schwartzSlug": "CV17",
+			"schwartzSlugNum": "17",
+			"acoNumX": "12",
+			"acoNumLabel": "Dok. 12",
+			"type": "CV",
+			"title": "Brief des Akakios von Beroia an Kyrill",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CPal31",
+			"schwartzSlug": "CPal31",
+			"schwartzSlugNum": "31",
+			"acoNumX": "13",
+			"acoNumLabel": "Dok. 13",
+			"type": "CPal",
+			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 20 [Auszüge])",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CPal32",
+			"schwartzSlug": "CPal32",
+			"schwartzSlugNum": "32",
+			"acoNumX": "14",
+			"acoNumLabel": "Dok. 14",
+			"type": "CPal",
+			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 28 [Auszüge])",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CPal33",
+			"schwartzSlug": "CPal33",
+			"schwartzSlugNum": "33",
+			"acoNumX": "15",
+			"acoNumLabel": "Dok. 15",
+			"type": "CPal",
+			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 29 [Auszüge])",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CPal34",
+			"schwartzSlug": "CPal34",
+			"schwartzSlugNum": "34",
+			"acoNumX": "16",
+			"acoNumLabel": "Dok. 16",
+			"type": "CPal",
+			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 30 [Auszüge])",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CPal36",
+			"schwartzSlug": "CPal36",
+			"schwartzSlugNum": "36",
+			"acoNumX": "17",
+			"acoNumLabel": "Dok. 17",
+			"type": "CPal",
+			"title": "Marius Mercators Commonitorium bezüglich Caelestius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV2",
+			"schwartzSlug": "CV2",
+			"schwartzSlugNum": "2",
+			"acoNumX": "18",
+			"acoNumLabel": "Dok. 18",
+			"type": "CV",
+			"title": "Kyrills erster Brief an Nestorius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV3",
+			"schwartzSlug": "CV3",
+			"schwartzSlugNum": "3",
+			"acoNumX": "19",
+			"acoNumLabel": "Dok. 19",
+			"type": "CV",
+			"title": "Nestorius’ erster Brief an Kyrill",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV143",
+			"schwartzSlug": "CV143",
+			"schwartzSlugNum": "143",
+			"acoNumX": "20",
+			"acoNumLabel": "Dok. 20",
+			"type": "CV",
+			"title": "Bittschrift des Diakon Basilius und weiterer Mönche",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CPal35",
+			"schwartzSlug": "CPal35",
+			"schwartzSlugNum": "35",
+			"acoNumX": "21",
+			"acoNumLabel": "Dok. 21",
+			"type": "CPal",
+			"title": "Nestorius’ Brief an Caelestius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CVer4",
+			"schwartzSlug": "CVer4",
+			"schwartzSlugNum": "4",
+			"acoNumX": "22",
+			"acoNumLabel": "Dok. 22",
+			"type": "CVer",
+			"title": "Nestorius’ zweiter Brief an Coelestin",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV4",
+			"schwartzSlug": "CV4",
+			"schwartzSlugNum": "4",
+			"acoNumX": "23",
+			"acoNumLabel": "Dok. 23",
+			"type": "CV",
+			"title": "Kyrills zweiter Brief an Nestorius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV5",
+			"schwartzSlug": "CV5",
+			"schwartzSlugNum": "5",
+			"acoNumX": "24",
+			"acoNumLabel": "Dok. 24",
+			"type": "CV",
+			"title": "Nestorius’ zweiter Brief an Kyrill",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV166",
+			"schwartzSlug": "CV166",
+			"schwartzSlugNum": "166",
+			"acoNumX": "25",
+			"acoNumLabel": "Dok. 25",
+			"type": "CV",
+			"title": "Kyrill, ‚Gegen Nestorius‘",
+			"unitSlugs": [
+				"libI-praef",
+				"libI-1",
+				"libI-2",
+				"libI-3",
+				"libI-4",
+				"libI-5",
+				"libI-6",
+				"libI-7",
+				"libI-8",
+				"libI-9",
+				"libI-10",
+				"libII-praef",
+				"libII-1",
+				"libII-2",
+				"libII-3",
+				"libII-4",
+				"libII-5",
+				"libII-6",
+				"libII-7",
+				"libII-8",
+				"libII-9",
+				"libII-10",
+				"libII-11",
+				"libII-12",
+				"libII-13",
+				"libII-14",
+				"libIII-praef",
+				"libIII-1",
+				"libIII-2",
+				"libIII-3",
+				"libIII-4",
+				"libIII-5",
+				"libIII-6",
+				"libIV-praef",
+				"libIV-1",
+				"libIV-2",
+				"libIV-3",
+				"libIV-4",
+				"libIV-5",
+				"libIV-6",
+				"libIV-7",
+				"libV-praef",
+				"libV-1",
+				"libV-2",
+				"libV-3",
+				"libV-4",
+				"libV-5",
+				"libV-6",
+				"libV-7"
+			],
+			"unitLabels": [
+				"Lib I (Praef.)",
+				"Lib I (1)",
+				"Lib I (2)",
+				"Lib I (3)",
+				"Lib I (4)",
+				"Lib I (5)",
+				"Lib I (6)",
+				"Lib I (7)",
+				"Lib I (8)",
+				"Lib I (9)",
+				"Lib I (10)",
+				"Lib II (Praef.)",
+				"Lib II (1)",
+				"Lib II (2)",
+				"Lib II (3)",
+				"Lib II (4)",
+				"Lib II (5)",
+				"Lib II (6)",
+				"Lib II (7)",
+				"Lib II (8)",
+				"Lib II (9)",
+				"Lib II (10)",
+				"Lib II (11)",
+				"Lib II (12)",
+				"Lib II (13)",
+				"Lib II (14)",
+				"Lib III (Praef.)",
+				"Lib III (1)",
+				"Lib III (2)",
+				"Lib III (3)",
+				"Lib III (4)",
+				"Lib III (5)",
+				"Lib III (6)",
+				"Lib IV (Praef.)",
+				"Lib IV (1)",
+				"Lib IV (2)",
+				"Lib IV (3)",
+				"Lib IV (4)",
+				"Lib IV (5)",
+				"Lib IV (6)",
+				"Lib IV (7)",
+				"Lib V (Praef.)",
+				"Lib V (1)",
+				"Lib V (2)",
+				"Lib V (3)",
+				"Lib V (4)",
+				"Lib V (5)",
+				"Lib V (6)",
+				"Lib V (7)"
+			],
+			"unitLabelsInline": [
+				"",
+				"(1)",
+				"(2)",
+				"(3)",
+				"(4)",
+				"(5)",
+				"(6)",
+				"(7)",
+				"(8)",
+				"(9)",
+				"(10)",
+				"",
+				"(1)",
+				"(2)",
+				"(3)",
+				"(4)",
+				"(5)",
+				"(6)",
+				"(7)",
+				"(8)",
+				"(9)",
+				"(10)",
+				"(11)",
+				"(12)",
+				"(13)",
+				"(14)",
+				"",
+				"(1)",
+				"(2)",
+				"(3)",
+				"(4)",
+				"(5)",
+				"(6)",
+				"",
+				"(1)",
+				"(2)",
+				"(3)",
+				"(4)",
+				"(5)",
+				"(6)",
+				"(7)",
+				"",
+				"(1)",
+				"(2)",
+				"(3)",
+				"(4)",
+				"(5)",
+				"(6)",
+				"(7)"
+			],
+			"content": {
+				"head": "<p><span data-type='head_key'>Edition:</span> Collectio Vaticana 20, ACO I,1,1 S. 108,2–109,3; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 330f.; Coleti (1728–1734), Bd. 3 Sp. 879–881; Mansi, Bd. 4 Sp. 1000f.; PG 77, Sp. 61–64.</p><p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5308</p><p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria</p><p><span data-type='head_key'>Datierung:</span> 429</p><p><span data-type='head_key'>Lat. Übersetzungen: Collectio Casinensis 18, ACO I,3 S. 43</span></p>",
+				"inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill gibt dem Adressaten seines Schreibens zu verstehen, dass sein entschiedenes Handeln allein dem Wohl der Kirche diene und durch christliche Ideale, nicht durch persönliche Animositäten motiviert sei.</p>"
+			}
+		},
+		{
+			"slug": "CPal29",
+			"schwartzSlug": "CPal29",
+			"schwartzSlugNum": "29",
+			"acoNumX": "26",
+			"acoNumLabel": "Dok. 26",
+			"type": "CPal",
+			"title": "Kyrill, Exzerpte aus den Schriften des Nestorius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV144",
+			"schwartzSlug": "CV144",
+			"schwartzSlugNum": "144",
+			"acoNumX": "27",
+			"acoNumLabel": "Dok. 27",
+			"type": "CV",
+			"title": "Kyrills Brief an Coelestin",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CU4",
+			"schwartzSlug": "CU4",
+			"schwartzSlugNum": "4",
+			"acoNumX": "28",
+			"acoNumLabel": "Dok. 28",
+			"type": "CU",
+			"title": "Kyrills Memorandum an Poseidonios",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CVer1",
+			"schwartzSlug": "CVer1",
+			"schwartzSlugNum": "1",
+			"acoNumX": "29",
+			"acoNumLabel": "Dok. 29",
+			"type": "CVer",
+			"title": "Coelestins Brief an Kyrill",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CVer2",
+			"schwartzSlug": "CVer2",
+			"schwartzSlugNum": "2",
+			"acoNumX": "30",
+			"acoNumLabel": "Dok. 30",
+			"type": "CVer",
+			"title": "Coelestins Brief an Nestorius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CVer5",
+			"schwartzSlug": "CVer5",
+			"schwartzSlugNum": "5",
+			"acoNumX": "31",
+			"acoNumLabel": "Dok. 31",
+			"type": "CVer",
+			"title": "Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CVer6",
+			"schwartzSlug": "CVer6",
+			"schwartzSlugNum": "6",
+			"acoNumX": "32",
+			"acoNumLabel": "Dok. 32",
+			"type": "CVer",
+			"title": "Coelestins Brief an Johannes von Antiochia, Juvenal von Jerusalem, Rufus von Thessaloniki und Flavian von Philippi",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV13",
+			"schwartzSlug": "CV13",
+			"schwartzSlugNum": "13",
+			"acoNumX": "33",
+			"acoNumLabel": "Dok. 33",
+			"type": "CV",
+			"title": "Kyrills Brief an Johannes von Antiochia",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV15",
+			"schwartzSlug": "CV15",
+			"schwartzSlugNum": "15",
+			"acoNumX": "34",
+			"acoNumLabel": "Dok. 34",
+			"type": "CV",
+			"title": "Kyrills Brief an Juvenal von Jerusalem",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV14",
+			"schwartzSlug": "CV14",
+			"schwartzSlugNum": "14",
+			"acoNumX": "35",
+			"acoNumLabel": "Dok. 35",
+			"type": "CV",
+			"title": "Brief des Johannes von Antiochia an Nestorius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV6",
+			"schwartzSlug": "CV6",
+			"schwartzSlugNum": "6",
+			"acoNumX": "36",
+			"acoNumLabel": "Dok. 36",
+			"type": "CV",
+			"title": "Kyrills dritter Brief an Nestorius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV24",
+			"schwartzSlug": "CV24",
+			"schwartzSlugNum": "24",
+			"acoNumX": "37",
+			"acoNumLabel": "Dok. 37",
+			"type": "CV",
+			"title": "Kyrills Brief an Klerus und Volk von Konstantinopel",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV145",
+			"schwartzSlug": "CV145",
+			"schwartzSlugNum": "145",
+			"acoNumX": "38",
+			"acoNumLabel": "Dok. 38",
+			"type": "CV",
+			"title": "Kyrills Brief an die Mönche in Konstantinopel",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV7",
+			"schwartzSlug": "CV7",
+			"schwartzSlugNum": "7",
+			"acoNumX": "39",
+			"acoNumLabel": "Dok. 39",
+			"type": "CV",
+			"title": "Kyrills Rede über den rechten Glauben an Theodosius",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV150",
+			"schwartzSlug": "CV150",
+			"schwartzSlugNum": "150",
+			"acoNumX": "40",
+			"acoNumLabel": "Dok. 40",
+			"type": "CV",
+			"title": "Kyrills Rede an die Herrinnen",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV149",
+			"schwartzSlug": "CV149",
+			"schwartzSlugNum": "149",
+			"acoNumX": "41",
+			"acoNumLabel": "Dok. 41",
+			"type": "CV",
+			"title": "Kyrills Rede an die Augustae über den Glauben",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV25",
+			"schwartzSlug": "CV25",
+			"schwartzSlugNum": "25",
+			"acoNumX": "42",
+			"acoNumLabel": "Dok. 42",
+			"type": "CV",
+			"title": "Sacra an Kyrill und die Metropoliten, durch welche die Synode in Ephesus einberufen wird",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV8",
+			"schwartzSlug": "CV8",
+			"schwartzSlugNum": "8",
+			"acoNumX": "43",
+			"acoNumLabel": "Dok. 43",
+			"type": "CV",
+			"title": "Sacra an Kyrill",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		},
+		{
+			"slug": "CV23",
+			"schwartzSlug": "CV23",
+			"schwartzSlugNum": "23",
+			"acoNumX": "44",
+			"acoNumLabel": "Dok. 44",
+			"type": "CV",
+			"title": "Sacra an Akakios von Beroia und andere",
+			"unitSlugs": [],
+			"unitLabels": [],
+			"content": {
+				"head": "",
+				"inhalt": ""
+			}
+		}
+	]
+}
