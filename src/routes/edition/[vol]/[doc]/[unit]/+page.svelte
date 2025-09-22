@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import { onMount, tick, untrack } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
 	import LoadButton from './LoadButton.svelte';
@@ -9,7 +9,7 @@
 	import Unit from './Unit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 
-	import { IsInViewport, ElementRect, ScrollState, useIntersectionObserver } from 'runed';
+	import { IsInViewport, ElementRect, ScrollState } from 'runed';
 
 	import {
 		extractNoteIds,
@@ -33,14 +33,8 @@
 			multiMarkPopupStore.slugs = [];
 		}
 	}
-
 	// Load next and prev data
-	async function loadMore(
-		myUnits,
-		direction: 'next' | 'prev',
-		rect: ElementRect,
-		scroll: ScrollState
-	) {
+	async function loadMore(myUnits, direction: 'next' | 'prev') {
 		const endNode = direction === 'next' ? myUnits[myUnits.length - 1] : myUnits[0];
 		const slug = direction === 'next' ? endNode.nextSlug : endNode.prevSlug;
 		const idx = data.docMetadata.slugs.indexOf(slug);
@@ -55,21 +49,8 @@
 			notes: data.unitNotes || []
 		};
 		// const heightOld = rect.height;
-		if (direction) myUnits.push(item);
+		if (direction === 'next') myUnits.push(item);
 		else myUnits.unshift(item);
-		// await tick();
-		// const heightNew = rect.height;
-		// if (!direction) {
-		// 	scroll.scrollTo(scroll.x, (heightNew - heightOld) * 20);
-		// }
-		// console.log(
-		// 	'SLUGS: ',
-		// 	myUnits[0].slug,
-		// 	myUnits[myUnits.length - 1].slug,
-		// 	'h old new:',
-		// 	heightOld,
-		// 	heightNew
-		// );
 		return myUnits;
 	}
 
@@ -87,13 +68,27 @@
 		}
 	});
 
-	const handlePrevUnit = () => {};
+	const handlePrevUnit = () => {
+		const oldHeight = rectMainText.height;
+		goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[0].prevSlug}`, {
+			noScroll: true,
+			keepFocus: true,
+			replaceState: true
+		}).then(() => {
+			loadMore(myUnits, 'prev').then((value) => {
+				myUnits = value;
+				tick().then(() => {
+					//@Sebi: I tried with `rectMainText.height`, but the DOM was not ready yet, so I have to use getBoundingClientRect() to force a repaint.
+					// const newHeight = rectMainText.height;
+					const newHeight =
+						document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
+					scrollState.scrollTo(scrollState.x, newHeight - oldHeight);
+				});
+			});
+		});
+	};
 
-	const handleNextUnit = () => {
-		console.log(
-			'NAV TO',
-			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[myUnits.length - 1].nextSlug}`
-		);
+	const handleNextUnit = async () => {
 		goto(
 			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[myUnits.length - 1].nextSlug}`,
 			{
@@ -101,10 +96,11 @@
 				keepFocus: true,
 				replaceState: true
 			}
-		);
-		console.log('LOAD MORE', data.slug_unit);
-		loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
-			myUnits = value;
+		).then(() => {
+			scrollState.scrollToBottom();
+			loadMore(myUnits, 'next').then((value) => {
+				myUnits = value;
+			});
 		});
 	};
 
@@ -114,28 +110,53 @@
 	let inViewportPrev = new IsInViewport(() => targetNodePrev);
 	let inViewportNext = new IsInViewport(() => targetNodeNext);
 
-	$effect.pre(() => {
-		inViewportNext.current; // track changes for effect
+	let isLoadingNext = $state(false);
+	let initialRun = $state(true);
+
+	// Edge-case 1: There is this edge case where both buttons are visible at the same time for short texts.
+	// 				Now, the way inViewportPrev/inViewportNext are implemented,
+	// 				they change from false to true, even if the DOM-element is intersecting from the very beginning.
+	// 				As a consequence both $effects run at the same time.
+	// 				DANGER: Synchronous loading in both directions, however will lead to WRONG texts inserted!
+	//
+	// Workaround: 	To avoid this, we...
+	// 				(1) make sure NEXT goes first (by stopping PREV if next-button is visible),
+	// 				(2) block PREV while NEXT runs
+	// 				--> due to the situation described above, this must happen *outsid* the tick().then() to be fast enough
+	//  	   			for the PREV-effect not to catch up. This is, why there is this hack with `initialRun` that makes sure the guard
+	// 					 (a) is in place soon enough
+	//					 (b) can be removed after the initial run
+	//
+	// Edge-case 2: If the texts are so short that also after the first NEXT-load both buttons are still visible,
+	// 				theninViewportPrev/Next remain unchanged and nothing will happen. In this case one has to click the buttons until
+	// 				there is enough text to scroll the buttons out of visibility.
+
+	$effect(() => {
+		inViewportPrev.current; // track changes for effect
 		tick().then(() => {
-			if (inViewportNext.current) {
-				handleNextUnit();
-			}
-		});
-	});
-	$effect.pre(() => {
-		inViewportPrev.current;
-		tick().then(() => {
-			if (inViewportPrev.current) {
+			if (inViewportPrev.current && !inViewportNext.current && !isLoadingNext) {
 				handlePrevUnit();
 			}
 		});
 	});
 
-	$inspect(myUnits);
+	$effect(() => {
+		inViewportNext.current; // track changes for effect
+		tick().then(() => {
+			isLoadingNext = initialRun ? true : false; //! hack 2-a for edge-case 1 (see above)
+			if (inViewportNext.current) {
+				isLoadingNext = true;
+				handleNextUnit().then(() => {
+					isLoadingNext = false;
+					initialRun = false;
+				});
+			}
+		});
+	});
 
 	// scrollObservers container
 	let container = $state<HTMLElement>();
-	const scrollC = new ScrollState({ element: () => container });
+	const scrollState = new ScrollState({ element: () => container });
 
 	// rectObserver main text
 	let mainTextContainer = $state<HTMLElement>();
@@ -144,7 +165,6 @@
 	onMount(() => {
 		// Event Listeners
 		document.body.addEventListener('click', handleResetMultiMark);
-
 		// Clean-up
 		return () => {
 			document.body.removeEventListener('click', handleResetMultiMark);
@@ -163,8 +183,8 @@
 			bind:node={targetNodePrev}
 			type="prev"
 			{data}
-			loadfunction={(units) => loadMore(units, 'prev', rectMainText, scrollC)}
 			{myUnits}
+			clickHandler={handlePrevUnit}
 			classes="row-span-1 row-start-1"
 		/>
 
@@ -233,14 +253,13 @@
 		</div>
 
 		<!-- Load Button -->
-		<!-- loadfunction={(units) => loadMore(units, 'next', rectMainText, scrollC)} -->
 		<LoadButton
 			isDisabled={myUnits[myUnits.length - 1].nextSlug ? false : true}
 			bind:node={targetNodeNext}
 			type="next"
 			{data}
 			{myUnits}
-			loadfunction={handleNextUnit}
+			clickHandler={handleNextUnit}
 			classes="row-span-1 row-start-3"
 		/>
 	</div>

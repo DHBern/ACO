@@ -1,5 +1,5 @@
 <script>
-	let { node = $bindable(), isDisabled, type, data, myUnits, loadfunction, classes } = $props();
+	let { node = $bindable(), isDisabled, type, data, myUnits, clickHandler, classes } = $props();
 </script>
 
 {#if type == 'prev'}
@@ -9,7 +9,7 @@
 			class="shadow-4xl m-3 mx-110 block min-w-[50px] bg-red-300 px-5 py-1"
 			type="button"
 			onclick={() => {
-				loadfunction(myUnits);
+				clickHandler(myUnits);
 			}}
 		>
 			{#if isDisabled}
@@ -27,7 +27,7 @@
 				class="shadow-4xl m-3 mx-110 block min-w-[50px] bg-red-300 px-5 py-1"
 				type="button"
 				onclick={() => {
-					loadfunction(myUnits);
+					clickHandler(myUnits);
 				}}
 			>
 				{#if isDisabled}

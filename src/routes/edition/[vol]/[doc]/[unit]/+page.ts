@@ -29,7 +29,7 @@ export async function load({ fetch, params }) {
 			nextSlug: metadataDoc?.unitSlugs[indexNext] || null,
 			prevLabel: metadataDoc?.unitLabels?.[indexPrev] || null,
 			nextLabel: metadataDoc?.unitLabels?.[indexNext] || null,
-			text: unitText || 'could not load data',
+			text: unitText || '',
 			notes: unitNotes || []
 		}
 	})
