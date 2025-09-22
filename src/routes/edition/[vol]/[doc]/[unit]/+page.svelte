@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, tick, untrack } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
 	import LoadButton from './LoadButton.svelte';
@@ -39,6 +39,7 @@
 		rect: ElementRect,
 		scroll: ScrollState
 	) {
+		console.log('loadMore Function');
 		const endNode = direction === 'next' ? myUnits[myUnits.length - 1] : myUnits[0];
 		const slug = direction === 'next' ? endNode.nextSlug : endNode.prevSlug;
 		const idx = data.docMetadata.slugs.indexOf(slug);
@@ -89,19 +90,17 @@
 	let targetNodePrev = $state<HTMLElement>()!;
 	let targetNodeNext = $state<HTMLElement>()!;
 	let inViewportPrev = new IsInViewport(() => targetNodePrev);
-	useIntersectionObserver(
-		() => targetNodeNext,
-		(entries) => {
-			const entry = entries[0];
-			if (!entry) return;
-
-			//node is intersecting!
-
-			loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
-				myUnits = value;
-			});
-		}
-	);
+	let inViewportNext = new IsInViewport(() => targetNodeNext);
+	$effect.pre(() => {
+		inViewportNext.current;
+		tick().then(() => {
+			if (inViewportNext.current) {
+				loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
+					myUnits = value;
+				});
+			}
+		});
+	});
 
 	// scrollObservers container
 	let container = $state<HTMLElement>();
@@ -110,35 +109,6 @@
 	// rectObserver main text
 	let mainTextContainer = $state<HTMLElement>();
 	const rectMainText = new ElementRect(() => mainTextContainer);
-
-	let loading = $state(false);
-
-	// Load previous node
-	let conditionLoadPrev = $derived(
-		!loading && myUnits && inViewportPrev && inViewportPrev.current && myUnits[0].prevSlug
-	);
-
-	// $effect(() => {
-	// 	untrack(() => myUnits);
-	// 	untrack(() => conditionLoadNext);
-	// 	untrack(() => conditionLoadPrev);
-
-	// 	(async () => {
-	// 		if (conditionLoadPrev) {
-	// 			loading = true;
-	// 			await delay(200);
-	// 			console.log(
-	// 				'P:',
-	// 				myUnits[0].prevSlug,
-	// 				scrollC.y,
-	// 				scrollC.progress.y,
-	// 				rectMainText.height
-	// 			);
-	// 			myUnits = await loadMore(myUnits, 'prev', rectMainText, scrollC);
-	// 			loading = false;
-	// 		}
-	// 	})();
-	// });
 
 	onMount(() => {
 		// Event Listeners
@@ -194,7 +164,6 @@
 				]}
 			>
 				{#each myUnits as unit (unit.slug)}
-					{@debug unit}
 					<Unit
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
