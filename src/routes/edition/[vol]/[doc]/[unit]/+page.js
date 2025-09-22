@@ -15,8 +15,8 @@ export async function load({ fetch, params }) {
 	const slug_next_unit4 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 4] || null
 	const slug_next_unit5 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 5] || null
 
-	// let groupedUnits = [slug_unit, slug_next_unit, slug_next_unit2, slug_next_unit3, slug_next_unit4, slug_next_unit5].map((slug)=>{
-	let groupedUnits = [slug_unit].map((slug)=>{
+	// let myUnits = [slug_unit, slug_next_unit, slug_next_unit2, slug_next_unit3, slug_next_unit4, slug_next_unit5].map((slug)=>{
+	let myUnits = [slug_unit].map((slug)=>{
 		const indexPrev = doc?.unitSlugs.findIndex(unit => unit === slug) - 1;
 		const indexNext = doc?.unitSlugs.findIndex(unit => unit === slug) + 1;
 		return {
@@ -33,7 +33,7 @@ export async function load({ fetch, params }) {
 	return {
 		slug_unit,
 		slug_doc,
-		groupedUnits,
+		myUnits,
 		notesData
 	};
 }

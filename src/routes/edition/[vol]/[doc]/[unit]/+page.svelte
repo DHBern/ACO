@@ -1,12 +1,13 @@
-<script>
-	import { onMount } from 'svelte';
+<script lang="ts">
+	import { onMount, tick, untrack } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
 	import LoadButton from './LoadButton.svelte';
 	import Note from './Note.svelte';
 	import Unit from './Unit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
-	import { placeNotes } from '$lib/functions/floatingApparatus/placeNotes.js';
+
+	import { IsInViewport, ElementRect, ScrollState } from 'runed';
 
 	import {
 		extractNoteIds,
@@ -17,10 +18,7 @@
 
 	let { data } = $props();
 
-	let groupedUnits = $state(data.groupedUnits);
-	$effect(() => {
-		groupedUnits = data.groupedUnits;
-	});
+	let myUnits = $derived(data.myUnits);
 
 	let selectedNote = $state({ slug: '' });
 	let multiMarkPopupStore = $state({ slugs: [], target: undefined, slugUnitTarget: undefined });
@@ -34,12 +32,44 @@
 		}
 	}
 
-	// Extract note-ids from text and place note-boxes at initial positions
-	$effect(() => {
-		groupedUnits.forEach((unit) => {
-			placeNotes(extractNoteIds(unit.text));
-		});
-	});
+	// Load next and prev data
+	async function loadMore(
+		myUnits,
+		direction: 'next' | 'prev',
+		rect: ElementRect,
+		scroll: ScrollState
+	) {
+		const endNode = direction === 'next' ? myUnits[myUnits.length - 1] : myUnits[0];
+		const slug = direction === 'next' ? endNode.nextSlug : endNode.prevSlug;
+		const idx = data.docMetadata.slugs.indexOf(slug);
+		if (idx === -1 || !slug) return myUnits; // nothing to load
+		const item = {
+			slug,
+			prevSlug: idx > 0 ? data.docMetadata.slugs[idx - 1] : null,
+			nextSlug: idx < data.docMetadata.slugs.length - 1 ? data.docMetadata.slugs[idx + 1] : null,
+			prevLabel: idx > 0 ? data.docMetadata.labels[idx - 1] : null,
+			nextLabel: idx < data.docMetadata.labels.length - 1 ? data.docMetadata.labels[idx + 1] : null,
+			text: data.docContent[slug] || '',
+			notes: data.notesData[data.slug_doc]?.[slug] || []
+		};
+		// const heightOld = rect.height;
+		if (direction) myUnits.push(item);
+		else myUnits.unshift(item);
+		// await tick();
+		// const heightNew = rect.height;
+		// if (!direction) {
+		// 	scroll.scrollTo(scroll.x, (heightNew - heightOld) * 20);
+		// }
+		// console.log(
+		// 	'SLUGS: ',
+		// 	myUnits[0].slug,
+		// 	myUnits[myUnits.length - 1].slug,
+		// 	'h old new:',
+		// 	heightOld,
+		// 	heightNew
+		// );
+		return myUnits;
+	}
 
 	// Scrolling to lines and units
 	$effect(() => {
@@ -55,88 +85,187 @@
 		}
 	});
 
-	onMount(() => {
+	// inViewportObservers for LoadButtons
+	let targetNodePrev = $state<HTMLElement>()!;
+	let targetNodeNext = $state<HTMLElement>()!;
+	let inViewportPrev = new IsInViewport(() => targetNodePrev);
+	let inViewportNext = new IsInViewport(() => targetNodeNext);
 
+	// scrollObservers container
+	let container = $state<HTMLElement>();
+	const scrollC = new ScrollState({ element: () => container });
+
+	// rectObserver main text
+	let mainTextContainer = $state<HTMLElement>();
+	const rectMainText = new ElementRect(() => mainTextContainer);
+
+	// Helper function for delay
+	function delay(ms: number) {
+		return new Promise((resolve) => setTimeout(resolve, ms));
+	}
+
+	let loading = $state(false);
+
+	// Load previous node
+	let conditionLoadPrev = $derived(
+		!loading && myUnits && inViewportPrev && inViewportPrev.current && myUnits[0].prevSlug
+	);
+
+	// $effect(() => {
+	// 	untrack(() => myUnits);
+	// 	untrack(() => conditionLoadNext);
+	// 	untrack(() => conditionLoadPrev);
+
+	// 	(async () => {
+	// 		if (conditionLoadPrev) {
+	// 			loading = true;
+	// 			await delay(200);
+	// 			console.log(
+	// 				'P:',
+	// 				myUnits[0].prevSlug,
+	// 				scrollC.y,
+	// 				scrollC.progress.y,
+	// 				rectMainText.height
+	// 			);
+	// 			myUnits = await loadMore(myUnits, 'prev', rectMainText, scrollC);
+	// 			loading = false;
+	// 		}
+	// 	})();
+	// });
+
+	// Load next node
+	let conditionLoadNext = $derived(
+		!loading &&
+			myUnits &&
+			inViewportNext &&
+			inViewportNext.current &&
+			myUnits[myUnits.length - 1].nextSlug
+	);
+	$effect(() => {
+		untrack(() => myUnits);
+		untrack(() => conditionLoadNext);
+		untrack(() => conditionLoadPrev);
+
+		console.log('TRY', !loading, inViewportNext.current);
+		if (!loading) {
+			const slug0 = myUnits[0].prevSlug;
+			const slug = myUnits[myUnits.length - 1].nextSlug;
+			if (conditionLoadNext) {
+				(async () => {
+					loading = true;
+					await delay(500);
+					console.log('NEXT:', slug0, slug, scrollC.y, rectMainText.height);
+					setTimeout(async () => {
+						myUnits = await loadMore(myUnits, 'next', rectMainText, scrollC);
+					}, 500);
+					loading = false;
+					console.log('DONE LOADING');
+				})();
+			}
+		}
+	});
+
+	onMount(() => {
 		// Event Listeners
 		document.body.addEventListener('click', handleResetMultiMark);
 
+		// Clean-up
 		return () => {
 			document.body.removeEventListener('click', handleResetMultiMark);
 		};
 	});
 </script>
 
-<div class="grid grid-rows-[1fr_auto_1fr]">
-	<!-- Load Button -->
-	{#if groupedUnits[0].prevSlug}
-		<LoadButton type="prev" {data} {groupedUnits} classes="row-span-1 row-start-1" />
-	{/if}
+<div
+	bind:this={container}
+	class="h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
+>
+	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
+		<!-- Load Button -->
+		<LoadButton
+			isDisabled={myUnits[0].prevSlug ? false : true}
+			bind:node={targetNodePrev}
+			type="prev"
+			{data}
+			loadfunction={(units) => loadMore(units, 'prev', rectMainText, scrollC)}
+			{myUnits}
+			classes="row-span-1 row-start-1"
+		/>
 
-	<!-- Units -->
-	<div
-		class="row-span-1 row-start-2 grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[100px_50px_auto_1fr]"
-	>
-		<!-- Page Numbers -->
-		<div class="containerPageNums col-span-1 col-start-1">
-			{#each groupedUnits as unit (unit.slug)}
-				{@html generatePageNumbers(unit.text)}
-			{/each}
-		</div>
-
-		<!-- Line Numbers -->
-		<div class="containerLineNums col-span-1 col-start-2">
-			{#each groupedUnits as unit (unit.slug)}
-				{@html generateLineNumbers(unit.text)}
-			{/each}
-		</div>
-
-		<!-- Main Text -->
+		<!-- Units -->
 		<div
-			class={[
-				'containerText maintext relative col-span-1 col-start-3',
-				copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-			]}
+			class="row-span-1 row-start-2 grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[100px_50px_auto_1fr]"
 		>
-			{#each groupedUnits as unit (unit.slug)}
-				<Unit
-					slug={unit.slug}
-					text={generateMainText(unit.text)}
-					unitLabelInline={unit.labelInline}
-					{selectedNote}
-					{multiMarkPopupStore}
-				></Unit>
-			{/each}
-		</div>
-
-		<!-- Notes -->
-		<div
-			class={[
-				'containerNotes relative col-span-3 col-start-1 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
-				copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
-			]}
-		>
-			{#each groupedUnits as unit (unit.slug)}
-				<!-- //! Dont do this twice! -->
-				{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
-					<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
+			<!-- Page Numbers -->
+			<div class="containerPageNums col-span-1 col-start-1">
+				{#each myUnits as unit (unit.slug)}
+					{@html generatePageNumbers(unit.text)}
 				{/each}
-			{/each}
+			</div>
+
+			<!-- Line Numbers -->
+			<div class="containerLineNums col-span-1 col-start-2">
+				{#each myUnits as unit (unit.slug)}
+					{@html generateLineNumbers(unit.text)}
+				{/each}
+			</div>
+
+			<!-- Main Text -->
+			<div
+				bind:this={mainTextContainer}
+				class={[
+					'containerText maintext relative col-span-1 col-start-3',
+					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+				]}
+			>
+				{#each myUnits as unit (unit.slug)}
+					<Unit
+						slug={unit.slug}
+						text={generateMainText(unit.text)}
+						unitLabelInline={unit.labelInline}
+						{selectedNote}
+						{multiMarkPopupStore}
+					></Unit>
+				{/each}
+			</div>
+
+			<!-- Notes -->
+			<div
+				class={[
+					'containerNotes relative col-span-3 col-start-1 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
+					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
+				]}
+			>
+				{#each myUnits as unit (unit.slug)}
+					<!-- //! Dont do this twice! -->
+					{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
+						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
+					{/each}
+				{/each}
+			</div>
+
+			<!-- Popups for multiple notes over same place -->
+			{#if multiMarkPopupStore.slugs.length > 0}
+				<MultiMarkPopup
+					{multiMarkPopupStore}
+					{selectedNote}
+					notesData={data.notesData}
+					slug_doc={data.slug_doc}
+				/>
+			{/if}
 		</div>
 
-		<!-- Popups for multiple notes over same place -->
-		{#if multiMarkPopupStore.slugs.length > 0}
-			<MultiMarkPopup
-				{multiMarkPopupStore}
-				{selectedNote}
-				notesData={data.notesData}
-				slug_doc={data.slug_doc}
-			/>
-		{/if}
+		<!-- Load Button -->
+		<LoadButton
+			isDisabled={myUnits[myUnits.length - 1].nextSlug ? false : true}
+			bind:node={targetNodeNext}
+			type="next"
+			{data}
+			{myUnits}
+			loadfunction={(units) => loadMore(units, 'next', rectMainText, scrollC)}
+			classes="row-span-1 row-start-3"
+		/>
 	</div>
-	<!-- Load Button -->
-	{#if groupedUnits[groupedUnits.length - 1].nextSlug}
-		<LoadButton type="next" {data} {groupedUnits} classes="row-span-1 row-start-3" />
-	{/if}
 </div>
 
 <style lang="postcss">
