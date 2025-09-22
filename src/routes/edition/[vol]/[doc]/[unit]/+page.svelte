@@ -49,8 +49,8 @@
 			nextSlug: idx < data.docMetadata.slugs.length - 1 ? data.docMetadata.slugs[idx + 1] : null,
 			prevLabel: idx > 0 ? data.docMetadata.labels[idx - 1] : null,
 			nextLabel: idx < data.docMetadata.labels.length - 1 ? data.docMetadata.labels[idx + 1] : null,
-			text: data.docContent[slug] || '',
-			notes: data.notesData[data.slug_doc]?.[slug] || []
+			text: data.unitText || '',
+			notes: data.unitNotes || []
 		};
 		// const heightOld = rect.height;
 		if (direction) myUnits.push(item);
