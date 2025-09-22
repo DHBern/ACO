@@ -1,11 +1,11 @@
 <script>
 	import { base } from '$app/paths';
-	import { textData } from '$lib/data/get_data';
+	import { textData } from '$lib/data/get_alldata_testing.js';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 	import Abbreviations from './Abbreviations.svelte';
 
 	let accordionState = $state(['Band 1']);
-	
+
 	let volumes = [
 		{ label: 'Band 2', number: 2 },
 		{ label: 'Band 3', number: 3 }
@@ -17,7 +17,6 @@
 	docs.CPal = textData.filter(({ type: t }) => t === 'CPal');
 	docs.CVer = textData.filter(({ type: t }) => t === 'CVer');
 	docs.CU = textData.filter(({ type: t }) => t === 'CU');
-
 </script>
 
 <h1>Dokumente</h1>

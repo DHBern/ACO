@@ -1,4 +1,5 @@
-import { textData, notesData } from '$lib/data/get_data';
+import { textData, metaData, notesData } from '$lib/data/get_alldata_testing.js';
+import { base } from '$app/paths';
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch, params }) {
@@ -6,27 +7,30 @@ export async function load({ fetch, params }) {
 	const slug_doc = params.doc;
 	const slug_unit = params.unit;
 	
-	// Get corresponding data
-	const doc = textData.find(({ slug: s }) => s === slug_doc);
+	// Get metadata
+	const metadataDoc = metaData.find(({ slug: s }) => s === params.doc);
 	
-	const slug_next_unit = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 1] || null
-	const slug_next_unit2 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 2] || null
-	const slug_next_unit3 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 3] || null
-	const slug_next_unit4 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 4] || null
-	const slug_next_unit5 = doc?.unitSlugs[doc?.unitSlugs.findIndex(unit => unit === slug_unit) + 5] || null
+	// Load data from +server.ts
+	const unitData = await fetch(`${base}/edition/${params.vol}/${params.doc}/data/${params.unit}`).then(
+		(r) => {
+			return r.json();
+		}
+	);
+	const unitText = unitData.unitText;
+	const unitNotes = unitData.unitNotes;
 
-	// let myUnits = [slug_unit, slug_next_unit, slug_next_unit2, slug_next_unit3, slug_next_unit4, slug_next_unit5].map((slug)=>{
+	// Bundle as myUnits
 	let myUnits = [slug_unit].map((slug)=>{
-		const indexPrev = doc?.unitSlugs.findIndex(unit => unit === slug) - 1;
-		const indexNext = doc?.unitSlugs.findIndex(unit => unit === slug) + 1;
+		const indexPrev = metadataDoc?.unitSlugs.findIndex(unit => unit === slug) - 1;
+		const indexNext = metadataDoc?.unitSlugs.findIndex(unit => unit === slug) + 1;
 		return {
 			slug: slug,
-			prevSlug: doc?.unitSlugs[indexPrev] || null,
-			nextSlug: doc?.unitSlugs[indexNext] || null,
-			prevLabel: doc?.unitLabels?.[indexPrev] || null,
-			nextLabel: doc?.unitLabels?.[indexNext] || null,
-			text: doc?.content?.[slug] || '',
-			notes: notesData[slug_doc]?.[slug] || []
+			prevSlug: metadataDoc?.unitSlugs[indexPrev] || null,
+			nextSlug: metadataDoc?.unitSlugs[indexNext] || null,
+			prevLabel: metadataDoc?.unitLabels?.[indexPrev] || null,
+			nextLabel: metadataDoc?.unitLabels?.[indexNext] || null,
+			text: unitText || 'could not load data',
+			notes: unitNotes || []
 		}
 	})
 
