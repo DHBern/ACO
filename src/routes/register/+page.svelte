@@ -34,8 +34,6 @@
 	const placesGrouped = data.places.map((place) => {
 		return groupByDoc(place['loc-s']);
 	});
-
-	console.log(peopleGrouped, placesGrouped);
 </script>
 
 {#snippet accordion(labelsList, groupedList, accordionState)}

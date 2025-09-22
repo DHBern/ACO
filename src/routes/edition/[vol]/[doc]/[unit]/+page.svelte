@@ -215,7 +215,6 @@
 				]}
 			>
 				{#each myUnits as unit (unit.slug)}
-					<!-- {@debug unit} -->
 					<Unit
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
