@@ -92,7 +92,7 @@
 	let inViewportPrev = new IsInViewport(() => targetNodePrev);
 	let inViewportNext = new IsInViewport(() => targetNodeNext);
 	$effect.pre(() => {
-		inViewportNext.current;
+		inViewportNext.current; // track changes
 		tick().then(() => {
 			if (inViewportNext.current) {
 				loadMore(myUnits, 'next', rectMainText, scrollC).then((value) => {
