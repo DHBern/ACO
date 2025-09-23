@@ -6,7 +6,7 @@ export function moveNote(id) {
 	const elNoteRef = document.querySelector(`[data-type=note-start][data-id=${id}]`);
 	const elNoteBox = document.querySelector(`.notebox[data-id=${id}]`);
 	const elContainerText = document.querySelector(`.containerText`);
-	const elContainer = document.querySelector('.containerDocHead');
+	const elContainer = document.querySelector('.containerDocHead'); //! seems wrong, since .containerDocHead contains metadata
 
 	// Move entire column (via marginTop)
 	// const elContainerNotes = document.querySelector('.containerNotes');
