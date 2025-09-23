@@ -17,6 +17,7 @@
 		generateLineNumbers,
 		generatePageNumbers
 	} from '$lib/functions/protoHTMLconversion';
+	import { placeNotes } from '$lib/functions/floatingApparatus/placeNotes.js';
 
 	let { data } = $props();
 
@@ -83,6 +84,11 @@
 					const newHeight =
 						document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
 					scrollState.scrollTo(scrollState.x, newHeight - oldHeight);
+
+					// Re-place position of all notes
+					myUnits.forEach((unit) => {
+						placeNotes(extractNoteIds(unit.text));
+					});
 				});
 			});
 		});
