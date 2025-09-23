@@ -69,7 +69,7 @@
 		}
 	});
 
-	const handlePrevUnit = () => {
+	const handleAddPrevUnit = () => {
 		const oldHeight = rectMainText.height;
 		goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[0].prevSlug}`, {
 			noScroll: true,
@@ -94,7 +94,7 @@
 		});
 	};
 
-	const handleNextUnit = async () => {
+	const handleAddNextUnit = async () => {
 		goto(
 			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[myUnits.length - 1].nextSlug}`,
 			{
@@ -141,7 +141,7 @@
 		inViewportPrev.current; // track changes for effect
 		tick().then(() => {
 			if (inViewportPrev.current && !inViewportNext.current && !isLoadingNext) {
-				handlePrevUnit();
+				handleAddPrevUnit();
 			}
 		});
 	});
@@ -152,7 +152,7 @@
 			isLoadingNext = initialRun ? true : false; //! hack 2-a for edge-case 1 (see above)
 			if (inViewportNext.current) {
 				isLoadingNext = true;
-				handleNextUnit().then(() => {
+				handleAddNextUnit().then(() => {
 					isLoadingNext = false;
 					initialRun = false;
 				});
@@ -190,7 +190,7 @@
 			type="prev"
 			{data}
 			{myUnits}
-			clickHandler={handlePrevUnit}
+			clickHandler={handleAddPrevUnit}
 			classes="row-span-1 row-start-1"
 		/>
 
@@ -264,7 +264,7 @@
 			type="next"
 			{data}
 			{myUnits}
-			clickHandler={handleNextUnit}
+			clickHandler={handleAddNextUnit}
 			classes="row-span-1 row-start-3"
 		/>
 	</div>
