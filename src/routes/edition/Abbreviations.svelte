@@ -1,30 +1,44 @@
 <script>
 	import { abbData } from '$lib/data/get_data';
-    import { Accordion } from '@skeletonlabs/skeleton-svelte';
-    let accordionStateAbb = $state(['abb']);
-    let abbs = abbData;
+	import { X } from '@lucide/svelte';
+	import { Modal } from '@skeletonlabs/skeleton-svelte';
 
+	let { openState = $bindable(false) } = $props();
+
+	function drawerClose() {
+		openState = false;
+	}
+	let abbs = abbData;
 </script>
 
-<div class="flex-row flex-wrap bg-[var(--aco-gray-2)] dark:bg-[var(--aco-gray-3)]">
-	<Accordion
-		{accordionStateAbb}
-		onValueChange={(e) => (accordionStateAbb = e.value)}
-		collapsible
-		classes="containerAbbreviations shadow-md mb-4"
-	>
-		<Accordion.Item value="abb" classes="">
-			{#snippet lead()}{/snippet}
-			{#snippet control()}<span class="text-xl font-bold text-black dark:text-black">Abkürzungsverzeichnis</span
-				>{/snippet}
-			{#snippet panel()}
-			<div class="grid grid-cols-[150px_auto] gap-4 pl-13 pb-5">
-				{#each Object.keys(abbs) as key}
-					<span class="col-span-1 col-start-1 font-bold">{key}</span>
-					<span class="col-span-1 col-start-2">{abbs[key]}</span>
-				{/each}
-			</div>
-			{/snippet}
-	</Accordion.Item>
-	</Accordion>
-</div>
+<Modal
+	open={openState}
+	onOpenChange={(e) => (openState = e.value)}
+	contentBase="p-4 space-y-4 shadow-xl w-[480px] h-screen bg-[var(--aco-orange-light)] relative border-r-5 border-r-[var(--aco-orange-light2)]"
+	positionerJustify="justify-start"
+	positionerAlign=""
+	positionerPadding=""
+	transitionsPositionerIn={{ x: -480, duration: 200 }}
+	transitionsPositionerOut={{ x: -480, duration: 200 }}
+	classes="containerAbbreviations"
+>
+	{#snippet content()}
+		<header class="relative flex flex-wrap justify-between pl-5">
+			<h2 class="h3 mt-7">Abkürzungsverzeichnis</h2>
+		</header>
+		<button
+			type="button"
+			class="btn preset-filled absolute top-4 right-4 h-12 w-12 rounded-full border-2 border-[var(--aco-orange-light2)] bg-transparent p-0"
+			onclick={drawerClose}
+		>
+			<X size="18" color="var(--aco-orange-light2)" />
+		</button>
+		<article class="mt-8 grid h-8/10 grid-cols-[150px_auto] gap-4 overflow-y-auto px-10 pb-5">
+			{#each Object.keys(abbs) as key}
+				<span class="col-span-1 col-start-1 font-bold">{key}</span>
+				<span class="col-span-1 col-start-2">{abbs[key]}</span>
+			{/each}
+		</article>
+		<footer></footer>
+	{/snippet}
+</Modal>
