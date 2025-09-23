@@ -7,7 +7,7 @@
 		{#if !isDisabled}
 			<button
 				disabled={isDisabled}
-				class="shadow-4xl m-3 mx-110 block min-w-[50px] bg-red-300 px-5 py-1"
+				class="shadow-4xl m-3 mx-110 block max-h-10 min-w-[50px] bg-red-300 px-5 py-1"
 				type="button"
 				onclick={() => {
 					clickHandler(myUnits);
@@ -27,7 +27,7 @@
 			{#if !isDisabled}
 				<button
 					disabled={isDisabled}
-					class="shadow-4xl m-3 mx-110 block min-w-[50px] bg-red-300 px-5 py-1"
+					class="shadow-4xl m-3 mx-110 block max-h-10 min-w-[50px] bg-red-300 px-5 py-1"
 					type="button"
 					onclick={() => {
 						clickHandler(myUnits);
