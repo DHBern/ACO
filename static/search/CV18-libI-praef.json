@@ -1,0 +1,18 @@
+{
+"id":"CPal20::libI-praef",
+"slug":"CPal20",
+"schwartzSlug":"CPal20",
+"schwartzSlugNum":"20",
+"acoNumX":"1",
+"acoNumLabel":"Dok. 1",
+"type":"CPal",
+"title":"Nestorius’ erste Predigt gegen den θεοτόκος-Titel (sermo 9) ",
+"unit_slug":"libI-praef",
+"body":"<p><span data-line='1'></span>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><span data-line='2'></span>totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+"plain_text":"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae",
+"first_line":"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium ...",
+"page":100,
+"line_start":1,
+"is_testdata": true
+}
+
