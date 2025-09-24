@@ -23,6 +23,7 @@
 
 	let visibleUnits = $state(data.myUnits);
 	$effect(() => {
+		let resetUnits = false;
 		data.myUnits.forEach((unit) => {
 			if (visibleUnits.findIndex((u) => u.slug === unit.slug) === -1) {
 				const nextUnit = visibleUnits.findIndex((u) => u.nextSlug === unit.slug);
@@ -31,9 +32,16 @@
 				if (nextUnit + prevUnit >= -1) {
 					// exactly one neighbor is there
 					visibleUnits.splice(nextUnit >= 0 ? nextUnit + 1 : prevUnit, 0, unit);
+				} else {
+					resetUnits = true;
 				}
+			} else {
+				// unit is already there
 			}
 		});
+		if (resetUnits) {
+			visibleUnits = data.myUnits;
+		}
 	});
 
 	let selectedNote = $state({ slug: '' });
