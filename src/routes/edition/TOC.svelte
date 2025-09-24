@@ -5,7 +5,7 @@
 	import Abbreviations from './Abbreviations.svelte';
 
 	let accordionState = $state(['Band 1']);
-	
+
 	let volumes = [
 		{ label: 'Band 2', number: 2 },
 		{ label: 'Band 3', number: 3 }
@@ -17,7 +17,6 @@
 	docs.CPal = textData.filter(({ type: t }) => t === 'CPal');
 	docs.CVer = textData.filter(({ type: t }) => t === 'CVer');
 	docs.CU = textData.filter(({ type: t }) => t === 'CU');
-
 </script>
 
 <h1>Dokumente</h1>
@@ -134,9 +133,6 @@
 		{/each}
 	</Accordion>
 </div>
-
-<!-- Abbreviations -->
-<Abbreviations />
 
 <style>
 	@reference "tailwindcss";
