@@ -21,7 +21,20 @@
 
 	let { data } = $props();
 
-	let myUnits = $state(data.myUnits);
+	let visibleUnits = $state(data.myUnits);
+	$effect(() => {
+		data.myUnits.forEach((unit) => {
+			if (visibleUnits.findIndex((u) => u.slug === unit.slug) === -1) {
+				const nextUnit = visibleUnits.findIndex((u) => u.nextSlug === unit.slug);
+				const prevUnit = visibleUnits.findIndex((u) => u.prevSlug === unit.slug);
+				if (prevUnit !== -1 && nextUnit !== -1) return; // should already be there, because both neighbors are there
+				if (nextUnit + prevUnit >= -1) {
+					// exactly one neighbor is there
+					visibleUnits.splice(nextUnit >= 0 ? nextUnit + 1 : prevUnit, 0, unit);
+				}
+			}
+		});
+	});
 
 	let selectedNote = $state({ slug: '' });
 	let multiMarkPopupStore = $state({ slugs: [], target: undefined, slugUnitTarget: undefined });
@@ -34,80 +47,47 @@
 			multiMarkPopupStore.slugs = [];
 		}
 	}
-	// Load next and prev data
-	async function loadMore(myUnits, direction: 'next' | 'prev') {
-		const endNode = direction === 'next' ? myUnits[myUnits.length - 1] : myUnits[0];
-		const slug = direction === 'next' ? endNode.nextSlug : endNode.prevSlug;
-		const idx = data.docMetadata.slugs.indexOf(slug);
-		if (idx === -1 || !slug) return myUnits; // nothing to load
-		const item = {
-			slug,
-			prevSlug: idx > 0 ? data.docMetadata.slugs[idx - 1] : null,
-			nextSlug: idx < data.docMetadata.slugs.length - 1 ? data.docMetadata.slugs[idx + 1] : null,
-			prevLabel: idx > 0 ? data.docMetadata.labels[idx - 1] : null,
-			nextLabel: idx < data.docMetadata.labels.length - 1 ? data.docMetadata.labels[idx + 1] : null,
-			text: data.unitText || '',
-			notes: data.unitNotes || []
-		};
-		// const heightOld = rect.height;
-		if (direction === 'next') myUnits.push(item);
-		else myUnits.unshift(item);
-		return myUnits;
-	}
 
 	// Scrolling to lines and units
-	$effect(() => {
-		const elLine = document.querySelector(`[data-line="${data.line}"]`);
-		if (elLine) {
-			elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}
-	});
-	$effect(() => {
-		const elLine = document.querySelector(`[data-unit="${data.slug_unit}"]`);
-		if (elLine) {
-			elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}
-	});
+	// $effect(() => {
+	// 	const elLine = document.querySelector(`[data-line="${data.line}"]`);
+	// 	if (elLine) {
+	// 		elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	// 	}
+	// });
+	// $effect(() => {
+	// 	const elLine = document.querySelector(`[data-unit="${data.slug_unit}"]`);
+	// 	if (elLine) {
+	// 		elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	// 	}
+	// });
 
-	const handleAddPrevUnit = () => {
+	const handleAddPrevUnit = async () => {
 		const oldHeight = rectMainText.height;
-		goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[0].prevSlug}`, {
+		await goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${visibleUnits[0].prevSlug}`, {
 			noScroll: true,
 			keepFocus: true,
 			replaceState: true
-		}).then(() => {
-			loadMore(myUnits, 'prev').then((value) => {
-				myUnits = value;
-				tick().then(() => {
-					//@Sebi: I tried with `rectMainText.height`, but the DOM was not ready yet, so I have to use getBoundingClientRect() to force a repaint.
-					// const newHeight = rectMainText.height;
-					const newHeight =
-						document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
-					scrollState.scrollTo(scrollState.x, newHeight - oldHeight);
-
-					// Re-place position of all notes
-					myUnits.forEach((unit) => {
-						placeNotes(extractNoteIds(unit.text));
-					});
-				});
-			});
+		});
+		await tick();
+		const newHeight =
+			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
+		scrollState.scrollTo(scrollState.x, newHeight - oldHeight);
+		// Re-place position of all notes
+		visibleUnits.forEach((unit) => {
+			placeNotes(extractNoteIds(unit.text));
 		});
 	};
 
 	const handleAddNextUnit = async () => {
-		goto(
-			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${myUnits[myUnits.length - 1].nextSlug}`,
+		await goto(
+			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${visibleUnits[visibleUnits.length - 1].nextSlug}`,
 			{
 				noScroll: true,
 				keepFocus: true,
 				replaceState: true
 			}
-		).then(() => {
-			scrollState.scrollToBottom();
-			loadMore(myUnits, 'next').then((value) => {
-				myUnits = value;
-			});
-		});
+		);
 	};
 
 	// inViewportObservers for LoadButtons
@@ -116,46 +96,14 @@
 	let inViewportPrev = new IsInViewport(() => targetNodePrev);
 	let inViewportNext = new IsInViewport(() => targetNodeNext);
 
-	let isLoadingNext = $state(false);
-	let initialRun = $state(true);
-
-	// Edge-case 1: There is this edge case where both buttons are visible at the same time for short texts.
-	// 				Now, the way inViewportPrev/inViewportNext are implemented,
-	// 				they change from false to true, even if the DOM-element is intersecting from the very beginning.
-	// 				As a consequence both $effects run at the same time.
-	// 				DANGER: Synchronous loading in both directions, however will lead to WRONG texts inserted!
-	//
-	// Workaround: 	To avoid this, we...
-	// 				(1) make sure NEXT goes first (by stopping PREV if next-button is visible),
-	// 				(2) block PREV while NEXT runs
-	// 				--> due to the situation described above, this must happen *outsid* the tick().then() to be fast enough
-	//  	   			for the PREV-effect not to catch up. This is, why there is this hack with `initialRun` that makes sure the guard
-	// 					 (a) is in place soon enough
-	//					 (b) can be removed after the initial run
-	//
-	// Edge-case 2: If the texts are so short that also after the first NEXT-load both buttons are still visible,
-	// 				theninViewportPrev/Next remain unchanged and nothing will happen. In this case one has to click the buttons until
-	// 				there is enough text to scroll the buttons out of visibility.
-
-	$effect(() => {
+	$effect.pre(() => {
 		inViewportPrev.current; // track changes for effect
-		tick().then(() => {
-			if (inViewportPrev.current && !inViewportNext.current && !isLoadingNext) {
-				handleAddPrevUnit();
-			}
-		});
-	});
-
-	$effect(() => {
 		inViewportNext.current; // track changes for effect
 		tick().then(() => {
-			isLoadingNext = initialRun ? true : false; //! hack 2-a for edge-case 1 (see above)
 			if (inViewportNext.current) {
-				isLoadingNext = true;
-				handleAddNextUnit().then(() => {
-					isLoadingNext = false;
-					initialRun = false;
-				});
+				handleAddNextUnit();
+			} else if (inViewportPrev.current) {
+				handleAddPrevUnit();
 			}
 		});
 	});
@@ -185,11 +133,11 @@
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->
 		<LoadButton
-			isDisabled={myUnits[0].prevSlug ? false : true}
+			isDisabled={visibleUnits[0].prevSlug ? false : true}
 			bind:node={targetNodePrev}
 			type="prev"
 			{data}
-			{myUnits}
+			myUnits={visibleUnits}
 			clickHandler={handleAddPrevUnit}
 			classes="row-span-1 row-start-1"
 		/>
@@ -200,14 +148,14 @@
 		>
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1">
-				{#each myUnits as unit (unit.slug)}
+				{#each visibleUnits as unit (unit.slug)}
 					{@html generatePageNumbers(unit.text)}
 				{/each}
 			</div>
 
 			<!-- Line Numbers -->
 			<div class="containerLineNums col-span-1 col-start-2">
-				{#each myUnits as unit (unit.slug)}
+				{#each visibleUnits as unit (unit.slug)}
 					{@html generateLineNumbers(unit.text)}
 				{/each}
 			</div>
@@ -220,7 +168,7 @@
 					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 				]}
 			>
-				{#each myUnits as unit (unit.slug)}
+				{#each visibleUnits as unit (unit.slug)}
 					<Unit
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
@@ -238,7 +186,7 @@
 					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 				]}
 			>
-				{#each myUnits as unit (unit.slug)}
+				{#each visibleUnits as unit (unit.slug)}
 					<!-- //! Dont do this twice! -->
 					{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
 						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
@@ -259,11 +207,11 @@
 
 		<!-- Load Button -->
 		<LoadButton
-			isDisabled={myUnits[myUnits.length - 1].nextSlug ? false : true}
+			isDisabled={visibleUnits[visibleUnits.length - 1].nextSlug ? false : true}
 			bind:node={targetNodeNext}
 			type="next"
 			{data}
-			{myUnits}
+			myUnits={visibleUnits}
 			clickHandler={handleAddNextUnit}
 			classes="row-span-1 row-start-3"
 		/>
