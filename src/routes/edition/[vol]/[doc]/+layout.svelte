@@ -7,7 +7,6 @@
 	import Abbreviations from '../../Abbreviations.svelte';
 
 	let { data, children } = $props();
-	
 </script>
 
 <div class="mx-auto max-w-[1800px] py-24">
@@ -21,10 +20,6 @@
 
 		<!-- Unit-Navigation -->
 		<UnitNavigation {data} />
-
-		<!-- Abbreviations -->
-		<Abbreviations />
-
 
 		<!-- Settings -->
 		<div class="my-5 flex justify-center gap-5 align-middle">

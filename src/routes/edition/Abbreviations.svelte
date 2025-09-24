@@ -1,19 +1,20 @@
 <script>
 	import { abbData } from '$lib/data/get_data';
+	import { X } from '@lucide/svelte';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
-	let drawerState = $state(false);
+
+	let { openState = $bindable(false) } = $props();
 
 	function drawerClose() {
-		drawerState = false;
+		openState = false;
 	}
 	let abbs = abbData;
 </script>
 
 <Modal
-	open={drawerState}
-	onOpenChange={(e) => (drawerState = e.value)}
-	triggerBase="btn preset-filled"
-	contentBase="bg-surface-100-900 p-4 space-y-4 shadow-xl w-[480px] h-screen overflow-y-auto"
+	open={openState}
+	onOpenChange={(e) => (openState = e.value)}
+	contentBase="p-4 space-y-4 shadow-xl w-[480px] h-screen bg-[var(--aco-orange-light)] relative border-r-5 border-r-[var(--aco-orange-light2)]"
 	positionerJustify="justify-start"
 	positionerAlign=""
 	positionerPadding=""
@@ -21,22 +22,23 @@
 	transitionsPositionerOut={{ x: -480, duration: 200 }}
 	classes="containerAbbreviations"
 >
-	{#snippet trigger()}Abkürzungsverzeichnis{/snippet}
-
 	{#snippet content()}
-		<header class="flex justify-between">
-			<h2 class="h2">Abkürzungsverzeichnis</h2>
+		<header class="relative flex flex-wrap justify-between pl-5">
+			<h2 class="h3 mt-7">Abkürzungsverzeichnis</h2>
 		</header>
-		<article>
-			<div class="grid grid-cols-[150px_auto] gap-4 pb-5 pl-13">
-				{#each Object.keys(abbs) as key}
-					<span class="col-span-1 col-start-1 font-bold">{key}</span>
-					<span class="col-span-1 col-start-2">{abbs[key]}</span>
-				{/each}
-			</div>
+		<button
+			type="button"
+			class="btn preset-filled absolute top-4 right-4 h-12 w-12 rounded-full border-2 border-[var(--aco-orange-light2)] bg-transparent p-0"
+			onclick={drawerClose}
+		>
+			<X size="18" color="var(--aco-orange-light2)" />
+		</button>
+		<article class="mt-8 grid h-8/10 grid-cols-[150px_auto] gap-4 overflow-y-auto px-10 pb-5">
+			{#each Object.keys(abbs) as key}
+				<span class="col-span-1 col-start-1 font-bold">{key}</span>
+				<span class="col-span-1 col-start-2">{abbs[key]}</span>
+			{/each}
 		</article>
-		<footer>
-			<button type="button" class="btn preset-filled" onclick={drawerClose}>Schliessen</button>
-		</footer>
+		<footer></footer>
 	{/snippet}
 </Modal>

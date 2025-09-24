@@ -10,6 +10,7 @@
 	import IconSun from '@lucide/svelte/icons/sun';
 
 	let { children } = $props();
+	let openStateAbbreviations = $state(false);
 </script>
 
 <!-- Menu -->
@@ -52,6 +53,7 @@
 			}}>Impressum</button
 		>
 
+		<!-- Lightswitch -->
 		<Switch
 			name="mode"
 			controlActive="bg-surface-700"
@@ -63,7 +65,13 @@
 			{#snippet activeChild()}<IconSun size="14" />{/snippet}
 		</Switch>
 
-		<Abbreviations />
+		<!-- Abbreviations -->
+		<Abbreviations bind:openState={openStateAbbreviations} />
+		<button
+			onclick={() => {
+				openStateAbbreviations = !openStateAbbreviations;
+			}}>Abkürzungsverzeichnis</button
+		>
 	</nav>
 </header>
 
