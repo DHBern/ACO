@@ -31,32 +31,23 @@
 	}
 	@font-face {
 		font-family: 'Junicode';
-		src: local('Junicode'), local('Junicode'), local('Junicode'), local('Junicode'),
-			url('/fonts/Junicode.ttf');
+		src: url('/fonts/Junicode/JunicodeVF-Roman.woff2') format('woff2');
+		font-weight: 300 700;
+		font-stretch: 75% 125%;
+		font-style: normal;
 		font-display: swap;
+		font-named-instance: 'Regular';
 	}
+	
 	@font-face {
-		font-family: 'Junicode-Bold';
-		src: local('Junicode-Bold'), local('Junicode-Bold'), local('Junicode-Bold'),
-			local('Junicode-Bold'), url('/fonts/Junicode-Bold.ttf');
-		font-weight: bold;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'Junicode-BoldItalic';
-		src: local('Junicode-BoldItalic'), local('Junicode-BoldItalic'), local('Junicode-BoldItalic'),
-			local('Junicode-BoldItalic'), url('/fonts/Junicode-BoldItalic.ttf');
-		font-weight: bold;
+		font-family: 'Junicode';
+		src: url('/fonts/Junicode/JunicodeVF-Italic.woff2') format('woff2');
+		font-weight: 300 700;
+		font-stretch: 75% 125%;
 		font-style: italic;
 		font-display: swap;
-	}
-	@font-face {
-		font-family: 'Junicode-Italic';
-		src: local('Junicode-Italic'), local('Junicode-Italic'), local('Junicode-Italic'),
-			local('Junicode-Italic'), url('/fonts/Junicode-Italic.ttf');
-		font-style: italic;
-		font-display: swap;
-	}
+		font-named-instance: 'Italic';
+		}
 }
 
 :root {
