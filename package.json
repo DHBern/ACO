@@ -32,13 +32,13 @@
 	},
 	"dependencies": {
 		"@floating-ui/dom": "^1.6.13",
-		"@lucide/svelte": "^0.483.0",
+		"@lucide/svelte": "^0.544.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "^4.0.14",
 		"cookie": "^1.0.2",
 		"esbuild": "^0.25.1",
-		"runed": "^0.31.1"
+		"runed": "^0.34.0"
 	}
 }
