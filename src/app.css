@@ -41,7 +41,7 @@
 		@font-face {
 		font-family: 'Junicode';
 		src: url('/fonts/Junicode/JunicodeVF-Italic.woff2') format('woff2');
-		font-weight: 100 900;
+		font-weight: 300 700;
 		font-style: italic;
 		font-display: swap;
 		font-named-instance: 'Italic';
