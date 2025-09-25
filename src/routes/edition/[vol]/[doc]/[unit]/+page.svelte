@@ -57,21 +57,8 @@
 		}
 	}
 
-	// Scrolling to lines and units
-	// $effect(() => {
-	// 	const elLine = document.querySelector(`[data-line="${data.line}"]`);
-	// 	if (elLine) {
-	// 		elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	// 	}
-	// });
-	// $effect(() => {
-	// 	const elLine = document.querySelector(`[data-unit="${data.slug_unit}"]`);
-	// 	if (elLine) {
-	// 		elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	// 	}
-	// });
-
 	const handleAddPrevUnit = async () => {
+		if (!visibleUnits[0].prevSlug) return;
 		const oldHeight = rectMainText.height;
 		await goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${visibleUnits[0].prevSlug}`, {
 			noScroll: true,
@@ -89,6 +76,7 @@
 	};
 
 	const handleAddNextUnit = async () => {
+		if (!visibleUnits[visibleUnits.length - 1].nextSlug) return;
 		await goto(
 			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${visibleUnits[visibleUnits.length - 1].nextSlug}`,
 			{

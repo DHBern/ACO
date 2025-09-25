@@ -21,7 +21,12 @@
 					<button
 						type="button"
 						onclick={() => {
-							goto(`${slug}`, { invalidateAll: true });
+							goto(`${slug}`).then(() => {
+								const elUnit = document.querySelector(`[data-unit="${slug}"]`);
+								if (elUnit) {
+									elUnit.scrollIntoView({ behavior: 'smooth', block: 'start' });
+								}
+							});
 						}}
 						class="mx-2 my-1 rounded-full bg-black px-4 py-1 text-white"
 						>{data.docMetadata.labels[idx]}</button
