@@ -10,6 +10,7 @@
 			"title": "Nestorius’ erste Predigt gegen den θεοτόκος-Titel (sermo 9)",
 			"unitSlugs": ["test"],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -25,6 +26,7 @@
 			"title": "Contestatio gegen die Kleriker von Konstantinopel",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -40,6 +42,7 @@
 			"title": "Homilie des Proklos von Kyzikos",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -55,6 +58,7 @@
 			"title": "Nestorius’ Antwort auf die Homilie des Proklos von Kyzikos (sermo 27)",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -70,6 +74,7 @@
 			"title": "Kyrills Brief an die ägyptischen Mönche",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -85,6 +90,7 @@
 			"title": "Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10)",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -100,6 +106,7 @@
 			"title": "Nestorius’ erster Brief an Coelestin",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -115,6 +122,7 @@
 			"title": "Kyrills Brief an die Apokrisiare in Konstantinopel",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -146,6 +154,7 @@
 			"title": "Kyrills Brief an seine Kritiker",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -161,6 +170,7 @@
 			"title": "Kyrills Brief an Akakios von Beroia (Ep. 14)",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -176,6 +186,7 @@
 			"title": "Brief des Akakios von Beroia an Kyrill",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -191,6 +202,7 @@
 			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 20 [Auszüge])",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -206,6 +218,7 @@
 			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 28 [Auszüge])",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -221,6 +234,7 @@
 			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 29 [Auszüge])",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -236,6 +250,7 @@
 			"title": "Predigt des Nestorius gegen die Pelagianer (sermo 30 [Auszüge])",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -251,6 +266,7 @@
 			"title": "Marius Mercators Commonitorium bezüglich Caelestius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -266,6 +282,7 @@
 			"title": "Kyrills erster Brief an Nestorius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -281,6 +298,7 @@
 			"title": "Nestorius’ erster Brief an Kyrill",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -296,6 +314,7 @@
 			"title": "Bittschrift des Diakon Basilius und weiterer Mönche",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -311,6 +330,7 @@
 			"title": "Nestorius’ Brief an Caelestius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -326,6 +346,7 @@
 			"title": "Nestorius’ zweiter Brief an Coelestin",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -341,6 +362,7 @@
 			"title": "Kyrills zweiter Brief an Nestorius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -356,6 +378,7 @@
 			"title": "Nestorius’ zweiter Brief an Kyrill",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -537,6 +560,7 @@
 			"title": "Kyrill, Exzerpte aus den Schriften des Nestorius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -552,6 +576,7 @@
 			"title": "Kyrills Brief an Coelestin",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -567,6 +592,7 @@
 			"title": "Kyrills Memorandum an Poseidonios",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -582,6 +608,7 @@
 			"title": "Coelestins Brief an Kyrill",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -597,6 +624,7 @@
 			"title": "Coelestins Brief an Nestorius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -612,6 +640,7 @@
 			"title": "Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -627,6 +656,7 @@
 			"title": "Coelestins Brief an Johannes von Antiochia, Juvenal von Jerusalem, Rufus von Thessaloniki und Flavian von Philippi",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -642,6 +672,7 @@
 			"title": "Kyrills Brief an Johannes von Antiochia",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -657,6 +688,7 @@
 			"title": "Kyrills Brief an Juvenal von Jerusalem",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -672,6 +704,7 @@
 			"title": "Brief des Johannes von Antiochia an Nestorius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -687,6 +720,7 @@
 			"title": "Kyrills dritter Brief an Nestorius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -702,6 +736,7 @@
 			"title": "Kyrills Brief an Klerus und Volk von Konstantinopel",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -717,6 +752,7 @@
 			"title": "Kyrills Brief an die Mönche in Konstantinopel",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -732,6 +768,7 @@
 			"title": "Kyrills Rede über den rechten Glauben an Theodosius",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -747,6 +784,7 @@
 			"title": "Kyrills Rede an die Herrinnen",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -762,6 +800,7 @@
 			"title": "Kyrills Rede an die Augustae über den Glauben",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -777,6 +816,7 @@
 			"title": "Sacra an Kyrill und die Metropoliten, durch welche die Synode in Ephesus einberufen wird",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -792,6 +832,7 @@
 			"title": "Sacra an Kyrill",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""
@@ -807,6 +848,7 @@
 			"title": "Sacra an Akakios von Beroia und andere",
 			"unitSlugs": [],
 			"unitLabels": [],
+			"unitLabelsInline": [""],
 			"content": {
 				"head": "",
 				"inhalt": ""

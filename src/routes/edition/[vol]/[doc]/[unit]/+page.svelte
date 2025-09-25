@@ -200,7 +200,6 @@
 				]}
 			>
 				{#each visibleUnits as unit (unit.slug)}
-					<!-- //! Dont do this twice! -->
 					{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
 						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
 					{/each}
