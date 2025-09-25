@@ -48,10 +48,11 @@
 	let selectedNote = $state({ slug: '' });
 	let multiMarkPopupStore = $state({ slugs: [], target: undefined, slugUnitTarget: undefined });
 
-	function handleResetMultiMark(ev) {
+	function handleResetMultiMark(ev: Event) {
+		const target = ev.target as Element | null;
 		if (
-			!ev.target.classList.contains('multimark-popup') &&
-			!(multiMarkPopupStore.slugs.length > 0 && ev.target.classList.contains('multiple-ids'))
+			!target?.classList.contains('multimark-popup') &&
+			!(multiMarkPopupStore.slugs.length > 0 && target?.classList.contains('multiple-ids'))
 		) {
 			multiMarkPopupStore.slugs = [];
 		}
