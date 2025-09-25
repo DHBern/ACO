@@ -21,9 +21,6 @@
 		<!-- Unit-Navigation -->
 		<UnitNavigation {data} />
 
-		<!-- Abbreviations -->
-		<Abbreviations />
-
 		<!-- Settings -->
 		<div class="my-5 flex justify-center gap-5 align-middle">
 			<Switch
