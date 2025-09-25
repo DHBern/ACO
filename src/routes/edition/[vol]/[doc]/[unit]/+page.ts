@@ -19,25 +19,23 @@ export async function load({ fetch, params }) {
 	const unitText = unitData.unitText;
 	const unitNotes = unitData.unitNotes;
 
-	// Bundle as myUnits
-	let myUnits = [slug_unit].map((slug)=>{
-		const indexPrev = metadataDoc?.unitSlugs.findIndex(unit => unit === slug) - 1;
-		const indexNext = metadataDoc?.unitSlugs.findIndex(unit => unit === slug) + 1;
-		return {
-			slug: slug,
+	// Bundle as unit
+	const indexPrev = metadataDoc?.unitSlugs.findIndex(unit => unit === slug_unit) - 1;
+	const indexNext = metadataDoc?.unitSlugs.findIndex(unit => unit === slug_unit) + 1;
+	let unit = {
+			slug: slug_unit,
 			prevSlug: metadataDoc?.unitSlugs[indexPrev] || null,
 			nextSlug: metadataDoc?.unitSlugs[indexNext] || null,
 			prevLabel: metadataDoc?.unitLabels?.[indexPrev] || null,
 			nextLabel: metadataDoc?.unitLabels?.[indexNext] || null,
 			text: unitText || '',
 			notes: unitNotes || []
-		}
-	})
+	}
 
 	return {
 		slug_unit,
 		slug_doc,
-		myUnits,
+		unit,
 		notesData,
 		unitText, 
 		unitNotes

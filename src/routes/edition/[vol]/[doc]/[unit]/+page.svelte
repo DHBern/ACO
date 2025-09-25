@@ -21,26 +21,31 @@
 
 	let { data } = $props();
 
-	let visibleUnits = $state(data.myUnits);
+	let visibleUnits = $state([data.unit]);
+
+	// reconstruct visibleUnits on change of unit
 	$effect(() => {
 		let resetUnits = false;
-		data.myUnits.forEach((unit) => {
-			if (visibleUnits.findIndex((u) => u.slug === unit.slug) === -1) {
-				const nextUnit = visibleUnits.findIndex((u) => u.nextSlug === unit.slug);
-				const prevUnit = visibleUnits.findIndex((u) => u.prevSlug === unit.slug);
-				if (prevUnit !== -1 && nextUnit !== -1) return; // should already be there, because both neighbors are there
-				if (nextUnit + prevUnit >= -1) {
-					// exactly one neighbor is there
-					visibleUnits.splice(nextUnit >= 0 ? nextUnit + 1 : prevUnit, 0, unit);
-				} else {
-					resetUnits = true;
-				}
+		// Insert unit if it's not there yet
+		if (visibleUnits.findIndex((u) => u.slug === data.unit.slug) === -1) {
+			const nextUnit = visibleUnits.findIndex((u) => u.nextSlug === data.unit.slug);
+			const prevUnit = visibleUnits.findIndex((u) => u.prevSlug === data.unit.slug);
+			if (prevUnit !== -1 && nextUnit !== -1) {
+				// both neighbors are there -> so unit itself should also be there
+				return;
+			} else if (nextUnit === -1) {
+				// insert the unit before it's neighbor
+				visibleUnits.unshift(data.unit);
+			} else if (prevUnit === -1) {
+				// insert the unit after it's neighbor
+				visibleUnits.push(data.unit);
 			} else {
-				// unit is already there
+				// no neighbors are present -> run reset
+				resetUnits = true;
 			}
-		});
+		}
 		if (resetUnits) {
-			visibleUnits = data.myUnits;
+			visibleUnits = [data.unit];
 		}
 	});
 
@@ -145,7 +150,7 @@
 			bind:node={targetNodePrev}
 			type="prev"
 			{data}
-			myUnits={visibleUnits}
+			{visibleUnits}
 			clickHandler={handleAddPrevUnit}
 			classes="row-span-1 row-start-1"
 		/>
@@ -219,7 +224,7 @@
 			bind:node={targetNodeNext}
 			type="next"
 			{data}
-			myUnits={visibleUnits}
+			{visibleUnits}
 			clickHandler={handleAddNextUnit}
 			classes="row-span-1 row-start-3"
 		/>
