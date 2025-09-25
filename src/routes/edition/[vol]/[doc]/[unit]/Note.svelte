@@ -9,8 +9,8 @@
 <div
 	data-id={noteSlug}
 	class={[
-		`notebox word-wrap absolute max-w-[700px] border-4 transition-transform  
-		duration-500 bg-[var(--aco-gray-1)] dark:bg-[var(--aco-teal)]`,
+		`notebox word-wrap absolute max-w-[700px] border-4 bg-[var(--aco-gray-1)]
+		transition-transform duration-500 dark:bg-[var(--aco-teal)]`,
 		selectedNote.slug === noteSlug && 'highlighted'
 	]}
 	style={`margin-top:${MARGIN_NOTEBOX}px; margin-bottom:${MARGIN_NOTEBOX}px`}
@@ -24,14 +24,21 @@
 	aria-pressed={selectedNote.slug === noteSlug}
 	aria-label="Focus note"
 >
-	<div class="note-header p-1">{@html createNoteReferenceString(noteMetadata.line_start, noteMetadata.line_end, noteMetadata.text_start, noteMetadata.text_end)}</div>
+	<div class="note-header p-1">
+		{@html createNoteReferenceString(
+			noteMetadata.line_start,
+			noteMetadata.line_end,
+			noteMetadata.text_start,
+			noteMetadata.text_end
+		)}
+	</div>
 	<div
-		class="h-full w-full bg-[var(--aco-teal-light)]/10 p-3 **:pt-4 **:[&_a]:text-[var(--aco-link)] in-[&.highlighted]:border-[var(--aco-teal-light)] in-[&.highlighted]:bg-[var(--aco-orange-light)]/40">
+		class="h-full w-full bg-[var(--aco-teal-light)]/10 p-3 **:pt-4 in-[&.highlighted]:border-[var(--aco-teal-light)] in-[&.highlighted]:bg-[var(--aco-orange-light)]/40 **:[&_a]:text-[var(--aco-link)]"
+	>
 		<p>{@html noteMetadata.note_content}</p>
 	</div>
 </div>
 
 <style>
 	@reference "tailwindcss";
-
 </style>
