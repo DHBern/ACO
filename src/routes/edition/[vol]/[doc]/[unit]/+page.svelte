@@ -23,9 +23,8 @@
 
 	let visibleUnits = $state([data.unit]);
 
-	// reconstruct visibleUnits on change of unit
+	// reconstruct visibleUnits on change of data.unit
 	$effect(() => {
-		let resetUnits = false;
 		// Insert unit if it's not there yet
 		if (visibleUnits.findIndex((u) => u.slug === data.unit.slug) === -1) {
 			const nextUnit = visibleUnits.findIndex((u) => u.nextSlug === data.unit.slug);
@@ -33,19 +32,16 @@
 			if (prevUnit !== -1 && nextUnit !== -1) {
 				// both neighbors are there -> so unit itself should also be there
 				return;
-			} else if (nextUnit === -1) {
-				// insert the unit before it's neighbor
-				visibleUnits.unshift(data.unit);
-			} else if (prevUnit === -1) {
-				// insert the unit after it's neighbor
+			} else if (nextUnit >= 0) {
+				// insert the unit last
 				visibleUnits.push(data.unit);
+			} else if (prevUnit >= 0) {
+				// insert the unit first
+				visibleUnits.unshift(data.unit);
 			} else {
-				// no neighbors are present -> run reset
-				resetUnits = true;
+				// no neighbors are present -> reset
+				visibleUnits = [data.unit];
 			}
-		}
-		if (resetUnits) {
-			visibleUnits = [data.unit];
 		}
 	});
 
