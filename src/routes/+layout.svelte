@@ -25,32 +25,22 @@
 	</button>
 
 	<!-- Top Navigation Bar -->
-	<nav class="flex flex-row justify-start gap-12">
-		<button
-			onclick={() => {
-				goto(base + '/ueber');
-			}}>Über das Projekt</button
-		>
-		<button
-			onclick={() => {
-				goto(base + '/edition');
-			}}>Bände</button
-		>
+	<nav class="flex w-full items-center justify-around *:mr-10">
+		<div class="flex gap-12">
+			<a href={`${base}/ueber`}>Über das Projekt</a>
+			<a href={`${base}/edition`}>Bände</a>
+			<a href={`${base}/register`}>Register</a>
+			<a href={`${base}/suche`}>Suche</a>
+			<a href={`${base}/impressum`}>Impressum</a>
+		</div>
+		<div class="flex-grow"></div>
 
+		<!-- Abbreviations -->
+		<Abbreviations bind:openState={openStateAbbreviations} />
 		<button
 			onclick={() => {
-				goto(base + '/register');
-			}}>Register</button
-		>
-		<button
-			onclick={() => {
-				goto(base + '/suche');
-			}}>Suche</button
-		>
-		<button
-			onclick={() => {
-				goto(base + '/impressum');
-			}}>Impressum</button
+				openStateAbbreviations = !openStateAbbreviations;
+			}}>Abkürzungsverzeichnis</button
 		>
 
 		<!-- Lightswitch -->
@@ -64,14 +54,6 @@
 			{#snippet inactiveChild()}<IconMoon size="14" />{/snippet}
 			{#snippet activeChild()}<IconSun size="14" />{/snippet}
 		</Switch>
-
-		<!-- Abbreviations -->
-		<Abbreviations bind:openState={openStateAbbreviations} />
-		<button
-			onclick={() => {
-				openStateAbbreviations = !openStateAbbreviations;
-			}}>Abkürzungsverzeichnis</button
-		>
 	</nav>
 </header>
 
