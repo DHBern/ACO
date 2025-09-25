@@ -134,9 +134,6 @@
 	</Accordion>
 </div>
 
-<!-- Abbreviations -->
-<Abbreviations />
-
 <style>
 	@reference "tailwindcss";
 	h1 {
