@@ -46,9 +46,5 @@
 			</Switch>
 		</div>
 	</div>
-	<div class="h-screen w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24">
-		<div class="containerDocContent grid grid-rows-[40px_auto_40px] gap-5">
-			{@render children()}
-		</div>
-	</div>
+	{@render children()}
 </div>

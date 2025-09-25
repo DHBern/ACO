@@ -1,6 +1,6 @@
 <script>
 	import { base } from '$app/paths';
-	import { textData } from '$lib/data/get_data';
+	import { metaData } from '$lib/data/get_alldata_testing.js';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 	import Abbreviations from './Abbreviations.svelte';
 
@@ -13,10 +13,7 @@
 
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
 	let docs = {};
-	docs.CV = textData.filter(({ type: t }) => t === 'CV');
-	docs.CPal = textData.filter(({ type: t }) => t === 'CPal');
-	docs.CVer = textData.filter(({ type: t }) => t === 'CVer');
-	docs.CU = textData.filter(({ type: t }) => t === 'CU');
+	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
 <h1>Dokumente</h1>
@@ -46,7 +43,7 @@
 						<h2 class="mb-4">Dokumente</h2>
 						<div class="pb-10 pl-8">
 							<ul>
-								{#each textData.slice().sort((a, b) => a.acoNum - b.acoNum) as doc (doc.slug)}
+								{#each metaData.slice().sort((a, b) => a.acoNum - b.acoNum) as doc (doc.slug)}
 									<li class="mb-1 hover:**:text-[var(--aco-orange)]">
 										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 											<span class="font-bold text-black dark:text-black">{doc.acoNumLabel}:</span>

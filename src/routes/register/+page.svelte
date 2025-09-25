@@ -9,8 +9,6 @@
 	let accordionPlaces = $state({ value: '' });
 	let accordionPeople = $state({ value: '' });
 
-	$inspect(accordionPlaces);
-
 	// Grouping the array by the first entry
 	function groupByDoc(loc) {
 		return loc.reduce((acc, [key, value]) => {
@@ -36,8 +34,6 @@
 	const placesGrouped = data.places.map((place) => {
 		return groupByDoc(place['loc-s']);
 	});
-
-	console.log(peopleGrouped, placesGrouped);
 </script>
 
 {#snippet accordion(labelsList, groupedList, accordionState)}
@@ -68,7 +64,7 @@
 	</Accordion>
 {/snippet}
 
-<div class="grid w-full grid-cols-2 gap-5 py-24 max-w-[1500px] mx-auto">
+<div class="mx-auto grid w-full max-w-[1500px] grid-cols-2 gap-5 py-24">
 	<h1 class="text-3xl font-bold text-[var(--aco-orange)]">Register</h1>
 	<div class="col-span-2 mb-4">
 		<p class="">Vgl. für detailliertere Angaben den Index bei Schwartz.</p>
