@@ -8,7 +8,6 @@
 	function drawerClose() {
 		openState = false;
 	}
-	let abbs = abbData;
 </script>
 
 <Modal
@@ -34,9 +33,9 @@
 			<X size="18" color="var(--aco-orange-light2)" />
 		</button>
 		<article class="mt-8 grid h-8/10 grid-cols-[150px_auto] gap-4 overflow-y-auto px-10 pb-5">
-			{#each Object.keys(abbs) as key}
+			{#each Object.keys(abbData) as key}
 				<span class="col-span-1 col-start-1 font-bold">{key}</span>
-				<span class="col-span-1 col-start-2">{abbs[key]}</span>
+				<span class="col-span-1 col-start-2">{abbData[key]}</span>
 			{/each}
 		</article>
 		<footer></footer>
