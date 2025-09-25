@@ -9,7 +9,7 @@
 	import Unit from './Unit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 
-	import { IsInViewport, ElementRect, ScrollState } from 'runed';
+	import { IsInViewport, ElementRect, ScrollState, useIntersectionObserver } from 'runed';
 
 	import {
 		extractNoteIds,
@@ -21,7 +21,7 @@
 
 	let { data } = $props();
 
-	let visibleUnits = $state([data.unit]);
+	let visibleUnits = $state([{ ...data.unit, element: undefined }]); // Start with the current unit
 
 	// reconstruct visibleUnits on change of data.unit
 	$effect(() => {
@@ -34,13 +34,13 @@
 				return;
 			} else if (nextUnit >= 0) {
 				// insert the unit last
-				visibleUnits.push(data.unit);
+				visibleUnits.push({ ...data.unit, element: undefined });
 			} else if (prevUnit >= 0) {
 				// insert the unit first
-				visibleUnits.unshift(data.unit);
+				visibleUnits.unshift({ ...data.unit, element: undefined });
 			} else {
 				// no neighbors are present -> reset
-				visibleUnits = [data.unit];
+				visibleUnits = [{ ...data.unit, element: undefined }];
 			}
 		}
 	});
@@ -106,6 +106,20 @@
 		});
 	});
 
+	useIntersectionObserver(
+		() => visibleUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
+		(entries) => {
+			const entry = entries[0];
+			if (!entry || !entry.isIntersecting) return;
+			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${entry.target.dataset.unit}`, {
+				replaceState: true,
+				noScroll: true,
+				keepFocus: true
+			});
+		},
+		{ root: () => container, rootMargin: '-15% 0px -15% 0px' }
+	);
+
 	// scrollObservers container
 	let container = $state<HTMLElement>();
 	const scrollState = new ScrollState({ element: () => container });
@@ -168,6 +182,7 @@
 			>
 				{#each visibleUnits as unit (unit.slug)}
 					<Unit
+						bind:el={unit.element}
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
 						unitLabelInline={unit.labelInline}
