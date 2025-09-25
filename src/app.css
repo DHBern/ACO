@@ -33,15 +33,17 @@
 		font-family: 'Junicode';
 		src: url('/fonts/Junicode/JunicodeVF-Roman.woff2') format('woff2');
 		font-weight: 300 700;
+		font-stretch: 75% 125%;
 		font-style: normal;
 		font-display: swap;
 		font-named-instance: 'Regular';
-		}
-		
-		@font-face {
+	}
+	
+	@font-face {
 		font-family: 'Junicode';
 		src: url('/fonts/Junicode/JunicodeVF-Italic.woff2') format('woff2');
 		font-weight: 300 700;
+		font-stretch: 75% 125%;
 		font-style: italic;
 		font-display: swap;
 		font-named-instance: 'Italic';
