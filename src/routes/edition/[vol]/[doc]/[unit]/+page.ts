@@ -30,7 +30,7 @@ export async function load({ fetch, params }) {
 		nextLabel: metadataDoc?.unitLabels?.[indexNext] || null,
 		text: unitText || '',
 		notes: unitNotes || [],
-		labelInline: {}
+		labelInline: undefined
 	};
 
 	return {
