@@ -13,6 +13,9 @@
 
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
 	let docs = {};
+	docs.CV = metaData.filter(({ type: t }) => t === 'CV');
+	docs.CPal = metaData.filter(({ type: t }) => t === 'CPal');
+	docs.CVer = metaData.filter(({ type: t }) => t === 'CVer');
 	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
