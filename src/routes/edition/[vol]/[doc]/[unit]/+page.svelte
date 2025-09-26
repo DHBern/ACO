@@ -189,7 +189,7 @@
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
 						unitLabelInline={unit.labelInline}
-						{selectedNote}
+						bind:selectedNote
 						{multiMarkPopupStore}
 					></Unit>
 				{/each}
@@ -204,7 +204,7 @@
 			>
 				{#each visibleUnits as unit (unit.slug)}
 					{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
-						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
+						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} bind:selectedNote></Note>
 					{/each}
 				{/each}
 			</div>
@@ -213,7 +213,7 @@
 			{#if multiMarkPopupStore.slugs.length > 0}
 				<MultiMarkPopup
 					{multiMarkPopupStore}
-					{selectedNote}
+					bind:selectedNote
 					notesData={data.notesData}
 					slug_doc={data.slug_doc}
 				/>

@@ -3,7 +3,7 @@
 	import { handleNoteClick } from '$lib/functions/floatingApparatus';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
 
-	let { noteSlug, noteMetadata, selectedNote } = $props();
+	let { noteSlug, noteMetadata, selectedNote = $bindable() } = $props();
 </script>
 
 <div
