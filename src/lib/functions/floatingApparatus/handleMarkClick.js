@@ -1,5 +1,6 @@
 import { selectMark } from './selectMark';
 import { moveNote } from './moveNote';
+import { scrollToNoteRef } from './scrollToNoteRef';
 import { showMultiMarkPopup } from './showMultiMarkPopup';
 
 export function handleMarkClick(ev, selectedNote, multiMarkPopupStore) {
@@ -15,9 +16,10 @@ export function handleMarkClick(ev, selectedNote, multiMarkPopupStore) {
 		case 0:
 			return;
 		case 1:
-			selectMark(ids[0]);
-			moveNote(ids[0]);
 			selectedNote.slug = ids[0];
+			selectMark(ids[0]);
+			scrollToNoteRef(ids[0]);
+			moveNote(ids[0]);
 			break;
 		default:
 			showMultiMarkPopup(ids, multiMarkPopupStore, ev.target);

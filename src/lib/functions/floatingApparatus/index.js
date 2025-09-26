@@ -8,6 +8,7 @@ export { getInstantOffsetTop } from './getInstantOffsetTop';
 export { placeNotes } from './placeNotes'; // original placement (do this onMount)
 export { selectMark } from './selectMark'; //
 export { moveNote } from './moveNote';
+export { scrollToNoteRef } from './scrollToNoteRef';
 export { unselectMarks } from './unselectMarks';
 
 // Handle interaction with notes, marks and popups
