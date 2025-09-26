@@ -2,7 +2,6 @@
 	import { base } from '$app/paths';
 	import { metaData } from '$lib/data/get_alldata_testing.js';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
-	import Abbreviations from './Abbreviations.svelte';
 
 	let accordionState = $state(['Band 1']);
 
