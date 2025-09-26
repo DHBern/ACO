@@ -6,6 +6,6 @@
 	let { data } = $props();
 
 	onMount(() => {
-		goto(`${base}//edition`);
+		goto(`${base}/edition`);
 	});
 </script>
