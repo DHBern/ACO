@@ -11,8 +11,7 @@ const abbData = await aData;
 const notesData = await nData;
 const registerData = await rData;
 
-export {metaData, textData, abbData, notesData, registerData};
-
+export { metaData, textData, abbData, notesData, registerData };
 
 // Get JSON from Web-API
 // import { api } from '$lib/constants/constants';

@@ -26,9 +26,7 @@
 	bind:this={popUpElement}
 >
 	<div class="p-1 font-bold">Bitte Kommentar wählen</div>
-	<ul
-		class="w-full bg-[var(--aco-teal-light)]/10"
-	>
+	<ul class="w-full bg-[var(--aco-teal-light)]/10">
 		{#each multiMarkPopupStore.slugs as id (id)}
 			{@const idMetadata = notesData[slug_doc][multiMarkPopupStore.slugUnitTarget][id]}
 			<li class="p-2 hover:bg-[var(--aco-orange-light)]/30">
@@ -36,7 +34,7 @@
 					onclick={() => {
 						handlePopupClick(id, selectedNote, multiMarkPopupStore);
 					}}
-					><p class="m-0 !pt-0 color-sky-900">
+					><p class="color-sky-900 m-0 !pt-0">
 						{@html createNoteReferenceString(
 							idMetadata.line_start,
 							idMetadata.line_end,

@@ -1,5 +1,4 @@
-<div class="py-24 max-w-[1500px] mx-auto">
-
+<div class="mx-auto max-w-[1500px] py-24">
 	<h1>Projekt ACO</h1>
 	<h2>Die Akten des Konzils von Ephesus 431</h2>
 	<p>
@@ -17,10 +16,10 @@
 <style>
 	@reference "tailwindcss";
 	h1 {
-		@apply text-3xl font-bold text-[var(--aco-orange)] mb-2;
+		@apply mb-2 text-3xl font-bold text-[var(--aco-orange)];
 	}
 	h2 {
-		@apply text-xl font-bold mt-8;
+		@apply mt-8 text-xl font-bold;
 	}
 	h3 {
 		@apply text-lg font-bold;

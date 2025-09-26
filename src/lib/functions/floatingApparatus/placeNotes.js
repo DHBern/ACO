@@ -3,7 +3,6 @@ import { setTranslateY } from './setTranslateY';
 import { moveNote } from './moveNote';
 
 export function placeNotes(ids) {
-
 	let offsetSum = 0;
 	ids.forEach((id) => {
 		const elNoteBox = document.querySelector(`.notebox[data-id=${id}]`);
@@ -24,7 +23,7 @@ export function placeNotes(ids) {
 		// }
 	});
 
-	ids.reverse().forEach(id =>{
-		moveNote(id)
+	ids.reverse().forEach((id) => {
+		moveNote(id);
 	});
 }

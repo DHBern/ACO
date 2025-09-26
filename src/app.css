@@ -38,7 +38,7 @@
 		font-display: swap;
 		font-named-instance: 'Regular';
 	}
-	
+
 	@font-face {
 		font-family: 'Junicode';
 		src: url('/fonts/Junicode/JunicodeVF-Italic.woff2') format('woff2');
@@ -47,7 +47,7 @@
 		font-style: italic;
 		font-display: swap;
 		font-named-instance: 'Italic';
-		}
+	}
 }
 
 :root {
@@ -78,7 +78,7 @@ span[data-type='head_key'] {
 
 /* Edition Text */
 .marksVisible span[data-ids] {
-	@apply cursor-pointer bg-[#ffffdd] [&.multiple-ids]:bg-[#ffff99] dark:text-black;
+	@apply cursor-pointer bg-[#ffffdd] dark:text-black [&.multiple-ids]:bg-[#ffff99];
 }
 
 .marksVisible span[data-type='mark'].highlighted {
@@ -89,11 +89,11 @@ span[data-type='head_key'] {
 	@apply indent-6;
 }
 .containerText [data-type='lib-number'] {
-	@apply text-center font-bold w-full inline-block mt-10;
+	@apply mt-10 inline-block w-full text-center font-bold;
 }
 
 .containerText [data-type='acoTitle'] {
-	@apply text-center font-bold text-lg;
+	@apply text-center text-lg font-bold;
 }
 /* [data-title_line="2"] {
 	@apply text-2xl
