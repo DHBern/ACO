@@ -5,9 +5,6 @@
 	import { onMount, tick } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
-	import { useSearchParams } from 'runed/kit';
-	import { z } from 'zod';
-
 	import LoadButton from './LoadButton.svelte';
 	import Note from './Note.svelte';
 	import TextUnit from './TextUnit.svelte';
@@ -26,49 +23,6 @@
 	let { data } = $props();
 
 	let finishedInitScroll = $state(false);
-
-	// Runed ElementRect for Main Text
-	let mainTextContainer = $state<HTMLElement>();
-	const rectMainText = new ElementRect(() => mainTextContainer);
-
-	// Runed useSearchParams
-	function getCurrentMaxAttribute(html, attr = '') {
-		const re = new RegExp(`data-${attr}=['"]?(\\d+)['"]?`, 'g');
-		let match;
-		let max = 0;
-		while ((match = re.exec(html)) !== null) {
-			const v = Number(match[1]);
-			if (v > max) max = v;
-		}
-		return max;
-	}
-	const maxLine = getCurrentMaxAttribute(data.unitText, 'line'); // runtime number
-	const maxPage = getCurrentMaxAttribute(data.unitText, 'page'); // runtime number
-
-	const params = useSearchParams(
-		z.object({
-			line: z.coerce
-				.number()
-				.int()
-				.default(1)
-				// clamp between 1 and maxLine
-				.transform((n) => {
-					// guard NaN from z.coerce; default to 1
-					const v = Number.isFinite(n) ? n : 1;
-					return Math.min(Math.max(v, 1), maxLine);
-				}),
-			page: z.coerce
-				.number()
-				.int()
-				.default(1)
-				// clamp between 1 and maxPage
-				.transform((n) => {
-					// guard NaN from z.coerce; default to 1
-					const v = Number.isFinite(n) ? n : 1;
-					return Math.min(Math.max(v, 1), maxPage);
-				})
-		})
-	);
 
 	// --- Collect Loaded Units in Array ---------------------------
 
@@ -106,6 +60,10 @@
 		element: () => elContainerContent,
 		behavior: 'instant'
 	});
+
+	// Runed ElementRect for Main Text
+	let mainTextContainer = $state<HTMLElement>();
+	const rectMainText = new ElementRect(() => mainTextContainer);
 
 	// Handlers
 	// --> They take care of...
@@ -233,7 +191,7 @@
 	});
 
 	function initialScroll() {
-		if (!(params.line || params.page)) {
+		if (!(page.url.searchParams.get('line') || page.url.searchParams.get('page'))) {
 			// scroll window to document head
 			const elH1 = document.querySelector('.containerDocHead h1');
 			scrollStateInitWindow.scrollTo(scrollStateInitWindow.x, elH1?.offsetTop - 10 || 1);
@@ -246,18 +204,18 @@
 
 			// scroll content
 			const elContainer = document.querySelector('.containerContent');
-			if (params.line) {
+			if (page.url.searchParams.get('line')) {
 				const elLine = document.querySelector(
-					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
+					`[data-unit='${data.slug_unit}'] [data-line='${page.url.searchParams.get('line')}']`
 				);
 				// elLine.scrollIntoView({ behavior: 'smooth', block:'center'});
 				elContainer?.scrollTo({
 					top: elLine?.offsetTop,
 					behavior: 'smooth'
 				});
-			} else if (params.page) {
+			} else if (page.url.searchParams.get('page')) {
 				const elPage = document.querySelector(
-					`[data-unit='${data.slug_unit}'] [data-page='${params.page}']`
+					`[data-unit='${data.slug_unit}'] [data-page='${page.url.searchParams.get('page')}']`
 				);
 				// elPage.scrollIntoView({ behavior: 'smooth', block:'center'});
 				elContainer?.scrollTo({
