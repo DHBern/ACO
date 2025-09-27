@@ -5,6 +5,9 @@
 	import { onMount, tick } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
+	import { useSearchParams } from 'runed/kit';
+	import { z } from 'zod';
+
 	import LoadButton from './LoadButton.svelte';
 	import Note from './Note.svelte';
 	import TextUnit from './TextUnit.svelte';
@@ -23,6 +26,60 @@
 	let { data } = $props();
 
 	let finishedInitScroll = $state(false);
+
+	// --- Handle search params ---------------------------
+
+	// Get boundaries of data-line and data-page
+	function getCurrentMaxAttribute(html, minmax: 'min' | 'max', attr = '') {
+		const re = new RegExp(`data-${attr}=['"]?(\\d+)['"]?`, 'g');
+		let match;
+		if (minmax === 'max') {
+			let max = 0;
+			while ((match = re.exec(html)) !== null) {
+				const v = Number(match[1]);
+				if (v > max) max = v;
+			}
+			return max;
+		} else if (minmax === 'min') {
+			let min = 1e9;
+			while ((match = re.exec(html)) !== null) {
+				const v = Number(match[1]);
+				if (v < min) min = v;
+			}
+			return min;
+		}
+	}
+	const maxLine = getCurrentMaxAttribute(data.unitText, 'max', 'line'); // runtime number
+	const maxPage = getCurrentMaxAttribute(data.unitText, 'max', 'page'); // runtime number
+	const minPage = getCurrentMaxAttribute(data.unitText, 'min', 'page'); // runtime number
+
+	// Runed useSearchParams
+	const params = useSearchParams(
+		z.object({
+			line: z.coerce
+				.number()
+				.int()
+				.default(1)
+				// clamp between 1 and maxLine
+				.transform((n) => {
+					// guard NaN from z.coerce; default to 1
+					const v = Number.isFinite(n) ? n : 1;
+					console.log(v, maxLine, Math.min(Math.max(v, 1), maxLine));
+					return Math.min(Math.max(v, 1), maxLine);
+				}),
+			page: z.coerce
+				.number()
+				.int()
+				.default(1)
+				// clamp between 1 and maxPage
+				.transform((n) => {
+					// guard NaN from z.coerce; default to 1
+					const v = Number.isFinite(n) ? n : 1;
+					console.log(v, maxPage, Math.min(Math.max(v, minPage), maxPage));
+					return Math.min(Math.max(v, 1), maxPage);
+				})
+		})
+	);
 
 	// --- Collect Loaded Units in Array ---------------------------
 
@@ -192,6 +249,7 @@
 
 	function initialScroll() {
 		if (!(page.url.searchParams.get('line') || page.url.searchParams.get('page'))) {
+			console.log('params', page.url.searchParams.get('line'), page.url.searchParams.get('page'));
 			// scroll window to document head
 			const elH1 = document.querySelector('.containerDocHead h1');
 			scrollStateInitWindow.scrollTo(scrollStateInitWindow.x, elH1?.offsetTop - 10 || 1);
@@ -206,7 +264,7 @@
 			const elContainer = document.querySelector('.containerContent');
 			if (page.url.searchParams.get('line')) {
 				const elLine = document.querySelector(
-					`[data-unit='${data.slug_unit}'] [data-line='${page.url.searchParams.get('line')}']`
+					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
 				);
 				// elLine.scrollIntoView({ behavior: 'smooth', block:'center'});
 				elContainer?.scrollTo({
@@ -215,7 +273,7 @@
 				});
 			} else if (page.url.searchParams.get('page')) {
 				const elPage = document.querySelector(
-					`[data-unit='${data.slug_unit}'] [data-page='${page.url.searchParams.get('page')}']`
+					`[data-unit='${data.slug_unit}'] [data-page='${params.page}']`
 				);
 				// elPage.scrollIntoView({ behavior: 'smooth', block:'center'});
 				elContainer?.scrollTo({
