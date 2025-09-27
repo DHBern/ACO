@@ -64,7 +64,6 @@
 				.transform((n) => {
 					// guard NaN from z.coerce; default to 1
 					const v = Number.isFinite(n) ? n : 1;
-					console.log(v, maxLine, Math.min(Math.max(v, 1), maxLine));
 					return Math.min(Math.max(v, 1), maxLine);
 				}),
 			page: z.coerce
@@ -75,7 +74,6 @@
 				.transform((n) => {
 					// guard NaN from z.coerce; default to 1
 					const v = Number.isFinite(n) ? n : 1;
-					console.log(v, maxPage, Math.min(Math.max(v, minPage), maxPage));
 					return Math.min(Math.max(v, 1), maxPage);
 				})
 		})
@@ -249,7 +247,6 @@
 
 	function initialScroll() {
 		if (!(page.url.searchParams.get('line') || page.url.searchParams.get('page'))) {
-			console.log('params', page.url.searchParams.get('line'), page.url.searchParams.get('page'));
 			// scroll window to document head
 			const elH1 = document.querySelector('.containerDocHead h1');
 			scrollStateInitWindow.scrollTo(scrollStateInitWindow.x, elH1?.offsetTop - 10 || 1);
