@@ -1,44 +1,34 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import { onMount, tick } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
 	import LoadButton from './LoadButton.svelte';
 	import Note from './Note.svelte';
-	import Unit from './Unit.svelte';
+	import TextUnit from './TextUnit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 
 	import { IsInViewport, ElementRect, ScrollState, useIntersectionObserver } from 'runed';
 
+	import { placeNotes } from '$lib/functions/floatingApparatus';
 	import {
 		extractNoteIds,
 		generateMainText,
 		generateLineNumbers,
 		generatePageNumbers
 	} from '$lib/functions/protoHTMLconversion';
-	import { placeNotes } from '$lib/functions/floatingApparatus/placeNotes.js';
 
 	let { data } = $props();
 
-	// Runed ScrollState for Container of Content
-	let containerContent = $state<HTMLElement>();
-	const scrollState = new ScrollState({ element: () => containerContent });
-
-	// Runed ElementRect for Main Text
-	let mainTextContainer = $state<HTMLElement>();
-	const rectMainText = new ElementRect(() => mainTextContainer);
-
-	// Runed inViewportObservers for LoadButtons
-	let elPrevButton = $state<HTMLElement>()!;
-	let elNextButton = $state<HTMLElement>()!;
-	let inViewportPrev = new IsInViewport(() => elPrevButton);
-	let inViewportNext = new IsInViewport(() => elNextButton);
+	let finishedInitScroll = $state(false);
 
 	// --- Collect Loaded Units in Array ---------------------------
 
 	// Contains all visible (=loaded) units, starting with current unit
 	let visibleUnits = $state([{ ...data.unit, element: undefined }]);
+	// $inspect(visibleUnits);
 
 	// Add unit to the end or beginning of the array when data.unit changes
 	$effect(() => {
@@ -64,10 +54,22 @@
 
 	// --- Handle Loading new Units ---------------------------
 
-	// handlers that take care of...
-	// - navigation via goto (changing URL will update data.unit)
-	// - update scroll position
-	// - re-position all notes
+	// Runed ScrollState
+	let elContainerContent = $state<HTMLElement>();
+	const scrollStateContainerContent = new ScrollState({
+		element: () => elContainerContent,
+		behavior: 'instant'
+	});
+
+	// Runed ElementRect for Main Text
+	let mainTextContainer = $state<HTMLElement>();
+	const rectMainText = new ElementRect(() => mainTextContainer);
+
+	// Handlers
+	// --> They take care of...
+	// 		- navigation via goto (changing URL will update data.unit)
+	// 		- update scroll position
+	// 		- re-position all notes
 
 	const handleAddPrevUnit = async () => {
 		if (!visibleUnits[0].prevSlug) return;
@@ -82,7 +84,7 @@
 		// Update scrollposition to where user was before new unit was loaded
 		const newHeight =
 			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
-		scrollState.scrollTo(scrollState.x, newHeight - oldHeight);
+		scrollStateContainerContent.scrollTo(scrollStateContainerContent.x, newHeight - oldHeight);
 
 		// Re-position of all notes
 		visibleUnits.forEach((unit) => {
@@ -104,15 +106,41 @@
 
 	// --- Trigger Unit-Load when loadButton gets into view ---------------------------
 
+	// Runed inViewportObservers for LoadButtons
+	let elPrevButton = $state<HTMLElement>()!;
+	let elNextButton = $state<HTMLElement>()!;
+	let inViewportPrev = new IsInViewport(() => elPrevButton);
+	let inViewportNext = new IsInViewport(() => elNextButton);
+
+	// Navigate to oldURL
+	async function restoreURL_and_rerunloadMore(oldURL) {
+		await goto(oldURL, {
+			replaceState: true,
+			noScroll: true,
+			keepFocus: true
+		});
+
+		// Load again
+		// (if loaded text was very short, button may still be visible)
+		loadMore(oldURL);
+	}
+
+	async function loadMore(oldURL: string | undefined = undefined) {
+		if (inViewportNext.current) {
+			await handleAddNextUnit();
+			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
+		} else if (inViewportPrev.current) {
+			await handleAddPrevUnit();
+			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
+		}
+	}
+
 	$effect.pre(() => {
 		inViewportPrev.current; // track changes for effect
 		inViewportNext.current; // track changes for effect
 		tick().then(() => {
-			if (inViewportNext.current) {
-				handleAddNextUnit();
-			} else if (inViewportPrev.current) {
-				handleAddPrevUnit();
-			}
+			if (!finishedInitScroll) return; //! keep this inside async part!
+			loadMore();
 		});
 	});
 
@@ -120,16 +148,17 @@
 
 	useIntersectionObserver(
 		() => visibleUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
-		(entries) => {
+		async (entries) => {
 			const entry = entries[0];
 			if (!entry || !entry.isIntersecting) return;
+			if (!finishedInitScroll) return;
 			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${entry.target.dataset.unit}`, {
 				replaceState: true,
 				noScroll: true,
 				keepFocus: true
 			});
 		},
-		{ root: () => containerContent, rootMargin: '-15% 0px -15% 0px' }
+		{ root: () => elContainerContent, rootMargin: '-15% 0px -15% 0px' }
 	);
 
 	// --- Handle Selecting Notes ---------------------------
@@ -147,9 +176,62 @@
 		}
 	}
 
+	// --- Handle Initial Scroll of window and content (depending on Search Params) ---------------------------
+
+	// Runed ScrollState for Initial Scroll of Window
+	const scrollStateInitWindow = new ScrollState({
+		element: () => window,
+		behavior: 'smooth',
+		onStop: async () => {
+			const oldURL = `${page.url.pathname}${page.url.search}`;
+			await loadMore(oldURL);
+			await tick();
+			finishedInitScroll = true;
+		}
+	});
+
+	function initialScroll() {
+		if (!(page.url.searchParams.get('line') || page.url.searchParams.get('page'))) {
+			// scroll window to document head
+			const elH1 = document.querySelector('.containerDocHead h1');
+			scrollStateInitWindow.scrollTo(scrollStateInitWindow.x, elH1?.offsetTop - 10 || 1);
+		} else {
+			// scroll window to document content
+			scrollStateInitWindow.scrollTo(
+				scrollStateInitWindow.x,
+				elContainerContent?.offsetTop - 10 || 1
+			);
+
+			// scroll content
+			const elContainer = document.querySelector('.containerContent');
+			if (page.url.searchParams.get('line')) {
+				const elLine = document.querySelector(
+					`[data-unit='${data.slug_unit}'] [data-line='${page.url.searchParams.get('line')}']`
+				);
+				// elLine.scrollIntoView({ behavior: 'smooth', block:'center'});
+				elContainer?.scrollTo({
+					top: elLine?.offsetTop,
+					behavior: 'smooth'
+				});
+			} else if (page.url.searchParams.get('page')) {
+				const elPage = document.querySelector(
+					`[data-unit='${data.slug_unit}'] [data-page='${page.url.searchParams.get('page')}']`
+				);
+				// elPage.scrollIntoView({ behavior: 'smooth', block:'center'});
+				elContainer?.scrollTo({
+					top: elPage?.offsetTop,
+					behavior: 'smooth'
+				});
+			}
+		}
+	}
+
 	onMount(() => {
 		// Event Listeners
 		document.body.addEventListener('click', handleResetMultiMark);
+
+		// Scroll page and content
+		initialScroll();
 
 		// Clean-up
 		return () => {
@@ -159,21 +241,21 @@
 </script>
 
 <div
-	bind:this={containerContent}
+	bind:this={elContainerContent}
 	class="containerContent h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
 >
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->
-		<LoadButton
-			isDisabled={visibleUnits[0].prevSlug ? false : true}
-			bind:node={elPrevButton}
-			type="prev"
-			{data}
-			{visibleUnits}
-			clickHandler={handleAddPrevUnit}
-			classes="row-span-1 row-start-1"
-		/>
-
+		{#if visibleUnits[0].prevSlug}
+			<LoadButton
+				bind:node={elPrevButton}
+				type="prev"
+				{data}
+				{visibleUnits}
+				clickHandler={handleAddPrevUnit}
+				classes="row-span-1 row-start-1"
+			/>
+		{/if}
 		<!-- Units -->
 		<div
 			class="row-span-1 row-start-2 grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[100px_50px_auto_1fr]"
@@ -201,14 +283,14 @@
 				]}
 			>
 				{#each visibleUnits as unit (unit.slug)}
-					<Unit
+					<TextUnit
 						bind:el={unit.element}
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
 						unitLabelInline={unit.labelInline}
 						{selectedNote}
 						{multiMarkPopupStore}
-					></Unit>
+					></TextUnit>
 				{/each}
 			</div>
 
@@ -238,15 +320,16 @@
 		</div>
 
 		<!-- Load Button -->
-		<LoadButton
-			isDisabled={visibleUnits[visibleUnits.length - 1].nextSlug ? false : true}
-			bind:node={elNextButton}
-			type="next"
-			{data}
-			{visibleUnits}
-			clickHandler={handleAddNextUnit}
-			classes="row-span-1 row-start-3"
-		/>
+		{#if visibleUnits[visibleUnits.length - 1].nextSlug}
+			<LoadButton
+				bind:node={elNextButton}
+				type="next"
+				{data}
+				{visibleUnits}
+				clickHandler={handleAddNextUnit}
+				classes="row-span-1 row-start-3"
+			/>
+		{/if}
 	</div>
 </div>
 

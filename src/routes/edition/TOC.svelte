@@ -25,7 +25,7 @@
 		{accordionState}
 		onValueChange={(e) => (accordionState = e.value)}
 		collapsible
-		classes="containerDocHead shadow-md mb-4"
+		classes="shadow-md mb-4"
 	>
 		<Accordion.Item value="Band 1" classes="">
 			{#snippet lead()}{/snippet}
