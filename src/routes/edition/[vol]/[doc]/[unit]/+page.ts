@@ -1,8 +1,19 @@
-import { textData, metaData, notesData } from '$lib/data/get_alldata_testing.js';
+// import { validateSearchParams } from "runed/kit";
+// import { productSearchSchema } from "./schemas";
+import { metaData, notesData } from '$lib/data/get_alldata_testing.js';
 import { base } from '$app/paths';
 
 /** @type {import('./$types').PageLoad} */
-export async function load({ fetch, params }) {
+export async function load({ fetch, url, params }) {
+
+	// Get validated search params as URLSearchParams object
+	// If you use a custom compressedParamName in useSearchParams, provide it here too:
+	// const { searchParams } = validateSearchParams();
+
+	// // Use URLSearchParams directly with fetch
+	// const response = await fetch(`/api/products?${searchParams.toString()}`);
+
+	
 	// URL Parameters
 	const slug_doc = params.doc;
 	const slug_unit = params.unit;

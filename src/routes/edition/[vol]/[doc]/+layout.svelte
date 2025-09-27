@@ -9,12 +9,12 @@
 </script>
 
 <div class="mx-auto max-w-[1800px] py-24">
-	<div class="mx-auto max-w-[1200px]">
+	<div class="containerDocHead mx-auto max-w-[1200px]">
 		<!-- Title -->
 		<h1 class="mb-2 text-4xl text-[var(--aco-orange)]">{@html data.docMetadata.toc_title}</h1>
+
 		<!-- Document Metadata -->
 		<p class="mb-5">{@html data.docMetadata.inhalt}</p>
-		<!-- Document Metadata -->
 		<DocumentMetadata {data} />
 
 		<!-- Unit-Navigation -->

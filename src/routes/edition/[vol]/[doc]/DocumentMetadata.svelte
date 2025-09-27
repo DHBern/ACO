@@ -5,12 +5,7 @@
 	let { data } = $props();
 </script>
 
-<Accordion
-	{value}
-	onValueChange={(e) => (value = e.value)}
-	collapsible
-	classes="containerDocHead shadow-md mb-4"
->
+<Accordion {value} onValueChange={(e) => (value = e.value)} collapsible classes="shadow-md mb-4">
 	<Accordion.Item value="metadata">
 		{#snippet lead()}{/snippet}
 		{#snippet control()}<span class="text-xl font-bold">Zusätzliche Informationen</span>{/snippet}

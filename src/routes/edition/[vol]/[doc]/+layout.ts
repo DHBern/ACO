@@ -1,13 +1,11 @@
 import { metaData } from '$lib/data/get_alldata_testing.js';
 
 /** @type {import('./$types').PageLoad} */
-export async function load({ fetch, params, url }) {
+export async function load({ params }) {
 	// URL Parameters
 	const slug_vol = params.vol;
 	const slug_doc = params.doc;
-
-	const line = url.searchParams.get('line') || 1;
-
+		
 	// Get corresponding data
 	const doc = metaData.find(({ slug: s }) => s === slug_doc);
 
@@ -22,7 +20,6 @@ export async function load({ fetch, params, url }) {
 	return {
 		slug_vol,
 		slug_doc,
-		line,
-		docMetadata
+		docMetadata,
 	};
 }

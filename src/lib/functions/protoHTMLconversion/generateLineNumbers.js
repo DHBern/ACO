@@ -6,10 +6,8 @@ export function generateLineNumbers(text) {
 	const linesText = matches ? matches.join('') : '';
 
 	// Insert line-number as text at every 5th line
-	let href = page.url.searchParams;
 	const numbersText = linesText.replace(/<a data-line='(\d+)'><\/a>/g, (_match, lineNumber) => {
-		href.set('line', lineNumber);
-		return `<a class="line-number" href="?${page.url.searchParams.toString()}" data-line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='lineNumBuffer'>__</span>"}</a>`;
+		return `<a class="line-number" href="${page.url.pathname}?line=${lineNumber}" data-line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='lineNumBuffer'>__</span>"}</a>`;
 	});
 
 	return numbersText;
