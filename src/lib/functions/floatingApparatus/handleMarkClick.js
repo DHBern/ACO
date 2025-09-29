@@ -18,7 +18,6 @@ export function handleMarkClick(ev, selectedNote, multiMarkPopupStore) {
 		case 1:
 			selectedNote.slug = ids[0];
 			selectMark(ids[0]);
-			scrollToNoteRef(ids[0]);
 			moveNote(ids[0]);
 			break;
 		default:
