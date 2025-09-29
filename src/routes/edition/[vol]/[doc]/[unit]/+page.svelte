@@ -241,13 +241,13 @@
 	function initialScroll() {
 		if (!(page.url.searchParams.get('line') || page.url.searchParams.get('page'))) {
 			// scroll window to document head
-			const elH1 = document.querySelector('.containerDocHead h1');
+			const elH1 = document.querySelector('.containerDocHead h1') as HTMLElement;
 			scrollStateInitWindow.scrollTo(scrollStateInitWindow.x, elH1?.offsetTop - 10 || 1);
 		} else {
 			// scroll window to document content
 			scrollStateInitWindow.scrollTo(
 				scrollStateInitWindow.x,
-				elContainerContent?.offsetTop - 10 || 1
+				(elContainerContent?.offsetTop || 11) - 10
 			);
 
 			// scroll content
