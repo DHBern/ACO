@@ -76,7 +76,7 @@
 				.transform((n) => {
 					// guard NaN from z.coerce; default to 1
 					const v = Number.isFinite(n) ? n : 1;
-					return Math.min(Math.max(v, 1), maxPage);
+					return Math.min(Math.max(v, minPage), maxPage);
 				})
 		})
 	);
