@@ -26,6 +26,7 @@
 	let { data } = $props();
 
 	let finishedInitScroll = $state(false);
+	let elContainerContent = $state<HTMLElement>();
 
 	// --- Handle search params ---------------------------
 
@@ -108,14 +109,6 @@
 	});
 
 	// --- Handle Loading new Units ---------------------------
-
-	// Runed ScrollState
-	let elContainerContent = $state<HTMLElement>();
-	const scrollStateContainerContent = new ScrollState({
-		element: () => elContainerContent,
-		behavior: 'instant'
-	});
-
 	// Runed ElementRect for Main Text
 	let mainTextContainer = $state<HTMLElement>();
 	const rectMainText = new ElementRect(() => mainTextContainer);
@@ -139,7 +132,7 @@
 		// Update scrollposition to where user was before new unit was loaded
 		const newHeight =
 			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
-		scrollStateContainerContent.scrollTo(scrollStateContainerContent.x, newHeight - oldHeight);
+		elContainerContent.scrollTo({ top: newHeight - oldHeight, behavior: 'instant' });
 
 		// Re-position of all notes
 		visibleUnits.forEach((unit) => {
