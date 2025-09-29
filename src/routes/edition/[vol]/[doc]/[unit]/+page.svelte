@@ -31,7 +31,7 @@
 	// --- Handle search params ---------------------------
 
 	// Get boundaries of data-line and data-page
-	function getCurrentMaxAttribute(html, minmax: 'min' | 'max', attr = '') {
+	function getCurrentMinMaxAttribute(html, minmax: 'min' | 'max', attr = '') {
 		if (!html) return 0;
 		const re = new RegExp(`data-${attr}=['"]?(\\d+)['"]?`, 'g');
 		let match;
@@ -51,9 +51,9 @@
 			return min;
 		}
 	}
-	const maxLine = getCurrentMaxAttribute(data.unitText, 'max', 'line'); // runtime number
-	const maxPage = getCurrentMaxAttribute(data.unitText, 'max', 'page'); // runtime number
-	const minPage = getCurrentMaxAttribute(data.unitText, 'min', 'page'); // runtime number
+	const maxLine = getCurrentMinMaxAttribute(data.unitText, 'max', 'line'); // runtime number
+	const maxPage = getCurrentMinMaxAttribute(data.unitText, 'max', 'page'); // runtime number
+	const minPage = getCurrentMinMaxAttribute(data.unitText, 'min', 'page'); // runtime number
 
 	// Runed useSearchParams
 	const params = useSearchParams(
