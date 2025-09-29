@@ -231,6 +231,7 @@
 		element: () => window,
 		behavior: 'smooth',
 		onStop: async () => {
+			if (finishedInitScroll) return;
 			const oldURL = `${page.url.pathname}${page.url.search}`;
 			await loadMore(oldURL);
 			await tick();
