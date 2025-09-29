@@ -7,8 +7,5 @@ export default {
 		extend: {}
 	},
 
-	plugins: [
-		typography,
-		containerQueries
-	]
+	plugins: [typography, containerQueries]
 } satisfies Config;

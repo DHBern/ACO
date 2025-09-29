@@ -12,7 +12,7 @@ const notesData = await nData;
 // export {textData, abbData, notesData, registerData};
 
 export async function GET({ params, fetch }) {
-    const unitText = textData?.[params.doc]?.[params.unit] || '';
-    const unitNotes = notesData?.[params.doc]?.[params.unit] || [];
-    return json({unitText, unitNotes});
+	const unitText = textData?.[params.doc]?.[params.unit] || '';
+	const unitNotes = notesData?.[params.doc]?.[params.unit] || [];
+	return json({ unitText, unitNotes });
 }

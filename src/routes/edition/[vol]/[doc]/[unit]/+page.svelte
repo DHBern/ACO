@@ -21,9 +21,26 @@
 
 	let { data } = $props();
 
-	let visibleUnits = $state([{ ...data.unit, element: undefined }]); // Start with the current unit
+	// Runed ScrollState for Container of Content
+	let containerContent = $state<HTMLElement>();
+	const scrollState = new ScrollState({ element: () => containerContent });
 
-	// reconstruct visibleUnits on change of data.unit
+	// Runed ElementRect for Main Text
+	let mainTextContainer = $state<HTMLElement>();
+	const rectMainText = new ElementRect(() => mainTextContainer);
+
+	// Runed inViewportObservers for LoadButtons
+	let elPrevButton = $state<HTMLElement>()!;
+	let elNextButton = $state<HTMLElement>()!;
+	let inViewportPrev = new IsInViewport(() => elPrevButton);
+	let inViewportNext = new IsInViewport(() => elNextButton);
+
+	// --- Collect Loaded Units in Array ---------------------------
+
+	// Contains all visible (=loaded) units, starting with current unit
+	let visibleUnits = $state([{ ...data.unit, element: undefined }]);
+
+	// Add unit to the end or beginning of the array when data.unit changes
 	$effect(() => {
 		// Insert unit if it's not there yet
 		if (visibleUnits.findIndex((u) => u.slug === data.unit.slug) === -1) {
@@ -45,18 +62,12 @@
 		}
 	});
 
-	let selectedNote = $state({ slug: '' });
-	let multiMarkPopupStore = $state({ slugs: [], target: undefined, slugUnitTarget: undefined });
+	// --- Handle Loading new Units ---------------------------
 
-	function handleResetMultiMark(ev: Event) {
-		const target = ev.target as Element | null;
-		if (
-			!target?.classList.contains('multimark-popup') &&
-			!(multiMarkPopupStore.slugs.length > 0 && target?.classList.contains('multiple-ids'))
-		) {
-			multiMarkPopupStore.slugs = [];
-		}
-	}
+	// handlers that take care of...
+	// - navigation via goto (changing URL will update data.unit)
+	// - update scroll position
+	// - re-position all notes
 
 	const handleAddPrevUnit = async () => {
 		if (!visibleUnits[0].prevSlug) return;
@@ -67,10 +78,13 @@
 			replaceState: true
 		});
 		await tick();
+
+		// Update scrollposition to where user was before new unit was loaded
 		const newHeight =
 			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
 		scrollState.scrollTo(scrollState.x, newHeight - oldHeight);
-		// Re-place position of all notes
+
+		// Re-position of all notes
 		visibleUnits.forEach((unit) => {
 			placeNotes(extractNoteIds(unit.text));
 		});
@@ -88,11 +102,7 @@
 		);
 	};
 
-	// inViewportObservers for LoadButtons
-	let targetNodePrev = $state<HTMLElement>()!;
-	let targetNodeNext = $state<HTMLElement>()!;
-	let inViewportPrev = new IsInViewport(() => targetNodePrev);
-	let inViewportNext = new IsInViewport(() => targetNodeNext);
+	// --- Trigger Unit-Load when loadButton gets into view ---------------------------
 
 	$effect.pre(() => {
 		inViewportPrev.current; // track changes for effect
@@ -105,6 +115,8 @@
 			}
 		});
 	});
+
+	// --- Update URL on scroll within already loaded units ---------------------------
 
 	useIntersectionObserver(
 		() => visibleUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
@@ -120,20 +132,28 @@
 				}
 			);
 		},
-		{ root: () => container, rootMargin: '-15% 0px -15% 0px' }
+		{ root: () => containerContent, rootMargin: '-15% 0px -15% 0px' }
 	);
 
-	// scrollObservers container
-	let container = $state<HTMLElement>();
-	const scrollState = new ScrollState({ element: () => container });
+	// --- Handle Selecting Notes ---------------------------
 
-	// rectObserver main text
-	let mainTextContainer = $state<HTMLElement>();
-	const rectMainText = new ElementRect(() => mainTextContainer);
+	let selectedNote = $state({ slug: '' });
+	let multiMarkPopupStore = $state({ slugs: [], target: undefined, slugUnitTarget: undefined });
+
+	function handleResetMultiMark(ev: Event) {
+		const target = ev.target as Element | null;
+		if (
+			!target?.classList.contains('multimark-popup') &&
+			!(multiMarkPopupStore.slugs.length > 0 && target?.classList.contains('multiple-ids'))
+		) {
+			multiMarkPopupStore.slugs = [];
+		}
+	}
 
 	onMount(() => {
 		// Event Listeners
 		document.body.addEventListener('click', handleResetMultiMark);
+
 		// Clean-up
 		return () => {
 			document.body.removeEventListener('click', handleResetMultiMark);
@@ -142,14 +162,14 @@
 </script>
 
 <div
-	bind:this={container}
-	class="containerContent relative h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
+	bind:this={containerContent}
+	class="containerContent h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
 >
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->
 		<LoadButton
 			isDisabled={visibleUnits[0].prevSlug ? false : true}
-			bind:node={targetNodePrev}
+			bind:node={elPrevButton}
 			type="prev"
 			{data}
 			{visibleUnits}
@@ -223,7 +243,7 @@
 		<!-- Load Button -->
 		<LoadButton
 			isDisabled={visibleUnits[visibleUnits.length - 1].nextSlug ? false : true}
-			bind:node={targetNodeNext}
+			bind:node={elNextButton}
 			type="next"
 			{data}
 			{visibleUnits}

@@ -4,7 +4,6 @@
 	import DocumentMetadata from './DocumentMetadata.svelte';
 
 	import { copyWithoutLinebreaks, marksVisible } from '../../globals.svelte.js';
-	import Abbreviations from '../../Abbreviations.svelte';
 
 	let { data, children } = $props();
 </script>
