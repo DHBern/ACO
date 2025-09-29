@@ -123,11 +123,14 @@
 		(entries) => {
 			const entry = entries[0];
 			if (!entry || !entry.isIntersecting) return;
-			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${entry.target.dataset.unit}`, {
-				replaceState: true,
-				noScroll: true,
-				keepFocus: true
-			});
+			goto(
+				`${base}/edition/${data.slug_vol}/${data.slug_doc}/${(entry.target as HTMLElement).dataset.unit}`,
+				{
+					replaceState: true,
+					noScroll: true,
+					keepFocus: true
+				}
+			);
 		},
 		{ root: () => containerContent, rootMargin: '-15% 0px -15% 0px' }
 	);
@@ -206,7 +209,7 @@
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
 						unitLabelInline={unit.labelInline}
-						{selectedNote}
+						bind:selectedNote
 						{multiMarkPopupStore}
 					></Unit>
 				{/each}
@@ -221,7 +224,7 @@
 			>
 				{#each visibleUnits as unit (unit.slug)}
 					{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
-						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} {selectedNote}></Note>
+						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} bind:selectedNote></Note>
 					{/each}
 				{/each}
 			</div>
@@ -230,7 +233,7 @@
 			{#if multiMarkPopupStore.slugs.length > 0}
 				<MultiMarkPopup
 					{multiMarkPopupStore}
-					{selectedNote}
+					bind:selectedNote
 					notesData={data.notesData}
 					slug_doc={data.slug_doc}
 				/>

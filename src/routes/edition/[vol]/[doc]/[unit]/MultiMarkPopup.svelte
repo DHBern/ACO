@@ -5,7 +5,7 @@
 	import { autoUpdate } from '@floating-ui/dom';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
 
-	let { multiMarkPopupStore, selectedNote, notesData, slug_doc } = $props();
+	let { multiMarkPopupStore, selectedNote = $bindable(), notesData, slug_doc } = $props();
 	let popUpElement = $state();
 
 	onMount(() => {
@@ -34,15 +34,16 @@
 					onclick={() => {
 						handlePopupClick(id, selectedNote, multiMarkPopupStore);
 					}}
-					><p class="color-sky-900 m-0 !pt-0">
+				>
+					<p class="color-sky-900 m-0 !pt-0">
 						{@html createNoteReferenceString(
 							idMetadata.line_start,
 							idMetadata.line_end,
 							idMetadata.text_start,
 							idMetadata.text_end
 						)}
-					</p></button
-				>
+					</p>
+				</button>
 			</li>
 		{/each}
 	</ul>

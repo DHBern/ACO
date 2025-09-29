@@ -29,7 +29,8 @@ export async function load({ fetch, params }) {
 		prevLabel: metadataDoc?.unitLabels?.[indexPrev] || null,
 		nextLabel: metadataDoc?.unitLabels?.[indexNext] || null,
 		text: unitText || '',
-		notes: unitNotes || []
+		notes: unitNotes || [],
+		labelInline: undefined
 	};
 
 	return {
