@@ -84,7 +84,6 @@
 
 	// Contains all visible (=loaded) units, starting with current unit
 	let visibleUnits = $state([{ ...data.unit, element: undefined }]);
-	// $inspect(visibleUnits);
 
 	// Add unit to the end or beginning of the array when data.unit changes
 	$effect(() => {
