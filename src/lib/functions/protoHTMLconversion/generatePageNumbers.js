@@ -7,7 +7,7 @@ export function generatePageNumbers(text) {
 
 	// Insert page-number as text and add class
 	const numbersText = pageText.replace(/<a data-page='(\d+)'><\/a>/g, (match, pageNumber) => {
-		return `<a class="page-number" href="${page.url.pathname}?page${pageNumber}" page="${pageNumber}">Seite ${pageNumber}</a>`;
+		return `<a class="page-number" href="${page.url.pathname}?page=${pageNumber}" page="${pageNumber}">Seite ${pageNumber}</a>`;
 	});
 
 	return numbersText;
