@@ -32,6 +32,7 @@
 
 	// Get boundaries of data-line and data-page
 	function getCurrentMaxAttribute(html, minmax: 'min' | 'max', attr = '') {
+		if (!html) return 0;
 		const re = new RegExp(`data-${attr}=['"]?(\\d+)['"]?`, 'g');
 		let match;
 		if (minmax === 'max') {
