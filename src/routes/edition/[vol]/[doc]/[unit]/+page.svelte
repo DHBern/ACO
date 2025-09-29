@@ -306,7 +306,7 @@
 		{/if}
 		<!-- Units -->
 		<div
-			class="row-span-1 row-start-2 grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[100px_50px_auto_1fr]"
+			class="row-span-1 row-start-2 grid grid-cols-[90px_70px_1fr] gap-6 lg:grid-cols-[100px_70px_auto_1fr]"
 		>
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
