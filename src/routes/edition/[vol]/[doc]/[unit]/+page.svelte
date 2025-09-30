@@ -174,10 +174,14 @@
 	}
 
 	async function loadMore(oldURL: string | undefined = undefined) {
+		// if-if (instead of if-elseif) is important since
+		// 	(1) both buttons can be visible
+		//  (2) inViewportNext can stay get stuck 'true' after scrolling to the bottom, which leads to button element being destroyed.
 		if (inViewportNext.current) {
 			await handleAddNextUnit();
 			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
-		} else if (inViewportPrev.current) {
+		}
+		if (inViewportPrev.current) {
 			await handleAddPrevUnit();
 			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
 		}
