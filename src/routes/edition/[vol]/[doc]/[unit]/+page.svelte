@@ -276,15 +276,35 @@
 	}
 
 	onMount(() => {
+		let cleanups = [];
 		// Event Listeners
 		document.body.addEventListener('click', handleResetMultiMark);
+		cleanups.push(() => document.body.removeEventListener('click', handleResetMultiMark));
 
-		// Scroll page and content
-		initialScroll();
+		// Scroll page and content on visible document
+		function scrollOnVis() {
+			if (!document.hidden) {
+				initialScroll();
+			} else {
+				const onVis = () => {
+					if (!document.hidden) {
+						initialScroll();
+						document.removeEventListener('visibilitychange', onVis);
+					}
+				};
+				document.addEventListener('visibilitychange', onVis);
+				return () => document.removeEventListener('visibilitychange', onVis);
+			}
+		}
+		cleanups.push(scrollOnVis());
 
 		// Clean-up
 		return () => {
-			document.body.removeEventListener('click', handleResetMultiMark);
+			cleanups.forEach((c) => {
+				try {
+					c();
+				} catch (e) {}
+			});
 		};
 	});
 </script>
