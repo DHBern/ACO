@@ -333,14 +333,16 @@
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
 				{#each visibleUnits as unit (unit.slug)}
-					{@html generatePageNumbers(unit.text)}
+					{@const path = `${base}/edition/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
+					{@html generatePageNumbers(unit.text, path)}
 				{/each}
 			</div>
 
 			<!-- Line Numbers -->
 			<div class="containerLineNums col-span-1 col-start-2" data-sveltekit-noscroll>
 				{#each visibleUnits as unit (unit.slug)}
-					{@html generateLineNumbers(unit.text)}
+					{@const path = `${base}/edition/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
+					{@html generateLineNumbers(unit.text, path)}
 				{/each}
 			</div>
 
