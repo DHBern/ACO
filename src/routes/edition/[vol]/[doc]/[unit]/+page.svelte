@@ -1,39 +1,85 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import { onMount, tick } from 'svelte';
 	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
+	import { useSearchParams } from 'runed/kit';
+	import { z } from 'zod';
+
 	import LoadButton from './LoadButton.svelte';
 	import Note from './Note.svelte';
-	import Unit from './Unit.svelte';
+	import TextUnit from './TextUnit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 
 	import { IsInViewport, ElementRect, ScrollState, useIntersectionObserver } from 'runed';
 
+	import { placeNotes } from '$lib/functions/floatingApparatus';
 	import {
 		extractNoteIds,
 		generateMainText,
 		generateLineNumbers,
 		generatePageNumbers
 	} from '$lib/functions/protoHTMLconversion';
-	import { placeNotes } from '$lib/functions/floatingApparatus/placeNotes.js';
 
 	let { data } = $props();
 
-	// Runed ScrollState for Container of Content
-	let containerContent = $state<HTMLElement>();
-	const scrollState = new ScrollState({ element: () => containerContent });
+	let finishedInitScroll = $state(false);
+	let elContainerContent = $state<HTMLElement>();
 
-	// Runed ElementRect for Main Text
-	let mainTextContainer = $state<HTMLElement>();
-	const rectMainText = new ElementRect(() => mainTextContainer);
+	// --- Handle search params ---------------------------
 
-	// Runed inViewportObservers for LoadButtons
-	let elPrevButton = $state<HTMLElement>()!;
-	let elNextButton = $state<HTMLElement>()!;
-	let inViewportPrev = new IsInViewport(() => elPrevButton);
-	let inViewportNext = new IsInViewport(() => elNextButton);
+	// Get boundaries of data-line and data-page
+	function getCurrentMinMaxAttribute(html, minmax: 'min' | 'max', attr = '') {
+		if (!html) return 0;
+		const re = new RegExp(`data-${attr}=['"]?(\\d+)['"]?`, 'g');
+		let match;
+		if (minmax === 'max') {
+			let max = 0;
+			while ((match = re.exec(html)) !== null) {
+				const v = Number(match[1]);
+				if (v > max) max = v;
+			}
+			return max;
+		} else if (minmax === 'min') {
+			let min = 1e9;
+			while ((match = re.exec(html)) !== null) {
+				const v = Number(match[1]);
+				if (v < min) min = v;
+			}
+			return min;
+		}
+	}
+	const maxLine = getCurrentMinMaxAttribute(data.unitText, 'max', 'line'); // runtime number
+	const maxPage = getCurrentMinMaxAttribute(data.unitText, 'max', 'page'); // runtime number
+	const minPage = getCurrentMinMaxAttribute(data.unitText, 'min', 'page'); // runtime number
+
+	// Runed useSearchParams
+	const params = useSearchParams(
+		z.object({
+			line: z.coerce
+				.number()
+				.int()
+				.default(1)
+				// clamp between 1 and maxLine
+				.transform((n) => {
+					// guard NaN from z.coerce; default to 1
+					const v = Number.isFinite(n) ? n : 1;
+					return Math.min(Math.max(v, 1), maxLine);
+				}),
+			page: z.coerce
+				.number()
+				.int()
+				.default(1)
+				// clamp between 1 and maxPage
+				.transform((n) => {
+					// guard NaN from z.coerce; default to 1
+					const v = Number.isFinite(n) ? n : 1;
+					return Math.min(Math.max(v, minPage), maxPage);
+				})
+		})
+	);
 
 	// --- Collect Loaded Units in Array ---------------------------
 
@@ -63,11 +109,15 @@
 	});
 
 	// --- Handle Loading new Units ---------------------------
+	// Runed ElementRect for Main Text
+	let mainTextContainer = $state<HTMLElement>();
+	const rectMainText = new ElementRect(() => mainTextContainer);
 
-	// handlers that take care of...
-	// - navigation via goto (changing URL will update data.unit)
-	// - update scroll position
-	// - re-position all notes
+	// Handlers
+	// --> They take care of...
+	// 		- navigation via goto (changing URL will update data.unit)
+	// 		- update scroll position
+	// 		- re-position all notes
 
 	const handleAddPrevUnit = async () => {
 		if (!visibleUnits[0].prevSlug) return;
@@ -82,7 +132,7 @@
 		// Update scrollposition to where user was before new unit was loaded
 		const newHeight =
 			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
-		scrollState.scrollTo(scrollState.x, newHeight - oldHeight);
+		elContainerContent.scrollTo({ top: newHeight - oldHeight, behavior: 'instant' });
 
 		// Re-position of all notes
 		visibleUnits.forEach((unit) => {
@@ -104,14 +154,45 @@
 
 	// --- Trigger Unit-Load when loadButton gets into view ---------------------------
 
+	// Runed inViewportObservers for LoadButtons
+	let elPrevButton = $state<HTMLElement>()!;
+	let elNextButton = $state<HTMLElement>()!;
+	let inViewportPrev = new IsInViewport(() => elPrevButton);
+	let inViewportNext = new IsInViewport(() => elNextButton);
+
+	// Navigate to oldURL
+	async function restoreURL_and_rerunloadMore(oldURL) {
+		await goto(oldURL, {
+			replaceState: true,
+			noScroll: true,
+			keepFocus: true
+		});
+
+		// Load again
+		// (if loaded text was very short, button may still be visible)
+		loadMore(oldURL);
+	}
+
+	async function loadMore(oldURL: string | undefined = undefined) {
+		// if-if (instead of if-elseif) is important since
+		// 	(1) both buttons can be visible
+		//  (2) inViewportNext can stay get stuck 'true' after scrolling to the bottom, which leads to button element being destroyed.
+		if (inViewportNext.current) {
+			await handleAddNextUnit();
+			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
+		}
+		if (inViewportPrev.current) {
+			await handleAddPrevUnit();
+			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
+		}
+	}
+
 	$effect.pre(() => {
 		inViewportPrev.current; // track changes for effect
 		inViewportNext.current; // track changes for effect
 		tick().then(() => {
-			if (inViewportNext.current) {
-				handleAddNextUnit();
-			} else if (inViewportPrev.current) {
-				handleAddPrevUnit();
+			if (finishedInitScroll) {
+				loadMore();
 			}
 		});
 	});
@@ -120,9 +201,10 @@
 
 	useIntersectionObserver(
 		() => visibleUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
-		(entries) => {
+		async (entries) => {
 			const entry = entries[0];
 			if (!entry || !entry.isIntersecting) return;
+			if (!finishedInitScroll) return;
 			goto(
 				`${base}/edition/${data.slug_vol}/${data.slug_doc}/${(entry.target as HTMLElement).dataset.unit}`,
 				{
@@ -132,7 +214,7 @@
 				}
 			);
 		},
-		{ root: () => containerContent, rootMargin: '-15% 0px -15% 0px' }
+		{ root: () => elContainerContent, rootMargin: '-15% 0px -15% 0px' }
 	);
 
 	// --- Handle Selecting Notes ---------------------------
@@ -150,46 +232,101 @@
 		}
 	}
 
-	onMount(() => {
-		// Event Listeners
-		document.body.addEventListener('click', handleResetMultiMark);
+	// --- Handle Initial Scroll of window and content (depending on Search Params) ---------------------------
 
-		// Clean-up
-		return () => {
-			document.body.removeEventListener('click', handleResetMultiMark);
-		};
+	// Runed ScrollState for Initial Scroll of Window
+	const scrollStateInitWindow = new ScrollState({
+		element: () => window,
+		behavior: 'smooth',
+		onStop: async () => {
+			if (finishedInitScroll) return;
+			const oldURL = `${page.url.pathname}${page.url.search}`;
+			await loadMore(oldURL);
+			await tick();
+			finishedInitScroll = true;
+		}
+	});
+
+	function initialScroll() {
+		if (page.url.searchParams.get('line') || page.url.searchParams.get('page')) {
+			// scroll window to document content
+			scrollStateInitWindow.scrollTo(
+				scrollStateInitWindow.x,
+				(elContainerContent?.offsetTop || 11) - 10
+			);
+
+			// scroll content
+			const elContainer = document.querySelector('.containerContent');
+			if (page.url.searchParams.get('line')) {
+				const elLine = document.querySelector(
+					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
+				);
+				// elLine.scrollIntoView({ behavior: 'smooth', block:'center'});
+				elContainer?.scrollTo({
+					top: elLine?.offsetTop,
+					behavior: 'smooth'
+				});
+			} else if (page.url.searchParams.get('page')) {
+				const elPage = document.querySelector(
+					`[data-unit='${data.slug_unit}'] [data-page='${params.page}']`
+				);
+				// elPage.scrollIntoView({ behavior: 'smooth', block:'center'});
+				elContainer?.scrollTo({
+					top: elPage?.offsetTop,
+					behavior: 'smooth'
+				});
+			}
+		}
+	}
+
+	onMount(() => {
+		initialScroll();
 	});
 </script>
 
+<svelte:body
+	onclick={(ev) => {
+		handleResetMultiMark(ev);
+	}}
+/>
+<svelte:document
+	onvisibilitychange={() => {
+		// trigger initialScroll if tab that has been loaded in background gets visible
+		if (!document.hidden && !finishedInitScroll) {
+			initialScroll();
+		}
+	}}
+/>
+
 <div
-	bind:this={containerContent}
+	bind:this={elContainerContent}
 	class="containerContent h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
 >
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->
-		<LoadButton
-			isDisabled={visibleUnits[0].prevSlug ? false : true}
-			bind:node={elPrevButton}
-			type="prev"
-			{data}
-			{visibleUnits}
-			clickHandler={handleAddPrevUnit}
-			classes="row-span-1 row-start-1"
-		/>
-
+		{#if visibleUnits[0].prevSlug}
+			<LoadButton
+				bind:node={elPrevButton}
+				type="prev"
+				{data}
+				{visibleUnits}
+				clickHandler={handleAddPrevUnit}
+				classes="row-span-1 row-start-1"
+			/>
+		{/if}
 		<!-- Units -->
 		<div
-			class="row-span-1 row-start-2 grid grid-cols-[90px_60px_1fr] gap-6 lg:grid-cols-[100px_50px_auto_1fr]"
+			class="row-span-1 row-start-2 grid grid-cols-[90px_70px_1fr] gap-6 lg:grid-cols-[100px_70px_auto_1fr]"
 		>
 			<!-- Page Numbers -->
-			<div class="containerPageNums col-span-1 col-start-1">
+			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
 				{#each visibleUnits as unit (unit.slug)}
 					{@html generatePageNumbers(unit.text)}
 				{/each}
 			</div>
 
 			<!-- Line Numbers -->
-			<div class="containerLineNums col-span-1 col-start-2">
+			<div class="containerLineNums col-span-1 col-start-2" data-sveltekit-noscroll>
 				{#each visibleUnits as unit (unit.slug)}
 					{@html generateLineNumbers(unit.text)}
 				{/each}
@@ -204,14 +341,14 @@
 				]}
 			>
 				{#each visibleUnits as unit (unit.slug)}
-					<Unit
+					<TextUnit
 						bind:el={unit.element}
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
 						unitLabelInline={unit.labelInline}
 						bind:selectedNote
 						{multiMarkPopupStore}
-					></Unit>
+					></TextUnit>
 				{/each}
 			</div>
 
@@ -241,15 +378,16 @@
 		</div>
 
 		<!-- Load Button -->
-		<LoadButton
-			isDisabled={visibleUnits[visibleUnits.length - 1].nextSlug ? false : true}
-			bind:node={elNextButton}
-			type="next"
-			{data}
-			{visibleUnits}
-			clickHandler={handleAddNextUnit}
-			classes="row-span-1 row-start-3"
-		/>
+		{#if visibleUnits[visibleUnits.length - 1].nextSlug}
+			<LoadButton
+				bind:node={elNextButton}
+				type="next"
+				{data}
+				{visibleUnits}
+				clickHandler={handleAddNextUnit}
+				classes="row-span-1 row-start-3"
+			/>
+		{/if}
 	</div>
 </div>
 
