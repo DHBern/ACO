@@ -284,6 +284,7 @@
 			}
 		} else {
 			finishedInitScroll = true;
+			finishedInitLoading = true;
 		}
 	}
 
