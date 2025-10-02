@@ -276,6 +276,8 @@
 					behavior: 'smooth'
 				});
 			}
+		} else {
+			finishedInitScroll = true;
 		}
 	}
 
