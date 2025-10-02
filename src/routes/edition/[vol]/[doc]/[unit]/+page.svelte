@@ -26,6 +26,7 @@
 	let { data } = $props();
 
 	let finishedInitScroll = $state(false);
+	let finishedInitLoading = $state(false);
 	let elContainerContent = $state<HTMLElement>();
 
 	// --- Handle search params ---------------------------
@@ -179,11 +180,16 @@
 		//  (2) inViewportNext can stay get stuck 'true' after scrolling to the bottom, which leads to button element being destroyed.
 		if (inViewportNext.current) {
 			await handleAddNextUnit();
-			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
+			if (oldURL) {
+				await restoreURL_and_rerunloadMore(oldURL);
+			}
 		}
 		if (inViewportPrev.current) {
 			await handleAddPrevUnit();
-			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
+			if (oldURL) await restoreURL_and_rerunloadMore(oldURL);
+		}
+		if (!inViewportNext.current && !inViewportPrev.current) {
+			finishedInitLoading = true;
 		}
 	}
 
@@ -191,7 +197,7 @@
 		inViewportPrev.current; // track changes for effect
 		inViewportNext.current; // track changes for effect
 		tick().then(() => {
-			if (finishedInitScroll) {
+			if (finishedInitScroll && finishedInitLoading) {
 				loadMore();
 			}
 		});
@@ -204,7 +210,7 @@
 		async (entries) => {
 			const entry = entries[0];
 			if (!entry || !entry.isIntersecting) return;
-			if (!finishedInitScroll) return;
+			if (!finishedInitScroll || !finishedInitLoading) return;
 			goto(
 				`${base}/edition/${data.slug_vol}/${data.slug_doc}/${(entry.target as HTMLElement).dataset.unit}`,
 				{
