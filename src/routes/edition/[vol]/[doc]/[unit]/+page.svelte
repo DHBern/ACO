@@ -162,7 +162,7 @@
 	let inViewportNext = new IsInViewport(() => elNextButton);
 
 	// Navigate to oldURL
-	async function restoreURL_and_rerunloadMore(oldURL) {
+	async function restoreURL_and_rerunloadMore(oldURL: string) {
 		await goto(oldURL, {
 			replaceState: true,
 			noScroll: true,
