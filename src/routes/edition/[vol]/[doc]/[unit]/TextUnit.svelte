@@ -12,7 +12,7 @@
 		slug,
 		text,
 		unitLabelInline,
-		selectedNote,
+		selectedNote = $bindable(),
 		multiMarkPopupStore,
 		el = $bindable()
 	} = $props();
