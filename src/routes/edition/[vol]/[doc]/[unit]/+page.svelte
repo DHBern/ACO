@@ -387,6 +387,14 @@
 				clickHandler={handleAddNextUnit}
 				classes="row-span-1 row-start-3"
 			/>
+			<!-- Fake padding (since 'pb' on container did not work). 
+			 This makes sure that any line that the container scrolls to will 
+			 be displayed close to the top of the container, even if it is at the end
+			 of the last visible unit. -->
+			<!-- <div
+				class="block"
+				style={`height: ${elContainerContent?.clientHeight - 200 || 500}px;`}
+			></div> -->
 		{/if}
 	</div>
 </div>
