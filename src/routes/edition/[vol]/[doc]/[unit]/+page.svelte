@@ -28,6 +28,8 @@
 	let finishedInitScroll = $state(false);
 	let elContainerContent = $state<HTMLElement>();
 
+	let unitsOnScreen = $state([]);
+
 	// --- Handle search params ---------------------------
 
 	// Get boundaries of data-line and data-page
@@ -202,17 +204,27 @@
 	useIntersectionObserver(
 		() => visibleUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
 		async (entries) => {
-			const entry = entries[0];
-			if (!entry || !entry.isIntersecting) return;
-			if (!finishedInitScroll) return;
-			goto(
-				`${base}/edition/${data.slug_vol}/${data.slug_doc}/${(entry.target as HTMLElement).dataset.unit}`,
-				{
-					replaceState: true,
-					noScroll: true,
-					keepFocus: true
+			let newSlugUnit = undefined;
+			entries.forEach((entry) => {
+				const name = (entry.target as HTMLElement).dataset.unit;
+				if (entry.isIntersecting && !unitsOnScreen.some((item) => item === name)) {
+					// add name if its unit entered container and prevent double-entries (can happen on fast scroll)
+					unitsOnScreen.push(name);
+					newSlugUnit = name;
+				} else if (!entry.isIntersecting) {
+					// remove name when its unit left container
+					unitsOnScreen = unitsOnScreen.filter((item) => item !== name);
+					newSlugUnit = unitsOnScreen[unitsOnScreen.length - 1] || null;
 				}
-			);
+			});
+
+			if (!newSlugUnit) return;
+			if (!finishedInitScroll) return;
+			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${newSlugUnit}`, {
+				replaceState: true,
+				noScroll: true,
+				keepFocus: true
+			});
 		},
 		{ root: () => elContainerContent, rootMargin: '-15% 0px -15% 0px' }
 	);
