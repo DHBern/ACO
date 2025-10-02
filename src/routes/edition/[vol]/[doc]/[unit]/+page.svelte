@@ -191,8 +191,9 @@
 		inViewportPrev.current; // track changes for effect
 		inViewportNext.current; // track changes for effect
 		tick().then(() => {
-			if (!finishedInitScroll) return; //! keep this inside async part!
-			loadMore();
+			if (finishedInitScroll) {
+				loadMore();
+			}
 		});
 	});
 
