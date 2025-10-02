@@ -276,38 +276,23 @@
 	}
 
 	onMount(() => {
-		let cleanups = [];
-		// Event Listeners
-		document.body.addEventListener('click', handleResetMultiMark);
-		cleanups.push(() => document.body.removeEventListener('click', handleResetMultiMark));
-
-		// Scroll page and content on visible document
-		function scrollOnVis() {
-			if (!document.hidden) {
-				initialScroll();
-			} else {
-				const onVis = () => {
-					if (!document.hidden) {
-						initialScroll();
-						document.removeEventListener('visibilitychange', onVis);
-					}
-				};
-				document.addEventListener('visibilitychange', onVis);
-				return () => document.removeEventListener('visibilitychange', onVis);
-			}
-		}
-		cleanups.push(scrollOnVis());
-
-		// Clean-up
-		return () => {
-			cleanups.forEach((c) => {
-				try {
-					c();
-				} catch (e) {}
-			});
-		};
+		initialScroll();
 	});
 </script>
+
+<svelte:body
+	onclick={(ev) => {
+		handleResetMultiMark(ev);
+	}}
+/>
+<svelte:document
+	onvisibilitychange={() => {
+		// trigger initialScroll if tab that has been loaded in background gets visible
+		if (!document.hidden && !finishedInitScroll) {
+			initialScroll();
+		}
+	}}
+/>
 
 <div
 	bind:this={elContainerContent}
