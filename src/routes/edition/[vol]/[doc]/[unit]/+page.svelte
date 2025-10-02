@@ -205,11 +205,14 @@
 			const entry = entries[0];
 			if (!entry || !entry.isIntersecting) return;
 			if (!finishedInitScroll) return;
-			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${entry.target.dataset.unit}`, {
-				replaceState: true,
-				noScroll: true,
-				keepFocus: true
-			});
+			goto(
+				`${base}/edition/${data.slug_vol}/${data.slug_doc}/${(entry.target as HTMLElement).dataset.unit}`,
+				{
+					replaceState: true,
+					noScroll: true,
+					keepFocus: true
+				}
+			);
 		},
 		{ root: () => elContainerContent, rootMargin: '-15% 0px -15% 0px' }
 	);
