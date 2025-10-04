@@ -26,6 +26,7 @@
 	let { data } = $props();
 
 	let finishedInitScroll = $state(false);
+	let finishedInitLoading = $state(false);
 	let elContainerContent = $state<HTMLElement>();
 
 	let visibleUnits = $state([]);
@@ -163,7 +164,7 @@
 	let inViewportNext = new IsInViewport(() => elNextButton);
 
 	// Navigate to oldURL
-	async function restoreURL_and_rerunloadMore(oldURL) {
+	async function restoreURL_and_rerunloadMore(oldURL: string) {
 		await goto(oldURL, {
 			replaceState: true,
 			noScroll: true,
@@ -181,11 +182,16 @@
 		//  (2) inViewportNext can stay get stuck 'true' after scrolling to the bottom, which leads to button element being destroyed.
 		if (inViewportNext.current) {
 			await handleAddNextUnit();
-			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
+			if (oldURL) {
+				await restoreURL_and_rerunloadMore(oldURL);
+			}
 		}
 		if (inViewportPrev.current) {
 			await handleAddPrevUnit();
-			if (oldURL) restoreURL_and_rerunloadMore(oldURL);
+			if (oldURL) await restoreURL_and_rerunloadMore(oldURL);
+		}
+		if (!inViewportNext.current && !inViewportPrev.current) {
+			finishedInitLoading = true;
 		}
 	}
 
@@ -193,7 +199,7 @@
 		inViewportPrev.current; // track changes for effect
 		inViewportNext.current; // track changes for effect
 		tick().then(() => {
-			if (finishedInitScroll) {
+			if (finishedInitScroll && finishedInitLoading) {
 				loadMore();
 			}
 		});
@@ -288,6 +294,9 @@
 					behavior: 'smooth'
 				});
 			}
+		} else {
+			finishedInitScroll = true;
+			finishedInitLoading = true;
 		}
 	}
 
@@ -401,6 +410,14 @@
 				clickHandler={handleAddNextUnit}
 				classes="row-span-1 row-start-3"
 			/>
+			<!-- Fake padding (since 'pb' on container did not work). 
+			 This makes sure that any line that the container scrolls to will 
+			 be displayed close to the top of the container, even if it is at the end
+			 of the last visible unit. -->
+			<div
+				class="block"
+				style={`height: ${elContainerContent?.clientHeight - 200 || 500}px;`}
+			></div>
 		{/if}
 	</div>
 </div>
