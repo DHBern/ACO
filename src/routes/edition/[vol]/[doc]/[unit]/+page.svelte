@@ -204,7 +204,7 @@
 	useIntersectionObserver(
 		() => visibleUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
 		async (entries) => {
-			let newSlugUnit = undefined;
+			let newSlugUnit
 			entries.forEach((entry) => {
 				const name = (entry.target as HTMLElement).dataset.unit;
 				if (entry.isIntersecting && !unitsOnScreen.some((item) => item === name)) {
