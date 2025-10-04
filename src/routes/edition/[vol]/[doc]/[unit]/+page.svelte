@@ -29,6 +29,8 @@
 	let finishedInitLoading = $state(false);
 	let elContainerContent = $state<HTMLElement>();
 
+	let visibleUnits = $state([]);
+
 	// --- Handle search params ---------------------------
 
 	// Get boundaries of data-line and data-page
@@ -84,27 +86,27 @@
 
 	// --- Collect Loaded Units in Array ---------------------------
 
-	// Contains all visible (=loaded) units, starting with current unit
-	let visibleUnits = $state([{ ...data.unit, element: undefined }]);
+	// Contains all loaded units, starting with current unit
+	let loadedUnits = $state([{ ...data.unit, element: undefined }]);
 
 	// Add unit to the end or beginning of the array when data.unit changes
 	$effect(() => {
 		// Insert unit if it's not there yet
-		if (visibleUnits.findIndex((u) => u.slug === data.unit.slug) === -1) {
-			const nextUnit = visibleUnits.findIndex((u) => u.nextSlug === data.unit.slug);
-			const prevUnit = visibleUnits.findIndex((u) => u.prevSlug === data.unit.slug);
+		if (loadedUnits.findIndex((u) => u.slug === data.unit.slug) === -1) {
+			const nextUnit = loadedUnits.findIndex((u) => u.nextSlug === data.unit.slug);
+			const prevUnit = loadedUnits.findIndex((u) => u.prevSlug === data.unit.slug);
 			if (prevUnit !== -1 && nextUnit !== -1) {
 				// both neighbors are there -> so unit itself should also be there
 				return;
 			} else if (nextUnit >= 0) {
 				// insert the unit last
-				visibleUnits.push({ ...data.unit, element: undefined });
+				loadedUnits.push({ ...data.unit, element: undefined });
 			} else if (prevUnit >= 0) {
 				// insert the unit first
-				visibleUnits.unshift({ ...data.unit, element: undefined });
+				loadedUnits.unshift({ ...data.unit, element: undefined });
 			} else {
 				// no neighbors are present -> reset
-				visibleUnits = [{ ...data.unit, element: undefined }];
+				loadedUnits = [{ ...data.unit, element: undefined }];
 			}
 		}
 	});
@@ -121,9 +123,9 @@
 	// 		- re-position all notes
 
 	const handleAddPrevUnit = async () => {
-		if (!visibleUnits[0].prevSlug) return;
+		if (!loadedUnits[0].prevSlug) return;
 		const oldHeight = rectMainText.height;
-		await goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${visibleUnits[0].prevSlug}`, {
+		await goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[0].prevSlug}`, {
 			noScroll: true,
 			keepFocus: true,
 			replaceState: true
@@ -136,15 +138,15 @@
 		elContainerContent.scrollTo({ top: newHeight - oldHeight, behavior: 'instant' });
 
 		// Re-position of all notes
-		visibleUnits.forEach((unit) => {
+		loadedUnits.forEach((unit) => {
 			placeNotes(extractNoteIds(unit.text));
 		});
 	};
 
 	const handleAddNextUnit = async () => {
-		if (!visibleUnits[visibleUnits.length - 1].nextSlug) return;
+		if (!loadedUnits[loadedUnits.length - 1].nextSlug) return;
 		await goto(
-			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${visibleUnits[visibleUnits.length - 1].nextSlug}`,
+			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[loadedUnits.length - 1].nextSlug}`,
 			{
 				noScroll: true,
 				keepFocus: true,
@@ -206,19 +208,29 @@
 	// --- Update URL on scroll within already loaded units ---------------------------
 
 	useIntersectionObserver(
-		() => visibleUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
+		() => loadedUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
 		async (entries) => {
-			const entry = entries[0];
-			if (!entry || !entry.isIntersecting) return;
-			if (!finishedInitScroll || !finishedInitLoading) return;
-			goto(
-				`${base}/edition/${data.slug_vol}/${data.slug_doc}/${(entry.target as HTMLElement).dataset.unit}`,
-				{
-					replaceState: true,
-					noScroll: true,
-					keepFocus: true
+			let newSlugUnit
+			entries.forEach((entry) => {
+				const name = (entry.target as HTMLElement).dataset.unit;
+				if (entry.isIntersecting && !visibleUnits.some((item) => item === name)) {
+					// add name if its unit entered container and prevent double-entries (can happen on fast scroll)
+					visibleUnits.push(name);
+					newSlugUnit = name;
+				} else if (!entry.isIntersecting) {
+					// remove name when its unit left container
+					visibleUnits = visibleUnits.filter((item) => item !== name);
+					newSlugUnit = visibleUnits[visibleUnits.length - 1] || null;
 				}
-			);
+			});
+
+			if (!newSlugUnit) return;
+			if (!finishedInitScroll) return;
+			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${newSlugUnit}`, {
+				replaceState: true,
+				noScroll: true,
+				keepFocus: true
+			});
 		},
 		{ root: () => elContainerContent, rootMargin: '-15% 0px -15% 0px' }
 	);
@@ -313,12 +325,12 @@
 >
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->
-		{#if visibleUnits[0].prevSlug}
+		{#if loadedUnits[0].prevSlug}
 			<LoadButton
 				bind:node={elPrevButton}
 				type="prev"
 				{data}
-				{visibleUnits}
+				{loadedUnits}
 				clickHandler={handleAddPrevUnit}
 				classes="row-span-1 row-start-1"
 			/>
@@ -329,15 +341,17 @@
 		>
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
-				{#each visibleUnits as unit (unit.slug)}
-					{@html generatePageNumbers(unit.text)}
+				{#each loadedUnits as unit (unit.slug)}
+					{@const path = `${base}/edition/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
+					{@html generatePageNumbers(unit.text, path)}
 				{/each}
 			</div>
 
 			<!-- Line Numbers -->
 			<div class="containerLineNums col-span-1 col-start-2" data-sveltekit-noscroll>
-				{#each visibleUnits as unit (unit.slug)}
-					{@html generateLineNumbers(unit.text)}
+				{#each loadedUnits as unit (unit.slug)}
+					{@const path = `${base}/edition/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
+					{@html generateLineNumbers(unit.text, path)}
 				{/each}
 			</div>
 
@@ -349,7 +363,7 @@
 					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 				]}
 			>
-				{#each visibleUnits as unit (unit.slug)}
+				{#each loadedUnits as unit (unit.slug)}
 					<TextUnit
 						bind:el={unit.element}
 						slug={unit.slug}
@@ -368,7 +382,7 @@
 					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 				]}
 			>
-				{#each visibleUnits as unit (unit.slug)}
+				{#each loadedUnits as unit (unit.slug)}
 					{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
 						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} bind:selectedNote></Note>
 					{/each}
@@ -387,12 +401,12 @@
 		</div>
 
 		<!-- Load Button -->
-		{#if visibleUnits[visibleUnits.length - 1].nextSlug}
+		{#if loadedUnits[loadedUnits.length - 1].nextSlug}
 			<LoadButton
 				bind:node={elNextButton}
 				type="next"
 				{data}
-				{visibleUnits}
+				{loadedUnits}
 				clickHandler={handleAddNextUnit}
 				classes="row-span-1 row-start-3"
 			/>
