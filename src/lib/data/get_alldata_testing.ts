@@ -11,7 +11,21 @@ const abbData = await aData;
 const notesData = await nData;
 const registerData = await rData;
 
-export { metaData, textData, abbData, notesData, registerData };
+type TMetaDataDoc = {
+  schwartzSlug: string;
+  schwartzSlugNum: string;
+  acoNumX: string;
+  acoNumLabel: string;
+  type: string;
+  title: string;
+  unitSlugs: string[];
+  unitLabels: string[];
+  unitLabelsInline: string[];
+  content: { head: string; inhalt: string };
+};
+
+
+export { metaData, textData, abbData, notesData, registerData};
 
 // Get JSON from Web-API
 // import { api } from '$lib/constants/constants';

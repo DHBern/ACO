@@ -1,4 +1,4 @@
-import { metaData, notesData } from '$lib/data/get_alldata_testing.js';
+import { metaData, notesData } from '$lib/data/get_alldata_testing.ts';
 import { base } from '$app/paths';
 
 /** @type {import('./$types').PageLoad} */

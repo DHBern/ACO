@@ -1,4 +1,4 @@
-import { registerData } from '$lib/data/get_alldata_testing.js';
+import { registerData } from '$lib/data/get_alldata_testing.ts';
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch, params }) {

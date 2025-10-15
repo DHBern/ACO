@@ -1,5 +1,5 @@
 <script>
-	import { abbData } from '$lib/data/get_alldata_testing.js';
+	import { abbData } from '$lib/data/get_alldata_testing.ts';
 	import { X } from '@lucide/svelte';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
 

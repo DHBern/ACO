@@ -1,4 +1,4 @@
-import { metaData } from '$lib/data/get_alldata_testing.js';
+import { metaData } from '$lib/data/get_alldata_testing.ts';
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {

@@ -1,6 +1,6 @@
 <script>
 	import { base } from '$app/paths';
-	import { metaData } from '$lib/data/get_alldata_testing.js';
+	import { metaData } from '$lib/data/get_alldata_testing.ts';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 
 	let accordionState = $state(['Band 1']);
