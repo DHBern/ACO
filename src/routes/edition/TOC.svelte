@@ -12,10 +12,10 @@
 
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
 	let docs = {};
-	docs.CV = metaData.filter(({ type: t }) => t === 'CV');
-	docs.CPal = metaData.filter(({ type: t }) => t === 'CPal');
-	docs.CVer = metaData.filter(({ type: t }) => t === 'CVer');
-	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
+	docs.CV = Object.values(metaData).filter(({ type: t }) => t === 'CV');
+	docs.CPal = Object.values(metaData).filter(({ type: t }) => t === 'CPal');
+	docs.CVer = Object.values(metaData).filter(({ type: t }) => t === 'CVer');
+	docs.CU = Object.values(metaData).filter(({ type: t }) => t === 'CU');
 </script>
 
 <h1>Dokumente</h1>
@@ -45,15 +45,17 @@
 						<h2 class="mb-4">Dokumente</h2>
 						<div class="pb-10 pl-8">
 							<ul>
-								{#each metaData.slice().sort((a, b) => a.acoNum - b.acoNum) as doc (doc.slug)}
+								{#each Object.values(metaData)
+									.slice()
+									.sort((a, b) => a.acoNum - b.acoNum) as doc (doc.schwartzSlug)}
 									<li class="mb-1 hover:**:text-[var(--aco-orange)]">
-										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
+										<a href="{base}/edition/1/{doc.schwartzSlug}/{doc.unitSlugs[0]}">
 											<span class="font-bold text-black dark:text-black">{doc.acoNumLabel}:</span>
-											<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-												>{doc.title}</span
+											<span class="text-[var(--aco-gray-4)] dark:text-[var(--aco-gray-4)]"
+												>{@html doc.title}</span
 											>
 											<span class="ml-1">
-												<span class="text-[var(--aco-orange-light)]">({doc.slug})</span>
+												<span class="text-[var(--aco-orange-light)]">({doc.schwartzSlug})</span>
 											</span>
 										</a>
 									</li>
@@ -70,12 +72,13 @@
 								<ul>
 									{#each docs[type]
 										.slice()
-										.sort((a, b) => a.schwartzSlugNum - b.schwartzSlugNum) as doc (doc.slug)}
+										.sort((a, b) => a.schwartzSlugNum - b.schwartzSlugNum) as doc (doc.schwartzSlug)}
 										<li class="mb-1 hover:**:text-[var(--aco-orange)]">
-											<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
-												<span class="font-bold text-black dark:text-black">{doc.slug}:</span>
-												<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-													>{doc.title}</span
+											<a href="{base}/edition/1/{doc.schwartzSlug}/{doc.unitSlugs[0]}">
+												<span class="font-bold text-black dark:text-black">{doc.schwartzSlug}:</span
+												>
+												<span class="text-[var(--aco-gray-4)] dark:text-[var(--aco-gray-4)]"
+													>{@html doc.title}</span
 												>
 												<span class="ml-1">
 													<span class="text-[var(--aco-orange-light)]">({doc.acoNumLabel})</span>

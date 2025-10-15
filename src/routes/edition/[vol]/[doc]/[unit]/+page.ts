@@ -9,7 +9,7 @@ export async function load({ fetch, url, params }) {
 	const slug_unit = params.unit;
 
 	// Get metadata
-	const metadataDoc = metaData.find(({ slug: s }) => s === params.doc);
+	const metadataDoc = metaData[slug_doc];
 
 	// Load data from +server.ts
 	const unitData = await fetch(

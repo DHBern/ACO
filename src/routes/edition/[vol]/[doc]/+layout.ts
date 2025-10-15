@@ -7,7 +7,7 @@ export async function load({ params }) {
 	const slug_doc = params.doc;
 		
 	// Get corresponding data
-	const doc = metaData.find(({ slug: s }) => s === slug_doc);
+	const doc = metaData[slug_doc];
 
 	const docMetadata = {
 		slugs: doc?.unitSlugs || [],
