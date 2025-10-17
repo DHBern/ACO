@@ -12,8 +12,7 @@ export async function load({ params }) {
 	const docMetadata = {
 		slugs: doc?.unitSlugs || [],
 		labels: doc?.unitLabelsLong || [],
-		meta: doc?.content.head || '',
-		inhalt: doc?.content.inhalt || '',
+		content: doc?.content || '',
 		toc_title: doc?.title || ''
 	};
 
