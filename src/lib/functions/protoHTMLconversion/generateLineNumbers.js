@@ -1,6 +1,6 @@
 export function generateLineNumbers(text, path) {
 	// Match a-line, p and br tags
-	const matches = text.match(/(<a data-line='\d+'>\u200B?<\/a>)|(<\/?p[^>]*>)|(<br\s*\/?>)/g);
+	const matches = text.match(/(<a\ data-page='\d+'>\u200B?<\/a>)|(<a\ data-line='\d+'>\u200B?<\/a>)|(<\/?p[^>]*>)|(<br\s*\/?>)|(<\/?section[^>]*>)/g);
 	const linesText = matches ? matches.join('') : '';
 
 	// Insert line-number as text at every 5th line
