@@ -11,7 +11,7 @@
 	let {
 		slug,
 		text,
-		unitLabelInline,
+		unitlabel,
 		selectedNote = $bindable(),
 		multiMarkPopupStore,
 		el = $bindable()
@@ -73,6 +73,6 @@
 	use:addSpanHandlers
 	bind:this={el}
 >
-	{unitLabelInline}
+	{unitlabel}
 	{@html text}
 </div>

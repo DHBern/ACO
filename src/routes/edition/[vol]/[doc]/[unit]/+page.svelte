@@ -210,7 +210,7 @@
 	useIntersectionObserver(
 		() => loadedUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
 		async (entries) => {
-			let newSlugUnit
+			let newSlugUnit;
 			entries.forEach((entry) => {
 				const name = (entry.target as HTMLElement).dataset.unit;
 				if (entry.isIntersecting && !visibleUnits.some((item) => item === name)) {
@@ -368,7 +368,7 @@
 						bind:el={unit.element}
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
-						unitLabelInline={unit.labelInline}
+						unitlabel={unit.label}
 						bind:selectedNote
 						{multiMarkPopupStore}
 					></TextUnit>
