@@ -18,7 +18,7 @@
 	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
-<h1>Dokumente</h1>
+<h1 class="h1">Dokumente</h1>
 
 <div class="flex-row flex-wrap bg-[var(--aco-gray-2)] dark:bg-[var(--aco-gray-3)]">
 	<Accordion
@@ -49,8 +49,8 @@
 									<li class="mb-1 hover:**:text-[var(--aco-orange)]">
 										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 											<span class="font-bold text-black dark:text-black">{doc.acoDocLabel}:</span>
-											<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-												>{doc.title}</span
+											<span class="text-[var(--aco-gray-4)] dark:text-[var(--aco-gray-4)]"
+												>{@html doc.title}</span
 											>
 											<span class="ml-1">
 												<span class="text-[var(--aco-orange-light)]">({doc.slug})</span>
@@ -74,8 +74,8 @@
 										<li class="mb-1 hover:**:text-[var(--aco-orange)]">
 											<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 												<span class="font-bold text-black dark:text-black">{doc.slug}:</span>
-												<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-													>{doc.title}</span
+												<span class="text-[var(--aco-gray-4)] dark:text-[var(--aco-gray-4)]"
+													>{@html doc.title}</span
 												>
 												<span class="ml-1">
 													<span class="text-[var(--aco-orange-light)]">({doc.acoDocLabel})</span>
