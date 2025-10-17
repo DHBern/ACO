@@ -279,9 +279,9 @@
 				const elLine = document.querySelector(
 					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
 				);
-				// elLine.scrollIntoView({ behavior: 'smooth', block:'center'});
+				// elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				elContainer?.scrollTo({
-					top: elLine?.offsetTop,
+					top: elLine?.offsetTop - 900, //! Quickfix only for CV166. Must be changed!
 					behavior: 'smooth'
 				});
 			} else if (page.url.searchParams.get('page')) {
@@ -290,7 +290,7 @@
 				);
 				// elPage.scrollIntoView({ behavior: 'smooth', block:'center'});
 				elContainer?.scrollTo({
-					top: elPage?.offsetTop,
+					top: elPage?.offsetTop - 900, //! Quickfix only for CV166. Must be changed!
 					behavior: 'smooth'
 				});
 			}
