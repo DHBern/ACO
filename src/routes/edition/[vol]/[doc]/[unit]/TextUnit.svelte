@@ -73,6 +73,6 @@
 	use:addSpanHandlers
 	bind:this={el}
 >
-	{unitlabel}
+	<!-- {unitlabel} -->
 	{@html text}
 </div>
