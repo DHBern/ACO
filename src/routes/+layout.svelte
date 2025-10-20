@@ -63,38 +63,36 @@
 	</div>
 
 	<footer class="bg-primary-400-600 flex-none py-5 align-middle text-slate-50">
-		<div class="flex w-full flex-col justify-center p-5 align-middle">
-			<h1 class="text-surface-950-50 my-10 text-lg font-bold">
+		<div class="mx-auto flex w-full flex-col items-center justify-center gap-10 py-10">
+			<p class="text-surface-contrast-400-600 text-lg font-bold">
 				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar
-			</h1>
-			<!-- <p class="text-md my-5 text-surface-950-50">
-				<strong>Empfohlene Zitierung: </strong> ACO..........
-			</p> -->
-			<button class="text-surface-950-50 w-40 rounded-3xl bg-white p-3"
+			</p>
+			<button class="text-surface-950-50 bg-surface-50-950 w-40 rounded-3xl p-3 font-bold"
 				><a href={`${base}/impressum`}>Impressum</a></button
 			>
-		</div>
-		<div class="my-2 flex w-full justify-around">
-			<div>
-				<img
-					src="{base}/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif"
-					alt="Logo DFG"
-					class="max-h-[100px] max-w-[200px]"
-				/>
-			</div>
-			<div>
-				<img
-					src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
-					alt="Logo Universität Bonn"
-					class="max-h-[100px] max-w-[200px]"
-				/>
-			</div>
-			<div>
-				<img
-					src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
-					alt="Logo Universität Bern"
-					class="max-h-[100px] max-w-[200px]"
-				/>
+
+			<div class="my-2 flex w-full justify-around">
+				<div>
+					<img
+						src="{base}/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif"
+						alt="Logo DFG"
+						class="max-h-[100px] max-w-[200px]"
+					/>
+				</div>
+				<div>
+					<img
+						src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
+						alt="Logo Universität Bonn"
+						class="max-h-[100px] max-w-[200px]"
+					/>
+				</div>
+				<div>
+					<img
+						src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
+						alt="Logo Universität Bern"
+						class="max-h-[100px] max-w-[200px]"
+					/>
+				</div>
 			</div>
 		</div>
 	</footer>
