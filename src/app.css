@@ -71,6 +71,11 @@ p {
 	@apply whitespace-nowrap;
 }
 
+/* Greek Text */
+span[data-rend='greek'] {
+	font-family: 'Junicode', 'OpenSans', sans-serif
+}
+
 /* Heading */
 span[data-type='head_key'] {
 	@apply mr-1 font-bold;
@@ -119,8 +124,8 @@ span[data-type='noteRefString-lines'] {
 }
 
 [data-theme='cerberus'] {
-	--heading-font-family: 'Junicode', 'Open Sans', sans-serif;
-	--base-font-family: 'Junicode', 'Open Sans', sans-serif;
+	--heading-font-family: 'Open Sans', sans-serif;
+	--base-font-family: 'Open Sans', sans-serif;
 	--anchor-font-family: 'inherit';
 
 	--body-background-color: #e8e8e8;

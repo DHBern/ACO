@@ -14,7 +14,7 @@
 		<h1 class="mb-2 text-4xl text-[var(--aco-orange)]">{@html data.docMetadata.toc_title}</h1>
 
 		<!-- Document Metadata -->
-		<p class="mb-5">{@html data.docMetadata.inhalt}</p>
+		<p class="mb-5">{@html data.docMetadata?.content?.inhalt}</p>
 		<DocumentMetadata {data} />
 
 		<!-- Unit-Navigation -->

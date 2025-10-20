@@ -86,11 +86,11 @@
 			}
 		},
 		"CV166": {
-			"libIII-5": {},
-			"libIII-6": {
+			"III-5": {},
+			"III-6": {
 				"CV166-III-6-1-6-erinnert-wird": {
 					"document": "CV166",
-					"doc_unit": "libIII-6",
+					"doc_unit": "III-6",
 					"line_start": "1",
 					"line_end": "6",
 					"text_start": "Erinnert",
@@ -99,53 +99,52 @@
 				},
 				"CV166-III-6-14-14-ergibt-habe": {
 					"document": "CV166",
-					"doc_unit": "libIII-6",
+					"doc_unit": "III-6",
 					"line_start": "14",
 					"line_end": "14",
 					"text_start": "ergibt",
 					"text_end": "habe",
-					"note_content": "Eine solche Union wurde zwar in dieser Formulierung (εἷς ἐξ ἀμφοῖν) in der vorliegenden Schrift bisher nur einmal oben <a href='../CV166/libII-praef?line=68' data-type='internal_ref' document='CV166' doc_unit='libII-praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a>, der Sache nach jedoch in der Tat schon häufiger postuliert (z.B. noch kurz zuvor <a href='../CV166/libIII-5?line=18' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='18' line_end='19' >CV166,III,5,18–19</a >). Insgesamt betrachtet greift Kyrill allerdings tatsächlich auch auf die hier genutzte Formulierung des Öfteren zurück (vgl. z.B. <a href='./CV4/3?page=15' data-type='internal_ref' document='CV4' doc_unit='3' page_start='15' page_end='16'>CV4,3,15–16</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' aco_page='27' aco_doc_unit='2' aco_doc='23'>ACO 1,1,1 S. 27,2 [Dok. 23]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV7,25,29–30</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc='39'>ACO 1,1,1 S. 58,10 [Dok. 39]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV169,51</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc=''>ACO 1,1,1 S. 129,27</a>)."
+					"note_content": "Eine solche Union wurde zwar in dieser Formulierung (<span data-rend='greek'>εἷς ἐξ ἀμφοῖν</span>) in der vorliegenden Schrift bisher nur einmal oben <a href='../CV166/II-praef?line=68' data-type='internal_ref' document='CV166' doc_unit='II-praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a>, der Sache nach jedoch in der Tat schon häufiger postuliert (z.B. noch kurz zuvor <a href='../CV166/III-5?line=18' data-type='internal_ref' document='CV166' doc_unit='III-5' line_start='18' line_end='19' >CV166,III,5,18–19</a >). Insgesamt betrachtet greift Kyrill allerdings tatsächlich auch auf die hier genutzte Formulierung des Öfteren zurück (vgl. z.B. <a href='./CV4/3?page=15' data-type='internal_ref' document='CV4' doc_unit='3' page_start='15' page_end='16'>CV4,3,15–16</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' aco_page='27' aco_doc_unit='2' aco_doc='23'>ACO 1,1,1 S. 27,2 [Dok. 23]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV7,25,29–30</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc='39'>ACO 1,1,1 S. 58,10 [Dok. 39]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV169,51</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc=''>ACO 1,1,1 S. 129,27</a>)."
 				},
 				"CV166-III-6-24-24--hypostasen": {
 					"document": "CV166",
-					"doc_unit": "libIII-6",
+					"doc_unit": "III-6",
 					"line_start": "24",
 					"line_end": "24",
 					"text_start": "",
 					"text_end": "Hypostasen",
-					"note_content": "In der Handschrift stand hier eigentlich φύσεων. ὑποστάσεων wurde nachträglich darüber gesetzt."
+					"note_content": "In der Handschrift stand hier eigentlich <span data-rend='greek'>φύσεων. ὑποστάσεων</span> wurde nachträglich darüber gesetzt."
 				},
 				"CV166-III-6-33-36-dann-wird": {
 					"document": "CV166",
-					"doc_unit": "libIII-6",
+					"doc_unit": "III-6",
 					"line_start": "33",
 					"line_end": "36",
 					"text_start": "Dann",
 					"text_end": "wird",
-					"note_content": "Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='4'> CV166,III,5,2–4</a>."
+					"note_content": "Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='III-5' line_start='2' line_end='4'> CV166,III,5,2–4</a>."
 				},
 				"CV166-III-6-34-34-fürchtest-recht": {
 					"document": "CV166",
-					"doc_unit": "libIII-24",
+					"doc_unit": "III-24",
 					"line_start": "34",
 					"line_end": "34",
 					"text_start": "fürchtest",
-					"text_end": "recht",
-					"text_stanotesData": "Recht",
-					"note_content": "Der Text scheint hier eine Lücke aufzuweisen. Zum einen fehlt das bei Kyrill regelmäßig auf die Junktur καὶ μάλα folgende Adverb, zum anderen vermisst man einen Ausdruck,von dem der Infinitiv παρατρέπεσθαι abhängen könnte. <a href='' data-type='external_ref' source='agellio_1607'>Agellio (1607)</a> hat, um zumindest das zweite Desiderat auszugleichen, ἀναγκαῖον vorgeschlagen. Schwartz schlägt, beide Mängel bedenkend, <span data-rend='greek'>ὀρθῶς οὐ φάμεν</span> vor. Die Übersetzung versucht, den unvollständigen Satz mit eigenen Ergänzungen in einen unmittelbaren Zusammenhang mit dem Nestoriuszitat, dessen Wortmaterial er enthält, zu setzen (vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libIII-5' line_start='2' line_end='2'>CV166,III,5,2</a>)."
+					"text_end": "Recht",
+					"note_content": "Der Text scheint hier eine Lücke aufzuweisen. Zum einen fehlt das bei Kyrill regelmäßig auf die Junktur <span data-rend='greek'>καὶ μάλα</span> folgende Adverb, zum anderen vermisst man einen Ausdruck,von dem der Infinitiv <span data-rend='greek'>παρατρέπεσθαι</span> abhängen könnte. <a href='' data-type='external_ref' source='agellio_1607'>Agellio (1607)</a> hat, um zumindest das zweite Desiderat auszugleichen, ἀναγκαῖον vorgeschlagen. Schwartz schlägt, beide Mängel bedenkend, <span data-rend='greek'>ὀρθῶς οὐ φάμεν</span> vor. Die Übersetzung versucht, den unvollständigen Satz mit eigenen Ergänzungen in einen unmittelbaren Zusammenhang mit dem Nestoriuszitat, dessen Wortmaterial er enthält, zu setzen (vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='III-5' line_start='2' line_end='2'>CV166,III,5,2</a>)."
 				},
 				"CV166-III-6-39-41-dass-gelten": {
 					"document": "CV166",
-					"doc_unit": "libIII-6",
+					"doc_unit": "III-6",
 					"line_start": "39",
 					"line_end": "41",
 					"text_start": "dass",
 					"text_end": "gelten",
-					"note_content": "Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='libII-13' line_start='3' line_end='3'>CV166,II,13,3</a> u. <a href='' data-type='internal_ref' document='CV166' doc_unit='libII-14' line_start='6' line_end='7'>CV166,II,14,6-7</a>."
+					"note_content": "Vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='II-13' line_start='3' line_end='3'>CV166,II,13,3</a> u. <a href='' data-type='internal_ref' document='CV166' doc_unit='II-14' line_start='6' line_end='7'>CV166,II,14,6-7</a>."
 				},
 				"CV166-III-6-42-42-das-frömmigkeit": {
 					"document": "CV166",
-					"doc_unit": "libIII-6",
+					"doc_unit": "III-6",
 					"line_start": "42",
 					"line_end": "42",
 					"text_start": "das",
@@ -153,10 +152,10 @@
 					"note_content": "Vgl. <a href='' data-type='external_ref' source='1_tim'>1 Tim 3,16</a>."
 				}
 			},
-			"libIV-praef": {
+			"IV-praef": {
 				"CV166-IV-praef-start": {
 					"document": "CV166",
-					"doc_unit": "libIV-praef",
+					"doc_unit": "IV-praef",
 					"line_start": "0",
 					"line_end": "0",
 					"text_start": "",

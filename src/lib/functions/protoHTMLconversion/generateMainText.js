@@ -4,7 +4,7 @@ function insertNoteSpans(text) {
 	let lastIndex = 0;
 
 	text.replace(
-		/<span\s+data-type=['"]note-start['"]\s+data-id=['"]([^']*)['"]><\/span>|<span\s+data-type=['"]note-end['"]\s+data-id=['"]([^']*)['"]><\/span>/g,
+		/<span\s+data-type=['"]note-start['"]\s+data-id=['"]([^']*)['"]\/>|<span\s+data-type=['"]note-end['"]\s+data-id=['"]([^']*)['"]\/>/g,
 		(match, startId, endId, offset) => {
 			// Capture text before this match
 			let precedingText = text.slice(lastIndex, offset);
@@ -44,11 +44,11 @@ function insertNoteSpans(text) {
 
 export function generateMainText(text) {
 	// Remove line numbers
-	text = text.replace(/<a[^>]*[data-line|data-page]="[^"]*"[^>]*><\/a>/g, '');
+	text = text.replace(/<a[^>]*[data-line|data-page]="[^"]*"[^>]*>\u200B?<\/a>/g, '');
 	// Insert spans
 	text = insertNoteSpans(text);
 	// Transform lib-number
-	text = text.replace(/<a\ data-lib='(I+V*)'><\/a>/g, (match, libNumber) => {
+	text = text.replace(/<a\ data-lib='(I+V*)'>\u200B?<\/a>/g, (match, libNumber) => {
 		return `<a data-type="lib-number" data-lib="${libNumber}">Buch ${libNumber}</a>`;
 	});
 	return text.trim();

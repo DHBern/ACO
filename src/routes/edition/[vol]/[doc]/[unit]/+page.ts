@@ -27,11 +27,11 @@ export async function load({ fetch, url, params }) {
 		slug: slug_unit,
 		prevSlug: metadataDoc?.unitSlugs[indexPrev] || null,
 		nextSlug: metadataDoc?.unitSlugs[indexNext] || null,
-		prevLabel: metadataDoc?.unitLabels?.[indexPrev] || null,
-		nextLabel: metadataDoc?.unitLabels?.[indexNext] || null,
+		prevLabel: metadataDoc?.unitLabelsLong?.[indexPrev] || null,
+		nextLabel: metadataDoc?.unitLabelsLong?.[indexNext] || null,
 		text: unitText || '',
 		notes: unitNotes || [],
-		labelInline: undefined
+		label: metadataDoc?.unitLabels?.[indexPrev] || null,
 	};
 
 	return {

@@ -30,7 +30,7 @@
 	let elContainerContent = $state<HTMLElement>();
 
 	let visibleUnits = $state([]);
-
+	let latestUnitLoadedDuringCurrentScroll: string | null = $state(null);
 	// --- Handle search params ---------------------------
 
 	// Get boundaries of data-line and data-page
@@ -124,6 +124,7 @@
 
 	const handleAddPrevUnit = async () => {
 		if (!loadedUnits[0].prevSlug) return;
+		latestUnitLoadedDuringCurrentScroll = loadedUnits[0].prevSlug;
 		const oldHeight = rectMainText.height;
 		await goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[0].prevSlug}`, {
 			noScroll: true,
@@ -139,12 +140,13 @@
 
 		// Re-position of all notes
 		loadedUnits.forEach((unit) => {
-			placeNotes(extractNoteIds(unit.text));
+			placeNotes(extractNoteIds(unit.text).filter((slug) => slug !== 'TODO'));
 		});
 	};
 
 	const handleAddNextUnit = async () => {
 		if (!loadedUnits[loadedUnits.length - 1].nextSlug) return;
+		latestUnitLoadedDuringCurrentScroll = loadedUnits[loadedUnits.length - 1].nextSlug;
 		await goto(
 			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[loadedUnits.length - 1].nextSlug}`,
 			{
@@ -209,23 +211,26 @@
 
 	useIntersectionObserver(
 		() => loadedUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
-		async (entries) => {
-			let newSlugUnit
+		(entries) => {
+			let newSlugUnit;
 			entries.forEach((entry) => {
 				const name = (entry.target as HTMLElement).dataset.unit;
 				if (entry.isIntersecting && !visibleUnits.some((item) => item === name)) {
 					// add name if its unit entered container and prevent double-entries (can happen on fast scroll)
 					visibleUnits.push(name);
 					newSlugUnit = name;
+				} else if (!entry.isIntersecting && name === latestUnitLoadedDuringCurrentScroll) {
+					// for some reason when freshly loaded, entry.isIntersecting is false. This is to prevent jumping URL-slugs
+					newSlugUnit = latestUnitLoadedDuringCurrentScroll;
+					latestUnitLoadedDuringCurrentScroll = null;
 				} else if (!entry.isIntersecting) {
 					// remove name when its unit left container
 					visibleUnits = visibleUnits.filter((item) => item !== name);
 					newSlugUnit = visibleUnits[visibleUnits.length - 1] || null;
 				}
 			});
-
-			if (!newSlugUnit) return;
-			if (!finishedInitScroll) return;
+			// update URL
+			if (!newSlugUnit || !finishedInitScroll) return;
 			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${newSlugUnit}`, {
 				replaceState: true,
 				noScroll: true,
@@ -279,7 +284,7 @@
 				const elLine = document.querySelector(
 					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
 				);
-				// elLine.scrollIntoView({ behavior: 'smooth', block:'center'});
+				// elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				elContainer?.scrollTo({
 					top: elLine?.offsetTop,
 					behavior: 'smooth'
@@ -319,9 +324,10 @@
 	}}
 />
 
+<!-- container must be a positioned for scroll-to-line to work as expected! -->
 <div
 	bind:this={elContainerContent}
-	class="containerContent h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
+	class="containerContent relative h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
 >
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->
@@ -337,7 +343,7 @@
 		{/if}
 		<!-- Units -->
 		<div
-			class="row-span-1 row-start-2 grid grid-cols-[90px_70px_1fr] gap-6 lg:grid-cols-[100px_70px_auto_1fr]"
+			class="row-span-1 row-start-2 grid grid-cols-[70px_70px_1fr] gap-6 lg:grid-cols-[70px_70px_auto_1fr]"
 		>
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
@@ -368,7 +374,7 @@
 						bind:el={unit.element}
 						slug={unit.slug}
 						text={generateMainText(unit.text)}
-						unitLabelInline={unit.labelInline}
+						unitlabel={unit.label}
 						bind:selectedNote
 						{multiMarkPopupStore}
 					></TextUnit>
@@ -383,7 +389,7 @@
 				]}
 			>
 				{#each loadedUnits as unit (unit.slug)}
-					{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
+					{#each extractNoteIds(unit.text).filter((slug) => slug !== 'TODO') as noteSlug (noteSlug)}
 						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} bind:selectedNote></Note>
 					{/each}
 				{/each}
@@ -410,14 +416,6 @@
 				clickHandler={handleAddNextUnit}
 				classes="row-span-1 row-start-3"
 			/>
-			<!-- Fake padding (since 'pb' on container did not work). 
-			 This makes sure that any line that the container scrolls to will 
-			 be displayed close to the top of the container, even if it is at the end
-			 of the last visible unit. -->
-			<div
-				class="block"
-				style={`height: ${elContainerContent?.clientHeight - 200 || 500}px;`}
-			></div>
 		{/if}
 	</div>
 </div>

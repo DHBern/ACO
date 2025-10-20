@@ -18,7 +18,7 @@
 	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
-<h1>Dokumente</h1>
+<h1 class="h1">Dokumente</h1>
 
 <div class="flex-row flex-wrap bg-[var(--aco-gray-2)] dark:bg-[var(--aco-gray-3)]">
 	<Accordion
@@ -45,12 +45,12 @@
 						<h2 class="mb-4">Dokumente</h2>
 						<div class="pb-10 pl-8">
 							<ul>
-								{#each metaData.slice().sort((a, b) => a.acoNum - b.acoNum) as doc (doc.slug)}
+								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="mb-1 hover:**:text-[var(--aco-orange)]">
 										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
-											<span class="font-bold text-black dark:text-black">{doc.acoNumLabel}:</span>
-											<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-												>{doc.title}</span
+											<span class="font-bold text-black dark:text-black">{doc.acoDocLabel}:</span>
+											<span class="text-[var(--aco-gray-4)] dark:text-[var(--aco-gray-4)]"
+												>{@html doc.title}</span
 											>
 											<span class="ml-1">
 												<span class="text-[var(--aco-orange-light)]">({doc.slug})</span>
@@ -70,15 +70,15 @@
 								<ul>
 									{#each docs[type]
 										.slice()
-										.sort((a, b) => a.schwartzSlugNum - b.schwartzSlugNum) as doc (doc.slug)}
+										.sort((a, b) => a.schwartzNum - b.schwartzNum) as doc (doc.slug)}
 										<li class="mb-1 hover:**:text-[var(--aco-orange)]">
 											<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 												<span class="font-bold text-black dark:text-black">{doc.slug}:</span>
-												<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-													>{doc.title}</span
+												<span class="text-[var(--aco-gray-4)] dark:text-[var(--aco-gray-4)]"
+													>{@html doc.title}</span
 												>
 												<span class="ml-1">
-													<span class="text-[var(--aco-orange-light)]">({doc.acoNumLabel})</span>
+													<span class="text-[var(--aco-orange-light)]">({doc.acoDocLabel})</span>
 												</span>
 											</a>
 										</li>
