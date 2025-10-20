@@ -18,8 +18,9 @@
 </script>
 
 <h1 class="h1">Dokumente</h1>
+<p>Nachfolgend die Dokumente geordnet nach Band und Dokumententyp.</p>
 
-<div class="bg-surface-50-950 flex-row flex-wrap">
+<div class="bg-surface-50-950 mt-10 flex-row flex-wrap">
 	<Accordion
 		value={accordionState}
 		onValueChange={(e) => (accordionState = e.value)}
@@ -92,35 +93,9 @@
 				{#snippet control()}<span class="text-surface-950-50 text-xl font-bold">{volume.label}</span
 					>{/snippet}
 				{#snippet panel()}
-					<div class="pb-10 pl-8">
-						<p class="hover:text-primary-400-600 text-surface-950-50 font-bold">
-							<a href="{base}/edition/1/vorwort"
-								>Vorwort zum {volume.number == 2 ? 'zweiten Band' : 'dritten Band'}</a
-							>
-						</p>
+					<div class="py-5 pl-8">
+						<p class="hover:text-primary-400-600 text-surface-950-50">Band in Bearbeitung</p>
 					</div>
-					<div class="grid grid-cols-2 gap-20">
-						<!-- ACO order -->
-						<div class="col-span-1 col-start-1 p-5">
-							<h2>Dokumente</h2>
-							<div class="pb-10 pl-8">
-								<ul>
-									<li class="hover:**:text-secondary-400-600 mb-1">...</li>
-								</ul>
-							</div>
-						</div>
-						<!-- Schwartz order -->
-						<div class="col-span-1 col-start-2 p-5">
-							<h2>Konkordanz Schwartz</h2>
-							{#each types as type (type)}
-								<div class="pb-10 pl-8">
-									<ul>
-										<li class="hover:**:text-secondary-400-600 mb-1">...</li>
-									</ul>
-								</div>
-							{/each}
-						</div>
-						</div>
 				{/snippet}
 			</Accordion.Item>
 		{/each}
