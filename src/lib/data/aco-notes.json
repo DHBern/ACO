@@ -104,7 +104,7 @@
 					"line_end": "14",
 					"text_start": "ergibt",
 					"text_end": "habe",
-					"note_content": "Eine solche Union wurde zwar in dieser Formulierung (εἷς ἐξ ἀμφοῖν) in der vorliegenden Schrift bisher nur einmal oben <a href='../CV166/II-praef?line=68' data-type='internal_ref' document='CV166' doc_unit='II-praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a>, der Sache nach jedoch in der Tat schon häufiger postuliert (z.B. noch kurz zuvor <a href='../CV166/III-5?line=18' data-type='internal_ref' document='CV166' doc_unit='III-5' line_start='18' line_end='19' >CV166,III,5,18–19</a >). Insgesamt betrachtet greift Kyrill allerdings tatsächlich auch auf die hier genutzte Formulierung des Öfteren zurück (vgl. z.B. <a href='./CV4/3?page=15' data-type='internal_ref' document='CV4' doc_unit='3' page_start='15' page_end='16'>CV4,3,15–16</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' aco_page='27' aco_doc_unit='2' aco_doc='23'>ACO 1,1,1 S. 27,2 [Dok. 23]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV7,25,29–30</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc='39'>ACO 1,1,1 S. 58,10 [Dok. 39]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV169,51</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc=''>ACO 1,1,1 S. 129,27</a>)."
+					"note_content": "Eine solche Union wurde zwar in dieser Formulierung (<span data-rend='greek'>εἷς ἐξ ἀμφοῖν</span>) in der vorliegenden Schrift bisher nur einmal oben <a href='../CV166/II-praef?line=68' data-type='internal_ref' document='CV166' doc_unit='II-praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a>, der Sache nach jedoch in der Tat schon häufiger postuliert (z.B. noch kurz zuvor <a href='../CV166/III-5?line=18' data-type='internal_ref' document='CV166' doc_unit='III-5' line_start='18' line_end='19' >CV166,III,5,18–19</a >). Insgesamt betrachtet greift Kyrill allerdings tatsächlich auch auf die hier genutzte Formulierung des Öfteren zurück (vgl. z.B. <a href='./CV4/3?page=15' data-type='internal_ref' document='CV4' doc_unit='3' page_start='15' page_end='16'>CV4,3,15–16</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' aco_page='27' aco_doc_unit='2' aco_doc='23'>ACO 1,1,1 S. 27,2 [Dok. 23]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV7,25,29–30</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc='39'>ACO 1,1,1 S. 58,10 [Dok. 39]</a>; <a href='' data-type='internal_ref' document='CV7' doc_unit='25' page_start='29' page_end='30'>CV169,51</a>, <a href='' data-type='internal_ref' document='ACO' aco_part='1.1.1' page_start='58' page_end='58' aco_doc=''>ACO 1,1,1 S. 129,27</a>)."
 				},
 				"CV166-III-6-24-24--hypostasen": {
 					"document": "CV166",
@@ -113,7 +113,7 @@
 					"line_end": "24",
 					"text_start": "",
 					"text_end": "Hypostasen",
-					"note_content": "In der Handschrift stand hier eigentlich φύσεων. ὑποστάσεων wurde nachträglich darüber gesetzt."
+					"note_content": "In der Handschrift stand hier eigentlich <span data-rend='greek'>φύσεων. ὑποστάσεων</span> wurde nachträglich darüber gesetzt."
 				},
 				"CV166-III-6-33-36-dann-wird": {
 					"document": "CV166",
@@ -131,7 +131,7 @@
 					"line_end": "34",
 					"text_start": "fürchtest",
 					"text_end": "Recht",
-					"note_content": "Der Text scheint hier eine Lücke aufzuweisen. Zum einen fehlt das bei Kyrill regelmäßig auf die Junktur καὶ μάλα folgende Adverb, zum anderen vermisst man einen Ausdruck,von dem der Infinitiv παρατρέπεσθαι abhängen könnte. <a href='' data-type='external_ref' source='agellio_1607'>Agellio (1607)</a> hat, um zumindest das zweite Desiderat auszugleichen, ἀναγκαῖον vorgeschlagen. Schwartz schlägt, beide Mängel bedenkend, <span data-rend='greek'>ὀρθῶς οὐ φάμεν</span> vor. Die Übersetzung versucht, den unvollständigen Satz mit eigenen Ergänzungen in einen unmittelbaren Zusammenhang mit dem Nestoriuszitat, dessen Wortmaterial er enthält, zu setzen (vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='III-5' line_start='2' line_end='2'>CV166,III,5,2</a>)."
+					"note_content": "Der Text scheint hier eine Lücke aufzuweisen. Zum einen fehlt das bei Kyrill regelmäßig auf die Junktur <span data-rend='greek'>καὶ μάλα</span> folgende Adverb, zum anderen vermisst man einen Ausdruck,von dem der Infinitiv <span data-rend='greek'>παρατρέπεσθαι</span> abhängen könnte. <a href='' data-type='external_ref' source='agellio_1607'>Agellio (1607)</a> hat, um zumindest das zweite Desiderat auszugleichen, ἀναγκαῖον vorgeschlagen. Schwartz schlägt, beide Mängel bedenkend, <span data-rend='greek'>ὀρθῶς οὐ φάμεν</span> vor. Die Übersetzung versucht, den unvollständigen Satz mit eigenen Ergänzungen in einen unmittelbaren Zusammenhang mit dem Nestoriuszitat, dessen Wortmaterial er enthält, zu setzen (vgl. oben <a href='' data-type='internal_ref' document='CV166' doc_unit='III-5' line_start='2' line_end='2'>CV166,III,5,2</a>)."
 				},
 				"CV166-III-6-39-41-dass-gelten": {
 					"document": "CV166",
