@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import { Switch, Slider } from '@skeletonlabs/skeleton-svelte';
+	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import '../app.css';
 	import Abbreviations from './edition/Abbreviations.svelte';
+	import { onMount } from 'svelte';
 
 	// Icons
 	import IconMoon from '@lucide/svelte/icons/moon';
@@ -11,6 +12,27 @@
 
 	let { children } = $props();
 	let openStateAbbreviations = $state(false);
+
+	// Lightswitch
+	let isDark = $state(false);
+	let darkModeState = $derived(isDark ? 'dark' : 'light');
+
+	const handleToggleLightswitch = (force = '') => {
+		if (force == 'dark') isDark = true;
+		else if (force == 'light') isDark = false;
+		else isDark = !isDark;
+		document.documentElement.setAttribute('data-darkModeState', darkModeState);
+	};
+
+	onMount(() => {
+		// Check the user's preferred color scheme
+		const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		if (prefersDarkScheme) {
+			handleToggleLightswitch('dark');
+		} else {
+			handleToggleLightswitch('light');
+		}
+	});
 </script>
 
 <div class="flex min-h-screen flex-col">
@@ -45,14 +67,25 @@
 
 			<!-- Lightswitch -->
 			<Switch
+				class="**:text-lx"
 				name="mode"
-				controlActive="bg-surface-700"
-				onCheckedChange={(e) => {
-					document.documentElement.classList.toggle('dark');
-				}}
+				bind:checked={isDark.val}
+				onCheckedChange={handleToggleLightswitch}
 			>
-				{#snippet inactiveChild()}<IconMoon size="14" />{/snippet}
-				{#snippet activeChild()}<IconSun size="14" />{/snippet}
+				<Switch.Control class="data-[state=checked]:bg-secondary-300 bg-surface-200">
+					<Switch.Thumb>
+						<Switch.Context>
+							{#snippet children(switch_)}
+								{#if switch_().checked}
+									<IconSun size="14" />
+								{:else}
+									<IconMoon size="14" />
+								{/if}
+							{/snippet}
+						</Switch.Context>
+					</Switch.Thumb>
+				</Switch.Control>
+				<Switch.HiddenInput />
 			</Switch>
 		</nav>
 	</header>

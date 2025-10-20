@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 @import '@skeletonlabs/skeleton';
-@import '../theme_aco';
-
 @import '@skeletonlabs/skeleton-svelte';
+@import '../theme_aco';
 
 @config '../tailwind.config.ts';
 
 /* Apply .dark whenever the dark class is present earlier in the HTML tree */
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-darkModeState=dark], [data-darkModeState=dark] *));
+
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
