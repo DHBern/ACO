@@ -25,25 +25,29 @@
 		<!-- Settings -->
 		<div class="my-5 flex justify-center gap-5 align-middle">
 			<Switch
+				class="**:text-lx"
 				name="toggleMarksVisible"
-				classes="**:text-lx"
 				checked={marksVisible.value}
 				onCheckedChange={(e) => (marksVisible.value = e.checked)}
-				controlActive="bg-surface-700-300"
-				controlInactive="bg-surface-200-800"
 			>
-				Markierungen
+				<Switch.Control class="data-[state=checked]:bg-secondary-600-400 bg-surface-200-800">
+					<Switch.Thumb />
+				</Switch.Control>
+				<Switch.Label>Markierungen</Switch.Label>
+				<Switch.HiddenInput />
 			</Switch>
+
 			<Switch
+				class="**:text-lx"
 				name="toggleCopyWithoutLinebreaks"
-				classes="**:text-lx"
 				checked={copyWithoutLinebreaks.value}
-				onCheckedChange={(e) => {
-					copyWithoutLinebreaks.value = e.checked;
-				}}
-				controlActive="bg-surface-700-300"
-				controlInactive="bg-surface-200-800"
-				>Fluid-Copy
+				onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
+			>
+				<Switch.Control class="data-[state=checked]:bg-secondary-600-400 bg-surface-200-800">
+					<Switch.Thumb />
+				</Switch.Control>
+				<Switch.Label>Copy-Paste ohne Zeilenumbrüche</Switch.Label>
+				<Switch.HiddenInput />
 			</Switch>
 		</div>
 	</div>
