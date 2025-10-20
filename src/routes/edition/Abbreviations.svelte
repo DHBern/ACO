@@ -1,7 +1,7 @@
 <script>
 	import { abbData } from '$lib/data/get_alldata_testing.js';
 	import { X } from '@lucide/svelte';
-	import { Modal } from '@skeletonlabs/skeleton-svelte';
+	import { Dialog } from '@skeletonlabs/skeleton-svelte';
 
 	let { openState = $bindable(false) } = $props();
 
@@ -10,7 +10,7 @@
 	}
 </script>
 
-<Modal
+<Dialog
 	open={openState}
 	onOpenChange={(e) => (openState = e.value)}
 	contentBase="p-4 space-y-4 shadow-xl w-[480px] h-screen bg-secondary-400-600 relative border-r-5 border-r-secondary-200-800"
@@ -42,4 +42,4 @@
 			<X size="18" color="var(--color-secondary-700-300)" />
 		</button>
 	{/snippet}
-</Modal>
+</Dialog>
