@@ -22,9 +22,18 @@
 	classes="containerAbbreviations"
 >
 	{#snippet content()}
-		<header class="relative flex flex-wrap justify-between pl-5">
-			<h2 class="h3 mt-7">Abkürzungsverzeichnis</h2>
-		</header>
+		<div class="flex h-full flex-col">
+			<header class="relative flex flex-wrap justify-between pl-5">
+				<h2 class="h3 mt-18">Abkürzungsverzeichnis</h2>
+			</header>
+			<article class="mt-8 grid flex-grow grid-cols-[150px_auto] gap-4 overflow-y-auto px-10 pb-5">
+				{#each Object.keys(abbData) as key}
+					<span class="col-span-1 col-start-1 font-bold">{key}</span>
+					<span class="col-span-1 col-start-2">{abbData[key]}</span>
+				{/each}
+			</article>
+			<footer></footer>
+		</div>
 		<button
 			type="button"
 			class="btn preset-filled absolute top-4 right-4 h-12 w-12 rounded-full border-2 border-[var(--aco-orange-light2)] bg-transparent p-0"
@@ -32,12 +41,5 @@
 		>
 			<X size="18" color="var(--aco-orange-light2)" />
 		</button>
-		<article class="mt-8 grid h-8/10 grid-cols-[150px_auto] gap-4 overflow-y-auto px-10 pb-5">
-			{#each Object.keys(abbData) as key}
-				<span class="col-span-1 col-start-1 font-bold">{key}</span>
-				<span class="col-span-1 col-start-2">{abbData[key]}</span>
-			{/each}
-		</article>
-		<footer></footer>
 	{/snippet}
 </Modal>
