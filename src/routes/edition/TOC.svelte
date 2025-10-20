@@ -64,7 +64,7 @@
 						<h2 class="h2 mb-4">Konkordanz Schwartz</h2>
 						{#each types as type (type)}
 							<div class="pb-10 text-lg">
-								<ul>
+								<ul class="!list-none">
 									{#each docs[type]
 										.slice()
 										.sort((a, b) => a.schwartzNum - b.schwartzNum) as doc (doc.slug)}

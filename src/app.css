@@ -58,6 +58,10 @@ p {
 	@apply whitespace-nowrap;
 }
 
+ul {
+	@apply list-disc;
+}
+
 /* Greek Text */
 span[data-rend='greek'] {
 	font-family: 'Junicode', 'OpenSans', sans-serif
