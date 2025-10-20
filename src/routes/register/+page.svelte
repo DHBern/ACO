@@ -66,19 +66,19 @@
 
 <div class="mx-auto grid w-full max-w-[1500px] grid-cols-2 gap-5 py-24">
 	<h1 class="h1">Register</h1>
-	<div class="col-span-2 mb-4">
+	<div class="col-span-2">
 		<p class="">Vgl. für detailliertere Angaben den Index bei Schwartz.</p>
 		<p class="">Ortsspeziﬁsche Adjektive sind unter Ortsnamen subsumiert</p>
 	</div>
 	<div class="col-span-1 col-start-1">
 		<h2 class="h2 mb-4">Orte</h2>
-		<div class="bg-surface-200-800 h-[70vh] overflow-y-scroll p-3">
+		<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
 			{@render accordion(placeLabels, placesGrouped, accordionPlaces)}
 		</div>
 	</div>
 	<div class="col-span-1 col-start-2">
 		<h2 class="h2 mb-4">Personen</h2>
-		<div class="bg-surface-200-800 h-[70vh] overflow-y-scroll p-3">
+		<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
 			{@render accordion(peopleLabels, peopleGrouped, accordionPeople)}
 		</div>
 	</div>

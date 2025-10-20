@@ -28,7 +28,7 @@
 								}
 							});
 						}}
-						class="mx-2 my-1 rounded-full bg-black px-4 py-1 text-white"
+						class="bg-surface-950-50 hover:bg-secondary-200 text-surface-50-950 mx-2 my-1 rounded-full px-4 py-1"
 						>{data.docMetadata.labels[idx]}</button
 					>
 				{/each}

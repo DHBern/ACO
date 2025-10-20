@@ -24,21 +24,23 @@
 	aria-pressed={selectedNote.slug === noteSlug}
 	aria-label="Focus note"
 >
-	<div class="note-header p-1">
-		{@html createNoteReferenceString(
-			noteMetadata.line_start,
-			noteMetadata.line_end,
-			noteMetadata.text_start,
-			noteMetadata.text_end
-		)}
-	</div>
-	<div
-		class="bg-primary-400-600/10 in-[&.highlighted]:border-primary-400-600 in-[&.highlighted]:bg-secondary-200-800/40 **:[&_a]:text-primary-200-800 h-full w-full p-3 **:pt-4"
-	>
-		<p>{@html noteMetadata.note_content}</p>
+	<div class="bg-primary-50-950/20 in-[&.highlighted]:bg-error-200-800/20">
+		<div class="note-header p-1">
+			{@html createNoteReferenceString(
+				noteMetadata.line_start,
+				noteMetadata.line_end,
+				noteMetadata.text_start,
+				noteMetadata.text_end
+			)}
+		</div>
+		<div
+			class={[
+				'bg-primary-400-600/10 h-full w-full px-2 py-1 **:pt-2',
+				' in-[&.highlighted]:border-primary-400-600 in-[&.highlighted]:bg-error-200-800 ',
+				'**:[&_a]:text-secondary-600-400'
+			]}
+		>
+			<p>{@html noteMetadata.note_content}</p>
+		</div>
 	</div>
 </div>
-
-<style>
-	@reference "tailwindcss";
-</style>

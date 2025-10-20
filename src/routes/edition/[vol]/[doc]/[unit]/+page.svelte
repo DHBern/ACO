@@ -441,4 +441,22 @@
 	.containerLineNums :global(.lineNumBuffer) {
 		@apply text-surface-950-50/0 select-none;
 	}
+
+	/* Text */
+	.containerText :global([data-type='acoTitle']) {
+		@apply text-center text-lg font-bold;
+	}
+
+	.containerText :global(p) {
+		@apply indent-6;
+	}
+
+	/* Highlights in Text */
+	.containerText :global(.marksVisible span[data-ids]) {
+		@apply text-surface-950-50 bg-warning-100-900/40 [&.multiple-ids]:bg-warning-300-700/70 cursor-pointer;
+	}
+
+	.containerText :global(.marksVisible span[data-type='mark'].highlighted) {
+		@apply bg-error-200-800 text-surface-950-50;
+	}
 </style>

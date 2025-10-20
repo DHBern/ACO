@@ -44,7 +44,7 @@
 					<div class="col-span-1 col-start-1">
 						<h2 class="h2 mb-4">Dokumente ACO</h2>
 						<div class="pb-10 text-lg">
-							<ul class="!list-none">
+							<ul class="">
 								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="hover:**:text-secondary-700-300 mb-1">
 										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
@@ -65,7 +65,7 @@
 						<h2 class="h2 mb-4">Konkordanz Schwartz</h2>
 						{#each types as type (type)}
 							<div class="pb-10 text-lg">
-								<ul class="!list-none">
+								<ul class="">
 									{#each docs[type]
 										.slice()
 										.sort((a, b) => a.schwartzNum - b.schwartzNum) as doc (doc.slug)}

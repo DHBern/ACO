@@ -130,7 +130,7 @@
 			Langfristvorhaben von der DFG gefördert wird, sind:
 		</p>
 
-		<ul class="mt-2 mb-10 ml-5 font-bold **:text-lg">
+		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-lg">
 			<li>Dr. Thomas Brüggemann (Leiter der Arbeitsstelle)</li>
 			<li>Dr. Sabine Lütkemeyer</li>
 			<li>Dr. Julia Beier</li>
@@ -168,7 +168,7 @@
 			<h1 class="h1">Förderung und Partner</h1>
 		</div>
 
-		<ul class="mt-2 mb-10 ml-5 font-bold **:text-lg">
+		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-lg">
 			<li>Deutsche Forschungsgemeinschaft (DFG)</li>
 			<li>Universität Bonn</li>
 			<li>Universität Bern</li>

@@ -48,22 +48,21 @@
 }
 
 h1 {
-	@apply text-secondary-400-600;
+	@apply text-secondary-400 my-5;
+}
+h2 {
+	@apply mt-10
 }
 
 p {
-	@apply pt-4 text-lg text-surface-950-50 dark:text-white;
+	@apply pt-4 text-lg text-surface-950-50;
 }
 .nowrap p {
 	@apply whitespace-nowrap;
 }
 
-ul {
-	@apply list-disc;
-}
-
 /* Greek Text */
-span[data-rend='greek'] {
+span[data-lang='greek'] {
 	font-family: 'Junicode', 'OpenSans', sans-serif
 }
 
@@ -71,38 +70,6 @@ span[data-rend='greek'] {
 span[data-type='head_key'] {
 	@apply mr-1 font-bold;
 }
-
-/* Edition Text */
-.marksVisible span[data-ids] {
-	@apply cursor-pointer bg-[#ffffdd] dark:text-surface-950-50 [&.multiple-ids]:bg-[#ffff99];
-}
-
-.marksVisible span[data-type='mark'].highlighted {
-	@apply bg-secondary-200-800 dark:bg-secondary-400-600;
-}
-
-.containerText p {
-	@apply indent-6;
-}
-.containerText [data-type='lib-number'] {
-	@apply mt-10 inline-block w-full text-center font-bold;
-}
-
-.containerText [data-type='acoTitle'] {
-	@apply text-center text-lg font-bold;
-}
-/* [data-title_line="2"] {
-	@apply text-2xl
-} */
-
-/* span[data-type=note-start]::before {
-  @apply text-blue-600 in-[&.highlighted]:text-red-500 mr-[1px] ml-[3px];
-  @apply content-["[●"];
-}
-span[data-type=note-end]::before {
-  @apply text-blue-600 mr-[1px] ml-[3px];
-  @apply content-["●]"];
-} */
 
 /* Prevent selecting <br /> on copy-paste */
 .copyWithoutLinebreaks br {
