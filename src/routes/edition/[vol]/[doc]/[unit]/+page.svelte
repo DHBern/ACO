@@ -229,9 +229,8 @@
 					newSlugUnit = visibleUnits[visibleUnits.length - 1] || null;
 				}
 			});
-
-			if (!newSlugUnit) return;
-			if (!finishedInitScroll) return;
+			// update URL
+			if (!newSlugUnit || !finishedInitScroll) return;
 			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${newSlugUnit}`, {
 				replaceState: true,
 				noScroll: true,
