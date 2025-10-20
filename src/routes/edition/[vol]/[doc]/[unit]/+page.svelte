@@ -30,7 +30,7 @@
 	let elContainerContent = $state<HTMLElement>();
 
 	let visibleUnits = $state([]);
-
+	let latestUnitLoadedDuringCurrentScroll: string | null = $state(null);
 	// --- Handle search params ---------------------------
 
 	// Get boundaries of data-line and data-page
@@ -124,6 +124,7 @@
 
 	const handleAddPrevUnit = async () => {
 		if (!loadedUnits[0].prevSlug) return;
+		latestUnitLoadedDuringCurrentScroll = loadedUnits[0].prevSlug;
 		const oldHeight = rectMainText.height;
 		await goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[0].prevSlug}`, {
 			noScroll: true,
@@ -145,6 +146,7 @@
 
 	const handleAddNextUnit = async () => {
 		if (!loadedUnits[loadedUnits.length - 1].nextSlug) return;
+		latestUnitLoadedDuringCurrentScroll = loadedUnits[loadedUnits.length - 1].nextSlug;
 		await goto(
 			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[loadedUnits.length - 1].nextSlug}`,
 			{
@@ -209,7 +211,7 @@
 
 	useIntersectionObserver(
 		() => loadedUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
-		async (entries) => {
+		(entries) => {
 			let newSlugUnit;
 			entries.forEach((entry) => {
 				const name = (entry.target as HTMLElement).dataset.unit;
@@ -217,6 +219,10 @@
 					// add name if its unit entered container and prevent double-entries (can happen on fast scroll)
 					visibleUnits.push(name);
 					newSlugUnit = name;
+				} else if (!entry.isIntersecting && name === latestUnitLoadedDuringCurrentScroll) {
+					// for some reason when freshly loaded, entry.isIntersecting is false. This is to prevent jumping URL-slugs
+					newSlugUnit = latestUnitLoadedDuringCurrentScroll;
+					latestUnitLoadedDuringCurrentScroll = null;
 				} else if (!entry.isIntersecting) {
 					// remove name when its unit left container
 					visibleUnits = visibleUnits.filter((item) => item !== name);
