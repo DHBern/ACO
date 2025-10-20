@@ -11,7 +11,7 @@
 	let {
 		slug,
 		text,
-		unitLabelInline,
+		unitlabel,
 		selectedNote = $bindable(),
 		multiMarkPopupStore,
 		el = $bindable()
@@ -40,7 +40,7 @@
 
 	onMount(() => {
 		// Place note-boxes at initial positions
-		placeNotes(extractNoteIds(text));
+		placeNotes(extractNoteIds(text).filter((slug) => slug !== 'TODO'));
 
 		//! Move to +page.svelte?!
 		document.body.addEventListener('click', handleResetMarkSelection);
@@ -73,6 +73,6 @@
 	use:addSpanHandlers
 	bind:this={el}
 >
-	{unitLabelInline}
+	<!-- {unitlabel} -->
 	{@html text}
 </div>

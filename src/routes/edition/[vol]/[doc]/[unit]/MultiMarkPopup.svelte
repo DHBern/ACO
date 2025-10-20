@@ -27,7 +27,7 @@
 >
 	<div class="p-1 font-bold">Bitte Kommentar wählen</div>
 	<ul class="bg-primary-400-600/10 w-full">
-		{#each multiMarkPopupStore.slugs as id (id)}
+		{#each multiMarkPopupStore.slugs.filter((slug) => slug !== 'TODO') as id (id)}
 			{@const idMetadata = notesData[slug_doc][multiMarkPopupStore.slugUnitTarget][id]}
 			<li class="hover:bg-secondary-200-800/30 p-2">
 				<button

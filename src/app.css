@@ -54,6 +54,11 @@ p {
 	@apply whitespace-nowrap;
 }
 
+/* Greek Text */
+span[data-rend='greek'] {
+	font-family: 'Junicode', 'OpenSans', sans-serif
+}
+
 /* Heading */
 span[data-type='head_key'] {
 	@apply mr-1 font-bold;

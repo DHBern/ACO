@@ -11,7 +11,7 @@
 				clickHandler(loadedUnits);
 			}}
 		>
-			<span class="font-bold">{loadedUnits[0].prevLabel}</span> laden
+			Kapitel <span class="font-bold">{loadedUnits[0].prevLabel}</span> laden
 		</button>
 	</div>
 {:else if type == 'next'}
@@ -24,7 +24,7 @@
 					clickHandler(loadedUnits);
 				}}
 			>
-				<span class="font-bold">{loadedUnits[loadedUnits.length - 1].nextLabel}</span> laden
+				Kapitel <span class="font-bold">{loadedUnits[loadedUnits.length - 1].nextLabel}</span> laden
 			</button>
 		{/if}
 	</div>

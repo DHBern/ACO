@@ -17,7 +17,7 @@
 	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
-<h1>Dokumente</h1>
+<h1 class="h1">Dokumente</h1>
 
 <div class="bg-surface-50-950 flex-row flex-wrap">
 	<Accordion
@@ -44,11 +44,11 @@
 						<h2 class="mb-4">Dokumente ACO</h2>
 						<div class="pb-10 text-lg">
 							<ul>
-								{#each metaData.slice().sort((a, b) => a.acoNum - b.acoNum) as doc (doc.slug)}
+								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="hover:**:text-secondary-700-300 mb-1">
 										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
-											<span class="text-surface-950-50 font-bold">{doc.acoNumLabel}:</span>
-											<span class="text-surface-950-50">{doc.title}</span>
+											<span class="text-surface-950-50 font-bold">{doc.acoDocLabel}:</span>
+											<span class="text-surface-950-50">{@html doc.title}</span>
 											<span class="ml-1">
 												<span class="text-secondary-600-400">({doc.slug})</span>
 											</span>
@@ -67,13 +67,13 @@
 								<ul>
 									{#each docs[type]
 										.slice()
-										.sort((a, b) => a.schwartzSlugNum - b.schwartzSlugNum) as doc (doc.slug)}
+										.sort((a, b) => a.schwartzNum - b.schwartzNum) as doc (doc.slug)}
 										<li class="hover:**:text-secondary-700-300 mb-1">
 											<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
 												<span class="text-surface-950-50 font-bold">{doc.slug}:</span>
-												<span class="text-surface-950-50">{doc.title}</span>
+												<span class="text-surface-950-50">{@html doc.title}</span>
 												<span class="ml-1">
-													<span class="text-primary-600-400">({doc.acoNumLabel})</span>
+													<span class="text-primary-600-400">({doc.acoDocLabel})</span>
 												</span>
 											</a>
 										</li>
