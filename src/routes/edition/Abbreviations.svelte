@@ -13,7 +13,7 @@
 <Modal
 	open={openState}
 	onOpenChange={(e) => (openState = e.value)}
-	contentBase="p-4 space-y-4 shadow-xl w-[480px] h-screen bg-[var(--aco-orange-light)] relative border-r-5 border-r-[var(--aco-orange-light2)]"
+	contentBase="p-4 space-y-4 shadow-xl w-[480px] h-screen bg-secondary-400-600 relative border-r-5 border-r-secondary-200-800"
 	positionerJustify="justify-start"
 	positionerAlign=""
 	positionerPadding=""
@@ -27,10 +27,10 @@
 		</header>
 		<button
 			type="button"
-			class="btn preset-filled absolute top-4 right-4 h-12 w-12 rounded-full border-2 border-[var(--aco-orange-light2)] bg-transparent p-0"
+			class="btn preset-filled border-secondary-700-300 absolute top-4 right-4 h-12 w-12 rounded-full border-2 bg-transparent p-0"
 			onclick={drawerClose}
 		>
-			<X size="18" color="var(--aco-orange-light2)" />
+			<X size="18" color="var(--color-secondary-700-300)" />
 		</button>
 		<article class="mt-8 grid h-8/10 grid-cols-[150px_auto] gap-4 overflow-y-auto px-10 pb-5">
 			{#each Object.keys(abbData) as key}

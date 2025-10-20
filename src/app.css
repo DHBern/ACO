@@ -1,10 +1,7 @@
 @import 'tailwindcss';
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
-@import '@skeletonlabs/skeleton/themes/cerberus';
-/*
-  Add your theme import for your theme: "cerberus" here
-*/
+@import '../theme_aco';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
@@ -50,22 +47,8 @@
 	}
 }
 
-:root {
-	--aco-gray-1: #ffffff;
-	--aco-gray-2: #f1f1f1;
-	--aco-gray-3: #adadad;
-	--aco-gray-4: #464646;
-	--aco-teal: #0f5866;
-	--aco-teal-light: #468b99;
-	--aco-teal-light2: #b0c9ce;
-	--aco-orange: #ac6037;
-	--aco-orange-light: #c1886a;
-	--aco-orange-light2: #d5b3a0;
-	--aco-link: #3ac6e1;
-}
-
 p {
-	@apply pt-4 text-lg text-black dark:text-white;
+	@apply pt-4 text-lg text-surface-950-50 dark:text-white;
 }
 .nowrap p {
 	@apply whitespace-nowrap;
@@ -78,11 +61,11 @@ span[data-type='head_key'] {
 
 /* Edition Text */
 .marksVisible span[data-ids] {
-	@apply cursor-pointer bg-[#ffffdd] dark:text-black [&.multiple-ids]:bg-[#ffff99];
+	@apply cursor-pointer bg-[#ffffdd] dark:text-surface-950-50 [&.multiple-ids]:bg-[#ffff99];
 }
 
 .marksVisible span[data-type='mark'].highlighted {
-	@apply bg-[var(--aco-orange-light)] dark:bg-[var(--aco-orange)];
+	@apply bg-secondary-200-800 dark:bg-secondary-400-600;
 }
 
 .containerText p {
@@ -116,13 +99,4 @@ span[data-type=note-end]::before {
 /* Notes and Popup */
 span[data-type='noteRefString-lines'] {
 	@apply mr-1 font-bold;
-}
-
-[data-theme='cerberus'] {
-	--heading-font-family: 'Junicode', 'Open Sans', sans-serif;
-	--base-font-family: 'Junicode', 'Open Sans', sans-serif;
-	--anchor-font-family: 'inherit';
-
-	--body-background-color: #e8e8e8;
-	--body-background-color-dark: #404e50;
 }

@@ -15,8 +15,9 @@
 
 <style>
 	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
 	h1 {
-		@apply mb-2 text-3xl font-bold text-[var(--aco-orange)];
+		@apply text-secondary-400-600 mb-2 text-3xl font-bold;
 	}
 	h2 {
 		@apply mt-8 text-xl font-bold;

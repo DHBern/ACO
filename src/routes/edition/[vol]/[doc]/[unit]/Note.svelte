@@ -9,8 +9,8 @@
 <div
 	data-id={noteSlug}
 	class={[
-		`notebox word-wrap absolute max-w-[700px] border-4 bg-[var(--aco-gray-1)]
-		transition-transform duration-500 dark:bg-[var(--aco-teal)]`,
+		`notebox word-wrap bg-surface-50-950 absolute max-w-[700px]
+		border-4 transition-transform duration-500`,
 		selectedNote.slug === noteSlug && 'highlighted'
 	]}
 	style={`margin-top:${MARGIN_NOTEBOX}px; margin-bottom:${MARGIN_NOTEBOX}px`}
@@ -33,7 +33,7 @@
 		)}
 	</div>
 	<div
-		class="h-full w-full bg-[var(--aco-teal-light)]/10 p-3 **:pt-4 in-[&.highlighted]:border-[var(--aco-teal-light)] in-[&.highlighted]:bg-[var(--aco-orange-light)]/40 **:[&_a]:text-[var(--aco-link)]"
+		class="bg-primary-400-600/10 in-[&.highlighted]:border-primary-400-600 in-[&.highlighted]:bg-secondary-200-800/40 **:[&_a]:text-primary-200-800 h-full w-full p-3 **:pt-4"
 	>
 		<p>{@html noteMetadata.note_content}</p>
 	</div>

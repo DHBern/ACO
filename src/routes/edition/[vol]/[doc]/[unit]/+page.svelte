@@ -210,7 +210,7 @@
 	useIntersectionObserver(
 		() => loadedUnits.map((u) => u.element).filter((el) => el !== undefined) as HTMLElement[],
 		async (entries) => {
-			let newSlugUnit
+			let newSlugUnit;
 			entries.forEach((entry) => {
 				const name = (entry.target as HTMLElement).dataset.unit;
 				if (entry.isIntersecting && !visibleUnits.some((item) => item === name)) {
@@ -321,7 +321,7 @@
 
 <div
 	bind:this={elContainerContent}
-	class="containerContent h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
+	class="containerContent bg-surface-50-950 h-[calc(100vh*0.8)] w-full overflow-x-scroll p-10 pb-24"
 >
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->
@@ -424,6 +424,7 @@
 
 <style lang="postcss">
 	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
 
 	.containerLineNums :global(a.line-number),
 	.containerPageNums :global(a.page-number) {
@@ -440,6 +441,6 @@
 		@apply inline-block;
 	}
 	.containerLineNums :global(.lineNumBuffer) {
-		@apply text-black/0 select-none;
+		@apply text-surface-950-50/0 select-none;
 	}
 </style>

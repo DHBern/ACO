@@ -22,14 +22,14 @@
 
 <!-- class="absolute z-10 rounded-md border-2 border-[#94ffcf] border-white bg-[#e0fff1] p-5" -->
 <div
-	class="multimark-popup absolute max-w-[700px] border-4 border-[var(--aco-gray-1)] bg-[var(--aco-gray-1)] transition-transform duration-500 dark:bg-[var(--aco-teal)]"
+	class="multimark-popup border-surface-50-950 bg-primary-400-600 absolute max-w-[700px] border-4 transition-transform duration-500"
 	bind:this={popUpElement}
 >
 	<div class="p-1 font-bold">Bitte Kommentar wählen</div>
-	<ul class="w-full bg-[var(--aco-teal-light)]/10">
+	<ul class="bg-primary-400-600/10 w-full">
 		{#each multiMarkPopupStore.slugs as id (id)}
 			{@const idMetadata = notesData[slug_doc][multiMarkPopupStore.slugUnitTarget][id]}
-			<li class="p-2 hover:bg-[var(--aco-orange-light)]/30">
+			<li class="hover:bg-secondary-200-800/30 p-2">
 				<button
 					onclick={() => {
 						handlePopupClick(id, selectedNote, multiMarkPopupStore);

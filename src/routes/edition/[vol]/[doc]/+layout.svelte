@@ -11,7 +11,7 @@
 <div class="mx-auto max-w-[1800px] py-24">
 	<div class="containerDocHead mx-auto max-w-[1200px]">
 		<!-- Title -->
-		<h1 class="mb-2 text-4xl text-[var(--aco-orange)]">{@html data.docMetadata.toc_title}</h1>
+		<h1 class="text-secondary-400-600 mb-2 text-4xl">{@html data.docMetadata.toc_title}</h1>
 
 		<!-- Document Metadata -->
 		<p class="mb-5">{@html data.docMetadata.inhalt}</p>
@@ -27,8 +27,8 @@
 				classes="**:text-lx"
 				checked={marksVisible.value}
 				onCheckedChange={(e) => (marksVisible.value = e.checked)}
-				controlActive="bg-surface-700"
-				controlInactive="bg-surface-200"
+				controlActive="bg-surface-700-300"
+				controlInactive="bg-surface-200-800"
 			>
 				Markierungen
 			</Switch>
@@ -39,8 +39,8 @@
 				onCheckedChange={(e) => {
 					copyWithoutLinebreaks.value = e.checked;
 				}}
-				controlActive="bg-surface-700"
-				controlInactive="bg-surface-200"
+				controlActive="bg-surface-700-300"
+				controlInactive="bg-surface-200-800"
 				>Fluid-Copy
 			</Switch>
 		</div>
