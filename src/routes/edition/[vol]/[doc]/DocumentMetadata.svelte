@@ -1,5 +1,7 @@
 <script>
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
+	import { generateFootnoteSuperscripts } from '$lib/functions/protoHTMLconversion';
+
 	let value = $state(['metadata']);
 
 	let { data } = $props();
@@ -11,7 +13,7 @@
 		{#snippet control()}<span class="text-xl font-bold">Zusätzliche Informationen</span>{/snippet}
 		{#snippet panel()}
 			<div class="col-span-4 col-start-1 pl-13">
-				{@html data.docMetadata?.content?.head}
+				{@html generateFootnoteSuperscripts(data.docMetadata?.content?.head)}
 			</div>
 			<div class="col-span-4 col-start-1 pl-13">
 				{#each data.docMetadata?.content?.footnotes_head as footnote}

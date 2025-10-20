@@ -1,7 +1,10 @@
-// Generate html for mainText, lineNumbers and pageNumbers
+import { generateFootnoteSuperscripts } from './generateFootnoteSuperscripts';
+
+// Generate html for mainText, lineNumbers, pageNumbers and footnotes
 export { generateMainText } from './generateMainText';
 export { generateLineNumbers } from './generateLineNumbers';
 export { generatePageNumbers } from './generatePageNumbers';
+export {generateFootnoteSuperscripts} from './generateFootnoteSuperscripts';
 
 // Extract NoteIds
 // This will extract all referenced data-ids for a text.
