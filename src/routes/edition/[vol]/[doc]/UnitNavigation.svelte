@@ -13,9 +13,10 @@
 	classes="containerSettings shadow-md mb-4"
 >
 	<Accordion.Item value="unitNav">
-		{#snippet lead()}{/snippet}
-		{#snippet control()}<span class="text-xl font-bold">Dokumentenstruktur</span>{/snippet}
-		{#snippet panel()}
+		<Accordion.ItemTrigger
+			><span class="text-xl font-bold">Dokumentenstruktur</span></Accordion.ItemTrigger
+		>
+		<Accordion.ItemContent>
 			<div class="containerDocUnits my-5 max-h-60 overflow-y-scroll">
 				{#each data.docMetadata.slugs as slug, idx (slug)}
 					<button
@@ -33,6 +34,6 @@
 					>
 				{/each}
 			</div>
-		{/snippet}
+		</Accordion.ItemContent>
 	</Accordion.Item>
 </Accordion>

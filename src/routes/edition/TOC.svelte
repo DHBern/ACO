@@ -4,6 +4,7 @@
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 
 	let accordionState = $state(['Band 1']);
+
 	let volumes = [
 		{ label: 'Band 2', number: 2 },
 		{ label: 'Band 3', number: 3 }
@@ -27,11 +28,13 @@
 		collapsible
 		classes="shadow-md mb-4"
 	>
-		<Accordion.Item value="Band 1" classes="">
-			{#snippet lead()}{/snippet}
-			{#snippet control()}<span class="text-surface-950-50 text-xl font-bold">Band 1</span
-				>{/snippet}
-			{#snippet panel()}
+		<Accordion.Item value="Band 1">
+			<h3>
+				<Accordion.ItemTrigger
+					><span class="text-surface-950-50 text-xl font-bold">Band 1</span>
+				</Accordion.ItemTrigger>
+			</h3>
+			<Accordion.ItemContent>
 				<div class="p-10">
 					<a
 						href="{base}/edition/1/vorwort"
@@ -74,7 +77,7 @@
 												<span class="text-surface-950-50 font-bold">{doc.slug}:</span>
 												<span class="text-surface-950-50">{@html doc.title}</span>
 												<span class="ml-1">
-													<span class="text-primary-600-400">({doc.acoDocLabel})</span>
+													<span class="text-secondary-600-400">({doc.acoDocLabel})</span>
 												</span>
 											</a>
 										</li>
@@ -84,19 +87,20 @@
 						{/each}
 					</div>
 				</div>
-			{/snippet}
+			</Accordion.ItemContent>
 		</Accordion.Item>
-
 		{#each volumes as volume}
 			<Accordion.Item value={volume.label}>
-				{#snippet lead()}{/snippet}
-				{#snippet control()}<span class="text-surface-950-50 text-xl font-bold">{volume.label}</span
-					>{/snippet}
-				{#snippet panel()}
-					<div class="py-5 pl-8">
+				<h3>
+					<Accordion.ItemTrigger
+						><span class="text-surface-950-50 text-xl font-bold">{volume.label}</span>
+					</Accordion.ItemTrigger>
+				</h3>
+				<Accordion.ItemContent
+					><div class="py-5 pl-8">
 						<p class="hover:text-primary-400-600 text-surface-950-50">Band in Bearbeitung</p>
 					</div>
-				{/snippet}
+				</Accordion.ItemContent>
 			</Accordion.Item>
 		{/each}
 	</Accordion>

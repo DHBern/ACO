@@ -40,9 +40,12 @@
 	<Accordion {accordionState} onValueChange={(e) => (accordionState.value = e.value)} collapsible>
 		{#each labelsList as label, idx}
 			<Accordion.Item value={label}>
-				{#snippet lead()}{/snippet}
-				{#snippet control()}<span class="text-xl font-bold">{label}</span>{/snippet}
-				{#snippet panel()}
+				<h3>
+					<Accordion.ItemTrigger
+						><span class="text-xl font-bold">{label}</span></Accordion.ItemTrigger
+					>
+				</h3>
+				<Accordion.ItemContent>
 					<div class="prose">
 						<ul>
 							{#each Object.keys(groupedList[idx]) as docKey}
@@ -58,7 +61,7 @@
 							{/each}
 						</ul>
 					</div>
-				{/snippet}
+				</Accordion.ItemContent>
 			</Accordion.Item>
 		{/each}
 	</Accordion>
