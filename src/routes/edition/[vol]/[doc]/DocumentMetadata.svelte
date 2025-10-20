@@ -10,7 +10,7 @@
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible classes="shadow-md mb-4">
 	<Accordion.Item value="metadata">
 		{#snippet lead()}{/snippet}
-		{#snippet control()}<span class="text-xl font-bold">Zusätzliche Informationen</span>{/snippet}
+		{#snippet control()}<span class="text-xl font-bold">Metadaten</span>{/snippet}
 		{#snippet panel()}
 			<div class="col-span-4 col-start-1 pl-13">
 				{@html generateFootnoteSuperscripts(data.docMetadata?.content?.head)}
