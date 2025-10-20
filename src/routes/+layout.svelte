@@ -32,7 +32,6 @@
 				<a href={`${base}/edition`}>Bände</a>
 				<a href={`${base}/register`}>Register</a>
 				<a href={`${base}/suche`}>Suche</a>
-				<a href={`${base}/impressum`}>Impressum</a>
 			</div>
 			<div class="flex-grow"></div>
 
@@ -64,15 +63,17 @@
 	</div>
 
 	<footer class="flex-none bg-[var(--aco-teal-light)] py-5 align-middle text-slate-50">
-		<div class="p-5">
-			<h1 class="text-lg font-bold text-black dark:text-black">
+		<div class="flex w-full flex-col justify-center p-5 align-middle">
+			<h1 class="my-10 text-lg font-bold text-black dark:text-black">
 				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar
 			</h1>
-			<p class="text-md mt-5 ml-5 font-bold text-black dark:text-black">
+			<!-- <p class="text-md my-5 text-black dark:text-black">
 				<strong>Empfohlene Zitierung: </strong> ACO..........
-			</p>
+			</p> -->
+			<button class="w-40 rounded-3xl bg-white p-3 text-black"
+				><a href={`${base}/impressum`}>Impressum</a></button
+			>
 		</div>
-
 		<div class="my-2 flex w-full justify-around">
 			<div>
 				<img
