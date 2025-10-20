@@ -2,7 +2,7 @@
 </script>
 
 <div class="mx-auto max-w-[1500px] py-24">
-	<h1>Vorwort zum ersten Band</h1>
+	<h1 class="h1">Vorwort zum ersten Band</h1>
 	<p>
 		Das Projekt „Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar und
 		Register“, dem der hier vorliegende Band entsprungen ist, ist am Evangelisch-Theologischen
@@ -36,17 +36,3 @@
 		ergebenden Fragen mit uns zu diskutieren.
 	</p>
 </div>
-
-<style>
-	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
-	h1 {
-		@apply text-secondary-400-600 mb-2 text-3xl font-bold;
-	}
-	h2 {
-		@apply text-xl font-bold;
-	}
-	h3 {
-		@apply text-lg font-bold;
-	}
-</style>

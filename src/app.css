@@ -47,6 +47,10 @@
 	}
 }
 
+h1 {
+	@apply text-secondary-400-600;
+}
+
 p {
 	@apply pt-4 text-lg text-surface-950-50 dark:text-white;
 }

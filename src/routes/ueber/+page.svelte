@@ -5,8 +5,8 @@
 <div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
 	<div class="col-span-1 col-start-1">
 		<div class="w-full">
-			<h1>Einleitung</h1>
-			<h2>
+			<h1 class="h1">Einleitung</h1>
+			<h2 class="h2">
 				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar und Register.
 			</h2>
 
@@ -58,8 +58,8 @@
 <!-- Über dieses Projekt -->
 <div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
 	<div class="">
-		<h1>Über dieses Projekt</h1>
-		<h2>Die Akten des Konzils von Ephesus 431.</h2>
+		<h1 class="h1">Über dieses Projekt</h1>
+		<h2 class="h2">Die Akten des Konzils von Ephesus 431.</h2>
 
 		<p>
 			Die Akten des III. Ökumenischen Konzils von Ephesus, das im Jahre 431 abgehalten wurde, bilden
@@ -78,7 +78,7 @@
 			Einigung und den unmittelbaren Nachwirkungen der Auseinandersetzungen.
 		</p>
 
-		<h2>Bedeutung des Projekts</h2>
+		<h2 class="h2">Bedeutung des Projekts</h2>
 
 		<p>
 			Wegen ihrer kaum zu überschätzenden Bedeutung für die Kirchen- und Theologiegeschichte sind
@@ -124,7 +124,7 @@
 <!-- Ansprechpersonen -->
 <div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
 	<div class="">
-		<h1>Ansprechpersonen</h1>
+		<h1 class="h1">Ansprechpersonen</h1>
 		<p>
 			Ansprechpartner für den inhaltlichen Teil dieses Projekt, das seit Januar 2016 als
 			Langfristvorhaben von der DFG gefördert wird, sind:
@@ -165,29 +165,13 @@
 	<!-- Ansprechpersonen -->
 	<div>
 		<div class="">
-			<h1>Förderung und Partner</h1>
+			<h1 class="h1">Förderung und Partner</h1>
 		</div>
 
-		<div class="grid grid-cols-3 gap-2">
-			<ul class="mt-2 mb-10 ml-5 font-bold **:text-lg">
-				<li>Deutsche Forschungsgemeinschaft (DFG)</li>
-				<li>Universität Bonn</li>
-				<li>Universität Bern</li>
-			</ul>
-		</div>
+		<ul class="mt-2 mb-10 ml-5 font-bold **:text-lg">
+			<li>Deutsche Forschungsgemeinschaft (DFG)</li>
+			<li>Universität Bonn</li>
+			<li>Universität Bern</li>
+		</ul>
 	</div>
 </div>
-
-<style>
-	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
-	h1 {
-		@apply text-secondary-400-600 mb-2 text-3xl font-bold;
-	}
-	h2 {
-		@apply mt-8 text-xl font-bold;
-	}
-	h3 {
-		@apply text-lg font-bold;
-	}
-</style>

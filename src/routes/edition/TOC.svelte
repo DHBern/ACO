@@ -41,9 +41,9 @@
 				<div class="grid grid-cols-2 gap-20 p-10">
 					<!-- ACO order -->
 					<div class="col-span-1 col-start-1">
-						<h2 class="mb-4">Dokumente ACO</h2>
+						<h2 class="h2 mb-4">Dokumente ACO</h2>
 						<div class="pb-10 text-lg">
-							<ul>
+							<ul class="!list-none">
 								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="hover:**:text-secondary-700-300 mb-1">
 										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
@@ -61,7 +61,7 @@
 
 					<!-- Schwartz order -->
 					<div class="col-span-1 col-start-2">
-						<h2 class="mb-4">Konkordanz Schwartz</h2>
+						<h2 class="h2 mb-4">Konkordanz Schwartz</h2>
 						{#each types as type (type)}
 							<div class="pb-10 text-lg">
 								<ul>
@@ -120,23 +120,9 @@
 								</div>
 							{/each}
 						</div>
-					</div>
+						</div>
 				{/snippet}
 			</Accordion.Item>
 		{/each}
 	</Accordion>
 </div>
-
-<style>
-	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
-	h1 {
-		@apply text-secondary-700-300 mb-2 text-3xl font-bold;
-	}
-	h2 {
-		@apply text-xl font-bold;
-	}
-	h3 {
-		@apply text-lg font-bold;
-	}
-</style>
