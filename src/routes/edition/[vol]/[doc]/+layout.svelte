@@ -11,10 +11,12 @@
 <div class="mx-auto max-w-[1800px] py-24">
 	<div class="containerDocHead mx-auto max-w-[1200px]">
 		<!-- Title -->
-		<h1 class="mb-2 text-4xl text-[var(--aco-orange)]">{@html data.docMetadata.toc_title}</h1>
+		<h1 class="text-secondary-400-600 mb-2 text-4xl">{@html data.docMetadata.toc_title}</h1>
 
 		<!-- Document Metadata -->
-		<p class="mb-5">{@html data.docMetadata?.content?.inhalt}</p>
+		<div class="mb-5">
+			{@html data.docMetadata?.content?.inhalt}
+		</div>
 		<DocumentMetadata {data} />
 
 		<!-- Unit-Navigation -->
@@ -23,25 +25,29 @@
 		<!-- Settings -->
 		<div class="my-5 flex justify-center gap-5 align-middle">
 			<Switch
+				class="**:text-lx"
 				name="toggleMarksVisible"
-				classes="**:text-lx"
 				checked={marksVisible.value}
 				onCheckedChange={(e) => (marksVisible.value = e.checked)}
-				controlActive="bg-surface-700"
-				controlInactive="bg-surface-200"
 			>
-				Markierungen
+				<Switch.Control class="data-[state=checked]:bg-secondary-600-400 bg-surface-200-800">
+					<Switch.Thumb />
+				</Switch.Control>
+				<Switch.Label>Markierungen</Switch.Label>
+				<Switch.HiddenInput />
 			</Switch>
+
 			<Switch
+				class="**:text-lx"
 				name="toggleCopyWithoutLinebreaks"
-				classes="**:text-lx"
 				checked={copyWithoutLinebreaks.value}
-				onCheckedChange={(e) => {
-					copyWithoutLinebreaks.value = e.checked;
-				}}
-				controlActive="bg-surface-700"
-				controlInactive="bg-surface-200"
-				>Fluid-Copy
+				onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
+			>
+				<Switch.Control class="data-[state=checked]:bg-secondary-600-400 bg-surface-200-800">
+					<Switch.Thumb />
+				</Switch.Control>
+				<Switch.Label>Copy-Paste ohne Zeilenumbrüche</Switch.Label>
+				<Switch.HiddenInput />
 			</Switch>
 		</div>
 	</div>

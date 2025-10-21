@@ -40,9 +40,12 @@
 	<Accordion {accordionState} onValueChange={(e) => (accordionState.value = e.value)} collapsible>
 		{#each labelsList as label, idx}
 			<Accordion.Item value={label}>
-				{#snippet lead()}{/snippet}
-				{#snippet control()}<span class="text-xl font-bold">{label}</span>{/snippet}
-				{#snippet panel()}
+				<h3>
+					<Accordion.ItemTrigger
+						><span class="text-xl font-bold">{label}</span></Accordion.ItemTrigger
+					>
+				</h3>
+				<Accordion.ItemContent>
 					<div class="prose">
 						<ul>
 							{#each Object.keys(groupedList[idx]) as docKey}
@@ -58,27 +61,27 @@
 							{/each}
 						</ul>
 					</div>
-				{/snippet}
+				</Accordion.ItemContent>
 			</Accordion.Item>
 		{/each}
 	</Accordion>
 {/snippet}
 
 <div class="mx-auto grid w-full max-w-[1500px] grid-cols-2 gap-5 py-24">
-	<h1 class="text-3xl font-bold text-[var(--aco-orange)]">Register</h1>
-	<div class="col-span-2 mb-4">
+	<h1 class="h1">Register</h1>
+	<div class="col-span-2">
 		<p class="">Vgl. für detailliertere Angaben den Index bei Schwartz.</p>
 		<p class="">Ortsspeziﬁsche Adjektive sind unter Ortsnamen subsumiert</p>
 	</div>
 	<div class="col-span-1 col-start-1">
-		<h2 class="mb-4 text-3xl font-bold">Orte</h2>
-		<div class="h-[70vh] overflow-y-scroll bg-[var(--aco-gray-2)] p-3">
+		<h2 class="h2 mb-4">Orte</h2>
+		<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
 			{@render accordion(placeLabels, placesGrouped, accordionPlaces)}
 		</div>
 	</div>
 	<div class="col-span-1 col-start-2">
-		<h2 class="mb-4 text-3xl font-bold">Personen</h2>
-		<div class="h-[70vh] overflow-y-scroll bg-[var(--aco-gray-2)] p-3">
+		<h2 class="h2 mb-4">Personen</h2>
+		<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
 			{@render accordion(peopleLabels, peopleGrouped, accordionPeople)}
 		</div>
 	</div>
@@ -86,6 +89,7 @@
 
 <style>
 	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
 
 	:global([data-type='register-doc-key']) {
 		@apply font-bold;

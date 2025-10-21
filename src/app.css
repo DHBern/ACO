@@ -1,17 +1,13 @@
 @import 'tailwindcss';
 @import '@skeletonlabs/skeleton';
-@import '@skeletonlabs/skeleton/optional/presets';
-@import '@skeletonlabs/skeleton/themes/cerberus';
-/*
-  Add your theme import for your theme: "cerberus" here
-*/
-
-@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+@import '@skeletonlabs/skeleton-svelte';
+@import '../theme_aco';
 
 @config '../tailwind.config.ts';
 
 /* Apply .dark whenever the dark class is present earlier in the HTML tree */
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-darkModeState=dark], [data-darkModeState=dark] *));
+
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -50,29 +46,22 @@
 	}
 }
 
-:root {
-	--aco-gray-1: #ffffff;
-	--aco-gray-2: #f1f1f1;
-	--aco-gray-3: #adadad;
-	--aco-gray-4: #464646;
-	--aco-teal: #0f5866;
-	--aco-teal-light: #468b99;
-	--aco-teal-light2: #b0c9ce;
-	--aco-orange: #ac6037;
-	--aco-orange-light: #c1886a;
-	--aco-orange-light2: #d5b3a0;
-	--aco-link: #3ac6e1;
+h1 {
+	@apply text-secondary-400 my-5;
+}
+h2 {
+	@apply mt-10
 }
 
 p {
-	@apply pt-4 text-lg text-black dark:text-white;
+	@apply pt-4 text-lg text-surface-950-50;
 }
 .nowrap p {
 	@apply whitespace-nowrap;
 }
 
 /* Greek Text */
-span[data-rend='greek'] {
+span[data-lang='greek'] {
 	font-family: 'Junicode', 'OpenSans', sans-serif
 }
 
@@ -80,38 +69,6 @@ span[data-rend='greek'] {
 span[data-type='head_key'] {
 	@apply mr-1 font-bold;
 }
-
-/* Edition Text */
-.marksVisible span[data-ids] {
-	@apply cursor-pointer bg-[#ffffdd] dark:text-black [&.multiple-ids]:bg-[#ffff99];
-}
-
-.marksVisible span[data-type='mark'].highlighted {
-	@apply bg-[var(--aco-orange-light)] dark:bg-[var(--aco-orange)];
-}
-
-.containerText p {
-	@apply indent-6;
-}
-.containerText [data-type='lib-number'] {
-	@apply mt-10 inline-block w-full text-center font-bold;
-}
-
-.containerText [data-type='acoTitle'] {
-	@apply text-center text-lg font-bold;
-}
-/* [data-title_line="2"] {
-	@apply text-2xl
-} */
-
-/* span[data-type=note-start]::before {
-  @apply text-blue-600 in-[&.highlighted]:text-red-500 mr-[1px] ml-[3px];
-  @apply content-["[●"];
-}
-span[data-type=note-end]::before {
-  @apply text-blue-600 mr-[1px] ml-[3px];
-  @apply content-["●]"];
-} */
 
 /* Prevent selecting <br /> on copy-paste */
 .copyWithoutLinebreaks br {
@@ -121,13 +78,4 @@ span[data-type=note-end]::before {
 /* Notes and Popup */
 span[data-type='noteRefString-lines'] {
 	@apply mr-1 font-bold;
-}
-
-[data-theme='cerberus'] {
-	--heading-font-family: 'Open Sans', sans-serif;
-	--base-font-family: 'Open Sans', sans-serif;
-	--anchor-font-family: 'inherit';
-
-	--body-background-color: #e8e8e8;
-	--body-background-color-dark: #404e50;
 }

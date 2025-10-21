@@ -327,7 +327,7 @@
 <!-- container must be a positioned for scroll-to-line to work as expected! -->
 <div
 	bind:this={elContainerContent}
-	class="containerContent relative h-[calc(100vh*0.8)] w-full overflow-x-scroll bg-[var(--aco-gray-2)] p-10 pb-24"
+	class="containerContent bg-surface-50-950 relative h-[calc(100vh*0.8)] w-full overflow-x-scroll p-10 pb-24"
 >
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->
@@ -422,6 +422,7 @@
 
 <style lang="postcss">
 	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
 
 	.containerLineNums :global(a.line-number),
 	.containerPageNums :global(a.page-number) {
@@ -438,6 +439,24 @@
 		@apply inline-block;
 	}
 	.containerLineNums :global(.lineNumBuffer) {
-		@apply text-black/0 select-none;
+		@apply text-surface-950-50/0 select-none;
+	}
+
+	/* Text */
+	.containerText :global([data-type='acoTitle']) {
+		@apply text-center text-lg font-bold;
+	}
+
+	.containerText :global(p) {
+		@apply indent-6;
+	}
+
+	/* Highlights in Text */
+	.containerText :global(.marksVisible span[data-ids]) {
+		@apply text-surface-950-50 bg-warning-100-900/40 [&.multiple-ids]:bg-warning-300-700/70 cursor-pointer;
+	}
+
+	.containerText :global(.marksVisible span[data-type='mark'].highlighted) {
+		@apply bg-error-200-800 text-surface-950-50;
 	}
 </style>

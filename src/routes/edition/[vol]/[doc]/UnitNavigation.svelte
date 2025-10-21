@@ -13,9 +13,10 @@
 	classes="containerSettings shadow-md mb-4"
 >
 	<Accordion.Item value="unitNav">
-		{#snippet lead()}{/snippet}
-		{#snippet control()}<span class="text-xl font-bold">Dokumentenstruktur</span>{/snippet}
-		{#snippet panel()}
+		<Accordion.ItemTrigger
+			><span class="text-xl font-bold">Dokumentenstruktur</span></Accordion.ItemTrigger
+		>
+		<Accordion.ItemContent>
 			<div class="containerDocUnits my-5 max-h-60 overflow-y-scroll">
 				{#each data.docMetadata.slugs as slug, idx (slug)}
 					<button
@@ -28,11 +29,11 @@
 								}
 							});
 						}}
-						class="mx-2 my-1 rounded-full bg-black px-4 py-1 text-white"
+						class="bg-surface-950-50 hover:bg-secondary-200 text-surface-50-950 mx-2 my-1 rounded-full px-4 py-1"
 						>{data.docMetadata.labels[idx]}</button
 					>
 				{/each}
 			</div>
-		{/snippet}
+		</Accordion.ItemContent>
 	</Accordion.Item>
 </Accordion>
