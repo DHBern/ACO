@@ -21,22 +21,21 @@
             }
         },
         {
-            "schwartzSlug": "CV19",
-            "schwartzNum": "19",
             "acoDocNum": "3",
             "acoDocLabel": "Dok. 3",
+            "unitSlugs": [ "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
+            "unitLabels": [ "", "(1)", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)", "(8)", "(9)", "" ],
+            "schwartzSlug": "CV19",
+            "schwartzNum": "19",
             "type": "CV",
             "title": "Homilie des Proklos von Kyzikos",
             "slug": "CV19",
-            "unitSlugs": [],
-            "unitLabelsLong": [],
-            "unitLabels": [
-                ""
-            ],
             "content": {
-                "head": "",
-                "inhalt": ""
-            }
+                "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 19, ACO I,1,1 S. 103,1–107,22; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 9–20; Coleti (1728–1734), Bd. 3 Sp. 577–585; Mansi, Bd. 4 Sp. 577–588; PG 65, Sp. 680–692 </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5800 </p> <p><span data-type='head_key'>Verfasser:</span> Proklos von Kyzikos (später: von Konstantinopel) </p> <p><span data-type='head_key'>Datierung:</span> Datierung unsicher: Ende 428 bis Frühjahr 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> – </p> <p><span data-type='head_key'>Literatur: </span> Constas (2003); Peltomaa (2004) </p>",
+                "footnotes_head": [  ],
+                "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Proklos, der Bischof von Kyzikos, hält zu einem nicht mit Sicherheit zu bestimmenden Marienfest in der Hauptkirche von Konstantinopel eine Predigt, in welcher er Maria als ewige Jungfrau und Mutter desjenigen preist, der Gottheit und Menschheit wesensmäßig in sich vereint und nur aufgrund dieser Voraussetzung in der Lage war, die Menschen zu erlösen.</p>"
+            },
+            "unitLabelsLong": [ "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ]
         },
         {
             "schwartzSlug": "CPal22",
