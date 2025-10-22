@@ -23,8 +23,8 @@
         {
             "acoDocNum": "3",
             "acoDocLabel": "Dok. 3",
-            "unitSlugs": [ "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
-            "unitLabels": [ "", "(1)", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)", "(8)", "(9)", "" ],
+            "unitSlugs": [ "acoTitle", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
+            "unitLabels": [ "acoTitle", "(1)", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)", "(8)", "(9)", "" ],
             "schwartzSlug": "CV19",
             "schwartzNum": "19",
             "type": "CV",
@@ -35,7 +35,7 @@
                 "footnotes_head": [  ],
                 "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Proklos, der Bischof von Kyzikos, hält zu einem nicht mit Sicherheit zu bestimmenden Marienfest in der Hauptkirche von Konstantinopel eine Predigt, in welcher er Maria als ewige Jungfrau und Mutter desjenigen preist, der Gottheit und Menschheit wesensmäßig in sich vereint und nur aufgrund dieser Voraussetzung in der Lage war, die Menschen zu erlösen.</p>"
             },
-            "unitLabelsLong": [ "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ]
+            "unitLabelsLong": [ "acoTitle", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ]
         },
         {
             "schwartzSlug": "CPal22",
