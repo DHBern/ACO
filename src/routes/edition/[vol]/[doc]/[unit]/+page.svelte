@@ -15,10 +15,8 @@
 
 	import { IsInViewport, ElementRect, ScrollState, useIntersectionObserver } from 'runed';
 
-	import { placeNotes } from '$lib/functions/floatingApparatus';
 	import {
 		extractNoteIds,
-		generateMainText,
 		generateLineNumbers,
 		generatePageNumbers
 	} from '$lib/functions/protoHTMLconversion';
@@ -138,7 +136,7 @@
 			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
 		elContainerContent.scrollTo({ top: newHeight - oldHeight, behavior: 'instant' });
 
-		// Re-position of all notes
+		// Re-position all notes
 		loadedUnits.forEach((unit) => {
 			placeNotes(extractNoteIds(unit.text).filter((slug) => slug !== 'TODO'));
 		});
@@ -373,7 +371,7 @@
 					<TextUnit
 						bind:el={unit.element}
 						slug={unit.slug}
-						text={generateMainText(unit.text)}
+						text={unit.text}
 						unitlabel={unit.label}
 						bind:selectedNote
 						{multiMarkPopupStore}

@@ -4,6 +4,7 @@
 		resetMarkSelection,
 		placeNotes
 	} from '$lib/functions/floatingApparatus';
+	import { generateMainText } from '$lib/functions/protoHTMLconversion';
 	import { extractNoteIds } from '$lib/functions/protoHTMLconversion/extractNoteIds.js';
 	import { onMount } from 'svelte';
 	import { marksVisible } from '../../../globals.svelte.js';
@@ -74,5 +75,5 @@
 	bind:this={el}
 >
 	<!-- {unitlabel} -->
-	{@html text}
+	{@html generateMainText(text)}
 </div>
