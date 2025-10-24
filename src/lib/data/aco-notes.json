@@ -165,7 +165,7 @@
 			}
 		},
 		"CV19":{
-      "CV19-9": {
+      "9": {
         "CV19-9-14--Er-eingeschlossen": {
           "note_content": "Vgl. Mt 27,60.",
           "doc_unit": "CV19-9",
@@ -211,11 +211,11 @@
           "line_end": "11",
           "text_start": "und"
         },
-        "CV19-9-3-4-Und-er‌³": {
+        "CV19-9-3-4-Und-er‌": {
           "note_content": "Vgl. oben CV19,6,5 – 6.",
           "doc_unit": "CV19-9",
           "document": "CV19",
-          "text_end": "er‌³",
+          "text_end": "er‌",
           "line_start": "3",
           "line_end": "4",
           "text_start": "Und"
@@ -229,14 +229,14 @@
           "line_end": "8",
           "text_start": "den"
         },
-        "CV19-9-12--und‌¹-erschauderte": {
+        "CV19-9-12--und‌-erschauderte": {
           "note_content": "Vgl. Mt 27,51–54.",
           "doc_unit": "CV19-9",
           "document": "CV19",
           "text_end": "erschauderte",
           "line_start": "12",
           "line_end": "12",
-          "text_start": "und‌¹"
+          "text_start": "und‌"
         },
         "CV19-9-13-14-und-aus": {
           "note_content": "Vgl. Ps 103(104),2.",
@@ -256,14 +256,14 @@
           "line_end": "7",
           "text_start": "Töchter"
         },
-        "CV19-9-8-9-im‌²-Jungfrau": {
+        "CV19-9-8-9-im‌-Jungfrau": {
           "note_content": "Vgl. Mt 1,23; Jes 7,14.",
           "doc_unit": "CV19-9",
           "document": "CV19",
           "text_end": "Jungfrau",
           "line_start": "8",
           "line_end": "9",
-          "text_start": "im‌²"
+          "text_start": "im‌"
         },
         "CV19-9-10--und-Winde": {
           "note_content": "Vgl. Ps 103(104),3.",
@@ -283,14 +283,14 @@
           "line_end": "9",
           "text_start": "war"
         },
-        "CV19-9-2--Ein‌¹-bringen": {
+        "CV19-9-2--Ein‌-bringen": {
           "note_content": "Vgl. oben CV19,5,14 – 15.",
           "doc_unit": "CV19-9",
           "document": "CV19",
           "text_end": "bringen",
           "line_start": "2",
           "line_end": "2",
-          "text_start": "Ein‌¹"
+          "text_start": "Ein‌"
         },
         "CV19-9-11-12-Der-Gesicht": {
           "note_content": "Vgl. Joh 18,22.",
@@ -301,17 +301,17 @@
           "line_end": "12",
           "text_start": "Der"
         },
-        "CV19-9-8--und‌¹-auf": {
+        "CV19-9-8--und‌-auf": {
           "note_content": "Vgl. Gen 3,18.",
           "doc_unit": "CV19-9",
           "document": "CV19",
           "text_end": "auf",
           "line_start": "8",
           "line_end": "8",
-          "text_start": "und‌¹"
+          "text_start": "und‌"
         }
       },
-      "CV19-8": {
+      "8": {
         "CV19-8-19-20-Der-Heerscharen": {
           "note_content": "Vgl. z.B. Ps 58(59),5. 79(80)4; Jes 42,12.",
           "doc_unit": "CV19-8",
@@ -321,11 +321,11 @@
           "line_end": "20",
           "text_start": "Der"
         },
-        "CV19-8-4--Denn-hätte‌¹": {
+        "CV19-8-4--Denn-hätte‌": {
           "note_content": "Vgl. oben CV19,3,13 – 14.",
           "doc_unit": "CV19-8",
           "document": "CV19",
-          "text_end": "hätte‌¹",
+          "text_end": "hätte‌",
           "line_start": "4",
           "line_end": "4",
           "text_start": "Denn"
@@ -339,11 +339,11 @@
           "line_end": "16",
           "text_start": "Der"
         },
-        "CV19-8-17--Ihr-Finsternis‌²": {
+        "CV19-8-17--Ihr-Finsternis‌": {
           "note_content": "Eph 5,8.",
           "doc_unit": "CV19-8",
           "document": "CV19",
-          "text_end": "Finsternis‌²",
+          "text_end": "Finsternis‌",
           "line_start": "17",
           "line_end": "17",
           "text_start": "Ihr"
@@ -357,14 +357,14 @@
           "line_end": "11",
           "text_start": "das"
         },
-        "CV19-8-21--Gott‌²-erschienen": {
+        "CV19-8-21--Gott‌-erschienen": {
           "note_content": "Ps 117(118),27.",
           "doc_unit": "CV19-8",
           "document": "CV19",
           "text_end": "erschienen",
           "line_start": "21",
           "line_end": "21",
-          "text_start": "Gott‌²"
+          "text_start": "Gott‌"
         },
         "CV19-8-22--die-Einung": {
           "note_content": "Diese Junktur wird später zu einem Bestandteil der Unionsformel (vgl. CV123, ACO I,1,4 S.&nbsp;9,3; CV127, ACO I,1,4 S.&nbsp;17,15). Im Rahmen der Streitigkeiten um den θεοτόκος-Titel wird sie an dieser Stelle, soweit es sich den Akten entnehmen lässt, vermutlich zum ersten Mal ver­wen­det.",
@@ -439,7 +439,7 @@
           "text_start": "Wenn"
         }
       },
-      "CV19-7": {
+      "7": {
         "CV19-7-16-17-Ich-hofft": {
           "note_content": "Ps 118(119),176.",
           "doc_unit": "CV19-7",
@@ -449,14 +449,14 @@
           "line_end": "17",
           "text_start": "Ich"
         },
-        "CV19-7-17-18-Gott‌¹-übergehen": {
+        "CV19-7-17-18-Gott‌-übergehen": {
           "note_content": "Ps 49,(50),2f.",
           "doc_unit": "CV19-7",
           "document": "CV19",
           "text_end": "übergehen",
           "line_start": "17",
           "line_end": "18",
-          "text_start": "Gott‌¹"
+          "text_start": "Gott‌"
         },
         "CV19-7-5-6-Die-übersteigt": {
           "note_content": "Zu Propheten als Ärzten vgl. z.B. Orig. Hom. in Jer. 14,2; Eus. Ps. 83, PG 23, 852C–D; Cyr. Jes. 3,1, PG 70, 581C.",
@@ -576,7 +576,7 @@
           "text_start": "Gott"
         }
       },
-      "CV19-6": {
+      "6": {
         "CV19-6-6-7-In-Fehltritte": {
           "note_content": "Eph 1,7.",
           "doc_unit": "CV19-6",
@@ -596,12 +596,12 @@
           "text_start": "dass"
         }
       },
-      "CV19-5": {
-        "CV19-5-1-2-Derjenige-Gabriel‌¹": {
+      "5": {
+        "CV19-5-1-2-Derjenige-Gabriel‌": {
           "note_content": "Vgl. Lk 1,26–38.",
           "doc_unit": "CV19-5",
           "document": "CV19",
-          "text_end": "Gabriel‌¹",
+          "text_end": "Gabriel‌",
           "line_start": "1",
           "line_end": "2",
           "text_start": "Derjenige"
@@ -643,7 +643,7 @@
           "text_start": "Gegenwart]"
         }
       },
-      "CV19-4": {
+      "4": {
         "CV19-4-2--infolge-Fortschrittes": {
           "note_content": "Nestorius argumentiert in einer seiner Predigten, die vermutlich schon in einer frühen Phase der Streitigkeiten in Umlauf gebracht wurde, mit großem Aufwand gegen die Vorstellung, dass die Gottheit Christi einem Fortschritt, d.h. einer Veränderung, unterworfen sein könnte (vgl. z.B. Loofs, Nestoriana S.&nbsp;233,4–6; 235,8f. 16). Möglicherweise könnte sich Proklos hier also auf diese Predigt oder ähnliche Äußerungen des Nestorius beziehen.",
           "doc_unit": "CV19-4",
@@ -690,7 +690,7 @@
           "text_start": "Der"
         }
       },
-      "CV19-3": {
+      "3": {
         "CV19-3-3-4-hätte-Satan": {
           "note_content": "Vgl. Hebr 2,14.",
           "doc_unit": "CV19-3",
@@ -718,14 +718,14 @@
           "line_end": "21",
           "text_start": "also]"
         },
-        "CV19-3-18--den‌¹-Torheit": {
+        "CV19-3-18--den‌-Torheit": {
           "note_content": "Vgl. 1 Kor 1,23.",
           "doc_unit": "CV19-3",
           "document": "CV19",
           "text_end": "Torheit",
           "line_start": "18",
           "line_end": "18",
-          "text_start": "den‌¹"
+          "text_start": "den‌"
         },
         "CV19-3-13-14-im-Melchi­sedeks": {
           "note_content": "Vgl. Hebr 5,6. 6,20.",
@@ -737,7 +737,7 @@
           "text_start": "im"
         }
       },
-      "CV19-2": {
+      "2": {
         "CV19-2-3-4-Wo-Leben": {
           "note_content": "Vgl. Röm 5,19.",
           "doc_unit": "CV19-2",
@@ -766,42 +766,42 @@
           "text_start": "der"
         }
       },
-      "CV19-1": {
-        "CV19-1-25-26-der‌²-Logos": {
+      "1": {
+        "CV19-1-25-26-der‌-Logos": {
           "note_content": "Hinter diesen Worten verbirgt sich offenbar die Vorstellung, dass der göttliche Logos (in seiner Eigenschaft als gesprochenes Wort) von Maria durch das Ohr empfangen wurde. Sie kommt weiter unten noch einmal deutlicher zum Ausdruck (vgl. CV19,10,4 – 5) und findet sich auch noch an anderer Stelle in den Schriften des Proklos (vgl. De inc. domini, S.&nbsp;200,48, Ed. Constas [2003]). Wie z.B. die oben (Anm. zu CV19,1,14) schon erwähnte Schrift In annuntiationem b.v. (vgl. PG 50, 794) oder die unter dem Namen des Gregorios Thaumaturgos überlieferte Schrift In annuntiationem s.v.M. (PG 10, 1164B) zeigen, steht diese Vorstellung damit in Verbindung, dass Marias Schwangerschaft verbal von Gabriel verkündet wurde (vgl. Lk 1,26–35). Zu der Geschichte dieses Gedankens vgl. Constas (2003), S.&nbsp;275–282.",
           "doc_unit": "CV19-1",
           "document": "CV19",
           "text_end": "Logos",
           "line_start": "25",
           "line_end": "26",
-          "text_start": "der‌²"
+          "text_start": "der‌"
         },
-        "CV19-1-18-19-die‌²-Himmeln": {
+        "CV19-1-18-19-die‌-Himmeln": {
           "note_content": "Vgl. Ri 6,37.",
           "doc_unit": "CV19-1",
           "document": "CV19",
           "text_end": "Himmeln",
           "line_start": "18",
           "line_end": "19",
-          "text_start": "die‌²"
+          "text_start": "die‌"
         },
-        "CV19-1-16-17-der‌³-verbrannte": {
+        "CV19-1-16-17-der‌-verbrannte": {
           "note_content": "Vgl. Ex 3,2. Zur Anwendung des Bildes des brennenden Busches auf Maria vgl. als sicheren Vorgänger Greg. Nyss. Vit. Mos. 2,21; ders. In diem nat. PG 46, 1136B–C.",
           "doc_unit": "CV19-1",
           "document": "CV19",
           "text_end": "verbrannte",
           "line_start": "16",
           "line_end": "17",
-          "text_start": "der‌³"
+          "text_start": "der‌"
         },
-        "CV19-1-19-20-aus‌²-umlegte": {
+        "CV19-1-19-20-aus‌-umlegte": {
           "note_content": "Nicht der ‚räuberische Wolf‘ legt sich hier den Schafspelz an (vgl. Mt 7,15), sondern der ‚gute Hirte‘ (vgl. Joh 10).",
           "doc_unit": "CV19-1",
           "document": "CV19",
           "text_end": "umlegte",
           "line_start": "19",
           "line_end": "20",
-          "text_start": "aus‌²"
+          "text_start": "aus‌"
         },
         "CV19-1-3-5-Das-Nutzens": {
           "note_content": "Es ist nicht ganz sicher, welches Fest hier eigentlich gemeint ist. Zu dessen Bestimmung und den sich nicht nur daraus ergebenden Datierungsfragen vgl. oben S.&nbsp;XXIIIf.",
@@ -821,23 +821,23 @@
           "line_end": "14",
           "text_start": "das"
         },
-        "CV19-1-24--die‌¹-Höhe": {
+        "CV19-1-24--die‌-Höhe": {
           "note_content": "Vgl. Lk 1,35.",
           "doc_unit": "CV19-1",
           "document": "CV19",
           "text_end": "Höhe",
           "line_start": "24",
           "line_end": "24",
-          "text_start": "die‌¹"
+          "text_start": "die‌"
         },
-        "CV19-1-23-24-die‌²-Adams": {
+        "CV19-1-23-24-die‌-Adams": {
           "note_content": "Vgl. Gen 3,21.",
           "doc_unit": "CV19-1",
           "document": "CV19",
           "text_end": "Adams",
           "line_start": "23",
           "line_end": "24",
-          "text_start": "die‌²"
+          "text_start": "die‌"
         },
         "CV19-1-21--der-Heilsplans": {
           "note_content": "Zur Metaphorik des Webens vgl. Constas (2003), S.&nbsp;315–358.",
@@ -885,8 +885,8 @@
           "text_start": "die"
         }
       },
-      "CV19-acoTitle": {  },
-      "CV19-10": {
+      "acoTitle": {  },
+      "10": {
         "CV19-10-8-9-Und-ver­schlossen": {
           "note_content": "Vgl. oben CV19,2,11.",
           "doc_unit": "CV19-10",
