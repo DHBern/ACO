@@ -390,7 +390,7 @@
 			>
 				{#each loadedUnits as unit (unit.slug)}
 					{#each extractNoteIds(unit.text).filter((slug) => slug !== 'TODO') as noteSlug (noteSlug)}
-						<Note {noteSlug} noteMetadata={unit.notes[noteSlug]} bind:selectedNote></Note>
+						<Note {noteSlug} noteData={unit.notes[noteSlug]} bind:selectedNote></Note>
 					{/each}
 				{/each}
 			</div>

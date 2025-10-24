@@ -3,7 +3,7 @@
 	import { handleNoteClick } from '$lib/functions/floatingApparatus';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
 
-	let { noteSlug, noteMetadata, selectedNote = $bindable() } = $props();
+	let { noteSlug, noteData, selectedNote = $bindable() } = $props();
 </script>
 
 <div
@@ -27,10 +27,10 @@
 	<div class="bg-primary-50-950/20 in-[&.highlighted]:bg-error-200-800/20">
 		<div class="note-header p-1">
 			{@html createNoteReferenceString(
-				noteMetadata.line_start,
-				noteMetadata.line_end,
-				noteMetadata.text_start,
-				noteMetadata.text_end
+				noteData.line_start,
+				noteData.line_end,
+				noteData.text_start,
+				noteData.text_end
 			)}
 		</div>
 		<div
@@ -40,7 +40,7 @@
 				'**:[&_a]:text-secondary-600-400'
 			]}
 		>
-			<p>{@html noteMetadata.note_content}</p>
+			<p>{@html noteData.note_content}</p>
 		</div>
 	</div>
 </div>
