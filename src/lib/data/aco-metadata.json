@@ -3,7 +3,7 @@
         {
         "acoDocNum": "1",
         "acoDocLabel": "Dok. 1",
-        "unitSlugs": [ "CPal20" ],
+        "unitSlugs": [ "text" ],
         "unitLabels": [ "text" ],
         "schwartzSlug": "CPal20",
         "schwartzNum": "20",
@@ -59,7 +59,7 @@
         {
         "acoDocNum": "4",
         "acoDocLabel": "Dok. 4",
-        "unitSlugs": [ "CPal22" ],
+        "unitSlugs": [ "text" ],
         "unitLabels": [ "text" ],
         "schwartzSlug": "CPal22",
         "schwartzNum": "22",
