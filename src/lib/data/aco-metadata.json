@@ -43,7 +43,7 @@
       "acoDocNum": "3",
       "acoDocLabel": "Dok. 3",
       "unitSlugs": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
-      "unitLabels": [ "(1) ", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)", "(8)", "(9)", "text" ],
+      "unitLabels": [ "(1) ", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)", "(8)", "(9)", "" ],
       "schwartzSlug": "CV19",
       "schwartzNum": "19",
       "type": "CV",
@@ -52,7 +52,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 19, ACO I,1,1 S. 103,1–107,22; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 9–20; Coleti (1728–1734), Bd. 3 Sp. 577–585; Mansi, Bd. 4 Sp. 577–588; PG 65, Sp. 680–692 </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5800 </p> <p><span data-type='head_key'>Verfasser:</span> Proklos von Kyzikos (später: von Konstantinopel) </p> <p><span data-type='head_key'>Datierung:</span> Datierung unsicher: Ende 428 bis Frühjahr 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> – </p> <p><span data-type='head_key'>Literatur: </span> Constas (2003); Peltomaa (2004) </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Proklos, der Bischof von Kyzikos, hält zu einem nicht mit Sicherheit zu bestimmenden Marienfest in der Hauptkirche von Konstantinopel eine Predigt, in welcher er Maria als ewige Jungfrau und Mutter desjenigen preist, der Gottheit und Menschheit wesensmäßig in sich vereint und nur aufgrund dieser Voraussetzung in der Lage war, die Menschen zu erlösen.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Proklos, der Bischof von Kyzikos, hält zu einem nicht mit Sicherheit zu bestimmenden Marien­fest in der Hauptkirche von Konstantinopel eine Predigt, in welcher er Maria als ewige Jungfrau und Mutter desjenigen preist, der Gottheit und Menschheit wesensmäßig in sich vereint und nur aufgrund dieser Voraussetzung in der Lage war, die Menschen zu erlösen.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ]
     },
@@ -148,7 +148,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 20, ACO I,1,1 S. 108,2–109,3; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 330f.; Coleti (1728–1734), Bd. 3 Sp. 879–881; Mansi, Bd. 4 Sp. 1000f.; PG 77, Sp. 61–64. </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5308 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung:</span> 429 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> Collectio Casinensis 18, ACO I,3 S. 43 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill gibt dem Adressaten seines Schreibens zu verstehen, dass sein entschiedenes Handeln allein dem Wohl der Kirche diene und durch christliche Ideale, nicht durch persön­liche Animositäten motiviert sei.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill gibt dem Adressaten seines Schreibens zu verstehen, dass sein entschiedenes Handeln allein dem Wohl der Kirche diene und durch christliche Ideale, nicht durch persönliche Animositäten motiviert sei.</p>"
       },
       "unitLabelsLong": [ "" ]
     },
@@ -182,7 +182,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 16, ACO I,1,1 S. 98,5–99,5; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 379–382; Coleti (1728–1734), Bd. 3 Sp. 929–932; Mansi, Bd. 4 Sp. 1053–1056; PG 77, Sp. 97–100 </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5314 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung:</span> 429 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> Collectio Casinensis 14, ACO I,3 S. 38f. </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 108f. </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill schreibt dem aufgrund seiner großen Lebenserfahrung hoch angesehenen Bischof Akakios von Beroia, um sich ihm gegenüber als Opfer im Kampf um die Rechtgläu­bigkeit darzustellen.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill schreibt dem aufgrund seiner großen Lebenserfahrung hoch angesehenen Bischof Akakios von Beroia, um sich ihm gegenüber als Opfer im Kampf um die Rechtgläubigkeit darzustellen.</p>"
       },
       "unitLabelsLong": [ "" ]
     },
@@ -274,7 +274,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition:</span> Collectio Palatina 34, ACO I,5 S. 64,3–65,10; ältere Edd.: Garnier (1673), Bd. 1 S. 80–82; Baluze (1684), S. 128–130; PL 48, Sp. 197–202; Loofs, Nestoriana S. 347–350 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> – </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel, Marius Mercator (Übers.) </p> <p><span data-type='head_key'>Datierung:</span> Spätestens 429 (zur Datierung s. oben S. XXVIII,9–XXIX,2) </p> <p><span data-type='head_key'>Griech. Original:</span> – </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> – </p> <p><span data-type='head_key'>Literatur:</span> Konoppa (2005), S. 329–331 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Die beiden ersten Abschnitte schildern das paradiesische Dasein, das Gott Adam vor dem Sündenfall gewährt hat. Der dritte Absatz beschreibt kurz die schlimme Lage der Menschen nach dem Fall. Breiter Raum wird dann dem Erlösungswerk Christi eingeräumt. Dieser habe sich als Mittler zwischen Welt und Gott der Menschheit angenommen und sie von der Macht des Teufels befreit. Die Befreiung sei an das Sakrament der Taufe geknüpft, die einem jeden Teilhabe an der himmlischen Gnade gewähre. Wie in CPal31 (ACO I,5 S. 62 [Dok. 13]) lässt Mercator seine Aus­wahl aus der Nestorius-Predigt mit einem abschlie­ßenden Hinweis auf die Katechumenen enden, die ohne Taufe keinen Anteil an der Befrei­ung vom Teufel hätten, wobei die Worte des Nestorius „Christo, cui est gloria in saecula“ darauf weisen, dass Ende der Auswahl und Ende der Predigt in diesem Fall identisch sind.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Die beiden ersten Abschnitte schildern das paradiesische Dasein, das Gott Adam vor dem Sündenfall gewährt hat. Der dritte Absatz beschreibt kurz die schlimme Lage der Menschen nach dem Fall. Breiter Raum wird dann dem Erlösungswerk Christi eingeräumt. Dieser habe sich als Mittler zwischen Welt und Gott der Menschheit angenommen und sie von der Macht des Teufels befreit. Die Befreiung sei an das Sakrament der Taufe geknüpft, die einem jeden Teilhabe an der himmlischen Gnade gewähre. Wie in CPal31 (ACO I,5 S. 62 [Dok. 13]) lässt Mercator seine Aus­wahl aus der Nestorius-Predigt mit einem abschließenden Hinweis auf die Katechumenen enden, die ohne Taufe keinen Anteil an der Befreiung vom Teufel hätten, wobei die Worte des Nestorius „Christo, cui est gloria in saecula“ darauf weisen, dass Ende der Auswahl und Ende der Predigt in diesem Fall identisch sind.</p>"
       },
       "unitLabelsLong": [ "" ]
     },
@@ -313,7 +313,7 @@
             "text_end": "429",
             "text_start": "Sommer"
           } ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill, der sich offenbar durch den Umstand, dass sich mittlerweile selbst Papst Coeles­tin in den -Streit eingeschaltet hat, zum Handeln genötigt sieht, schreibt Nestorius einen Brief, in welchem er diesen dazu auffordert, seine Aussagen zu korrigieren und den angestammten Titel der Mutter Jesu anzuerkennen.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill, der sich offenbar durch den Umstand, dass sich mittlerweile selbst Papst Coelestin in den -Streit eingeschaltet hat, zum Handeln genötigt sieht, schreibt Nestorius einen Brief, in welchem er diesen dazu auffordert, seine Aussagen zu korrigieren und den angestammten Titel der Mutter Jesu anzuerkennen.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3", "4" ]
     },
@@ -339,7 +339,7 @@
       "acoDocLabel": "Dok. 20",
       "unitSlugs": [ "1", "2", "3", "4", "5" ],
       "unitLabels": [
-        "(1) Eine Bitte oder vielleicht ein Aufruf an die überaus gottesfürchtigen \n",
+        "(1) Eine Bitte oder vielleicht ein Aufruf an die überaus gottesfürchtigen ",
         "(2)",
         "(3)",
         "(4)",
@@ -370,7 +370,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition:</span> Collectio Palatina 35, ACO I,5 S. 65,16–33; ältere Edd.: Garnier (1673), Bd. 1 S. 71f.; Baluze (1684), S. 131; PL 48, Sp. 181–184 u. 845–848; Loofs, Nestoriana S. 172f. </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5668 </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel, Marius Mercator (Übers.) </p> <p><span data-type='head_key'>Datierung:</span> Ende 429 / Anfang 430 </p> <p><span data-type='head_key'>Griech. Original:</span> – </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> – </p> <p><span data-type='head_key'>Literatur:</span> Konoppa (2005), S. 332–339 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Mit diesem Schreiben reagiert Nestorius offenbar auf einen Klagebrief des Caelestius, in dem sich dieser über ein ihm widerfahrenes Unrecht beschwert hatte. Nestorius versucht, Caelestius auf­zumuntern, indem er ihm bedeutende biblische Vorbilder vor Augen führt, die sich für die Wahrheit des Glaubens mit Freuden geopfert hätten. Schließ­lich verweist er noch auf seinen brieflichen Einsatz für Caelestius in West und Ost. </p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Mit diesem Schreiben reagiert Nestorius offenbar auf einen Klagebrief des Caelestius, in dem sich dieser über ein ihm widerfahrenes Unrecht beschwert hatte. Nestorius versucht, Caelestius auf­zumuntern, indem er ihm bedeutende biblische Vorbilder vor Augen führt, die sich für die Wahrheit des Glaubens mit Freuden geopfert hätten. Schließlich verweist er noch auf seinen brieflichen Einsatz für Caelestius in West und Ost. </p>"
       },
       "unitLabelsLong": [ "" ]
     },
@@ -385,14 +385,14 @@
       "title": "Kyrills zweiter Brief an Nestorius",
       "slug": "CV4",
       "content": {
-        "head": "<p><span data-type='head_key'>Edition:</span> Collectio Vaticana 4, ACO I,1,1 S. 25,24–28,26; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 315–322; Coleti (1728–1734), Bd. 3 Sp. 868–872; Mansi, Bd. 4 Sp. 888–892; PG 77, Sp. 44–49; Pusey (1965 [= 1868–1877]), Bd. 6 S. 3–11 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5304 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung:</span> <span data-note='1'></span><sup>1</sup>Anfang 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen:</span> (1) Collectio Veronensis 14, ACO I,2 S. 37–39; (2) Collectio Casinensis 6, ACO I,3 S. 20–22; (3) Collectio Palatina 26, ACO I,5 S. 49–51; (4) Collectio Quesneliana 66, ACO I,5 S. 337–340; (5) Gesta Chalcedonensia, ACO II,3 S. 82–85; (6) Gesta Chalce­donensia, ACO II,3 S. 7–10; (7) Gesta Constantinopolitana, ACO IV,1 S. 147–149 </p> <p><span data-type='head_key'>Weitere griech. Fassungen:</span> Gesta Chalcedonensia, ACO II,1,1 S. 104–106 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 115–120 </p>",
+        "head": "<p><span data-type='head_key'>Edition:</span> Collectio Vaticana 4, ACO I,1,1 S. 25,24–28,26; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 315–322; Coleti (1728–1734), Bd. 3 Sp. 868–872; Mansi, Bd. 4 Sp. 888–892; PG 77, Sp. 44–49; Pusey (1965 [= 1868–1877]), Bd. 6 S. 3–11 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5304 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung:</span> <span data-note='1'></span><sup>1</sup>Anfang 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen:</span> (1) Collectio Veronensis 14, ACO I,2 S. 37–39; (2) Collectio Casinensis 6, ACO I,3 S. 20–22; (3) Collectio Palatina 26, ACO I,5 S. 49–51; (4) Collectio Quesneliana 66, ACO I,5 S. 337–340; (5) Gesta Chalcedonensia, ACO II,3 S. 82–85; (6) Gesta Chalcedonensia, ACO II,3 S. 7–10; (7) Gesta Constantinopolitana, ACO IV,1 S. 147–149 </p> <p><span data-type='head_key'>Weitere griech. Fassungen:</span> Gesta Chalcedonensia, ACO II,1,1 S. 104–106 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 115–120 </p>",
         "footnotes_head": [ {
             "note_content": "Nach den Akten des Konzils von Chalkedon (ACO II,1,1 S. 104,15) im ägyptischen Monat Mechir, also im Zeitraum zwischen dem 26. Januar und dem 24. Februar.",
             "note_id": "1",
             "text_end": "",
             "text_start": "Anfang 430"
           } ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill grenzt, ausgehend vom Text des Nizänums, seine Auffassung darüber, warum die Mutter Jesu als Gottesgebärerin bezeichnet werden soll, von möglichen Fehlinterpreta­tionen ab und präzisiert dabei seine Aussagen über das Verhältnis des ewigen göttlichen Logos zu dem von Maria geborenen Menschen.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill grenzt, ausgehend vom Text des Nizänums, seine Auffassung darüber, warum die Mutter Jesu als Gottesgebärerin bezeichnet werden soll, von möglichen Fehlinterpretationen ab und präzisiert dabei seine Aussagen über das Verhältnis des ewigen göttlichen Logos zu dem von Maria geborenen Menschen.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3", "4", "5", "6", "7" ]
     },
@@ -407,7 +407,7 @@
       "title": "Nestorius’ zweiter Brief an Kyrill",
       "slug": "CV5",
       "content": {
-        "head": "<p><span data-type='head_key'>Edition:</span> Collectio Vaticana 5, ACO I,1,1 S. 29,4–32,23; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 322–327; Coleti (1728–1734), Bd. 3 Sp. 872–878; Mansi, Bd. 4 Sp. 892–1000; PG 77, Sp. 49–57; Loofs, Nestoriana S. 173–180 </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5669 </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel </p> <p><span data-type='head_key'>Datierung:</span> Juni 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen:</span> (1) Collectio Veronensis 15, ACO I,2 S. 41–43; (2) Collectio Casinensis 7, ACO I,3 S. 23–26; (3) Collectio Palatina 25, ACO I,3 S. 46–49; (4) Gesta Constantinopoli­tana, ACO IV,1 S. 150–154 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 120–127 </p>",
+        "head": "<p><span data-type='head_key'>Edition:</span> Collectio Vaticana 5, ACO I,1,1 S. 29,4–32,23; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 322–327; Coleti (1728–1734), Bd. 3 Sp. 872–878; Mansi, Bd. 4 Sp. 892–1000; PG 77, Sp. 49–57; Loofs, Nestoriana S. 173–180 </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5669 </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel </p> <p><span data-type='head_key'>Datierung:</span> Juni 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen:</span> (1) Collectio Veronensis 15, ACO I,2 S. 41–43; (2) Collectio Casinensis 7, ACO I,3 S. 23–26; (3) Collectio Palatina 25, ACO I,3 S. 46–49; (4) Gesta Constantinopolitana, ACO IV,1 S. 150–154 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 120–127 </p>",
         "footnotes_head": [  ],
         "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Nestorius wirft Kyrill vor, die Aussagen des Nizänums missverstanden zu haben, und bekräftigt anhand zahlreicher biblischer Zitate die Position, dass Maria richtigerweise lediglich als Christus­gebärerin bezeichnet werden dürfe.</p>"
       },
@@ -637,7 +637,7 @@
       "title": "Kyrill, Exzerpte aus den Schriften des Nestorius",
       "slug": "CPal29",
       "content": {
-        "head": "<p><span data-type='head_key'>Edition:</span> Collectio Palatina 29, ACO I,5 S. 55,6–60,4; ältere Edd.: Garnier (1673), Bd. 2 S. 103–106; Baluze (1684), S. 109–119; PL 48, Sp. 897–904; Loofs, Nestoriana (s.u. zu den jeweiligen Exzerpten) </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> Exzerpt XIII: CPG 5696; Exzerpt XVI: CPG 5695 </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel, Kyrill von Alexandria (Bearb.), Marius Mercator (Übers.) </p> <p><span data-type='head_key'>Datierung:</span> zw. Ende 429 u. 22. Juni 431 (zur Datierung s. oben S. ) </p> <p><span data-type='head_key'>Griech. Original:</span> Zu den griechischen Versionen einzelner Abschnitte s. unten die Angaben zu den jeweiligen Exzerpten </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> Zu weiteren lateinischen Versionen einzelner Abschnitte s. unten die Angaben zu den jeweiligen Exzerpten </p> <p><span data-type='head_key'>Literatur:</span> Konoppa (2005), S. 288–309 </p>",
+        "head": "<p><span data-type='head_key'>Edition:</span> Collectio Palatina 29, ACO I,5 S. 55,6–60,4; ältere Edd.: Garnier (1673), Bd. 2 S. 103–106; Baluze (1684), S. 109–119; PL 48, Sp. 897–904; Loofs, Nestoriana (s.u. zu den jeweiligen Exzerp­ten) </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> Exzerpt XIII: CPG 5696; Exzerpt XVI: CPG 5695 </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel, Kyrill von Alexandria (Bearb.), Marius Mercator (Übers.) </p> <p><span data-type='head_key'>Datierung:</span> zw. Ende 429 u. 22. Juni 431 (zur Datierung s. oben S. ) </p> <p><span data-type='head_key'>Griech. Original:</span> Zu den griechischen Versionen einzelner Abschnitte s. unten die Angaben zu den jeweiligen Exzerpten </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> Zu weiteren lateinischen Versionen einzelner Abschnitte s. unten die Angaben zu den jeweiligen Exzerpten </p> <p><span data-type='head_key'>Literatur:</span> Konoppa (2005), S. 288–309 </p>",
         "footnotes_head": [  ],
         "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Die Exzerptsammlung umfasst eine Auswahl von 22 Predigtausschnitten, in denen sich Nesto­rius zu folgenden Themen äußert: I–III: ‚Christus‘ und ‚Sohn‘ zur Bezeichnung der göttlichen sowie der menschlichen Natur; IV: Der Ruhm des Eingeborenen wird in der Heiligen Schrift dem Vater, dem Heiligen Geist und Christus zugewiesen; V–VI: ‚Apostel‘ und ‚Hohepriester‘ dienen der Be­zeichnung der menschlichen, nicht der göttlichen Natur; VII: Gegen diejenigen, die die Bezeichnung ‚Christusgebärerin‘ ablehnen; VIII–XXI: Zur Unterscheidung und Verbindung der göttlichen und menschlichen Natur Christi; XXII: Gegen die Vertreter der Ansicht, dass der Heilige Geist nicht der göttlichen Natur Christi zuzurechnen sei.</p>"
       },
@@ -671,7 +671,7 @@
       "acoDocLabel": "Dok. 27",
       "unitSlugs": [ "1", "2", "3", "4", "5", "6" ],
       "unitLabels": [
-        "(1) Wenn es möglich gewesen wäre zu schweigen und, ohne Deiner Gottes­\n",
+        "(1) Wenn es möglich gewesen wäre zu schweigen und, ohne Deiner Gottesfurcht \n",
         "(2)",
         "(3)",
         "(4)",
@@ -728,7 +728,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition:</span> Collectio Veronensis 1, ACO I,2 S. 5,1–6,31; ältere Edd.: Coustant (1967 [= 1721]), Sp. 1101–1108; Mansi, Bd. 4 Sp. 1017–1022; PL 50, Sp. 459–464; PG 77, Sp. 89–94 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> Jaffé (2016–2020), Nr. 827; CPL 1652, vgl. CPG 8638 </p> <p><span data-type='head_key'>Verfasser:</span> Papst Coelestin I. </p> <p><span data-type='head_key'>Datierung:</span> 10. August 430 </p> <p><span data-type='head_key'>Griech. Übersetzungen:</span> Collectio Vaticana 9, ACO I,1,1 S. 75–77 </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> </p> <p><span data-type='head_key'>Literatur:</span> Caspar (1930–1933), Bd. 1 S. 295–297; Vogt (1975), S. 90f.; Krannich (2005), S. 115f.; Sie­ben (2014–2015), Bd. 3 S. 740747; Bevan (2016), S. 132; Price/Graumann (2020), S. 133–137 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Der Brief ist nach der am 10. August 430 abgehaltenen römischen Synode entstanden, die der Causa Nestorius wegen einberufen worden war. Er nimmt Bezug auf das Schreiben Kyrills an Coe­lestin (CV144, ACO I,1,5 S. 10–12). Der Papst drückt seine Freude darüber aus, in Kyrill einen mächtigen Verbündeten und integren Vertreter des rechten Glaubens im Kampf gegen die Irrlehre des Nestorius gefunden zu haben. Er ergeht sich in Lobpreisun­gen des Alexandriners und Äußerungen der Verachtung für Nestorius. Schließlich fordert er Kyrill auf, stellvertretend für den römischen Stuhl Nestorius von dem Urteil der römischen Synode gegen ihn in Kenntnis zu setzen.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Der Brief ist nach der am 10. August 430 abgehaltenen römischen Synode entstanden, die der Causa Nestorius wegen einberufen worden war. Er nimmt Bezug auf das Schreiben Kyrills an Coe­lestin (CV144, ACO I,1,5 S. 10–12). Der Papst drückt seine Freude darüber aus, in Kyrill einen mächtigen Verbündeten und integren Vertreter des rechten Glaubens im Kampf gegen die Irrlehre des Nestorius gefunden zu haben. Er ergeht sich in Lobpreisungen des Alexandriners und Äußerungen der Verachtung für Nestorius. Schließlich fordert er Kyrill auf, stellvertretend für den römischen Stuhl Nestorius von dem Urteil der römischen Synode gegen ihn in Kenntnis zu setzen.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3", "4", "5", "6", "7" ]
     },
@@ -737,10 +737,10 @@
       "acoDocLabel": "Dok. 30",
       "unitSlugs": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18" ],
       "unitLabels": [
-        "(1) Bischof Coelestin [sendet] dem Bischof von Konstantinopel Nestorius \n",
+        "(1) Bischof Coelestin [sendet] dem Bischof von Konstantinopel Nestorius [seinen \n",
         "(2)",
         "(3)",
-        "text",
+        "",
         "(5)",
         "(6)",
         "(7)",
@@ -769,47 +769,6 @@
       "unitLabelsLong": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18" ]
     },
     {
-      "acoDocNum": "31",
-      "acoDocLabel": "Dok. 31",
-      "unitSlugs": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" ],
-      "unitLabels": [
-        "(1) ",
-        "text",
-        "(3)",
-        "(4)",
-        "(5)",
-        "(6)",
-        "(7)",
-        "(8)",
-        "(9)",
-        "(10)",
-        "(11)",
-        "(12)",
-        "(13)",
-        "(14)",
-        "(15)",
-        "(16)",
-        "(17)",
-        "(18)",
-        "(19)",
-        "(20)",
-        "(21)",
-        "(22)",
-        "(23)"
-      ],
-      "schwartzSlug": "CVer5",
-      "schwartzNum": "5",
-      "type": "CVer",
-      "title": "Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
-      "slug": "CVer5",
-      "content": {
-        "head": "<p><span data-type='head_key'>Edition:</span> Collectio Veronensis 5, ACO I,2 S. 15,5–20,24; ältere Edd.: Coustant (1967 [= 1721]), Sp. 1131–1148; Mansi, Bd. 4 Sp. 1035–1048; PL 50, Sp. 485–500 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> Jaffé (2016–2020), Nr. 830; CPL 1652, vgl. CPG 8640 </p> <p><span data-type='head_key'>Verfasser:</span> Papst Coelestin I. </p> <p><span data-type='head_key'>Datierung:</span> 10. August 430 </p> <p><span data-type='head_key'>Griech. Übersetzungen:</span> Collectio Vaticana 11, ACO I,1,1 S. 83–90 </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> – </p> <p><span data-type='head_key'>Literatur:</span> Caspar (1930–1933), Bd. 1 S. 399; Camelot (1963), S. 47; Vogt (1975), S. 93f.; Wessel (2004), S. 110f.; Krannich (2005), S. 119f.; Sieben (2014–2015), Bd. 3 S. 774–791; Bevan (2016), S. 132f.; Price/Graumann (2020), S. 133f. u. 145–154 </p>",
-        "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Coelestin führt Volk und Klerus von Konstantinopel die Verderbtheit der Lehre ihres Bischofs Nestorius vor Augen. Er fordert zunächst das Volk auf, am rechten Glauben festzuhalten, und er­muntert dann den Klerus, den Anfeindungen standzuhalten und nicht in der Erfüllung der Priester­pflichten nachzulassen.</p>"
-      },
-      "unitLabelsLong": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" ]
-    },
-    {
       "acoDocNum": "32",
       "acoDocLabel": "Dok. 32",
       "unitSlugs": [ "1", "2", "3", "4", "5" ],
@@ -822,7 +781,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition:</span> Collectio Veronensis 6, ACO I,2 S. 21,1–22,20; ältere Edd.: Coustant (1967 [= 1721]), S. 1107–1112; Mansi, Bd. 4 Sp. 1047–1050; PL 50, Sp. 465–470 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> Jaffé (2016–2020), Nr. 828; CPL 1652, vgl. CPG 8641 </p> <p><span data-type='head_key'>Verfasser:</span> Papst Coelestin I. </p> <p><span data-type='head_key'>Datierung:</span> 10. August 430 </p> <p><span data-type='head_key'>Griech. Übersetzungen:</span> Collectio Vaticana 12, ACO I,1,1 S. 90f. </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> – </p> <p><span data-type='head_key'>Literatur:</span> Caspar (19301933), Bd. 1 S. 397; Krannich (2005), S. 116f.; Sieben (20142015), Bd. 3 S. 748–753; Price/Graumann (2020), S. 133f. u. 154–156 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Coelestin setzt die Bischöfe Johannes von Antiochia, Juvenal von Jerusalem, Rufus von Thessaloniki und Flavian von Philippi von dem Urteil gegen Nestorius in Kenntnis.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Coelestin setzt die Bischöfe Johannes von Antiochia, Juvenal von Jerusalem, Rufus von Thessa­loniki und Flavian von Philippi von dem Urteil gegen Nestorius in Kenntnis.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3", "4", "5" ]
     },
@@ -894,7 +853,7 @@
       "title": "Kyrills dritter Brief an Nestorius",
       "slug": "CV6",
       "content": {
-        "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 6, ACO I,1,1 S. 33,4–42,5; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 395–410; Coleti (1728–1734), Bd. 3 Sp. 944–960; Mansi, Bd. 4 Sp. 1068–1084; PG 77, Sp. 105–121; Pusey (1965 [= 1868–1877]), Bd. 6 S. 12–39 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5317 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung: </span> <span data-note='1'></span><sup>1</sup>30. November 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> (1) Collectio Veronensis 17, ACO I,2 S. 45–51; (2) Collectio Casinensis 8, ACO I,3 S. 26–35; (3) Collectio Dionysius Exiguus, ACO I,5 S. 236–244; (4) Gesta Constantinopolita­na, ACO IV,1 S. 160–166 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 160–171 </p>",
+        "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 6, ACO I,1,1 S. 33,4–42,5; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 395–410; Coleti (1728–1734), Bd. 3 Sp. 944–960; Mansi, Bd. 4 Sp. 1068–1084; PG 77, Sp. 105–121; Pusey (1965 [= 1868–1877]), Bd. 6 S. 12–39 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5317 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung: </span> 30. November 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> (1) Collectio Veronensis 17, ACO I,2 S. 45–51; (2) Collectio Casinensis 8, ACO I,3 S. 26–35; (3) Collectio Dionysius Exiguus, ACO I,5 S. 236–244; (4) Gesta Constantinopolita­na, ACO IV,1 S. 160–166 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 160–171 </p>",
         "footnotes_head": [ {
             "note_content": "Genaues Empfangsdatum nach CVer17,12 (ACO I,2 S. 51,33).",
             "note_id": "1",
@@ -918,7 +877,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 24, ACO I,1,1 S. 113,2–114,16; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 419–422; Coleti (1728–1734), Bd. 3 Sp. 968f.; Mansi, Bd. 4 Sp. 1093–1096; PG 77, 124f. </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5318 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung:</span> August bis November 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> Collectio Casinensis 9, ACO I,3 S. 35–37 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 171–173 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill ermahnt den Klerus und das Volk von Konstantinopel, von den Lehren des Nesto­rius, die durch den Bischof von Rom und eine alexandrinische Synode verurteilt worden sind, Abstand zu nehmen und an dem von Alters her tradierten Glauben festzuhalten.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill ermahnt den Klerus und das Volk von Konstantinopel, von den Lehren des Nestorius, die durch den Bischof von Rom und eine alexandrinische Synode verurteilt worden sind, Abstand zu nehmen und an dem von Alters her tradierten Glauben festzuhalten.</p>"
       },
       "unitLabelsLong": [ "" ]
     },
@@ -990,7 +949,7 @@
         "45"
       ],
       "unitLabels": [
-        "(1) Ihr seid der Gipfel des Ruhmes unter den Menschen, der durch \n",
+        "(1) Ihr seid der Gipfel des Ruhmes unter den Menschen, der durch unvergleichli­\n",
         "(2)",
         "(3)",
         "(4)",
@@ -1000,7 +959,7 @@
         "(8)",
         "(9)",
         "(10)",
-        "text",
+        "",
         "(12)",
         "(13)",
         "(14)",
@@ -1044,7 +1003,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition:</span> Collectio Vaticana 7, ACO I,1,1 S. 42–72; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 45–105; Coleti (1728–1734), Bd. 3 Sp. 613–672; Mansi, Bd. 4 Sp. 617–680; PG 76, Sp. 1133–1200; Pusey (1965 [= 1868–1877]), Bd. 7 S. 1–152 </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5218 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung:</span> 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> – </p> <p><span data-type='head_key'>Literatur:</span> van Loon (2009), S. 419–433 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill widmet Kaiser Theodosius II. eine ausführliche Darstellung des rechten Glaubens. Zu diesem Zweck beschreibt er zunächst in knappen Worten die wichtigsten Häresien, die im Reiche umgehen, um sie anschließend zu widerlegen. Während er die meisten dieser Lehren dabei relativ zügig abhandelt, verwendet er viel Zeit darauf, sich mit der zuletzt vorgestellten, einer dyophysiti­schen Lehre, wie sie Nestorius vertritt, auseinan­derzusetzen, wobei er seine eigene Auffassung, die er dieser gegenüberstellt, immer wieder vor Fehlinterpretationen zu schützen versucht.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill widmet Kaiser Theodosius II. eine ausführliche Darstellung des rechten Glaubens. Zu diesem Zweck beschreibt er zunächst in knappen Worten die wichtigsten Häresien, die im Reiche umgehen, um sie anschließend zu widerlegen. Während er die meisten dieser Lehren dabei relativ zügig abhandelt, verwendet er viel Zeit darauf, sich mit der zuletzt vorgestellten, einer dyophysiti­schen Lehre, wie sie Nestorius vertritt, auseinanderzusetzen, wobei er seine eigene Auffassung, die er dieser gegenüberstellt, immer wieder vor Fehlinterpretationen zu schützen versucht.</p>"
       },
       "unitLabelsLong": [
         "1",
@@ -1148,7 +1107,7 @@
         "48"
       ],
       "unitLabels": [
-        "(1) Jenen, die den Dienst der göttlichen und himmlischen Verkündigung verrich­\n",
+        "(1) Jenen, die den Dienst der göttlichen und himmlischen Verkündigung verrichten, \n",
         "(2)",
         "(3)",
         "(4)",
@@ -1205,7 +1164,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 149, ACO I,1,5 S. 26,2–61,31; ältere Edd.: PG 76, Sp. 1336–1420; Pusey (1965 [= 1868–1877]), Bd. 7 S. 263–333 </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5220 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung:</span> 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> – </p> <p><span data-type='head_key'>Literatur:</span> van Loon (2009), S. 454–474 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill richtet sich in seinem Schreiben nach seiner Rede ‚Ad dominas‘ (Dok. 40) ein zweites Mal an von ihm als ‚Kaiserinnen‘ angesprochene Adressatinnen, um diese in ihrem rechten Glauben zu bestärken. Zu diesem Zweck führt er, geordnet nach verschiedenen Glaubensfragen, eine Vielzahl von Zitaten aus den neutestamentlichen Schriften an, mehrheitlich solche, die auch eine Interpretation im Sinne einer nestorianischen Christolo­gie zulassen. Diese kommentiert er dann jeweils unmittelbar im Anschluss und deutet sie dabei entsprechend seiner eigenen Position aus, die nachdrücklich die Einheit Christi betont.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill richtet sich in seinem Schreiben nach seiner Rede ‚Ad dominas‘ (Dok. 40) ein zweites Mal an von ihm als ‚Kaiserinnen‘ angesprochene Adressatinnen, um diese in ihrem rechten Glauben zu bestärken. Zu diesem Zweck führt er, geordnet nach verschiedenen Glaubensfragen, eine Vielzahl von Zitaten aus den neutestamentlichen Schriften an, mehrheitlich solche, die auch eine Interpretation im Sinne einer nestorianischen Christologie zulassen. Diese kommentiert er dann jeweils unmittelbar im Anschluss und deutet sie dabei entsprechend seiner eigenen Position aus, die nachdrücklich die Einheit Christi betont.</p>"
       },
       "unitLabelsLong": [
         "1",
@@ -1290,7 +1249,7 @@
       "title": "Sacra an Kyrill",
       "slug": "CV8",
       "content": {
-        "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 8, ACO I,1,1 S. 73,2–74,23; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 435f.; Coleti (1728–1734), Bd. 3 Sp. 980–984; Mansi, Bd. 4 Sp. 1109f. </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 8652 </p> <p><span data-type='head_key'>Verfasser:</span> Kaiser Theodosius II. </p> <p><span data-type='head_key'>Datierung:</span> November 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> <span data-note='1'></span><sup>1</sup>Collectio Casinensis 20, ACO I,3 S. 47f. </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 199–201 </p>",
+        "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 8, ACO I,1,1 S. 73,2–74,23; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 435f.; Coleti (1728–1734), Bd. 3 Sp. 980–984; Mansi, Bd. 4 Sp. 1109f. </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 8652 </p> <p><span data-type='head_key'>Verfasser:</span> Kaiser Theodosius II. </p> <p><span data-type='head_key'>Datierung:</span> November 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> Collectio Casinensis 20, ACO I,3 S. 47f. </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 199–201 </p>",
         "footnotes_head": [ {
             "note_content": "\n <span data-ref-id='r-AWyQmWIq'/></span>\n \n <span data-ref-id='r-AWyQmWIq-e'/></span>\n Der lateinischen Version der \n <em>sacra</em>\n in der \n <em>Collectio Casinensis</em>\n ist eine Vorbemerkung des Rusticus vorangestellt (CCas20, ACO I,3 S. 47,9-13), in der er Nestorius unterstellt, er habe den Kaiser zu Ungunsten Kyrills beeinflusst und ihn zu der \n <em>sacra</em>\n veranlasst: „Als der Gotteslästerer [sc. Nestorius] erkannte, dass der Erzbischof Kyrill es nicht duldete, dass die Kirchen so in Unruhe versetzt und die Völker durch Predigten dieser Art verführt wurden, richtete er es ein, dass der frömmste Kaiser, an dessen Amtsgewalt er sich heranschlich, diesem eine mit Brandmalen angefüllte \n <em>sacra</em>\n bestimmte, weil er glaubte, kraft dessen [sc. des Kaisers] Heiligkeit seiner Verschwiegenheit aushändigen [zu können], was eben dem Häretiker Nestorius zum Vorteil ist. Die \n <em>sacra</em>\n aber ist folgende, so wie sie unten angefügt ist.“",
             "note_id": "1",
@@ -1317,12 +1276,102 @@
         "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Die Kaiser berichten den Adressaten von ihren Bemühungen, die Einheit der Kirche wiederher­zustellen, und bitten sie darum, sie bei diesen durch Gebete zu unterstützen.</p>"
       },
       "unitLabelsLong": [ "" ]
+    },
+    {
+      "schwartzSlug": "CPal21",
+      "schwartzNum": "21",
+      "acoDocNum": "6",
+      "acoDocLabel": "Dok. 6",
+      "type": "CPal",
+      "title": "[TODO] Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10)",
+      "slug": "CPal21",
+      "unitSlugs": [],
+      "unitLabelsLong": [],
+      "unitLabels": [
+        ""
+      ],
+      "content": {
+        "head": "error during input processing",
+        "inhalt": ""
+      }
+    },
+    {
+      "schwartzSlug": "CV22",
+      "schwartzNum": "22",
+      "acoDocNum": "8",
+      "acoDocLabel": "Dok. 8",
+      "type": "CV",
+      "title": "[TODO] Kyrills Brief an die Apokrisiare in Konstantinopel",
+      "slug": "CV22",
+      "unitSlugs": [],
+      "unitLabelsLong": [],
+      "unitLabels": [
+        ""
+      ],
+      "content": {
+        "head": "error during input processing",
+        "inhalt": ""
+      }
+    },
+    {
+      "schwartzSlug": "CVer4",
+      "schwartzNum": "4",
+      "acoDocNum": "22",
+      "acoDocLabel": "Dok. 22",
+      "type": "CVer",
+      "title": "[TODO] Nestorius’ zweiter Brief an Coelestin",
+      "slug": "CVer4",
+      "unitSlugs": [],
+      "unitLabelsLong": [],
+      "unitLabels": [
+        ""
+      ],
+      "content": {
+        "head": "error during input processing",
+        "inhalt": ""
+      }
+    },
+    {
+      "schwartzSlug": "CVer5",
+      "schwartzNum": "5",
+      "acoDocNum": "31",
+      "acoDocLabel": "Dok. 31",
+      "type": "CVer",
+      "title": "[TODO] Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
+      "slug": "CVer5",
+      "unitSlugs": [],
+      "unitLabelsLong": [],
+      "unitLabels": [
+        ""
+      ],
+      "content": {
+        "head": "error during input processing",
+        "inhalt": ""
+      }
+    },
+    {
+      "schwartzSlug": "CV150",
+      "schwartzNum": "150",
+      "acoDocNum": "40",
+      "acoDocLabel": "Dok. 40",
+      "type": "CV",
+      "title": "[TODO] Kyrills Rede an die Herrinnen",
+      "slug": "CV150",
+      "unitSlugs": [],
+      "unitLabelsLong": [],
+      "unitLabels": [
+        ""
+      ],
+      "content": {
+        "head": "error during input processing",
+        "inhalt": ""
+      }
     }
   ],
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2025-10-26T01:23:06.288292734+02:00",
+    "generated-on": "2025-10-26T09:32:02.232702242+01:00",
     "description": ""
   }
 }
