@@ -34828,7 +34828,7 @@
         }
       }
     },
-    "CPal20": { "text":{
+    "CPal20":{ "text":{
         "CPal20-58-59-der-Menschen": {
           "note_content": "Ps 13(14),2. 32(33),13.",
           "doc_unit": "CPal20",
@@ -34839,6 +34839,17 @@
           "line_end": "59",
           "text_start": "der",
           "refstring_text": "der … Menschen]"
+        },
+        "CPal20-36--der-wurde": {
+          "note_content": "Vgl. Gen 2,7; Sir 17,1.",
+          "doc_unit": "CPal20",
+          "refstring_lines": "36",
+          "document": "CPal20",
+          "text_end": "wurde",
+          "line_start": "36",
+          "line_end": "36",
+          "text_start": "der",
+          "refstring_text": "der … wurde]"
         },
         "CPal20-6--sie‌1-es": {
           "note_content": "Tit 1,16, vgl. 2 Tim 3,5.",
@@ -34861,17 +34872,6 @@
           "line_end": "46",
           "text_start": "",
           "refstring_text": ""
-        },
-        "CPal20-49--Maria-geboren‌1": {
-          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,6f.: <span data-lang='greek'>oὐκ ἔτεκεν</span>, <span data-lang='greek'>ὦ βέλτιστε</span>, <span data-lang='greek'>Μαρία τὴν θεότητα</span>. Abweichend vom griechischen Text gebraucht Marius Mercator hier nicht das Wort „Gottheit“, sondern „Gott“ (<em>deum</em>). Einer Stelle in den <em>Tragoedia</em> des Irenaeus lässt sich entnehmen, dass Nestorius es Kyrill zum Vorwurf machte, er habe seine Aussage zum Wesen dessen, den Maria geboren hat, absichtlich verfälscht, vgl. CCas81, ACO I,4 S.&nbsp;26,10–14: <em>et ut in paucis eius nequitiam, qualis sit etiam circa reliqua, propalemus, dictum est a nobis alicubi, dum contra paganos loqueremur dicentes quod nos substantiam dei creatam noviter ex virgine praedicemus: „non peperit, optime, Maria deitatem, sed peperit hominem divinitatis inseparabile instrumentum.“ at ille vocem divinitatis immutans fecit: „non peperit, optime, Maria deum.“ hic vero multum differt dicere deum et dicere deitatem</em>. In der Tat heißt es in dem frühesten überlieferten Zeug­nis für die Äußerung des Nestorius, der allgemein dem Eusebius von Dorylaeum zuge­schrie­benen <em>Contestatio</em> (<span data-ref='02_CV18_dg.xml#r-AWxtZHRN 02_CV18_dg.xml#r-AWxtZHRN-e'>CV18,2,3 – 4</span>, ACO I,1,1 S.&nbsp;101,10f. [Dok. 2]) korrekt: <span data-lang='greek'>Νεστόριος συμφώνως</span> [sc. mit Paulus von Samosata] <span data-lang='greek'>εἶπεν· oὐκ ἔτεκεν</span>, <span data-lang='greek'>ὦ βέλτιστε</span>, <span data-lang='greek'>Μαρία τὴν θεότητα</span>. Wann sich die falsche Wiedergabe der Worte des Nestorius in die Überlieferung eingeschlichen hat und ob tatsächlich Kyrill dafür verantwortlich ist, lässt sich nicht entscheiden. Zur Problemlage unter Heranziehung der genannten Quellen vgl. auch Loofs, Nestoriana S.&nbsp;60f.",
-          "doc_unit": "CPal20",
-          "refstring_lines": "49",
-          "document": "CPal20",
-          "text_end": "geboren‌¹",
-          "line_start": "49",
-          "line_end": "49",
-          "text_start": "Maria",
-          "refstring_text": "Maria … geboren‌¹]"
         },
         "CPal20-12-13-der-befinde": {
           "note_content": "Die Wahl des Wortes <em>conservare</em> in diesem Zusammenhang ist ungewöhnlich. Möglicherweise liegt eine Verwechslung mit <em>conversari</em> vor. Konstruiert ist jedoch gemäß <em>conservare</em>.",
@@ -34917,17 +34917,6 @@
           "text_start": "am",
           "refstring_text": "am … Wort]"
         },
-        "CPal20-42--nicht-behaupten": {
-          "note_content": "1 Tim 1,7.",
-          "doc_unit": "CPal20",
-          "refstring_lines": "42",
-          "document": "CPal20",
-          "text_end": "behaupten",
-          "line_start": "42",
-          "line_end": "42",
-          "text_start": "nicht",
-          "refstring_text": "nicht … behaupten]"
-        },
         "CPal20-47-48-heißt-Stamm­baum": {
           "note_content": "Nach Loofs (Nestoriana S.&nbsp;252) von Marius Mercator als Erklärung ergänzt.",
           "doc_unit": "CPal20",
@@ -34950,16 +34939,16 @@
           "text_start": "",
           "refstring_text": ""
         },
-        "CPal20-37--der-wurde": {
-          "note_content": "Vgl. Gen 2,7; Sir 17,1.",
+        "CPal20-52--sondern-geboren‌2": {
+          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,10f.: <span data-lang='greek'>ἀλλ’ ἔτεκεν ἄν­θρω­πον</span>, <span data-lang='greek'>θεότητος ὄργανον</span>.",
           "doc_unit": "CPal20",
-          "refstring_lines": "37",
+          "refstring_lines": "52",
           "document": "CPal20",
-          "text_end": "wurde",
-          "line_start": "37",
-          "line_end": "37",
-          "text_start": "der",
-          "refstring_text": "der … wurde]"
+          "text_end": "geboren‌²",
+          "line_start": "52",
+          "line_end": "52",
+          "text_start": "sondern",
+          "refstring_text": "sondern … geboren‌²]"
         },
         "CPal20-44-45-Hat-Mutter": {
           "note_content": "Hier scheint schon die Wider­le­gung einzusetzen, die sich dann aber nur auf den <span data-lang='greek'>θεοτόκος</span>-Titel bezieht.",
@@ -34971,6 +34960,17 @@
           "line_end": "45",
           "text_start": "Hat",
           "refstring_text": "Hat … Mutter]"
+        },
+        "CPal20-48--Maria-geboren‌1": {
+          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,6f.: <span data-lang='greek'>oὐκ ἔτεκεν</span>, <span data-lang='greek'>ὦ βέλτιστε</span>, <span data-lang='greek'>Μαρία τὴν θεότητα</span>. Abweichend vom griechischen Text gebraucht Marius Mercator hier nicht das Wort „Gottheit“, sondern „Gott“ (<em>deum</em>). Einer Stelle in den <em>Tragoedia</em> des Irenaeus lässt sich entnehmen, dass Nestorius es Kyrill zum Vorwurf machte, er habe seine Aussage zum Wesen dessen, den Maria geboren hat, absichtlich verfälscht, vgl. CCas81, ACO I,4 S.&nbsp;26,10–14: <em>et ut in paucis eius nequitiam, qualis sit etiam circa reliqua, propalemus, dictum est a nobis alicubi, dum contra paganos loqueremur dicentes quod nos substantiam dei creatam noviter ex virgine praedicemus: „non peperit, optime, Maria deitatem, sed peperit hominem divinitatis inseparabile instrumentum.“ at ille vocem divinitatis immutans fecit: „non peperit, optime, Maria deum.“ hic vero multum differt dicere deum et dicere deitatem</em>. In der Tat heißt es in dem frühesten überlieferten Zeug­nis für die Äußerung des Nestorius, der allgemein dem Eusebius von Dorylaeum zuge­schrie­benen <em>Contestatio</em> (<span data-ref='02_CV18_dg.xml#r-AWxtZHRN 02_CV18_dg.xml#r-AWxtZHRN-e'>CV18,2,3 – 4</span>, ACO I,1,1 S.&nbsp;101,10f. [Dok. 2]) korrekt: <span data-lang='greek'>Νεστόριος συμφώνως</span> [sc. mit Paulus von Samosata] <span data-lang='greek'>εἶπεν· oὐκ ἔτεκεν</span>, <span data-lang='greek'>ὦ βέλτιστε</span>, <span data-lang='greek'>Μαρία τὴν θεότητα</span>. Wann sich die falsche Wiedergabe der Worte des Nestorius in die Überlieferung eingeschlichen hat und ob tatsächlich Kyrill dafür verantwortlich ist, lässt sich nicht entscheiden. Zur Problemlage unter Heranziehung der genannten Quellen vgl. auch Loofs, Nestoriana S.&nbsp;60f.",
+          "doc_unit": "CPal20",
+          "refstring_lines": "48",
+          "document": "CPal20",
+          "text_end": "geboren‌¹",
+          "line_start": "48",
+          "line_end": "48",
+          "text_start": "Maria",
+          "refstring_text": "Maria … geboren‌¹]"
         },
         "CPal20-78-80-heißt-Wort": {
           "note_content": "Nach Loofs (Nestoriana S.&nbsp;263) von Marius Mercator als Erklärung ergänzt.",
@@ -34994,16 +34994,16 @@
           "text_start": "Jesus",
           "refstring_text": "Jesus … Ewigkeit]"
         },
-        "CPal20-54--sondern-geboren‌2": {
-          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,10f.: <span data-lang='greek'>ἀλλ’ ἔτεκεν ἄν­θρω­πον</span>, <span data-lang='greek'>θεότητος ὄργανον</span>.",
+        "CPal20-45--entschuldbar-": {
+          "note_content": "D.h. verzeihlich, weil man es noch nicht besser wusste.",
           "doc_unit": "CPal20",
-          "refstring_lines": "54",
+          "refstring_lines": "45",
           "document": "CPal20",
-          "text_end": "geboren‌²",
-          "line_start": "54",
-          "line_end": "54",
-          "text_start": "sondern",
-          "refstring_text": "sondern … geboren‌²]"
+          "text_end": "entschuldbar",
+          "line_start": "45",
+          "line_end": "45",
+          "text_start": "entschuldbar",
+          "refstring_text": "entschuldbar]"
         },
         "CPal20-53-54-denn-Geist": {
           "note_content": "Mt 1,20.",
@@ -35016,14 +35016,25 @@
           "text_start": "denn",
           "refstring_text": "denn … Geist]"
         },
-        "CPal20-33--der‌1-Natur": {
+        "CPal20-41--nicht-behaupten": {
+          "note_content": "1 Tim 1,7.",
+          "doc_unit": "CPal20",
+          "refstring_lines": "41",
+          "document": "CPal20",
+          "text_end": "behaupten",
+          "line_start": "41",
+          "line_end": "41",
+          "text_start": "nicht",
+          "refstring_text": "nicht … behaupten]"
+        },
+        "CPal20-32--der‌1-Natur": {
           "note_content": "Vgl. Gen 1,27. 2,7; Weish 2,23; Sir 17,1.",
           "doc_unit": "CPal20",
-          "refstring_lines": "33",
+          "refstring_lines": "32",
           "document": "CPal20",
           "text_end": "Natur",
-          "line_start": "33",
-          "line_end": "33",
+          "line_start": "32",
+          "line_end": "32",
           "text_start": "der‌¹",
           "refstring_text": "der‌¹ … Natur]"
         },
@@ -35037,17 +35048,6 @@
           "line_end": "68",
           "text_start": "Glaube",
           "refstring_text": "Glaube … verhält]"
-        },
-        "CPal20-47--entschuldbar-": {
-          "note_content": "D.h. verzeihlich, weil man es noch nicht besser wusste.",
-          "doc_unit": "CPal20",
-          "refstring_lines": "47",
-          "document": "CPal20",
-          "text_end": "entschuldbar",
-          "line_start": "47",
-          "line_end": "47",
-          "text_start": "entschuldbar",
-          "refstring_text": "entschuldbar]"
         }
       } }
   },
