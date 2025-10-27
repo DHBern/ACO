@@ -42,7 +42,7 @@
 			<Accordion.Item value={label}>
 				<h3>
 					<Accordion.ItemTrigger
-						><span class="text-xl font-bold">{label}</span></Accordion.ItemTrigger
+						><span class="text-2xl font-bold">{label}</span></Accordion.ItemTrigger
 					>
 				</h3>
 				<Accordion.ItemContent>

@@ -8,7 +8,6 @@
 /* Apply .dark whenever the dark class is present earlier in the HTML tree */
 @custom-variant dark (&:where([data-darkModeState=dark], [data-darkModeState=dark] *));
 
-
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -50,11 +49,11 @@ h1 {
 	@apply text-secondary-400 my-5;
 }
 h2 {
-	@apply mt-10
+	@apply mt-10;
 }
 
 p {
-	@apply pt-4 text-lg text-surface-950-50;
+	@apply text-surface-950-50 pt-4 text-xl;
 }
 .nowrap p {
 	@apply whitespace-nowrap;
@@ -62,7 +61,7 @@ p {
 
 /* Greek Text */
 span[data-lang='greek'] {
-	font-family: 'Junicode', 'OpenSans', sans-serif
+	font-family: 'Junicode', 'OpenSans', sans-serif;
 }
 
 /* Heading */

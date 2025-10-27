@@ -37,7 +37,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<!-- Menu -->
-	<header class="bg-primary-400-600 flex flex-none gap-10 text-lg text-slate-50">
+	<header class="bg-primary-400-600 flex flex-none gap-10 text-xl text-slate-50">
 		<!-- ACO-Logo -->
 		<button
 			onclick={() => {
@@ -97,7 +97,7 @@
 
 	<footer class="bg-primary-400-600 flex-none py-5 align-middle text-slate-50">
 		<div class="mx-auto flex w-full flex-col items-center justify-center gap-10 py-10">
-			<p class="text-surface-contrast-400-600 text-lg font-bold">
+			<p class="text-surface-contrast-400-600 text-xl font-bold">
 				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar
 			</p>
 			<button class="text-surface-950-50 bg-surface-50-950 w-40 rounded-3xl p-3 font-bold"

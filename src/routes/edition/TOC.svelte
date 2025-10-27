@@ -31,14 +31,14 @@
 		<Accordion.Item value="Band 1">
 			<h3>
 				<Accordion.ItemTrigger
-					><span class="text-surface-950-50 text-xl font-bold">Band 1</span>
+					><span class="text-surface-950-50 text-2xl font-bold">Band 1</span>
 				</Accordion.ItemTrigger>
 			</h3>
 			<Accordion.ItemContent>
 				<div class="p-10">
 					<a
 						href="{base}/edition/1/vorwort"
-						class="hover:text-secondary-700-300 text-surface-950-50 text-lg"
+						class="hover:text-secondary-700-300 text-surface-950-50 text-xl"
 						>Vorwort zum ersten Band</a
 					>
 				</div>
@@ -46,7 +46,7 @@
 					<!-- ACO order -->
 					<div class="col-span-1 col-start-1">
 						<h2 class="h2 mb-4">Dokumente ACO</h2>
-						<div class="pb-10 text-lg">
+						<div class="pb-10 text-xl">
 							<ul class="">
 								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="hover:**:text-secondary-700-300 mb-1">
@@ -67,7 +67,7 @@
 					<div class="col-span-1 col-start-2">
 						<h2 class="h2 mb-4">Konkordanz Schwartz</h2>
 						{#each types as type (type)}
-							<div class="pb-10 text-lg">
+							<div class="pb-10 text-xl">
 								<ul class="">
 									{#each docs[type]
 										.slice()
@@ -93,7 +93,7 @@
 			<Accordion.Item value={volume.label}>
 				<h3>
 					<Accordion.ItemTrigger
-						><span class="text-surface-950-50 text-xl font-bold">{volume.label}</span>
+						><span class="text-surface-950-50 text-2xl font-bold">{volume.label}</span>
 					</Accordion.ItemTrigger>
 				</h3>
 				<Accordion.ItemContent

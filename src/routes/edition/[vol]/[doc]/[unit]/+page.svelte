@@ -442,7 +442,7 @@
 
 	/* Text */
 	.containerText :global([data-type='acoTitle']) {
-		@apply text-center text-lg font-bold;
+		@apply text-center text-xl font-bold;
 	}
 
 	.containerText :global(p) {
