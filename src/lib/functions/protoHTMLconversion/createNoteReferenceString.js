@@ -12,6 +12,6 @@ export function createNoteReferenceString(lineStart, lineEnd, textStart, textEnd
 		return `<span data-type='noteRefString-lines'>${lineStart}</span> <span data-type='noteRefString-text'>${textStart}&nbsp;&hellip;&nbsp;${textEnd}]</ span>`;
 	} else {
 		// Print both line numbers
-		return `<span data-type='noteRefString-lines'>${lineStart}&nbsp;&ndash;&nbsp;${lineEnd}</span> <span data-type='noteRefString-text'>${textStart}&nbsp;&hellip;&nbsp;${textEnd}]</ span>`;
+		return `<span data-type='noteRefString-lines'>${lineStart}&ndash;${lineEnd}</span> <span data-type='noteRefString-text'>${textStart}&nbsp;&hellip;&nbsp;${textEnd}]</ span>`;
 	}
 }
