@@ -46,7 +46,7 @@
 					>
 				</h3>
 				<Accordion.ItemContent>
-					<div class="prose">
+					<div class="prose text-xl">
 						<ul>
 							{#each Object.keys(groupedList[idx]) as docKey}
 								<li>
