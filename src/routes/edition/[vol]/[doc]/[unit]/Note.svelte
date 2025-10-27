@@ -29,6 +29,7 @@
 			{@html createNoteReferenceString(
 				noteData.line_start,
 				noteData.line_end,
+				noteData.refstring_text,
 				noteData.text_start,
 				noteData.text_end
 			)}
