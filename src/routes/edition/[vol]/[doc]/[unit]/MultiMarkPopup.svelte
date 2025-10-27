@@ -38,6 +38,7 @@
 						{@html createNoteReferenceString(
 							idMetadata.line_start,
 							idMetadata.line_end,
+							idMetadata.refstring_text,
 							idMetadata.text_start,
 							idMetadata.text_end
 						)}
