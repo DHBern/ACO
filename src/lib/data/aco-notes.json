@@ -56,6 +56,17 @@
           "text_start": "Und",
           "refstring_text": "Und … gesehen]"
         },
+        "CU4-4-6-da-ausgewählt": {
+          "note_content": "Die Vorstellung einer <span data-lang='greek'>πρόγνωσις</span>, einer Kenntnis im Voraus, welche die Basis dessen bildet, was schließlich durch den Gott-Logos ins Werk gesetzt wird, findet sich unter den Nestorius zugeschriebenen Texten in Loofs, Nestoriana S.&nbsp;224,8–10. Allerdings zählt dieser Pas­sus zu den Fragmenten, bei denen aufgrund der verwendeten Terminologie gewisse Zweifel an der Echtheit bestehen (vgl. ebd. S.&nbsp;65). Auf der anderen Seite kommen Formen von <span data-lang='greek'>προγιγνώσκειν</span> in den Schriften Kyrills überaus häufig vor. Möglicherweise stellt er die Lehre seines Opponenten also hier auch nur in eigenen Worten dar.",
+          "doc_unit": "CU4",
+          "refstring_lines": "4 – 6 ",
+          "document": "CU4",
+          "text_end": "ausge­wählt",
+          "line_start": "4",
+          "line_end": "6",
+          "text_start": "da",
+          "refstring_text": "da … ausge­wählt]"
+        },
         "CU4-14--sondern-an": {
           "note_content": "<span data-lang='greek'>συνάφεια</span>: Die in seinen Augen bestehende Defizienz des Begriffes der <span data-lang='greek'>συνάφεια</span> gegenüber dem der <span data-lang='greek'>ἕνωσις</span>, der Einung, ist zentraler Bestandteil der Kritik Kyrills an der nestorianischen Christologie. In seiner groß angelegten Streitschrift <em>Contra Nes­to­ri­um</em> widmet er diesem Thema z.B. weite Teile des zweiten Buches, wobei er auch einige Passagen, in denen Nestorius den umstrittenen Begriff verwendet, zitiert (vgl. <span data-ref='25_CV166_dg.xml#r-AWxuhnoR 25_CV166_dg.xml#r-AWxuhnoR-e'>CV166,II,1,1 – 16</span>, ACO I,1,6 S.&nbsp;34,20–31 [Dok. 25] = Nestoriana S.&nbsp;272,13 –273,17; <span data-ref='25_CV166_dg.xml#r-AWyFthGj 25_CV166_dg.xml#r-AWyFthGj-e'>CV166,II,5,1 – 5</span>, S.&nbsp;41,23–25 = Nestoriana S.&nbsp;354,7–11; <span data-ref='25_CV166_dg.xml#r-AWxxlpbj 25_CV166_dg.xml#r-AWxxlpbj-e'>CV166,II,6,1 – 8</span>, S.&nbsp;42,1–6 = Nestoriana S.&nbsp;280,17–281,9; <span data-ref='25_CV166_dg.xml#r-AWyFtlxn 25_CV166_dg.xml#r-AWyFtlxn-e'>CV166,II,8,1 – 12</span>, S.&nbsp;44,8–16 = Nestoriana S.&nbsp;275,1–15), um diesen Ausführungen dann seine eigenen gegenüberzustellen. In seinem dritten Brief an Nestorius wird der Begriff im dritten Anathematismus verurteilt (vgl. <span data-ref='36_CV6_dg.xml#r-AWyFtuLN 36_CV6_dg.xml#r-AWyFtuLN-e'>CV6,12,13 – 16</span>, ACO I,1,1 S.&nbsp;40,28–30 [Dok. 36]). Interessant in diesem Zusam­men­hang ist auch der zweite Briefwechsel der beiden Kontrahenten: Während Kyrill ausdrücklich die ‚Einung‘ der beiden Naturen erklärt (vgl. <span data-ref='23_CV4_dg.xml#r-AWyFuVYd 23_CV4_dg.xml#r-AWyFuVYd-e'>CV4,3,10 – 16</span>, ACO I,1,1 S.&nbsp;26,26–27,2 [Dok. 23]), gibt Nestorius ihm in seinem Antwortschreiben zu verstehen, dass er dessen Aussagen über die ‚Verbindung‘ der Naturen gutheiße (vgl. <span data-ref='24_CV5_dg.xml#r-AWyFujbi 24_CV5_dg.xml#r-AWyFujbi-e'>CV5,6,2 – 3</span>, ACO I,1,1 S.&nbsp;30,19f. [Dok. 24]).",
           "doc_unit": "CU4",
@@ -133,16 +144,16 @@
           "text_start": "im",
           "refstring_text": "im … hat‌²]"
         },
-        "CU4-19-21-Und-wer­den": {
-          "note_content": "Vgl. oben <span data-ref='#w171s #w189'>CU4,6 – 8</span> mit Anm.",
+        "CU4-20-21-dass-werden": {
+          "note_content": "Vgl. oben <span data-ref='#w171s #w180'>CU4,6 – 7</span>.",
           "doc_unit": "CU4",
-          "refstring_lines": "19 – 21 ",
+          "refstring_lines": "20 – 21 ",
           "document": "CU4",
           "text_end": "wer­den",
-          "line_start": "19",
+          "line_start": "20",
           "line_end": "21",
-          "text_start": "Und",
-          "refstring_text": "Und … wer­den]"
+          "text_start": "dass",
+          "refstring_text": "dass … wer­den]"
         },
         "CU4-43-44-Aus-vollzogen": {
           "note_content": "Der Vorwurf geht vermutlich auf den 58. Kanon des leider nicht sicher zu datierenden Konzils von Lao­dikea zurück, der Bischöfen und Presbytern das Abhalten der Eucharistiefeier in privaten Häusern untersagt (<span data-lang='greek'>ὅτι οὐ δεῖ ἐν τοῖς οἴκοις προσφορὰς γίνεσθαι παρὰ ἐπισκόπων ἢ πρεσβυτέρων</span>: vgl. Joh. Scholast. <em>Synag.</em> 3,146,9f.).",
@@ -154,6 +165,17 @@
           "line_end": "44",
           "text_start": "Aus",
           "refstring_text": "Aus … vollzogen]"
+        },
+        "CU4-19-21-Und-werden": {
+          "note_content": "Vgl. oben <span data-ref='#w171s #w189'>CU4,6 – 8</span> mit Anm.",
+          "doc_unit": "CU4",
+          "refstring_lines": "19 – 21 ",
+          "document": "CU4",
+          "text_end": "wer­den",
+          "line_start": "19",
+          "line_end": "21",
+          "text_start": "Und",
+          "refstring_text": "Und … wer­den]"
         },
         "CU4-28-29-schließlich-gesehen": {
           "note_content": "Vgl. Apg 2,31.",
@@ -177,17 +199,6 @@
           "text_start": "und‌²",
           "refstring_text": "und‌² … vorliegt]"
         },
-        "CU4-4-6-da-ausge­wählt": {
-          "note_content": "Die Vorstellung einer <span data-lang='greek'>πρόγνωσις</span>, einer Kenntnis im Voraus, welche die Basis dessen bildet, was schließlich durch den Gott-Logos ins Werk gesetzt wird, findet sich unter den Nestorius zugeschriebenen Texten in Loofs, Nestoriana S.&nbsp;224,8–10. Allerdings zählt dieser Pas­sus zu den Fragmenten, bei denen aufgrund der verwendeten Terminologie gewisse Zweifel an der Echtheit bestehen (vgl. ebd. S.&nbsp;65). Auf der anderen Seite kommen Formen von <span data-lang='greek'>προγιγνώσκειν</span> in den Schriften Kyrills überaus häufig vor. Möglicherweise stellt er die Lehre seines Opponenten also hier auch nur in eigenen Worten dar.",
-          "doc_unit": "CU4",
-          "refstring_lines": "4 – 6 ",
-          "document": "CU4",
-          "text_end": "ausge­wählt",
-          "line_start": "4",
-          "line_end": "6",
-          "text_start": "da",
-          "refstring_text": "da … ausge­wählt]"
-        },
         "CU4-29-30-dass-ist": {
           "note_content": "Vgl. <span data-ref='23_CV4_dg.xml#r-AWyFwJlu 23_CV4_dg.xml#r-AWyFwJlu-e'>CV4,5,1</span>, ACO I,1,1 S.&nbsp;27,14f. (Dok. 23).",
           "doc_unit": "CU4",
@@ -209,17 +220,6 @@
           "line_end": "15",
           "text_start": "und",
           "refstring_text": "und … sagt]"
-        },
-        "CU4-20-21-dass-wer­den": {
-          "note_content": "Vgl. oben <span data-ref='#w171s #w180'>CU4,6 – 7</span>.",
-          "doc_unit": "CU4",
-          "refstring_lines": "20 – 21 ",
-          "document": "CU4",
-          "text_end": "wer­den",
-          "line_start": "20",
-          "line_end": "21",
-          "text_start": "dass",
-          "refstring_text": "dass … wer­den]"
         },
         "CU4-35--Caelestius-": {
           "note_content": "Der erwähnte Caelestius war zu diesem Zeitpunkt schon wegen seiner pela­gi­anischen Lehren als Häretiker verurteilt. Die Erwähnung einer Kooperation zwischen ihm und Nestorius stellt Letzteren also nicht gerade in ein günstiges Licht.",
@@ -448,6 +448,17 @@
           "text_start": "den‌¹",
           "refstring_text": "den‌¹ … Torheit]"
         },
+        "CV19-3-13-14-im-Melchisedeks": {
+          "note_content": "Vgl. Hebr 5,6. 6,20.",
+          "doc_unit": "CV19-3",
+          "refstring_lines": "13 – 14 ",
+          "document": "CV19",
+          "text_end": "Melchi­sedeks",
+          "line_start": "13",
+          "line_end": "14",
+          "text_start": "im",
+          "refstring_text": "im … Melchi­sedeks]"
+        },
         "CV19-3-20--also-": {
           "note_content": "Schwartz athetiert das <span data-lang='greek'>ἄρα</span> aufgrund seines Fehlens in einem Teil der Überlieferung.",
           "doc_unit": "CV19-3",
@@ -458,17 +469,6 @@
           "line_end": "20",
           "text_start": "also",
           "refstring_text": "also]"
-        },
-        "CV19-3-13-14-im-Melchi­sedeks": {
-          "note_content": "Vgl. Hebr 5,6. 6,20.",
-          "doc_unit": "CV19-3",
-          "refstring_lines": "13 – 14 ",
-          "document": "CV19",
-          "text_end": "Melchi­sedeks",
-          "line_start": "13",
-          "line_end": "14",
-          "text_start": "im",
-          "refstring_text": "im … Melchi­sedeks]"
         }
       },
       "4": {
@@ -1065,6 +1065,17 @@
           "text_start": "und",
           "refstring_text": "und … aus]"
         },
+        "CV19-9-5--dieVersammlung-": {
+          "note_content": "τὴν συναγωγήν: Dem Bericht der Evangelien nach (vgl. Mk 15,17 parr.) wurde Jesus von den Soldaten des Pilatus, also von Römern durch das Aufsetzen der Dornenkrone verspottet. Dass in diesem Zusammenhang der eher mit der jüdischen Kultur assoziierte Begriff verwendet wird, ist vermutlich darin begründet, dass die betreffende Szene bei Matthäus mit den Worten συνήγαγον ἐπ’ αὐτὸν ὅλην τὴν σπεῖραν (27,27) eingeleitet wird. Allerdings scheint dieser Akt zumindest in späterer Zeit tatsächlich zuweilen auch den Juden zugeschrieben worden zu sein. Die im Folgenden zitierten an das Hohelied angelehnten Verse kommen in dem hier wiedergegebenen Wortlaut jedenfalls noch in weiteren Werken vor. In diesen wird jeweils explizit ἡ συναγωγὴ τῶν Ἰουδαίων für die ‚Krönung‘ verantwortlich gemacht (vgl. Nilus Ancyr. Ep. II,197,1–4, der, Echtheit vorausgesetzt, spätestens ungefähr zeitgleich mit der Proklos-Predigt verfasst worden sein kann, den wesentlich späteren Ps.&nbsp;Athanasius Quaest. ad Antioch. [PG 28, 693C] und die im relevanten Abschnitt weitgehend wortgleiche Schrift Papisci et Philonis Iudaeorum cum monacho colloquium [S. 70, Ed. McGiffert (1889)]).",
+          "doc_unit": "CV19-9",
+          "refstring_lines": "5",
+          "document": "CV19",
+          "text_end": "die Ver­samm­lung",
+          "line_start": "5",
+          "line_end": "5",
+          "text_start": "die Ver­samm­lung",
+          "refstring_text": "die Ver­samm­lung]"
+        },
         "CV19-9-6-7-Töchter-hat": {
           "note_content": "Vgl. Hld 3,11. Allerdings heißt es dort: <span data-lang='greek'>ἐξέλθατε καὶ ἴδετε ἐν τῷ βασιλεῖ Σαλωμων ἐν τῷ στεφάνῳ, ᾧ ἐστεφάνωσεν αὐτὸν ἡ μήτηρ αὐτοῦ</span>.",
           "doc_unit": "CV19-9",
@@ -1109,17 +1120,6 @@
           "text_start": "Der",
           "refstring_text": "Der … Gesicht]"
         },
-        "CV19-9-5--dieVer­samm­lung-": {
-          "note_content": "τὴν συναγωγήν: Dem Bericht der Evangelien nach (vgl. Mk 15,17 parr.) wurde Jesus von den Soldaten des Pilatus, also von Römern durch das Aufsetzen der Dornenkrone verspottet. Dass in diesem Zusammenhang der eher mit der jüdischen Kultur assoziierte Begriff verwendet wird, ist vermutlich darin begründet, dass die betreffende Szene bei Matthäus mit den Worten συνήγαγον ἐπ’ αὐτὸν ὅλην τὴν σπεῖραν (27,27) eingeleitet wird. Allerdings scheint dieser Akt zumindest in späterer Zeit tatsächlich zuweilen auch den Juden zugeschrieben worden zu sein. Die im Folgenden zitierten an das Hohelied angelehnten Verse kommen in dem hier wiedergegebenen Wortlaut jedenfalls noch in weiteren Werken vor. In diesen wird jeweils explizit ἡ συναγωγὴ τῶν Ἰουδαίων für die ‚Krönung‘ verantwortlich gemacht (vgl. Nilus Ancyr. Ep. II,197,1–4, der, Echtheit vorausgesetzt, spätestens ungefähr zeitgleich mit der Proklos-Predigt verfasst worden sein kann, den wesentlich späteren Ps.&nbsp;Athanasius Quaest. ad Antioch. [PG 28, 693C] und die im relevanten Abschnitt weitgehend wortgleiche Schrift Papisci et Philonis Iudaeorum cum monacho colloquium [S. 70, Ed. McGiffert (1889)]).",
-          "doc_unit": "CV19-9",
-          "refstring_lines": "5",
-          "document": "CV19",
-          "text_end": "die Ver­samm­lung",
-          "line_start": "5",
-          "line_end": "5",
-          "text_start": "die Ver­samm­lung",
-          "refstring_text": "die Ver­samm­lung]"
-        },
         "CV19-9-10--und-Tisch": {
           "note_content": "Vgl. Mt 9,10.",
           "doc_unit": "CV19-9",
@@ -1144,7 +1144,7 @@
         }
       },
       "10": {
-        "CV19-10-8-9-Und-ver­schlossen": {
+        "CV19-10-8-9-Und-verschlossen": {
           "note_content": "Vgl. oben <span data-ref='#w590s #w596'>CV19,2,11</span>.",
           "doc_unit": "CV19-10",
           "refstring_lines": "8 – 9 ",
@@ -2378,17 +2378,6 @@
           "text_start": "und‌²",
           "refstring_text": "und‌² … hat]"
         },
-        "CV166-III-2-1-2-Er-Abra­hams": {
-          "note_content": "Hebr 2,16; vgl. oben <span data-ref='#w31902s #w31906'>CV166,III,1,191 – 192</span>. Zu der auch hier vermutlich zugrunde liegenden Auffassung der Bedeutung dieser Stelle, die sich von der heutigen Deutung merklich unterscheidet, vgl. Anm. zu <span data-ref='41_CV149_dg.xml#r-AWyEJBus 41_CV149_dg.xml#r-AWyEJBus-e'>CV149,10,1 – 2</span> (Dok. 41).",
-          "doc_unit": "CV166-III-2",
-          "refstring_lines": "1 – 2 ",
-          "document": "CV166",
-          "text_end": "Abra­hams",
-          "line_start": "1",
-          "line_end": "2",
-          "text_start": "Er",
-          "refstring_text": "Er … Abra­hams]"
-        },
         "CV166-III-2-24-25-Ich-verkünden": {
           "note_content": "Hebr 2,12; vgl. Ps 21(22),23.",
           "doc_unit": "CV166-III-2",
@@ -2487,6 +2476,17 @@
           "line_end": "218",
           "text_start": "eine",
           "refstring_text": "eine … gebracht]"
+        },
+        "CV166-III-2-1-2-Er-Abrahams": {
+          "note_content": "Hebr 2,16; vgl. oben <span data-ref='#w31902s #w31906'>CV166,III,1,191 – 192</span>. Zu der auch hier vermutlich zugrunde liegenden Auffassung der Bedeutung dieser Stelle, die sich von der heutigen Deutung merklich unterscheidet, vgl. Anm. zu <span data-ref='41_CV149_dg.xml#r-AWyEJBus 41_CV149_dg.xml#r-AWyEJBus-e'>CV149,10,1 – 2</span> (Dok. 41).",
+          "doc_unit": "CV166-III-2",
+          "refstring_lines": "1 – 2 ",
+          "document": "CV166",
+          "text_end": "Abra­hams",
+          "line_start": "1",
+          "line_end": "2",
+          "text_start": "Er",
+          "refstring_text": "Er … Abra­hams]"
         },
         "CV166-III-2-138-141-Einer-gerichtet": {
           "note_content": "Vgl. Eph 4,5.",
@@ -2864,6 +2864,17 @@
           "text_start": "Jene",
           "refstring_text": "Jene … sein]"
         },
+        "CV166-III-3-14-15-über-verfügenden": {
+          "note_content": "Zur Stoßrichtung dieser Wendung vgl. oben Anm. zu <span data-ref='#w13917s #w13932'>CV166,II,Praef.,57 – 58</span>.",
+          "doc_unit": "CV166-III-3",
+          "refstring_lines": "14 – 15 ",
+          "document": "CV166",
+          "text_end": "verfü­genden",
+          "line_start": "14",
+          "line_end": "15",
+          "text_start": "über",
+          "refstring_text": "über … verfü­genden]"
+        },
         "CV166-III-3-252-253-Deswegen-hier": {
           "note_content": "Jes 52,6.",
           "doc_unit": "CV166-III-3",
@@ -2885,17 +2896,6 @@
           "line_end": "125",
           "text_start": "Und",
           "refstring_text": "Und … fest]"
-        },
-        "CV166-III-3-204-205-Wir-ver­fallen": {
-          "note_content": "Vgl. Röm 1,21.",
-          "doc_unit": "CV166-III-3",
-          "refstring_lines": "204 – 205 ",
-          "document": "CV166",
-          "text_end": "ver­fallen",
-          "line_start": "204",
-          "line_end": "205",
-          "text_start": "Wir",
-          "refstring_text": "Wir … ver­fallen]"
         },
         "CV166-III-3-258-259-er‌2-Weise": {
           "note_content": "<span data-lang='greek'>ξένως τε καὶ ἀσυνήθως</span>: zu dieser Junktur im Zusammenhang mit der Parusie vgl. auch Cyr. <em>Joh.</em> 9, Pusey (1965 [= 1868–1877]), Bd. 4 S.&nbsp;404,16f.; <em>Chr. un.</em> 725,30f.",
@@ -3116,6 +3116,17 @@
           "line_end": "202",
           "text_start": "sind",
           "refstring_text": "sind … geworden]"
+        },
+        "CV166-III-3-204-205-Wir-verfallen": {
+          "note_content": "Vgl. Röm 1,21.",
+          "doc_unit": "CV166-III-3",
+          "refstring_lines": "204 – 205 ",
+          "document": "CV166",
+          "text_end": "ver­fallen",
+          "line_start": "204",
+          "line_end": "205",
+          "text_start": "Wir",
+          "refstring_text": "Wir … ver­fallen]"
         },
         "CV166-III-3-58-59-spricht-ich": {
           "note_content": "Vgl. oben <span data-ref='#w35165s #w35182'>CV166,III,3,19 – 20</span>.",
@@ -3677,17 +3688,6 @@
           "line_end": "142",
           "text_start": "Dieser",
           "refstring_text": "Dieser … komme]"
-        },
-        "CV166-III-3-14-15-über-verfü­genden": {
-          "note_content": "Zur Stoßrichtung dieser Wendung vgl. oben Anm. zu <span data-ref='#w13917s #w13932'>CV166,II,Praef.,57 – 58</span>.",
-          "doc_unit": "CV166-III-3",
-          "refstring_lines": "14 – 15 ",
-          "document": "CV166",
-          "text_end": "verfü­genden",
-          "line_start": "14",
-          "line_end": "15",
-          "text_start": "über",
-          "refstring_text": "über … verfü­genden]"
         }
       },
       "III-1": {
@@ -4320,6 +4320,17 @@
           "text_start": "Der",
           "refstring_text": "Der … sagte]"
         },
+        "CV166-I-1-87-88-wie-Geschlechts": {
+          "note_content": "Vgl. oben <span data-ref='#w1895s #w1914'>CV166,I,Praef.,146 – 148</span>.",
+          "doc_unit": "CV166-I-1",
+          "refstring_lines": "87 – 88 ",
+          "document": "CV166",
+          "text_end": "Ge­schlechts",
+          "line_start": "87",
+          "line_end": "88",
+          "text_start": "wie",
+          "refstring_text": "wie … Ge­schlechts]"
+        },
         "CV166-I-1-1-11-Ich-aussprichst": {
           "note_content": "Vgl. Loofs, Nestoriana S.&nbsp;353,1–12. Kyrill zitiert die nämlichen Worte des Nestorius ebenfalls in seiner Verteidigung der zwölf Kapitel gegenüber den östlichen Bischöfen (vgl. CA24,8, ACO I,1,7 S.&nbsp;35,8–15).",
           "doc_unit": "CV166-I-1",
@@ -4396,17 +4407,6 @@
           "line_end": "33",
           "text_start": "das",
           "refstring_text": "das … ist]"
-        },
-        "CV166-I-1-87-88-wie-Ge­schlechts": {
-          "note_content": "Vgl. oben <span data-ref='#w1895s #w1914'>CV166,I,Praef.,146 – 148</span>.",
-          "doc_unit": "CV166-I-1",
-          "refstring_lines": "87 – 88 ",
-          "document": "CV166",
-          "text_end": "Ge­schlechts",
-          "line_start": "87",
-          "line_end": "88",
-          "text_start": "wie",
-          "refstring_text": "wie … Ge­schlechts]"
         },
         "CV166-I-1-55--den-Manichäern": {
           "note_content": "Zu den Manichäern im engeren Sinn vgl. Hutter (2012). Allerdings gehörten die Manichäer zu Zeiten der Auseinandersetzung zwischen Kyrill und Nestorius gewissermaßen zum Ketzerkanon (vgl. z.B. CV96, ACO I,1,3 S.&nbsp;39,13–16), und ihr Name wurde, um theologische Gegner zu diskreditieren, zuweilen auch in weniger spezifischer Bedeutung verwendet.",
@@ -5652,17 +5652,6 @@
           "text_start": "Nicht",
           "refstring_text": "Nicht … Gott]"
         },
-        "CV166-I-4-107-109-So-Got­tesgebärerin": {
-          "note_content": "Vgl. oben <span data-ref='#w7739s #w7771'>CV166,I,4,67 – 70</span>.",
-          "doc_unit": "CV166-I-4",
-          "refstring_lines": "107 – 109 ",
-          "document": "CV166",
-          "text_end": "Got­tesgebärerin",
-          "line_start": "107",
-          "line_end": "109",
-          "text_start": "So",
-          "refstring_text": "So … Got­tesgebärerin]"
-        },
         "CV166-I-4-1-5-Groß-umwickelt": {
           "note_content": "Vgl. Loofs, Nestoriana S.&nbsp;327,21–328,2.",
           "doc_unit": "CV166-I-4",
@@ -5685,17 +5674,6 @@
           "text_start": "Und‌²",
           "refstring_text": "Und‌² … Arius]"
         },
-        "CV166-I-4-8-9-Um-ange­sprochen": {
-          "note_content": "Von Loofs und Pusey (1881, S.&nbsp;18) werden diese Worte nicht als Teil des Zitats betrachtet. Subjekt des Relativsatzes sollte jedenfalls entweder Nestorius sein, der Satz also als Kommentar Kyrills verstanden werden, oder aus dem ursprünglich Vorangegangenen, hier aber nicht Angeführten ergänzt werden. So versteht Schwartz seiner Zeichensetzung nach zu urteilen den Text anscheinend. Möglicherweise könnte sich Nestorius hier bei dieser Betrachtungsweise auf eine Bibelstelle beziehen, an der Christus in engem Zusammenhang mit seiner Leiblichkeit als Gott bezeichnet wird. Dann kämen beispielsweise etwa der Jünger Thomas (vgl. Joh 20,28; s. auch unten <span data-ref='#w64231s #w64279'>CV166,V,6,8 – 12</span>) oder Paulus (vgl. Röm 9,5; s. auch CV60,V, ACO I,1,2 S.&nbsp;47,1–6) als Subjekt des Satzes in Frage.",
-          "doc_unit": "CV166-I-4",
-          "refstring_lines": "8 – 9 ",
-          "document": "CV166",
-          "text_end": "ange­sprochen",
-          "line_start": "8",
-          "line_end": "9",
-          "text_start": "Um",
-          "refstring_text": "Um … ange­sprochen]"
-        },
         "CV166-I-4-19-20-Ich-Alls": {
           "note_content": "Vgl. oben <span data-ref='#w6950s #w6963'>CV166,I,4,3 – 4</span>.",
           "doc_unit": "CV166-I-4",
@@ -5717,6 +5695,17 @@
           "line_end": "90",
           "text_start": "der‌²",
           "refstring_text": "der‌² … Beseelung]"
+        },
+        "CV166-I-4-107-109-So-Gottesgebärerin": {
+          "note_content": "Vgl. oben <span data-ref='#w7739s #w7771'>CV166,I,4,67 – 70</span>.",
+          "doc_unit": "CV166-I-4",
+          "refstring_lines": "107 – 109 ",
+          "document": "CV166",
+          "text_end": "Got­tesgebärerin",
+          "line_start": "107",
+          "line_end": "109",
+          "text_start": "So",
+          "refstring_text": "So … Got­tesgebärerin]"
         },
         "CV166-I-4-30-31-In-Gott": {
           "note_content": "Vgl. oben <span data-ref='#w6983s #w6992'>CV166,I,4,6 – 7</span>.",
@@ -5794,6 +5783,17 @@
           "line_end": "110",
           "text_start": "Denn",
           "refstring_text": "Denn … Gott]"
+        },
+        "CV166-I-4-8-9-Um-angesprochen": {
+          "note_content": "Von Loofs und Pusey (1881, S.&nbsp;18) werden diese Worte nicht als Teil des Zitats betrachtet. Subjekt des Relativsatzes sollte jedenfalls entweder Nestorius sein, der Satz also als Kommentar Kyrills verstanden werden, oder aus dem ursprünglich Vorangegangenen, hier aber nicht Angeführten ergänzt werden. So versteht Schwartz seiner Zeichensetzung nach zu urteilen den Text anscheinend. Möglicherweise könnte sich Nestorius hier bei dieser Betrachtungsweise auf eine Bibelstelle beziehen, an der Christus in engem Zusammenhang mit seiner Leiblichkeit als Gott bezeichnet wird. Dann kämen beispielsweise etwa der Jünger Thomas (vgl. Joh 20,28; s. auch unten <span data-ref='#w64231s #w64279'>CV166,V,6,8 – 12</span>) oder Paulus (vgl. Röm 9,5; s. auch CV60,V, ACO I,1,2 S.&nbsp;47,1–6) als Subjekt des Satzes in Frage.",
+          "doc_unit": "CV166-I-4",
+          "refstring_lines": "8 – 9 ",
+          "document": "CV166",
+          "text_end": "ange­sprochen",
+          "line_start": "8",
+          "line_end": "9",
+          "text_start": "Um",
+          "refstring_text": "Um … ange­sprochen]"
         },
         "CV166-I-4-22-24-warum-genannt": {
           "note_content": "Vgl. oben <span data-ref='#w6918s #w6977'>CV166,I,4,1 – 5</span>.",
@@ -5896,6 +5896,17 @@
         }
       },
       "IV-3": {
+        "CV166-IV-3-146-147-Schneide-entzwei": {
+          "note_content": "Schwartz ergänzt die diesen Satz einleitende Negation <span data-lang='greek'>μὴ</span> zu <span data-lang='greek'>μη</span>〈<span data-lang='greek'>δὲ</span>〉, die Übersetzung folgt jedoch dem überlieferten Text.",
+          "doc_unit": "CV166-IV-3",
+          "refstring_lines": "146 – 147 ",
+          "document": "CV166",
+          "text_end": "ent­zwei",
+          "line_start": "146",
+          "line_end": "147",
+          "text_start": "Schneide",
+          "refstring_text": "Schneide … ent­zwei]"
+        },
         "CV166-IV-3-33--den-zermalmen": {
           "note_content": "Vgl. Röm 16,20.",
           "doc_unit": "CV166-IV-3",
@@ -5918,17 +5929,6 @@
           "text_start": "furchterregend",
           "refstring_text": "furchterregend … Dämonen]"
         },
-        "CV166-IV-3-49-50-dass-aus­treibe": {
-          "note_content": "Vgl. Mt 12,28; s. auch oben <span data-ref='#w48198s #w48209'>CV166,IV,3,6</span>.",
-          "doc_unit": "CV166-IV-3",
-          "refstring_lines": "49 – 50 ",
-          "document": "CV166",
-          "text_end": "aus­treibe",
-          "line_start": "49",
-          "line_end": "50",
-          "text_start": "dass",
-          "refstring_text": "dass … aus­treibe]"
-        },
         "CV166-IV-3-3-6-der-aus": {
           "note_content": "Vgl. die parallele Stelle in Kyrills Verteidigung der zwölf Kapitel gegenüber den östlichen Bischöfen<em> </em>(CV169,63, ACO 1,1,6 S.&nbsp;134,19f.).",
           "doc_unit": "CV166-IV-3",
@@ -5939,17 +5939,6 @@
           "line_end": "6",
           "text_start": "der",
           "refstring_text": "der … aus]"
-        },
-        "CV166-IV-3-147-148-Herrn-Herrlich­keit": {
-          "note_content": "Vgl. 1 Kor 2,8.",
-          "doc_unit": "CV166-IV-3",
-          "refstring_lines": "147 – 148 ",
-          "document": "CV166",
-          "text_end": "Herrlich­keit",
-          "line_start": "147",
-          "line_end": "148",
-          "text_start": "Herrn",
-          "refstring_text": "Herrn … Herrlich­keit]"
         },
         "CV166-IV-3-15-17-es-kommt": {
           "note_content": "Zu Glaubensbekenntnissen, die explizit eine Wesensgleichheit des Heiligen Geistes erwähnen, vgl. z.B. Kinzig (2017), §164a2; §185; §188.",
@@ -6050,17 +6039,6 @@
           "text_start": "warum",
           "refstring_text": "warum … ausgeht]"
         },
-        "CV166-IV-3-9-11-Nachdem-aufge­nommen": {
-          "note_content": "Apg 1,2. Die Wortstellung zeigt sich hier im Vergleich mit dem überlieferten Text der Apostelgeschichte in entscheidend veränderter Form. Während dort die Wendung <span data-lang='greek'>διὰ πνεύματος ἁγίου</span> eher auf das Partizip <span data-lang='greek'>ἐντειλάμενος</span> zu beziehen ist (<span data-lang='greek'>ἐντειλάμενος τοῖς ἀποστόλοις διὰ πνεύματος ἁγίου</span>), legt die hier zitierte Version, wie Nestorius es ja offenbar auch versteht, einen Bezug auf das finite Verb <span data-lang='greek'>ἀνελήφθη</span> nahe (<span data-lang='greek'>διὰ πνεύματος ἁγίου ἀνελήφθη</span>).",
-          "doc_unit": "CV166-IV-3",
-          "refstring_lines": "9 – 11 ",
-          "document": "CV166",
-          "text_end": "aufge­nommen",
-          "line_start": "9",
-          "line_end": "11",
-          "text_start": "Nachdem",
-          "refstring_text": "Nachdem … aufge­nommen]"
-        },
         "CV166-IV-3-164--wahrheitsgemäß-hat": {
           "note_content": "Vgl. Hebr 2,14.",
           "doc_unit": "CV166-IV-3",
@@ -6115,6 +6093,17 @@
           "line_end": "90",
           "text_start": "Er‌¹",
           "refstring_text": "Er‌¹ … aufgenommen]"
+        },
+        "CV166-IV-3-9-11-Nachdem-aufgenommen": {
+          "note_content": "Apg 1,2. Die Wortstellung zeigt sich hier im Vergleich mit dem überlieferten Text der Apostelgeschichte in entscheidend veränderter Form. Während dort die Wendung <span data-lang='greek'>διὰ πνεύματος ἁγίου</span> eher auf das Partizip <span data-lang='greek'>ἐντειλάμενος</span> zu beziehen ist (<span data-lang='greek'>ἐντειλάμενος τοῖς ἀποστόλοις διὰ πνεύματος ἁγίου</span>), legt die hier zitierte Version, wie Nestorius es ja offenbar auch versteht, einen Bezug auf das finite Verb <span data-lang='greek'>ἀνελήφθη</span> nahe (<span data-lang='greek'>διὰ πνεύματος ἁγίου ἀνελήφθη</span>).",
+          "doc_unit": "CV166-IV-3",
+          "refstring_lines": "9 – 11 ",
+          "document": "CV166",
+          "text_end": "aufge­nommen",
+          "line_start": "9",
+          "line_end": "11",
+          "text_start": "Nachdem",
+          "refstring_text": "Nachdem … aufge­nommen]"
         },
         "CV166-IV-3-27-28-Du-ist": {
           "note_content": "Vgl. oben <span data-ref='#w48210s #w48216'>CV166,IV,3,6 – 7</span>, wobei Kyrill allerdings in der Interpretation der Aussage seines Gegners dem darin enthaltenen Possessivpronomen vermutlich deutlich mehr Gewicht gibt, als dies von Nestorius beabsichtigt gewesen war.",
@@ -6181,6 +6170,17 @@
           "line_end": "79",
           "text_start": "Der",
           "refstring_text": "Der … hat]"
+        },
+        "CV166-IV-3-147-148-Herrn-Herrlichkeit": {
+          "note_content": "Vgl. 1 Kor 2,8.",
+          "doc_unit": "CV166-IV-3",
+          "refstring_lines": "147 – 148 ",
+          "document": "CV166",
+          "text_end": "Herrlich­keit",
+          "line_start": "147",
+          "line_end": "148",
+          "text_start": "Herrn",
+          "refstring_text": "Herrn … Herrlich­keit]"
         },
         "CV166-IV-3-2-3-Denn-Geist": {
           "note_content": "Mt 1,20, dort allerdings lediglich mit dem femininen Pronomen <span data-lang='greek'>αὐτῇ</span>, welches sich auf den unmittelbar genannten Namen Marias bezieht.",
@@ -6270,6 +6270,17 @@
           "text_start": "Das",
           "refstring_text": "Das … werde]"
         },
+        "CV166-IV-3-49-50-dass-austreibe": {
+          "note_content": "Vgl. Mt 12,28; s. auch oben <span data-ref='#w48198s #w48209'>CV166,IV,3,6</span>.",
+          "doc_unit": "CV166-IV-3",
+          "refstring_lines": "49 – 50 ",
+          "document": "CV166",
+          "text_end": "aus­treibe",
+          "line_start": "49",
+          "line_end": "50",
+          "text_start": "dass",
+          "refstring_text": "dass … aus­treibe]"
+        },
         "CV166-IV-3-133--Verherrliche-Sohn‌2": {
           "note_content": "Vgl. oben <span data-ref='#w49605s #w49608'>CV166,IV,3,114 – 115</span>.",
           "doc_unit": "CV166-IV-3",
@@ -6313,17 +6324,6 @@
           "line_end": "54",
           "text_start": "dass",
           "refstring_text": "dass … austreibe]"
-        },
-        "CV166-IV-3-146-147-Schneide-ent­zwei": {
-          "note_content": "Schwartz ergänzt die diesen Satz einleitende Negation <span data-lang='greek'>μὴ</span> zu <span data-lang='greek'>μη</span>〈<span data-lang='greek'>δὲ</span>〉, die Übersetzung folgt jedoch dem überlieferten Text.",
-          "doc_unit": "CV166-IV-3",
-          "refstring_lines": "146 – 147 ",
-          "document": "CV166",
-          "text_end": "ent­zwei",
-          "line_start": "146",
-          "line_end": "147",
-          "text_start": "Schneide",
-          "refstring_text": "Schneide … ent­zwei]"
         }
       },
       "I-7": {
@@ -7536,17 +7536,6 @@
           "text_start": "der",
           "refstring_text": "der … Volkes]"
         },
-        "CV166-III-6-140-141-Schreib­tafel-": {
-          "note_content": "<span data-lang='greek'>καθάπερ ἐν πίνακι</span>: möglicherweise ist der Ausdruck <span data-lang='greek'>πίναξ</span> in diesem Zusammenhang darauf zu beziehen, dass man eine Schreibtafel in der Regel nicht dazu benutzte, etwas dauerhaft festzuhalten, was den vorübergehenden Charakter des Gesetzes unterstreichen würde. Allerdings wird derselbe Ausdruck in ähnlichem Kontext weiter unten auch eher im Sinne von „Bild“ oder „Zeichnung“ gebraucht (vgl. <span data-ref='#w44454s #w44456'>CV166,IV,Praef.,4</span>). Er könnte sich also auch auf das Abbildhafte des auf einer <span data-lang='greek'>πίναξ</span> Sichtbaren gegenüber dem ‚Original‘ beziehen.",
-          "doc_unit": "CV166-III-6",
-          "refstring_lines": "140 – 141 ",
-          "document": "CV166",
-          "text_end": "Schreib­tafel",
-          "line_start": "140",
-          "line_end": "141",
-          "text_start": "Schreib­tafel",
-          "refstring_text": "Schreib­tafel]"
-        },
         "CV166-III-6-96-97-sind-nach": {
           "note_content": "Vgl. Offb 5,9.",
           "doc_unit": "CV166-III-6",
@@ -7678,17 +7667,6 @@
           "line_end": "161",
           "text_start": "als",
           "refstring_text": "als … darbringt]"
-        },
-        "CV166-III-6-84-85-Jener-himm­lisch": {
-          "note_content": "Vgl. 1 Kor 15,47; s. auch oben <span data-ref='#w33209s #w33244'>CV166,III,2,95 – 97</span>.",
-          "doc_unit": "CV166-III-6",
-          "refstring_lines": "84 – 85 ",
-          "document": "CV166",
-          "text_end": "himm­lisch",
-          "line_start": "84",
-          "line_end": "85",
-          "text_start": "Jener",
-          "refstring_text": "Jener … himm­lisch]"
         },
         "CV166-III-6-42--das-Frömmigkeit": {
           "note_content": "Vgl. 1 Tim 3,16.",
@@ -7844,6 +7822,17 @@
           "text_start": "Durch",
           "refstring_text": "Durch … Tod]"
         },
+        "CV166-III-6-140-141-Schreibtafel-": {
+          "note_content": "<span data-lang='greek'>καθάπερ ἐν πίνακι</span>: möglicherweise ist der Ausdruck <span data-lang='greek'>πίναξ</span> in diesem Zusammenhang darauf zu beziehen, dass man eine Schreibtafel in der Regel nicht dazu benutzte, etwas dauerhaft festzuhalten, was den vorübergehenden Charakter des Gesetzes unterstreichen würde. Allerdings wird derselbe Ausdruck in ähnlichem Kontext weiter unten auch eher im Sinne von „Bild“ oder „Zeichnung“ gebraucht (vgl. <span data-ref='#w44454s #w44456'>CV166,IV,Praef.,4</span>). Er könnte sich also auch auf das Abbildhafte des auf einer <span data-lang='greek'>πίναξ</span> Sichtbaren gegenüber dem ‚Original‘ beziehen.",
+          "doc_unit": "CV166-III-6",
+          "refstring_lines": "140 – 141 ",
+          "document": "CV166",
+          "text_end": "Schreib­tafel",
+          "line_start": "140",
+          "line_end": "141",
+          "text_start": "Schreib­tafel",
+          "refstring_text": "Schreib­tafel]"
+        },
         "CV166-III-6-90-92-Wie-werden": {
           "note_content": "Röm 5,19; vgl. oben <span data-ref='#w3425s #w3451'>CV166,I,1,74 – 76</span>.",
           "doc_unit": "CV166-III-6",
@@ -7899,6 +7888,17 @@
           "text_start": "Wenn",
           "refstring_text": "Wenn … hat]"
         },
+        "CV166-III-6-84-85-Jener-himmlisch": {
+          "note_content": "Vgl. 1 Kor 15,47; s. auch oben <span data-ref='#w33209s #w33244'>CV166,III,2,95 – 97</span>.",
+          "doc_unit": "CV166-III-6",
+          "refstring_lines": "84 – 85 ",
+          "document": "CV166",
+          "text_end": "himm­lisch",
+          "line_start": "84",
+          "line_end": "85",
+          "text_start": "Jener",
+          "refstring_text": "Jener … himm­lisch]"
+        },
         "CV166-III-6-107-108-die‌2-aber": {
           "note_content": "Gemeint ist der Eid in Ps 109(110),4: <span data-lang='greek'>ὤμοσεν κύριος, καὶ οὐ μεταμεληθήσεται· Σὺ ἱερεὺς εἰς τὸν αἰῶνα</span> (geschworen hat der Herr, und es wird ihn nicht gereuen: Du bist Priester in Ewigkeit), zit. in Hebr 7,20.",
           "doc_unit": "CV166-III-6",
@@ -7933,6 +7933,17 @@
           "line_end": "114",
           "text_start": "im",
           "refstring_text": "im … Trinität]"
+        },
+        "CV166-IV-6-150-152-Es-präsentieren": {
+          "note_content": "Vgl. oben <span data-ref='#w46796s #w46881'>CV166,IV,2,15 – 22</span>.",
+          "doc_unit": "CV166-IV-6",
+          "refstring_lines": "150 – 152 ",
+          "document": "CV166",
+          "text_end": "präsentie­ren",
+          "line_start": "150",
+          "line_end": "152",
+          "text_start": "Es",
+          "refstring_text": "Es … präsentie­ren]"
         },
         "CV166-IV-6-72-75-da-Du": {
           "note_content": "Vgl. oben <span data-ref='#w51210s #w51223'>CV166,IV,5,49 – 50</span>.",
@@ -8209,17 +8220,6 @@
           "text_start": "und",
           "refstring_text": "und … Völker]"
         },
-        "CV166-IV-6-150-152-Es-präsentie­ren": {
-          "note_content": "Vgl. oben <span data-ref='#w46796s #w46881'>CV166,IV,2,15 – 22</span>.",
-          "doc_unit": "CV166-IV-6",
-          "refstring_lines": "150 – 152 ",
-          "document": "CV166",
-          "text_end": "präsentie­ren",
-          "line_start": "150",
-          "line_end": "152",
-          "text_start": "Es",
-          "refstring_text": "Es … präsentie­ren]"
-        },
         "CV166-IV-6-31-33-Höre-ist‌1": {
           "note_content": "Vgl. oben <span data-ref='#w52719s #w52738'>CV166,IV,6,1 – 2</span>.",
           "doc_unit": "CV166-IV-6",
@@ -8408,17 +8408,6 @@
           "line_end": "11",
           "text_start": "Sie",
           "refstring_text": "Sie … Fleisch]"
-        },
-        "CV166-I-8-104-105-In-genom­men": {
-          "note_content": "Kol 2,9.",
-          "doc_unit": "CV166-I-8",
-          "refstring_lines": "104 – 105 ",
-          "document": "CV166",
-          "text_end": "genom­men",
-          "line_start": "104",
-          "line_end": "105",
-          "text_start": "In",
-          "refstring_text": "In … genom­men]"
         },
         "CV166-I-8-15-23-Wir-Geist": {
           "note_content": "Vollständige wörtliche Wiedergabe des positiven Teils des Nizänums.",
@@ -8617,6 +8606,17 @@
           "line_end": "49",
           "text_start": "Allerdings",
           "refstring_text": "Allerdings … Fleischwerdung]"
+        },
+        "CV166-I-8-104-105-In-genommen": {
+          "note_content": "Kol 2,9.",
+          "doc_unit": "CV166-I-8",
+          "refstring_lines": "104 – 105 ",
+          "document": "CV166",
+          "text_end": "genom­men",
+          "line_start": "104",
+          "line_end": "105",
+          "text_start": "In",
+          "refstring_text": "In … genom­men]"
         },
         "CV166-I-8-42--nicht-": {
           "note_content": "Von Agellio (1607) athetiert.",
@@ -8842,6 +8842,17 @@
           "text_start": "und‌²",
           "refstring_text": "und‌² … entwickelte]"
         },
+        "CV166-III-4-8-9-unauflöslichen-": {
+          "note_content": "<span data-lang='greek'>ἀκαταλύτου</span> statt <span data-lang='greek'>αἰωνίου</span>, wie es in der primären Überlieferung zu finden ist. Möglicherweise ist diese Variante durch Hebr 7,16 (<span data-lang='greek'>ζωῆς ἀκαταλύτου</span>) beeinflusst. Allerdings folgt hier wenig später auch eine Zitation in der herkömmlichen Form (vgl. unten <span data-ref='#w39237s #w39239'>CV166,III,4,13</span>).",
+          "doc_unit": "CV166-III-4",
+          "refstring_lines": "8 – 9 ",
+          "document": "CV166",
+          "text_end": "unauf­löslichen",
+          "line_start": "8",
+          "line_end": "9",
+          "text_start": "unauf­löslichen",
+          "refstring_text": "unauf­löslichen]"
+        },
         "CV166-III-4-13-14-im-Melchisedeks": {
           "note_content": "Vgl. Ps 109(110),4.",
           "doc_unit": "CV166-III-4",
@@ -9007,17 +9018,6 @@
           "text_start": "Also",
           "refstring_text": "Also … gesehen‌²]"
         },
-        "CV166-III-4-8-9-unauf­löslichen-": {
-          "note_content": "<span data-lang='greek'>ἀκαταλύτου</span> statt <span data-lang='greek'>αἰωνίου</span>, wie es in der primären Überlieferung zu finden ist. Möglicherweise ist diese Variante durch Hebr 7,16 (<span data-lang='greek'>ζωῆς ἀκαταλύτου</span>) beeinflusst. Allerdings folgt hier wenig später auch eine Zitation in der herkömmlichen Form (vgl. unten <span data-ref='#w39237s #w39239'>CV166,III,4,13</span>).",
-          "doc_unit": "CV166-III-4",
-          "refstring_lines": "8 – 9 ",
-          "document": "CV166",
-          "text_end": "unauf­löslichen",
-          "line_start": "8",
-          "line_end": "9",
-          "text_start": "unauf­löslichen",
-          "refstring_text": "unauf­löslichen]"
-        },
         "CV166-III-4-89-90-Er-abgewendet": {
           "note_content": "Vgl. Jes 50,6.",
           "doc_unit": "CV166-III-4",
@@ -9127,17 +9127,6 @@
           "line_end": "11",
           "text_start": "Jesus",
           "refstring_text": "Jesus … Gnade]"
-        },
-        "CV166-III-4-190-191-kos­tete-Tod": {
-          "note_content": "Hebr 2,9.",
-          "doc_unit": "CV166-III-4",
-          "refstring_lines": "190 – 191 ",
-          "document": "CV166",
-          "text_end": "Tod",
-          "line_start": "190",
-          "line_end": "191",
-          "text_start": "kos­tete",
-          "refstring_text": "kos­tete … Tod]"
         },
         "CV166-III-4-1--der-Hohepriester": {
           "note_content": "Vgl. Hebr 2,17. 3,2.",
@@ -9347,6 +9336,17 @@
           "line_end": "3",
           "text_start": "Dieser",
           "refstring_text": "Dieser … gelangte]"
+        },
+        "CV166-III-4-190-191-kostete-Tod": {
+          "note_content": "Hebr 2,9.",
+          "doc_unit": "CV166-III-4",
+          "refstring_lines": "190 – 191 ",
+          "document": "CV166",
+          "text_end": "Tod",
+          "line_start": "190",
+          "line_end": "191",
+          "text_start": "kos­tete",
+          "refstring_text": "kos­tete … Tod]"
         }
       },
       "IV-4": {
@@ -10849,7 +10849,7 @@
           "text_start": "Da",
           "refstring_text": "Da … beschreiten]"
         },
-        "CV166-II-14-4-7-Vernimm-Menschen­verehrung": {
+        "CV166-II-14-4-7-Vernimm-Menschenverehrung": {
           "note_content": "Ebenfalls zit. in CV60,V, ACO I,1,2 S.&nbsp;47,3–6.",
           "doc_unit": "CV166-II-14",
           "refstring_lines": "4 – 7 ",
@@ -11084,6 +11084,17 @@
         }
       },
       "II-4": {
+        "CV166-II-4-80-81-Einziggeborener-": {
+          "note_content": "Vgl. z.B. Joh 1,14–16; 1 Joh 4,9.",
+          "doc_unit": "CV166-II-4",
+          "refstring_lines": "80 – 81 ",
+          "document": "CV166",
+          "text_end": "Einziggebore­ner",
+          "line_start": "80",
+          "line_end": "81",
+          "text_start": "Einziggebore­ner",
+          "refstring_text": "Einziggebore­ner]"
+        },
         "CV166-II-4-116-117-Der-dieselbe": {
           "note_content": "Vgl. oben <span data-ref='#w18383s #w18397'>CV166,II,4,7 – 8</span>.",
           "doc_unit": "CV166-II-4",
@@ -11633,17 +11644,6 @@
           "line_end": "21",
           "text_start": "Nun",
           "refstring_text": "Nun … hinausführen]"
-        },
-        "CV166-II-4-80-81-Einziggebore­ner-": {
-          "note_content": "Vgl. z.B. Joh 1,14–16; 1 Joh 4,9.",
-          "doc_unit": "CV166-II-4",
-          "refstring_lines": "80 – 81 ",
-          "document": "CV166",
-          "text_end": "Einziggebore­ner",
-          "line_start": "80",
-          "line_end": "81",
-          "text_start": "Einziggebore­ner",
-          "refstring_text": "Einziggebore­ner]"
         },
         "CV166-II-4-110-112-Du-Genossen": {
           "note_content": "Ps 44(45),8; vgl. Hebr 1,9.",
@@ -12667,17 +12667,6 @@
           "text_start": "und",
           "refstring_text": "und … behaupten]"
         },
-        "CV166-II-8-83-85-Schließ­lich-sagt": {
-          "note_content": "Vgl. Eph 4,14. Interessanterweise lässt Kyrill hier die in seinem Kontext durchaus passenden Worte <span data-lang='greek'>τῆς διδασκαλίας</span> als Spezifizierung von <span data-lang='greek'>παντὶ ἀνέμῳ</span> aus.",
-          "doc_unit": "CV166-II-8",
-          "refstring_lines": "83 – 85 ",
-          "document": "CV166",
-          "text_end": "sagt",
-          "line_start": "83",
-          "line_end": "85",
-          "text_start": "Schließ­lich",
-          "refstring_text": "Schließ­lich … sagt]"
-        },
         "CV166-II-8-39-40-Und-Lehren": {
           "note_content": "Vgl. oben <span data-ref='#w17201s #w17212'>CV166,II,2,68 – 69</span>.",
           "doc_unit": "CV166-II-8",
@@ -12711,17 +12700,6 @@
           "text_start": "Es",
           "refstring_text": "Es … unternimmt]"
         },
-        "CV166-II-8-7-9-Deswe­gen-besitzt": {
-          "note_content": "Ebenfalls zit. in CV128,11, ACO I,1,4 S.&nbsp;25,16f.",
-          "doc_unit": "CV166-II-8",
-          "refstring_lines": "7 – 9 ",
-          "document": "CV166",
-          "text_end": "besitzt",
-          "line_start": "7",
-          "line_end": "9",
-          "text_start": "Deswe­gen",
-          "refstring_text": "Deswe­gen … besitzt]"
-        },
         "CV166-II-8-37-39-was-lehren": {
           "note_content": "Vgl. oben <span data-ref='#w21775s #w21799'>CV166,II,8,3 – 4</span>.",
           "doc_unit": "CV166-II-8",
@@ -12754,6 +12732,28 @@
           "line_end": "105",
           "text_start": "Deswegen",
           "refstring_text": "Deswegen … behaupten]"
+        },
+        "CV166-II-8-75-77-Was-herabzukommen": {
+          "note_content": "Vgl. oben <span data-ref='#w21748s #w21774'>CV166,II,8,1 – 3</span>.",
+          "doc_unit": "CV166-II-8",
+          "refstring_lines": "75 – 77 ",
+          "document": "CV166",
+          "text_end": "herabzu­kommen",
+          "line_start": "75",
+          "line_end": "77",
+          "text_start": "Was",
+          "refstring_text": "Was … herabzu­kommen]"
+        },
+        "CV166-II-8-83-85-Schließlich-sagt": {
+          "note_content": "Vgl. Eph 4,14. Interessanterweise lässt Kyrill hier die in seinem Kontext durchaus passenden Worte <span data-lang='greek'>τῆς διδασκαλίας</span> als Spezifizierung von <span data-lang='greek'>παντὶ ἀνέμῳ</span> aus.",
+          "doc_unit": "CV166-II-8",
+          "refstring_lines": "83 – 85 ",
+          "document": "CV166",
+          "text_end": "sagt",
+          "line_start": "83",
+          "line_end": "85",
+          "text_start": "Schließ­lich",
+          "refstring_text": "Schließ­lich … sagt]"
         },
         "CV166-II-8-148--eine-Logos": {
           "note_content": "Zu dieser Formel vgl. Anm. zu <span data-ref='36_CV6_dg.xml#r-AWyDJrxQ 36_CV6_dg.xml#r-AWyDJrxQ-e'>CV6,8,24 – 25</span>, ACO I,1,1 S.&nbsp;38,22 (Dok. 36).",
@@ -12865,17 +12865,6 @@
           "text_start": "nahm",
           "refstring_text": "nahm … an]"
         },
-        "CV166-II-8-75-77-Was-herabzu­kommen": {
-          "note_content": "Vgl. oben <span data-ref='#w21748s #w21774'>CV166,II,8,1 – 3</span>.",
-          "doc_unit": "CV166-II-8",
-          "refstring_lines": "75 – 77 ",
-          "document": "CV166",
-          "text_end": "herabzu­kommen",
-          "line_start": "75",
-          "line_end": "77",
-          "text_start": "Was",
-          "refstring_text": "Was … herabzu­kommen]"
-        },
         "CV166-II-8-1-9-Der-besitzt": {
           "note_content": "Ebenfalls zit. in CV60,VIIII, ACO I,1,2 S.&nbsp;48,4–10.",
           "doc_unit": "CV166-II-8",
@@ -12886,6 +12875,17 @@
           "line_end": "9",
           "text_start": "Der",
           "refstring_text": "Der … besitzt]"
+        },
+        "CV166-II-8-7-9-Deswegen-besitzt": {
+          "note_content": "Ebenfalls zit. in CV128,11, ACO I,1,4 S.&nbsp;25,16f.",
+          "doc_unit": "CV166-II-8",
+          "refstring_lines": "7 – 9 ",
+          "document": "CV166",
+          "text_end": "besitzt",
+          "line_start": "7",
+          "line_end": "9",
+          "text_start": "Deswe­gen",
+          "refstring_text": "Deswe­gen … besitzt]"
         },
         "CV166-II-8-85--den-Seele": {
           "note_content": "Vgl. Hebr 6,19.",
@@ -13779,6 +13779,17 @@
           "text_start": "wobei",
           "refstring_text": "wobei … nagelte]"
         },
+        "CV166-V-2-49-50-gehorsam-Kreuz": {
+          "note_content": "Vgl. oben <span data-ref='#w59158s #w59168'>CV166,V,2,43</span>.",
+          "doc_unit": "CV166-V-2",
+          "refstring_lines": "49 – 50 ",
+          "document": "CV166",
+          "text_end": "Kreuz",
+          "line_start": "49",
+          "line_end": "50",
+          "text_start": "gehor­sam",
+          "refstring_text": "gehor­sam … Kreuz]"
+        },
         "CV166-V-2-94-95-Ist-an": {
           "note_content": "Vgl. oben <span data-ref='#w58693s #w58708'>CV166,V,2,6 – 7</span>.",
           "doc_unit": "CV166-V-2",
@@ -13987,17 +13998,6 @@
           "line_end": "3",
           "text_start": "Er",
           "refstring_text": "Er … Herrlichkeit]"
-        },
-        "CV166-V-2-49-50-gehor­sam-Kreuz": {
-          "note_content": "Vgl. oben <span data-ref='#w59158s #w59168'>CV166,V,2,43</span>.",
-          "doc_unit": "CV166-V-2",
-          "refstring_lines": "49 – 50 ",
-          "document": "CV166",
-          "text_end": "Kreuz",
-          "line_start": "49",
-          "line_end": "50",
-          "text_start": "gehor­sam",
-          "refstring_text": "gehor­sam … Kreuz]"
         },
         "CV166-V-2-128--der-befestigt": {
           "note_content": "Vgl. Ps 32(33),6.",
@@ -14254,17 +14254,6 @@
           "text_start": "die‌¹",
           "refstring_text": "die‌¹ … sind‌²]"
         },
-        "CV166-V-1-125-127-Da-Chris­tus": {
-          "note_content": "Röm 5,1.",
-          "doc_unit": "CV166-V-1",
-          "refstring_lines": "125 – 127 ",
-          "document": "CV166",
-          "text_end": "Chris­tus",
-          "line_start": "125",
-          "line_end": "127",
-          "text_start": "Da",
-          "refstring_text": "Da … Chris­tus]"
-        },
         "CV166-V-1-147-148-jede-benannt": {
           "note_content": "Vgl. Eph 3,15.",
           "doc_unit": "CV166-V-1",
@@ -14331,6 +14320,17 @@
           "text_start": "Obwohl",
           "refstring_text": "Obwohl … worden]"
         },
+        "CV166-V-1-101-102-Verherrliche-hatte": {
+          "note_content": "Vgl. oben <span data-ref='#w57422s #w57442'>CV166,V,1,87 – 88</span>.",
+          "doc_unit": "CV166-V-1",
+          "refstring_lines": "101 – 102 ",
+          "document": "CV166",
+          "text_end": "hatte",
+          "line_start": "101",
+          "line_end": "102",
+          "text_start": "Ver­herrliche",
+          "refstring_text": "Ver­herrliche … hatte]"
+        },
         "CV166-V-1-64-65-Ich-mich": {
           "note_content": "Joh 14,6.",
           "doc_unit": "CV166-V-1",
@@ -14363,17 +14363,6 @@
           "line_end": "166",
           "text_start": "durch",
           "refstring_text": "durch … kostete]"
-        },
-        "CV166-V-1-101-102-Ver­herrliche-hatte": {
-          "note_content": "Vgl. oben <span data-ref='#w57422s #w57442'>CV166,V,1,87 – 88</span>.",
-          "doc_unit": "CV166-V-1",
-          "refstring_lines": "101 – 102 ",
-          "document": "CV166",
-          "text_end": "hatte",
-          "line_start": "101",
-          "line_end": "102",
-          "text_start": "Ver­herrliche",
-          "refstring_text": "Ver­herrliche … hatte]"
         },
         "CV166-V-1-62--im-gelitten": {
           "note_content": "Vgl. 1 Petr 4,1.",
@@ -14440,6 +14429,17 @@
           "line_end": "116",
           "text_start": "Er",
           "refstring_text": "Er … hat]"
+        },
+        "CV166-V-1-125-127-Da-Christus": {
+          "note_content": "Röm 5,1.",
+          "doc_unit": "CV166-V-1",
+          "refstring_lines": "125 – 127 ",
+          "document": "CV166",
+          "text_end": "Chris­tus",
+          "line_start": "125",
+          "line_end": "127",
+          "text_start": "Da",
+          "refstring_text": "Da … Chris­tus]"
         },
         "CV166-V-1-69--als-Natur": {
           "note_content": "Vgl. 2 Petr 1,4; s. auch oben <span data-ref='#w12129s #w12132'>CV166,I,8,96 – 97</span>; <span data-ref='#w27589s #w27592'>CV166,II,13,61</span>; <span data-ref='#w28383s #w28387'>CV166,III,Praef.,23</span>; <span data-ref='#w33356s #w33361'>CV166,III,2,106</span>.",
@@ -14652,6 +14652,17 @@
           "text_start": "Ich",
           "refstring_text": "Ich … ein]"
         },
+        "CV166-V-4-19-20-Schatten-Wandels": {
+          "note_content": "Vgl. Jak 1,17.",
+          "doc_unit": "CV166-V-4",
+          "refstring_lines": "19 – 20 ",
+          "document": "CV166",
+          "text_end": "Wandels",
+          "line_start": "19",
+          "line_end": "20",
+          "text_start": "Schat­ten",
+          "refstring_text": "Schat­ten … Wandels]"
+        },
         "CV166-V-4-53-55-sich-zeigt": {
           "note_content": "Vgl. Phil 2,6f.",
           "doc_unit": "CV166-V-4",
@@ -14696,17 +14707,6 @@
           "text_start": "die",
           "refstring_text": "die … annahm]"
         },
-        "CV166-V-4-19-20-Schat­ten-Wandels": {
-          "note_content": "Vgl. Jak 1,17.",
-          "doc_unit": "CV166-V-4",
-          "refstring_lines": "19 – 20 ",
-          "document": "CV166",
-          "text_end": "Wandels",
-          "line_start": "19",
-          "line_end": "20",
-          "text_start": "Schat­ten",
-          "refstring_text": "Schat­ten … Wandels]"
-        },
         "CV166-V-4-21--und-hat": {
           "note_content": "Vgl. Hebr 2,14.",
           "doc_unit": "CV166-V-4",
@@ -14720,17 +14720,6 @@
         }
       },
       "V-3": {
-        "CV166-V-3-65-66-Ab­bild-": {
-          "note_content": "Vgl. Kol 1,15.",
-          "doc_unit": "CV166-V-3",
-          "refstring_lines": "65 – 66 ",
-          "document": "CV166",
-          "text_end": "Ab­bild",
-          "line_start": "65",
-          "line_end": "66",
-          "text_start": "Ab­bild",
-          "refstring_text": "Ab­bild]"
-        },
         "CV166-V-3-77-78-Denn-geworden": {
           "note_content": "2 Kor 5,17.",
           "doc_unit": "CV166-V-3",
@@ -14775,7 +14764,7 @@
           "text_start": "Denn",
           "refstring_text": "Denn … auferwecke]"
         },
-        "CV166-V-3-24-25-Denn-gekreu­zigt": {
+        "CV166-V-3-24-25-Denn-gekreuzigt": {
           "note_content": "1 Kor 2,8; vgl. auch oben <span data-ref='#w58627s #w58639'>CV166,V,2,1 – 2</span>.",
           "doc_unit": "CV166-V-3",
           "refstring_lines": "24 – 25 ",
@@ -14785,6 +14774,17 @@
           "line_end": "25",
           "text_start": "Denn",
           "refstring_text": "Denn … gekreu­zigt]"
+        },
+        "CV166-V-3-1-5-Denn-zukommen": {
+          "note_content": "Vgl. Loofs, Nestoriana S.&nbsp;358,1–5.",
+          "doc_unit": "CV166-V-3",
+          "refstring_lines": "1 – 5 ",
+          "document": "CV166",
+          "text_end": "zu­kommen",
+          "line_start": "1",
+          "line_end": "5",
+          "text_start": "Denn",
+          "refstring_text": "Denn … zu­kommen]"
         },
         "CV166-V-3-20--aus-gekreuzigt": {
           "note_content": "Vgl. oben <span data-ref='#w58753s #w58768'>CV166,V,2,11 – 12</span> u. <span data-ref='#w60067s #w60080'>CV166,V,2,111 – 112</span>.",
@@ -14818,17 +14818,6 @@
           "line_end": "31",
           "text_start": "Wenn",
           "refstring_text": "Wenn … ziehen]"
-        },
-        "CV166-V-3-1-5-Denn-zu­kommen": {
-          "note_content": "Vgl. Loofs, Nestoriana S.&nbsp;358,1–5.",
-          "doc_unit": "CV166-V-3",
-          "refstring_lines": "1 – 5 ",
-          "document": "CV166",
-          "text_end": "zu­kommen",
-          "line_start": "1",
-          "line_end": "5",
-          "text_start": "Denn",
-          "refstring_text": "Denn … zu­kommen]"
         },
         "CV166-V-3-32-33-Schließlich-Vaters": {
           "note_content": "Vgl. Phil 2,10f.; vgl. oben <span data-ref='#w54043s #w54065'>CV166,IV,6,104 – 106</span>.",
@@ -14873,6 +14862,17 @@
           "line_end": "18",
           "text_start": "im Hinblick",
           "refstring_text": "im Hinblick]"
+        },
+        "CV166-V-3-65-66-Abbild-": {
+          "note_content": "Vgl. Kol 1,15.",
+          "doc_unit": "CV166-V-3",
+          "refstring_lines": "65 – 66 ",
+          "document": "CV166",
+          "text_end": "Ab­bild",
+          "line_start": "65",
+          "line_end": "66",
+          "text_start": "Ab­bild",
+          "refstring_text": "Ab­bild]"
         },
         "CV166-V-3-49--Der-schwach": {
           "note_content": "Mt 26,41.",
@@ -15263,17 +15263,6 @@
         }
       },
       "V-5": {
-        "CV166-V-5-14-16-Meinen-Be­spuckung": {
-          "note_content": "Jes 50,6; vgl. oben <span data-ref='#w40167s #w40183'>CV166,III,4,89 – 90</span>.",
-          "doc_unit": "CV166-V-5",
-          "refstring_lines": "14 – 16 ",
-          "document": "CV166",
-          "text_end": "Be­spuckung",
-          "line_start": "14",
-          "line_end": "16",
-          "text_start": "Meinen",
-          "refstring_text": "Meinen … Be­spuckung]"
-        },
         "CV166-V-5-63--das‌2-Schwert": {
           "note_content": "Vgl. Gen 3,24.",
           "doc_unit": "CV166-V-5",
@@ -15318,17 +15307,6 @@
           "text_start": "So",
           "refstring_text": "So … verehren]"
         },
-        "CV166-V-5-69-72-Bist-er­blickten": {
-          "note_content": "Ijob 38,16f.",
-          "doc_unit": "CV166-V-5",
-          "refstring_lines": "69 – 72 ",
-          "document": "CV166",
-          "text_end": "er­blickten",
-          "line_start": "69",
-          "line_end": "72",
-          "text_start": "Bist",
-          "refstring_text": "Bist … er­blickten]"
-        },
         "CV166-V-5-6-8-Der-hatte": {
           "note_content": "Vgl. z.B. oben <span data-ref='#w13631s #w13669'>CV166,II,Praef.,34 – 37</span>; <span data-ref='#w35082s #w35118'>CV166,III,3,12 – 15</span>; <span data-ref='#w51406s #w51435'>CV166,IV,5,64 – 66</span>.",
           "doc_unit": "CV166-V-5",
@@ -15350,6 +15328,17 @@
           "line_end": "9",
           "text_start": "nahm",
           "refstring_text": "nahm … verachtete]"
+        },
+        "CV166-V-5-14-16-Meinen-Bespuckung": {
+          "note_content": "Jes 50,6; vgl. oben <span data-ref='#w40167s #w40183'>CV166,III,4,89 – 90</span>.",
+          "doc_unit": "CV166-V-5",
+          "refstring_lines": "14 – 16 ",
+          "document": "CV166",
+          "text_end": "Be­spuckung",
+          "line_start": "14",
+          "line_end": "16",
+          "text_start": "Meinen",
+          "refstring_text": "Meinen … Be­spuckung]"
         },
         "CV166-V-5-16-18-Dadurch-hat": {
           "note_content": "Jes 50,7f.",
@@ -15439,6 +15428,17 @@
           "text_start": "Abbild",
           "refstring_text": "Abbild … ist]"
         },
+        "CV166-V-5-78-88-Indem-einnimmt": {
+          "note_content": "Kol 1,12–18.",
+          "doc_unit": "CV166-V-5",
+          "refstring_lines": "78 – 88 ",
+          "document": "CV166",
+          "text_end": "einnimmt",
+          "line_start": "78",
+          "line_end": "88",
+          "text_start": "In­dem",
+          "refstring_text": "In­dem … einnimmt]"
+        },
         "CV166-V-5-2--Mein-verlassen": {
           "note_content": "Mt 27,46.",
           "doc_unit": "CV166-V-5",
@@ -15450,6 +15450,17 @@
           "text_start": "Mein",
           "refstring_text": "Mein … verlassen]"
         },
+        "CV166-V-5-36-39-Dieser-verlassen": {
+          "note_content": "Vgl. oben <span data-ref='#w62616s #w62637'>CV166,V,5,1 – 2</span>.",
+          "doc_unit": "CV166-V-5",
+          "refstring_lines": "36 – 39 ",
+          "document": "CV166",
+          "text_end": "ver­lassen",
+          "line_start": "36",
+          "line_end": "39",
+          "text_start": "Dieser",
+          "refstring_text": "Dieser … ver­lassen]"
+        },
         "CV166-V-5-39-40-aber-ließ": {
           "note_content": "Vgl. Mk 15,33 parr.",
           "doc_unit": "CV166-V-5",
@@ -15460,6 +15471,17 @@
           "line_end": "40",
           "text_start": "aber",
           "refstring_text": "aber … ließ]"
+        },
+        "CV166-V-5-69-72-Bist-erblickten": {
+          "note_content": "Ijob 38,16f.",
+          "doc_unit": "CV166-V-5",
+          "refstring_lines": "69 – 72 ",
+          "document": "CV166",
+          "text_end": "er­blickten",
+          "line_start": "69",
+          "line_end": "72",
+          "text_start": "Bist",
+          "refstring_text": "Bist … er­blickten]"
         },
         "CV166-V-5-44-45-Ich-machen": {
           "note_content": "Jes 50,3.",
@@ -15516,17 +15538,6 @@
           "text_start": "als",
           "refstring_text": "als … hätte‌²]"
         },
-        "CV166-V-5-78-88-In­dem-einnimmt": {
-          "note_content": "Kol 1,12–18.",
-          "doc_unit": "CV166-V-5",
-          "refstring_lines": "78 – 88 ",
-          "document": "CV166",
-          "text_end": "einnimmt",
-          "line_start": "78",
-          "line_end": "88",
-          "text_start": "In­dem",
-          "refstring_text": "In­dem … einnimmt]"
-        },
         "CV166-V-5-1-3-Dieser‌2-hat": {
           "note_content": "Ebenfalls zit. in CV60,XIV, ACO 1,1,2 S.&nbsp;49,7f.",
           "doc_unit": "CV166-V-5",
@@ -15570,17 +15581,6 @@
           "line_end": "31",
           "text_start": "Er",
           "refstring_text": "Er … eingesetzt]"
-        },
-        "CV166-V-5-36-39-Dieser-ver­lassen": {
-          "note_content": "Vgl. oben <span data-ref='#w62616s #w62637'>CV166,V,5,1 – 2</span>.",
-          "doc_unit": "CV166-V-5",
-          "refstring_lines": "36 – 39 ",
-          "document": "CV166",
-          "text_end": "ver­lassen",
-          "line_start": "36",
-          "line_end": "39",
-          "text_start": "Dieser",
-          "refstring_text": "Dieser … ver­lassen]"
         },
         "CV166-V-5-45--jener-zugegen": {
           "note_content": "Jes 52,6.",
@@ -15779,6 +15779,17 @@
         }
       },
       "4": {
+        "CV144-4-21-22-diese-verkünden": {
+          "note_content": "Vgl. oben <span data-ref='#w836s #w840'>CV144,3,13 – 14</span>.",
+          "doc_unit": "CV144-4",
+          "refstring_lines": "21 – 22 ",
+          "document": "CV144",
+          "text_end": "ver­künden",
+          "line_start": "21",
+          "line_end": "22",
+          "text_start": "diese",
+          "refstring_text": "diese … ver­künden]"
+        },
         "CV144-4-20--Doch-nichts": {
           "note_content": "Vgl. oben <span data-ref='#w582s #w586'>CV144,2,14 – 15</span>.",
           "doc_unit": "CV144-4",
@@ -15800,17 +15811,6 @@
           "line_end": "21",
           "text_start": "und",
           "refstring_text": "und … auf]"
-        },
-        "CV144-4-21-22-diese-ver­künden": {
-          "note_content": "Vgl. oben <span data-ref='#w836s #w840'>CV144,3,13 – 14</span>.",
-          "doc_unit": "CV144-4",
-          "refstring_lines": "21 – 22 ",
-          "document": "CV144",
-          "text_end": "ver­künden",
-          "line_start": "21",
-          "line_end": "22",
-          "text_start": "diese",
-          "refstring_text": "diese … ver­künden]"
         },
         "CV144-4-4-7-schrieb-gab": {
           "note_content": "Gemeint ist der Brief an die ägyptischen Mönche (CV1 [Dok. 5]). Bemerkenswerterweise erwähnt Kyrill diesen Brief und die Umstände seiner Entstehung, nachdem er bereits von seinem ersten Brief an Nestorius (CV2 [Dok. 18]) berichtet hatte (vgl. oben <span data-ref='#w569s #w581'>CV144,2,13 – 14</span>), und lässt darauf dann die Erwähnung des zweiten Briefes an seinen Opponenten (CV4 [Dok. 23]) folgen (vgl. unten <span data-ref='#w1054s #w1072'>CV144,4,17 – 19</span>). Fasst man seinen Brief an Coelestin als chronologischen Bericht auf, gibt er den Ablauf der Ereignisse hier nicht korrekt wieder. Vgl. hierzu auch Schwartz (1914b), S. 255 Anm. 1.",
@@ -15915,6 +15915,17 @@
         }
       },
       "6": {
+        "CV144-6-17-23-Damit-zuzuführen": {
+          "note_content": "Vgl. Anm. zu <span data-ref='28_CU4_dg.xml#r-AWyFsUID 28_CU4_dg.xml#r-AWyFsUID-e'>CU4,47 – 48</span> (Dok. 28).",
+          "doc_unit": "CV144-6",
+          "refstring_lines": "17 – 23 ",
+          "document": "CV144",
+          "text_end": "zuzu­führen",
+          "line_start": "17",
+          "line_end": "23",
+          "text_start": "Damit",
+          "refstring_text": "Damit … zuzu­führen]"
+        },
         "CV144-6-21--die-Briefe": {
           "note_content": "Vgl. oben <span data-ref='#w569s #w574'>CV144,2,13 – 14</span>",
           "doc_unit": "CV144-6",
@@ -15958,17 +15969,6 @@
           "line_end": "8",
           "text_start": "und‌¹",
           "refstring_text": "und‌¹ … weilen]"
-        },
-        "CV144-6-17-23-Damit-zuzu­führen": {
-          "note_content": "Vgl. Anm. zu <span data-ref='28_CU4_dg.xml#r-AWyFsUID 28_CU4_dg.xml#r-AWyFsUID-e'>CU4,47 – 48</span> (Dok. 28).",
-          "doc_unit": "CV144-6",
-          "refstring_lines": "17 – 23 ",
-          "document": "CV144",
-          "text_end": "zuzu­führen",
-          "line_start": "17",
-          "line_end": "23",
-          "text_start": "Damit",
-          "refstring_text": "Damit … zuzu­führen]"
         },
         "CV144-6-15-16-den-zuhörte": {
           "note_content": "Vgl. oben <span data-ref='#w677s #w733'>CV144,3,1 – 5</span>.",
@@ -16077,7 +16077,7 @@
           "refstring_text": "die … leisteten]"
         } },
       "7": {
-        "CVer1-7-12-13-Johan­nes-": {
+        "CVer1-7-12-13-Johannes-": {
           "note_content": "D.h. Jo­han­nes von Antiochia.",
           "doc_unit": "CVer1-7",
           "refstring_lines": "12 – 13 ",
@@ -16817,7 +16817,7 @@
       }
     },
     "CVer2": {
-      "11": { "CVer2-11-2-5-Ich-brin­gen":{
+      "11": { "CVer2-11-2-5-Ich-bringen":{
           "note_content": "Apg 20,29f.",
           "doc_unit": "CVer2-11",
           "refstring_lines": "2 – 5 ",
@@ -17105,17 +17105,6 @@
         }
       },
       "1": {
-        "CVer2-1-9-10-Kö­nigs-": {
-          "note_content": "D.h. Christus.",
-          "doc_unit": "CVer2-1",
-          "refstring_lines": "9 – 10 ",
-          "document": "CVer2",
-          "text_end": "Kö­nigs",
-          "line_start": "9",
-          "line_end": "10",
-          "text_start": "Kö­nigs",
-          "refstring_text": "Kö­nigs]"
-        },
         "CVer2-1-7-11-Zuletzt-wurde": {
           "note_content": "Zu der im Jahr 425 erfolgten Vertreibung der Pelagianer aus Konstantinopel äußert sich auch Marius Mercator in <span data-ref='17_CPal36_dg.xml#r-AWyHAQNB 17_CPal36_dg.xml#r-AWyHAQNB-e'>CPal36,44 – 50</span>, ACO I,5 S.&nbsp;66,24–28 (Dok. 17). Vgl. außerdem Wermelinger (1975, S.&nbsp;137f. mit Anm. 15 u. S.&nbsp;253) sowie Lössl (2001, S.&nbsp;294f. mit Anm. 249).",
           "doc_unit": "CVer2-1",
@@ -17126,6 +17115,17 @@
           "line_end": "11",
           "text_start": "Zuletzt",
           "refstring_text": "Zuletzt … wurde]"
+        },
+        "CVer2-1-9-10-Königs-": {
+          "note_content": "D.h. Christus.",
+          "doc_unit": "CVer2-1",
+          "refstring_lines": "9 – 10 ",
+          "document": "CVer2",
+          "text_end": "Kö­nigs",
+          "line_start": "9",
+          "line_end": "10",
+          "text_start": "Kö­nigs",
+          "refstring_text": "Kö­nigs]"
         },
         "CVer2-1-15--Sisinnius-": {
           "note_content": "D.h. Sisinnius I., Erzbischof von Konstantinopel (sed. 426–427).",
@@ -17193,7 +17193,7 @@
           "text_start": "Wenn",
           "refstring_text": "Wenn … verflucht]"
         },
-        "CVer2-1-8--At­ti­kos-": {
+        "CVer2-1-8--Attikos-": {
           "note_content": "Erzbischof von Konstantinopel (sed. 406–425).",
           "doc_unit": "CVer2-1",
           "refstring_lines": "8",
@@ -17342,6 +17342,17 @@
           "text_start": "Timotheus",
           "refstring_text": "Timotheus]"
         },
+        "CVer2-5-17-18-Schreckliches-Unrecht": {
+          "note_content": "Jer 5,30f., vgl. Jer 6,13. 14,14. 23,11.",
+          "doc_unit": "CVer2-5",
+          "refstring_lines": "17 – 18 ",
+          "document": "CVer2",
+          "text_end": "Un­recht",
+          "line_start": "17",
+          "line_end": "18",
+          "text_start": "Schreckliches",
+          "refstring_text": "Schreckliches … Un­recht]"
+        },
         "CVer2-5-4--jenem-Heiden": {
           "note_content": "D.h. Paulus; vgl. 1 Tim 2,7; Gal 1,16.",
           "doc_unit": "CVer2-5",
@@ -17418,17 +17429,6 @@
           "line_end": "11",
           "text_start": "Titus",
           "refstring_text": "Titus]"
-        },
-        "CVer2-5-17-18-Schreckliches-Un­recht": {
-          "note_content": "Jer 5,30f., vgl. Jer 6,13. 14,14. 23,11.",
-          "doc_unit": "CVer2-5",
-          "refstring_lines": "17 – 18 ",
-          "document": "CVer2",
-          "text_end": "Un­recht",
-          "line_start": "17",
-          "line_end": "18",
-          "text_start": "Schreckliches",
-          "refstring_text": "Schreckliches … Un­recht]"
         }
       },
       "6": { "CVer2-6-6-9-wenn-hat":{
@@ -17500,6 +17500,17 @@
         }
       },
       "8": {
+        "CVer2-8-5-6-dem-Glaubensbekenntnis": {
+          "note_content": "D.h. das römische Glaubensbekenntnis, s. hierzu W. Kinzig (2017), §§253–255. Der Zusatz <em>ab apostolis tradito</em> fehlt bezeichnenderweise in der griechischen Übersetzung des Textes, wo es lediglich <span data-lang='greek'>ἀπὸ τοῦ συμβόλου</span> heißt (s. CV10, ACO I,1,1 S.&nbsp;79,31).",
+          "doc_unit": "CVer2-8",
+          "refstring_lines": "5 – 6 ",
+          "document": "CVer2",
+          "text_end": "Glau­bensbekenntnis",
+          "line_start": "5",
+          "line_end": "6",
+          "text_start": "dem",
+          "refstring_text": "dem … Glau­bensbekenntnis]"
+        },
         "CVer2-8-5-7-betrauern-versprechen": {
           "note_content": "Mit Vogt (1975, S.&nbsp;92 u. 97–101), ist wohl davon auszugehen, dass Nestorius hier nicht tatsächlich einen Teil des apostolischen Glaubensbekenntnisses geleugnet hat. Vogt verweist in diesem Kontext auch auf eine Äußerung des Nestorius, die wiederholt von Johannes Cassian aus ihrem Zusammenhang gerissen auf- und angegriffen wurde: „Wollten wir sagen: Ich glaube an das Gottwort, den einzigen Sohn Gottes, der aus dem Vater geboren und dem Vater wesensgleich ist, der herabstieg und begraben wurde, wird dann nicht sofort unser Gehör selbst verletzt?“ (S. 98). Während Cassian diesen Satz nach Vogt als Abkehr des Nestorius von zentralen Aussagen des Glaubensbekenntnisses deutet, dürfte es Nestorius wohl nur um das Fehlen des Namens Jesus Christus gegangen sein, durch den Geburt und Tod nicht der Gottheit, sondern der Menschheit Christi zugeordnet würden.",
           "doc_unit": "CVer2-8",
@@ -17510,17 +17521,6 @@
           "line_end": "7",
           "text_start": "betrauern",
           "refstring_text": "betrauern … versprechen]"
-        },
-        "CVer2-8-5-6-dem-Glau­bensbekenntnis": {
-          "note_content": "D.h. das römische Glaubensbekenntnis, s. hierzu W. Kinzig (2017), §§253–255. Der Zusatz <em>ab apostolis tradito</em> fehlt bezeichnenderweise in der griechischen Übersetzung des Textes, wo es lediglich <span data-lang='greek'>ἀπὸ τοῦ συμβόλου</span> heißt (s. CV10, ACO I,1,1 S.&nbsp;79,31).",
-          "doc_unit": "CVer2-8",
-          "refstring_lines": "5 – 6 ",
-          "document": "CVer2",
-          "text_end": "Glau­bensbekenntnis",
-          "line_start": "5",
-          "line_end": "6",
-          "text_start": "dem",
-          "refstring_text": "dem … Glau­bensbekenntnis]"
         },
         "CVer2-8-15-17-dass-nichtig": {
           "note_content": "Tit 3,9, vgl. 1 Tim 1,4; 2 Tim 2,14.",
@@ -18080,7 +18080,7 @@
           "text_start": "Poseidonios",
           "refstring_text": "Poseidonios]"
         },
-        "CVer6-5-2-3-be­kleidet-Lehre": {
+        "CVer6-5-2-3-bekleidet-Lehre": {
           "note_content": "Vgl. Eph 6,16.",
           "doc_unit": "CVer6-5",
           "refstring_lines": "2 – 3 ",
@@ -18094,6 +18094,17 @@
       }
     },
     "CPal34": { "text":{
+        "CPal34-61-62-behauptet...Katechumenen-": {
+          "note_content": "Der Text scheint an dieser Stelle verderbt zu sein. Loofs (Nestoriana S.&nbsp;349f.) schließt eine Lücke vor melior nicht aus.",
+          "doc_unit": "CPal34",
+          "refstring_lines": "61 – 62 ",
+          "document": "CPal34",
+          "text_end": "behauptet... Ka­te­chu­me­nen",
+          "line_start": "61",
+          "line_end": "62",
+          "text_start": "behauptet... Ka­te­chu­me­nen",
+          "refstring_text": "behauptet... Ka­te­chu­me­nen]"
+        },
         "CPal34-31--die-sind": {
           "note_content": "Es ist nicht ganz klar, wie die Worte <em>qui contempti sunt</em> zu verstehen sind. Wahrscheinlich handelt es sich um eine Anspielung auf Jer 2,8, wo der Herr den Propheten vorwirft, sie hingen wirkungslosen Götzen an. Denkbar ist aber auch, dass hier auf Mk 6,4 oder Joh 4,44 angespielt wird, wo es jeweils heißt, dass Propheten besonders in ihrem näheren Umfeld geringgeschätzt werden. In diesem Fall müsste die Übersetzung lauten: die verachtet werden.",
           "doc_unit": "CPal34",
@@ -18105,17 +18116,6 @@
           "text_start": "die",
           "refstring_text": "die … sind]"
         },
-        "CPal34-61-62-behauptet...Ka­te­chu­me­nen-": {
-          "note_content": "Der Text scheint an dieser Stelle verderbt zu sein. Loofs (Nestoriana S.&nbsp;349f.) schließt eine Lücke vor melior nicht aus.",
-          "doc_unit": "CPal34",
-          "refstring_lines": "61 – 62 ",
-          "document": "CPal34",
-          "text_end": "behauptet... Ka­te­chu­me­nen",
-          "line_start": "61",
-          "line_end": "62",
-          "text_start": "behauptet... Ka­te­chu­me­nen",
-          "refstring_text": "behauptet... Ka­te­chu­me­nen]"
-        },
         "CPal34-5-8-brachte-ausgoss": {
           "note_content": "Vgl. Gen 2,19f.",
           "doc_unit": "CPal34",
@@ -18126,6 +18126,17 @@
           "line_end": "8",
           "text_start": "brachte",
           "refstring_text": "brachte … ausgoss]"
+        },
+        "CPal34-18--Unterredung-": {
+          "note_content": "Im Lateinischen tautologisch ausgedrückt durch sermone [...] mutuo.",
+          "doc_unit": "CPal34",
+          "refstring_lines": "18",
+          "document": "CPal34",
+          "text_end": "Unter­re­dung",
+          "line_start": "18",
+          "line_end": "18",
+          "text_start": "Unter­re­dung",
+          "refstring_text": "Unter­re­dung]"
         },
         "CPal34-71-72-Denn-Christus": {
           "note_content": "Eph 2,",
@@ -18237,7 +18248,7 @@
           "text_start": "Sie",
           "refstring_text": "Sie … wiedergeboren]"
         },
-        "CPal34-56-57-fernste­hender-dessen": {
+        "CPal34-56-57-fernstehender-dessen": {
           "note_content": "<span data-ref-id='r-AWxxfwjO'/><span data-ref-id='r-AWxxfwjO-e'/>Der Genitiv <em>eius</em> bei <em>alienus</em> ist ein Gräzismus<em>.</em> Zu den Gräzismen im Werk des Marius Mercator vgl. Anm. zu <span data-ref='17_CPal36_dg.xml#r-AWxxepKA 17_CPal36_dg.xml#r-AWxxepKA-e'>CPal36,2</span> (Dok. 17).",
           "doc_unit": "CPal34",
           "refstring_lines": "56 – 57 ",
@@ -18314,17 +18325,6 @@
           "text_start": "das‌¹",
           "refstring_text": "das‌¹ … wäre]"
         },
-        "CPal34-18--Unter­re­dung-": {
-          "note_content": "Im Lateinischen tautologisch ausgedrückt durch sermone [...] mutuo.",
-          "doc_unit": "CPal34",
-          "refstring_lines": "18",
-          "document": "CPal34",
-          "text_end": "Unter­re­dung",
-          "line_start": "18",
-          "line_end": "18",
-          "text_start": "Unter­re­dung",
-          "refstring_text": "Unter­re­dung]"
-        },
         "CPal34-62-63-Jene-Kirchen": {
           "note_content": "Weil sie an der Eucharistie noch nicht teilnehmen dürfen.",
           "doc_unit": "CPal34",
@@ -18361,7 +18361,7 @@
           "text_start": "Dies",
           "refstring_text": "Dies … anbetest]"
         },
-        "CPal33-1-3-4-voran­gehendeLehrer-": {
+        "CPal33-1-3-4-vorangehendeLehrer-": {
           "note_content": "Die Worte erwecken den Eindruck, es sei durchaus üblich gewesen, dass mehrere Predigten hinter­einan­der gehalten wurden. Auch in der Predigt des Nestorius gegen Proklos (<span data-ref='04_CPal22_dg.xml#r-AWxxeSag 04_CPal22_dg.xml#r-AWxxeSag-e'>CPal22,28 – 29</span>, ACO I,5 S.&nbsp;38,10 [Dok. 4]) heißt es in Bezug auf Proklos: <em>praecedentis magistri</em>. In dem vorliegenden <em>sermo</em> lässt sich jedoch die Identität des vorangehenden Lehrers nicht ermitteln.",
           "doc_unit": "CPal33-1",
           "refstring_lines": "3 – 4 ",
@@ -18534,6 +18534,17 @@
           "text_start": "Und",
           "refstring_text": "Und … ihm]"
         },
+        "CPal33-6-3--emporspringen-": {
+          "note_content": "exsiliamus als Übersetzung von ἀρέσωμεν ist nach Loofs (Nestoriana S.&nbsp;346,14) wohl „kor­rupt oder Übersetzung eines korrupten Textes“. Jedenfalls ergibt ἀρέσωμεν οὐρανοῖς einen bes­se­ren Sinn als exsiliamus in caelum",
+          "doc_unit": "CPal33-6",
+          "refstring_lines": "3",
+          "document": "CPal33",
+          "text_end": "empor­sprin­gen",
+          "line_start": "3",
+          "line_end": "3",
+          "text_start": "empor­sprin­gen",
+          "refstring_text": "empor­sprin­gen]"
+        },
         "CPal33-6-1-7-Und-hat": {
           "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;346,12–17.",
           "doc_unit": "CPal33-6",
@@ -18544,32 +18555,10 @@
           "line_end": "7",
           "text_start": "Und",
           "refstring_text": "Und … hat]"
-        },
-        "CPal33-6-3--empor­sprin­gen-": {
-          "note_content": "exsiliamus als Übersetzung von ἀρέσωμεν ist nach Loofs (Nestoriana S.&nbsp;346,14) wohl „kor­rupt oder Übersetzung eines korrupten Textes“. Jedenfalls ergibt ἀρέσωμεν οὐρανοῖς einen bes­se­ren Sinn als exsiliamus in caelum",
-          "doc_unit": "CPal33-6",
-          "refstring_lines": "3",
-          "document": "CPal33",
-          "text_end": "empor­sprin­gen",
-          "line_start": "3",
-          "line_end": "3",
-          "text_start": "empor­sprin­gen",
-          "refstring_text": "empor­sprin­gen]"
         }
       }
     },
     "CPal36": { "text":{
-        "CPal36-42-44-eilte...an­zu­stre­ben-": {
-          "note_content": "Vgl. hierzu Lössl (2001), S.&nbsp;253.",
-          "doc_unit": "CPal36",
-          "refstring_lines": "42 – 44 ",
-          "document": "CPal36",
-          "text_end": "eilte... an­zu­stre­ben",
-          "line_start": "42",
-          "line_end": "44",
-          "text_start": "eilte... an­zu­stre­ben",
-          "refstring_text": "eilte... an­zu­stre­ben]"
-        },
         "CPal36-84-85-Wie-übergegangen": {
           "note_content": "Röm 5,12.",
           "doc_unit": "CPal36",
@@ -18690,6 +18679,17 @@
           "line_end": "33",
           "text_start": "sündenfrei",
           "refstring_text": "sündenfrei]"
+        },
+        "CPal36-190-194-Aber-vertrieben": {
+          "note_content": "Zu dieser Synode vgl. Wermelinger (1975), S.&nbsp;251f. Wann genau sie stattgefunden hat, ist unklar.",
+          "doc_unit": "CPal36",
+          "refstring_lines": "190 – 194 ",
+          "document": "CPal36",
+          "text_end": "ver­trieben",
+          "line_start": "190",
+          "line_end": "194",
+          "text_start": "Aber",
+          "refstring_text": "Aber … ver­trieben]"
         },
         "CPal36-33-34-dass-seien": {
           "note_content": "Vgl. Aug. <em>De gest. Pelag.</em> XI,23, Urba/Zycha (1902), S.&nbsp;76,20f.",
@@ -18988,6 +18988,17 @@
           "text_start": "Julian",
           "refstring_text": "Julian]"
         },
+        "CPal36-25-26-dass-Geschlecht": {
+          "note_content": "Vgl. Aug. <em>De gest. Pelag.</em> XI,23, Urba/Zycha (1902), S.&nbsp;76,18f.; Aug. <em>De pecc. orig.</em> III,3, Urba/Zycha (1902), S.&nbsp;168,7f.",
+          "doc_unit": "CPal36",
+          "refstring_lines": "25 – 26 ",
+          "document": "CPal36",
+          "text_end": "Ge­schlecht",
+          "line_start": "25",
+          "line_end": "26",
+          "text_start": "dass",
+          "refstring_text": "dass … Ge­schlecht]"
+        },
         "CPal36-108-109-diejenigen-hatten": {
           "note_content": "Vgl. Gen 3,1–6.",
           "doc_unit": "CPal36",
@@ -19065,6 +19076,17 @@
           "text_start": "von",
           "refstring_text": "von … abirre]"
         },
+        "CPal36-42-44-eilte...anzustreben-": {
+          "note_content": "Vgl. hierzu Lössl (2001), S.&nbsp;253.",
+          "doc_unit": "CPal36",
+          "refstring_lines": "42 – 44 ",
+          "document": "CPal36",
+          "text_end": "eilte... an­zu­stre­ben",
+          "line_start": "42",
+          "line_end": "44",
+          "text_start": "eilte... an­zu­stre­ben",
+          "refstring_text": "eilte... an­zu­stre­ben]"
+        },
         "CPal36-238-240-Christus-Mensch": {
           "note_content": "Gal 3,13.",
           "doc_unit": "CPal36",
@@ -19130,17 +19152,6 @@
           "line_end": "104",
           "text_start": "Herr",
           "refstring_text": "Herr … alle]"
-        },
-        "CPal36-25-26-dass-Ge­schlecht": {
-          "note_content": "Vgl. Aug. <em>De gest. Pelag.</em> XI,23, Urba/Zycha (1902), S.&nbsp;76,18f.; Aug. <em>De pecc. orig.</em> III,3, Urba/Zycha (1902), S.&nbsp;168,7f.",
-          "doc_unit": "CPal36",
-          "refstring_lines": "25 – 26 ",
-          "document": "CPal36",
-          "text_end": "Ge­schlecht",
-          "line_start": "25",
-          "line_end": "26",
-          "text_start": "dass",
-          "refstring_text": "dass … Ge­schlecht]"
         },
         "CPal36-161--Vätern-": {
           "note_content": "D.h. den Bischöfen, welche die <em>Tractoria</em> unterzeichneten.",
@@ -19350,17 +19361,6 @@
           "line_end": "83",
           "text_start": "das",
           "refstring_text": "das … Gefäß]"
-        },
-        "CPal36-190-194-Aber-ver­trieben": {
-          "note_content": "Zu dieser Synode vgl. Wermelinger (1975), S.&nbsp;251f. Wann genau sie stattgefunden hat, ist unklar.",
-          "doc_unit": "CPal36",
-          "refstring_lines": "190 – 194 ",
-          "document": "CPal36",
-          "text_end": "ver­trieben",
-          "line_start": "190",
-          "line_end": "194",
-          "text_start": "Aber",
-          "refstring_text": "Aber … ver­trieben]"
         },
         "CPal36-195--Praylios-": {
           "note_content": "Bischof von Jerusalem (sed. etwa 417–422).",
@@ -20407,6 +20407,17 @@
           "text_start": "er‌²",
           "refstring_text": "er‌² … sich]"
         },
+        "CV1-12-21--Seelengebärerin-": {
+          "note_content": "Der Ausdruck „Seelengebärerin“ (ψυχοτόκος) findet sich in der Literatur erstmalig im Rahmen der Streitigkeiten um den θεοτόκος-Begriff. Er kommt außer an dieser Stelle auch noch in einer Äußerung des Nestorius vor, welche Kyrill in Contra Nestorium anführt (vgl. <span data-ref='25_CV166_dg.xml#r-AWxucwVG 25_CV166_dg.xml#r-AWxucwVG-e'>CV166,I,4,62 – 70</span>, ACO I,1,6 S.&nbsp;23,31–36 = Loofs, Nestoriana S.&nbsp;352,6–13 [Dok. 25]). Die Ausführungen des Nestorius stellen dabei möglicherweise eine Reakion auf das hier Geäußerte dar (vgl. Anm. zu der oben angeführten Stelle).",
+          "doc_unit": "CV1-12",
+          "refstring_lines": "21",
+          "document": "CV1",
+          "text_end": "See­len­gebärerin",
+          "line_start": "21",
+          "line_end": "21",
+          "text_start": "See­len­gebärerin",
+          "refstring_text": "See­len­gebärerin]"
+        },
         "CV1-12-1-2-Ist-geworden": {
           "note_content": "Äußerungen des Nestorius, die in diese Richtung hin interpretiert werden könnten, finden sich beispielsweise schon in der <em>Contestatio</em> des Eusebius von Dorylaeum (vgl. <span data-ref='02_CV18_dg.xml#r-AWxucFQh 02_CV18_dg.xml#r-AWxucFQh-e'>CV18,2,3 – 6</span>, ACO 1,1,1 S.&nbsp;101,10–13 [Dok. 2]) und später dann in Kyrills Streitschrift <em>Contra Nestorium</em> (vgl. <span data-ref='25_CV166_dg.xml#r-AWxucdGw 25_CV166_dg.xml#r-AWxucdGw-e'>CV166,I,1,1 – 11</span>, ACO I,1,6 S.&nbsp;16,20–27 [Dok. 25]= Loofs, Nestoriana S.&nbsp;353,1–12; <span data-ref='25_CV166_dg.xml#r-AWxubNdx 25_CV166_dg.xml#r-AWxubNdx-e'>CV166,I,9,2 – 4</span>, S.&nbsp;31,6–8 = Loofs, Nestoriana S.&nbsp;245,15 –27), wobei die zweite Stelle mit dem von Eusebius An­ge­führ­ten zum Teil wörtlich übereinstimmt).",
           "doc_unit": "CV1-12",
@@ -20428,17 +20439,6 @@
           "line_end": "25",
           "text_start": "wie",
           "refstring_text": "wie … sagte]"
-        },
-        "CV1-12-21--See­len­gebärerin-": {
-          "note_content": "Der Ausdruck „Seelengebärerin“ (ψυχοτόκος) findet sich in der Literatur erstmalig im Rahmen der Streitigkeiten um den θεοτόκος-Begriff. Er kommt außer an dieser Stelle auch noch in einer Äußerung des Nestorius vor, welche Kyrill in Contra Nestorium anführt (vgl. <span data-ref='25_CV166_dg.xml#r-AWxucwVG 25_CV166_dg.xml#r-AWxucwVG-e'>CV166,I,4,62 – 70</span>, ACO I,1,6 S.&nbsp;23,31–36 = Loofs, Nestoriana S.&nbsp;352,6–13 [Dok. 25]). Die Ausführungen des Nestorius stellen dabei möglicherweise eine Reakion auf das hier Geäußerte dar (vgl. Anm. zu der oben angeführten Stelle).",
-          "doc_unit": "CV1-12",
-          "refstring_lines": "21",
-          "document": "CV1",
-          "text_end": "See­len­gebärerin",
-          "line_start": "21",
-          "line_end": "21",
-          "text_start": "See­len­gebärerin",
-          "refstring_text": "See­len­gebärerin]"
         },
         "CV1-12-35--wie-sagte": {
           "note_content": "Vgl. oben <span data-ref='#w2926s #w2961'>CV1,12,17 – 20</span>.",
@@ -20949,6 +20949,17 @@
           "text_start": "Werdet",
           "refstring_text": "Werdet … sein]"
         },
+        "CV1-19-11-12-Werkzeugs-": {
+          "note_content": "Kyrill verwendet in diesem Brief relativ viel Raum darauf (vgl. unten <span data-ref='#w5471s #w5479'>CV1,20,7 – 8</span>; <span data-ref='#w5757s #w6038'>CV1,21,1 – 22</span>; <span data-ref='#w6573s #w6590'>CV1,23,18 – 19</span>; <span data-ref='#w7108s #w7136'>CV1,26,1 – 3</span>), die Anschauung zu widerlegen, dass der Mensch, den Maria geboren hat, ein Werkzeug der Gottheit sei. In seinen späteren Schriften, die er im Rahmen der Streitigkeiten verfasst hat, misst er diesem Thema hin­gegen anscheinend keinen allzu großen Wert mehr bei. Nicht zuletzt daher stellt sich die Frage, warum es ihn in dieser frühen Phase der Auseinandersetzung so reizt. Schließ­lich vertrat auch Athanasius, dessen Lehre er als maßgeblich für den rechten Glauben betrachtete, den Leib Christi als Werkzeug des göttlichen Logos. Athanasius spricht in diesem Zusammenhang mitunter davon, dass der Logos sich den menschlichen Leib angeeignet habe (vgl. z.B. <em>De inc.</em> 8,3), wie es auch Kyrill wiederholt betont (vgl. z.B. oben <span data-ref='#w3025s #w3049'>CV1,12,26 – 28</span>; unten <span data-ref='#w6783s #w6816'>CV1,24,7 – 9</span>), zuweilen formuliert er jedoch auch so, dass er zwischen dem Reden und Handeln des göttlichen Anteils in Christus und dem des menschlichen differenziert (vgl. z.B. <em>Contra Ar.</em> 3,25,1). In diesem Punkt scheint der große Kirchenvater gar nicht allzu weit von den Thesen des Nestorius entfernt zu sein, wenn man diese unvoreingenommen betrachtet. Dieser hatte seine Ansichten jedoch zum Teil sehr scharf formuliert, so dass das Werkzeug bei ihm als etwas erscheinen konnte, das keine ontologische Verbindung mehr zu seinem Nutzer hat (vgl. z.B. Nestoriana S.&nbsp;252,10f. ≈ <span data-ref='01_CPal20_dg.xml#r-AWxuigpV 01_CPal20_dg.xml#r-AWxuigpV-e'>CPal20,51 – 52</span>, ACO I,2 S.&nbsp;30,10f. [Dok. 1]: <em>non peperit creatura increabilem, sed peperit hominem deitatis instrumentum</em> [das Geschöpf hat nicht den nicht Erschaffbaren geboren, sondern es hat den Menschen als Werkzeug der Gottheit geboren]). Mög­li­cher­weise hat Kyrill Aussagen wie diese mit Lehrmeinungen assoziiert, die ursprünglich gar nicht in einem spezifisch christologischen, sondern vielmehr in einem trinitarischen Kontext standen, nämlich Lehren, die zum Inhalt hatten, dass Gott, der Vater, den Menschen Jesus als sein Werkzeug nutzt. Jedenfalls hatte sich der Alexandriner in den Jahren vor den Streitigkeiten mehrfach als entschiedener Gegner solcher Anschauungen gezeigt (vgl. z.B. <em>Thes.</em> 4, PG 75, 53A–B; <em>Joh.</em> 9,1, Pusey [1965 (= 1868–1877)], Bd. 4 S.&nbsp;439,8–440,10).",
+          "doc_unit": "CV1-19",
+          "refstring_lines": "11 – 12 ",
+          "document": "CV1",
+          "text_end": "Werk­zeugs",
+          "line_start": "11",
+          "line_end": "12",
+          "text_start": "Werk­zeugs",
+          "refstring_text": "Werk­zeugs]"
+        },
         "CV1-19-24-25-und‌1-war": {
           "note_content": "Vgl. Lk 7,12–15.",
           "doc_unit": "CV1-19",
@@ -21003,17 +21014,6 @@
           "line_end": "12",
           "text_start": "dass",
           "refstring_text": "dass … angenommenen]"
-        },
-        "CV1-19-11-12-Werk­zeugs-": {
-          "note_content": "Kyrill verwendet in diesem Brief relativ viel Raum darauf (vgl. unten <span data-ref='#w5471s #w5479'>CV1,20,7 – 8</span>; <span data-ref='#w5757s #w6038'>CV1,21,1 – 22</span>; <span data-ref='#w6573s #w6590'>CV1,23,18 – 19</span>; <span data-ref='#w7108s #w7136'>CV1,26,1 – 3</span>), die Anschauung zu widerlegen, dass der Mensch, den Maria geboren hat, ein Werkzeug der Gottheit sei. In seinen späteren Schriften, die er im Rahmen der Streitigkeiten verfasst hat, misst er diesem Thema hin­gegen anscheinend keinen allzu großen Wert mehr bei. Nicht zuletzt daher stellt sich die Frage, warum es ihn in dieser frühen Phase der Auseinandersetzung so reizt. Schließ­lich vertrat auch Athanasius, dessen Lehre er als maßgeblich für den rechten Glauben betrachtete, den Leib Christi als Werkzeug des göttlichen Logos. Athanasius spricht in diesem Zusammenhang mitunter davon, dass der Logos sich den menschlichen Leib angeeignet habe (vgl. z.B. <em>De inc.</em> 8,3), wie es auch Kyrill wiederholt betont (vgl. z.B. oben <span data-ref='#w3025s #w3049'>CV1,12,26 – 28</span>; unten <span data-ref='#w6783s #w6816'>CV1,24,7 – 9</span>), zuweilen formuliert er jedoch auch so, dass er zwischen dem Reden und Handeln des göttlichen Anteils in Christus und dem des menschlichen differenziert (vgl. z.B. <em>Contra Ar.</em> 3,25,1). In diesem Punkt scheint der große Kirchenvater gar nicht allzu weit von den Thesen des Nestorius entfernt zu sein, wenn man diese unvoreingenommen betrachtet. Dieser hatte seine Ansichten jedoch zum Teil sehr scharf formuliert, so dass das Werkzeug bei ihm als etwas erscheinen konnte, das keine ontologische Verbindung mehr zu seinem Nutzer hat (vgl. z.B. Nestoriana S.&nbsp;252,10f. ≈ <span data-ref='01_CPal20_dg.xml#r-AWxuigpV 01_CPal20_dg.xml#r-AWxuigpV-e'>CPal20,51 – 52</span>, ACO I,2 S.&nbsp;30,10f. [Dok. 1]: <em>non peperit creatura increabilem, sed peperit hominem deitatis instrumentum</em> [das Geschöpf hat nicht den nicht Erschaffbaren geboren, sondern es hat den Menschen als Werkzeug der Gottheit geboren]). Mög­li­cher­weise hat Kyrill Aussagen wie diese mit Lehrmeinungen assoziiert, die ursprünglich gar nicht in einem spezifisch christologischen, sondern vielmehr in einem trinitarischen Kontext standen, nämlich Lehren, die zum Inhalt hatten, dass Gott, der Vater, den Menschen Jesus als sein Werkzeug nutzt. Jedenfalls hatte sich der Alexandriner in den Jahren vor den Streitigkeiten mehrfach als entschiedener Gegner solcher Anschauungen gezeigt (vgl. z.B. <em>Thes.</em> 4, PG 75, 53A–B; <em>Joh.</em> 9,1, Pusey [1965 (= 1868–1877)], Bd. 4 S.&nbsp;439,8–440,10).",
-          "doc_unit": "CV1-19",
-          "refstring_lines": "11 – 12 ",
-          "document": "CV1",
-          "text_end": "Werk­zeugs",
-          "line_start": "11",
-          "line_end": "12",
-          "text_start": "Werk­zeugs",
-          "refstring_text": "Werk­zeugs]"
         }
       },
       "1": {
@@ -21144,17 +21144,6 @@
         }
       },
       "4": {
-        "CV1-4-18-19-Weis­heit-": {
-          "note_content": "Vgl. 1 Kor 1,31.",
-          "doc_unit": "CV1-4",
-          "refstring_lines": "18 – 19 ",
-          "document": "CV1",
-          "text_end": "Weis­heit",
-          "line_start": "18",
-          "line_end": "19",
-          "text_start": "Weis­heit",
-          "refstring_text": "Weis­heit]"
-        },
         "CV1-4-22-24-und-Maria": {
           "note_content": "Vgl. Lk 1,41–44.",
           "doc_unit": "CV1-4",
@@ -21220,6 +21209,17 @@
           "line_end": "29",
           "text_start": "der‌¹",
           "refstring_text": "der‌¹ … wurde]"
+        },
+        "CV1-4-18-19-Weisheit-": {
+          "note_content": "Vgl. 1 Kor 1,31.",
+          "doc_unit": "CV1-4",
+          "refstring_lines": "18 – 19 ",
+          "document": "CV1",
+          "text_end": "Weis­heit",
+          "line_start": "18",
+          "line_end": "19",
+          "text_start": "Weis­heit",
+          "refstring_text": "Weis­heit]"
         },
         "CV1-4-12--die‌1-hat": {
           "note_content": "<em>Orationes contra Arianos</em> (CPG 2093), deren drittes Buch, aus dem hier im Folgenden zitiert wird, vermutlich in den Jahren 340/341 entstanden ist (vgl. Tetz [1979], S.&nbsp;344).",
@@ -21733,6 +21733,17 @@
       }
     },
     "CPal31": { "text":{
+        "CPal31-107-114-Kein-Vorbilder": {
+          "note_content": "Die Aufforderung ist gegen die Ansicht der Pe­la­gi­aner gerichtet, dass die Kinder in dem Zustand geboren werden, in dem Adam vor der Sünde war, dass sie also der Taufe nicht bedürfen.",
+          "doc_unit": "CPal31",
+          "refstring_lines": "107 – 114 ",
+          "document": "CPal31",
+          "text_end": "Vor­bilder",
+          "line_start": "107",
+          "line_end": "114",
+          "text_start": "Kein",
+          "refstring_text": "Kein … Vor­bilder]"
+        },
         "CPal31-10-11-Indem-vervielfachen": {
           "note_content": "Gen 3,16.",
           "doc_unit": "CPal31",
@@ -21743,6 +21754,17 @@
           "line_end": "11",
           "text_start": "Indem",
           "refstring_text": "Indem … vervielfachen]"
+        },
+        "CPal31-25-26-Sei-Erfüllte": {
+          "note_content": "Lk 1,28.",
+          "doc_unit": "CPal31",
+          "refstring_lines": "25 – 26 ",
+          "document": "CPal31",
+          "text_end": "Er­füllte",
+          "line_start": "25",
+          "line_end": "26",
+          "text_start": "Sei",
+          "refstring_text": "Sei … Er­füllte]"
         },
         "CPal31-17-18-in‌1-war": {
           "note_content": "Vgl. Lk 2,7.",
@@ -21876,6 +21898,17 @@
           "text_start": "Sei",
           "refstring_text": "Sei … Erfüllte]"
         },
+        "CPal31-13-16-Deshalb-Menschheit": {
+          "note_content": "Zu dieser Stelle vgl. Anm. zu <span data-ref='40_CV150_dg.xml#r-AWyBlMnb 40_CV150_dg.xml#r-AWyBlMnb-e'>CV150,123,4 – 6</span> [Dok. 40].",
+          "doc_unit": "CPal31",
+          "refstring_lines": "13 – 16 ",
+          "document": "CPal31",
+          "text_end": "Menschheit",
+          "line_start": "13",
+          "line_end": "16",
+          "text_start": "Des­halb",
+          "refstring_text": "Des­halb … Menschheit]"
+        },
         "CPal31-86-87-Verflucht-Lebens": {
           "note_content": "Gen 3,17.",
           "doc_unit": "CPal31",
@@ -21942,17 +21975,6 @@
           "text_start": "Unter",
           "refstring_text": "Unter … gebären]"
         },
-        "CPal31-13-14-Des­halb-werden": {
-          "note_content": "Lk 1,35.",
-          "doc_unit": "CPal31",
-          "refstring_lines": "13 – 14 ",
-          "document": "CPal31",
-          "text_end": "werden",
-          "line_start": "13",
-          "line_end": "14",
-          "text_start": "Des­halb",
-          "refstring_text": "Des­halb … werden]"
-        },
         "CPal31-109-110-dass-lassen": {
           "note_content": "D.h. dass sie ihre Taufe als oberstes Ziel des diesseitigen Lebens ansehen sollen.",
           "doc_unit": "CPal31",
@@ -21986,6 +22008,17 @@
           "text_start": "sollst",
           "refstring_text": "sollst … essen‌²]"
         },
+        "CPal31-18-20-bedenke-hat": {
+          "note_content": "Die Wort­stellung im lateinischen Text ist etwas umständlich: <em>sed illius infantis cogita dignitatem matrem quae se genuit, deitate procreantem</em>.",
+          "doc_unit": "CPal31",
+          "refstring_lines": "18 – 20 ",
+          "document": "CPal31",
+          "text_end": "hat",
+          "line_start": "18",
+          "line_end": "20",
+          "text_start": "be­denke",
+          "refstring_text": "be­denke … hat]"
+        },
         "CPal31-59--beunruhigtsind-": {
           "note_content": "Der durch <em>praegnates</em> (S. 61,19) eingeleitete Numeruswechsel vom Sin­gular in den Plural wird hier mit <em>sollicitam esse</em> nicht durchgehalten.",
           "doc_unit": "CPal31",
@@ -21997,6 +22030,17 @@
           "text_start": "beunruhigt sind",
           "refstring_text": "beunruhigt sind]"
         },
+        "CPal31-104-105-Ich-zertreten": {
+          "note_content": "Lk 10,19, vgl. Ps 90(91),13.",
+          "doc_unit": "CPal31",
+          "refstring_lines": "104 – 105 ",
+          "document": "CPal31",
+          "text_end": "zer­treten",
+          "line_start": "104",
+          "line_end": "105",
+          "text_start": "Ich",
+          "refstring_text": "Ich … zer­treten]"
+        },
         "CPal31-34-35-Unter-gebären": {
           "note_content": "Gen 3,16.",
           "doc_unit": "CPal31",
@@ -22007,17 +22051,6 @@
           "line_end": "35",
           "text_start": "Unter",
           "refstring_text": "Unter … gebären]"
-        },
-        "CPal31-18-20-be­denke-hat": {
-          "note_content": "Die Wort­stellung im lateinischen Text ist etwas umständlich: <em>sed illius infantis cogita dignitatem matrem quae se genuit, deitate procreantem</em>.",
-          "doc_unit": "CPal31",
-          "refstring_lines": "18 – 20 ",
-          "document": "CPal31",
-          "text_end": "hat",
-          "line_start": "18",
-          "line_end": "20",
-          "text_start": "be­denke",
-          "refstring_text": "be­denke … hat]"
         },
         "CPal31-84-86-Indem-gebären": {
           "note_content": "Gen 3,16.",
@@ -22052,17 +22085,6 @@
           "text_start": "Unter",
           "refstring_text": "Unter … gebären]"
         },
-        "CPal31-107-114-Kein-Vor­bilder": {
-          "note_content": "Die Aufforderung ist gegen die Ansicht der Pe­la­gi­aner gerichtet, dass die Kinder in dem Zustand geboren werden, in dem Adam vor der Sünde war, dass sie also der Taufe nicht bedürfen.",
-          "doc_unit": "CPal31",
-          "refstring_lines": "107 – 114 ",
-          "document": "CPal31",
-          "text_end": "Vor­bilder",
-          "line_start": "107",
-          "line_end": "114",
-          "text_start": "Kein",
-          "refstring_text": "Kein … Vor­bilder]"
-        },
         "CPal31-32--Du-gebären": {
           "note_content": "Gen 3,16.",
           "doc_unit": "CPal31",
@@ -22085,28 +22107,6 @@
           "text_start": "Du",
           "refstring_text": "Du … behalten]"
         },
-        "CPal31-13-16-Des­halb-Menschheit": {
-          "note_content": "Zu dieser Stelle vgl. Anm. zu <span data-ref='40_CV150_dg.xml#r-AWyBlMnb 40_CV150_dg.xml#r-AWyBlMnb-e'>CV150,123,4 – 6</span> [Dok. 40].",
-          "doc_unit": "CPal31",
-          "refstring_lines": "13 – 16 ",
-          "document": "CPal31",
-          "text_end": "Menschheit",
-          "line_start": "13",
-          "line_end": "16",
-          "text_start": "Des­halb",
-          "refstring_text": "Des­halb … Menschheit]"
-        },
-        "CPal31-25-26-Sei-Er­füllte": {
-          "note_content": "Lk 1,28.",
-          "doc_unit": "CPal31",
-          "refstring_lines": "25 – 26 ",
-          "document": "CPal31",
-          "text_end": "Er­füllte",
-          "line_start": "25",
-          "line_end": "26",
-          "text_start": "Sei",
-          "refstring_text": "Sei … Er­füllte]"
-        },
         "CPal31-39--Unter-essen": {
           "note_content": "Gen 3,17.",
           "doc_unit": "CPal31",
@@ -22118,16 +22118,16 @@
           "text_start": "Unter",
           "refstring_text": "Unter … essen]"
         },
-        "CPal31-104-105-Ich-zer­treten": {
-          "note_content": "Lk 10,19, vgl. Ps 90(91),13.",
+        "CPal31-13-14-Deshalb-werden": {
+          "note_content": "Lk 1,35.",
           "doc_unit": "CPal31",
-          "refstring_lines": "104 – 105 ",
+          "refstring_lines": "13 – 14 ",
           "document": "CPal31",
-          "text_end": "zer­treten",
-          "line_start": "104",
-          "line_end": "105",
-          "text_start": "Ich",
-          "refstring_text": "Ich … zer­treten]"
+          "text_end": "werden",
+          "line_start": "13",
+          "line_end": "14",
+          "text_start": "Des­halb",
+          "refstring_text": "Des­halb … werden]"
         },
         "CPal31-107-108-Aber-naht": {
           "note_content": "Sofern Nestorius hier nicht bereits an Ostern denkt, scheint in Kon­stan­ti­no­pel auch an Weihnachten getauft worden zu sein. Ein Hin­weis darauf in den Quellen ließ sich allerdings bisher nicht ermitteln.",
@@ -22812,6 +22812,17 @@
         }
       },
       "12": {
+        "CV6-12-60-61-Erstgeborenen-geworden": {
+          "note_content": "Vgl. Kol 1,18; dazu auch oben <span data-ref='#w2051s #w2076'>CV6,6,16 – 19</span>.",
+          "doc_unit": "CV6-12",
+          "refstring_lines": "60 – 61 ",
+          "document": "CV6",
+          "text_end": "geworden",
+          "line_start": "60",
+          "line_end": "61",
+          "text_start": "Erstgebore­nen",
+          "refstring_text": "Erstgebore­nen … geworden]"
+        },
         "CV6-12-23-26-Christus-ist": {
           "note_content": "Vgl. oben <span data-ref='#w1400s #w1530'>CV6,4,10 – 20</span>.",
           "doc_unit": "CV6-12",
@@ -22833,17 +22844,6 @@
           "line_end": "51",
           "text_start": "er",
           "refstring_text": "er … Gabe]"
-        },
-        "CV6-12-60-61-Erstgebore­nen-geworden": {
-          "note_content": "Vgl. Kol 1,18; dazu auch oben <span data-ref='#w2051s #w2076'>CV6,6,16 – 19</span>.",
-          "doc_unit": "CV6-12",
-          "refstring_lines": "60 – 61 ",
-          "document": "CV6",
-          "text_end": "geworden",
-          "line_start": "60",
-          "line_end": "61",
-          "text_start": "Erstgebore­nen",
-          "refstring_text": "Erstgebore­nen … geworden]"
         },
         "CV6-12-57-58-alles-erwecken": {
           "note_content": "Vgl. 1 Tim 6,13.",
@@ -23133,17 +23133,6 @@
           "text_start": "bis",
           "refstring_text": "bis … Termin]"
         },
-        "CV6-2-16-18-Mit-Gemein­schaft": {
-          "note_content": "Vgl. <span data-ref='37_CV24_dg.xml#r-AWyHNojk 37_CV24_dg.xml#r-AWyHNojk-e'>CV24,56 – 58</span>, ACO I,1,1 S.&nbsp;114,12–14 (Dok. 37).",
-          "doc_unit": "CV6-2",
-          "refstring_lines": "16 – 18 ",
-          "document": "CV6",
-          "text_end": "Gemein­schaft",
-          "line_start": "16",
-          "line_end": "18",
-          "text_start": "Mit",
-          "refstring_text": "Mit … Gemein­schaft]"
-        },
         "CV6-2-13-14-und-müsstest": {
           "note_content": "Kyrill greift hier das Motiv der Pflicht des Hirten gegenüber seiner Herde auf, welches Coelestin schon sowohl in seinem Brief an Nestorius (vgl. <span data-ref='30_CVer2_dg.xml#r-AWyHNEFe 30_CVer2_dg.xml#r-AWyHNEFe-e'>CVer2,10,1 – 13</span>, ACO I,2 S.&nbsp;9,27–10,4 [Dok. 30]) als auch in dem an ihn selbst gerichteten (vgl. <span data-ref='29_CVer1_dg.xml#r-AWyHNakT 29_CVer1_dg.xml#r-AWyHNakT-e'>CVer1,2,7 – 11</span> ACO I,2 S.&nbsp;5,18–21 [Dok. 29]) unter aus­drück­li­chem Verweis auf das zehnte Kapitel des Johannesevangeliums verwendet hatte.",
           "doc_unit": "CV6-2",
@@ -23165,6 +23154,17 @@
           "line_end": "21",
           "text_start": "in",
           "refstring_text": "in … ist]"
+        },
+        "CV6-2-16-18-Mit-Gemeinschaft": {
+          "note_content": "Vgl. <span data-ref='37_CV24_dg.xml#r-AWyHNojk 37_CV24_dg.xml#r-AWyHNojk-e'>CV24,56 – 58</span>, ACO I,1,1 S.&nbsp;114,12–14 (Dok. 37).",
+          "doc_unit": "CV6-2",
+          "refstring_lines": "16 – 18 ",
+          "document": "CV6",
+          "text_end": "Gemein­schaft",
+          "line_start": "16",
+          "line_end": "18",
+          "text_start": "Mit",
+          "refstring_text": "Mit … Gemein­schaft]"
         },
         "CV6-2-31-33-Wir-ziemt": {
           "note_content": "Diese Formulierung schließt anscheinend sowohl das unmittelbar folgende Nizänum als auch die sich daran anschließende Deutung desselben mit ein. Kyrill rückt hier also das als allgemein ver­bind­lich Anerkannte und das für die Gegenseite in Frage Stehende argumentativ eng zusammen.",
@@ -23638,7 +23638,7 @@
           "text_start": "und",
           "refstring_text": "und … ist]"
         },
-        "CV6-7-5-6-kost­barenBlut-": {
+        "CV6-7-5-6-kostbarenBlut-": {
           "note_content": "Vgl. 1 Petr 1,19.",
           "doc_unit": "CV6-7",
           "refstring_lines": "5 – 6 ",
@@ -23774,17 +23774,6 @@
           "text_start": "Mittler",
           "refstring_text": "Mittler … Menschen]"
         },
-        "CV6-9-14-15-alle-zurück­stehen": {
-          "note_content": "Röm 3,23.",
-          "doc_unit": "CV6-9",
-          "refstring_lines": "14 – 15 ",
-          "document": "CV6",
-          "text_end": "zurück­stehen",
-          "line_start": "14",
-          "line_end": "15",
-          "text_start": "alle",
-          "refstring_text": "alle … zurück­stehen]"
-        },
         "CV6-9-8-11-Opfer‌2-Gott": {
           "note_content": "Hebr 10,5–7, vgl. Ps 39,(40),7–9.",
           "doc_unit": "CV6-9",
@@ -23795,6 +23784,17 @@
           "line_end": "11",
           "text_start": "Opfer‌²",
           "refstring_text": "Opfer‌² … Gott]"
+        },
+        "CV6-9-14-15-alle-zurückstehen": {
+          "note_content": "Röm 3,23.",
+          "doc_unit": "CV6-9",
+          "refstring_lines": "14 – 15 ",
+          "document": "CV6",
+          "text_end": "zurück­stehen",
+          "line_start": "14",
+          "line_end": "15",
+          "text_start": "alle",
+          "refstring_text": "alle … zurück­stehen]"
         },
         "CV6-9-1-3-Wenn-darbringt": {
           "note_content": "Nestorius hatte dem ‚Apostel und Hohepriester‘ des Hebräerbriefes und der Frage, wie man diesen zu verstehen habe, anscheinend eine ganze Predigt gewidmet (vgl. Loofs, Nestoriana S.&nbsp;230–242 = <em>sermo</em> 5). Kyrill seinerseits hatte sich bereits im dritten Buch seiner großen Streitschrift <em>Contra Nestorium</em> ausführlich mit diesem Werk auseinandergesetzt. Alle in diesem angeführten Ex­zerpte des Nestorius gehören, wie es scheint, dieser Predigt an. Das gesamte dritte Buch dient der Widerlegung derselben.",
@@ -24127,6 +24127,17 @@
           "text_start": "Nimm",
           "refstring_text": "Nimm … Ägypten]"
         },
+        "CV5-7-41-42-Beschneidung-": {
+          "note_content": "Vgl. Lk 2,21.",
+          "doc_unit": "CV5-7",
+          "refstring_lines": "41 – 42 ",
+          "document": "CV5",
+          "text_end": "Be­schneidung",
+          "line_start": "41",
+          "line_end": "42",
+          "text_start": "Be­schneidung",
+          "refstring_text": "Be­schneidung]"
+        },
         "CV5-7-40--allmählichemWachstum-": {
           "note_content": "Vgl. Lk 2,40. 52.",
           "doc_unit": "CV5-7",
@@ -24269,17 +24280,6 @@
           "line_end": "19",
           "text_start": "Christus",
           "refstring_text": "Christus … Sünden]"
-        },
-        "CV5-7-41-42-Be­schneidung-": {
-          "note_content": "Vgl. Lk 2,21.",
-          "doc_unit": "CV5-7",
-          "refstring_lines": "41 – 42 ",
-          "document": "CV5",
-          "text_end": "Be­schneidung",
-          "line_start": "41",
-          "line_end": "42",
-          "text_start": "Be­schneidung",
-          "refstring_text": "Be­schneidung]"
         },
         "CV5-7-14--Was-Geist": {
           "note_content": "Mt 1,20.",
@@ -25908,7 +25908,7 @@
           "text_start": "durch",
           "refstring_text": "durch … ist]"
         },
-        "CV7-12-12-13-dieses-Altweiberge­schwätz": {
+        "CV7-12-12-13-dieses-Altweibergeschwätz": {
           "note_content": "<span data-lang='greek'>μῦθον οὕτω τὸν γραώδη καὶ βδελυρὸν</span>: vgl. 1 Tim 4,7: <span data-lang='greek'>τοὺς δὲ βεβήλους</span> (= profane) <span data-lang='greek'>καὶ γραώδεις μύθους</span>.",
           "doc_unit": "CV7-12",
           "refstring_lines": "12 – 13 ",
@@ -26529,6 +26529,17 @@
         }
       },
       "16": {
+        "CV7-16-1-23-Da-gewohnheitsgemäß": {
+          "note_content": "Zit. im <em>Florilegium Cyrillianum</em> 140.",
+          "doc_unit": "CV7-16",
+          "refstring_lines": "1 – 23 ",
+          "document": "CV7",
+          "text_end": "gewohn­heitsgemäß",
+          "line_start": "1",
+          "line_end": "23",
+          "text_start": "Da",
+          "refstring_text": "Da … gewohn­heitsgemäß]"
+        },
         "CV7-16-26--unter-Brüder": {
           "note_content": "Vgl. Röm 8,29.",
           "doc_unit": "CV7-16",
@@ -26561,17 +26572,6 @@
           "line_end": "12",
           "text_start": "an",
           "refstring_text": "an … vorbeidenken]"
-        },
-        "CV7-16-1-23-Da-gewohn­heitsgemäß": {
-          "note_content": "Zit. im <em>Florilegium Cyrillianum</em> 140.",
-          "doc_unit": "CV7-16",
-          "refstring_lines": "1 – 23 ",
-          "document": "CV7",
-          "text_end": "gewohn­heitsgemäß",
-          "line_start": "1",
-          "line_end": "23",
-          "text_start": "Da",
-          "refstring_text": "Da … gewohn­heitsgemäß]"
         },
         "CV7-16-13--Und-begründet": {
           "note_content": "In <em>De incarnatione</em> dem B-Sprecher zugeordnet.",
@@ -26641,17 +26641,6 @@
           "text_start": "Wenn",
           "refstring_text": "Wenn … Menschensohn]"
         },
-        "CV7-38-29-30-Wie-ge­schehen": {
-          "note_content": "Joh 3,9; vgl. oben <span data-ref='#w8041s #w8055'>CV7,23,8 – 9</span>.",
-          "doc_unit": "CV7-38",
-          "refstring_lines": "29 – 30 ",
-          "document": "CV7",
-          "text_end": "ge­schehen",
-          "line_start": "29",
-          "line_end": "30",
-          "text_start": "Wie",
-          "refstring_text": "Wie … ge­schehen]"
-        },
         "CV7-38-36-37-Nehmt-war": {
           "note_content": "Joh 6,61f.",
           "doc_unit": "CV7-38",
@@ -26662,6 +26651,17 @@
           "line_end": "37",
           "text_start": "Nehmt",
           "refstring_text": "Nehmt … war]"
+        },
+        "CV7-38-29-30-Wie-geschehen": {
+          "note_content": "Joh 3,9; vgl. oben <span data-ref='#w8041s #w8055'>CV7,23,8 – 9</span>.",
+          "doc_unit": "CV7-38",
+          "refstring_lines": "29 – 30 ",
+          "document": "CV7",
+          "text_end": "ge­schehen",
+          "line_start": "29",
+          "line_end": "30",
+          "text_start": "Wie",
+          "refstring_text": "Wie … ge­schehen]"
         },
         "CV7-38-21-23-Wer-leben": {
           "note_content": "Joh 6,56f.",
@@ -26854,6 +26854,17 @@
         }
       },
       "39": {
+        "CV7-39-2-15-Indem-Himmeln": {
+          "note_content": "Kol 1,12–20.",
+          "doc_unit": "CV7-39",
+          "refstring_lines": "2 – 15 ",
+          "document": "CV7",
+          "text_end": "Him­meln",
+          "line_start": "2",
+          "line_end": "15",
+          "text_start": "Indem",
+          "refstring_text": "Indem … Him­meln]"
+        },
         "CV7-39-11--um-einnimmt": {
           "note_content": "Vgl. oben <span data-ref='#w12752s #w12762'>CV7,35,23 – 24</span>.",
           "doc_unit": "CV7-39",
@@ -26864,17 +26875,6 @@
           "line_end": "11",
           "text_start": "um",
           "refstring_text": "um … einnimmt]"
-        },
-        "CV7-39-2-15-Indem-Him­meln": {
-          "note_content": "Kol 1,12–20.",
-          "doc_unit": "CV7-39",
-          "refstring_lines": "2 – 15 ",
-          "document": "CV7",
-          "text_end": "Him­meln",
-          "line_start": "2",
-          "line_end": "15",
-          "text_start": "Indem",
-          "refstring_text": "Indem … Him­meln]"
         },
         "CV7-39-12--sc-Gottheit": {
           "note_content": "Vgl. Kol 2,9.",
@@ -27229,6 +27229,17 @@
         }
       },
       "4": {
+        "CV7-4-20-21-die-erkennen": {
+          "note_content": "Vgl. 1 Kor 13,12, wo es allerdings ‚durch einen Spiegel auf ein Rätsel‘ heißt.",
+          "doc_unit": "CV7-4",
+          "refstring_lines": "20 – 21 ",
+          "document": "CV7",
+          "text_end": "er­kennen",
+          "line_start": "20",
+          "line_end": "21",
+          "text_start": "die",
+          "refstring_text": "die … er­kennen]"
+        },
         "CV7-4-1-2-Ich-darf": {
           "note_content": "Kyrill bringt hier anscheinend implizit seine Besorgnis darüber zum Ausdruck, dass der Kaiser von den Lehren des Nestorius, der ja als Bi­schof von Konstantinopel in dessen unmittelbarer Nähe weilte, in seinen christologischen Auf­fas­sun­gen beeinflusst werden könnte.",
           "doc_unit": "CV7-4",
@@ -27251,17 +27262,6 @@
           "text_start": "die",
           "refstring_text": "die … an]"
         },
-        "CV7-4-20-21-die-er­kennen": {
-          "note_content": "Vgl. 1 Kor 13,12, wo es allerdings ‚durch einen Spiegel auf ein Rätsel‘ heißt.",
-          "doc_unit": "CV7-4",
-          "refstring_lines": "20 – 21 ",
-          "document": "CV7",
-          "text_end": "er­kennen",
-          "line_start": "20",
-          "line_end": "21",
-          "text_start": "die",
-          "refstring_text": "die … er­kennen]"
-        },
         "CV7-4-21--die-gewährt": {
           "note_content": "Vgl. Phil 1,19.",
           "doc_unit": "CV7-4",
@@ -27272,17 +27272,6 @@
           "line_end": "21",
           "text_start": "die",
           "refstring_text": "die … gewährt]"
-        },
-        "CV7-4-22-24-Denn...Beel­ze­bubs-": {
-          "note_content": "Vgl. 1 Kor 12,3. Der zweite Teilsatz, mit dem das Zitat im Korintherbrief beginnt, lautet bei Paulus: „[...] ὅτι οὐδεὶς ἐν πνεύματι θεοῦ λαλῶν λέγει, ἀνάθεμα Ἰησοῦς“ ([...] dass keiner, der im Geist Gottes spricht, Jesus verflucht nennt). Die Wendung εἰ μὴ ἐν Βεελζεβούλ kommt hingegen nur bei Kyrill vor und ist wohl von Mt 12,24 beeinflusst. Das ‚Zitat‘ ist in De incarnatione dem B-Sprecher zugeordnet.",
-          "doc_unit": "CV7-4",
-          "refstring_lines": "22 – 24 ",
-          "document": "CV7",
-          "text_end": "Denn... Beel­ze­bubs",
-          "line_start": "22",
-          "line_end": "24",
-          "text_start": "Denn... Beel­ze­bubs",
-          "refstring_text": "Denn... Beel­ze­bubs]"
         },
         "CV7-4-17-22-Daher-schreibt": {
           "note_content": "Von dieser Stelle an zeigt die Rede deutliche inhaltliche und wörtliche Parallelen zu Kyrills Abhandlung <em>De incarnatione unigeniti</em>. Die hier teils einfach monologische, teils aber auch durch einen fiktiven Interlokutor oder direkte Ansprache an den Adressaten dialogisch gestaltete Rede, erscheint dort als echter Dialog. Welches der Werke dem anderen vorangeht, ist in der For­schung umstritten: während z.B. Schwartz (ACO I,1,1 S.&nbsp;42,8f.) und Pusey (1965 [= 1868–1877], Bd.&nbsp;7 S.&nbsp;VIII) davon ausgehen, dass <em>De recta fide</em> das ursprüngliche Werk sei, plädieren u.a. de Durand (1964, S.&nbsp;52–57) und van Loon (2009, S.&nbsp;419–425) für die Priorität von <em>De incarnatione</em>. Zumindest de Durand geht dabei davon aus (van Loon hält es immerhin für möglich), dass <em>De incarnatione</em> sogar noch vor dem nestorianschen Streit verfasst worden ist und es sich hierbei um jene Schrift handele, die Kyrill am Ende seines ersten Briefes an Nestorius erwähnt (vgl. ACO I,1,1 S.&nbsp;24,19–25). Während eine Analyse der Unterschiede zwischen den beiden Werken tatsächlich die Vermutung nahelegt, dass <em>De recta fide</em> eine im Detail präzisierende, gegen mögliche Einwände bes­ser abgesicherte Revision von <em>De incarnatione</em> darstellt, bleibt bei einer angenommenen Ab­fas­sungs­zeit vor 425 (Tod des Attikos von Konstantinopel) auf jeden Fall die Frage, wer eigentlich die pro­to­nestorianischen Gegner sind, die hier so überproportional umfangreich widerlegt werden. Auf­fal­lend bleibt aber auf jeden Fall, dass sich in <em>De recta fide</em> im Vergleich zu z.B. dem Brief an die ägyptischen Mönche (CV1 [Dok. 5]) und der Schrift <em>Ad augustas</em> kaum Bezüge auf konkrete und durch erhaltene Fragmente belegte Elemente der nestorianischen Christologie finden.",
@@ -27339,6 +27328,17 @@
           "text_start": "Indische Steine",
           "refstring_text": "Indische Steine]"
         },
+        "CV7-4-22-24-Denn...Beelzebubs-": {
+          "note_content": "Vgl. 1 Kor 12,3. Der zweite Teilsatz, mit dem das Zitat im Korintherbrief beginnt, lautet bei Paulus: „[...] ὅτι οὐδεὶς ἐν πνεύματι θεοῦ λαλῶν λέγει, ἀνάθεμα Ἰησοῦς“ ([...] dass keiner, der im Geist Gottes spricht, Jesus verflucht nennt). Die Wendung εἰ μὴ ἐν Βεελζεβούλ kommt hingegen nur bei Kyrill vor und ist wohl von Mt 12,24 beeinflusst. Das ‚Zitat‘ ist in De incarnatione dem B-Sprecher zugeordnet.",
+          "doc_unit": "CV7-4",
+          "refstring_lines": "22 – 24 ",
+          "document": "CV7",
+          "text_end": "Denn... Beel­ze­bubs",
+          "line_start": "22",
+          "line_end": "24",
+          "text_start": "Denn... Beel­ze­bubs",
+          "refstring_text": "Denn... Beel­ze­bubs]"
+        },
         "CV7-4-16-17-Weisheit-wert": {
           "note_content": "Spr 8,11.",
           "doc_unit": "CV7-4",
@@ -27374,17 +27374,6 @@
           "text_start": "in",
           "refstring_text": "in … Todes]"
         },
-        "CV7-5-1-2-Bekannt­schaft-diese": {
-          "note_content": "Gemeint ist der Staub des Kampfplatzes. Kyrill spielt in seinen Wendungen und Vergleichen des Öfteren auf den Ringkampf an (vgl. z.B. <span data-ref='05_CV1_dg.xml#r-AWyLHxQd 05_CV1_dg.xml#r-AWyLHxQd-e'>CV1,1,14 – 21</span>, ACO I,1,1 S.&nbsp;10,11–18 [Dok. 5]).",
-          "doc_unit": "CV7-5",
-          "refstring_lines": "1 – 2 ",
-          "document": "CV7",
-          "text_end": "diese",
-          "line_start": "1",
-          "line_end": "2",
-          "text_start": "Bekannt­schaft",
-          "refstring_text": "Bekannt­schaft … diese]"
-        },
         "CV7-5-8--in-Hades": {
           "note_content": "Vgl. Spr 9,18.",
           "doc_unit": "CV7-5",
@@ -27395,6 +27384,17 @@
           "line_end": "8",
           "text_start": "in",
           "refstring_text": "in … Hades]"
+        },
+        "CV7-5-1-2-Bekanntschaft-diese": {
+          "note_content": "Gemeint ist der Staub des Kampfplatzes. Kyrill spielt in seinen Wendungen und Vergleichen des Öfteren auf den Ringkampf an (vgl. z.B. <span data-ref='05_CV1_dg.xml#r-AWyLHxQd 05_CV1_dg.xml#r-AWyLHxQd-e'>CV1,1,14 – 21</span>, ACO I,1,1 S.&nbsp;10,11–18 [Dok. 5]).",
+          "doc_unit": "CV7-5",
+          "refstring_lines": "1 – 2 ",
+          "document": "CV7",
+          "text_end": "diese",
+          "line_start": "1",
+          "line_end": "2",
+          "text_start": "Bekannt­schaft",
+          "refstring_text": "Bekannt­schaft … diese]"
         },
         "CV7-5-1-7-Da-ist": {
           "note_content": "In <em>De incarnatione</em> dem B-Sprecher zugeordnet.",
@@ -27519,6 +27519,17 @@
           "text_start": "wörtlich",
           "refstring_text": "wörtlich … sagen]"
         },
+        "CV7-6-24-25-zusammenschnüren-": {
+          "note_content": "<span data-lang='greek'>κατασφίγγοντες</span>: von Kyrill gerne und nicht zwingend wertend gebrauchtes Wort (vgl. z.B. unten <span data-ref='#w9002s'>CV7,26,11</span>; <em>Dial. trin.</em> 6, 623,29 Aubert; <em>De ador.</em> 5, PG 68, 404D).",
+          "doc_unit": "CV7-6",
+          "refstring_lines": "24 – 25 ",
+          "document": "CV7",
+          "text_end": "zusam­menschnüren",
+          "line_start": "24",
+          "line_end": "25",
+          "text_start": "zusam­menschnüren",
+          "refstring_text": "zusam­menschnüren]"
+        },
         "CV7-6-1-73-Die-beschreiten": {
           "note_content": "In <em>De incarnatione</em> dem B-Sprecher zugeordnet.",
           "doc_unit": "CV7-6",
@@ -27551,17 +27562,6 @@
           "line_end": "56",
           "text_start": "Fürchte",
           "refstring_text": "Fürchte … geben]"
-        },
-        "CV7-6-24-25-zusam­menschnüren-": {
-          "note_content": "<span data-lang='greek'>κατασφίγγοντες</span>: von Kyrill gerne und nicht zwingend wertend gebrauchtes Wort (vgl. z.B. unten <span data-ref='#w9002s'>CV7,26,11</span>; <em>Dial. trin.</em> 6, 623,29 Aubert; <em>De ador.</em> 5, PG 68, 404D).",
-          "doc_unit": "CV7-6",
-          "refstring_lines": "24 – 25 ",
-          "document": "CV7",
-          "text_end": "zusam­menschnüren",
-          "line_start": "24",
-          "line_end": "25",
-          "text_start": "zusam­menschnüren",
-          "refstring_text": "zusam­menschnüren]"
         },
         "CV7-6-1-4-Die-Geheimnisses": {
           "note_content": "Kyrill zielt hier auf die weiter unten (<span data-ref='#w2303s #w2310'>CV7,7,9 – 10</span>) dann ausdrücklich genannten Doketen ab.",
@@ -27956,7 +27956,7 @@
           "text_start": "Es",
           "refstring_text": "Es … Ewigkeit]"
         },
-        "CV7-40-14-15-Denn-er­schaffen": {
+        "CV7-40-14-15-Denn-erschaffen": {
           "note_content": "Vgl. oben <span data-ref='#w14873s #w14890'>CV7,40,4 – 6</span>.",
           "doc_unit": "CV7-40",
           "refstring_lines": "14 – 15 ",
@@ -29094,17 +29094,6 @@
           "text_start": "heißt es",
           "refstring_text": "heißt es]"
         },
-        "CPal22-5-6-EureLiebens­würdigkeit-": {
-          "note_content": "D.h. Proklos.",
-          "doc_unit": "CPal22",
-          "refstring_lines": "5 – 6 ",
-          "document": "CPal22",
-          "text_end": "Eure Liebens­würdigkeit",
-          "line_start": "5",
-          "line_end": "6",
-          "text_start": "Eure Liebens­würdigkeit",
-          "refstring_text": "Eure Liebens­würdigkeit]"
-        },
         "CPal22-93-94-dass-werdet": {
           "note_content": "Nestorius nimmt mit diesen Worten das Motiv des Beifalls vom Anfang der Predigt wieder auf, um Proklos indirekt beifall­hei­schendes Predigen zu unterstelle",
           "doc_unit": "CPal22",
@@ -29193,17 +29182,6 @@
           "text_start": "Was",
           "refstring_text": "Was … Geist]"
         },
-        "CPal22-92-93-Antworte-Un­verstand": {
-          "note_content": "Spr 26,4.",
-          "doc_unit": "CPal22",
-          "refstring_lines": "92 – 93 ",
-          "document": "CPal22",
-          "text_end": "Un­verstand",
-          "line_start": "92",
-          "line_end": "93",
-          "text_start": "Antworte",
-          "refstring_text": "Antworte … Un­verstand]"
-        },
         "CPal22-87-88-wobei-behaupten": {
           "note_content": "Vgl. 1 Tim 1,7.",
           "doc_unit": "CPal22",
@@ -29214,6 +29192,17 @@
           "line_end": "88",
           "text_start": "wobei",
           "refstring_text": "wobei … behaupten]"
+        },
+        "CPal22-5-6-EureLiebenswürdigkeit-": {
+          "note_content": "D.h. Proklos.",
+          "doc_unit": "CPal22",
+          "refstring_lines": "5 – 6 ",
+          "document": "CPal22",
+          "text_end": "Eure Liebens­würdigkeit",
+          "line_start": "5",
+          "line_end": "6",
+          "text_start": "Eure Liebens­würdigkeit",
+          "refstring_text": "Eure Liebens­würdigkeit]"
         },
         "CPal22-87--Photin-": {
           "note_content": "Bischof von Sirmium (gest. 376), der eine adop­tia­nis­ti­sche Auffassung vertrat. Zu Photin vgl. Uthemann (31999).",
@@ -29280,6 +29269,17 @@
           "line_end": "65",
           "text_start": "Wenn",
           "refstring_text": "Wenn … Gott‌²]"
+        },
+        "CPal22-92-93-Antworte-Unverstand": {
+          "note_content": "Spr 26,4.",
+          "doc_unit": "CPal22",
+          "refstring_lines": "92 – 93 ",
+          "document": "CPal22",
+          "text_end": "Un­verstand",
+          "line_start": "92",
+          "line_end": "93",
+          "text_start": "Antworte",
+          "refstring_text": "Antworte … Un­verstand]"
         },
         "CPal22-33-34-ihr‌2-seid": {
           "note_content": "D.h. die Zuhörer des Nestorius.",
@@ -29451,17 +29451,6 @@
           "text_start": "Wie",
           "refstring_text": "Wie … Entäußerung]"
         },
-        "CV149-44-40-41-ver­trauenswürdigem-übergeben": {
-          "note_content": "Vgl. 1 Petr 4,19.",
-          "doc_unit": "CV149-44",
-          "refstring_lines": "40 – 41 ",
-          "document": "CV149",
-          "text_end": "übergeben",
-          "line_start": "40",
-          "line_end": "41",
-          "text_start": "ver­trauenswürdigem",
-          "refstring_text": "ver­trauenswürdigem … übergeben]"
-        },
         "CV149-44-4--Meine-betrübt": {
           "note_content": "Vgl. Ps 41(42),6.",
           "doc_unit": "CV149-44",
@@ -29483,6 +29472,17 @@
           "line_end": "37",
           "text_start": "Schatzkammern",
           "refstring_text": "Schatzkammern … Todes]"
+        },
+        "CV149-44-40-41-vertrauenswürdigem-übergeben": {
+          "note_content": "Vgl. 1 Petr 4,19.",
+          "doc_unit": "CV149-44",
+          "refstring_lines": "40 – 41 ",
+          "document": "CV149",
+          "text_end": "übergeben",
+          "line_start": "40",
+          "line_end": "41",
+          "text_start": "ver­trauenswürdigem",
+          "refstring_text": "ver­trauenswürdigem … übergeben]"
         },
         "CV149-44-4--und-sagen": {
           "note_content": "Bei Matthäus wird die folgende wörtliche Rede mit dem neuen Einsatz <span data-lang='greek'>τότε λέγει αὐτοῖς</span> angeschlossen.",
@@ -29530,17 +29530,6 @@
         }
       },
       "23": {
-        "CV149-23-6-7-alsDie­ner-": {
-          "note_content": "Im Anschluss hieran fehlt in der Zitation das die Aufgaben des Dieners definierende <span data-lang='greek'>εἰς μαρτύριον τῶν λαληθησομένων</span> (vollständig zit. z.B. in <span data-ref='40_CV150_dg.xml#r-AWyMexRJ 40_CV150_dg.xml#r-AWyMexRJ-e'>CV150,201,1 – 3</span>, ACO I,1,1 S.&nbsp;20,30–21,4 [Dok. 40]).",
-          "doc_unit": "CV149-23",
-          "refstring_lines": "6 – 7 ",
-          "document": "CV149",
-          "text_end": "als Die­ner",
-          "line_start": "6",
-          "line_end": "7",
-          "text_start": "als Die­ner",
-          "refstring_text": "als Die­ner]"
-        },
         "CV149-23-6-7-Mose-zuverlässig": {
           "note_content": "Vgl. Num 12,7.",
           "doc_unit": "CV149-23",
@@ -29628,6 +29617,17 @@
           "line_end": "7",
           "text_start": "Deshalb",
           "refstring_text": "Deshalb … sind]"
+        },
+        "CV149-23-6-7-alsDiener-": {
+          "note_content": "Im Anschluss hieran fehlt in der Zitation das die Aufgaben des Dieners definierende <span data-lang='greek'>εἰς μαρτύριον τῶν λαληθησομένων</span> (vollständig zit. z.B. in <span data-ref='40_CV150_dg.xml#r-AWyMexRJ 40_CV150_dg.xml#r-AWyMexRJ-e'>CV150,201,1 – 3</span>, ACO I,1,1 S.&nbsp;20,30–21,4 [Dok. 40]).",
+          "doc_unit": "CV149-23",
+          "refstring_lines": "6 – 7 ",
+          "document": "CV149",
+          "text_end": "als Die­ner",
+          "line_start": "6",
+          "line_end": "7",
+          "text_start": "als Die­ner",
+          "refstring_text": "als Die­ner]"
         },
         "CV149-23-14--Sohn-": {
           "note_content": "Bei Matthäus eigentlich: <span data-lang='greek'>υἱὸς ἀνθρώπου</span>.",
@@ -29945,6 +29945,17 @@
           "text_start": "Ein",
           "refstring_text": "Ein … Herr]"
         },
+        "CV149-25-62-67-Denn-gekommen": {
+          "note_content": "Ähnliche Verbindungen von Weish 1,13f. und 2,24 finden sich besonders bei Kyrill (vgl. z.B. <em>De ador.</em> 15, PG 68, 1005; <em>Hom. pasch.</em> 17,2,310–315), aber auch bei anderen Kirchenvätern (z.B. bei Eusebius, Epiphanius und Johannes Chrysostomos).",
+          "doc_unit": "CV149-25",
+          "refstring_lines": "62 – 67 ",
+          "document": "CV149",
+          "text_end": "ge­kommen",
+          "line_start": "62",
+          "line_end": "67",
+          "text_start": "Denn",
+          "refstring_text": "Denn … ge­kommen]"
+        },
         "CV149-25-42-43-ein-Herrn": {
           "note_content": "Vgl. auch Joh 15,20.",
           "doc_unit": "CV149-25",
@@ -30033,17 +30044,6 @@
           "text_start": "Gott",
           "refstring_text": "Gott … wurdet]"
         },
-        "CV149-25-62-67-Denn-ge­kommen": {
-          "note_content": "Ähnliche Verbindungen von Weish 1,13f. und 2,24 finden sich besonders bei Kyrill (vgl. z.B. <em>De ador.</em> 15, PG 68, 1005; <em>Hom. pasch.</em> 17,2,310–315), aber auch bei anderen Kirchenvätern (z.B. bei Eusebius, Epiphanius und Johannes Chrysostomos).",
-          "doc_unit": "CV149-25",
-          "refstring_lines": "62 – 67 ",
-          "document": "CV149",
-          "text_end": "ge­kommen",
-          "line_start": "62",
-          "line_end": "67",
-          "text_start": "Denn",
-          "refstring_text": "Denn … ge­kommen]"
-        },
         "CV149-25-76-78-Denn-verkünden": {
           "note_content": "Hebr 2,11f.; vgl. oben <span data-ref='#w9629s #w9661'>CV149,25,3 – 5</span>.",
           "doc_unit": "CV149-25",
@@ -30121,7 +30121,7 @@
           "text_start": "Ich",
           "refstring_text": "Ich … tue]"
         },
-        "CV149-25-66-67-Doch-ge­kommen": {
+        "CV149-25-66-67-Doch-gekommen": {
           "note_content": "Weish 2,24.",
           "doc_unit": "CV149-25",
           "refstring_lines": "66 – 67 ",
@@ -30180,6 +30180,17 @@
         }
       },
       "26": {
+        "CV149-26-27-28-indem-bekannten": {
+          "note_content": "Vgl. 1&nbsp;Kor 11,26.",
+          "doc_unit": "CV149-26",
+          "refstring_lines": "27 – 28 ",
+          "document": "CV149",
+          "text_end": "bekann­ten",
+          "line_start": "27",
+          "line_end": "28",
+          "text_start": "indem",
+          "refstring_text": "indem … bekann­ten]"
+        },
         "CV149-26-23--Schließlich-ausgerufen": {
           "note_content": "Vgl. Mt. 28,18–20.",
           "doc_unit": "CV149-26",
@@ -30190,6 +30201,17 @@
           "line_end": "23",
           "text_start": "Schließlich",
           "refstring_text": "Schließlich … ausgerufen]"
+        },
+        "CV149-26-1-4-Und-Herrlichkeit": {
+          "note_content": "1 Tim 3,16, ebenfalls zur Besprechung gestellt in <span data-ref='40_CV150_dg.xml#r-AWyMfxuD 40_CV150_dg.xml#r-AWyMfxuD-e'>CV150,214,1 – 3</span>, ACO I,1,5 S.&nbsp;116,33–35 (Dok. 40).",
+          "doc_unit": "CV149-26",
+          "refstring_lines": "1 – 4 ",
+          "document": "CV149",
+          "text_end": "Herr­lichkeit",
+          "line_start": "1",
+          "line_end": "4",
+          "text_start": "Und",
+          "refstring_text": "Und … Herr­lichkeit]"
         },
         "CV149-26-37--Wohlgefallen-": {
           "note_content": "<span data-lang='greek'>εὐδοκία</span>: NT <span data-lang='greek'>εὐδοκίας</span>; wie bei Kyrill anscheinend durchgängig steht hier statt des üblichen Genitivs der auch in einigen Handschriften überlieferte Nominativ.",
@@ -30245,28 +30267,6 @@
           "line_end": "2",
           "text_start": "das",
           "refstring_text": "das … Fleisch]"
-        },
-        "CV149-26-27-28-indem-bekann­ten": {
-          "note_content": "Vgl. 1&nbsp;Kor 11,26.",
-          "doc_unit": "CV149-26",
-          "refstring_lines": "27 – 28 ",
-          "document": "CV149",
-          "text_end": "bekann­ten",
-          "line_start": "27",
-          "line_end": "28",
-          "text_start": "indem",
-          "refstring_text": "indem … bekann­ten]"
-        },
-        "CV149-26-1-4-Und-Herr­lichkeit": {
-          "note_content": "1 Tim 3,16, ebenfalls zur Besprechung gestellt in <span data-ref='40_CV150_dg.xml#r-AWyMfxuD 40_CV150_dg.xml#r-AWyMfxuD-e'>CV150,214,1 – 3</span>, ACO I,1,5 S.&nbsp;116,33–35 (Dok. 40).",
-          "doc_unit": "CV149-26",
-          "refstring_lines": "1 – 4 ",
-          "document": "CV149",
-          "text_end": "Herr­lichkeit",
-          "line_start": "1",
-          "line_end": "4",
-          "text_start": "Und",
-          "refstring_text": "Und … Herr­lichkeit]"
         },
         "CV149-26-2--geschaut-Engeln": {
           "note_content": "<span data-lang='greek'>ὤφθη</span> (<span data-lang='greek'>τινί</span>): diese Wendung wird im NT sowie in der LXX ansonsten meist im Sinne „erscheinen“ verwendet. Da sich jedoch dort keine Stelle findet, aus der sich unmittelbar ableiten ließe, dass Christus den Engeln im engeren Sinne „erschienen“ wäre, wird hier wie oben stehend übersetzt.",
@@ -30336,17 +30336,6 @@
           "text_start": "Wenn",
           "refstring_text": "Wenn … findet]"
         },
-        "CV149-48-18-20-Und-Men­schensohn": {
-          "note_content": "Joh 3,13.",
-          "doc_unit": "CV149-48",
-          "refstring_lines": "18 – 20 ",
-          "document": "CV149",
-          "text_end": "Men­schensohn",
-          "line_start": "18",
-          "line_end": "20",
-          "text_start": "Und",
-          "refstring_text": "Und … Men­schensohn]"
-        },
         "CV149-48-20-21-Wie-werden": {
           "note_content": "Joh 3,14.",
           "doc_unit": "CV149-48",
@@ -30368,6 +30357,17 @@
           "line_end": "20",
           "text_start": "Wie",
           "refstring_text": "Wie … hat]"
+        },
+        "CV149-48-18-20-Und-Menschensohn": {
+          "note_content": "Joh 3,13.",
+          "doc_unit": "CV149-48",
+          "refstring_lines": "18 – 20 ",
+          "document": "CV149",
+          "text_end": "Men­schensohn",
+          "line_start": "18",
+          "line_end": "20",
+          "text_start": "Und",
+          "refstring_text": "Und … Men­schensohn]"
         },
         "CV149-48-17-18-Warum-hat": {
           "note_content": "Joh 8,40, dort allerdings als Aussage (<span data-lang='greek'>νῦν δὲ</span>), nicht als Frage (<span data-lang='greek'>τί</span>) formuliert.",
@@ -30459,7 +30459,7 @@
           "text_start": "Weil",
           "refstring_text": "Weil … Vater]"
         },
-        "CV149-27-42-43-Teilhabern-Geis­tes": {
+        "CV149-27-42-43-Teilhabern-Geistes": {
           "note_content": "Vgl. Hebr 6,4.",
           "doc_unit": "CV149-27",
           "refstring_lines": "42 – 43 ",
@@ -30729,6 +30729,17 @@
         }
       },
       "30": {
+        "CV149-30-18-19-und-Melchisedeks": {
+          "note_content": "Vgl. Hebr 5,6. 10; Ps 109(110),4.",
+          "doc_unit": "CV149-30",
+          "refstring_lines": "18 – 19 ",
+          "document": "CV149",
+          "text_end": "Melchi­sedeks",
+          "line_start": "18",
+          "line_end": "19",
+          "text_start": "und",
+          "refstring_text": "und … Melchi­sedeks]"
+        },
         "CV149-30-4--Mein-gezeugt": {
           "note_content": "Vgl. Ps 2,7; s. auch oben <span data-ref='#w2219s #w2227'>CV149,8,10 – 11</span>; <span data-ref='#w9552s #w9560'>CV149,24,42 – 43</span>.",
           "doc_unit": "CV149-30",
@@ -30750,17 +30761,6 @@
           "line_end": "4",
           "text_start": "Und",
           "refstring_text": "Und … gezeugt]"
-        },
-        "CV149-30-18-19-und-Melchi­sedeks": {
-          "note_content": "Vgl. Hebr 5,6. 10; Ps 109(110),4.",
-          "doc_unit": "CV149-30",
-          "refstring_lines": "18 – 19 ",
-          "document": "CV149",
-          "text_end": "Melchi­sedeks",
-          "line_start": "18",
-          "line_end": "19",
-          "text_start": "und",
-          "refstring_text": "und … Melchi­sedeks]"
         },
         "CV149-30-20-22-Der-Lebens": {
           "note_content": "Hebr 7,16.",
@@ -30863,17 +30863,6 @@
           "text_start": "sondern",
           "refstring_text": "sondern … Fleisches]"
         },
-        "CV149-31-76-79-Wenn-erret­ten": {
-          "note_content": "Eine in die skizzierte Richtung gehende Deutung von Hebr 5,7–10 findet sich in der als <em>sermo</em> 5 bezeichneten Predigt von Nestorius (vgl. Loofs, Nestoriana S.&nbsp;235,8–17 = CV60,XVII, ACO I,1,2 S.&nbsp;50,4–10 = <span data-ref='25_CV166_dg.xml#r-AWyMgnXe 25_CV166_dg.xml#r-AWyMgnXe-e'>CV166,III,4,1 – 9</span>, ACO I,1,6 S.&nbsp;68,9–15 [Dok. 25]).",
-          "doc_unit": "CV149-31",
-          "refstring_lines": "76 – 79 ",
-          "document": "CV149",
-          "text_end": "erret­ten",
-          "line_start": "76",
-          "line_end": "79",
-          "text_start": "Wenn",
-          "refstring_text": "Wenn … erret­ten]"
-        },
         "CV149-31-106--auf-folgen": {
           "note_content": "Vgl. 1 Petr 2,21; s. auch oben <span data-ref='#w13836s #w13841'>CV149,31,12</span>.",
           "doc_unit": "CV149-31",
@@ -30917,6 +30906,17 @@
           "line_end": "82",
           "text_start": "Diese",
           "refstring_text": "Diese … besitzen]"
+        },
+        "CV149-31-76-79-Wenn-erretten": {
+          "note_content": "Eine in die skizzierte Richtung gehende Deutung von Hebr 5,7–10 findet sich in der als <em>sermo</em> 5 bezeichneten Predigt von Nestorius (vgl. Loofs, Nestoriana S.&nbsp;235,8–17 = CV60,XVII, ACO I,1,2 S.&nbsp;50,4–10 = <span data-ref='25_CV166_dg.xml#r-AWyMgnXe 25_CV166_dg.xml#r-AWyMgnXe-e'>CV166,III,4,1 – 9</span>, ACO I,1,6 S.&nbsp;68,9–15 [Dok. 25]).",
+          "doc_unit": "CV149-31",
+          "refstring_lines": "76 – 79 ",
+          "document": "CV149",
+          "text_end": "erret­ten",
+          "line_start": "76",
+          "line_end": "79",
+          "text_start": "Wenn",
+          "refstring_text": "Wenn … erret­ten]"
         },
         "CV149-31-64--unter-betet": {
           "note_content": "Vgl. oben <span data-ref='#w13692s #w13702'>CV149,31,1 – 2</span>.",
@@ -30994,6 +30994,17 @@
           "line_end": "48",
           "text_start": "Ich",
           "refstring_text": "Ich … hörst]"
+        },
+        "CV149-31-77-79-der‌2-erretten": {
+          "note_content": "Vgl. oben <span data-ref='#w13686s #w13713'>CV149,31,1 – 2</span>.",
+          "doc_unit": "CV149-31",
+          "refstring_lines": "77 – 79 ",
+          "document": "CV149",
+          "text_end": "erret­ten",
+          "line_start": "77",
+          "line_end": "79",
+          "text_start": "der‌²",
+          "refstring_text": "der‌² … erret­ten]"
         },
         "CV149-31-8-12-Was-folgt": {
           "note_content": "1 Petr 2,20f. unter Auslassung des Satzes <span data-lang='greek'>εἰς τοῦτο γὰρ ἐκλήθητε</span> zu Beginn von 2,21.",
@@ -31104,17 +31115,6 @@
           "line_end": "88",
           "text_start": "Du",
           "refstring_text": "Du … dienen]"
-        },
-        "CV149-31-77-79-der‌2-erret­ten": {
-          "note_content": "Vgl. oben <span data-ref='#w13686s #w13713'>CV149,31,1 – 2</span>.",
-          "doc_unit": "CV149-31",
-          "refstring_lines": "77 – 79 ",
-          "document": "CV149",
-          "text_end": "erret­ten",
-          "line_start": "77",
-          "line_end": "79",
-          "text_start": "der‌²",
-          "refstring_text": "der‌² … erret­ten]"
         },
         "CV149-31-56-57-Durch-Gehorsam": {
           "note_content": "Vgl. oben <span data-ref='#w13721s #w13732'>CV149,31,3 – 4</span>.",
@@ -31410,7 +31410,7 @@
           "text_start": "durch",
           "refstring_text": "durch … gerechtfertigt]"
         },
-        "CV149-33-8-9-Schön­stadt-": {
+        "CV149-33-8-9-Schönstadt-": {
           "note_content": "Zum Begriff vgl. Plat. <em>Resp.</em> 527c2.",
           "doc_unit": "CV149-33",
           "refstring_lines": "8 – 9 ",
@@ -32123,6 +32123,17 @@
           "text_start": "Jesus",
           "refstring_text": "Jesus … verlassen]"
         },
+        "CV149-17-6-8-Aber-überwinden": {
+          "note_content": "Die Aussage wird hier, da sie sich im Folgenden als unhaltbar herausstellt, als Einwurf eines fiktiven Interlokutors verstanden – ein Stilmittel, mit dem Kyrill des Öfteren operiert. Pusey (1881) fasst den Satz in seiner Ausgabe alternativ als Frage auf (vgl. ebd. S.&nbsp;280).",
+          "doc_unit": "CV149-17",
+          "refstring_lines": "6 – 8 ",
+          "document": "CV149",
+          "text_end": "über­winden",
+          "line_start": "6",
+          "line_end": "8",
+          "text_start": "Aber",
+          "refstring_text": "Aber … über­winden]"
+        },
         "CV149-17-8-11-Wenn-verglichen": {
           "note_content": "Jes 40,15. 18. Die Verse 16f. lässt Kyrill hier aus (<span data-lang='greek'>ὁ δὲ Λίβανος οὐχ ἱκανὸς εἰς καῦσιν, καὶ πάντα τὰ τετράποδα οὐχ ἱκανὰ εἰς ὁλοκάρπωσιν, καὶ πάντα τὰ ἔθνη ὡς οὐδέν εἰσι καὶ εἰς οὐθὲν ἐλογίσθησαν</span>), so wie er es auch an anderer Stelle tut (vgl. <em>Jes</em>. 5,3, PG 70, 1268C).",
           "doc_unit": "CV149-17",
@@ -32177,17 +32188,6 @@
           "line_end": "29",
           "text_start": "Warum",
           "refstring_text": "Warum … verlassen]"
-        },
-        "CV149-17-6-8-Aber-über­winden": {
-          "note_content": "Die Aussage wird hier, da sie sich im Folgenden als unhaltbar herausstellt, als Einwurf eines fiktiven Interlokutors verstanden – ein Stilmittel, mit dem Kyrill des Öfteren operiert. Pusey (1881) fasst den Satz in seiner Ausgabe alternativ als Frage auf (vgl. ebd. S.&nbsp;280).",
-          "doc_unit": "CV149-17",
-          "refstring_lines": "6 – 8 ",
-          "document": "CV149",
-          "text_end": "über­winden",
-          "line_start": "6",
-          "line_end": "8",
-          "text_start": "Aber",
-          "refstring_text": "Aber … über­winden]"
         }
       },
       "39": {
@@ -32303,6 +32303,17 @@
           "text_start": "er",
           "refstring_text": "er … steht]"
         },
+        "CV149-18-7-9-jedes-bekenne": {
+          "note_content": "Vgl. Jes 45,23.",
+          "doc_unit": "CV149-18",
+          "refstring_lines": "7 – 9 ",
+          "document": "CV149",
+          "text_end": "beken­ne",
+          "line_start": "7",
+          "line_end": "9",
+          "text_start": "jedes",
+          "refstring_text": "jedes … beken­ne]"
+        },
         "CV149-18-1--jeweils-": {
           "note_content": "<span data-lang='greek'>ἕκαστος</span>: vermutlich aus dem vorangehenden Phil 2,4 (<span data-lang='greek'>μὴ τὰ ἑαυτῶν ἕκαστος σκοποῦντες</span> oder auch der pluralischen Form am Ende des Verses) interpolierter Zusatz zum Text des Philipperbriefes, der sich auch in anderen Schriften Kyrills findet (vgl. z.B. <em>Dial. trin.</em> 1, S.&nbsp;404,39; <em>CI</em> 9,17,6).",
           "doc_unit": "CV149-18",
@@ -32313,17 +32324,6 @@
           "line_end": "1",
           "text_start": "jeweils",
           "refstring_text": "jeweils]"
-        },
-        "CV149-18-7-9-jedes-beken­ne": {
-          "note_content": "Vgl. Jes 45,23.",
-          "doc_unit": "CV149-18",
-          "refstring_lines": "7 – 9 ",
-          "document": "CV149",
-          "text_end": "beken­ne",
-          "line_start": "7",
-          "line_end": "9",
-          "text_start": "jedes",
-          "refstring_text": "jedes … beken­ne]"
         },
         "CV149-18-36--entäußert-": {
           "note_content": "Vgl. oben <span data-ref='#w5782s #w5785'>CV149,18,7</span>.",
@@ -32393,17 +32393,6 @@
           "text_start": "der",
           "refstring_text": "der … hat]"
         },
-        "CV149-19-1-13-Indem-Him­meln": {
-          "note_content": "Kol 1,12–20, in voller Länge ebenfalls zitiert in <em>De recta fide</em> (<span data-ref='39_CV7_dg.xml#r-AWyMeozA 39_CV7_dg.xml#r-AWyMeozA-e'>CV7,39,2 – 15</span>, ACO I,1,1 S.&nbsp;68,24–69,2 [Dok. 39]; vgl. auch Anm. dort).",
-          "doc_unit": "CV149-19",
-          "refstring_lines": "1 – 13 ",
-          "document": "CV149",
-          "text_end": "Him­meln",
-          "line_start": "1",
-          "line_end": "13",
-          "text_start": "Indem",
-          "refstring_text": "Indem … Him­meln]"
-        },
         "CV149-19-39-42-dass-ist‌1": {
           "note_content": "Vgl. oben <span data-ref='#w6456s #w6532'>CV149,19,4 – 9</span>.",
           "doc_unit": "CV149-19",
@@ -32447,6 +32436,17 @@
           "line_end": "21",
           "text_start": "Erstling",
           "refstring_text": "Erstling … Entschlafenen]"
+        },
+        "CV149-19-1-13-Indem-Himmeln": {
+          "note_content": "Kol 1,12–20, in voller Länge ebenfalls zitiert in <em>De recta fide</em> (<span data-ref='39_CV7_dg.xml#r-AWyMeozA 39_CV7_dg.xml#r-AWyMeozA-e'>CV7,39,2 – 15</span>, ACO I,1,1 S.&nbsp;68,24–69,2 [Dok. 39]; vgl. auch Anm. dort).",
+          "doc_unit": "CV149-19",
+          "refstring_lines": "1 – 13 ",
+          "document": "CV149",
+          "text_end": "Him­meln",
+          "line_start": "1",
+          "line_end": "13",
+          "text_start": "Indem",
+          "refstring_text": "Indem … Him­meln]"
         },
         "CV149-19-30-31-dass-habe": {
           "note_content": "Vgl. oben <span data-ref='#w6544s #w6557'>CV149,19,10 – 11</span>.",
@@ -32992,17 +32992,6 @@
           "text_start": "zum",
           "refstring_text": "zum … sollen]"
         },
-        "CV149-8-28-29-dass-wer­de": {
-          "note_content": "Vgl. oben <span data-ref='#w2086s #w2095'>CV149,8,1</span>.",
-          "doc_unit": "CV149-8",
-          "refstring_lines": "28 – 29 ",
-          "document": "CV149",
-          "text_end": "wer­de",
-          "line_start": "28",
-          "line_end": "29",
-          "text_start": "dass",
-          "refstring_text": "dass … wer­de]"
-        },
         "CV149-8-1-2-Den-bekränzt": {
           "note_content": "Vgl. Ps 8,6.",
           "doc_unit": "CV149-8",
@@ -33058,6 +33047,17 @@
           "text_start": "Und‌¹",
           "refstring_text": "Und‌¹ … verehren]"
         },
+        "CV149-8-28-29-dass-werde": {
+          "note_content": "Vgl. oben <span data-ref='#w2086s #w2095'>CV149,8,1</span>.",
+          "doc_unit": "CV149-8",
+          "refstring_lines": "28 – 29 ",
+          "document": "CV149",
+          "text_end": "wer­de",
+          "line_start": "28",
+          "line_end": "29",
+          "text_start": "dass",
+          "refstring_text": "dass … wer­de]"
+        },
         "CV149-8-37-38-um-preisen": {
           "note_content": "Vgl. Jes 6,3.",
           "doc_unit": "CV149-8",
@@ -33093,7 +33093,7 @@
           "text_start": "sterben",
           "refstring_text": "sterben … Herrschenden]"
         },
-        "CV149-9-17-18-und-mei­nen": {
+        "CV149-9-17-18-und-meinen": {
           "note_content": "Kyrill bezieht sich mit diesen Worten auf Vertreter apolinaristischer Lehren. Einer ausführlichen Auseinandersetzung mit diesem Thema widmet er sich innerhalb der in den Konzilsakten überlieferten Schriften in <em>De recta fide ad Theodosium</em> (vgl. <span data-ref='39_CV7_dg.xml#r-AWyLVdSD 39_CV7_dg.xml#r-AWyLVdSD-e'>CV7,6,19 – 27</span>, ACO 1,1,1 S.&nbsp;45,17–22 [Dok. 39]; CV7,16–22. 24, wo in Kap. 19 ebenfalls Hebr 2,14f. in diesem Zusammenhang angeführt wird).",
           "doc_unit": "CV149-9",
           "refstring_lines": "17 – 18 ",
@@ -33306,6 +33306,17 @@
         }
       },
       "41": {
+        "CV149-41-1-5-Oder-werden": {
+          "note_content": "Röm 6,3f., ebenfalls zur Exegese angeführt in <span data-ref='40_CV150_dg.xml#r-AWyMhXrL 40_CV150_dg.xml#r-AWyMhXrL-e'>CV150,152,1 – 4</span>, ACO I,1,5 S.&nbsp;100,1–4 (Dok. 40).",
+          "doc_unit": "CV149-41",
+          "refstring_lines": "1 – 5 ",
+          "document": "CV149",
+          "text_end": "wer­den",
+          "line_start": "1",
+          "line_end": "5",
+          "text_start": "Oder",
+          "refstring_text": "Oder … wer­den]"
+        },
         "CV149-41-5-6-nachdem-hatte": {
           "note_content": "Vgl. 1 Petr 3,19.",
           "doc_unit": "CV149-41",
@@ -33338,17 +33349,6 @@
           "line_end": "30",
           "text_start": "Er",
           "refstring_text": "Er … Lebende]"
-        },
-        "CV149-41-1-5-Oder-wer­den": {
-          "note_content": "Röm 6,3f., ebenfalls zur Exegese angeführt in <span data-ref='40_CV150_dg.xml#r-AWyMhXrL 40_CV150_dg.xml#r-AWyMhXrL-e'>CV150,152,1 – 4</span>, ACO I,1,5 S.&nbsp;100,1–4 (Dok. 40).",
-          "doc_unit": "CV149-41",
-          "refstring_lines": "1 – 5 ",
-          "document": "CV149",
-          "text_end": "wer­den",
-          "line_start": "1",
-          "line_end": "5",
-          "text_start": "Oder",
-          "refstring_text": "Oder … wer­den]"
         },
         "CV149-41-7-8-Gehet-Geistes": {
           "note_content": "Mt 28,19; vgl. auch oben <span data-ref='#w11165s #w11183'>CV149,26,25 – 26</span>.",
@@ -34146,17 +34146,6 @@
           "text_start": "Denn",
           "refstring_text": "Denn … Geist]"
         },
-        "CPal29-XXII-11-13-als-erho­ben": {
-          "note_content": "Apg 1,",
-          "doc_unit": "CPal29-XXII",
-          "refstring_lines": "11 – 13 ",
-          "document": "CPal29",
-          "text_end": "erho­ben",
-          "line_start": "11",
-          "line_end": "13",
-          "text_start": "als",
-          "refstring_text": "als … erho­ben]"
-        },
         "CPal29-XXII-2--Makedonianer-": {
           "note_content": "Eine nach dem Patriarchen von Konstantinopel, Makedonius I., benannte Gruppe von Pneumatomachen im vierten Jahrhundert, die den Heiligen Geist nicht als wesensgleich mit dem Vater und dem Sohn anerkannten, vgl. Rist (1999), Sp. 748f.",
           "doc_unit": "CPal29-XXII",
@@ -34189,6 +34178,17 @@
           "line_end": "1",
           "text_start": "gleichsam",
           "refstring_text": "gleichsam]"
+        },
+        "CPal29-XXII-11-13-als-erhoben": {
+          "note_content": "Apg 1,",
+          "doc_unit": "CPal29-XXII",
+          "refstring_lines": "11 – 13 ",
+          "document": "CPal29",
+          "text_end": "erho­ben",
+          "line_start": "11",
+          "line_end": "13",
+          "text_start": "als",
+          "refstring_text": "als … erho­ben]"
         }
       },
       "XVI": { "CPal29-XVI-1-2-Sie-Verbindung":{
@@ -34249,29 +34249,7 @@
           "text_start": "der‌¹",
           "refstring_text": "der‌¹ … wird‌¹]"
         },
-        "CPal29-IV-7-9-Sie-be­kräftigte": {
-          "note_content": "Mk 16,20.",
-          "doc_unit": "CPal29-IV",
-          "refstring_lines": "7 – 9 ",
-          "document": "CPal29",
-          "text_end": "be­kräftigte",
-          "line_start": "7",
-          "line_end": "9",
-          "text_start": "Sie",
-          "refstring_text": "Sie … be­kräftigte]"
-        },
-        "CPal29-IV-2-9-Ich-be­kräftigte": {
-          "note_content": "Aus Nestorius, <em>sermo</em> 1, s. Loofs, Nestoriana S.&nbsp;225,12–21.",
-          "doc_unit": "CPal29-IV",
-          "refstring_lines": "2 – 9 ",
-          "document": "CPal29",
-          "text_end": "be­kräftigte",
-          "line_start": "2",
-          "line_end": "9",
-          "text_start": "Ich",
-          "refstring_text": "Ich … be­kräftigte]"
-        },
-        "CPal29-IV-2-9-Die-be­kräftigte": {
+        "CPal29-IV-2-9-Die-bekräftigte": {
           "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;225,14–21 = CV165, ACO I,1,6 S.&nbsp;7,12–16 = <span data-ref='25_CV166_dg.xml#r-AWyFfWVK 25_CV166_dg.xml#r-AWyFfWVK-e'>CV166,II,7,1 – 5</span>, ACO I,1,6 S.&nbsp;43,3–7 (Dok. 25).",
           "doc_unit": "CPal29-IV",
           "refstring_lines": "2 – 9 ",
@@ -34281,6 +34259,17 @@
           "line_end": "9",
           "text_start": "Die",
           "refstring_text": "Die … be­kräftigte]"
+        },
+        "CPal29-IV-7-9-Sie-bekräftigte": {
+          "note_content": "Mk 16,20.",
+          "doc_unit": "CPal29-IV",
+          "refstring_lines": "7 – 9 ",
+          "document": "CPal29",
+          "text_end": "be­kräftigte",
+          "line_start": "7",
+          "line_end": "9",
+          "text_start": "Sie",
+          "refstring_text": "Sie … be­kräftigte]"
         },
         "CPal29-IV-2--Ich-sagen": {
           "note_content": "Joh 16,12.",
@@ -34292,6 +34281,17 @@
           "line_end": "2",
           "text_start": "Ich",
           "refstring_text": "Ich … sagen]"
+        },
+        "CPal29-IV-2-9-Ich-bekräftigte": {
+          "note_content": "Aus Nestorius, <em>sermo</em> 1, s. Loofs, Nestoriana S.&nbsp;225,12–21.",
+          "doc_unit": "CPal29-IV",
+          "refstring_lines": "2 – 9 ",
+          "document": "CPal29",
+          "text_end": "be­kräftigte",
+          "line_start": "2",
+          "line_end": "9",
+          "text_start": "Ich",
+          "refstring_text": "Ich … be­kräftigte]"
         },
         "CPal29-IV-4--Es-verherrlicht": {
           "note_content": "Joh 8,54.",
@@ -34385,6 +34385,17 @@
         }
       },
       "XI": {
+        "CPal29-XI-1-15-Ich-genannt": {
+          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;261,17–262,12 ≈ CV165, ACO I,1,6 S.&nbsp;8,1–10 ≈ <span data-ref='25_CV166_dg.xml#r-AWyFnccL 25_CV166_dg.xml#r-AWyFnccL-e'>CV166,II,11,1 – 4</span>, ACO I,1,6 S.&nbsp;48,33–36 (Dok. 25); <span data-ref='25_CV166_dg.xml#r-AWyFniPw 25_CV166_dg.xml#r-AWyFniPw-e'>CV166,II,12,1 – 2</span>, ACO I,1,6 S.&nbsp;50,8f.; <span data-ref='25_CV166_dg.xml#r-AWyFnkPe 25_CV166_dg.xml#r-AWyFnkPe-e'>CV166,II,13,1 – 6</span>, ACO I,1,6 S.&nbsp;51,5–8.",
+          "doc_unit": "CPal29-XI",
+          "refstring_lines": "1 – 15 ",
+          "document": "CPal29",
+          "text_end": "ge­nannt",
+          "line_start": "1",
+          "line_end": "15",
+          "text_start": "Ich",
+          "refstring_text": "Ich … ge­nannt]"
+        },
         "CPal29-XI-1-18-Ich-ist": {
           "note_content": "Aus Nestorius, <em>sermo</em> 9, s. Loofs, Nestoriana S.&nbsp;261,17–262,16, aus <em>sermo</em> 10 gemäß <span data-ref='06_CPal21_dg.xml#r-AWyFnRrI 06_CPal21_dg.xml#r-AWyFnRrI-e'>CPal21,238 – 255</span>, ACO I,5 S.&nbsp;35,13–24 [Dok. 6] (zu Loofs’ Rekonstruktion von <em>sermo</em> 9 und 10 s. Anm. zu <span data-ref='01_CPal20_dg.xml#r-AWxvCgWt 01_CPal20_dg.xml#r-AWxvCgWt-e'>CPal20,67 – 68</span> [Dok. 1] und zu <span data-ref='06_CPal21_dg.xml#r-AWxtaQgw 06_CPal21_dg.xml#r-AWxtaQgw-e'>CPal21,83 – 268</span>). Die beiden Fassungen dieses Abschnittes weichen bes. an einer Stelle im Anfangsteil deutlich voneinander ab, vgl. CPal21, ACO I,5 S.&nbsp;35,16f.: <em>propter occultum adoro quod oculis paret; inseparabilis est deus. eius qui paret dignitatem non separo; inseparabilis est enim</em>, und CPal29,XI, ACO I,5 S.&nbsp;57,38–40: <em>propter utentem id quod ille utitur, colo; propter latentem adoro quod foris paret. [et] inseparabilis est deus ab eo qui oculis paret et in eo qui inseparabilis est, non separo dignitatem</em>.",
           "doc_unit": "CPal29-XI",
@@ -34407,16 +34418,16 @@
           "text_start": "was",
           "refstring_text": "was … Gott]"
         },
-        "CPal29-XI-3-9-damit-Vereh­rung": {
-          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;261,20–262,6 = CV60,VIII, ACO I,1,2 S.&nbsp;47,24–48,2.",
+        "CPal29-XI-5-15-Des-genannt": {
+          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;262,3–12 = CV60,XV, ACO I,1,2 S.&nbsp;49,10–16.",
           "doc_unit": "CPal29-XI",
-          "refstring_lines": "3 – 9 ",
+          "refstring_lines": "5 – 15 ",
           "document": "CPal29",
-          "text_end": "Vereh­rung",
-          "line_start": "3",
-          "line_end": "9",
-          "text_start": "damit",
-          "refstring_text": "damit … Vereh­rung]"
+          "text_end": "ge­nannt",
+          "line_start": "5",
+          "line_end": "15",
+          "text_start": "Des",
+          "refstring_text": "Des … ge­nannt]"
         },
         "CPal29-XI-5-6-Des-benutzt": {
           "note_content": "Zu Christus als Werkzeug Gottes vgl. auch <span data-ref='01_CPal20_dg.xml#r-AWxuigpV 01_CPal20_dg.xml#r-AWxuigpV-e'>CPal20,51 – 52</span>, ACO I,5 S.&nbsp;30,10f. (Dok. 1): <em>non peperit creatura increabilem, sed peperit hominem deitatis instrumentum</em>, und <span data-ref='06_CPal21_dg.xml#r-AWxxjgcu 06_CPal21_dg.xml#r-AWxxjgcu-e'>CPal21,211 – 212</span>, ACO I,5 S.&nbsp;34,33 (Dok. 6): <em>tamquam dominicae bonitatis veneror instrumentum</em>.",
@@ -34429,17 +34440,6 @@
           "text_start": "Des",
           "refstring_text": "Des … benutzt]"
         },
-        "CPal29-XI-1-15-Ich-ge­nannt": {
-          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;261,17–262,12 ≈ CV165, ACO I,1,6 S.&nbsp;8,1–10 ≈ <span data-ref='25_CV166_dg.xml#r-AWyFnccL 25_CV166_dg.xml#r-AWyFnccL-e'>CV166,II,11,1 – 4</span>, ACO I,1,6 S.&nbsp;48,33–36 (Dok. 25); <span data-ref='25_CV166_dg.xml#r-AWyFniPw 25_CV166_dg.xml#r-AWyFniPw-e'>CV166,II,12,1 – 2</span>, ACO I,1,6 S.&nbsp;50,8f.; <span data-ref='25_CV166_dg.xml#r-AWyFnkPe 25_CV166_dg.xml#r-AWyFnkPe-e'>CV166,II,13,1 – 6</span>, ACO I,1,6 S.&nbsp;51,5–8.",
-          "doc_unit": "CPal29-XI",
-          "refstring_lines": "1 – 15 ",
-          "document": "CPal29",
-          "text_end": "ge­nannt",
-          "line_start": "1",
-          "line_end": "15",
-          "text_start": "Ich",
-          "refstring_text": "Ich … ge­nannt]"
-        },
         "CPal29-XI-2-5-Gott-ist": {
           "note_content": "Phil 2,9–11. In CPal21 (ACO I,5 S.&nbsp;35,15f.), endet das Zitat bereits mit <em>omne genu flectatur caelestium, terrestrium et infernorum</em>.",
           "doc_unit": "CPal29-XI",
@@ -34451,6 +34451,17 @@
           "text_start": "Gott",
           "refstring_text": "Gott … ist]"
         },
+        "CPal29-XI-3-9-damit-Verehrung": {
+          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;261,20–262,6 = CV60,VIII, ACO I,1,2 S.&nbsp;47,24–48,2.",
+          "doc_unit": "CPal29-XI",
+          "refstring_lines": "3 – 9 ",
+          "document": "CPal29",
+          "text_end": "Vereh­rung",
+          "line_start": "3",
+          "line_end": "9",
+          "text_start": "damit",
+          "refstring_text": "damit … Vereh­rung]"
+        },
         "CPal29-XI-3-4-damit-beuge": {
           "note_content": "Phil 2,10, vgl. Jes 45,23; Röm 14,11; Offb 5,13.",
           "doc_unit": "CPal29-XI",
@@ -34461,17 +34472,6 @@
           "line_end": "4",
           "text_start": "damit",
           "refstring_text": "damit … beuge]"
-        },
-        "CPal29-XI-5-15-Des-ge­nannt": {
-          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;262,3–12 = CV60,XV, ACO I,1,2 S.&nbsp;49,10–16.",
-          "doc_unit": "CPal29-XI",
-          "refstring_lines": "5 – 15 ",
-          "document": "CPal29",
-          "text_end": "ge­nannt",
-          "line_start": "5",
-          "line_end": "15",
-          "text_start": "Des",
-          "refstring_text": "Des … ge­nannt]"
         }
       },
       "VI": {
@@ -34710,6 +34710,17 @@
           "text_start": "Sie",
           "refstring_text": "Sie]"
         },
+        "CPal29-VII-1-3-bekennen-Wort": {
+          "note_content": "Zu den Worten <em>non tamen novellum fatentur</em> (ACO I,5 S.&nbsp;56,24f.) in ihrem Verhältnis zur griechischen Textvorlage s. Anm. zu <span data-ref='25_CV166_dg.xml#r-AWyFgkpN 25_CV166_dg.xml#r-AWyFgkpN-e'>CV166,I,9,1 – 2</span> (Dok. 25).",
+          "doc_unit": "CPal29-VII",
+          "refstring_lines": "1 – 3 ",
+          "document": "CPal29",
+          "text_end": "Wort",
+          "line_start": "1",
+          "line_end": "3",
+          "text_start": "be­kennen",
+          "refstring_text": "be­kennen … Wort]"
+        },
         "CPal29-VII-1-23-Und-werden": {
           "note_content": "Aus Nestorius, <em>sermo</em> 8, s. Loofs, Nestoriana S.&nbsp;245,15–246,11.",
           "doc_unit": "CPal29-VII",
@@ -34764,17 +34775,6 @@
           "line_end": "23",
           "text_start": "für",
           "refstring_text": "für … werden]"
-        },
-        "CPal29-VII-1-3-be­kennen-Wort": {
-          "note_content": "Zu den Worten <em>non tamen novellum fatentur</em> (ACO I,5 S.&nbsp;56,24f.) in ihrem Verhältnis zur griechischen Textvorlage s. Anm. zu <span data-ref='25_CV166_dg.xml#r-AWyFgkpN 25_CV166_dg.xml#r-AWyFgkpN-e'>CV166,I,9,1 – 2</span> (Dok. 25).",
-          "doc_unit": "CPal29-VII",
-          "refstring_lines": "1 – 3 ",
-          "document": "CPal29",
-          "text_end": "Wort",
-          "line_start": "1",
-          "line_end": "3",
-          "text_start": "be­kennen",
-          "refstring_text": "be­kennen … Wort]"
         },
         "CPal29-VII-3--keinneues-": {
           "note_content": "D.h. kein durch die Geburt aus Maria entstandenes zweites göttliches Wort.",
@@ -35004,17 +35004,6 @@
           "text_start": "Mein",
           "refstring_text": "Mein … Gott‌¹]"
         },
-        "CPal29-VIII-6-8-Be­rühr-habe": {
-          "note_content": "Lk 24,39.",
-          "doc_unit": "CPal29-VIII",
-          "refstring_lines": "6 – 8 ",
-          "document": "CPal29",
-          "text_end": "habe",
-          "line_start": "6",
-          "line_end": "8",
-          "text_start": "Be­rühr",
-          "refstring_text": "Be­rühr … habe]"
-        },
         "CPal29-VIII-1-11-Diesen-ansprach": {
           "note_content": "Aus Nestorius, <em>sermo</em> 10, s. Loofs, Nestoriana S.&nbsp;267,13–268,2 = CV165, ACO I,1,6 S.&nbsp;12,20–28 = <span data-ref='25_CV166_dg.xml#r-AWyFinVH 25_CV166_dg.xml#r-AWyFinVH-e'>CV166,V,6,1 – 12</span>, ACO I,1,6 S.&nbsp;103,8–16 (Dok. 25; griechische Fassung).",
           "doc_unit": "CPal29-VIII",
@@ -35025,6 +35014,17 @@
           "line_end": "11",
           "text_start": "Diesen",
           "refstring_text": "Diesen … ansprach]"
+        },
+        "CPal29-VIII-6-8-Berühr-habe": {
+          "note_content": "Lk 24,39.",
+          "doc_unit": "CPal29-VIII",
+          "refstring_lines": "6 – 8 ",
+          "document": "CPal29",
+          "text_end": "habe",
+          "line_start": "6",
+          "line_end": "8",
+          "text_start": "Be­rühr",
+          "refstring_text": "Be­rühr … habe]"
         }
       },
       "XV": {
@@ -35130,17 +35130,6 @@
       }
     },
     "CPal20": { "text":{
-        "CPal20-45-46-Das...unter­ge­scho­ben-": {
-          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,3f.: ἀνέγκλητος Ἕλλην μητέρας θεοῖς ἐπεισάγων.",
-          "doc_unit": "CPal20",
-          "refstring_lines": "45 – 46 ",
-          "document": "CPal20",
-          "text_end": "Das... unter­ge­scho­ben",
-          "line_start": "45",
-          "line_end": "46",
-          "text_start": "Das... unter­ge­scho­ben",
-          "refstring_text": "Das... unter­ge­scho­ben]"
-        },
         "CPal20-58-59-der-Menschen": {
           "note_content": "Ps 13(14),2. 32(33),13.",
           "doc_unit": "CPal20",
@@ -35196,6 +35185,17 @@
           "text_start": "weil",
           "refstring_text": "weil … ist]"
         },
+        "CPal20-45-46-Das...untergeschoben-": {
+          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,3f.: ἀνέγκλητος Ἕλλην μητέρας θεοῖς ἐπεισάγων.",
+          "doc_unit": "CPal20",
+          "refstring_lines": "45 – 46 ",
+          "document": "CPal20",
+          "text_end": "Das... unter­ge­scho­ben",
+          "line_start": "45",
+          "line_end": "46",
+          "text_start": "Das... unter­ge­scho­ben",
+          "refstring_text": "Das... unter­ge­scho­ben]"
+        },
         "CPal20-48-49-was-Fleisch": {
           "note_content": "Joh 3,6.",
           "doc_unit": "CPal20",
@@ -35218,7 +35218,7 @@
           "text_start": "am",
           "refstring_text": "am … Wort]"
         },
-        "CPal20-47-48-heißt-Stamm­baum": {
+        "CPal20-47-48-heißt-Stammbaum": {
           "note_content": "Nach Loofs (Nestoriana S.&nbsp;252) von Marius Mercator als Erklärung ergänzt.",
           "doc_unit": "CPal20",
           "refstring_lines": "47 – 48 ",
@@ -35355,7 +35355,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2025-10-27T12:01:28.288533468+01:00",
+    "generated-on": "2025-10-27T13:18:46.977911149+01:00",
     "description": ""
   }
 }
