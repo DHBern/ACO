@@ -41,7 +41,7 @@
 		{#each labelsList as label, idx}
 			<Accordion.Item value={label}>
 				<h3>
-					<Accordion.ItemTrigger
+					<Accordion.ItemTrigger class="hover:bg-primary-200-800"
 						><span class="text-2xl font-bold">{label}</span></Accordion.ItemTrigger
 					>
 				</h3>

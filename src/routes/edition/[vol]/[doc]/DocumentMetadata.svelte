@@ -9,7 +9,9 @@
 
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible class="mb-4 shadow-md">
 	<Accordion.Item value="metadata">
-		<Accordion.ItemTrigger><span class="text-2xl font-bold">Metadaten</span></Accordion.ItemTrigger>
+		<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
+			><span class="text-2xl font-bold">Metadaten</span></Accordion.ItemTrigger
+		>
 		<Accordion.ItemContent>
 			<div class="col-span-4 col-start-1 pl-13">
 				{@html generateFootnoteSuperscripts(data.docMetadata?.content?.head)}

@@ -30,7 +30,7 @@
 	>
 		<Accordion.Item value="Band 1">
 			<h3>
-				<Accordion.ItemTrigger
+				<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
 					><span class="text-surface-950-50 text-2xl font-bold">Band 1</span>
 				</Accordion.ItemTrigger>
 			</h3>
@@ -92,7 +92,7 @@
 		{#each volumes as volume}
 			<Accordion.Item value={volume.label}>
 				<h3>
-					<Accordion.ItemTrigger
+					<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
 						><span class="text-surface-950-50 text-2xl font-bold">{volume.label}</span>
 					</Accordion.ItemTrigger>
 				</h3>

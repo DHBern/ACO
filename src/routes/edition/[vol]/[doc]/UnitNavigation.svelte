@@ -13,7 +13,7 @@
 	class="containerSettings mb-4 shadow-md"
 >
 	<Accordion.Item value="unitNav">
-		<Accordion.ItemTrigger
+		<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
 			><span class="text-2xl font-bold">Textstruktur</span></Accordion.ItemTrigger
 		>
 		<Accordion.ItemContent>
