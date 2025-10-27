@@ -529,7 +529,7 @@
         "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill unterzieht die Christologie seines Gegners Nestorius einer groß angelegten Kritik. Zu diesem Zweck zitiert er zahlreiche ihm anstößig erscheinende Aussagen, die jener im Vorfeld getätigt hatte, und stellt diesen dann seine eigenen Ansichten gegenüber.</p>"
       },
       "unitLabelsLong": [
-        "I Praef",
+        "I Praef.",
         "I 1",
         "I 2",
         "I 3",
@@ -540,7 +540,7 @@
         "I 8",
         "I 9",
         "I 10",
-        "II Praef",
+        "II Praef.",
         "II 1",
         "II 2",
         "II 3",
@@ -555,14 +555,14 @@
         "II 12",
         "II 13",
         "II 14",
-        "III Praef",
+        "III Praef.",
         "III 1",
         "III 2",
         "III 3",
         "III 4",
         "III 5",
         "III 6",
-        "IV Praef",
+        "IV Praef.",
         "IV 1",
         "IV 2",
         "IV 3",
@@ -570,7 +570,7 @@
         "IV 5",
         "IV 6",
         "IV 7",
-        "V Praef",
+        "V Praef.",
         "V 1",
         "V 2",
         "V 3",
@@ -1371,7 +1371,7 @@
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2025-10-27T13:18:35.023346741+01:00",
+    "generated-on": "2025-10-27T17:28:33.761271133+01:00",
     "description": ""
   }
 }
