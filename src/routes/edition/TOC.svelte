@@ -36,11 +36,26 @@
 			</h3>
 			<Accordion.ItemContent>
 				<div class="p-10">
-					<a
-						href="{base}/edition/1/vorwort"
-						class="hover:text-secondary-700-300 text-surface-950-50 text-xl"
-						>Vorwort zum ersten Band</a
-					>
+					<p>
+						<a
+							href="{base}/edition/1/vorwort"
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl">Vorwort</a
+						>
+					</p>
+					<p>
+						<a
+							href="{base}/edition/1/einleitung"
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl"
+							>Eine vorläuﬁge Einleitung</a
+						>
+					</p>
+					<p>
+						<a
+							href="{base}/edition/1/anordnung-der-dokumente"
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl"
+							>Zur chronologischen Anordnung der Dokumente in Band 1</a
+						>
+					</p>
 				</div>
 				<div class="grid grid-cols-2 gap-20 p-10">
 					<!-- ACO order -->
