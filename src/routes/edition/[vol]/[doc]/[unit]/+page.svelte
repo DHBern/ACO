@@ -13,6 +13,8 @@
 	import TextUnit from './TextUnit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 
+	import { placeNotes } from '$lib/functions/floatingApparatus';
+
 	import { IsInViewport, ElementRect, ScrollState, useIntersectionObserver } from 'runed';
 
 	import {
