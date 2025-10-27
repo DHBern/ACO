@@ -2,12 +2,14 @@
 import { metaData as mData } from './aco-metadata.json';
 import { textData as tData } from './aco-text.json';
 import { abbData as aData } from './aco-abbreviations.json';
+// import { litData as lData } from './aco-literature.json';
 import { notesData as nData } from './aco-notes.json';
 import { registerData as rData } from './aco-register.json';
 
 const metaData = await mData;
 const textData = await tData;
 const abbData = await aData;
+// const litData = await lData;
 const notesData = await nData;
 const registerData = await rData;
 

@@ -57,6 +57,9 @@
 			</div>
 			<div class="flex-grow"></div>
 
+			<!-- Literautre -->
+			<a href="/edition/1/literatur">Literaturverzeichnis</a>
+
 			<!-- Abbreviations -->
 			<Abbreviations bind:openState={openStateAbbreviations} />
 			<button
