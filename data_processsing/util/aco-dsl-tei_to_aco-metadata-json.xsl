@@ -8,6 +8,7 @@
   xmlns:map="http://www.w3.org/2005/xpath-functions/map"
   xmlns:array="http://www.w3.org/2005/xpath-functions/array"
   xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:util="aco-utils.xsl"
   exclude-result-prefixes="xs xd"
   xpath-default-namespace="http://www.tei-c.org/ns/1.0"
   expand-text="true"
@@ -32,6 +33,8 @@
   <xsl:param name="verbose" static="true" select="true()"/>
   <xsl:param name="path_api" select="'.'"/>
   <xsl:param name="task" select="'metaData'"/>
+  
+  <xsl:import href="aco-utils.xsl"/>
   
   <xsl:template match="/">
    <xsl:variable name="payload">
@@ -94,7 +97,7 @@
         <xsl:for-each select=".//tei:text/tei:body/tei:div/@n">
           <xsl:choose>
             <xsl:when test="contains(.,',')">
-              <string>{. => tokenize(',') => tail() => string-join('-')}</string>
+              <string>{. => tokenize(',') => tail() => string-join('-') => util:sanitizeForJS()}</string>
             </xsl:when>
             <xsl:otherwise>
               <string>text</string>

@@ -281,7 +281,26 @@
       <xsl:attribute name="n" select=".//milestone[@unit='chapter']/@n"/>
       <xsl:sequence select=".//milestone[@unit='chapter']"/>
       <xsl:comment>&lt;pb n="{(.//milestone[@unit='page'])[1]/@n -1}"/></xsl:comment>
-      <xsl:apply-templates mode="text"/>  
+      <xsl:choose>
+        <!-- case: CV166, CV149 -->
+        <xsl:when test="div">
+          <xsl:for-each-group select="." group-starting-with="div">
+            <xsl:choose>
+              <xsl:when test="current-group()[position()=1]">
+                <!-- for the first nested div handle anything except the div itself (but its contents); that is: avoid creating a nested div -->
+                <xsl:apply-templates select="current-group()/node()[following-sibling::div]" mode="text"/>
+                <xsl:apply-templates select="current-group()/div/node()" mode="text"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:apply-templates select="current-group()/node()" mode="text"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:for-each-group>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates mode="text"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:copy>
   </xsl:template>
   
@@ -294,6 +313,12 @@
   </xsl:template>
   
   <xsl:template match="p[@rendition='#rp-Einleitungstext'][matches(.,'\S')][not(preceding-sibling::p[1][@rendition='#rp-kopf'])]" mode="text">
+    <p>
+      <xsl:apply-templates mode="text"/>
+    </p>
+  </xsl:template>
+  
+  <xsl:template match="head[@rendition='#rp-heading_2'][matches(.,'\S')]" mode="text">
     <p>
       <xsl:apply-templates mode="text"/>
     </p>
@@ -380,7 +405,7 @@
   
   <xsl:template match="note/p" mode="text">
     <xsl:choose>
-      <xsl:when test="mentioned[.//text()]">
+      <!--<xsl:when test="mentioned[.//text()]">
         <xsl:apply-templates mode="text"/>
       </xsl:when>
       <xsl:otherwise>
@@ -389,9 +414,9 @@
             <xsl:with-param name="mentioned" select="mentioned"/>
           </xsl:call-template>
         </xsl:variable>
-          <xsl:variable name="id-of-first-with-closing-bracket" select=".//node()[contains(.,']')][1]/generate-id()"/>
-        <xsl:variable name="note-content">
-        </xsl:variable>
+        <xsl:variable name="id-of-first-with-closing-bracket" select=".//node()[contains(.,']')][1]/generate-id()"/>
+        <!-\-<xsl:variable name="note-content">
+        </xsl:variable>-\->
         <xsl:sequence select="$mentioned-new"/>
         <xsl:for-each select=".//node()[generate-id()=$id-of-first-with-closing-bracket]">
           <xsl:choose>
@@ -407,6 +432,32 @@
           </xsl:choose>
         </xsl:for-each>
         <xsl:sequence select=".//node()[generate-id()=$id-of-first-with-closing-bracket]/following-sibling::node()"/>
+      </xsl:otherwise>-->
+      <xsl:when test="mentioned[not(.//text()) or .//text()='#']">
+        <xsl:variable name="mentioned-new">
+          <xsl:call-template name="synthesize-mentioned">
+            <xsl:with-param name="mentioned" select="mentioned"/>
+          </xsl:call-template>
+        </xsl:variable>
+        <xsl:variable name="id-of-first-with-closing-bracket" select=".//node()[contains(.,']')][1]/generate-id()"/>
+        <xsl:sequence select="$mentioned-new"/>
+        <xsl:for-each select=".//node()[generate-id()=$id-of-first-with-closing-bracket]">
+          <xsl:choose>
+            <xsl:when test="self::text()">
+              <xsl:sequence select=". => substring-after(']')"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:copy>
+                <xsl:copy-of select="@*"/>
+                <xsl:sequence select=". => substring-after(']')"/>
+              </xsl:copy>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+        <xsl:sequence select=".//node()[generate-id()=$id-of-first-with-closing-bracket]/following-sibling::node()"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates mode="text"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -476,7 +527,7 @@
   
   
   <xsl:template match="note[@place='left' or @place='right']//text()" mode="text"/>
-  <xsl:template match="head//text()" mode="text"/>
+  <xsl:template match="head[not(@rendition='#rp-heading_2')]//text()" mode="text"/>
   <xsl:template match="hi[contains(@rend,'display:none;')]//text()" mode="text"/>
   <xsl:template match="p[@rendition='#rp-kopf']//text()" mode="text"/>
   

@@ -46,7 +46,7 @@
     <xsl:variable name="payload">
       <xsl:call-template name="build-json"/>
     </xsl:variable>
-    <xsl:sequence select="$payload => xml-to-json(map { 'indent' : true() }) => replace('\sxmlns=\p{P}.*?([\s>])','$1') => normalize-space() => replace('\s–','&#160;–') => parse-json()"/>
+    <xsl:sequence select="$payload => xml-to-json(map { 'indent' : true() }) => replace('\sxmlns=\p{P}.*?([\s>])','$1') => normalize-space() => replace('\s–','&#160;–') => dsl:massageString() => parse-json()"/>
     
     <xsl:message>Task `{$task}` done.</xsl:message>
   </xsl:template>
@@ -67,9 +67,9 @@
   
   <xsl:template match="tei:TEI">
     <xsl:variable name="textId" select="@xml:id => tokenize('_') => reverse() => head() => replace(',','-')"/>
-    <map key="{$textId}">
+    <map key="{$textId => util:sanitizeForJS()}">
       <xsl:for-each select="tei:text/tei:body/tei:div">
-        <string key="{if (contains(@n,',')) then @n => replace(',','-') => substring-after($textId||'-') else 'text'}">
+        <string key="{if (contains(@n,',')) then @n => replace(',','-') => substring-after($textId||'-') => util:sanitizeForJS() else 'text'}">
           <xsl:variable name="build-text">
             <xsl:apply-templates select="." mode="build-text"/>
           </xsl:variable>
@@ -81,7 +81,19 @@
   </xsl:template>
   
   <xsl:template match="tei:div" mode="build-text">
-    <section data-unit="{@n => replace(',','-')}">
+    <xsl:variable name="textId" select="ancestor::tei:TEI[1]/@xml:id => tokenize('_') => reverse() => head() => replace(',','-')"/>
+    <section>
+      <xsl:attribute name="data-unit">
+        <xsl:choose>
+          <xsl:when test="@n/data() and contains(@n,',')">{@n => replace(',','-') => substring-after($textId||'-') => util:sanitizeForJS()}</xsl:when>
+<!--          <xsl:when test="@n/data()">{@n => replace(',','-') => util:sanitizeForJS()}</xsl:when>-->
+          <!-- workaround; this shouldn't happen and should be flagged -->
+          <xsl:when test="@n=''">{ancestor::tei:div/@n[data()][1] => replace(',','-') => substring-after($textId||'-') => util:sanitizeForJS()}</xsl:when>
+          <xsl:when test="not(contains(@n,','))">text</xsl:when>
+          <xsl:otherwise></xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+      
       <xsl:apply-templates mode="build-text"/>
     </section>
   </xsl:template>
@@ -93,7 +105,7 @@
   </xsl:template>
   
   <xsl:template match="tei:lb" mode="build-text" xml:space="preserve">
-    <xsl:if test="preceding-sibling::node()[matches(.,'\S')]"><br/></xsl:if><a data-line="{@n}">&#8203;</a><xsl:apply-templates mode="build-text"/>
+    <xsl:if test="preceding-sibling::node()[matches(.,'\S')]"><xsl:if test="@type='hyphen'"><span data-hyphen="">‐</span></xsl:if><br/></xsl:if><a data-line="{@n}">&#8203;</a><xsl:apply-templates mode="build-text"/>
   </xsl:template>
   
   <xsl:template match="tei:pb[@n/data()]" mode="build-text" xml:space="preserve">
@@ -104,9 +116,12 @@
     <span data-type="note-start" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),.)}"></span>
   </xsl:template>
   
-  <xsl:template match="tei:seg" mode="build-text">
+  <xsl:variable name="docNotes" select="//tei:note"/>
+  
+  <!-- some seg elements don't seem to be linked to notes; might need a separate template to process them at some point -->
+  <xsl:template match="tei:seg['#'||@xml:id=$docNotes/@targetEnd]" mode="build-text">
     <xsl:variable name="seg-id" select="@xml:id"/>
-    <xsl:apply-templates mode="build-text"/><span data-type="note-end" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),.//tei:note[@targetEnd='#'||$seg-id][1])}"></span>
+    <xsl:apply-templates mode="build-text"/><span data-type="note-end" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),$docNotes[@targetEnd='#'||$seg-id][1])}"></span>
   </xsl:template>
   
   <xsl:template match="tei:hi[@rendition='#i']" mode="build-text">
@@ -127,5 +142,19 @@
   
   
   <!-- TODO: reglink -->
+  
+  
+  <!-- helper function to operate on the resulting string (strip specific spaces, etc) -->
+  <xsl:function name="dsl:massageString">
+    <xsl:param name="input"/>
+    <xsl:sequence select="$input
+      (: purge whitespace after linebreak :)
+      => replace('(data-line=.{7,10}/a>)\s+','$1')
+      (: purge whitespace before hyphen :)
+      => replace('\s(.span data-hyphen=)','$1')
+      (: non-breaking space between note spans :)
+      => replace('(data-id=.*?/>)\s+(&lt;.*?data-id=.*?/>)','$1&#xA0;$2')
+      "/>
+  </xsl:function>
   
 </xsl:stylesheet>

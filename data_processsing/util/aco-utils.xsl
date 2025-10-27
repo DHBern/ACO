@@ -48,7 +48,13 @@
       <xsl:sequence select="'-'"/>
       <xsl:sequence select="$note/tei:mentioned/text() => string-join('') => tokenize('…') => tail()=> string-join('') => substring-before(']') => normalize-space() => util:undoSuperscript()"/>
     </xsl:variable>
-    <xsl:sequence select="$noteKey => util:trimSpace()"/>   
+    <xsl:sequence select="$noteKey => util:trimSpace() => util:trimShy() => util:sanitizeForJS()"/>   
+  </xsl:function>
+  
+  <xsl:function name="util:trimShy">
+    <xsl:param name="input"/>
+    <xsl:sequence select="$input 
+      => replace('­','') (: U+00AD :)"/> 
   </xsl:function>
   
   <xsl:function name="util:trimSpecialSpace">
@@ -70,6 +76,12 @@
     <xsl:param name="input"/>
     <xsl:sequence select="$input
       => translate('¹²³⁴⁵','12345')"/>
+  </xsl:function>
+  
+  <xsl:function name="util:sanitizeForJS">
+    <xsl:param name="input"/>
+    <xsl:sequence select="$input 
+      => replace('\.','')"/> 
   </xsl:function>
   
 </xsl:stylesheet>
