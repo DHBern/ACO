@@ -343,7 +343,7 @@
 		{/if}
 		<!-- Units -->
 		<div
-			class="row-span-1 row-start-2 grid grid-cols-[70px_40px_1fr] gap-6 lg:grid-cols-[70px_20px_auto_1fr]"
+			class="row-span-1 row-start-2 grid grid-cols-[70px_20px_1fr] gap-6 lg:grid-cols-[70px_70px_auto_1fr]"
 		>
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
@@ -436,7 +436,7 @@
 	}
 	.containerLineNums :global(a.line-number:hover::after),
 	.containerPageNums :global(a.page-number:hover::after) {
-		@apply inline-block;
+		@apply lg:inline-block;
 	}
 	.containerLineNums :global(.lineNumBuffer) {
 		@apply text-surface-950-50/0 select-none;
