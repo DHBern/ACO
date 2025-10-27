@@ -28,13 +28,14 @@
 	<ul class="bg-secondary-300-700/60 w-full">
 		{#each multiMarkPopupStore.slugs.filter((slug) => slug !== 'TODO') as id (id)}
 			{@const idMetadata = notesData[slug_doc][multiMarkPopupStore.slugUnitTarget][id]}
-			<li class="hover:bg-secondary-300-700 p-2">
+			<li class="hover:bg-secondary-300-700">
 				<button
+					class="block w-full border-none p-2 text-left"
 					onclick={() => {
 						handlePopupClick(id, selectedNote, multiMarkPopupStore);
 					}}
 				>
-					<p class="color-sky-900 m-0 !pt-0">
+					<p class="color-sky-900 m-0 pt-0!">
 						{@html createNoteReferenceString(
 							idMetadata.line_start,
 							idMetadata.line_end,
