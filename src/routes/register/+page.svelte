@@ -37,7 +37,7 @@
 </script>
 
 {#snippet accordion(labelsList, groupedList, accordionState)}
-	<Accordion {accordionState} onValueChange={(e) => (accordionState.value = e.value)} collapsible>
+	<Accordion {accordionState} onValueChange={(e) => (accordionState.value = e.value)} multiple>
 		{#each labelsList as label, idx}
 			<Accordion.Item value={label}>
 				<h3>

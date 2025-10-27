@@ -25,7 +25,7 @@
 	<Accordion
 		value={accordionState}
 		onValueChange={(e) => (accordionState = e.value)}
-		collapsible
+		multiple
 		class="mb-4 shadow-md"
 	>
 		<Accordion.Item value="Band 1">
