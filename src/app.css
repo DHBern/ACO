@@ -70,7 +70,8 @@ span[data-type='head_key'] {
 }
 
 /* Prevent selecting <br /> on copy-paste */
-.copyWithoutLinebreaks br {
+.copyWithoutLinebreaks br,
+span[data-hyphen] {
 	@apply select-none;
 }
 
