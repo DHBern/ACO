@@ -7,7 +7,7 @@
 	let { data } = $props();
 </script>
 
-<Accordion {value} onValueChange={(e) => (value = e.value)} collapsible classes="shadow-md mb-4">
+<Accordion {value} onValueChange={(e) => (value = e.value)} collapsible class="mb-4 shadow-md">
 	<Accordion.Item value="metadata">
 		<Accordion.ItemTrigger><span class="text-2xl font-bold">Metadaten</span></Accordion.ItemTrigger>
 		<Accordion.ItemContent>

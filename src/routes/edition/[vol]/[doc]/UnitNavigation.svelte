@@ -10,7 +10,7 @@
 	{value}
 	onValueChange={(e) => (value = e.value)}
 	collapsible
-	classes="containerSettings shadow-md mb-4"
+	class="containerSettings mb-4 shadow-md"
 >
 	<Accordion.Item value="unitNav">
 		<Accordion.ItemTrigger
