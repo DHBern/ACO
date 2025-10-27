@@ -1283,7 +1283,7 @@
       "acoDocNum": "6",
       "acoDocLabel": "Dok. 6",
       "type": "CPal",
-      "title": "[🚧 TODO] Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10)",
+      "title": "[🚧TODO] Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10)",
       "slug": "CPal21",
       "unitSlugs": [],
       "unitLabelsLong": [],
@@ -1291,7 +1291,7 @@
         ""
       ],
       "content": {
-        "head": "error during input processing",
+        "head": "error during input processing (structural anomalies)",
         "inhalt": ""
       }
     },
@@ -1301,7 +1301,7 @@
       "acoDocNum": "8",
       "acoDocLabel": "Dok. 8",
       "type": "CV",
-      "title": "[🚧 TODO] Kyrills Brief an die Apokrisiare in Konstantinopel",
+      "title": "[🚧TODO] Kyrills Brief an die Apokrisiare in Konstantinopel",
       "slug": "CV22",
       "unitSlugs": [],
       "unitLabelsLong": [],
@@ -1309,7 +1309,7 @@
         ""
       ],
       "content": {
-        "head": "error during input processing",
+        "head": "error during input processing (structural anomalies)",
         "inhalt": ""
       }
     },
@@ -1319,7 +1319,7 @@
       "acoDocNum": "22",
       "acoDocLabel": "Dok. 22",
       "type": "CVer",
-      "title": "[🚧 TODO] Nestorius’ zweiter Brief an Coelestin",
+      "title": "[TODO] Nestorius’ zweiter Brief an Coelestin",
       "slug": "CVer4",
       "unitSlugs": [],
       "unitLabelsLong": [],
@@ -1327,7 +1327,7 @@
         ""
       ],
       "content": {
-        "head": "error during input processing",
+        "head": "error during input processing (structural anomalies)",
         "inhalt": ""
       }
     },
@@ -1337,7 +1337,7 @@
       "acoDocNum": "31",
       "acoDocLabel": "Dok. 31",
       "type": "CVer",
-      "title": "[🚧 TODO] Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
+      "title": "[🚧TODO] Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
       "slug": "CVer5",
       "unitSlugs": [],
       "unitLabelsLong": [],
@@ -1345,7 +1345,7 @@
         ""
       ],
       "content": {
-        "head": "error during input processing",
+        "head": "error during input processing (structural anomalies)",
         "inhalt": ""
       }
     },
@@ -1355,7 +1355,7 @@
       "acoDocNum": "40",
       "acoDocLabel": "Dok. 40",
       "type": "CV",
-      "title": "[🚧 TODO] Kyrills Rede an die Herrinnen",
+      "title": "[🚧🚧TODO] Kyrills Rede an die Herrinnen",
       "slug": "CV150",
       "unitSlugs": [],
       "unitLabelsLong": [],
@@ -1363,7 +1363,7 @@
         ""
       ],
       "content": {
-        "head": "error during input processing",
+        "head": "error during input processing (structural anomalies)",
         "inhalt": ""
       }
     }
@@ -1371,7 +1371,7 @@
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2025-10-26T10:43:57.324462704+01:00",
+    "generated-on": "2025-10-27T10:49:14.06355704+01:00",
     "description": ""
   }
 }
