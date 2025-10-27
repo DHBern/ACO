@@ -14,7 +14,7 @@
 >
 	<Accordion.Item value="unitNav">
 		<Accordion.ItemTrigger
-			><span class="text-xl font-bold">Dokumentenstruktur</span></Accordion.ItemTrigger
+			><span class="text-2xl font-bold">Textstruktur</span></Accordion.ItemTrigger
 		>
 		<Accordion.ItemContent>
 			<div class="containerDocUnits my-5 max-h-60 overflow-y-scroll">
