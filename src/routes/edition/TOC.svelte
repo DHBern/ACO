@@ -35,24 +35,24 @@
 				</Accordion.ItemTrigger>
 			</h3>
 			<Accordion.ItemContent>
-				<div class="p-10">
+				<div class="pt-5 pl-10">
 					<p>
 						<a
 							href="{base}/edition/1/vorwort"
-							class="hover:text-secondary-700-300 text-surface-950-50 text-xl">Vorwort</a
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold">Vorwort</a
 						>
 					</p>
 					<p>
 						<a
 							href="{base}/edition/1/einleitung"
-							class="hover:text-secondary-700-300 text-surface-950-50 text-xl"
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
 							>Eine vorläuﬁge Einleitung</a
 						>
 					</p>
 					<p>
 						<a
 							href="{base}/edition/1/anordnung-der-dokumente"
-							class="hover:text-secondary-700-300 text-surface-950-50 text-xl"
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
 							>Zur chronologischen Anordnung der Dokumente in Band 1</a
 						>
 					</p>
