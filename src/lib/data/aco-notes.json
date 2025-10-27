@@ -18105,6 +18105,17 @@
           "text_start": "die",
           "refstring_text": "die … sind]"
         },
+        "CPal34-61-62-behauptet...Ka­te­chu­me­nen-": {
+          "note_content": "Der Text scheint an dieser Stelle verderbt zu sein. Loofs (Nestoriana S.&nbsp;349f.) schließt eine Lücke vor melior nicht aus.",
+          "doc_unit": "CPal34",
+          "refstring_lines": "61 – 62 ",
+          "document": "CPal34",
+          "text_end": "behauptet... Ka­te­chu­me­nen",
+          "line_start": "61",
+          "line_end": "62",
+          "text_start": "behauptet... Ka­te­chu­me­nen",
+          "refstring_text": "behauptet... Ka­te­chu­me­nen]"
+        },
         "CPal34-5-8-brachte-ausgoss": {
           "note_content": "Vgl. Gen 2,19f.",
           "doc_unit": "CPal34",
@@ -18313,17 +18324,6 @@
           "line_end": "18",
           "text_start": "Unter­re­dung",
           "refstring_text": "Unter­re­dung]"
-        },
-        "CPal34-61-62--": {
-          "note_content": "Der Text scheint an dieser Stelle verderbt zu sein. Loofs (Nestoriana S.&nbsp;349f.) schließt eine Lücke vor <em>melior</em> nicht aus.",
-          "doc_unit": "CPal34",
-          "refstring_lines": "61 – 62 ",
-          "document": "CPal34",
-          "text_end": "",
-          "line_start": "61",
-          "line_end": "62",
-          "text_start": "",
-          "refstring_text": ""
         },
         "CPal34-62-63-Jene-Kirchen": {
           "note_content": "Weil sie an der Eucharistie noch nicht teilnehmen dürfen.",
@@ -18559,6 +18559,17 @@
       }
     },
     "CPal36": { "text":{
+        "CPal36-42-44-eilte...an­zu­stre­ben-": {
+          "note_content": "Vgl. hierzu Lössl (2001), S.&nbsp;253.",
+          "doc_unit": "CPal36",
+          "refstring_lines": "42 – 44 ",
+          "document": "CPal36",
+          "text_end": "eilte... an­zu­stre­ben",
+          "line_start": "42",
+          "line_end": "44",
+          "text_start": "eilte... an­zu­stre­ben",
+          "refstring_text": "eilte... an­zu­stre­ben]"
+        },
         "CPal36-84-85-Wie-übergegangen": {
           "note_content": "Röm 5,12.",
           "doc_unit": "CPal36",
@@ -19262,17 +19273,6 @@
           "line_end": "59",
           "text_start": "Priesters",
           "refstring_text": "Priesters]"
-        },
-        "CPal36-42-44--": {
-          "note_content": "Vgl. hierzu Lössl (2001), S.&nbsp;253.",
-          "doc_unit": "CPal36",
-          "refstring_lines": "42 – 44 ",
-          "document": "CPal36",
-          "text_end": "",
-          "line_start": "42",
-          "line_end": "44",
-          "text_start": "",
-          "refstring_text": ""
         },
         "CPal36-162-163-wurden-vertrieben": {
           "note_content": "Julian sah sich im Sommer 418 mit der <em>Tractoria</em> konfrontiert. Doch scheiterten all seine Versuche, die Unterschrift ohne Konsequenzen für sich zu umgehen, schließlich endgültig. Denn noch kurz bevor Zosimus am 26. Dezember 418 starb, verurteilte er Julian, am 9. Juni 419 folgte ein kaiserliches Edikt. So sah sich Julian genötigt, noch im Jahr 419 Italien zu verlassen. Vgl. hierzu im Einzelnen Lössl (2001), S.&nbsp;273–292.",
@@ -27273,6 +27273,17 @@
           "text_start": "die",
           "refstring_text": "die … gewährt]"
         },
+        "CV7-4-22-24-Denn...Beel­ze­bubs-": {
+          "note_content": "Vgl. 1 Kor 12,3. Der zweite Teilsatz, mit dem das Zitat im Korintherbrief beginnt, lautet bei Paulus: „[...] ὅτι οὐδεὶς ἐν πνεύματι θεοῦ λαλῶν λέγει, ἀνάθεμα Ἰησοῦς“ ([...] dass keiner, der im Geist Gottes spricht, Jesus verflucht nennt). Die Wendung εἰ μὴ ἐν Βεελζεβούλ kommt hingegen nur bei Kyrill vor und ist wohl von Mt 12,24 beeinflusst. Das ‚Zitat‘ ist in De incarnatione dem B-Sprecher zugeordnet.",
+          "doc_unit": "CV7-4",
+          "refstring_lines": "22 – 24 ",
+          "document": "CV7",
+          "text_end": "Denn... Beel­ze­bubs",
+          "line_start": "22",
+          "line_end": "24",
+          "text_start": "Denn... Beel­ze­bubs",
+          "refstring_text": "Denn... Beel­ze­bubs]"
+        },
         "CV7-4-17-22-Daher-schreibt": {
           "note_content": "Von dieser Stelle an zeigt die Rede deutliche inhaltliche und wörtliche Parallelen zu Kyrills Abhandlung <em>De incarnatione unigeniti</em>. Die hier teils einfach monologische, teils aber auch durch einen fiktiven Interlokutor oder direkte Ansprache an den Adressaten dialogisch gestaltete Rede, erscheint dort als echter Dialog. Welches der Werke dem anderen vorangeht, ist in der For­schung umstritten: während z.B. Schwartz (ACO I,1,1 S.&nbsp;42,8f.) und Pusey (1965 [= 1868–1877], Bd.&nbsp;7 S.&nbsp;VIII) davon ausgehen, dass <em>De recta fide</em> das ursprüngliche Werk sei, plädieren u.a. de Durand (1964, S.&nbsp;52–57) und van Loon (2009, S.&nbsp;419–425) für die Priorität von <em>De incarnatione</em>. Zumindest de Durand geht dabei davon aus (van Loon hält es immerhin für möglich), dass <em>De incarnatione</em> sogar noch vor dem nestorianschen Streit verfasst worden ist und es sich hierbei um jene Schrift handele, die Kyrill am Ende seines ersten Briefes an Nestorius erwähnt (vgl. ACO I,1,1 S.&nbsp;24,19–25). Während eine Analyse der Unterschiede zwischen den beiden Werken tatsächlich die Vermutung nahelegt, dass <em>De recta fide</em> eine im Detail präzisierende, gegen mögliche Einwände bes­ser abgesicherte Revision von <em>De incarnatione</em> darstellt, bleibt bei einer angenommenen Ab­fas­sungs­zeit vor 425 (Tod des Attikos von Konstantinopel) auf jeden Fall die Frage, wer eigentlich die pro­to­nestorianischen Gegner sind, die hier so überproportional umfangreich widerlegt werden. Auf­fal­lend bleibt aber auf jeden Fall, dass sich in <em>De recta fide</em> im Vergleich zu z.B. dem Brief an die ägyptischen Mönche (CV1 [Dok. 5]) und der Schrift <em>Ad augustas</em> kaum Bezüge auf konkrete und durch erhaltene Fragmente belegte Elemente der nestorianischen Christologie finden.",
           "doc_unit": "CV7-4",
@@ -27283,17 +27294,6 @@
           "line_end": "22",
           "text_start": "Daher",
           "refstring_text": "Daher … schreibt]"
-        },
-        "CV7-4-22-24--": {
-          "note_content": "Vgl. 1 Kor 12,3. Der zweite Teilsatz, mit dem das Zitat im Korintherbrief beginnt, lautet bei Paulus: „[...] <span data-lang='greek'>ὅτι οὐδεὶς ἐν πνεύματι θεοῦ λαλῶν λέγει, ἀνάθεμα Ἰησοῦς</span>“ ([...] dass keiner, der im Geist Gottes spricht, Jesus verflucht nennt). Die Wendung <span data-lang='greek'>εἰ μὴ ἐν Βεελζεβούλ</span> kommt hingegen nur bei Kyrill vor und ist wohl von Mt 12,24 beeinflusst. Das ‚Zitat‘ ist in <em>De incarnatione</em> dem B-Sprecher zugeordnet.",
-          "doc_unit": "CV7-4",
-          "refstring_lines": "22 – 24 ",
-          "document": "CV7",
-          "text_end": "",
-          "line_start": "22",
-          "line_end": "24",
-          "text_start": "",
-          "refstring_text": ""
         },
         "CV7-4-7-8-und-strahlen": {
           "note_content": "An Adressatinnen, die er als ‚Kaiserinnen‘ anspricht, schrieb Kyrill auch zwei separate Abhandlungen, nämlich <em>Ad dominas</em> und <em>Ad augustas</em>. Wem diese genau gegolten haben, ist abseits traditioneller Konventionen eher unklar (vgl. Anm. zu <span data-ref='41_CV149_dg.xml#r-AWyLHUjl 41_CV149_dg.xml#r-AWyLHUjl-e'>CV149,1,1 – 2</span> [Dok. 41] und <span data-ref='40_CV150_dg.xml#r-AWyLHhaD 40_CV150_dg.xml#r-AWyLHhaD-e'>CV150,1,3</span> [Dok. 40]). In jedem Fall zeigte sich aber der Kaiser über diese Vorgehensweise Kyrills verärgert, da er argwöhnte, der Alexandriner wolle Zwietracht innerhalb der kaiserlichen Familie säen (vgl. <span data-ref='43_CV8_dg.xml#r-AWyLHFMe 43_CV8_dg.xml#r-AWyLHFMe-e'>CV8,3,6 – 10</span> mit Anm. [Dok. 43]).",
@@ -35130,6 +35130,17 @@
       }
     },
     "CPal20": { "text":{
+        "CPal20-45-46-Das...unter­ge­scho­ben-": {
+          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,3f.: ἀνέγκλητος Ἕλλην μητέρας θεοῖς ἐπεισάγων.",
+          "doc_unit": "CPal20",
+          "refstring_lines": "45 – 46 ",
+          "document": "CPal20",
+          "text_end": "Das... unter­ge­scho­ben",
+          "line_start": "45",
+          "line_end": "46",
+          "text_start": "Das... unter­ge­scho­ben",
+          "refstring_text": "Das... unter­ge­scho­ben]"
+        },
         "CPal20-58-59-der-Menschen": {
           "note_content": "Ps 13(14),2. 32(33),13.",
           "doc_unit": "CPal20",
@@ -35160,19 +35171,8 @@
           "text_end": "es",
           "line_start": "6",
           "line_end": "6",
-          "text_start": "sie‌¹",
+          "text_start": "sie‌¹\n ",
           "refstring_text": "sie‌¹ … es]"
-        },
-        "CPal20-45-46--": {
-          "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,3f.: <span data-lang='greek'>ἀνέγκλητος Ἕλλην μητέρας θεοῖς ἐπεισάγων</span>.",
-          "doc_unit": "CPal20",
-          "refstring_lines": "45 – 46 ",
-          "document": "CPal20",
-          "text_end": "",
-          "line_start": "45",
-          "line_end": "46",
-          "text_start": "",
-          "refstring_text": ""
         },
         "CPal20-12-13-der-befinde": {
           "note_content": "Die Wahl des Wortes <em>conservare</em> in diesem Zusammenhang ist ungewöhnlich. Möglicherweise liegt eine Verwechslung mit <em>conversari</em> vor. Konstruiert ist jedoch gemäß <em>conservare</em>.",
@@ -35228,17 +35228,6 @@
           "line_end": "48",
           "text_start": "heißt",
           "refstring_text": "heißt … Stamm­baum]"
-        },
-        "CPal20-47-48--": {
-          "note_content": "Hebr 7,3.",
-          "doc_unit": "CPal20",
-          "refstring_lines": "47 – 48 ",
-          "document": "CPal20",
-          "text_end": "",
-          "line_start": "47",
-          "line_end": "48",
-          "text_start": "",
-          "refstring_text": ""
         },
         "CPal20-52--sondern-geboren‌2": {
           "note_content": "Zur griech. Fassung s. Loofs, Nestoriana S.&nbsp;252,10f.: <span data-lang='greek'>ἀλλ’ ἔτεκεν ἄν­θρω­πον</span>, <span data-lang='greek'>θεότητος ὄργανον</span>.",
@@ -35306,6 +35295,17 @@
           "text_start": "entschuldbar",
           "refstring_text": "entschuldbar]"
         },
+        "CPal20-47-48--Stammbaum": {
+          "note_content": "Hebr 7,3.",
+          "doc_unit": "CPal20",
+          "refstring_lines": "47 – 48 ",
+          "document": "CPal20",
+          "text_end": "Stammbaum",
+          "line_start": "47",
+          "line_end": "48",
+          "text_start": "ἀπάτωρ",
+          "refstring_text": "<span data-lang='greek'>ἀπάτωρ</span> … Stammbaum]"
+        },
         "CPal20-53-54-denn-Geist": {
           "note_content": "Mt 1,20.",
           "doc_unit": "CPal20",
@@ -35355,7 +35355,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2025-10-27T10:49:23.315609664+01:00",
+    "generated-on": "2025-10-27T12:01:28.288533468+01:00",
     "description": ""
   }
 }

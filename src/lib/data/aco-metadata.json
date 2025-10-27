@@ -1355,7 +1355,7 @@
       "acoDocNum": "40",
       "acoDocLabel": "Dok. 40",
       "type": "CV",
-      "title": "[🚧🚧TODO] Kyrills Rede an die Herrinnen",
+      "title": "[🚧TOD Kyrills Rede an die Herrinnen",
       "slug": "CV150",
       "unitSlugs": [],
       "unitLabelsLong": [],
@@ -1371,7 +1371,7 @@
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2025-10-27T10:49:14.06355704+01:00",
+    "generated-on": "2025-10-27T12:01:17.956196922+01:00",
     "description": ""
   }
 }
