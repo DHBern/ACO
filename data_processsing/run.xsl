@@ -30,6 +30,8 @@
   <xsl:param name="verbose" static="true" select="true()"/>
   <!-- old-style-precede (default), old-style-follow, app-tags (not implemented) -->
   <xsl:param name="cte-apparatus-export-method" static="true" select="'old-style-precede'"/>
+  
+  <xsl:param name="file-dir" static="true" select="'input-dev-new-export'"/>
 
   <xsl:template name="xsl:initial-template">
 
@@ -38,7 +40,7 @@
     <xsl:variable name="tei-pre-processed" as="map(*)">
       <xsl:map>
         
-        <xsl:for-each select="uri-collection('input-dev-new-export?select=*.xml')">
+        <xsl:for-each select="uri-collection($file-dir||'?select=*.xml')">
     
           <xsl:variable name="filename" as="xs:string" select="(. => tokenize('/'))[last()]"/>
     
@@ -74,7 +76,7 @@
     <xsl:variable name="meta-processed" as="map(*)">
       <xsl:map>
         
-        <xsl:for-each select="uri-collection('input-dev/meta?select=*.xml')">
+        <xsl:for-each select="uri-collection($file-dir||'/meta?select=*.xml')">
           
           <xsl:variable name="filename" as="xs:string" select="(. => tokenize('/'))[last()]"/>
           
@@ -88,7 +90,55 @@
       </xsl:map>
     </xsl:variable>
     
-        
+    <xsl:variable name="tei-corpus" as="node()">
+      <xsl:sequence select="transform(
+        map {
+        'stylesheet-location' : 'util/aco-create-tei-corpus.xsl',
+        'source-node' : doc('util/aco-create-tei-corpus.xsl'),
+        'static-params': map{
+        QName('', 'files-map') : $tei-pre-processed,
+        QName('', 'meta-map') : $meta-processed,
+        QName('', 'use-step') : 'step2' }
+        })?output
+        "/>
+    </xsl:variable>
+
+    <!-- accumulating poimter targets to have an efficient way to determine links -->
+    <xsl:variable name="accumulated-pointer-targets" as="map(xs:string, map(*))" select="
+          fold-left(
+          $tei-corpus//TEI[@ana='aco-doc']//*[local-name()=('anchor','ref','seg')][@xml:id],
+          map{},
+          function($acc, $r) {
+            let $id := $r/@xml:id/data(),
+                $doc := $r/ancestor::TEI[1]/@xml:id/data() => util:canonizeFilename(),
+                $docId := $doc => substring-after('_'),
+                $key := $doc||'#'||$id => replace('_anchor',''),
+                $chapter := $r/ancestor::div[1]/@n/data(),
+                $line := $r/preceding::lb[1]/@n/data()
+            return
+              if ($id = '') then $acc
+              else
+                let $occ := map{
+                  'doc'     : $doc,
+                  'id'      : $id,
+                  'chapter' : if ($chapter = '') then () else $chapter,
+                  'line'    : if ($line = '') then () else $line,
+                  'target'  : '../'||$docId||'?line='||$line,
+                  'context' : $r => string() => normalize-space()
+                  },
+                $existing := $acc => map:get($key)
+              return
+                if (exists($existing)) then $acc       (: keep first occurrence :)
+                else $acc => map:put($key, $occ)
+                }
+          )"/>
+      
+
+    
+    <!-- debug -->
+    <xsl:result-document href="{$basepath}/output/accumulated-pointer-targets.json" method="json" indent="true" exclude-result-prefixes="#all" use-character-maps="unescape-solidus">
+      <xsl:sequence select="$accumulated-pointer-targets"/>
+    </xsl:result-document>
         
     <!-- storing intermediary XML files to step folders -->  
     <!-- files -->
@@ -105,19 +155,6 @@
     
     
     <!-- creating output formats -->
-    
-    <xsl:variable name="tei-corpus" as="node()">
-      <xsl:sequence select="transform(
-        map {
-        'stylesheet-location' : 'util/aco-create-tei-corpus.xsl',
-        'source-node' : doc('util/aco-create-tei-corpus.xsl'),
-        'static-params': map{ 
-        QName('', 'files-map') : $tei-pre-processed,
-        QName('', 'meta-map') : $meta-processed,
-        QName('', 'use-step') : 'step2' }
-        })?output
-        "/>
-    </xsl:variable>
     
     <xsl:result-document href="{$basepath}/output/aco-teicorpus.xml" method="xml" indent="true">
       <xsl:sequence select="$tei-corpus"/>  
@@ -151,7 +188,10 @@
         map {
         'stylesheet-location' : 'util/aco-dsl-tei_to_aco-notes-json.xsl',
         'source-node' : $tei-corpus,
-        'delivery-format' : 'raw'
+        'delivery-format' : 'raw',
+        'static-params': map{ 
+        QName('', 'accumulated-pointer-targets') : $accumulated-pointer-targets
+        }
         })?output
         "/>
       <xsl:message use-when="$verbose">…writing {$basepath}/output/aco-notes.json…</xsl:message>

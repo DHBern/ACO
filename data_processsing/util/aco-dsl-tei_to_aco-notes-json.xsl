@@ -36,7 +36,6 @@
   <xsl:param name="basepath" select="'.'"/>
   <xsl:param name="task" select="'textData'"/>
   
-  
   <xsl:variable name="serialization-parameters" as="element()">
     <output:serialization-parameters>
       <output:method value="html"/>
@@ -122,7 +121,9 @@
       <string key="note_content">
         <xsl:variable name="build-text">
           <!-- logic in aco-dsl-tei_to_aco-text.xsl -->
-          <xsl:apply-templates select="$note/node()" mode="build-text"/>
+          <xsl:apply-templates select="$note/node()" mode="build-text">
+            <xsl:with-param name="accumulated-pointer-targets" tunnel="true" select="$accumulated-pointer-targets"/>
+          </xsl:apply-templates>
         </xsl:variable>
         <xsl:sequence select="serialize($build-text,$util:serialization-parameters) => substring-after(']') => normalize-space()"/>
         <!--  => substring-after(']') -->
