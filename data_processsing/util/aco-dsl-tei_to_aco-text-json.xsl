@@ -168,6 +168,7 @@
       
     </xsl:variable>
     
+    
     <xsl:for-each select="$target-sequence">
       <!-- <a href='../CV166/II-praef?line=68' data-type='internal_ref' document='CV166' 
         doc_unit='II-praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a> -->
@@ -181,17 +182,17 @@
           <xsl:variable name="key" select="$doc||'#'||$document||'_'||$input => replace('#','')"/>
           <xsl:variable name="key_end" select="$doc||'#'||$document||'_'||(($context => tokenize('\s'))[2] => replace('#',''))"/>
           <xsl:variable name="position" select="position()"/>
-          <xsl:sequence select="dsl:applySequence($context,$input,$doc,$document,$doc_unit,$key,$key_end,$position)"/>
+          <xsl:sequence select="dsl:applySequence($input,$doc,$key,$key_end,$position,$context)"/>
         </xsl:when>
-        <xsl:when test="matches(.,'^\d+_[CV(er)?|CPal]')">
+        <xsl:when test="matches(.,'^\d+_[CU|CV|CVer|CPal]')">
           <xsl:variable name="input" select="replace(.,'.*#','#')"/>
           <xsl:variable name="doc" select="replace(.,'^(.*)#','$1') => util:canonizeFilename()"/>
-          <xsl:variable name="document" select="$context/ancestor::TEI[1]/@xml:id => util:canonizeFilename() => substring-after('_')"/>
-          <xsl:variable name="doc_unit" select="$context/ancestor::div[@n][1]/@n/data()"/>
           <xsl:variable name="key" select="$doc||$input"/>
-          <xsl:variable name="key_end" select="$doc||'#'||$document||'_'||(($context => tokenize('\s'))[2] => replace('#',''))"/>
+          <xsl:variable name="key_end" select="$doc||($context => tokenize('\s'))[2] => replace('.+(#)','$1')"/>
+          <xsl:message use-when="$verbose" select="'key_end: '||$key_end"/>
           <xsl:variable name="position" select="position()"/>
-          <xsl:sequence select="dsl:applySequence($context,$input,$doc,$document,$doc_unit,$key,$key_end,$position)"/>
+          <xsl:sequence select="dsl:applySequence($input,$doc,$key,$key_end,$position,$context)"/>
+          <xsl:message use-when="$verbose">input: {$input} / doc: {$doc} / key: {$key} / key_end: {$key_end}</xsl:message>
         </xsl:when>
         <xsl:otherwise>
           <xsl:message>NB target creation failed; case not covered: {$context}</xsl:message>
@@ -202,27 +203,26 @@
   </xsl:template>
   
   <xsl:function name="dsl:applySequence">
-    <xsl:param name="context" as="node()"/>
     <xsl:param name="input" as="xs:string"/>
     <xsl:param name="doc" as="xs:string"/>
-    <xsl:param name="document" as="xs:string"/>
-    <xsl:param name="doc_unit" as="xs:string"/>
     <xsl:param name="key" as="xs:string"/>
     <xsl:param name="key_end" as="xs:string"/>
     <xsl:param name="position"/>
+    <xsl:param name="context" as="node()"/>
     <xsl:choose>
       <xsl:when test="starts-with($input,'#') and $position = 1">
-        <xsl:message use-when="$verbose">input: {$input} / doc: {$doc} / document: {$document} / doc_unit: {$doc_unit} / key: {$key} / key_end: {$key_end}</xsl:message>
         <xsl:attribute name="href">{$accumulated-pointer-targets?($key)?('target')}</xsl:attribute>
         <xsl:attribute name="data-type" select="'internal_ref'"/>
-        <xsl:attribute name="document" select="$document"/>
-        <xsl:attribute name="doc_unit" select="$doc_unit => substring-after($document) => replace(',','')"/>
+        <xsl:attribute name="document" select="$accumulated-pointer-targets?($key)?('doc') => substring-after('_')"/>
+        <xsl:attribute name="doc_unit" select="$accumulated-pointer-targets?($key)?('chapter')"/>
+        <xsl:attribute name="document_end" select="$accumulated-pointer-targets?($key_end)?('doc') => substring-after('_')"/>
+        <xsl:attribute name="doc_unit_end" select="$accumulated-pointer-targets?($key_end)?('chapter')"/>
         <xsl:attribute name="line_start" select="$accumulated-pointer-targets?($key)?('line')"/>
         <xsl:attribute name="line_end" select="$accumulated-pointer-targets?($key_end)?('line')"/>
         <xsl:attribute name="debug_cte" select="$context"/>
       </xsl:when>
       <xsl:when test="starts-with($input,'#') and $position gt 1"/>
-      <xsl:otherwise>input: {$input} / doc: {$doc} / document: {$document} / doc_unit: {$doc_unit}</xsl:otherwise>
+      <xsl:otherwise>input: {$input} / doc: {$doc}</xsl:otherwise>
     </xsl:choose>
   </xsl:function>
   

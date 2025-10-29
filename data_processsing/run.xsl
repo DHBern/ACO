@@ -113,7 +113,8 @@
                 $doc := $r/ancestor::TEI[1]/@xml:id/data() => util:canonizeFilename(),
                 $docId := $doc => substring-after('_'),
                 $key := $doc||'#'||$id => replace('_anchor',''),
-                $chapter := $r/ancestor::div[1]/@n/data() => substring-after($docId) => replace(',',''),
+                (: if chapter = $docId take 'text' :)
+                $chapter := ($r/ancestor::div[1]/@n/data() => substring-after($docId) => substring-after(',') => replace(',','-'),'text')[normalize-space()][1],
                 $line := $r/preceding::lb[1]/@n/data()
             return
               if ($id = '') then $acc
