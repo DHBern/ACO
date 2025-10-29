@@ -113,7 +113,7 @@
                 $doc := $r/ancestor::TEI[1]/@xml:id/data() => util:canonizeFilename(),
                 $docId := $doc => substring-after('_'),
                 $key := $doc||'#'||$id => replace('_anchor',''),
-                $chapter := $r/ancestor::div[1]/@n/data(),
+                $chapter := $r/ancestor::div[1]/@n/data() => substring-after($docId) => replace(',',''),
                 $line := $r/preceding::lb[1]/@n/data()
             return
               if ($id = '') then $acc
@@ -123,7 +123,7 @@
                   'id'      : $id,
                   'chapter' : if ($chapter = '') then () else $chapter,
                   'line'    : if ($line = '') then () else $line,
-                  'target'  : '../'||$docId||'?line='||$line,
+                  'target'  : '../'||$docId||'/'||($chapter[normalize-space()],'text')[1]||'?line='||$line,
                   'context' : $r => string() => normalize-space()
                   },
                 $existing := $acc => map:get($key)

@@ -164,7 +164,7 @@
         </xsl:when>
       </xsl:choose>
       
-      <xsl:message select="data()"></xsl:message>
+      <xsl:message select="data()"/>
       
     </xsl:variable>
     
@@ -212,7 +212,7 @@
     <xsl:param name="position"/>
     <xsl:choose>
       <xsl:when test="starts-with($input,'#') and $position = 1">
-        <xsl:message>input: {$input} / doc: {$doc} / document: {$document} / doc_unit: {$doc_unit} / key: {$key} / key_end: {$key_end}</xsl:message>
+        <xsl:message use-when="$verbose">input: {$input} / doc: {$doc} / document: {$document} / doc_unit: {$doc_unit} / key: {$key} / key_end: {$key_end}</xsl:message>
         <xsl:attribute name="href">{$accumulated-pointer-targets?($key)?('target')}</xsl:attribute>
         <xsl:attribute name="data-type" select="'internal_ref'"/>
         <xsl:attribute name="document" select="$document"/>
