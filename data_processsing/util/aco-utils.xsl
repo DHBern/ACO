@@ -87,7 +87,7 @@
   <xsl:function name="util:canonizeFilename">
     <xsl:param name="input"/>
     <xsl:sequence select="$input 
-      => replace('^(aco_)?(\d+_(CVe?r?|CPal)\d+).*','$2')"/> 
+      => replace('^(aco_)?(\d+_(CVe?r?|CPal|CU)\d+).*','$2')"/> 
   </xsl:function>
   
 </xsl:stylesheet>

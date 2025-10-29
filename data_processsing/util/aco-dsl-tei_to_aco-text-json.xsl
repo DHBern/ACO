@@ -142,9 +142,10 @@
     </a>
   </xsl:template>
   
-  <xsl:template match="tei:ref[@xml:id]" mode="build-text">
+  <!-- not sure this is needed; if so, then conflict with above template needs to be avoided -->
+  <!--<xsl:template match="tei:ref[@xml:id]" mode="build-text">
     <span data-ref-id="{@xml:id}"><xsl:apply-templates mode="build-text"/></span>
-  </xsl:template>
+  </xsl:template>-->
   
   <xsl:template match="@target" mode="build-text">
     <xsl:param name="accumulated-pointer-targets" as="map(*)" tunnel="yes"/>
@@ -192,9 +193,9 @@
           <xsl:variable name="position" select="position()"/>
           <xsl:sequence select="dsl:applySequence($context,$input,$doc,$document,$doc_unit,$key,$key_end,$position)"/>
         </xsl:when>
-        <!-- case: starting with aco
-        lookup-key: aco_28_CU4#CU4_w486
-        -->
+        <xsl:otherwise>
+          <xsl:message>NB target creation failed; case not covered: {$context}</xsl:message>
+        </xsl:otherwise>
       </xsl:choose>
       
     </xsl:for-each>
