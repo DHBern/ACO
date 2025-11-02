@@ -1,4 +1,5 @@
 {
+	"registerData": {
   "Orte": [
     {
       "loc": [ {
@@ -2865,4 +2866,5 @@
       "label": "Zosimus (Papst)"
     }
   ]
+}
 }
