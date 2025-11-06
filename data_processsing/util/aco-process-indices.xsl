@@ -24,7 +24,9 @@
     
     <xsl:variable name="payload">
       <map xmlns="http://www.w3.org/2005/xpath-functions">
-        <xsl:apply-templates select="//text/body/div/div"/>
+        <map key="registerData">
+          <xsl:apply-templates select="//text/body/div/div"/>
+        </map>
         <map key="meta">
           <string key="task"></string>
           <string key="generated-by">{base-uri(document('')) => tokenize('/') => reverse() => head()}</string>
@@ -47,11 +49,10 @@
   <xsl:template match="p[@rendition='#rp-p_index']">
     <map xmlns="http://www.w3.org/2005/xpath-functions">
       <string key="label">{. => tokenize(' ') => head()}</string>
-      <array key="loc">
         <!--<xsl:for-each select=". => tokenize('\s') => tail() => local:decompress-index()">
           <string>{. => normalize-space()}</string>
         </xsl:for-each>-->
-        <map>
+        <map key="loc">
           <xsl:for-each-group select="(. => tokenize('\s') => tail() => local:decompress-index())" group-by="tokenize(.,',') => head()">
             <array key="{current-grouping-key()}">
               <xsl:for-each select="current-group()">
@@ -60,7 +61,6 @@
             </array>
           </xsl:for-each-group>
         </map>
-      </array>
 <!--      <array key="loc-s0">
         <xsl:for-each select="(. => tokenize('\s') => tail() => local:decompress-index() => local:split-to-string())">
           <array>
@@ -70,8 +70,7 @@
           </array>
         </xsl:for-each>
       </array>-->
-      <array key="loc-s">
-        <map>
+        <map key="loc-s">
           <xsl:for-each-group select="(. => tokenize('\s') => tail() => local:decompress-index() => local:split-to-string())" group-by="tokenize(.,'\s') => head()">
               <array key="{current-grouping-key()}">
                 <xsl:for-each select="current-group() ! substring-after(.,current-grouping-key())">
@@ -80,7 +79,6 @@
               </array>
             </xsl:for-each-group>            
         </map>
-      </array>
       <string key="print">{. => tokenize(' ') => tail() => normalize-space()}</string>
     </map>
   </xsl:template>
