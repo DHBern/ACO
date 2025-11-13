@@ -209,6 +209,21 @@
       <xsl:message use-when="$verbose">…writing {$basepath}/output/aco-register.json…</xsl:message>
     </xsl:result-document>
     
+    <xsl:result-document href="{$basepath}/output/aco-meta-docs.json" method="json" indent="true" exclude-result-prefixes="#all" use-character-maps="unescape-solidus">
+      <xsl:sequence select="transform(
+        map {
+        'stylesheet-location' : 'util/aco-process-meta-docs.xsl',
+        'source-node' : doc('util/aco-process-meta-docs.xsl'),
+        'global-context-item' : $meta-processed,
+        'static-params': map{ 
+        QName('', 'accumulated-pointer-targets') : $accumulated-pointer-targets
+        },
+        'delivery-format' : 'raw'
+        })?output
+        "/>
+      <xsl:message use-when="$verbose">…writing {$basepath}/output/aco-meta-docs.json…</xsl:message>
+    </xsl:result-document>
+    
   </xsl:template>
   
   <!-- pre-processing steps -->

@@ -23,7 +23,9 @@
   
   <xsl:output indent="true"/>
   
+  
   <xsl:mode on-no-match="shallow-copy"/>
+  <xsl:mode name="preprocess-abbr" on-no-match="shallow-copy"/>
   
   <xsl:variable name="prefix" select="'_'||/TEI/teiHeader/fileDesc/titleStmt/title"/>
   
@@ -51,5 +53,166 @@
   </xsl:template>
   
   <xsl:template match="tagsDecl"/>
+  
+  <xsl:template match="text">
+    <xsl:copy>
+      <xsl:copy-of select="@* except @xml:space"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+  
+  <xsl:template match="milestone[@unit='line']">
+    <lb n="{@n}">
+      <xsl:if test="preceding-sibling::text()[1][ends-with(.,'­')]">
+        <xsl:attribute name="type" select="'hyphen'"/>
+      </xsl:if>
+    </lb>
+  </xsl:template>
+  
+  <xsl:template match="milestone[@unit='page']">
+    <pb n="{@n}">
+      <xsl:if test="preceding-sibling::text()[1][ends-with(.,'­')]">
+        <xsl:attribute name="type" select="'hyphen'"/>
+      </xsl:if>
+    </pb>
+  </xsl:template>
+  
+  <xsl:template match="p[@rendition=('#rp-p','#rp-p_lz','#rd-Text')]">
+    <p>
+      <xsl:if test="@rendition='#rp-p_lz'">
+        <xsl:attribute name="rend">#reglet</xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </p>
+  </xsl:template>
+  
+  <xsl:template match="note[@place='foot']">
+    <xsl:copy>
+      <xsl:sequence select="@n"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+  
+  <xsl:template match="anchor|seg"/>
+  
+  <xsl:template match="hi[@rendition='#rf-Emphasis']">
+    <emph>
+      <xsl:apply-templates/>
+    </emph>
+  </xsl:template>
+  
+  <xsl:template match="hi[matches(@rend,'^letter-spacing:-0.\dpt;$')]">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:variable name="classes" as="map(*)" select="map{
+    '#rf-griechisch' : '#greek',
+    '#rf-unterstrichen' : '#underlined',
+    '#rf-griechisch_unterstrichen' : '#greek #underlined',
+    '#rf-kursiv' : '#italic',
+    '#rf-unterstrichen_kursiv' : '#underlined #italic',
+    '#rf-hochgestellt' : '#sup'
+    }"/>
+  
+  <xsl:template match="hi">
+    <xsl:copy>
+      <xsl:attribute name="rend" select="(@rendition => tokenize('\s+')) ! $classes?(.)"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+  
+  <xsl:template match="div[p[@rendition='#rp-p_bibl']]">
+    <listBibl>
+      <xsl:apply-templates/>
+    </listBibl>
+  </xsl:template>
+  
+  <xsl:template match="p[@rendition='#rp-p_bibl']">
+    <bibl>
+      <xsl:apply-templates/>
+    </bibl>
+  </xsl:template>
+  
+  <xsl:template match="p[@rendition='#rp-p_bibl']//text()">
+    <xsl:analyze-string select="." regex="(https?://\S+)">
+      <xsl:matching-substring>
+        <ref target="{regex-group(1)}">{regex-group(1)}</ref>
+      </xsl:matching-substring>
+      <xsl:non-matching-substring>{.}</xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
+  
+  <xsl:template match="div[p[@rendition='#rp-p_abbr']]">
+    <list type="abbreviations">
+      <xsl:apply-templates/>
+    </list>
+  </xsl:template>
+  
+  <xsl:template match="p[@rendition='#rp-p_abbr']">
+    <!-- insert SEPARATOR to split at tab character -->
+    <xsl:variable name="preprocess">
+      <xsl:apply-templates mode="preprocess-abbr"/>
+    </xsl:variable>
+    <item>
+      <abbr>
+        <xsl:sequence select="$preprocess/node()[following::SEPARATOR]"></xsl:sequence>
+      </abbr>
+      <expan>
+        <xsl:sequence select="$preprocess/node()[preceding::SEPARATOR]"></xsl:sequence>
+      </expan>
+    </item>
+  </xsl:template>
+  
+  <xsl:template match="text()[contains(.,'&#9;')]" mode="preprocess-abbr">
+    <xsl:analyze-string select="." regex="&#9;">
+      <xsl:matching-substring><SEPARATOR/></xsl:matching-substring>
+      <xsl:non-matching-substring>{.}</xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
+  
+  <xsl:template match="ref">
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <!--<xsl:attribute name="target">
+        <xsl:apply-templates select="@target" mode="build-text">
+          <xsl:with-param name="accumulated-pointer-targets" tunnel="true" select="$accumulated-pointer-targets"/>
+        </xsl:apply-templates>-->
+      <!--</xsl:attribute>-->
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+  
+  <!-- TODO: ref, ref[@type='footnotereference']-->
+ 
+ 
+ 
+ 
+  <!--<xsl:template match="hi[matches(@rendition,'#rf-griechisch')]">
+    <xsl:copy>
+      <xsl:attribute name="rend">
+        <xsl:text>#greek</xsl:text>
+        <xsl:if test="matches(@rendition,'_unterstrichen')">
+          <xsl:text> #underlined</xsl:text>
+        </xsl:if>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+  
+  <xsl:template match="hi[matches(@rendition,'#rf-unterstrichen_kursiv')]">
+    <xsl:copy>
+      <xsl:attribute name="rend" select="'#italic #underlined'"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+  
+  <xsl:template match="hi[@rendition='#rf-hochgestellt']">
+    <xsl:copy>
+      <xsl:attribute name="rend" select="'#sup'"/>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>-->
+  
+ 
  
 </xsl:stylesheet>

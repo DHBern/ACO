@@ -28,6 +28,8 @@
     </output:serialization-parameters>
   </xsl:variable>
   
+  <xsl:param name="verbose" static="true" as="xs:boolean" select="true()"/>
+  
   <!-- generate unique key for notes based on the ID of the containing div and the note element -->
   <xsl:function name="util:noteKey">
     <xsl:param name="divId"/>
@@ -88,6 +90,88 @@
     <xsl:param name="input"/>
     <xsl:sequence select="$input 
       => replace('^(aco_)?(\d+_(CVe?r?|CPal|CU)\d+).*','$2')"/> 
+  </xsl:function>
+  
+  <!-- turning targets into working pointers (via accumulated-pointer-targets) -->
+  <xsl:template name="util:process-targets">
+    <xsl:param name="target"/>
+    <xsl:param name="accumulated-pointer-targets" as="map(*)" tunnel="yes"/>
+    <xsl:variable name="context" select="."/>
+    
+    <xsl:variable name="context" as="node()" select="$target"/>
+    
+    <xsl:variable name="target-sequence" as="item()*">
+      
+      <xsl:choose>
+        <xsl:when test="matches($target/data(),'^(.+_dg\.xml#r-.+)')">
+          <xsl:sequence select="($target => tokenize('\s')) ! replace(.,'_dg\.xml','')"/>
+        </xsl:when>
+        <xsl:when test="matches($target/data(),'^(#w\d+s?\s?){1,2}')">
+          <xsl:sequence select="$target => tokenize('\s')"/>
+        </xsl:when>
+      </xsl:choose>
+      
+<!--      <xsl:message select="'$taget/data() from aco-utils.xsl: '|| $target/data()"/>-->
+      
+    </xsl:variable>
+    
+    
+    <xsl:for-each select="$target-sequence">
+      <!-- <a href='../CV166/II-praef?line=68' data-type='internal_ref' document='CV166' 
+        doc_unit='II-praef' line_start='68' line_end='69'>CV166,II,Praef.,68–69</a> -->
+      <!-- <ref target="#w133s #w159" rend="forceShow lines">CV19,1,3 – 5</ref> -->
+      <xsl:choose>
+        <xsl:when test="matches(.,'^#')">
+          <xsl:variable name="input" select="."/>
+          <xsl:variable name="doc" select="$context/ancestor::TEI[1]/@xml:id => util:canonizeFilename()"/>
+          <xsl:variable name="document" select="$context/ancestor::TEI[1]/@xml:id => util:canonizeFilename() => substring-after('_')"/>
+          <xsl:variable name="doc_unit" select="$context/ancestor::div[@n][1]/@n/data()"/>
+          <xsl:variable name="key" select="$doc||'#'||$document||'_'||$input => replace('#','')"/>
+          <xsl:variable name="key_end" select="$doc||'#'||$document||'_'||(($context => tokenize('\s'))[2] => replace('#',''))"/>
+          <xsl:variable name="position" select="position()"/>
+          <xsl:sequence select="util:applySequence($input,$doc,$key,$key_end,$position,$context,$accumulated-pointer-targets)"/>
+        </xsl:when>
+        <xsl:when test="matches(.,'^\d+_[CU|CV|CVer|CPal]')">
+          <xsl:variable name="input" select="replace(.,'.*#','#')"/>
+          <xsl:variable name="doc" select="replace(.,'^(.*)#','$1') => util:canonizeFilename()"/>
+          <xsl:variable name="key" select="$doc||$input"/>
+          <xsl:variable name="key_end" select="$doc||($context => tokenize('\s'))[2] => replace('.+(#)','$1')"/>
+<!--          <xsl:message use-when="$verbose" select="'key_end: '||$key_end"/>-->
+          <xsl:variable name="position" select="position()"/>
+          <xsl:sequence select="util:applySequence($input,$doc,$key,$key_end,$position,$context,$accumulated-pointer-targets)"/>
+<!--          <xsl:message use-when="$verbose">input: {$input} / doc: {$doc} / key: {$key} / key_end: {$key_end}</xsl:message>-->
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:message>NB target creation failed; case not covered: {$context}</xsl:message>
+        </xsl:otherwise>
+      </xsl:choose>
+      
+    </xsl:for-each>
+  </xsl:template>
+  
+  <xsl:function name="util:applySequence">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="doc" as="xs:string"/>
+    <xsl:param name="key" as="xs:string"/>
+    <xsl:param name="key_end" as="xs:string"/>
+    <xsl:param name="position"/>
+    <xsl:param name="context" as="node()"/>
+    <xsl:param name="accumulated-pointer-targets"/>
+    <xsl:choose>
+      <xsl:when test="starts-with($input,'#') and $position = 1">
+        <xsl:attribute name="href">{$accumulated-pointer-targets?($key)?('target')}</xsl:attribute>
+        <xsl:attribute name="data-type" select="'internal_ref'"/>
+        <xsl:attribute name="document" select="$accumulated-pointer-targets?($key)?('doc') => substring-after('_')"/>
+        <xsl:attribute name="doc_unit" select="$accumulated-pointer-targets?($key)?('chapter')"/>
+        <xsl:attribute name="document_end" select="$accumulated-pointer-targets?($key_end)?('doc') => substring-after('_')"/>
+        <xsl:attribute name="doc_unit_end" select="$accumulated-pointer-targets?($key_end)?('chapter')"/>
+        <xsl:attribute name="line_start" select="$accumulated-pointer-targets?($key)?('line')"/>
+        <xsl:attribute name="line_end" select="$accumulated-pointer-targets?($key_end)?('line')"/>
+        <xsl:attribute name="debug_cte" select="$context"/>
+      </xsl:when>
+      <xsl:when test="starts-with($input,'#') and $position gt 1"/>
+      <xsl:otherwise>input: {$input} / doc: {$doc}</xsl:otherwise>
+    </xsl:choose>
   </xsl:function>
   
 </xsl:stylesheet>
