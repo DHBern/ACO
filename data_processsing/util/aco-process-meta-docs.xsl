@@ -178,9 +178,7 @@
   
   
   <xsl:template match="list[@type='abbreviations']" mode="meta-docs-html">
-    <xsl:comment>
-      <xsl:apply-templates select="head" mode="meta-docs-html"/>
-    </xsl:comment>
+    <xsl:apply-templates select="head" mode="meta-docs-html"/>
     <dl class="abbreviations">
       <xsl:apply-templates select="node() except head" mode="meta-docs-html"/>
     </dl>
