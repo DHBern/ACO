@@ -64,9 +64,19 @@
     <xsl:message select="$payload"/>
     
     <map key="{@xml:id => tokenize('_') => reverse() => head()}" xmlns="http://www.w3.org/2005/xpath-functions">
-      <string key="html">
+      <string key="text">
         <xsl:sequence select="serialize($payload,$util:serialization-parameters) => normalize-space()"/>
       </string>
+      <map key="footnotes">
+        <xsl:for-each select="text//note">
+          <string key="note-{@n}">
+            <xsl:variable name="current-note">
+              <xsl:apply-templates mode="meta-docs-html"/>
+            </xsl:variable>
+            <xsl:sequence select="serialize($current-note,$util:serialization-parameters) => normalize-space()"/>
+          </string>
+        </xsl:for-each>
+      </map>
     </map>
   </xsl:template>
   
@@ -77,7 +87,8 @@
   </xsl:template>
   
   <xsl:template match="head" mode="meta-docs-html">
-    <h1 class="{substring-after(@rendition, '#')}">
+    <h1>
+      <xsl:apply-templates select="@rendition" mode="meta-docs-html"/>
       <xsl:apply-templates mode="meta-docs-html"/>
     </h1>
   </xsl:template>
@@ -103,11 +114,26 @@
   
   <xsl:template match="ref[not(contains(@rend,'page'))]" mode="meta-docs-html">
     <a>
-      <!-- derive linking targets from accumulated pointers -->
-      <xsl:call-template name="util:process-targets">
-        <xsl:with-param name="target" select="@target"/>
-        <xsl:with-param name="accumulated-pointer-targets" tunnel="true" select="$accumulated-pointer-targets"/>
-      </xsl:call-template>
+      <xsl:choose>
+        <xsl:when test="matches(@target,'^https?://')">
+          <xsl:attribute name="href" select="@target"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <!-- targets relative to edition contents (sequence of attributes) -->
+          <xsl:variable name="processed-targets" as="attribute()*">
+            <!-- derive linking targets from accumulated pointers -->
+            <xsl:call-template name="util:process-targets">
+              <xsl:with-param name="target" select="@target"/>
+              <xsl:with-param name="accumulated-pointer-targets" tunnel="true" select="$accumulated-pointer-targets"/>
+            </xsl:call-template>
+          </xsl:variable>
+          <!-- adjust targets for vol 1 -->
+          <xsl:attribute name="href">
+            <xsl:sequence select="$processed-targets[name()='href']/data() => replace('\.\./','/edition/1/')"/>
+          </xsl:attribute>
+          <xsl:sequence select="$processed-targets[name()!='href']"/>
+        </xsl:otherwise>
+      </xsl:choose>
       <xsl:apply-templates mode="meta-docs-html"/>
     </a>
   </xsl:template>
@@ -117,9 +143,7 @@
   </xsl:template>
   
   <xsl:template match="note" mode="meta-docs-html">
-    <aside id="note-{@n}">
-      <xsl:apply-templates mode="meta-docs-html"/>
-    </aside>
+    <sup id="note-{@n}">{@n}</sup>
   </xsl:template>
   
   <xsl:template match="listBibl" mode="meta-docs-html">
@@ -129,7 +153,8 @@
   </xsl:template>
   
   <xsl:template match="listBibl/head" mode="meta-docs-html">
-    <h2 class="{@rendition => replace('#','')}">
+    <h2>
+      <xsl:apply-templates select="@rendition" mode="meta-docs-html"/>
       <xsl:apply-templates mode="meta-docs-html"/>
     </h2>
     <ul>
@@ -139,17 +164,31 @@
     </ul>
   </xsl:template>
   
+  <xsl:template match="@rendition" mode="meta-docs-html">
+    <xsl:attribute name="class">
+      <xsl:choose>
+        <xsl:when test="data()='#rp-heading_1'">h1</xsl:when>
+        <xsl:when test="data()='#rp-heading_2'">h2</xsl:when>
+        <xsl:otherwise>FML not caught</xsl:otherwise>
+      </xsl:choose>
+    </xsl:attribute>
+  </xsl:template>
+  
   <xsl:template match="bibl" mode="meta-docs-html"/>
   
   
   <xsl:template match="list[@type='abbreviations']" mode="meta-docs-html">
+    <xsl:comment>
+      <xsl:apply-templates select="head" mode="meta-docs-html"/>
+    </xsl:comment>
     <dl class="abbreviations">
-      <xsl:apply-templates mode="meta-docs-html"/>
+      <xsl:apply-templates select="node() except head" mode="meta-docs-html"/>
     </dl>
   </xsl:template>
   
   <xsl:template match="list[@type='abbreviations']/head" mode="meta-docs-html">
-    <h1 class="{@rendition => replace('#','')}">
+    <h1>
+      <xsl:apply-templates select="@rendition" mode="meta-docs-html"/>
       <xsl:apply-templates mode="meta-docs-html"/>
     </h1>
   </xsl:template>
