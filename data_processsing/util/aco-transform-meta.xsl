@@ -93,7 +93,12 @@
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template match="anchor|seg"/>
+  <!-- needed to retain in order to derive "footnotereference" targets -->
+  <xsl:template match="anchor|seg">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+    </xsl:copy>
+  </xsl:template>
   
   <xsl:template match="hi[@rendition='#rf-Emphasis']">
     <emph>
@@ -182,9 +187,6 @@
     </xsl:copy>
   </xsl:template>
   
-  <!-- TODO: ref, ref[@type='footnotereference']-->
- 
- 
  
  
   <!--<xsl:template match="hi[matches(@rendition,'#rf-griechisch')]">
