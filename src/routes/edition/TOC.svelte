@@ -3,8 +3,10 @@
 	import { metaData } from '$lib/data/get_alldata_testing.js';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 
-	let accordionState = $state(['Band 1']);
+	let { accordionStateInit = 'Band 1' } = $props();
+	let accordionState = $state([accordionStateInit]);
 
+	// The first volume is currently hardcoded
 	let volumes = [
 		{ label: 'Band 2', number: 2 },
 		{ label: 'Band 3', number: 3 }
