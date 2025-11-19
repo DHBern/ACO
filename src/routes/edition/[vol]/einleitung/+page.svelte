@@ -46,9 +46,9 @@
 			if (!n) return;
 
 			const a = doc.createElement('a');
-			a.href = '#footnote-' + n;
+			a.href = '#note-' + n;
 			a.setAttribute('aria-label', 'Jump to footnote ' + n);
-			a.className = 'footnote-ref';
+			a.className = 'note-ref';
 
 			sup.replaceWith(a);
 			a.appendChild(sup);
@@ -69,11 +69,11 @@
 	<div class="footnotes mt-10 grid grid-cols-[100px_auto] gap-x-4">
 		<h2 class="h2 col-span-2 col-start-1">Fussnoten</h2>
 		{#each footnotes as footnote}
-			<div id={`footnote-${footnote.number}`} class="col-span-1 col-start-1">
+			<div id={`note-${footnote.number}`} class="col-span-1 col-start-1">
 				<p class="text-right">
 					<sup>{@html footnote.number}</sup>
 					<a
-						href={'#note-' + footnote.number}
+						href={'#ref-' + footnote.number}
 						aria-label={'Back to note ' + footnote.number}
 						class="back-link inline-block"
 						title="Back to note"
@@ -93,7 +93,7 @@
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 
-	.maintext :global(.footnote-ref) {
+	.maintext :global(.note-ref) {
 		@apply text-secondary-500;
 	}
 	.footnotes :global(a) {
