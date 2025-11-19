@@ -3,7 +3,6 @@
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
-	let maintext: string | undefined = $state();
 	let footnotes: object | undefined = $state();
 
 	// Transform footnotes (sort by number and modify text)
@@ -58,13 +57,12 @@
 	}
 
 	onMount(() => {
-		maintext = linkifyFootnoteSupers(data.intro.text);
 		footnotes = transformFootnotes(data.intro.footnotes);
 	});
 </script>
 
 <div class="mx-auto max-w-[1500px] py-24">
-	<div class="maintext">{@html maintext}</div>
+	<div class="maintext">{@html data.intro.text}</div>
 
 	<div class="footnotes mt-10 grid grid-cols-[100px_auto] gap-x-4">
 		<h2 class="h2 col-span-2 col-start-1">Fussnoten</h2>
