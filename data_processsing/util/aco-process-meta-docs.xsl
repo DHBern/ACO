@@ -143,7 +143,7 @@
   </xsl:template>
   
   <xsl:template match="note" mode="meta-docs-html">
-    <sup id="note-{@n}">{@n}</sup>
+    <sup id="ref-{@n}">{@n}</sup>
   </xsl:template>
   
   <xsl:template match="listBibl" mode="meta-docs-html">
