@@ -3,6 +3,10 @@
 @import '@skeletonlabs/skeleton-svelte';
 @import '../theme_aco';
 
+:root {
+  --skeleton-font-sans: 'Noto Sans', system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
 @config '../tailwind.config.ts';
 
 /* Apply .dark whenever the dark class is present earlier in the HTML tree */
@@ -24,6 +28,25 @@
 	::file-selector-button {
 		border-color: var(--color-gray-200, currentColor);
 	}
+	/* @font-face {
+		font-family: 'NotoSans';
+		src: url('/fonts/noto-sans-regular.woff2') format('woff2');
+		font-weight: 100 900;
+		font-stretch: 62.5% 100%;
+		font-style: normal;
+		font-display: swap;
+		font-named-instance: 'Regular';
+	}
+	@font-face {
+		font-family: 'NotoSans';
+		src: url('/fonts/noto-sans-italic.woff2') format('woff2');
+		font-weight: 100 900;
+		font-stretch: 62.5% 100%;
+		font-style: normal;
+		font-display: swap;
+		font-named-instance: 'Italic';
+	} */
+
 	@font-face {
 		font-family: 'Junicode';
 		src: url('/fonts/Junicode/JunicodeVF-Roman.woff2') format('woff2');
@@ -61,7 +84,7 @@ p {
 
 /* Greek Text */
 span[data-lang='greek'] {
-	font-family: 'Junicode', 'OpenSans', sans-serif;
+	font-family: 'NotoSans', 'OpenSans', sans-serif;
 }
 
 /* Heading */
