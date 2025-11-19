@@ -4,15 +4,33 @@
 	import { onMount } from 'svelte';
 
 	let maintext: string;
+	let footnotes: object;
 
-	// Sort footnotes by number
-	const footnotes = Object.keys(intro.footnotes)
-		.map((key) => {
-			const parts = key.split('-');
-			const num = parseInt(parts[1], 10);
-			return { key, number: num, text: intro.footnotes[key] };
-		})
-		.sort((a, b) => a.number - b.number);
+	// Transform footnotes (sort by number and modify text)
+	function transformFootnotes(object) {
+		return Object.keys(object)
+			.map((key) => {
+				const parts = key.split('-');
+				const num = parseInt(parts[1], 10);
+				return { key, number: num, text: modifyAnchors(object[key]) };
+			})
+			.sort((a, b) => a.number - b.number);
+	}
+
+	// Transform footnotes such that contained cross-references open in new tab
+	function modifyAnchors(html) {
+		const parser = new DOMParser();
+		const doc = parser.parseFromString(html, 'text/html');
+
+		// Add attributes to all anchors
+		doc.querySelectorAll('a').forEach((a) => {
+			a.setAttribute('target', '_blank');
+			a.setAttribute('rel', 'noopener noreferrer');
+		});
+
+		// Return serialized inner HTML of the body (keeps only the fragment)
+		return doc.body.innerHTML;
+	}
 
 	// Add anchors to footnotes in maintext
 	function linkifyFootnoteSupers(html) {
@@ -41,6 +59,7 @@
 
 	onMount(() => {
 		maintext = linkifyFootnoteSupers(intro.text);
+		footnotes = transformFootnotes(intro.footnotes);
 	});
 </script>
 
