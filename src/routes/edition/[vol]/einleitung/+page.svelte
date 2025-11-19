@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { intro } from '$lib/data/get_alldata_testing.js';
 	import { ArrowUpIcon } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 
-	let maintext: string;
-	let footnotes: object;
+	let { data } = $props();
+	let maintext: string | undefined = $state();
+	let footnotes: object | undefined = $state();
 
 	// Transform footnotes (sort by number and modify text)
 	function transformFootnotes(object) {
@@ -58,8 +58,8 @@
 	}
 
 	onMount(() => {
-		maintext = linkifyFootnoteSupers(intro.text);
-		footnotes = transformFootnotes(intro.footnotes);
+		maintext = linkifyFootnoteSupers(data.intro.text);
+		footnotes = transformFootnotes(data.intro.footnotes);
 	});
 </script>
 
