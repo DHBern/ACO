@@ -10,8 +10,8 @@ const textData = await tData;
 const metaDocs = await mDocs;
 const litData = metaDocs.Literaturverzeichnis.text;
 const abbData = metaDocs.Abkürzungsverzeichnis.text;
-const intro = metaDocs.Einleitung.text;
-const preface = metaDocs.Vorwort.text;
+const intro = metaDocs.Einleitung;
+const preface = metaDocs.Vorwort;
 
 const notesData = await nData;
 const registerData = await rData;
