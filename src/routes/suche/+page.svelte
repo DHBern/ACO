@@ -25,9 +25,9 @@
 		// Filters
 		if (typeFilter && hasAuthor) {
 			params.append('fq', `type:${typeFilter}`);
-			params.append('fq', 'author:[* TO *]');
+			// params.append('fq', 'author:[* TO *]');
 		} else if (hasAuthor) {
-			params.set('fq', 'author:[* TO *]');
+			// params.set('fq', 'author:[* TO *]');
 		} else if (typeFilter) {
 			params.set('fq', `type:${typeFilter}`);
 		}
@@ -37,7 +37,8 @@
 		params.set('rows', String(rows));
 
 		// Field List
-		params.set('fl', 'id,type,author,title,entry,score');
+		// params.set('fl', 'id,type,author,title,entry,score');
+		params.set('fl', 'id,type,title,entry,score');
 		// params.set('fl', '*,score');
 
 		// https://hallernet-search.hidora.com/solr/public/select?q=*&start=0&rows=100&fq=author:[*%20TO%20*]&fl=title%2Cid%2Ctype%2Centry%2Cauthor%2Cscore&hl=true&wt=json
