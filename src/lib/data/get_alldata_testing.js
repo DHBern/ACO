@@ -8,10 +8,10 @@ import { registerData as rData } from './aco-register.json';
 const metaData = await mData;
 const textData = await tData;
 const metaDocs = await mDocs;
-const litData = metaDocs.Literaturverzeichnis.html;
-const abbData = metaDocs.Abkürzungsverzeichnis.html;
-const intro = metaDocs.Einleitung.html;
-const preface = metaDocs.Vorwort.html;
+const litData = metaDocs.Literaturverzeichnis.text;
+const abbData = metaDocs.Abkürzungsverzeichnis.text;
+const intro = metaDocs.Einleitung;
+const preface = metaDocs.Vorwort;
 
 const notesData = await nData;
 const registerData = await rData;
