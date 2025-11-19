@@ -33,7 +33,9 @@
 									{#each dataObject[idx]['loc-s'][docKey] as unit}
 										<a
 											href={`${base}/edition/1/${docKey}${convertUnit(unit)}`}
-											data-type="register-unit">{unit}</a
+											data-type="register-unit"
+											target="_blank"
+											rel="noopener noreferrer">{unit}</a
 										>
 									{/each}
 								</li>
