@@ -46,14 +46,7 @@
 						<a
 							href="{base}/edition/1/einleitung"
 							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
-							>Eine vorläuﬁge Einleitung</a
-						>
-					</p>
-					<p>
-						<a
-							href="{base}/edition/1/anordnung-der-dokumente"
-							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
-							>Zur chronologischen Anordnung der Dokumente in Band 1</a
+							>Einleitung</a
 						>
 					</p>
 				</div>
