@@ -99,7 +99,7 @@
 <div class="py-14">
 	<h1>Suche</h1>
 
-	<form onsubmit={onSearchSubmit} class="search-form">
+	<form onsubmit={onSearchSubmit} class="search-form flex gap-10">
 		<input bind:value={q} placeholder="Search text..." />
 		<label>
 			<input type="checkbox" bind:checked={hasAuthor} /> has Author
