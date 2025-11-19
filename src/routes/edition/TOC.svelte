@@ -3,11 +3,13 @@
 	import { metaData } from '$lib/data/get_alldata_testing.js';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 
-	let accordionState = $state(['Band 1']);
+	let { accordionStateInit = 'vol1' } = $props();
+	let accordionState = $state([accordionStateInit]);
 
+	// The first volume is currently hardcoded
 	let volumes = [
-		{ label: 'Band 2', number: 2 },
-		{ label: 'Band 3', number: 3 }
+		{ slug: 'vol2', label: 'Band 2', number: 2 },
+		{ slug: 'vol3', label: 'Band 3', number: 3 }
 	];
 
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
@@ -28,7 +30,7 @@
 		multiple
 		class="mb-4 shadow-md"
 	>
-		<Accordion.Item value="Band 1">
+		<Accordion.Item value="vol1">
 			<h3>
 				<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
 					><span class="text-surface-950-50 text-2xl font-bold">Band 1</span>
@@ -38,20 +40,20 @@
 				<div class="pt-5 pl-10">
 					<p>
 						<a
-							href="{base}/edition/1/vorwort"
+							href="{base}/edition/vol1/vorwort"
 							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold">Vorwort</a
 						>
 					</p>
 					<p>
 						<a
-							href="{base}/edition/1/einleitung"
+							href="{base}/edition/vol1/einleitung"
 							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
 							>Eine vorläuﬁge Einleitung</a
 						>
 					</p>
 					<p>
 						<a
-							href="{base}/edition/1/anordnung-der-dokumente"
+							href="{base}/edition/vol1/anordnung-der-dokumente"
 							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
 							>Zur chronologischen Anordnung der Dokumente in Band 1</a
 						>
@@ -65,7 +67,7 @@
 							<ul class="">
 								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="hover:**:text-secondary-700-300 mb-1">
-										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
+										<a href="{base}/edition/vol1/{doc.slug}/{doc.unitSlugs[0]}">
 											<span class="text-surface-950-50 font-bold">{doc.acoDocLabel}:</span>
 											<span class="text-surface-950-50">{@html doc.title}</span>
 											<span class="ml-1">
@@ -88,7 +90,7 @@
 										.slice()
 										.sort((a, b) => a.schwartzNum - b.schwartzNum) as doc (doc.slug)}
 										<li class="hover:**:text-secondary-700-300 mb-1">
-											<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
+											<a href="{base}/edition/vol1/{doc.slug}/{doc.unitSlugs[0]}">
 												<span class="text-surface-950-50 font-bold">{doc.slug}:</span>
 												<span class="text-surface-950-50">{@html doc.title}</span>
 												<span class="ml-1">
@@ -105,7 +107,7 @@
 			</Accordion.ItemContent>
 		</Accordion.Item>
 		{#each volumes as volume}
-			<Accordion.Item value={volume.label}>
+			<Accordion.Item value={volume.slug}>
 				<h3>
 					<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
 						><span class="text-surface-950-50 text-2xl font-bold">{volume.label}</span>
