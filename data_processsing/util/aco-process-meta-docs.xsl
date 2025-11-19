@@ -112,7 +112,7 @@
     <em><xsl:apply-templates mode="meta-docs-html"/></em>
   </xsl:template>
   
-  <xsl:template match="ref[not(contains(@rend,'page'))]" mode="meta-docs-html">
+  <xsl:template match="ref[not(contains(@rend,'page')) and not(@type='footnotereference')]" mode="meta-docs-html">
     <a>
       <xsl:choose>
         <xsl:when test="matches(@target,'^https?://')">
@@ -139,7 +139,22 @@
   </xsl:template>
   
   <xsl:template match="ref[contains(@rend,'page')]" mode="meta-docs-html">
-    <a href="TODO-ref-page">{}</a>
+    <xsl:variable name="page-target" select="@target => replace('^#(.*?)\s.*','$1')"/>
+    <xsl:variable name="targeted-page" select="//anchor[contains(@xml:id,$page-target)]/preceding::pb[1]/@n"/>
+    <!-- <p>S. hierzu unten S. <ref target="#w7199s #w7273" rend="page lines">XXXVI,6 – 12</ref>.</p> -->
+    <a href="#page-{$targeted-page}" dev="{@target}">
+      <xsl:apply-templates mode="meta-docs-html"/>
+    </a>
+  </xsl:template>
+  
+  <xsl:template match="pb[@n]" mode="meta-docs-html">
+    <span id="page-{@n}"/>
+  </xsl:template>
+  
+  <xsl:template match="ref[@type='footnotereference']" mode="meta-docs-html">
+    <xsl:variable name="fn-target" select="@target => replace('#','')"/>
+    <xsl:variable name="targeted-fn" select="//anchor[contains(@xml:id,$fn-target)]/following-sibling::note[1]/@n"/>
+    <a href="#{$targeted-fn}">{$targeted-fn}</a>
   </xsl:template>
   
   <xsl:template match="note" mode="meta-docs-html">
