@@ -21,7 +21,7 @@
 					<header class="relative flex flex-wrap justify-between pl-5">
 						<h2 class="h3 mt-18">Abkürzungsverzeichnis</h2>
 					</header>
-					{@html abbData}
+					<div class="my-4 h-full overflow-y-auto">{@html abbData}</div>
 					<footer></footer>
 				</div>
 				<Dialog.CloseTrigger
@@ -40,7 +40,7 @@
 	@reference "@skeletonlabs/skeleton";
 
 	.abbreviations :global(dl) {
-		@apply mt-8 grid grid-cols-[150px_auto] gap-4 overflow-y-auto px-10 pb-5;
+		@apply mt-8 grid grid-cols-[150px_auto] gap-4 px-10 pb-5;
 	}
 	.abbreviations :global(dt) {
 		@apply col-span-1 col-start-1 font-bold;
