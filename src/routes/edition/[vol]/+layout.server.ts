@@ -14,7 +14,7 @@ const preface = metaDocs.Vorwort;
 
 // Modify protoHTML
 intro.text = linkifyFootnoteSuperscripts(intro.text);
-intro.foot = transformFootnotesIntroduction(intro.footnotes); // renaming prevents confusion with HMR
+intro.footnotes = transformFootnotesIntroduction(intro.footnotes);
 
 export const load: LayoutServerLoad = async () => {
 	return {
