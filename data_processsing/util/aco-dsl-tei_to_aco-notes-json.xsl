@@ -71,7 +71,7 @@
     <map key="{$tei-id}">
       <xsl:for-each select="tei:text/tei:body/tei:div">
         <xsl:variable name="divId" select="@n => replace(',','-')"/>
-        <map key="{($divId => substring-after($tei-id||'-'), 'text')[matches(.,'\S')][1]}">
+        <map key="{($divId => substring-after($tei-id||'-'), 'text')[matches(.,'\S')][1] => replace('\.','')}">
           <xsl:for-each select=".//tei:note">
             <xsl:call-template name="note">
               <xsl:with-param name="teiId" select="$tei-id"/>
