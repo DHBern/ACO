@@ -6,7 +6,7 @@ import { textData as tData } from '$lib/data/aco-text.json';
 import { notesData as nData } from '$lib/data/aco-notes.json';
 
 import { json } from '@sveltejs/kit';
-import { transformAnchorsNewTab } from '$lib/functions/protoHTMLconversion';
+import { transformAnchorsNewTab } from '$lib/functions/protoHTMLconversion/transformAnchorsNewTab';
 
 const metaData = await mData;
 const textData = await tData;
