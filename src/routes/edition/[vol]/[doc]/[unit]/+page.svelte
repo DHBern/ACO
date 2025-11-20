@@ -140,7 +140,7 @@
 
 		// Re-position all notes
 		loadedUnits.forEach((unit) => {
-			placeNotes(extractNoteIds(unit.text).filter((slug) => slug !== 'TODO'));
+			placeNotes(extractNoteIds(unit.text));
 		});
 	};
 
@@ -389,7 +389,7 @@
 				]}
 			>
 				{#each loadedUnits as unit (unit.slug)}
-					{#each extractNoteIds(unit.text).filter((slug) => slug !== 'TODO') as noteSlug (noteSlug)}
+					{#each extractNoteIds(unit.text) as noteSlug (noteSlug)}
 						<Note
 							docSlug={data.slug_doc}
 							unitSlug={data.slug_unit}

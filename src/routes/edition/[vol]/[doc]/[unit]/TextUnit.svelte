@@ -41,7 +41,7 @@
 
 	onMount(() => {
 		// Place note-boxes at initial positions
-		placeNotes(extractNoteIds(text).filter((slug) => slug !== 'TODO'));
+		placeNotes(extractNoteIds(text));
 
 		//! Move to +page.svelte?!
 		document.body.addEventListener('click', handleResetMarkSelection);
