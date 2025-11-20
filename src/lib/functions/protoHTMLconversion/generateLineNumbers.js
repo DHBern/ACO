@@ -1,15 +1,11 @@
-import { page } from '$app/state';
-
-export function generateLineNumbers(text) {
+export function generateLineNumbers(text, path) {
 	// Match a-line, p and br tags
-	const matches = text.match(/(<a data-line='\d+'><\/a>)|(<\/?p[^>]*>)|(<br\s*\/?>)/g);
+	const matches = text.match(/(<a\ data-page='\d+'>\u200B?<\/a>)|(<a\ data-line='\d+'>\u200B?<\/a>)|(<\/?p[^>]*>)|(<br\s*\/?>)|(<\/?section[^>]*>)/g);
 	const linesText = matches ? matches.join('') : '';
 
 	// Insert line-number as text at every 5th line
-	let href = page.url.searchParams;
-	const numbersText = linesText.replace(/<a data-line='(\d+)'><\/a>/g, (_match, lineNumber) => {
-		href.set('line', lineNumber);
-		return `<a class="line-number" href="?${page.url.searchParams.toString()}" data-line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='lineNumBuffer'>__</span>"}</a>`;
+	const numbersText = linesText.replace(/<a data-line='(\d+)'>\u200B?<\/a>/g, (_match, lineNumber) => {
+		return `<a class="line-number" href="${path}?line=${lineNumber}" data-line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='lineNumBuffer'>__</span>"}</a>`;
 	});
 
 	return numbersText;

@@ -1,16 +1,22 @@
 // Import local JSON files
+import { metaData as mData } from './aco-metadata.json';
 import { textData as tData } from './aco-text.json';
-import { abbData as aData } from './aco-abbreviations.json';
+import { metaDocs as mDocs } from '$lib/data/aco-meta-docs.json';
 import { notesData as nData } from './aco-notes.json';
 import { registerData as rData } from './aco-register.json';
 
+const metaData = await mData;
 const textData = await tData;
-const abbData = await aData;
+const metaDocs = await mDocs;
+const litData = metaDocs.Literaturverzeichnis.text;
+const abbData = metaDocs.Abkürzungsverzeichnis.text;
+const intro = metaDocs.Einleitung;
+const preface = metaDocs.Vorwort;
+
 const notesData = await nData;
 const registerData = await rData;
 
-export {textData, abbData, notesData, registerData};
-
+export { metaData, textData, litData, abbData, intro, preface, notesData, registerData };
 
 // Get JSON from Web-API
 // import { api } from '$lib/constants/constants';

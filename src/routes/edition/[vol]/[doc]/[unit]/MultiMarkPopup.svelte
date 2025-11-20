@@ -5,7 +5,7 @@
 	import { autoUpdate } from '@floating-ui/dom';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
 
-	let { multiMarkPopupStore, selectedNote, notesData, slug_doc } = $props();
+	let { multiMarkPopupStore, selectedNote = $bindable(), notesData, slug_doc } = $props();
 	let popUpElement = $state();
 
 	onMount(() => {
@@ -20,31 +20,31 @@
 	});
 </script>
 
-<!-- class="absolute z-10 rounded-md border-2 border-[#94ffcf] border-white bg-[#e0fff1] p-5" -->
 <div
-	class="multimark-popup absolute max-w-[700px] border-4 border-[var(--aco-gray-1)] bg-[var(--aco-gray-1)] transition-transform duration-500 dark:bg-[var(--aco-teal)]"
+	class="multimark-popup border-surface-50-950 bg-surface-50-950 absolute max-w-[700px] border-4 transition-transform duration-500"
 	bind:this={popUpElement}
 >
-	<div class="p-1 font-bold">Bitte Kommentar wählen</div>
-	<ul
-		class="w-full bg-[var(--aco-teal-light)]/10"
-	>
-		{#each multiMarkPopupStore.slugs as id (id)}
+	<div class="bg-secondary-500/10 p-1 px-3 font-bold">Bitte Kommentar wählen</div>
+	<ul class="bg-secondary-300-700/60 w-full">
+		{#each multiMarkPopupStore.slugs.filter((slug) => slug !== 'TODO') as id (id)}
 			{@const idMetadata = notesData[slug_doc][multiMarkPopupStore.slugUnitTarget][id]}
-			<li class="p-2 hover:bg-[var(--aco-orange-light)]/30">
+			<li class="hover:bg-secondary-300-700">
 				<button
+					class="block w-full border-none p-2 text-left"
 					onclick={() => {
 						handlePopupClick(id, selectedNote, multiMarkPopupStore);
 					}}
-					><p class="m-0 !pt-0 color-sky-900">
+				>
+					<p class="color-sky-900 m-0 pt-0!">
 						{@html createNoteReferenceString(
 							idMetadata.line_start,
 							idMetadata.line_end,
+							idMetadata.refstring_text,
 							idMetadata.text_start,
 							idMetadata.text_end
 						)}
-					</p></button
-				>
+					</p>
+				</button>
 			</li>
 		{/each}
 	</ul>

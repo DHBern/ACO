@@ -1,17 +1,12 @@
 @import 'tailwindcss';
 @import '@skeletonlabs/skeleton';
-@import '@skeletonlabs/skeleton/optional/presets';
-@import '@skeletonlabs/skeleton/themes/cerberus';
-/*
-  Add your theme import for your theme: "cerberus" here
-*/
-
-@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+@import '@skeletonlabs/skeleton-svelte';
+@import '../theme_aco';
 
 @config '../tailwind.config.ts';
 
 /* Apply .dark whenever the dark class is present earlier in the HTML tree */
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-darkModeState=dark], [data-darkModeState=dark] *));
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -31,52 +26,42 @@
 	}
 	@font-face {
 		font-family: 'Junicode';
-		src: local('Junicode'), local('Junicode'), local('Junicode'), local('Junicode'),
-			url('/fonts/Junicode.ttf');
+		src: url('/fonts/Junicode/JunicodeVF-Roman.woff2') format('woff2');
+		font-weight: 300 700;
+		font-stretch: 75% 125%;
+		font-style: normal;
 		font-display: swap;
+		font-named-instance: 'Regular';
 	}
+
 	@font-face {
-		font-family: 'Junicode-Bold';
-		src: local('Junicode-Bold'), local('Junicode-Bold'), local('Junicode-Bold'),
-			local('Junicode-Bold'), url('/fonts/Junicode-Bold.ttf');
-		font-weight: bold;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'Junicode-BoldItalic';
-		src: local('Junicode-BoldItalic'), local('Junicode-BoldItalic'), local('Junicode-BoldItalic'),
-			local('Junicode-BoldItalic'), url('/fonts/Junicode-BoldItalic.ttf');
-		font-weight: bold;
+		font-family: 'Junicode';
+		src: url('/fonts/Junicode/JunicodeVF-Italic.woff2') format('woff2');
+		font-weight: 300 700;
+		font-stretch: 75% 125%;
 		font-style: italic;
 		font-display: swap;
-	}
-	@font-face {
-		font-family: 'Junicode-Italic';
-		src: local('Junicode-Italic'), local('Junicode-Italic'), local('Junicode-Italic'),
-			local('Junicode-Italic'), url('/fonts/Junicode-Italic.ttf');
-		font-style: italic;
-		font-display: swap;
+		font-named-instance: 'Italic';
 	}
 }
 
-:root {
-	--aco-gray-1: #ffffff;
-	--aco-gray-2: #f1f1f1;
-	--aco-gray-3: #adadad;
-	--aco-gray-4: #464646;
-	--aco-teal: #0f5866;
-	--aco-teal-light: #468b99;
-	--aco-teal-light2: #b0c9ce;
-	--aco-orange: #ac6037;
-	--aco-orange-light: #c1886a;
-	--aco-link: #3ac6e1;
+h1 {
+	@apply text-secondary-400 my-5;
+}
+h2 {
+	@apply mt-10;
 }
 
 p {
-	@apply pt-4 text-lg text-black dark:text-white;
+	@apply text-surface-950-50 pt-4 text-xl;
 }
 .nowrap p {
 	@apply whitespace-nowrap;
+}
+
+/* Greek Text */
+span[data-lang='greek'] {
+	font-family: 'Junicode', 'OpenSans', sans-serif;
 }
 
 /* Heading */
@@ -84,53 +69,13 @@ span[data-type='head_key'] {
 	@apply mr-1 font-bold;
 }
 
-/* Edition Text */
-.marksVisible span[data-ids] {
-	@apply cursor-pointer bg-[#ffffdd] [&.multiple-ids]:bg-[#ffff99] dark:text-black;
-}
-
-.marksVisible span[data-type='mark'].highlighted {
-	@apply bg-[var(--aco-orange-light)] dark:bg-[var(--aco-orange)];
-}
-
-.containerText p {
-	@apply indent-6;
-}
-.containerText [data-type='lib-number'] {
-	@apply text-center font-bold w-full inline-block mt-10;
-}
-
-.containerText [data-type='acoTitle'] {
-	@apply text-center font-bold text-lg;
-}
-/* [data-title_line="2"] {
-	@apply text-2xl
-} */
-
-/* span[data-type=note-start]::before {
-  @apply text-blue-600 in-[&.highlighted]:text-red-500 mr-[1px] ml-[3px];
-  @apply content-["[●"];
-}
-span[data-type=note-end]::before {
-  @apply text-blue-600 mr-[1px] ml-[3px];
-  @apply content-["●]"];
-} */
-
 /* Prevent selecting <br /> on copy-paste */
-.copyWithoutLinebreaks br {
+.copyWithoutLinebreaks br,
+.copyWithoutLinebreaks [data-hyphen] {
 	@apply select-none;
 }
 
 /* Notes and Popup */
 span[data-type='noteRefString-lines'] {
 	@apply mr-1 font-bold;
-}
-
-[data-theme='cerberus'] {
-	--heading-font-family: 'Junicode', 'Open Sans', sans-serif;
-	--base-font-family: 'Junicode', 'Open Sans', sans-serif;
-	--anchor-font-family: 'inherit';
-
-	--body-background-color: #e8e8e8;
-	--body-background-color-dark: #404e50;
 }

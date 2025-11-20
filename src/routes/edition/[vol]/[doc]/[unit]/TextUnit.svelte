@@ -1,10 +1,22 @@
 <script>
-	import { handleMarkClick, resetMarkSelection, placeNotes } from '$lib/functions/floatingApparatus';
+	import {
+		handleMarkClick,
+		resetMarkSelection,
+		placeNotes
+	} from '$lib/functions/floatingApparatus';
+	import { generateMainText } from '$lib/functions/protoHTMLconversion';
 	import { extractNoteIds } from '$lib/functions/protoHTMLconversion/extractNoteIds.js';
 	import { onMount } from 'svelte';
 	import { marksVisible } from '../../../globals.svelte.js';
 
-	let { slug, text, unitLabelInline, selectedNote, multiMarkPopupStore } = $props();
+	let {
+		slug,
+		text,
+		unitlabel,
+		selectedNote = $bindable(),
+		multiMarkPopupStore,
+		el = $bindable()
+	} = $props();
 
 	function handleResetMarkSelection(ev) {
 		if (
@@ -28,17 +40,15 @@
 	}
 
 	onMount(() => {
-		
 		// Place note-boxes at initial positions
-		placeNotes(extractNoteIds(text));
-		
+		placeNotes(extractNoteIds(text).filter((slug) => slug !== 'TODO'));
+
 		//! Move to +page.svelte?!
 		document.body.addEventListener('click', handleResetMarkSelection);
-		
+
 		return () => {
 			document.body.removeEventListener('click', handleResetMarkSelection);
 		};
-		
 	});
 
 	function addSpanHandlers(node) {
@@ -58,6 +68,12 @@
 </script>
 
 <!-- 'whitespace-nowrap' instead of 'truncate' would make text overflow -->
-<div class={['truncate', marksVisible.value && 'marksVisible']} data-unit={slug} use:addSpanHandlers >
-	{unitLabelInline} {@html text}
+<div
+	class={['truncate', marksVisible.value && 'marksVisible']}
+	data-unit={slug}
+	use:addSpanHandlers
+	bind:this={el}
+>
+	<!-- {unitlabel} -->
+	{@html generateMainText(text)}
 </div>

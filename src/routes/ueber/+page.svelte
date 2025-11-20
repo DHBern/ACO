@@ -2,47 +2,44 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
-	<div class="col-span-1 col-start-1">
-		<div class="w-full">
-			<h1>Einleitung</h1>
-			<h2>
-				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar und Register.
-			</h2>
+<div class="mx-auto grid max-w-[1500px] grid-cols-[1fr] gap-10 py-24 lg:grid-cols-[2fr_1fr]">
+	<div class="">
+		<h1 class="h1">Einleitung</h1>
+		<h2 class="h2">
+			Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar und Register.
+		</h2>
 
-			<p class="w-full">
-				Am zehnten April des Jahres 428 wurde Nestorius, der zuvor als Mönch in der Nähe von
-				Antiochia gelebt hatte, zum neuen Bischof von Konstantinopel ernannt. Schon bald nach seinem
-				Amtsantritt setzte er sich mit der Frage auseinander, wie man Maria in ihrer Eigenschaft als
-				Mutter Jesu in der angemessensten Weise bezeichnen solle. Diese Aufgabe erfüllte seiner
-				Meinung nach der Begriff ‚Christusgebärerin‘ am besten, da durch ihn sowohl das göttliche
-				als auch das menschliche Element in dem von ihr zur Welt gebrachten Sohn erfasst sei. Den
-				für Maria zu dieser Zeit bereits im kirchlichen Sprachgebrauch etablierten Titel
-				‚Gottesgebärerin‘ kritisierte er in der Folge in mehreren Predigten als sachlich verfehlt.
-				Dieses Vorgehen löste unter den Anhängern dieses Titels scharfe Kritik aus, zu deren
-				Wortführer sich schließlich Kyrill, der Bischof von Alexandria, aufschwang. Der Streit
-				breitete sich aus und erfasste weite Teile der Kirche. Schließlich sah sich Kaiser
-				Theodosius II. genötigt, ein ökumenisches Konzil einzuberufen, um den gebrochenen
-				kirchlichen Frieden wiederherzustellen.
-			</p>
+		<p class="w-full">
+			Am zehnten April des Jahres 428 wurde Nestorius, der zuvor als Mönch in der Nähe von Antiochia
+			gelebt hatte, zum neuen Bischof von Konstantinopel ernannt. Schon bald nach seinem Amtsantritt
+			setzte er sich mit der Frage auseinander, wie man Maria in ihrer Eigenschaft als Mutter Jesu
+			in der angemessensten Weise bezeichnen solle. Diese Aufgabe erfüllte seiner Meinung nach der
+			Begriff ‚Christusgebärerin‘ am besten, da durch ihn sowohl das göttliche als auch das
+			menschliche Element in dem von ihr zur Welt gebrachten Sohn erfasst sei. Den für Maria zu
+			dieser Zeit bereits im kirchlichen Sprachgebrauch etablierten Titel ‚Gottesgebärerin‘
+			kritisierte er in der Folge in mehreren Predigten als sachlich verfehlt. Dieses Vorgehen löste
+			unter den Anhängern dieses Titels scharfe Kritik aus, zu deren Wortführer sich schließlich
+			Kyrill, der Bischof von Alexandria, aufschwang. Der Streit breitete sich aus und erfasste
+			weite Teile der Kirche. Schließlich sah sich Kaiser Theodosius II. genötigt, ein ökumenisches
+			Konzil einzuberufen, um den gebrochenen kirchlichen Frieden wiederherzustellen.
+		</p>
 
-			<p>
-				Die Geschehnisse rund um das Konzil von Ephesus, das für das Pfingstfest des Jahres 431
-				anberaumt wurde, sind uns in zahlreichen Akten überliefert. Diese dokumentieren nicht nur
-				das Konzil selbst, sondern auch seine Vor- und Nachgeschichte. Die Akten sind dabei in
-				verschiedenen Sammlungen auf uns gekommen, die jeweils unter eigenen Auswahlkriterien und
-				Ordnungsprinzipien zusammengestellt worden sind. Sie wurden in den Jahren 1923–29 von Eduard
-				Schwartz in einer epochalen, bis heute maßgeblichen Ausgabe ediert. Er beließ die
-				altsprachlichen Texte dabei in der Anordnung, die durch die einzelnen Sammlungen vorgegeben
-				war. Ziel unseres Projektes ist es, die Akten des Konzils erstmalig vollständig in eine
-				moderne Sprache zu übersetzen, chronologisch zu ordnen und zu kommentieren. Das Projekt wird
-				von der DFG gefördert und ist als Langfristvorhaben auf einen Zeitraum von zehn Jahren
-				angesetzt (2016-2026).
-			</p>
-		</div>
+		<p>
+			Die Geschehnisse rund um das Konzil von Ephesus, das für das Pfingstfest des Jahres 431
+			anberaumt wurde, sind uns in zahlreichen Akten überliefert. Diese dokumentieren nicht nur das
+			Konzil selbst, sondern auch seine Vor- und Nachgeschichte. Die Akten sind dabei in
+			verschiedenen Sammlungen auf uns gekommen, die jeweils unter eigenen Auswahlkriterien und
+			Ordnungsprinzipien zusammengestellt worden sind. Sie wurden in den Jahren 1923–29 von Eduard
+			Schwartz in einer epochalen, bis heute maßgeblichen Ausgabe ediert. Er beließ die
+			altsprachlichen Texte dabei in der Anordnung, die durch die einzelnen Sammlungen vorgegeben
+			war. Ziel unseres Projektes ist es, die Akten des Konzils erstmalig vollständig in eine
+			moderne Sprache zu übersetzen, chronologisch zu ordnen und zu kommentieren. Das Projekt wird
+			von der DFG gefördert und ist als Langfristvorhaben auf einen Zeitraum von zehn Jahren
+			angesetzt (2016-2026).
+		</p>
 	</div>
 
-	<div class="col-span-1 col-start-2 pt-24">
+	<div class="mt-5 lg:mt-34">
 		<img
 			src="{base}/images/IMG_Schwarz_Edition_3.jpg"
 			alt="Fotografie der Schwartz Edition"
@@ -56,10 +53,10 @@
 </div>
 
 <!-- Über dieses Projekt -->
-<div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
+<div class="grid-colos-[1fr] mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[2fr_1fr]">
 	<div class="">
-		<h1>Über dieses Projekt</h1>
-		<h2>Die Akten des Konzils von Ephesus 431.</h2>
+		<h1 class="h1">Über dieses Projekt</h1>
+		<h2 class="h2">Die Akten des Konzils von Ephesus 431.</h2>
 
 		<p>
 			Die Akten des III. Ökumenischen Konzils von Ephesus, das im Jahre 431 abgehalten wurde, bilden
@@ -78,7 +75,7 @@
 			Einigung und den unmittelbaren Nachwirkungen der Auseinandersetzungen.
 		</p>
 
-		<h2>Bedeutung des Projekts</h2>
+		<h2 class="h2">Bedeutung des Projekts</h2>
 
 		<p>
 			Wegen ihrer kaum zu überschätzenden Bedeutung für die Kirchen- und Theologiegeschichte sind
@@ -102,7 +99,7 @@
 		</p>
 	</div>
 
-	<div class="pt-24">
+	<div class="mt-5 lg:mt-34">
 		<img class="max-h-[400px] max-w-[400px]" src="{base}/images/kg_projekt_ephesus.jpg" alt="" />
 		<p>
 			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
@@ -122,15 +119,15 @@
 </div>
 
 <!-- Ansprechpersonen -->
-<div class="mx-auto grid max-w-[1500px] grid-cols-[2fr_1fr] gap-18 pt-24">
+<div class="mx-auto grid max-w-[1500px] grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
 	<div class="">
-		<h1>Ansprechpersonen</h1>
+		<h1 class="h1">Ansprechpersonen</h1>
 		<p>
 			Ansprechpartner für den inhaltlichen Teil dieses Projekt, das seit Januar 2016 als
 			Langfristvorhaben von der DFG gefördert wird, sind:
 		</p>
 
-		<ul class="mt-2 mb-10 ml-5 font-bold **:text-lg">
+		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-xl">
 			<li>Dr. Thomas Brüggemann (Leiter der Arbeitsstelle)</li>
 			<li>Dr. Sabine Lütkemeyer</li>
 			<li>Dr. Julia Beier</li>
@@ -141,7 +138,7 @@
 			verantwortlich:
 		</p>
 
-		<p class="mt-2 mb-10 ml-5 text-lg font-bold">
+		<p class="mt-2 mb-10 ml-5 text-xl font-bold">
 			Universität Bern<br />
 			Walter Benjamin Kolleg<br />
 			Digital Humanities<br />
@@ -149,7 +146,7 @@
 			3012 Bern
 		</p>
 	</div>
-	<div>
+	<div class="mt-5 lg:mt-34">
 		<img
 			class="max-h-[400px] max-w-[400px]"
 			src="https://upload.wikimedia.org/wikipedia/commons/6/68/Concile-Ephese-Fourviere-detail.jpg"
@@ -165,28 +162,13 @@
 	<!-- Ansprechpersonen -->
 	<div>
 		<div class="">
-			<h1>Förderung und Partner</h1>
+			<h1 class="h1">Förderung und Partner</h1>
 		</div>
 
-		<div class="grid grid-cols-3 gap-2">
-			<ul class="mt-2 mb-10 ml-5 font-bold **:text-lg">
-				<li>Deutsche Forschungsgemeinschaft (DFG)</li>
-				<li>Universität Bonn</li>
-				<li>Universität Bern</li>
-			</ul>
-		</div>
+		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-xl">
+			<li>Deutsche Forschungsgemeinschaft (DFG)</li>
+			<li>Universität Bonn</li>
+			<li>Universität Bern</li>
+		</ul>
 	</div>
 </div>
-
-<style>
-	@reference "tailwindcss";
-	h1 {
-		@apply mb-2 text-3xl font-bold text-[var(--aco-orange)];
-	}
-	h2 {
-		@apply mt-8 text-xl font-bold;
-	}
-	h3 {
-		@apply text-lg font-bold;
-	}
-</style>

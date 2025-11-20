@@ -1,61 +1,77 @@
 <script>
 	import { base } from '$app/paths';
-	import { textData } from '$lib/data/get_data';
+	import { metaData } from '$lib/data/get_alldata_testing.js';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
-	import Abbreviations from './Abbreviations.svelte';
 
-	let accordionState = $state(['Band 1']);
-	
+	let { accordionStateInit = 'vol1' } = $props();
+	let accordionState = $state([accordionStateInit]);
+
+	// The first volume is currently hardcoded
 	let volumes = [
-		{ label: 'Band 2', number: 2 },
-		{ label: 'Band 3', number: 3 }
+		{ slug: 'vol2', label: 'Band 2', number: 2 },
+		{ slug: 'vol3', label: 'Band 3', number: 3 }
 	];
 
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
 	let docs = {};
-	docs.CV = textData.filter(({ type: t }) => t === 'CV');
-	docs.CPal = textData.filter(({ type: t }) => t === 'CPal');
-	docs.CVer = textData.filter(({ type: t }) => t === 'CVer');
-	docs.CU = textData.filter(({ type: t }) => t === 'CU');
-
+	docs.CV = metaData.filter(({ type: t }) => t === 'CV');
+	docs.CPal = metaData.filter(({ type: t }) => t === 'CPal');
+	docs.CVer = metaData.filter(({ type: t }) => t === 'CVer');
+	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
-<h1>Dokumente</h1>
+<h1 class="h1">Dokumente</h1>
+<p>Nachfolgend die Dokumente geordnet nach Band und Dokumententyp.</p>
 
-<div class="flex-row flex-wrap bg-[var(--aco-gray-2)] dark:bg-[var(--aco-gray-3)]">
+<div class="bg-surface-50-950 mt-10 flex-row flex-wrap">
 	<Accordion
-		{accordionState}
+		value={accordionState}
 		onValueChange={(e) => (accordionState = e.value)}
-		collapsible
-		classes="containerDocHead shadow-md mb-4"
+		multiple
+		class="mb-4 shadow-md"
 	>
-		<Accordion.Item value="Band 1" classes="">
-			{#snippet lead()}{/snippet}
-			{#snippet control()}<span class="text-xl font-bold text-black dark:text-black">Band 1</span
-				>{/snippet}
-			{#snippet panel()}
-				<div class="pb-5 pl-13">
-					<a
-						href="{base}/edition/1/vorwort"
-						class="text-lg text-black hover:text-[var(--aco-orange)] dark:text-black"
-						>Vorwort zum ersten Band</a
-					>
+		<Accordion.Item value="vol1">
+			<h3>
+				<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
+					><span class="text-surface-950-50 text-2xl font-bold">Band 1</span>
+				</Accordion.ItemTrigger>
+			</h3>
+			<Accordion.ItemContent>
+				<div class="pt-5 pl-10">
+					<p>
+						<a
+							href="{base}/edition/vol1/vorwort"
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold">Vorwort</a
+						>
+					</p>
+					<p>
+						<a
+							href="{base}/edition/vol1/einleitung"
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
+							>Eine vorläuﬁge Einleitung</a
+						>
+					</p>
+					<p>
+						<a
+							href="{base}/edition/vol1/anordnung-der-dokumente"
+							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
+							>Zur chronologischen Anordnung der Dokumente in Band 1</a
+						>
+					</p>
 				</div>
-				<div class="grid grid-cols-2 gap-20">
+				<div class="grid grid-cols-2 gap-20 p-10">
 					<!-- ACO order -->
-					<div class="col-span-1 col-start-1 p-5">
-						<h2 class="mb-4">Dokumente</h2>
-						<div class="pb-10 pl-8">
-							<ul>
-								{#each textData.slice().sort((a, b) => a.acoNum - b.acoNum) as doc (doc.slug)}
-									<li class="mb-1 hover:**:text-[var(--aco-orange)]">
-										<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
-											<span class="font-bold text-black dark:text-black">{doc.acoNumLabel}:</span>
-											<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-												>{doc.title}</span
-											>
+					<div class="col-span-1 col-start-1">
+						<h2 class="h2 mb-4">Dokumente ACO</h2>
+						<div class="pb-10 text-xl">
+							<ul class="">
+								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
+									<li class="hover:**:text-secondary-700-300 mb-1">
+										<a href="{base}/edition/vol1/{doc.slug}/{doc.unitSlugs[0]}">
+											<span class="text-surface-950-50 font-bold">{doc.acoDocLabel}:</span>
+											<span class="text-surface-950-50">{@html doc.title}</span>
 											<span class="ml-1">
-												<span class="text-[var(--aco-orange-light)]">({doc.slug})</span>
+												<span class="text-secondary-600-400">({doc.slug})</span>
 											</span>
 										</a>
 									</li>
@@ -65,22 +81,20 @@
 					</div>
 
 					<!-- Schwartz order -->
-					<div class="col-span-1 col-start-2 p-5">
-						<h2 class="mb-4">Konkordanz Schwartz</h2>
+					<div class="col-span-1 col-start-2">
+						<h2 class="h2 mb-4">Konkordanz Schwartz</h2>
 						{#each types as type (type)}
-							<div class="pb-10 pl-8">
-								<ul>
+							<div class="pb-10 text-xl">
+								<ul class="">
 									{#each docs[type]
 										.slice()
-										.sort((a, b) => a.schwartzSlugNum - b.schwartzSlugNum) as doc (doc.slug)}
-										<li class="mb-1 hover:**:text-[var(--aco-orange)]">
-											<a href="{base}/edition/1/{doc.slug}/{doc.unitSlugs[0]}">
-												<span class="font-bold text-black dark:text-black">{doc.slug}:</span>
-												<span class="text-[var(--aco-gray-4)] italic dark:text-[var(--aco-gray-4)]"
-													>{doc.title}</span
-												>
+										.sort((a, b) => a.schwartzNum - b.schwartzNum) as doc (doc.slug)}
+										<li class="hover:**:text-secondary-700-300 mb-1">
+											<a href="{base}/edition/vol1/{doc.slug}/{doc.unitSlugs[0]}">
+												<span class="text-surface-950-50 font-bold">{doc.slug}:</span>
+												<span class="text-surface-950-50">{@html doc.title}</span>
 												<span class="ml-1">
-													<span class="text-[var(--aco-orange-light)]">({doc.acoNumLabel})</span>
+													<span class="text-secondary-600-400">({doc.acoDocLabel})</span>
 												</span>
 											</a>
 										</li>
@@ -90,63 +104,21 @@
 						{/each}
 					</div>
 				</div>
-			{/snippet}
+			</Accordion.ItemContent>
 		</Accordion.Item>
-
 		{#each volumes as volume}
-			<Accordion.Item value={volume.label}>
-				{#snippet lead()}{/snippet}
-				{#snippet control()}<span class="text-xl font-bold text-black dark:text-black"
-						>{volume.label}</span
-					>{/snippet}
-				{#snippet panel()}
-					<div class="pb-10 pl-8">
-						<p class="font-bold text-black hover:text-[var(--aco-teal)] dark:text-black">
-							<a href="{base}/edition/1/vorwort"
-								>Vorwort zum {volume.number == 2 ? 'zweiten Band' : 'dritten Band'}</a
-							>
-						</p>
+			<Accordion.Item value={volume.slug}>
+				<h3>
+					<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
+						><span class="text-surface-950-50 text-2xl font-bold">{volume.label}</span>
+					</Accordion.ItemTrigger>
+				</h3>
+				<Accordion.ItemContent
+					><div class="py-5 pl-8">
+						<p class="hover:text-primary-400-600 text-surface-950-50">Band in Bearbeitung</p>
 					</div>
-					<div class="grid grid-cols-2 gap-20">
-						<!-- ACO order -->
-						<div class="col-span-1 col-start-1 p-5">
-							<h2>Dokumente</h2>
-							<div class="pb-10 pl-8">
-								<ul>
-									<li class="mb-1 hover:**:text-[var(--aco-orange)]">...</li>
-								</ul>
-							</div>
-						</div>
-						<!-- Schwartz order -->
-						<div class="col-span-1 col-start-2 p-5">
-							<h2>Konkordanz Schwartz</h2>
-							{#each types as type (type)}
-								<div class="pb-10 pl-8">
-									<ul>
-										<li class="mb-1 hover:**:text-[var(--aco-orange)]">...</li>
-									</ul>
-								</div>
-							{/each}
-						</div>
-					</div>
-				{/snippet}
+				</Accordion.ItemContent>
 			</Accordion.Item>
 		{/each}
 	</Accordion>
 </div>
-
-<!-- Abbreviations -->
-<Abbreviations />
-
-<style>
-	@reference "tailwindcss";
-	h1 {
-		@apply mb-2 text-3xl font-bold text-[var(--aco-orange)];
-	}
-	h2 {
-		@apply text-xl font-bold;
-	}
-	h3 {
-		@apply text-lg font-bold;
-	}
-</style>
