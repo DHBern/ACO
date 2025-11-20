@@ -4,9 +4,6 @@ export { generateMainText } from './generateMainText';
 export { generateLineNumbers } from './generateLineNumbers';
 export { generatePageNumbers } from './generatePageNumbers';
 export {generateFootnoteSuperscripts} from './generateFootnoteSuperscripts';
-export { transformAnchorsNewTab} from './transformAnchorsNewTab';
-export {linkifyFootnoteSuperscripts} from './linkifyFootnoteSuperscripts';
-export {transformFootnotesIntroduction} from './transformFootnotesIntroduction';
 
 // Extract NoteIds
 // This will extract all referenced data-ids for a text.
