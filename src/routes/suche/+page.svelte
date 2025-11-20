@@ -1,15 +1,20 @@
 <script>
 	import { onMount } from 'svelte';
+	import { metaData } from '$lib/data/aco-metadata.json';
 
 	let q = $state('*');
-	let typeFilter = $state('');
+	let docFilter = $state('');
 	let start = $state(0);
 	let rows = 40;
 	let docs = $state([]);
 	let highlighting = $state({});
 	let numFound = $state(0);
 	let loading = $state(false);
-	let hasAuthor = $state(true);
+	let isChecked = $state(true);
+
+	const schwartzSlugs = metaData.map((m) => {
+		return m.schwartzSlug;
+	});
 
 	async function search() {
 		loading = true;
@@ -23,13 +28,8 @@
 		// params.set('pf', 'title^20');
 
 		// Filters
-		if (typeFilter && hasAuthor) {
-			params.append('fq', `type:${typeFilter}`);
-			// params.append('fq', 'author:[* TO *]');
-		} else if (hasAuthor) {
-			// params.set('fq', 'author:[* TO *]');
-		} else if (typeFilter) {
-			params.set('fq', `type:${typeFilter}`);
+		if (docFilter) {
+			params.append('fq', `schwartzSlug:${docFilter}`);
 		}
 
 		// Cursor-based search range
@@ -53,7 +53,7 @@
 		// loading = true;
 		// const params = new URLSearchParams();
 		// params.set('q', q.trim() || '*:*');
-		// if (typeFilter) params.set('fq', `type:${typeFilter}`);
+		// if (docFilter) params.set('fq', `schwartzSlug:${docFilter}`);
 
 		const url = `/api/solr?${params.toString()}`;
 		try {
@@ -79,7 +79,7 @@
 		search();
 	}
 	function setFilter(type) {
-		typeFilter = type;
+		docFilter = type;
 		start = 0;
 		search();
 	}
@@ -103,22 +103,17 @@
 	<form onsubmit={onSearchSubmit} class="search-form flex gap-10">
 		<input bind:value={q} placeholder="Search text..." />
 		<label>
-			<input type="checkbox" bind:checked={hasAuthor} /> has Author
+			<input type="checkbox" bind:checked={isChecked} /> Random Checkbox
 		</label>
-		<select bind:value={typeFilter}>
-			<option value="">All types</option>
-			<option value="publication">publication</option>
-			<option value="person">person</option>
-			<option value="letter">letter</option>
-			<option value="review">review</option>
-			<option value="place">place</option>
-			<option value="plant">plant</option>
-			<option value="entry">entry</option>
-			<option value="manuscript">manuscript</option>
-			<option value="meeting">meeting</option>
-			<option value="institution">institution</option>
+		<select bind:value={docFilter}>
+			<option value="">All documents</option>
+			{#each schwartzSlugs as slug}
+				<option value={slug}>{slug}</option>
+			{/each}
 		</select>
-		<button type="submit" disabled={loading}>Search</button>
+		<button class="preset-filled rounded-full px-4 py-2" type="submit" disabled={loading}
+			>Search</button
+		>
 	</form>
 
 	{#if loading}
