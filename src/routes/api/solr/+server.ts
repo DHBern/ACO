@@ -1,10 +1,7 @@
 import type { RequestHandler } from './$types';
-import { Buffer } from 'node:buffer';
-import { PRIVATE_PW, PRIVATE_USER } from '$env/static/private';
 
 const SOLR_BASE = 'https://solr.dsl.unibe.ch/solr';
 const CORE = 'aco-dev';
-const AUTH = 'Basic ' + Buffer.from(`${PRIVATE_USER}:${PRIVATE_PW}`).toString('base64');
 
 // Proxy GET/POST to Solr. This keeps credentials on server.
 export const GET: RequestHandler = async ({ url, request }) => {
@@ -16,7 +13,6 @@ export const GET: RequestHandler = async ({ url, request }) => {
 		const upstream = await fetch(target, {
 			method: 'GET',
 			headers: {
-				Authorization: AUTH,
 				Accept: request.headers.get('accept') ?? 'application/json'
 			}
 		});
