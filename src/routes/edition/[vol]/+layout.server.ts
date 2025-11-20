@@ -3,10 +3,8 @@ export const prerender = true;
 import { metaDocs as mDocs } from '$lib/data/aco-meta-docs.json';
 import type { LayoutServerLoad } from './$types';
 
-import {
-	linkifyFootnoteSuperscripts,
-	transformFootnotesIntroduction
-} from '$lib/functions/protoHTMLconversion';
+import {linkifyFootnoteSuperscripts} from '$lib/functions/protoHTMLconversion/linkifyFootnoteSuperscripts'
+import {transformFootnotesIntroduction} from '$lib/functions/protoHTMLconversion/transformFootnotesIntroduction';
 
 const metaDocs = await mDocs;
 const litData = metaDocs.Literaturverzeichnis.text;
