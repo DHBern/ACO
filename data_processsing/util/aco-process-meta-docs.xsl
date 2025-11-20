@@ -129,7 +129,7 @@
           </xsl:variable>
           <!-- adjust targets for vol 1 -->
           <xsl:attribute name="href">
-            <xsl:sequence select="$processed-targets[name()='href']/data() => replace('\.\./','/edition/1/')"/>
+            <xsl:sequence select="$processed-targets[name()='href']/data() => replace('\.\./','/edition/vol1/')"/>
           </xsl:attribute>
           <xsl:sequence select="$processed-targets[name()!='href']"/>
         </xsl:otherwise>
@@ -141,8 +141,7 @@
   <xsl:template match="ref[contains(@rend,'page')]" mode="meta-docs-html">
     <xsl:variable name="page-target" select="@target => replace('^#(.*?)\s.*','$1')"/>
     <xsl:variable name="targeted-page" select="//anchor[contains(@xml:id,$page-target)]/preceding::pb[1]/@n"/>
-    <!-- <p>S. hierzu unten S. <ref target="#w7199s #w7273" rend="page lines">XXXVI,6 – 12</ref>.</p> -->
-    <a href="#page-{$targeted-page}" dev="{@target}">
+    <a href="#page-{$targeted-page}">
       <xsl:apply-templates mode="meta-docs-html"/>
     </a>
   </xsl:template>
