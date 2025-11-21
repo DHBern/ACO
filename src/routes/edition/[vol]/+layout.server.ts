@@ -3,7 +3,8 @@ export const prerender = true;
 import { metaDocs as mDocs } from '$lib/data/aco-meta-docs.json';
 import type { LayoutServerLoad } from './$types';
 
-import { transformAnchorsNewTab } from '$lib/functions/protoHTMLconversion';
+import {linkifyFootnoteSuperscripts} from '$lib/functions/protoHTMLconversion/linkifyFootnoteSuperscripts'
+import {transformFootnotesIntroduction} from '$lib/functions/protoHTMLconversion/transformFootnotesIntroduction';
 
 const metaDocs = await mDocs;
 const litData = metaDocs.Literaturverzeichnis.text;
@@ -11,10 +12,11 @@ const abbData = metaDocs.Abkürzungsverzeichnis.text;
 const intro = metaDocs.Einleitung;
 const preface = metaDocs.Vorwort;
 
-export const load: LayoutServerLoad = async () => {
-	// Modify anchors in introduction
-	intro.text = transformAnchorsNewTab(intro.text);
+// Modify protoHTML
+intro.text = linkifyFootnoteSuperscripts(intro.text);
+intro.footnotes = transformFootnotesIntroduction(intro.footnotes);
 
+export const load: LayoutServerLoad = async () => {
 	return {
 		intro,
 		preface,

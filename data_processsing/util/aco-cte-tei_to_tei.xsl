@@ -230,7 +230,7 @@
         <xsl:apply-templates select="hi[@rendition='#rf-kursiv_fett']" mode="metadata"/>
       </title>
       <p>
-        <xsl:apply-templates select="hi[@rendition='#rf-kursiv']" mode="metadata"/>
+        <xsl:apply-templates select="hi[@rendition=('#rf-kursiv','#rf-griechisch')]" mode="metadata"/>
       </p>
     </item>
   </xsl:template>
@@ -248,7 +248,7 @@
     </hi>
   </xsl:template>
   
-  <xsl:template match="note//hi[@rendition='#rf-griechisch']" mode="metadata">
+  <xsl:template match="note//hi[@rendition='#rf-griechisch']|p//hi[@rendition='#rf-griechisch']" mode="metadata">
     <hi rendition="#greek">
       <xsl:apply-templates mode="metadata"/>
     </hi>
