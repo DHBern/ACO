@@ -15,7 +15,7 @@ const notesData = await nData;
 export const entries: EntryGenerator = () => {
 	return metaData.flatMap((m) => {
 		return m.unitSlugs.map((s) => {
-			return { vol: '1', doc: m.schwartzSlug, unit: s };
+			return { vol: 'vol1', doc: m.schwartzSlug, unit: s };
 		});
 	});
 };
