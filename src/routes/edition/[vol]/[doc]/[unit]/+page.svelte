@@ -13,8 +13,6 @@
 	import TextUnit from './TextUnit.svelte';
 	import MultiMarkPopup from './MultiMarkPopup.svelte';
 
-	import { placeNotes } from '$lib/functions/floatingApparatus';
-
 	import { IsInViewport, ElementRect, ScrollState, useIntersectionObserver } from 'runed';
 
 	import {
@@ -125,7 +123,9 @@
 	const handleAddPrevUnit = async () => {
 		if (!loadedUnits[0].prevSlug) return;
 		latestUnitLoadedDuringCurrentScroll = loadedUnits[0].prevSlug;
+
 		const oldHeight = rectMainText.height;
+
 		await goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[0].prevSlug}`, {
 			noScroll: true,
 			keepFocus: true,
@@ -138,9 +138,13 @@
 			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
 		elContainerContent.scrollTo({ top: newHeight - oldHeight, behavior: 'instant' });
 
-		// Re-position all notes
-		loadedUnits.forEach((unit) => {
-			placeNotes(extractNoteIds(unit.text));
+		// Reset the top-reference of all preexisting notes
+		loadedUnits.slice(1).forEach((unit) => {
+			extractNoteIds(unit.text).forEach((id) => {
+				const el = document.querySelector(`.notebox[data-id=${id}]`);
+				const oldTop = parseFloat(el.style.top) || 0;
+				el.style.top = oldTop + newHeight - oldHeight + 'px';
+			});
 		});
 	};
 
