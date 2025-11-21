@@ -27,7 +27,7 @@
 >
 	<div class="bg-primary-50-950/20 in-[&.highlighted]:bg-error-200-800/20">
 		<div class="note-header p-1">
-			<span class="font-bold">{@html unit} | </span>
+			<span class="font-bold">{@html unit !== 'text' ? `${unit} | ` : ''}</span>
 			{@html createNoteReferenceString(
 				noteData.line_start,
 				noteData.line_end,
