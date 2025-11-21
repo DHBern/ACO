@@ -68,10 +68,10 @@
   
   <xsl:template match="tei:TEI">
     <xsl:variable name="tei-id" select="@xml:id => tokenize('_') => reverse() => head() => replace(',','-')"/>
-    <map key="{$tei-id}">
+    <map key="{$tei-id => util:sanitizeBrackets()}">
       <xsl:for-each select="tei:text/tei:body/tei:div">
         <xsl:variable name="divId" select="@n => replace(',','-')"/>
-        <map key="{($divId => substring-after($tei-id||'-'), 'text')[matches(.,'\S')][1] => replace('\.','')}">
+        <map key="{($divId => substring-after($tei-id||'-'), 'text')[matches(.,'\S')][1] => util:sanitizeForJS() => util:sanitizeBrackets()}">
           <xsl:for-each select=".//tei:note">
             <xsl:call-template name="note">
               <xsl:with-param name="teiId" select="$tei-id"/>
@@ -88,7 +88,7 @@
     <xsl:param name="teiId"/>
     <xsl:param name="divId"/>
     <xsl:param name="note"/>
-    <map key="{util:noteKey($divId,$note)}">
+    <map key="{util:noteKey($divId,$note) => util:sanitizeBrackets()}">
       <string key="document">{$teiId}</string>
       <string key="doc_unit">{$divId}</string>
       <string key="line_start">{if ($note/mentioned/@n) 

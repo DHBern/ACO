@@ -69,9 +69,9 @@
   
   <xsl:template match="tei:TEI">
     <xsl:variable name="textId" select="@xml:id => tokenize('_') => reverse() => head() => replace(',','-')"/>
-    <map key="{$textId => util:sanitizeForJS()}">
+    <map key="{$textId => util:sanitizeForJS() => util:sanitizeBrackets()}">
       <xsl:for-each select="tei:text/tei:body/tei:div">
-        <string key="{if (contains(@n,',')) then @n => replace(',','-') => substring-after($textId||'-') => util:sanitizeForJS() else 'text'}">
+        <string key="{if (contains(@n,',')) then @n => replace(',','-') => substring-after($textId||'-') => util:sanitizeForJS() => util:sanitizeBrackets() else 'text'}">
           <xsl:variable name="build-text">
             <xsl:apply-templates select="." mode="build-text"/>
           </xsl:variable>
@@ -115,7 +115,7 @@
   </xsl:template>
   
   <xsl:template match="tei:note" mode="build-text">
-    <span data-type="note-start" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),.)}"></span>
+    <span data-type="note-start" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),.) => util:sanitizeBrackets()}"></span>
   </xsl:template>
   
   <xsl:variable name="docNotes" select="//tei:note"/>
@@ -123,7 +123,7 @@
   <!-- some seg elements don't seem to be linked to notes; might need a separate template to process them at some point -->
   <xsl:template match="tei:seg['#'||@xml:id=$docNotes/@targetEnd]" mode="build-text">
     <xsl:variable name="seg-id" select="@xml:id"/>
-    <xsl:apply-templates mode="build-text"/><span data-type="note-end" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),$docNotes[@targetEnd='#'||$seg-id][1])}"></span>
+    <xsl:apply-templates mode="build-text"/><span data-type="note-end" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),$docNotes[@targetEnd='#'||$seg-id][1]) => util:sanitizeBrackets()}"></span>
   </xsl:template>
   
   <xsl:template match="tei:hi[@rendition='#i']" mode="build-text">
