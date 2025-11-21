@@ -12,6 +12,7 @@
   exclude-result-prefixes="xs xd"
   xpath-default-namespace="http://www.tei-c.org/ns/1.0"
   expand-text="true"
+  xml:preserve-space="true"
   version="3.0">
   <xd:doc scope="stylesheet">
     <xd:desc>
@@ -157,7 +158,7 @@
           <!-- fields: Inhalt -->
           <xsl:variable name="build-content">
             <xsl:for-each select=".//tei:text/tei:body/tei:list/tei:item[matches(tei:title,'^Inhalt:')]">
-              <![CDATA[<p><span data-type='head_key'>]]>{title/text()}<![CDATA[</span> ]]>{p/text()}<![CDATA[</p>]]>
+              <![CDATA[<p><span data-type='head_key'>]]>{title/text()}<![CDATA[</span> ]]><xsl:apply-templates select="p" mode="metadata"/><![CDATA[</p>]]>
             </xsl:for-each>
           </xsl:variable>
           <xsl:text>{$build-content => normalize-space()}</xsl:text>
@@ -212,9 +213,7 @@
     <![CDATA[<em>]]><xsl:apply-templates mode="metadata-note"/><![CDATA[</em>]]>
   </xsl:template>
   
-  <xsl:template match="hi[@rendition='#greek']" mode="metadata">
-    <![CDATA[<span data-lang="greek">]]><xsl:apply-templates mode="metadata"/><![CDATA[</span>]]>
-  </xsl:template>
+  <xsl:template match="hi[@rendition='#greek']" mode="metadata"><![CDATA[<span data-lang="greek">]]><xsl:apply-templates mode="metadata"/><![CDATA[</span>]]></xsl:template>
   
   <xsl:template match="hi[@rendition='#greek']" mode="metadata-note">
     <![CDATA[<span data-lang="greek">]]><xsl:apply-templates mode="metadata-note"/><![CDATA[</span>]]>
