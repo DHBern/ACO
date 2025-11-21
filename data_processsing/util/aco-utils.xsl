@@ -86,6 +86,13 @@
       => replace('\.','')"/> 
   </xsl:function>
   
+  <xsl:function name="util:sanitizeBrackets">
+    <xsl:param name="input"/>
+    <xsl:sequence select="$input 
+      => replace('\[','〔')
+      => replace('\]','〕')"/> 
+  </xsl:function>
+  
   <xsl:function name="util:canonizeFilename">
     <xsl:param name="input"/>
     <xsl:sequence select="$input 
