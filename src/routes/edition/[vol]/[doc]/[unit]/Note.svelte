@@ -3,7 +3,8 @@
 	import { handleNoteClick } from '$lib/functions/floatingApparatus';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
 
-	let { noteSlug, noteData, selectedNote = $bindable() } = $props();
+	let { docSlug, unitSlug, noteSlug, noteData, selectedNote = $bindable() } = $props();
+	const unit = unitSlug; // copy to prevent it from updating with URL
 </script>
 
 <div
@@ -26,6 +27,7 @@
 >
 	<div class="bg-primary-50-950/20 in-[&.highlighted]:bg-error-200-800/20">
 		<div class="note-header p-1">
+			<span class="font-bold">{@html unit !== 'text' ? `${unit} | ` : ''}</span>
 			{@html createNoteReferenceString(
 				noteData.line_start,
 				noteData.line_end,

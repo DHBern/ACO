@@ -13,7 +13,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition:</span> Collectio Palatina 20, ACO I,5 S. 29,17–30,34; ältere Edd.: Garnier (1673), Bd. 2 S. 5–8; Baluze (1684), S. 53–56; PL 48, Sp. 757–763; Loofs, Nestoriana S. 249–264 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> – </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel, Marius Mercator (Übers.) </p> <p><span data-type='head_key'>Datierung:</span> 428 </p> <p><span data-type='head_key'>Griech. Original:</span> Nur in einzelnen Fragmenten erhalten (s. Loofs, Nestoriana S. 249–277) </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> – </p> <p><span data-type='head_key'>Literatur:</span> Konoppa (2005), S. 222–227 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Ausgehend von der Vorsehung, mit der Gott seit Anbeginn für das menschliche Geschlecht sorge, entwickelt Nestorius in dieser ersten Predigt gegen das Attribut seine Lehre von den zwei Naturen Christi. Krönung von Gottes Fürsorge sei die Rettung der Menschen aus den Fängen des Teufels gewesen. Hierzu habe es der Schaffung eines Menschen in Analogie zur Schaffung Adams bedurft. Nicht das göttliche Wort sei von Maria geboren worden, sondern ein vollständiger Mensch, der dem ihn erschaffenden Vater als Werkzeug seiner Gottheit gedient habe: zwei Naturen, aber nur eine Würde und Verehrung.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Ausgehend von der Vorsehung, mit der Gott seit Anbeginn für das menschliche Geschlecht sorge, entwickelt Nestorius in dieser ersten Predigt gegen das Attribut <span data-lang='greek'>θεοτόκος</span> seine Lehre von den zwei Naturen Christi. Krönung von Gottes Fürsorge sei die Rettung der Menschen aus den Fängen des Teufels gewesen. Hierzu habe es der Schaffung eines Menschen in Analogie zur Schaffung Adams bedurft. Nicht das göttliche Wort sei von Maria geboren worden, sondern ein vollständiger Mensch, der dem ihn erschaffenden Vater als Werkzeug seiner Gottheit gedient habe: zwei Naturen, aber nur eine Würde und Verehrung.</p>"
       },
       "unitLabelsLong": [ "text" ]
     },
@@ -131,7 +131,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition:</span> Collectio Veronensis 3, ACO I,2 S. 12,19–14,3; ältere Edd.: Coustant (1967 [= 1721]), Sp. 1075–1079; Mansi, Bd. 4 Sp. 1021–1023; Loofs, Nestoriana S. 165–168; PL 48, Sp. 173–178; 50, Sp. 438–441 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> Jaffé (2016–2020), Nr. 824; CPG 5665 </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel </p> <p><span data-type='head_key'>Datierung:</span> spätestens Frühsommer 429 </p> <p><span data-type='head_key'>Griech. Original:</span> – </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> – </p> <p><span data-type='head_key'>Literatur:</span> Schwartz (1914a), S. 5; Schwartz (1914b), S. 252f.; Caspar (19301933), Bd. 1 S. 391f.; Camelot (1963), S. 38 u. 76f.; Speigl (1969), S. 4–7; Vogt (1975), S. 88f. u. 95–97; Wojtowytsch (1981), S. 283f.; Wessel (2004), S. 107f.; Krannich (2005), S. 108f.; Bevan (2016), S. 111f.; Price/Graumann (2020), S. 36 u. 97–100 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Nestorius fragt bei Coelestin nach, inwieweit es sich bei der Lehre des Julian von Eclanum und seines Kreises um eine Häresie handele. Im Anschluss daran legt er seine Position zum -Begriff dar.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Nestorius fragt bei Coelestin nach, inwieweit es sich bei der Lehre des Julian von Eclanum und seines Kreises um eine Häresie handele. Im Anschluss daran legt er seine Position zum <span data-lang='greek'>θεοτόκος</span>-Begriff dar.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3" ]
     },
@@ -165,7 +165,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 21, ACO I,1,1 S. 109,5–28; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 327–330; Coleti (1728–1734), Bd. 3 Sp. 877–880; Mansi, Bd. 4 Sp. 1000; PG 77, Sp. 60f. </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 5307 </p> <p><span data-type='head_key'>Verfasser:</span> Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung:</span> 429 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> Collectio Casinensis 4, ACO I,3 S. 17f. </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 112 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill rechtfertigt gegenüber seinen Kritikern sein entschiedenes Vorgehen gegen Nestorius, indem er darauf verweist, dass eine Verdammung der -Lehre einer Verdammung aller rechtgläubigen Christen gleichzusetzen sei.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Kyrill rechtfertigt gegenüber seinen Kritikern sein entschiedenes Vorgehen gegen Nestorius, indem er darauf verweist, dass eine Verdammung der <span data-lang='greek'>θεοτόκος</span>-Lehre einer Verdammung aller rechtgläubigen Christen gleichzusetzen sei.</p>"
       },
       "unitLabelsLong": [ "text" ]
     },
@@ -313,7 +313,7 @@
             "text_end": "429",
             "text_start": "Sommer"
           } ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill, der sich offenbar durch den Umstand, dass sich mittlerweile selbst Papst Coelestin in den -Streit eingeschaltet hat, zum Handeln genötigt sieht, schreibt Nestorius einen Brief, in welchem er diesen dazu auffordert, seine Aussagen zu korrigieren und den angestammten Titel der Mutter Jesu anzuerkennen.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill, der sich offenbar durch den Umstand, dass sich mittlerweile selbst Papst Coelestin in den <span data-lang='greek'>θεοτόκος</span>-Streit eingeschaltet hat, zum Handeln genötigt sieht, schreibt Nestorius einen Brief, in welchem er diesen dazu auffordert, seine Aussagen zu korrigieren und den angestammten Titel der Mutter Jesu anzuerkennen.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3", "4" ]
     },
@@ -838,7 +838,7 @@
       "content": {
         "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 14, ACO I,1,1 S. 93,5–96,26; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 387–395; Coleti (1728–1734), Bd. 3 Sp. 937–944; Mansi, Bd. 4 Sp. 1061–1068; PG 77, Sp. 93–96 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 6316 </p> <p><span data-type='head_key'>Verfasser:</span> Johannes von Antiochia </p> <p><span data-type='head_key'>Datierung: </span> November 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen:</span> Collectio Casinensis 19, ACO I,3 S. 44–47 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 176–180 </p>",
         "footnotes_head": [  ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Johannes von Antiochia wendet sich in einem Brief an Nestorius, um diesen darum zu bitten, in der Auseinandersetzung mit den Anhängern der gegnerischen Fraktion nicht weiter an christologi­schen Detailfragen festzuhalten, sondern den -Titel um der Einheit der Kirche willen zweck­mäßigerweise anzuerkennen.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Johannes von Antiochia wendet sich in einem Brief an Nestorius, um diesen darum zu bitten, in der Auseinandersetzung mit den Anhängern der gegnerischen Fraktion nicht weiter an christologi­schen Detailfragen festzuhalten, sondern den <span data-lang='greek'>θεοτόκος</span>-Titel um der Einheit der Kirche willen zweck­mäßigerweise anzuerkennen.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3", "4", "5" ]
     },
@@ -860,7 +860,7 @@
             "text_end": "",
             "text_start": "30. November"
           } ],
-        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill entfaltet als Antwort auf den zweiten an ihn gerichteten Brief des Nestorius noch einmal ausführlich seine auf die -Frage gerichtete christologische Position, wobei er sich abermals auf das Nizänum beruft und auf die Einwürfe seines Gegners zum Teil dezidiert eingeht. Im An­schluss an seine Ausführungen stellt er zwölf Anathematismen auf, die definieren sollen, welche Ansichten in dem erörterten Fragenkomplex zu verwerfen seien.</p>"
+        "inhalt": "<p><span data-type='head_key'>Inhalt: </span> Kyrill entfaltet als Antwort auf den zweiten an ihn gerichteten Brief des Nestorius noch einmal ausführlich seine auf die <span data-lang='greek'>θεοτόκος</span>-Frage gerichtete christologische Position, wobei er sich abermals auf das Nizänum beruft und auf die Einwürfe seines Gegners zum Teil dezidiert eingeht. Im An­schluss an seine Ausführungen stellt er zwölf Anathematismen auf, die definieren sollen, welche Ansichten in dem erörterten Fragenkomplex zu verwerfen seien.</p>"
       },
       "unitLabelsLong": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" ]
     },
@@ -1371,7 +1371,7 @@
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2025-10-29T15:05:49.168163026+01:00",
+    "generated-on": "2025-11-21T13:36:08.366760047+01:00",
     "description": ""
   }
 }

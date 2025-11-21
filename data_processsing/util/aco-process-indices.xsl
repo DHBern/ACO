@@ -4,6 +4,7 @@
   xmlns:math="http://www.w3.org/2005/xpath-functions/math"
   xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
   xmlns:local="https://dsl.unibe.ch"
+  xmlns:util="aco-utils.xsl"
   xpath-default-namespace="http://www.tei-c.org/ns/1.0"
   exclude-result-prefixes="xs math xd"
   expand-text="true"
@@ -17,6 +18,8 @@
   </xd:doc>
   
   <xsl:output method="json" indent="true"/>
+  
+  <xsl:import href="aco-utils.xsl"/>
   
   <xsl:mode on-no-match="shallow-skip"/>
   
@@ -41,7 +44,7 @@
   </xsl:template>
   
   <xsl:template match="div">
-    <array key="{head}" xmlns="http://www.w3.org/2005/xpath-functions">
+    <array key="{head  => util:sanitizeBrackets()}" xmlns="http://www.w3.org/2005/xpath-functions">
       <xsl:apply-templates/>
     </array>
   </xsl:template>
@@ -54,7 +57,7 @@
         </xsl:for-each>-->
         <map key="loc">
           <xsl:for-each-group select="(. => tokenize('\s') => tail() => local:decompress-index())" group-by="tokenize(.,',') => head()">
-            <array key="{current-grouping-key()}">
+            <array key="{current-grouping-key() => util:sanitizeBrackets()}">
               <xsl:for-each select="current-group()">
                 <string>{. => normalize-space()}</string>
               </xsl:for-each>
@@ -72,12 +75,12 @@
       </array>-->
         <map key="loc-s">
           <xsl:for-each-group select="(. => tokenize('\s') => tail() => local:decompress-index() => local:split-to-string())" group-by="tokenize(.,'\s') => head()">
-              <array key="{current-grouping-key()}">
-                <xsl:for-each select="current-group() ! substring-after(.,current-grouping-key())">
-                  <string>{. => normalize-space()}</string>
-                </xsl:for-each>
-              </array>
-            </xsl:for-each-group>            
+            <array key="{current-grouping-key() => util:sanitizeBrackets()}">
+              <xsl:for-each select="current-group() ! substring-after(.,current-grouping-key())">
+                <string>{. => normalize-space()}</string>
+              </xsl:for-each>
+            </array>
+          </xsl:for-each-group>            
         </map>
       <string key="print">{. => tokenize(' ') => tail() => normalize-space()}</string>
     </map>

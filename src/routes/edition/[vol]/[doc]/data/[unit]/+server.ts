@@ -21,15 +21,14 @@ export const entries: EntryGenerator = () => {
 };
 
 export async function GET({ params, fetch }) {
-	const unitText = textData?.[params.doc]?.[params.unit] || '';
-	const unitNotes = notesData?.[params.doc]?.[params.unit] || [];
-
-	// Modify anchors in unitNotes
-	Object.keys(unitNotes).forEach((key) => {
-		// if (!unitNotes[key] || !unitNotes[key].note_content) return;
-		unitNotes[key].note_content = transformAnchorsNewTab(unitNotes[key].note_content);
-	});
-
+	const unitText = textData?.[params.doc]?.[params.unit] || null;
+	const unitNotes = notesData?.[params.doc]?.[params.unit] || null;
+	if (unitText === null) {
+		console.error(`\n\n!!!!!!!!!!!!!!!!!!!!!!!!!\n\nNo text found for ${params.doc}/${params.unit}. Check consistency accross datasets!\n\n!!!!!!!!!!!!!!!!!!!!!!!!!`)
+	}
+	if (unitNotes === null) {
+		console.error(`\n\n!!!!!!!!!!!!!!!!!!!!!!!!!\n\nNo notes found for ${params.doc}/${params.unit}. Check consistency accross datasets!\n\n!!!!!!!!!!!!!!!!!!!!!!!!!`)
+	}
 	return json({ unitText, unitNotes });
 }
 

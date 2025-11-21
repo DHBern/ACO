@@ -1,3 +1,4 @@
+
 // Generate html for mainText, lineNumbers, pageNumbers and footnotes
 export { generateMainText } from './generateMainText';
 export { generateLineNumbers } from './generateLineNumbers';
