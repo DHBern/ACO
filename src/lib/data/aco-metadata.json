@@ -1276,102 +1276,12 @@
         "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Die Kaiser berichten den Adressaten von ihren Bemühungen, die Einheit der Kirche wiederher­zustellen, und bitten sie darum, sie bei diesen durch Gebete zu unterstützen.</p>"
       },
       "unitLabelsLong": [ "text" ]
-    },
-    {
-      "schwartzSlug": "CPal21",
-      "schwartzNum": "21",
-      "acoDocNum": "6",
-      "acoDocLabel": "Dok. 6",
-      "type": "CPal",
-      "title": "[🚧TODO] Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10)",
-      "slug": "CPal21",
-      "unitSlugs": [],
-      "unitLabelsLong": [],
-      "unitLabels": [
-        ""
-      ],
-      "content": {
-        "head": "error during input processing (structural anomalies)",
-        "inhalt": ""
-      }
-    },
-    {
-      "schwartzSlug": "CV22",
-      "schwartzNum": "22",
-      "acoDocNum": "8",
-      "acoDocLabel": "Dok. 8",
-      "type": "CV",
-      "title": "[🚧TODO] Kyrills Brief an die Apokrisiare in Konstantinopel",
-      "slug": "CV22",
-      "unitSlugs": [],
-      "unitLabelsLong": [],
-      "unitLabels": [
-        ""
-      ],
-      "content": {
-        "head": "error during input processing (structural anomalies)",
-        "inhalt": ""
-      }
-    },
-    {
-      "schwartzSlug": "CVer4",
-      "schwartzNum": "4",
-      "acoDocNum": "22",
-      "acoDocLabel": "Dok. 22",
-      "type": "CVer",
-      "title": "[TODO] Nestorius’ zweiter Brief an Coelestin",
-      "slug": "CVer4",
-      "unitSlugs": [],
-      "unitLabelsLong": [],
-      "unitLabels": [
-        ""
-      ],
-      "content": {
-        "head": "error during input processing (structural anomalies)",
-        "inhalt": ""
-      }
-    },
-    {
-      "schwartzSlug": "CVer5",
-      "schwartzNum": "5",
-      "acoDocNum": "31",
-      "acoDocLabel": "Dok. 31",
-      "type": "CVer",
-      "title": "[🚧TODO] Coelestins Brief an Priester, Diakone, Kleriker und Volk in Konstantinopel",
-      "slug": "CVer5",
-      "unitSlugs": [],
-      "unitLabelsLong": [],
-      "unitLabels": [
-        ""
-      ],
-      "content": {
-        "head": "error during input processing (structural anomalies)",
-        "inhalt": ""
-      }
-    },
-    {
-      "schwartzSlug": "CV150",
-      "schwartzNum": "150",
-      "acoDocNum": "40",
-      "acoDocLabel": "Dok. 40",
-      "type": "CV",
-      "title": "[🚧TOD Kyrills Rede an die Herrinnen",
-      "slug": "CV150",
-      "unitSlugs": [],
-      "unitLabelsLong": [],
-      "unitLabels": [
-        ""
-      ],
-      "content": {
-        "head": "error during input processing (structural anomalies)",
-        "inhalt": ""
-      }
     }
   ],
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2025-11-21T12:29:19.225298464+01:00",
+    "generated-on": "2025-11-21T13:36:08.366760047+01:00",
     "description": ""
   }
 }

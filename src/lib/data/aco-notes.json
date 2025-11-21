@@ -25537,17 +25537,6 @@
         }
       },
       "10": {
-        "CV7-10-58--[11-": {
-          "note_content": "Kapitelgrenze nach Migne, fehlt bei Schwartz.",
-          "doc_unit": "CV7-10",
-          "refstring_lines": "58",
-          "document": "CV7",
-          "text_end": "[11",
-          "line_start": "58",
-          "line_end": "58",
-          "text_start": "[11",
-          "refstring_text": "[11]"
-        },
         "CV7-10-1-1121-Dass-werden": {
           "note_content": "Vgl. oben <a href='../CV7/6?line=5' data-type='internal_ref' document='CV7' doc_unit='6' document_end='CV7' doc_unit_end='6' line_start='5' line_end='12' debug_cte='#w1590s #w1670'>CV7,6,5 – 12</a>.",
           "doc_unit": "CV7-10",
@@ -25646,6 +25635,17 @@
           "line_end": "36",
           "text_start": "Weil",
           "refstring_text": "Weil … gehen]"
+        },
+        "CV7-10-58--〔11-": {
+          "note_content": "Kapitelgrenze nach Migne, fehlt bei Schwartz.",
+          "doc_unit": "CV7-10",
+          "refstring_lines": "58",
+          "document": "CV7",
+          "text_end": "[11",
+          "line_start": "58",
+          "line_end": "58",
+          "text_start": "[11",
+          "refstring_text": "[11]"
         }
       },
       "32": {
@@ -35355,7 +35355,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2025-11-20T23:16:50.493483695+01:00",
+    "generated-on": "2025-11-21T13:36:17.84594865+01:00",
     "description": ""
   }
 }
