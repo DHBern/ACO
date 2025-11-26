@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import { metaData } from '$lib/data/get_alldata_testing.js';
 
 /** @type {import('./$types').PageLoad} */
