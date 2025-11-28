@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { metaData } from '$lib/data/aco-metadata.json';
 
+	const baseURL = 'https://solr.dsl.unibe.ch/solr/aco-dev/select';
 	let query = $state('Kyrill* AND Nestor*');
 	let docFilterSchwartz = $state('');
 	let docFilterDok = $state('');
@@ -17,13 +18,10 @@
 	let checkedSearchText = $state(true);
 	let checkedSearchNotes = $state(true);
 
-	let url = $state('');
-
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
 	const schwartzSlugs = types.reduce((acc, type) => {
 		const slugs = metaData
 			.filter(({ type: t }) => t === type)
-			.slice()
 			.sort((a, b) => a.schwartzNum - b.schwartzNum)
 			.map((item) => item.schwartzSlug);
 		return acc.concat(slugs);
@@ -71,39 +69,34 @@
 		params.set('hl.simple.pre', '<mark>');
 		params.set('hl.simple.post', '</mark>');
 		params.append('hl.fl', 'aco_text_bare');
-		params.append('hl.snippets', '999999');
-		params.append('hl.fragsize', '150');
+		params.append('hl.snippets', '999999'); //! TOCHANGE
+		params.append('hl.fragsize', '150'); //! TOCONSIDER
 		params.append('hl.mergeContiguous', 'true');
 		params.append('hl.useFastVectorHighlighter', 'true');
 
 		// Grouping
 		params.append('group', 'true');
 		params.append('group.field', 'aco_schwartzSlug');
-		params.append('group.limit', '999');
+		params.append('group.limit', '999'); //! TOCHANGE
 		params.append('group.sort', 'score desc');
 		params.append('group.ngroups', 'true');
 
 		// Return json instead of xml
 		params.set('wt', 'json');
 
-		url = `/api/solr?${params.toString()}`;
+		const url = `${baseURL}?${params.toString()}`;
 
 		try {
 			const res = await fetch(url);
 			if (!res.ok) throw new Error(`Solr error ${res.status}`);
 			const json = await res.json();
-			console.log('JSON', json);
 			groups = json.grouped.aco_schwartzSlug.groups || [];
 			docs = groups.flatMap((g) => g.doclist.docs);
-			console.log('docs', docs);
 			highlighting = json.highlighting || {};
 			numFoundGroups = json.grouped.aco_schwartzSlug.matches || 0;
 			numFoundDocs = groups.reduce((sum, g) => sum + (g.doclist?.numFound || 0), 0);
 			numFoundHighlights = docs
-				.map((d) => d.id)
-				.filter(Boolean)
-				.map((id) => json.highlighting?.[id] ?? {})
-				.flatMap((h) => Object.values(h))
+				.flatMap((d) => Object.values(json.highlighting?.[d.id] ?? {}))
 				.reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
 		} catch (err) {
 			console.error(err);
@@ -130,11 +123,9 @@
 	}
 
 	function resetDocFilterSchwartz() {
-		console.log('r1');
 		docFilterSchwartz = 'ignore';
 	}
 	function resetDocFilterDok() {
-		console.log('r2');
 		docFilterDok = 'ignore';
 	}
 
@@ -148,7 +139,7 @@
 
 	<form
 		onsubmit={onSearchSubmit}
-		class="search-form flex flex-wrap items-start justify-start gap-10 bg-gray-100 px-10 py-8"
+		class="search-form bg-gray-100-900 flex flex-wrap items-start justify-start gap-10 px-10 py-8"
 	>
 		<div class="flex flex-col gap-3">
 			<span class="label-text font-bold">Suchbegriff</span>
@@ -241,8 +232,6 @@
 														'bg-secondary-500/8 border-secondary-500/10 border-2'
 												]}
 											>
-												<!-- <p>{@html Object.keys(highlighting[doc.id])}</p> -->
-												<!-- <p>{@html highlighting[doc.id].line}</p> -->
 												<p>{@html hl}</p>
 											</div>
 										{/each}
@@ -252,9 +241,6 @@
 												((doc.aco_text_bare || '').length > 8 ? '\n…' : '')}
 										</p>
 									{/if}
-									<!-- <p>
-									{doc.aco_text_bare ? doc.aco_text_bare : ''}
-								</p> -->
 								</div>
 							</div>
 						</a>
