@@ -1,0 +1,17 @@
+{
+    "id":"CV166::libIV-praef",
+    "slug":"CV166",
+    "schwartzSlug":"CV166",
+    "schwartzSlugNum":"166",
+    "acoNumX":"2",
+    "acoNumLabel":"Dok. 25",
+    "type":"CV",
+    "title":"Kyrill, ‚Gegen Nestorius‘",
+    "unit_slug":"libIV-praef",
+    "body":"<p><span data-line='1'></span>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque,<br /><span data-line='2'></span>totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae</p>",
+    "plain_text":"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae",
+    "first_line":"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium ...",
+    "page":223,
+    "line_start":1,
+    "is_testdata": true
+    }
