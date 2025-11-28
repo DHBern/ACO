@@ -35,12 +35,12 @@
 		.sort((a, b) => a - b);
 
 	async function search() {
+		if (!query) return;
 		loading = true;
 		const params = new URLSearchParams();
 		// Trim input
 		params.set('defType', 'edismax');
-		params.set('q', query.trim() || '*:*');
-
+		params.set('q', query.trim() || '');
 		// Weights
 		params.set('qf', 'aco_text_bare^1');
 
