@@ -16,7 +16,6 @@
 	let searchInTitle = $state(true);
 
 	let url = $state('');
-	$inspect(url);
 
 	const schwartzSlugs = metaData.map((m) => {
 		return m.schwartzSlug;
@@ -31,21 +30,20 @@
 
 		// Weights
 		if (searchInTitle) {
-			params.set('qf', 'title^1 aco_text_bare^1');
+			params.set('qf', 'aco_docTitle^1 aco_text_bare^1');
 		} else {
 			params.set('qf', 'aco_text_bare^1');
 		}
-		// params.set('pf', 'title^20');
 
 		// Filters
 		if (!checkedSearchText) {
-			params.append('fq', '-type:aco-unit');
+			params.append('fq', '-aco_type:aco-unit');
 		}
 		if (!checkedSearchNotes) {
-			params.append('fq', '-type:aco-note');
+			params.append('fq', '-aco_type:aco-note');
 		}
 		if (docFilter) {
-			params.append('fq', `schwartzSlug:${docFilter}`);
+			params.append('fq', `aco_schwartzSlug:${docFilter}`);
 		}
 
 		// Cursor-based search range
@@ -59,7 +57,7 @@
 		params.set('hl', 'true');
 		params.set('hl.simple.pre', '<mark>');
 		params.set('hl.simple.post', '</mark>');
-		params.append('hl.fl', 'title aco_text_bare');
+		params.append('hl.fl', 'aco_docTitle aco_text_bare');
 		params.append('hl.snippets', '999999');
 		params.append('hl.fragsize', '30');
 		params.append('hl.mergeContiguous', 'true');
@@ -67,7 +65,7 @@
 
 		// Grouping
 		params.append('group', 'true');
-		params.append('group.field', 'schwartzSlug');
+		params.append('group.field', 'aco_schwartzSlug');
 		params.append('group.limit', '999');
 		params.append('group.sort', 'score desc');
 		params.append('group.ngroups', 'true');
@@ -83,9 +81,9 @@
 			const json = await res.json();
 			// docs = json.response.docs || []; // no-grouping
 			console.log('JSON', json);
-			docs = json.grouped.schwartzSlug.groups[0].doclist.docs.docs || [];
+			docs = json.grouped.aco_schwartzSlug.groups[0].doclist.docs.docs || [];
 			highlighting = json.highlighting || {};
-			numFoundGroups = json.grouped.schwartzSlug.matches || 0;
+			numFoundGroups = json.grouped.aco_schwartzSlug.matches || 0;
 			numFoundDocs = json.highlighting.length || 0;
 		} catch (err) {
 			console.error(err);
@@ -156,26 +154,26 @@
 					<li>
 						<!-- Document -->
 						<a
-							href={`../edition/vol1/${doc.schwartzSlug}`}
+							href={`../edition/vol1/${doc.aco_schwartzSlug}`}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<div
 								class={[
 									'm-2 border-5 border-black',
-									doc.type === 'aco-unit' && 'border-primary-50',
-									doc.type === 'aco-note' && 'border-secondary-50'
+									doc.aco_type === 'aco-unit' && 'border-primary-50',
+									doc.aco_type === 'aco-note' && 'border-secondary-50'
 								]}
 							>
 								<!-- Header -->
 								<div
 									class={[
 										'px-3 py-1 text-xl',
-										doc.type === 'aco-unit' && 'bg-primary-50',
-										doc.type === 'aco-note' && 'bg-secondary-50'
+										doc.aco_type === 'aco-unit' && 'bg-primary-50',
+										doc.aco_type === 'aco-note' && 'bg-secondary-50'
 									]}
 								>
-									<strong>{doc.schwartzSlug}: {doc.title}</strong>
+									<strong>{doc.aco_schwartzSlug}: {doc.aco_docTitle}</strong>
 								</div>
 								<!-- Results -->
 								<div class="p-3">
