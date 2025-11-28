@@ -8,7 +8,8 @@
 	let rows = 40;
 	let docs = $state([]);
 	let highlighting = $state({});
-	let numFound = $state(0);
+	let numFoundDocs = $state(0);
+	let numFoundGroups = $state(0);
 	let loading = $state(false);
 	let checkedSearchText = $state(true);
 	let checkedSearchNotes = $state(true);
@@ -56,8 +57,20 @@
 
 		// Highlighting
 		params.set('hl', 'true');
-		params.set('hl.snippets', '999999');
-		// params.set('hl.fl', 'title');
+		params.set('hl.simple.pre', '<mark>');
+		params.set('hl.simple.post', '</mark>');
+		params.append('hl.fl', 'title aco_text_bare');
+		params.append('hl.snippets', '999999');
+		params.append('hl.fragsize', '30');
+		params.append('hl.mergeContiguous', 'true');
+		params.append('hl.useFastVectorHighlighter', 'true');
+
+		// Grouping
+		params.append('group', 'true');
+		params.append('group.field', 'schwartzSlug');
+		params.append('group.limit', '999');
+		params.append('group.sort', 'score desc');
+		params.append('group.ngroups', 'true');
 
 		// Return json instead of xml
 		params.set('wt', 'json');
@@ -68,17 +81,21 @@
 			const res = await fetch(url);
 			if (!res.ok) throw new Error(`Solr error ${res.status}`);
 			const json = await res.json();
-			docs = json.response.docs || [];
+			// docs = json.response.docs || []; // no-grouping
+			console.log('JSON', json);
+			docs = json.grouped.schwartzSlug.groups[0].doclist.docs.docs || [];
 			highlighting = json.highlighting || {};
-			numFound = json.response.numFound || 0;
+			numFoundGroups = json.grouped.schwartzSlug.matches || 0;
+			numFoundDocs = json.highlighting.length || 0;
 		} catch (err) {
 			console.error(err);
 			docs = [];
 			highlighting = {};
-			numFound = 0;
+			numFoundDocs = 0;
 		} finally {
 			loading = false;
 		}
+		console.log(docs);
 	}
 
 	function onSearchSubmit(e) {
@@ -105,8 +122,8 @@
 	});
 </script>
 
-<div class="py-14">
-	<h1>Suche</h1>
+<div class="mx-auto max-w-[1500px] py-14">
+	<h1 class="h1">Suche</h1>
 
 	<form onsubmit={onSearchSubmit} class="search-form flex gap-10">
 		<input bind:value={query} placeholder="Search text..." />
@@ -126,60 +143,88 @@
 			<input type="checkbox" bind:checked={searchInTitle} /> Include title
 		</label>
 		<button class="preset-filled rounded-full px-4 py-2" type="submit" disabled={loading}
-			>Search</button
+			>Suchen</button
 		>
 	</form>
-
-	{#if loading}
-		<p>Loading…</p>
-	{:else}
-		<p>{numFound} Treffer</p>
-		<ul>
-			{#each docs as doc}
-				<li>
-					<div
-						class={[
-							'm-2 border-2 border-5 border-black',
-							doc.type === 'aco-unit' && 'border-primary-50',
-							doc.type === 'aco-note' && 'border-secondary-50'
-						]}
-					>
-						<div
-							class={[
-								'px-3 py-1 text-xl',
-								doc.type === 'aco-unit' && 'bg-primary-50',
-								doc.type === 'aco-note' && 'bg-secondary-50'
-							]}
+	<div class="searchResults">
+		{#if loading}
+			<p>Bitte warten…</p>
+		{:else}
+			<p>{numFoundDocs} Treffer</p>
+			<ul>
+				{#each docs as doc}
+					<li>
+						<!-- Document -->
+						<a
+							href={`../edition/vol1/${doc.schwartzSlug}`}
+							target="_blank"
+							rel="noopener noreferrer"
 						>
-							<strong>{doc.schwartzSlug}: {doc.title}</strong>
-						</div>
-						<div class="p-3">
-							{#if highlighting[doc.id] && highlighting[doc.id].aco_text_bare}
-								{#each highlighting[doc.id].aco_text_bare as hl, idx}
-									<div class={['border-secondary-100 m-2 border-3 p-3']}>
-										<!-- <p>{@html Object.keys(highlighting[doc.id])}</p> -->
-										<!-- <p>{@html highlighting[doc.id].line}</p> -->
-										<p>{@html hl}</p>
-									</div>
-								{/each}
-							{:else}
-								<p>
-									{(doc.aco_text_bare || '').slice(0, 8) +
-										((doc.aco_text_bare || '').length > 8 ? '\n…' : '')}
-								</p>
-							{/if}
-							<!-- <p>
-								{doc.aco_text_bare ? doc.aco_text_bare : ''}
-							</p> -->
-						</div>
-					</div>
-				</li>
-			{/each}
-		</ul>
+							<div
+								class={[
+									'm-2 border-5 border-black',
+									doc.type === 'aco-unit' && 'border-primary-50',
+									doc.type === 'aco-note' && 'border-secondary-50'
+								]}
+							>
+								<!-- Header -->
+								<div
+									class={[
+										'px-3 py-1 text-xl',
+										doc.type === 'aco-unit' && 'bg-primary-50',
+										doc.type === 'aco-note' && 'bg-secondary-50'
+									]}
+								>
+									<strong>{doc.schwartzSlug}: {doc.title}</strong>
+								</div>
+								<!-- Results -->
+								<div class="p-3">
+									{#if highlighting[doc.id] && highlighting[doc.id].aco_text_bare}
+										{#each highlighting[doc.id].aco_text_bare as hl, idx}
+											<div class={['border-secondary-100 m-2 border-3 p-3']}>
+												<!-- <p>{@html Object.keys(highlighting[doc.id])}</p> -->
+												<!-- <p>{@html highlighting[doc.id].line}</p> -->
+												<p>{@html hl}</p>
+											</div>
+										{/each}
+									{:else}
+										<p>
+											{(doc.aco_text_bare || '').slice(0, 8) +
+												((doc.aco_text_bare || '').length > 8 ? '\n…' : '')}
+										</p>
+									{/if}
+									<!-- <p>
+									{doc.aco_text_bare ? doc.aco_text_bare : ''}
+								</p> -->
+								</div>
+							</div>
+						</a>
+					</li>
+				{/each}
+			</ul>
 
-		<div class="pagination">
-			<button onclick={prevPage} disabled={start === 0}>Zurück</button>
-			<button onclick={nextPage} disabled={start + rows >= numFound}>Weiter</button>
-		</div>
-	{/if}
+			<div class="pagination flex justify-around">
+				<div class="flex gap-5">
+					<button
+						class="btn preset-filled-primary-500 rounded-full px-4 py-2"
+						onclick={prevPage}
+						disabled={start === 0}>Zurück</button
+					>
+					<button
+						class="btn preset-filled-primary-500 rounded-full px-4 py-2"
+						onclick={nextPage}
+						disabled={start + rows >= numFoundDocs}>Weiter</button
+					>
+				</div>
+			</div>
+		{/if}
+	</div>
 </div>
+
+<style>
+	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
+	.searchResults :global(mark) {
+		@apply bg-secondary-300;
+	}
+</style>
