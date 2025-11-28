@@ -2,24 +2,71 @@
 	import { onMount } from 'svelte';
 	import { metaData } from '$lib/data/aco-metadata.json';
 
-	let query = $state('Lehre*');
-	let docFilter = $state('CPal22');
+	let query = $state('Kyrill* AND Nestor*');
+	let docFilterSchwartz = $state('');
+	let docFilterDok = $state('');
 	let start = $state(0);
-	let rows = 40;
+	let rows = 999999;
+	let groups = $state([]);
 	let docs = $state([]);
 	let highlighting = $state({});
 	let numFoundDocs = $state(0);
 	let numFoundGroups = $state(0);
+	let numFoundHighlights = $state(0);
 	let loading = $state(false);
 	let checkedSearchText = $state(true);
 	let checkedSearchNotes = $state(true);
-	let searchInTitle = $state(true);
 
 	let url = $state('');
 
-	const schwartzSlugs = metaData.map((m) => {
-		return m.schwartzSlug;
-	});
+	const types = ['CV', 'CPal', 'CVer', 'CU'];
+	const schwartzSlugs = types.reduce((acc, type) => {
+		const slugs = metaData
+			.filter(({ type: t }) => t === type)
+			.slice()
+			.sort((a, b) => a.schwartzNum - b.schwartzNum)
+			.map((item) => item.schwartzSlug);
+		return acc.concat(slugs);
+	}, []);
+
+	const docNums = metaData
+		.map((m) => {
+			return m.acoDocNum;
+		})
+		.sort((a, b) => a - b);
+
+	async function countAllHighlights(pageSize = 200) {
+		let cursor = '*';
+		let total = 0;
+
+		while (true) {
+			const params = new URLSearchParams();
+			params.set('rows', String(pageSize));
+			params.set('cursorMark', cursor);
+			params.set('sort', 'id asc'); // ensure uniqueKey in sort
+			url = `/api/solr?${params.toString()}`;
+
+			const res = await fetch(url);
+			if (!res.ok) throw new Error(`Solr request failed: ${res.status}`);
+			const data = await res.json();
+			const docs = data.response?.docs || [];
+
+			// count highlights for this page
+			const pageCount = docs
+				.map((d) => d.id)
+				.filter(Boolean)
+				.map((id) => data.highlighting?.[id] ?? {})
+				.flatMap((h) => Object.values(h))
+				.reduce((s, arr) => s + (Array.isArray(arr) ? arr.length : 0), 0);
+			total += pageCount;
+
+			const nextCursor = data.nextCursorMark;
+			if (!nextCursor || nextCursor === cursor || docs.length === 0) break;
+			cursor = nextCursor;
+		}
+
+		return total;
+	}
 
 	async function search() {
 		loading = true;
@@ -29,11 +76,7 @@
 		params.set('q', query.trim() || '*:*');
 
 		// Weights
-		if (searchInTitle) {
-			params.set('qf', 'aco_docTitle^1 aco_text_bare^1');
-		} else {
-			params.set('qf', 'aco_text_bare^1');
-		}
+		params.set('qf', 'aco_text_bare^1');
 
 		// Filters
 		if (!checkedSearchText) {
@@ -42,8 +85,11 @@
 		if (!checkedSearchNotes) {
 			params.append('fq', '-aco_type:aco-note');
 		}
-		if (docFilter) {
-			params.append('fq', `aco_schwartzSlug:${docFilter}`);
+		if (docFilterSchwartz && docFilterSchwartz !== 'ignore') {
+			params.append('fq', `aco_schwartzSlug:${docFilterSchwartz}`);
+		}
+		if (docFilterDok && docFilterDok !== 'ignore') {
+			params.append('fq', `aco_numX:${docFilterDok}`);
 		}
 
 		// Cursor-based search range
@@ -57,9 +103,9 @@
 		params.set('hl', 'true');
 		params.set('hl.simple.pre', '<mark>');
 		params.set('hl.simple.post', '</mark>');
-		params.append('hl.fl', 'aco_docTitle aco_text_bare');
+		params.append('hl.fl', 'aco_text_bare');
 		params.append('hl.snippets', '999999');
-		params.append('hl.fragsize', '30');
+		params.append('hl.fragsize', '150');
 		params.append('hl.mergeContiguous', 'true');
 		params.append('hl.useFastVectorHighlighter', 'true');
 
@@ -79,12 +125,19 @@
 			const res = await fetch(url);
 			if (!res.ok) throw new Error(`Solr error ${res.status}`);
 			const json = await res.json();
-			// docs = json.response.docs || []; // no-grouping
 			console.log('JSON', json);
-			docs = json.grouped.aco_schwartzSlug.groups[0].doclist.docs.docs || [];
+			groups = json.grouped.aco_schwartzSlug.groups || [];
+			docs = groups.flatMap((g) => g.doclist.docs);
+			console.log('docs', docs);
 			highlighting = json.highlighting || {};
 			numFoundGroups = json.grouped.aco_schwartzSlug.matches || 0;
-			numFoundDocs = json.highlighting.length || 0;
+			numFoundDocs = groups.reduce((sum, g) => sum + (g.doclist?.numFound || 0), 0);
+			numFoundHighlights = docs
+				.map((d) => d.id)
+				.filter(Boolean)
+				.map((id) => json.highlighting?.[id] ?? {})
+				.flatMap((h) => Object.values(h))
+				.reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
 		} catch (err) {
 			console.error(err);
 			docs = [];
@@ -93,17 +146,14 @@
 		} finally {
 			loading = false;
 		}
-		console.log(docs);
 	}
 
 	function onSearchSubmit(e) {
 		e.preventDefault();
 		start = 0;
-		search();
-	}
-	function setFilter(type) {
-		docFilter = type;
-		start = 0;
+		countAllHighlights().then((a) => {
+			console.log('COUNT', a);
+		});
 		search();
 	}
 	function nextPage() {
@@ -115,6 +165,15 @@
 		search();
 	}
 
+	function resetDocFilterSchwartz() {
+		console.log('r1');
+		docFilterSchwartz = 'ignore';
+	}
+	function resetDocFilterDok() {
+		console.log('r2');
+		docFilterDok = 'ignore';
+	}
+
 	onMount(() => {
 		search();
 	});
@@ -123,57 +182,86 @@
 <div class="mx-auto max-w-[1500px] py-14">
 	<h1 class="h1">Suche</h1>
 
-	<form onsubmit={onSearchSubmit} class="search-form flex gap-10">
-		<input bind:value={query} placeholder="Search text..." />
-		<select bind:value={docFilter}>
-			<option value="">All documents</option>
-			{#each schwartzSlugs as slug}
-				<option value={slug}>{slug}</option>
-			{/each}
-		</select>
-		<label>
-			<input type="checkbox" bind:checked={checkedSearchNotes} /> Search in notes
-		</label>
-		<label>
-			<input type="checkbox" bind:checked={checkedSearchText} /> Search in text
-		</label>
-		<label>
-			<input type="checkbox" bind:checked={searchInTitle} /> Include title
-		</label>
-		<button class="preset-filled rounded-full px-4 py-2" type="submit" disabled={loading}
-			>Suchen</button
+	<form
+		onsubmit={onSearchSubmit}
+		class="search-form flex items-start justify-start gap-10 bg-gray-100 px-10 py-8"
+	>
+		<div class="flex flex-col gap-3">
+			<span class="label-text font-bold">Suchbegriff</span>
+			<input class="input" bind:value={query} placeholder="Search text..." />
+		</div>
+		<div class="flex flex-col gap-3">
+			<span class="label-text font-bold">Dokument auswählen</span>
+			<div class="flex gap-3">
+				<select class="select w-40" onchange={resetDocFilterDok} bind:value={docFilterSchwartz}>
+					<option value="ignore"></option>
+					<option value="">Alle Dokumente</option>
+					{#each schwartzSlugs as slug}
+						<option value={slug}>{slug}</option>
+					{/each}
+				</select>
+				<select class="select w-40" onchange={resetDocFilterSchwartz} bind:value={docFilterDok}>
+					<option value="ignore"></option>
+					<option value="">Alle Dokumente</option>
+					{#each docNums as num}
+						<option value={num}>Dok. {num}</option>
+					{/each}
+				</select>
+			</div>
+		</div>
+
+		<div class="flex flex-col gap-3">
+			<span class="label-text font-bold">Suchen in</span>
+			<div class="flex gap-3">
+				<label class="flex items-center">
+					<input class="checkbox" type="checkbox" bind:checked={checkedSearchText} />
+					<span class="text-label pl-1">Text</span>
+				</label>
+				<label class="flex items-center">
+					<input class="checkbox" type="checkbox" bind:checked={checkedSearchNotes} />
+					<span class="text-label pl-1">Kommentar</span>
+				</label>
+			</div>
+		</div>
+		<button
+			type="submit"
+			class="btn-lg btn preset-filled-surface-900-100 self-center"
+			disabled={loading}>Suchen</button
 		>
 	</form>
-	<div class="searchResults">
+	<div class="searchResults mx-auto max-w-[1300px]">
 		{#if loading}
 			<p>Bitte warten…</p>
 		{:else}
-			<p>{numFoundDocs} Treffer</p>
+			<p class="p-5 text-center">{numFoundHighlights} Treffer in {numFoundDocs} Dokumenten</p>
 			<ul>
 				{#each docs as doc}
 					<li>
 						<!-- Document -->
 						<a
-							href={`../edition/vol1/${doc.aco_schwartzSlug}`}
+							href={`../edition/vol1/${doc.aco_schwartzSlug}/${doc.aco_unit}${doc.aco_type === 'aco-note' ? `?line=${doc.aco_noteLineStart}` : ''}`}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<div
 								class={[
 									'm-2 border-5 border-black',
-									doc.aco_type === 'aco-unit' && 'border-primary-50',
-									doc.aco_type === 'aco-note' && 'border-secondary-50'
+									doc.aco_type === 'aco-unit' && 'border-primary-500/30',
+									doc.aco_type === 'aco-note' && 'border-secondary-500/30'
 								]}
 							>
 								<!-- Header -->
 								<div
 									class={[
 										'px-3 py-1 text-xl',
-										doc.aco_type === 'aco-unit' && 'bg-primary-50',
-										doc.aco_type === 'aco-note' && 'bg-secondary-50'
+										doc.aco_type === 'aco-unit' && 'bg-primary-300/30',
+										doc.aco_type === 'aco-note' && 'bg-secondary-300/30'
 									]}
 								>
-									<strong>{doc.aco_schwartzSlug}: {doc.aco_docTitle}</strong>
+									<strong>
+										{doc.aco_type === 'aco-note' ? 'Kommentar in ' : ''}
+										{doc.aco_schwartzSlug}: {doc.aco_docTitle}</strong
+									>
 								</div>
 								<!-- Results -->
 								<div class="p-3">
