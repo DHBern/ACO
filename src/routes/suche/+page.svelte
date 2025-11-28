@@ -148,7 +148,7 @@
 
 	<form
 		onsubmit={onSearchSubmit}
-		class="search-form flex items-start justify-start gap-10 bg-gray-100 px-10 py-8"
+		class="search-form flex flex-wrap items-start justify-start gap-10 bg-gray-100 px-10 py-8"
 	>
 		<div class="flex flex-col gap-3">
 			<span class="label-text font-bold">Suchbegriff</span>
