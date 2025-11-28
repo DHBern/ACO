@@ -35,39 +35,6 @@
 		})
 		.sort((a, b) => a - b);
 
-	async function countAllHighlights(pageSize = 200) {
-		let cursor = '*';
-		let total = 0;
-
-		while (true) {
-			const params = new URLSearchParams();
-			params.set('rows', String(pageSize));
-			params.set('cursorMark', cursor);
-			params.set('sort', 'id asc'); // ensure uniqueKey in sort
-			url = `/api/solr?${params.toString()}`;
-
-			const res = await fetch(url);
-			if (!res.ok) throw new Error(`Solr request failed: ${res.status}`);
-			const data = await res.json();
-			const docs = data.response?.docs || [];
-
-			// count highlights for this page
-			const pageCount = docs
-				.map((d) => d.id)
-				.filter(Boolean)
-				.map((id) => data.highlighting?.[id] ?? {})
-				.flatMap((h) => Object.values(h))
-				.reduce((s, arr) => s + (Array.isArray(arr) ? arr.length : 0), 0);
-			total += pageCount;
-
-			const nextCursor = data.nextCursorMark;
-			if (!nextCursor || nextCursor === cursor || docs.length === 0) break;
-			cursor = nextCursor;
-		}
-
-		return total;
-	}
-
 	async function search() {
 		loading = true;
 		const params = new URLSearchParams();
@@ -151,9 +118,6 @@
 	function onSearchSubmit(e) {
 		e.preventDefault();
 		start = 0;
-		countAllHighlights().then((a) => {
-			console.log('COUNT', a);
-		});
 		search();
 	}
 	function nextPage() {
