@@ -231,7 +231,15 @@
 								<div class="p-3">
 									{#if highlighting[doc.id] && highlighting[doc.id].aco_text_bare}
 										{#each highlighting[doc.id].aco_text_bare as hl, idx}
-											<div class={['border-secondary-100 m-2 border-3 p-3']}>
+											<div
+												class={[
+													'm-2 p-3',
+													doc.aco_type === 'aco-unit' &&
+														'bg-primary-500/8 border-primary-500/10 border-2',
+													doc.aco_type === 'aco-note' &&
+														'bg-secondary-500/8 border-secondary-500/10 border-2'
+												]}
+											>
 												<!-- <p>{@html Object.keys(highlighting[doc.id])}</p> -->
 												<!-- <p>{@html highlighting[doc.id].line}</p> -->
 												<p>{@html hl}</p>
