@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { metaData } from '$lib/data/aco-metadata.json';
+	import { base } from '$app/paths';
 
 	const baseURL = 'https://solr.dsl.unibe.ch/solr/aco-dev/select';
 	let query = $state('Kyrill* AND Nestor*');
@@ -194,7 +195,7 @@
 					<li>
 						<!-- Document -->
 						<a
-							href={`../edition/vol1/${doc.aco_schwartzSlug}/${doc.aco_unit}${doc.aco_type === 'aco-note' ? `?line=${doc.aco_noteLineStart}` : ''}`}
+							href={`${base}/edition/vol1/${doc.aco_schwartzSlug}/${doc.aco_unit}${doc.aco_type === 'aco-note' ? `?line=${doc.aco_noteLineStart}` : ''}`}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
