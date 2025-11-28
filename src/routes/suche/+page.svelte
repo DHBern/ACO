@@ -224,8 +224,9 @@
 								>
 									<strong>
 										{doc.aco_type === 'aco-note' ? 'Kommentar in ' : ''}
-										{doc.aco_schwartzSlug}: {doc.aco_docTitle}</strong
-									>
+										{doc.aco_schwartzSlug}{doc.aco_unit !== 'text' ? `/${doc.aco_unit}` : ''}:
+										<span class="ml-1">{doc.aco_docTitle}</span>
+									</strong>
 								</div>
 								<!-- Results -->
 								<div class="p-3">
