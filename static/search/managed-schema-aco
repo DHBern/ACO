@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Solr managed schema - generated for text+metadata indexing - edit carefully -->
+<schema name="example" version="1.6">
+  <uniqueKey>id</uniqueKey>
+
+  <!-- field types -->
+  <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+  <fieldType name="boolean" class="solr.BoolField" />
+  <fieldType name="int" class="solr.TrieIntField" precisionStep="0" positionIncrementGap="0" />
+  <fieldType name="pfloat" class="solr.TrieFloatField" precisionStep="0" positionIncrementGap="0" />
+
+  <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.StopFilterFactory" ignoreCase="true"/>
+      <filter class="solr.PorterStemFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.StopFilterFactory" ignoreCase="true"/>
+      <filter class="solr.PorterStemFilterFactory"/>
+    </analyzer>
+  </fieldType>
+
+  <!-- German-specific analyzer (optional) -->
+  <fieldType name="text_de" class="solr.TextField" positionIncrementGap="100">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.GermanNormalizationFilterFactory"/>
+      <filter class="solr.GermanLightStemFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.GermanLightStemFilterFactory"/>
+    </analyzer>
+  </fieldType>
+
+  <!-- Edge n-gram for title/autocomplete -->
+  <fieldType name="text_edge_ngram" class="solr.TextField" positionIncrementGap="100">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.EdgeNGramFilterFactory" minGramSize="2" maxGramSize="20" />
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+
+  <!-- Catch-all text field -->
+  <fieldType name="text_all" class="solr.TextField" positionIncrementGap="100">
+    <analyzer>
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+
+  <!-- fields -->
+  <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+  <field name="slug" type="string" indexed="true" stored="true" multiValued="false" />
+  <field name="schwartzSlug" type="string" indexed="true" stored="true" multiValued="false" />
+  <field name="schwartzSlugNum" type="string" indexed="true" stored="true" multiValued="false" />
+  <field name="acoNumX" type="string" indexed="true" stored="true" multiValued="false" />
+  <field name="acoNumLabel" type="string" indexed="true" stored="true" multiValued="false" />
+  <field name="type" type="string" indexed="true" stored="true" multiValued="false" />
+  <field name="title" type="text_edge_ngram" indexed="true" stored="true" multiValued="false" />
+  <field name="unit_slug" type="string" indexed="true" stored="true" multiValued="false" />
+  <field name="unit_label" type="text_general" indexed="true" stored="true" multiValued="false" />
+  <field name="body" type="text_general" indexed="true" stored="true" multiValued="false" />
+  <field name="plain_text" type="text_general" indexed="true" stored="false" multiValued="false" />
+  <field name="first_line" type="text_general" indexed="false" stored="true" multiValued="false" />
+  <field name="page" type="int" indexed="true" stored="true" multiValued="false" />
+  <field name="line_start" type="int" indexed="true" stored="true" multiValued="false" />
+  <field name="languages" type="string" indexed="true" stored="true" multiValued="true" />
+  <field name="is_testdata" type="boolean" indexed="true" stored="true" multiValued="false" />
+
+  <!-- presentation / internal fields -->
+  <field name="score" type="pfloat" indexed="false" stored="false" multiValued="false" />
+
+  <!-- combined searchable text -->
+  <field name="text" type="text_all" indexed="true" stored="false" multiValued="true" />
+
+  <!-- copy fields -->
+  <copyField source="title" dest="text"/>
+  <copyField source="body" dest="text"/>
+  <copyField source="plain_text" dest="text"/>
+  <copyField source="unit_label" dest="text"/>
+
+  <!-- dynamic fields -->
+  <dynamicField name="meta_*" type="text_general" indexed="true" stored="true" multiValued="false" />
+
+  <!-- default search field -->
+  <defaultSearchField>text</defaultSearchField>
+
+</schema>

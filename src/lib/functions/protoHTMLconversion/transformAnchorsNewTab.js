@@ -1,10 +1,16 @@
-export function transformAnchorsNewTab(htmlstring) {
-	return htmlstring.replace(/<a\b([^>]*)>/gi, (m, attrs) => {
-		// Add attributes to opening <a ...> tags that don't already have target
-		const hasTarget = /(\btarget\s*=)/i.test(attrs);
-		const hasRel = /(\brel\s*=)/i.test(attrs);
-		const addTarget = hasTarget ? '' : ' target="_blank"';
-		const addRel = hasRel ? '' : ' rel="noopener noreferrer"';
-		return `<a${attrs}${addTarget}${addRel}>`;
-	});
+import { JSDOM } from 'jsdom';
+
+export function transformAnchorsNewTab(html) {
+  // Wrap in a container to preserve fragment structure
+  const dom = new JSDOM(`<div id="__ta_container__">${html}</div>`);
+  const doc = dom.window.document;
+  const container = doc.getElementById('__ta_container__');
+
+  // Update <a> elements
+  container.querySelectorAll('a').forEach(a => {
+    if (!a.hasAttribute('target')) a.setAttribute('target', '_blank');
+    if (!a.hasAttribute('rel')) a.setAttribute('rel', 'noopener noreferrer');
+  });
+
+  return container.innerHTML;
 }
