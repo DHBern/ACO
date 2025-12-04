@@ -94,6 +94,18 @@
         </xsl:variable>
         <xsl:text>{$build-title => tokenize(',\s') => tail() => string-join(', ') => normalize-space()}</xsl:text>
       </string>
+<!-- TODO: make sure the currently commented page breaks (with page number) are somehow part of the data; check that the starts are set correctly-->
+      <string key="pageStart">{(.//tei:pb/@n) => head()}</string>
+      <string key="pageEnd">{(.//tei:pb/@n) => reverse() =>  head()}</string>
+      <map key="pageLimits">
+        <xsl:for-each select=".//tei:text/tei:body/tei:div/@n">
+          <array key="{if (contains(.,',')) then . => tokenize(',') => tail() => string-join('-') => util:sanitizeForJS() else 'text'}">
+            <string>{if (parent::tei:div//tei:pb) then (parent::tei:div//tei:pb/@n) => head() else preceding::tei:pb[@n][1]}</string>
+            <string>{if (parent::tei:div//tei:pb) then (parent::tei:div//tei:pb/@n) => reverse() => head() else preceding::tei:pb[@n][1]}</string>
+          </array>
+        </xsl:for-each>
+      </map>
+
       <array key="unitSlugs">
         <xsl:for-each select=".//tei:text/tei:body/tei:div/@n">
           <xsl:choose>
