@@ -98,10 +98,10 @@
       <string key="pageStart">{(.//tei:pb/@n) => head()}</string>
       <string key="pageEnd">{(.//tei:pb/@n) => reverse() =>  head()}</string>
       <map key="pageLimits">
-        <xsl:for-each select=".//tei:text/tei:body/tei:div/@n">
-          <array key="{if (contains(.,',')) then . => tokenize(',') => tail() => string-join('-') => util:sanitizeForJS() else 'text'}">
-            <string>{if (parent::tei:div//tei:pb) then (parent::tei:div//tei:pb/@n) => head() else preceding::tei:pb[@n][1]}</string>
-            <string>{if (parent::tei:div//tei:pb) then (parent::tei:div//tei:pb/@n) => reverse() => head() else preceding::tei:pb[@n][1]}</string>
+        <xsl:for-each select=".//tei:text/tei:body/tei:div">
+          <array key="{if (contains(@n,',')) then @n => tokenize(',') => tail() => string-join('-') => util:sanitizeForJS() else 'text'}">
+            <string>{preceding::tei:pb[@n][1]/@n}</string>
+            <string>{if (.//tei:pb) then (.//tei:pb/@n) => reverse() => head() else preceding::tei:pb[@n][1]/@n}</string>
           </array>
         </xsl:for-each>
       </map>
