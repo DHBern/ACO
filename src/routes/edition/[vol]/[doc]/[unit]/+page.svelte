@@ -346,9 +346,7 @@
 			/>
 		{/if}
 		<!-- Units -->
-		<div
-			class="row-span-1 row-start-2 grid grid-cols-[70px_20px_1fr] gap-6 lg:grid-cols-[70px_70px_auto_1fr]"
-		>
+		<div class="row-span-1 row-start-2 grid grid-cols-[75px_25px_auto_1fr] gap-6">
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
 				{#each loadedUnits as unit (unit.slug)}
@@ -436,20 +434,20 @@
 
 	.containerLineNums :global(a.line-number),
 	.containerPageNums :global(a.page-number) {
-		@apply mr-2 select-none;
+		@apply mr-2 w-10 select-none;
 	}
 
 	/* Anchors for line-numbers and page-numbers */
-	.containerLineNums :global(a.line-number::after),
-	.containerPageNums :global(a.page-number::after) {
-		@apply ml-2 hidden h-4 w-4 bg-[url(/icons/link.svg)] bg-contain bg-no-repeat content-[""];
+	.containerLineNums :global(a.line-number::before),
+	.containerPageNums :global(a.page-number::before) {
+		@apply absolute ml-2 hidden h-4 w-4 -translate-x-7 translate-y-2 bg-[url(/icons/link.svg)] bg-contain bg-no-repeat content-[""];
 	}
-	.containerLineNums :global(a.line-number:hover::after),
-	.containerPageNums :global(a.page-number:hover::after) {
+	.containerLineNums :global(a.line-number:hover::before),
+	.containerPageNums :global(a.page-number:hover::before) {
 		@apply lg:inline-block;
 	}
 	.containerLineNums :global(.lineNumBuffer) {
-		@apply text-surface-950-50/0 select-none;
+		@apply text-surface-950-50/0 inline-block w-10 select-none;
 	}
 
 	/* Text */
