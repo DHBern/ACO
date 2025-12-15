@@ -48,22 +48,38 @@
 	</Accordion>
 {/snippet}
 
-<div class="register mx-auto grid w-full max-w-[1500px] grid-cols-2 gap-5 py-24">
+<div class="register mx-auto max-w-[1500px] py-24">
 	<h1 class="h1">Register</h1>
-	<div class="col-span-2">
+
+	<!-- Kommentar -->
+	<div class="">
 		<p class="">Vgl. für detailliertere Angaben den Index bei Schwartz.</p>
 		<p class="">Ortsspeziﬁsche Adjektive sind unter Ortsnamen subsumiert</p>
 	</div>
-	<div class="col-span-1 col-start-1">
-		<h2 class="h2 mb-4">Orte</h2>
-		<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
-			{@render accordion(data.places, accordionPlaces)}
+
+	<!-- Sitemap -->
+	<nav class="lg:hidden">
+		<ul>
+			<li><p class="text-secondary-500!"><a href="#Orte">&rarr; Zum Ortsregister</a></p></li>
+			<li>
+				<p class="text-secondary-500!"><a href="#Personen">&rarr; Zum Personenregister</a></p>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Accordions with Registers -->
+	<div class="grid grid-cols-2 gap-5">
+		<div class="col-span-2 col-start-1 lg:col-span-1">
+			<h2 id="Orte" class="h2 mb-4 ml-2">Orte</h2>
+			<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
+				{@render accordion(data.places, accordionPlaces)}
+			</div>
 		</div>
-	</div>
-	<div class="col-span-1 col-start-2">
-		<h2 class="h2 mb-4">Personen</h2>
-		<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
-			{@render accordion(data.people, accordionPeople)}
+		<div class="col-span-2 col-start-1 lg:col-span-1 lg:col-start-2">
+			<h2 id="Personen" class="h2 mb-4 ml-2">Personen</h2>
+			<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
+				{@render accordion(data.people, accordionPeople)}
+			</div>
 		</div>
 	</div>
 </div>
