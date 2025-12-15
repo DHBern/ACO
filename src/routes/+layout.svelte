@@ -200,37 +200,39 @@
 	</div>
 
 	<!-- Footer -->
-	<footer class="bg-primary-400-600 flex-none py-5 align-middle text-slate-50">
-		<div class="mx-auto flex w-full flex-col items-center justify-center gap-10 py-10">
-			<p class="text-surface-contrast-400-600 text-xl font-bold">
+	<footer class="bg-primary-400-600 flex-none p-6 text-slate-50">
+		<div class="mx-auto w-full justify-center">
+			<p class="text-surface-50! text-xl font-bold">
 				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar
 			</p>
-			<button class="text-surface-950-50 bg-surface-50-950 w-40 rounded-3xl p-3 font-bold"
-				><a href={`${base}/impressum`}>Impressum</a></button
-			>
+			<p><a class="text-surface-50! text-xl underline" href={`${base}/impressum`}>Impressum</a></p>
 
-			<div class="my-2 flex w-full justify-around">
-				<div>
-					<img
-						src="{base}/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif"
-						alt="Logo DFG"
-						class="max-h-[100px] max-w-[200px]"
-					/>
+			<div class="mt-10! flex w-full justify-around gap-x-10">
+				<div class="flex-grow"></div>
+				<div class="flex flex-wrap justify-around gap-x-30 gap-y-10">
+					<div>
+						<img
+							src="{base}/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif"
+							alt="Logo DFG"
+							class="max-h-[100px] max-w-[200px]"
+						/>
+					</div>
+					<div>
+						<img
+							src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
+							alt="Logo Universität Bonn"
+							class="max-h-[100px] max-w-[200px]"
+						/>
+					</div>
+					<div>
+						<img
+							src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
+							alt="Logo Universität Bern"
+							class="max-h-[100px] max-w-[200px]"
+						/>
+					</div>
 				</div>
-				<div>
-					<img
-						src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
-						alt="Logo Universität Bonn"
-						class="max-h-[100px] max-w-[200px]"
-					/>
-				</div>
-				<div>
-					<img
-						src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
-						alt="Logo Universität Bern"
-						class="max-h-[100px] max-w-[200px]"
-					/>
-				</div>
+				<div class="flex-grow"></div>
 			</div>
 		</div>
 	</footer>
