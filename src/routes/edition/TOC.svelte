@@ -37,7 +37,7 @@
 				</Accordion.ItemTrigger>
 			</h3>
 			<Accordion.ItemContent>
-				<div class="pt-5 pl-10">
+				<div class="pt-5 pl-5">
 					<p>
 						<a
 							href="{base}/edition/vol1/vorwort"
@@ -54,7 +54,7 @@
 				</div>
 
 				<!-- Sitemap -->
-				<nav class="col-span-2 pt-5 pl-10 lg:hidden">
+				<nav class="col-span-2 p-5 lg:hidden">
 					<ul>
 						<li>
 							<p class="text-secondary-500!">
@@ -69,7 +69,7 @@
 					</ul>
 				</nav>
 
-				<div class="grid grid-cols-2 gap-x-20 gap-y-5 p-10">
+				<div class="grid grid-cols-2 gap-x-20 gap-y-5 p-5">
 					<!-- ACO order -->
 					<div id="vol1_doc" class="col-span-2 col-start-1 lg:col-span-1">
 						<h2 class="h2 mb-4">Dokumente ACO</h2>
@@ -124,7 +124,7 @@
 					</Accordion.ItemTrigger>
 				</h3>
 				<Accordion.ItemContent
-					><div class="py-5 pl-8">
+					><div class="p-5">
 						<p class="hover:text-primary-400-600 text-surface-950-50">Band in Bearbeitung</p>
 					</div>
 				</Accordion.ItemContent>
