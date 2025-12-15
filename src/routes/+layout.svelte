@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
+	import { page } from '$app/state';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import '../app.css';
 	import Abbreviations from './edition/Abbreviations.svelte';
@@ -16,6 +17,7 @@
 	// Lightswitch
 	let isDark = $state(false);
 	let darkModeState = $derived(isDark ? 'dark' : 'light');
+	let isEditionRoute = $derived(page.url.toString().includes('/edition/'));
 
 	const handleToggleLightswitch = (force = '') => {
 		if (force == 'dark') isDark = true;
@@ -97,8 +99,13 @@
 	</header>
 
 	<!-- Content -->
-	<div class="flex-1 overflow-auto px-5">
-		{@render children()}
+	<div
+		class={[
+			'mx-auto min-h-screen w-full flex-1 overflow-auto px-5 pt-10 pb-30',
+			isEditionRoute ? 'max-w-full' : 'max-w-[1500px]'
+		]}
+	>
+		{@render children?.()}
 	</div>
 
 	<footer class="bg-primary-400-600 flex-none py-5 align-middle text-slate-50">
