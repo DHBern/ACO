@@ -48,7 +48,7 @@
 	</Accordion>
 {/snippet}
 
-<div class="mx-auto grid w-full max-w-[1500px] grid-cols-2 gap-5 py-24">
+<div class="register mx-auto grid w-full max-w-[1500px] grid-cols-2 gap-5 py-24">
 	<h1 class="h1">Register</h1>
 	<div class="col-span-2">
 		<p class="">Vgl. für detailliertere Angaben den Index bei Schwartz.</p>
@@ -72,10 +72,10 @@
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 
-	:global([data-type='register-doc-key']) {
+	.register :global([data-type='register-doc-key']) {
 		@apply font-bold;
 	}
-	:global([data-type='register-unit']) {
+	.register :global([data-type='register-unit']) {
 		@apply ml-2;
 	}
 </style>
