@@ -29,7 +29,7 @@
 
 	const links = [
 		{ name: 'Über&nbsp;das&nbsp;Projekt', path: '', slug: '/ueber' },
-		{ name: 'Bände', path: '', slug: '/edition' },
+		{ name: 'Edition', path: '', slug: '/edition' },
 		{ name: 'Register', path: '', slug: '/register' },
 		{ name: 'Suche', path: '', slug: '/suche' },
 		{ name: 'Literaturverzeichnis', path: '/edition/vol1', slug: '/literatur' },

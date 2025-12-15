@@ -20,7 +20,7 @@
 	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
-<h1 class="h1">Dokumente</h1>
+<h1 class="h1">Edition</h1>
 <p>Nachfolgend die Dokumente geordnet nach Band und Dokumententyp.</p>
 
 <div class="bg-surface-50-950 mt-10 flex-row flex-wrap">
