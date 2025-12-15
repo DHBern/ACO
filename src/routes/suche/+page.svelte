@@ -137,17 +137,21 @@
 
 <h1 class="h1">Suche</h1>
 
+<!-- Settings -->
 <form
 	onsubmit={onSearchSubmit}
-	class="search-form bg-gray-100-900 flex flex-wrap items-start justify-start gap-10 px-10 py-8"
+	class="search-form bg-gray-100-900 mx-auto flex max-w-[1300px] flex-wrap items-start justify-start gap-10 p-5 py-8 shadow-md"
 >
+	<!-- buffer for large screens to force settings to center-->
+	<div class="hidden flex-grow lg:block"></div>
+
 	<div class="flex flex-col gap-3">
 		<span class="label-text font-bold">Suchbegriff</span>
 		<input class="input" bind:value={query} placeholder="Search text..." />
 	</div>
 	<div class="flex flex-col gap-3">
 		<span class="label-text font-bold">Dokument auswählen</span>
-		<div class="flex gap-3">
+		<div class="flex flex-wrap gap-3">
 			<select class="select w-40" onchange={resetDocFilterDok} bind:value={docFilterSchwartz}>
 				<option value="ignore"></option>
 				<option value="">Alle Dokumente</option>
@@ -167,7 +171,7 @@
 
 	<div class="flex flex-col gap-3">
 		<span class="label-text font-bold">Suchen in</span>
-		<div class="flex gap-3">
+		<div class="flex flex-wrap gap-3">
 			<label class="flex items-center">
 				<input class="checkbox" type="checkbox" bind:checked={checkedSearchText} />
 				<span class="text-label pl-1">Text</span>
@@ -183,12 +187,15 @@
 		class="btn-lg btn preset-filled-surface-900-100 self-center"
 		disabled={loading}>Suchen</button
 	>
+	<div class="hidden flex-grow lg:block"></div>
 </form>
+
+<!-- Results -->
 <div class="searchResults mx-auto max-w-[1300px]">
 	{#if loading}
 		<p>Bitte warten…</p>
 	{:else}
-		<p class="p-5 text-center">{numFoundHighlights} Treffer in {numFoundDocs} Dokumenten</p>
+		<p class="p-5 text-left">{numFoundHighlights} Treffer in {numFoundDocs} Dokumenten</p>
 		<ul>
 			{#each docs as doc}
 				<li>
