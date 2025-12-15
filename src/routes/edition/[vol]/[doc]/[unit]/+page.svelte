@@ -332,9 +332,17 @@
 <!-- container must be a positioned for scroll-to-line to work as expected! -->
 <div
 	bind:this={elContainerContent}
-	class="containerContent bg-surface-50-950 mx-auto ml-[40px] h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1800px] overflow-x-scroll p-2 px-[20px] pb-24 shadow-xl"
+	class="containerContent bg-surface-50-950 relative mx-auto ml-[40px] h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1800px] shadow-md"
 >
-	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
+	<div
+		class="from-surface-900/2 pointer-events-none absolute top-0 right-0 left-0 z-10 h-30 bg-gradient-to-b to-transparent"
+	></div>
+	<div
+		class="from-surface-900/4 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-30 bg-gradient-to-t to-transparent"
+	></div>
+	<div
+		class="grid h-full grid-rows-[1fr_auto_1fr] overflow-visible overflow-x-scroll px-[20px] pb-24"
+	>
 		<!-- Load Button -->
 		{#if loadedUnits[0].prevSlug}
 			<LoadButton
