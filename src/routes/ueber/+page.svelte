@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="mx-auto grid max-w-[1500px] grid-cols-[1fr] gap-10 py-24 lg:grid-cols-[2fr_1fr]">
+<div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
 	<div class="">
 		<h1 class="h1">Einleitung</h1>
 		<h2 class="h2">
@@ -53,7 +53,7 @@
 </div>
 
 <!-- Über dieses Projekt -->
-<div class="grid-colos-[1fr] mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[2fr_1fr]">
+<div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
 	<div class="">
 		<h1 class="h1">Über dieses Projekt</h1>
 		<h2 class="h2">Die Akten des Konzils von Ephesus 431.</h2>
@@ -119,7 +119,7 @@
 </div>
 
 <!-- Ansprechpersonen -->
-<div class="mx-auto grid max-w-[1500px] grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
+<div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
 	<div class="">
 		<h1 class="h1">Ansprechpersonen</h1>
 		<p>

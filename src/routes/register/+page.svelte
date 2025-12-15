@@ -48,7 +48,7 @@
 	</Accordion>
 {/snippet}
 
-<div class="register mx-auto max-w-[1500px] py-24">
+<div class="register">
 	<h1 class="h1">Register</h1>
 
 	<!-- Kommentar -->

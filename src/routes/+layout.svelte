@@ -195,7 +195,7 @@
 	</AppBar>
 
 	<!-- Content -->
-	<div class="flex-1 overflow-auto px-5">
+	<div class="mx-auto w-full max-w-[1500px] flex-1 overflow-auto px-5 pt-10">
 		{@render children?.()}
 	</div>
 

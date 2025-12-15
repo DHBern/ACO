@@ -3,7 +3,7 @@
 	let { openState = $bindable(false) } = $props();
 </script>
 
-<div class="literatureList mx-auto max-w-[1500px] py-24">
+<div class="literatureList">
 	{@html litData}
 </div>
 
