@@ -6,6 +6,9 @@
 	let accordionPlaces = $state({ value: '' });
 	let accordionPeople = $state({ value: '' });
 
+	const classInnerShadow =
+		'shadow-[inset_0_4px_6px_-1px_rgba(0,0,0,0.1),inset_0_2px_4px_-1px_rgba(0,0,0,0.06)] p-6 bg-white';
+
 	function convertUnit(unit) {
 		if (unit[0] === 'Z') {
 			return `?line=${unit.slice(2)}`;
@@ -68,16 +71,26 @@
 	</nav>
 
 	<!-- Accordions with Registers -->
-	<div class="grid grid-cols-2 gap-5">
-		<div class="col-span-2 col-start-1 lg:col-span-1">
-			<h2 id="Orte" class="h2 mb-4 ml-2">Orte</h2>
-			<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
+	<div class="mx-10 mt-10 mb-30 grid grid-cols-2 gap-x-10 gap-y-15 lg:mx-2">
+		<div class="col-span-2 col-start-1 shadow-md lg:col-span-1">
+			<h2
+				id="Orte"
+				class="text-surface-950-50 bg-primary-200-800/60 mt-0! rounded-t-lg p-2 pl-4 text-2xl font-bold"
+			>
+				Orte
+			</h2>
+			<div class={['h-[70vh] overflow-y-scroll rounded-b-lg p-3', classInnerShadow]}>
 				{@render accordion(data.places, accordionPlaces)}
 			</div>
 		</div>
-		<div class="col-span-2 col-start-1 lg:col-span-1 lg:col-start-2">
-			<h2 id="Personen" class="h2 mb-4 ml-2">Personen</h2>
-			<div class="bg-surface-100-900 h-[70vh] overflow-y-scroll p-3">
+		<div class="col-span-2 col-start-1 shadow-md lg:col-span-1 lg:col-start-2">
+			<h2
+				id="Personen"
+				class="text-surface-950-50 bg-primary-200-800/60 mt-0! rounded-t-lg p-2 pl-4 text-2xl font-bold"
+			>
+				Personen
+			</h2>
+			<div class={['h-[70vh] overflow-y-scroll rounded-b-lg p-3', classInnerShadow]}>
 				{@render accordion(data.people, accordionPeople)}
 			</div>
 		</div>
