@@ -28,14 +28,14 @@
 	};
 
 	const links = [
-		{ slug: 'Über&nbsp;das&nbsp;Projekt', path: '/ueber' },
-		{ slug: 'Bände', path: '/edition' },
-		{ slug: 'Register', path: '/register' },
-		{ slug: 'Suche', path: '/suche' },
-		{ slug: 'Literaturverzeichnis', path: '/edition/vol1/literatur' },
-		{ slug: 'Bibelstellen', path: '/bibelstellen' },
-		{ slug: 'Geovisualisierung', path: '/karte' },
-		{ slug: 'Bibliographie', path: '/bibliographie' }
+		{ name: 'Über&nbsp;das&nbsp;Projekt', path: '', slug: '/ueber' },
+		{ name: 'Bände', path: '', slug: '/edition' },
+		{ name: 'Register', path: '', slug: '/register' },
+		{ name: 'Suche', path: '', slug: '/suche' },
+		{ name: 'Literaturverzeichnis', path: '/edition/vol1', slug: '/literatur' },
+		{ name: 'Bibelstellen', path: '', slug: '/bibelstellen' },
+		{ name: 'Geovisualisierung', path: '', slug: '/karte' },
+		{ name: 'Bibliographie', path: '', slug: '/bibliographie' }
 	];
 
 	onMount(() => {
@@ -107,12 +107,12 @@
 						<li
 							class={[
 								'list-nav-item hover:decoration-primary-300-700 inline-block h-full hover:underline hover:decoration-6',
-								base + link.path === `/${page.url.pathname.split('/')[1]}`
+								link.slug === `/${page.url.pathname.split('/').pop()}`
 									? 'decoration-secondary-300-700 underline decoration-6'
 									: ''
 							]}
 						>
-							<a href="{base}{link.path}">{@html link.slug}</a>
+							<a href="{base}{link.path}{link.slug}">{@html link.name}</a>
 						</li>
 					{/each}
 
@@ -168,13 +168,13 @@
 										{#each links as link}
 											<li class="m-2!">
 												<a
-													href={`${base}${link.path}`}
+													href={`${base}${link.path}${link.slug}`}
 													onclick={() => {
 														openStateMenu = false; // close Menu
 													}}
 													class="block px-2 py-1 text-lg"
 												>
-													{@html link.slug}
+													{@html link.name}
 												</a>
 											</li>
 										{/each}
