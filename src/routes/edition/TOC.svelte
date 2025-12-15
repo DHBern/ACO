@@ -52,11 +52,28 @@
 						>
 					</p>
 				</div>
-				<div class="grid grid-cols-2 gap-20 p-10">
+
+				<!-- Sitemap -->
+				<nav class="col-span-2 pt-5 pl-10 lg:hidden">
+					<ul>
+						<li>
+							<p class="text-secondary-500!">
+								<a href="#vol1_doc">&rarr; Sortierung nach ACO-Dokuenten</a>
+							</p>
+						</li>
+						<li>
+							<p class="text-secondary-500!">
+								<a href="#vol1_schwartz">&rarr; Sortierung nach Schwartz</a>
+							</p>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="grid grid-cols-2 gap-x-20 gap-y-5 p-10">
 					<!-- ACO order -->
-					<div class="col-span-1 col-start-1">
+					<div id="vol1_doc" class="col-span-2 col-start-1 lg:col-span-1">
 						<h2 class="h2 mb-4">Dokumente ACO</h2>
-						<div class="pb-10 text-xl">
+						<div class="text-xl lg:pb-10">
 							<ul class="">
 								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="hover:**:text-secondary-700-300 mb-1">
@@ -74,10 +91,10 @@
 					</div>
 
 					<!-- Schwartz order -->
-					<div class="col-span-1 col-start-2">
+					<div id="vol1_schwartz" class="col-span-2 col-start-1 lg:col-span-1 lg:col-start-2">
 						<h2 class="h2 mb-4">Konkordanz Schwartz</h2>
 						{#each types as type (type)}
-							<div class="pb-10 text-xl">
+							<div class="text-xl lg:pb-10">
 								<ul class="">
 									{#each docs[type]
 										.slice()
