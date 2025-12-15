@@ -1,17 +1,29 @@
 <script lang="ts">
+	import '../app.css';
+
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
+	import { page } from '$app/state';
+	import { AppBar, Modal } from '@skeletonlabs/skeleton-svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
-	import '../app.css';
 	import Abbreviations from './edition/Abbreviations.svelte';
 	import { onMount } from 'svelte';
-
-	// Icons
 	import IconMoon from '@lucide/svelte/icons/moon';
 	import IconSun from '@lucide/svelte/icons/sun';
 
 	let { children } = $props();
 	let openStateAbbreviations = $state(false);
+	let openStateMenu = $state(false);
+
+	let classesActive = $derived((href: string) =>
+		base + href === `/${page.url.pathname.split('/')[1]}`
+			? 'bg-primary-300 hover:bg-primary-300 hover:text-primary-700 text-primary-900'
+			: 'hover:text-primary-600'
+	);
+
+	function modalClose() {
+		openStateMenu = false;
+	}
 
 	// Lightswitch
 	let isDark = $state(false);
@@ -23,6 +35,16 @@
 		else isDark = !isDark;
 		document.documentElement.setAttribute('data-darkModeState', darkModeState);
 	};
+
+	const pages = [
+		{ slug: 'Über das Projekt', path: '/ueber' },
+		{ slug: 'Bände', path: '/edition' },
+		{ slug: 'Register', path: '/register' },
+		{ slug: 'Suche', path: '/suche' },
+		{ slug: 'Bibelstellen', path: '/bibelstellen' },
+		{ slug: 'Geovisualisierung', path: '/karte' },
+		{ slug: 'Bibliographie', path: '/bibliographie' }
+	];
 
 	onMount(() => {
 		// Check the user's preferred color scheme
@@ -36,71 +58,123 @@
 </script>
 
 <div class="flex min-h-screen flex-col">
-	<!-- Menu -->
-	<header class="bg-primary-400-600 flex flex-none gap-10 text-xl text-slate-50">
-		<!-- ACO-Logo -->
+	<!-- Modal Abbrev -->
+	<Abbreviations bind:openState={openStateAbbreviations} />
+
+	<!-- Snippet Abbrev -->
+	{#snippet abbreviations()}
 		<button
 			onclick={() => {
-				goto(base + '/.');
-			}}
+				openStateAbbreviations = !openStateAbbreviations;
+			}}>Abkürzungsverzeichnis</button
 		>
-			<img src="{base}/logos/logo-aco.png" alt="ACO" class="max-h-full max-w-[100px]" />
-		</button>
+	{/snippet}
 
-		<!-- Top Navigation Bar -->
-		<nav class="flex w-full items-center justify-around *:mr-10">
-			<div class="flex flex-wrap gap-12">
-				<a href={`${base}/ueber`}>Über das Projekt</a>
-				<a href={`${base}/edition`}>Bände</a>
-				<a href={`${base}/register`}>Register</a>
-				<a href={`${base}/suche`}>Suche</a>
-				<a href={`${base}/bibelstellen`}>Bibelstellen</a>
-				<a href={`${base}/karte`}>Geovisualisierung</a>
-				<a href={`${base}/bibliographie`}>Bibliographie</a>
-			</div>
-			<div class="flex-grow"></div>
+	<!-- Snippet Lit -->
+	{#snippet literaturverzeichnis()}
+		<a href={`${base}/edition/1/literatur`}>Literaturverzeichnis</a>
+	{/snippet}
 
-			<!-- Literautre -->
-			<a href={`${base}/edition/1/literatur`}>Literaturverzeichnis</a>
+	<!-- Snippet Lightswitch -->
+	{#snippet lightswitch()}
+		<Switch
+			class="**:text-lx"
+			name="mode"
+			bind:checked={isDark.val}
+			onCheckedChange={handleToggleLightswitch}
+		>
+			<Switch.Control class="data-[state=checked]:bg-secondary-300 bg-surface-200">
+				<Switch.Thumb>
+					<Switch.Context>
+						{#snippet children(switch_)}
+							{#if switch_().checked}
+								<IconSun size="14" />
+							{:else}
+								<IconMoon size="14" />
+							{/if}
+						{/snippet}
+					</Switch.Context>
+				</Switch.Thumb>
+			</Switch.Control>
+			<Switch.HiddenInput />
+		</Switch>
+	{/snippet}
 
-			<!-- Abbreviations -->
-			<Abbreviations bind:openState={openStateAbbreviations} />
+	<!-- Menu -->
+	<AppBar classes="px-4 py-0">
+		{#snippet lead()}
+			<!-- bg-primary-400-600 flex flex-none gap-10 text-xl text-slate-50 -->
+			<!-- ACO-Logo -->
 			<button
 				onclick={() => {
-					openStateAbbreviations = !openStateAbbreviations;
-				}}>Abkürzungsverzeichnis</button
+					goto(base + '/.');
+				}}
 			>
+				<img src="{base}/logos/logo-aco.png" alt="ACO" class="max-h-full max-w-[100px]" />
+			</button>
+		{/snippet}
+
+		<!-- Top Navigation Bar -->
+		<nav>
+			<ul class="flex w-full items-center justify-around *:mr-10">
+				{#each pages as page}
+					<li class="list-nav-item inline-block h-full p-4 {classesActive(page.path)}">
+						<a href="{base}{page.path}">{page.slug}</a>
+					</li>
+				{/each}
+			</ul>
+
+			<!-- Literautre -->
+			{@render literaturverzeichnis()}
+
+			<!-- Abbreviations -->
+			{@render abbreviations()}
 
 			<!-- Lightswitch -->
-			<Switch
-				class="**:text-lx"
-				name="mode"
-				bind:checked={isDark.val}
-				onCheckedChange={handleToggleLightswitch}
-			>
-				<Switch.Control class="data-[state=checked]:bg-secondary-300 bg-surface-200">
-					<Switch.Thumb>
-						<Switch.Context>
-							{#snippet children(switch_)}
-								{#if switch_().checked}
-									<IconSun size="14" />
-								{:else}
-									<IconMoon size="14" />
-								{/if}
-							{/snippet}
-						</Switch.Context>
-					</Switch.Thumb>
-				</Switch.Control>
-				<Switch.HiddenInput />
-			</Switch>
+			{@render lightswitch()}
 		</nav>
-	</header>
+		{#snippet trail()}
+			<Modal
+				open={openStateMenu}
+				onOpenChange={(e) => (openStateMenu = e.open)}
+				positionerJustify="justify-start"
+				positionerAlign=""
+				positionerPadding="p-10"
+				transitionsPositionerIn={{ y: -480, duration: 200 }}
+				transitionsPositionerOut={{ y: -480, duration: 200 }}
+				backdropClasses="backdrop-blur-xl"
+			>
+				{#snippet trigger()}
+					<!-- this is an anchor tag because of node_invalid_placement warning -->
+					<!-- svelte-ignore a11y_missing_attribute -->
+					<!-- svelte-ignore a11y_click_events_have_key_events -->
+					<a tabindex="0" role="button" aria-label="Menü" class="btn-icon lg:!hidden">
+						<i class="fa-solid fa-bars"></i>
+					</a>
+				{/snippet}
+				{#snippet content()}
+					<nav class="list-nav">
+						<ul>
+							{#each pages as page}
+								<li>
+									<a href={`${base}${page.path}`} onclick={modalClose}>
+										<span class="flex-auto">{page.slug}</span>
+									</a>
+								</li>
+							{/each}
+						</ul>
+					</nav>
+				{/snippet}
+			</Modal>
+		{/snippet}
+	</AppBar>
 
 	<!-- Content -->
 	<div class="flex-1 overflow-auto px-5">
-		{@render children()}
+		{@render children?.()}
 	</div>
 
+	<!-- Footer -->
 	<footer class="bg-primary-400-600 flex-none py-5 align-middle text-slate-50">
 		<div class="mx-auto flex w-full flex-col items-center justify-center gap-10 py-10">
 			<p class="text-surface-contrast-400-600 text-xl font-bold">
