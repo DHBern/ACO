@@ -198,6 +198,7 @@
   </xsl:template>
   
   <xsl:template match="head[@rendition='#rp-heading_1']" mode="heading">
+    <pb n="{following::milestone[@unit='page'][1]/@n => number() -1}"/>
     <head n="{note[@type='doc' or @place='right']/p//text()}">
       <xsl:apply-templates mode="heading"/>
     </head>
