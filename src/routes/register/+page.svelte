@@ -71,7 +71,7 @@
 	</nav>
 
 	<!-- Accordions with Registers -->
-	<div class="mx-10 mt-10 mb-30 grid grid-cols-2 gap-x-10 gap-y-15 lg:mx-2">
+	<div class="mx-10 mt-10 grid grid-cols-2 gap-x-10 gap-y-15 lg:mx-2">
 		<div class="col-span-2 col-start-1 shadow-md lg:col-span-1">
 			<h2
 				id="Orte"
