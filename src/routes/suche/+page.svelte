@@ -254,7 +254,7 @@
 				</li>
 			{/each}
 		</ul>
-
+		<!-- 
 		<div class="pagination flex justify-around">
 			<div class="flex gap-5">
 				<button
@@ -268,7 +268,7 @@
 					disabled={start + rows >= numFoundDocs}>Weiter</button
 				>
 			</div>
-		</div>
+		</div> -->
 	{/if}
 </div>
 
