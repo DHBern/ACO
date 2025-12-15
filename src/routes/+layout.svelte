@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
-	import { AppBar, Modal } from '@skeletonlabs/skeleton-svelte';
+	import { AppBar, Dialog } from '@skeletonlabs/skeleton-svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import Abbreviations from './edition/Abbreviations.svelte';
 	import { onMount } from 'svelte';
@@ -134,7 +134,7 @@
 			{@render lightswitch()}
 		</nav>
 		{#snippet trail()}
-			<Modal
+			<Dialog
 				open={openStateMenu}
 				onOpenChange={(e) => (openStateMenu = e.open)}
 				positionerJustify="justify-start"
@@ -165,7 +165,7 @@
 						</ul>
 					</nav>
 				{/snippet}
-			</Modal>
+			</Dialog>
 		{/snippet}
 	</AppBar>
 
