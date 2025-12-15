@@ -101,8 +101,8 @@
 	<!-- Content -->
 	<div
 		class={[
-			'mx-auto min-h-screen w-full flex-1 overflow-auto px-5 pt-10 pb-30',
-			isEditionRoute ? 'max-w-full' : 'max-w-[1500px]'
+			'mx-auto min-h-screen w-full flex-1 overflow-auto px-5 pt-10',
+			isEditionRoute ? 'max-w-full pb-15' : 'max-w-[1500px] pb-30'
 		]}
 	>
 		{@render children?.()}

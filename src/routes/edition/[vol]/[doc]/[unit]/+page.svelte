@@ -29,6 +29,7 @@
 
 	let visibleUnits = $state([]);
 	let latestUnitLoadedDuringCurrentScroll: string | null = $state(null);
+
 	// --- Handle search params ---------------------------
 
 	// Get boundaries of data-line and data-page
@@ -331,7 +332,7 @@
 <!-- container must be a positioned for scroll-to-line to work as expected! -->
 <div
 	bind:this={elContainerContent}
-	class="containerContent bg-surface-50-950 relative h-[calc(100vh*0.8)] w-full overflow-x-scroll p-10 pb-24"
+	class="containerContent bg-surface-50-950 mx-auto ml-[40px] h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1800px] overflow-x-scroll p-2 px-[20px] pb-24 shadow-xl"
 >
 	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
 		<!-- Load Button -->

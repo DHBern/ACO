@@ -53,6 +53,6 @@
 		</Switch>
 	</div>
 </div>
-<div class="ml-10 max-w-full">
-	{@render children()}
-</div>
+
+<!-- Content -->
+{@render children()}
