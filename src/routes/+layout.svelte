@@ -55,6 +55,7 @@
 <!-- Snippet Abbrev -->
 {#snippet abbreviations()}
 	<button
+		class="hover:decoration-primary-300-700 hover:underline hover:decoration-6"
 		onclick={() => {
 			openStateAbbreviations = !openStateAbbreviations;
 			openStateMenu = false; // close menu
