@@ -39,16 +39,18 @@
 		</p>
 	</div>
 
-	<div class="mt-5 lg:mt-34">
-		<img
-			src="{base}/images/IMG_Schwarz_Edition_3.jpg"
-			alt="Fotografie der Schwartz Edition"
-			class="max-h-[400px] max-w-full"
-		/>
-		<p class="">
-			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
-			Fotografie der Schwartz Edition.
-		</p>
+	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
+		<figure>
+			<img
+				src="{base}/images/IMG_Schwarz_Edition_3.jpg"
+				alt="Fotografie der Schwartz Edition"
+				class="max-h-[400px] max-w-full"
+			/>
+			<figcaption>
+				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
+				Fotografie der Schwartz Edition.
+			</figcaption>
+		</figure>
 	</div>
 </div>
 
@@ -99,22 +101,25 @@
 		</p>
 	</div>
 
-	<div class="mt-5 lg:mt-34">
-		<img class="max-h-[400px] max-w-[400px]" src="{base}/images/kg_projekt_ephesus.jpg" alt="" />
-		<p>
-			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
-			Projekt Alte Kirchengeschichte_Ephesus Puplic domain SVGRuinen der Marienkirche in Ephesos
-		</p>
-		<img
-			class="max-h-[400px] max-w-[400px]"
-			src="{base}/images/Apse_mosaics,_1_of_4_-_Santa_Maria_Maggiore_-_Rome,_Italy_-_DSC05723.jpg"
-			alt=""
-		/>
-		<p>
-			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
-			Bogen mit Mosaikzyklus in der römischen Kirche Santa Maria Maggiore. Die auf dem Mosaik enthaltenen
-			Motive betonen zum Teil die ‚Gottesmutterschaft‘ Mariens.
-		</p>
+	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
+		<figure>
+			<img src="{base}/images/kg_projekt_ephesus.jpg" alt="" />
+			<figcaption>
+				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
+				Projekt Alte Kirchengeschichte_Ephesus Puplic domain SVGRuinen der Marienkirche in Ephesos
+			</figcaption>
+		</figure>
+		<figure>
+			<img
+				src="{base}/images/Apse_mosaics,_1_of_4_-_Santa_Maria_Maggiore_-_Rome,_Italy_-_DSC05723.jpg"
+				alt=""
+			/>
+			<figcaption>
+				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
+				Bogen mit Mosaikzyklus in der römischen Kirche Santa Maria Maggiore. Die auf dem Mosaik enthaltenen
+				Motive betonen zum Teil die ‚Gottesmutterschaft‘ Mariens.
+			</figcaption>
+		</figure>
 	</div>
 </div>
 
@@ -138,7 +143,7 @@
 			verantwortlich:
 		</p>
 
-		<p class="mt-2 mb-10 ml-5 text-xl font-bold">
+		<p class="mt-2 ml-5 text-xl font-bold">
 			Universität Bern<br />
 			Walter Benjamin Kolleg<br />
 			Digital Humanities<br />
@@ -146,17 +151,17 @@
 			3012 Bern
 		</p>
 	</div>
-	<div class="mt-5 lg:mt-34">
-		<img
-			class="max-h-[400px] max-w-[400px]"
-			src="https://upload.wikimedia.org/wikipedia/commons/6/68/Concile-Ephese-Fourviere-detail.jpg"
-			alt="Detail des Mosaiks in der Basilika von
-				Fourvière in Lyon mit Kyrill von Alexandria in der Mitte."
-		/>
-		<p>
-			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
-			Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte.
-		</p>
+	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
+		<figure>
+			<img
+				src="https://upload.wikimedia.org/wikipedia/commons/6/68/Concile-Ephese-Fourviere-detail.jpg"
+				alt="Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte."
+			/>
+			<figcaption>
+				<img src="{base}/icons/cc-license.svg" alt="CC license" />
+				Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte.
+			</figcaption>
+		</figure>
 	</div>
 
 	<!-- Ansprechpersonen -->
@@ -165,10 +170,28 @@
 			<h1 class="h1">Förderung und Partner</h1>
 		</div>
 
-		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-xl">
+		<ul class="mt-2 ml-5 list-disc font-bold **:text-xl">
 			<li>Deutsche Forschungsgemeinschaft (DFG)</li>
 			<li>Universität Bonn</li>
 			<li>Universität Bern</li>
 		</ul>
 	</div>
 </div>
+
+<style>
+	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
+
+	figure {
+		@apply mx-0 my-4 max-h-8/10 max-w-8/10 lg:max-h-[400px] lg:max-w-[400px];
+	}
+	figure img {
+		@apply block h-auto w-full rounded;
+	}
+	figcaption {
+		@apply mt-2 text-lg text-gray-700;
+	}
+	figcaption img {
+		@apply inline-block h-4 w-4;
+	}
+</style>
