@@ -13,8 +13,3 @@ export const entries: EntryGenerator = () => {
         });
     });
 };
-
-
-export const load: PageLoad = ({ params }) => {
-	return {vol : params.vol}
-};
