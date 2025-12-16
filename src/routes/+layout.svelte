@@ -49,11 +49,14 @@
 
 		<!-- Top Navigation Bar -->
 		<nav class="flex w-full items-center justify-around *:mr-10">
-			<div class="flex gap-12">
+			<div class="flex flex-wrap gap-12">
 				<a href={`${base}/ueber`}>Über das Projekt</a>
 				<a href={`${base}/edition`}>Bände</a>
 				<a href={`${base}/register`}>Register</a>
 				<a href={`${base}/suche`}>Suche</a>
+				<a href={`${base}/bibelstellen`}>Bibelstellen</a>
+				<a href={`${base}/karte`}>Geovisualisierung</a>
+				<a href={`${base}/bibliographie`}>Bibliographie</a>
 			</div>
 			<div class="flex-grow"></div>
 
