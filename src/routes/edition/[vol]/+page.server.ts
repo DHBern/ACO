@@ -1,5 +1,4 @@
-import type { PageLoad } from './$types';
-
+import type { PageServerLoad } from './$types';
 import type { EntryGenerator } from './$types';
 export const prerender = true;
 
@@ -14,7 +13,6 @@ export const entries: EntryGenerator = () => {
     });
 };
 
-
-export const load: PageLoad = ({ params }) => {
+export const load: PageServerLoad = ({ params }) => {
 	return {vol : params.vol}
 };
