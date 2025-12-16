@@ -2,8 +2,9 @@ export const prerender = true;
 
 import { metaData } from '$lib/data/get_alldata_testing.js';
 
-/** @type {import('./$types').PageLoad} */
-export async function load({ params }) {
+import type { LayoutServerLoad } from './$types';
+
+export const load: LayoutServerLoad = async ({params}) => {
 	// URL Parameters
 	const slug_vol = params.vol;
 	const slug_doc = params.doc;
