@@ -10,8 +10,8 @@ export function placeNotes(ids) {
 	) as HTMLElement;
 
 	// Decide on order of placing notes depending on where they are inserted
-	let insertAboveExistingNotes = elNoteBoxLast.nextElementSibling ? true : false;
-	let insertBelowExistingNotes = elNoteBoxFirst.previousElementSibling ? true : false;
+	let insertAboveExistingNotes = elNoteBoxLast?.nextElementSibling ? true : false;
+	let insertBelowExistingNotes = elNoteBoxFirst?.previousElementSibling ? true : false;
 	if (!(insertAboveExistingNotes || insertBelowExistingNotes)) {
 		insertBelowExistingNotes = true;
 	}
