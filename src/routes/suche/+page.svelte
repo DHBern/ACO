@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import { metaData } from '$lib/data/aco-metadata.json';
 	import { base } from '$app/paths';
 
 	const baseURL = 'https://solr.dsl.unibe.ch/solr/aco-dev/select';
@@ -19,20 +18,7 @@
 	let checkedSearchText = $state(true);
 	let checkedSearchNotes = $state(true);
 
-	const types = ['CV', 'CPal', 'CVer', 'CU'];
-	const schwartzSlugs = types.reduce((acc, type) => {
-		const slugs = metaData
-			.filter(({ type: t }) => t === type)
-			.sort((a, b) => a.schwartzNum - b.schwartzNum)
-			.map((item) => item.schwartzSlug);
-		return acc.concat(slugs);
-	}, []);
-
-	const docNums = metaData
-		.map((m) => {
-			return m.acoDocNum;
-		})
-		.sort((a, b) => a - b);
+	let { data } = $props();
 
 	async function search() {
 		if (!query) return;
@@ -152,14 +138,14 @@
 				<select class="select w-40" onchange={resetDocFilterDok} bind:value={docFilterSchwartz}>
 					<option value="ignore"></option>
 					<option value="">Alle Dokumente</option>
-					{#each schwartzSlugs as slug}
+					{#each data.schwartzSlugs as slug}
 						<option value={slug}>{slug}</option>
 					{/each}
 				</select>
 				<select class="select w-40" onchange={resetDocFilterSchwartz} bind:value={docFilterDok}>
 					<option value="ignore"></option>
 					<option value="">Alle Dokumente</option>
-					{#each docNums as num}
+					{#each data.docNums as num}
 						<option value={num}>Dok. {num}</option>
 					{/each}
 				</select>
