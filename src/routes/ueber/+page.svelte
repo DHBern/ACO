@@ -159,8 +159,7 @@
 		</ul>
 
 		<p>
-			Für die technische Umsetzung ist die die Digital Humanities der Universität Bern
-			verantwortlich:
+			Für die technische Umsetzung ist die Digital Humanities der Universität Bern verantwortlich:
 		</p>
 
 		<p class="mt-2 mb-10 ml-5 text-xl font-bold">
