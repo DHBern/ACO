@@ -158,17 +158,4 @@
 			Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte.
 		</p>
 	</div>
-
-	<!-- Ansprechpersonen -->
-	<div>
-		<div class="">
-			<h1 class="h1">Förderung und Partner</h1>
-		</div>
-
-		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-xl">
-			<li>Deutsche Forschungsgemeinschaft (DFG)</li>
-			<li>Universität Bonn</li>
-			<li>Universität Bern</li>
-		</ul>
-	</div>
 </div>
