@@ -217,26 +217,26 @@
 			</ul>
 			<div class="mt-10! flex w-full justify-around gap-x-10">
 				<div class="flex-grow"></div>
-				<div class="flex flex-wrap justify-around gap-x-30 gap-y-10">
+				<div class="flex flex-wrap items-center justify-center gap-x-30 gap-y-10">
 					<div>
 						<img
-							src="{base}/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif"
+							src="{base}/logos/dfg_logo_schriftzug_weiss.png"
 							alt="Logo DFG"
-							class="max-h-[100px] max-w-[200px]"
+							class="max-h-[200px] max-w-[400px]"
 						/>
 					</div>
 					<div>
 						<img
 							src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
 							alt="Logo Universität Bonn"
-							class="max-h-[100px] max-w-[200px]"
+							class="max-h-[200px] max-w-[300px]"
 						/>
 					</div>
 					<div>
 						<img
 							src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
 							alt="Logo Universität Bern"
-							class="max-h-[100px] max-w-[200px]"
+							class="max-h-[200px] max-w-[300px]"
 						/>
 					</div>
 				</div>
