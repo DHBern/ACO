@@ -48,7 +48,7 @@
 			/>
 			<figcaption>
 				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
-				Fotografie der Schwartz Edition.
+				Fotografie der Schwartz Edition
 			</figcaption>
 		</figure>
 	</div>
@@ -117,7 +117,7 @@
 			<figcaption>
 				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
 				Bogen mit Mosaikzyklus in der römischen Kirche Santa Maria Maggiore. Die auf dem Mosaik enthaltenen
-				Motive betonen zum Teil die ‚Gottesmutterschaft‘ Mariens.
+				Motive betonen zum Teil die ‚Gottesmutterschaft‘ Mariens
 			</figcaption>
 		</figure>
 	</div>
@@ -159,7 +159,7 @@
 			/>
 			<figcaption>
 				<img src="{base}/icons/cc-license.svg" alt="CC license" />
-				Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte.
+				Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte
 			</figcaption>
 		</figure>
 	</div>
