@@ -1,9 +1,25 @@
-<script>
+<script lang="ts">
 	import { MARGIN_NOTEBOX } from '$lib/constants/constants';
 	import { handleNoteClick } from '$lib/functions/floatingApparatus';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
+	type NoteType = 'floating' | 'bottom';
 
-	let { docSlug, unitSlug, noteSlug, noteData, selectedNote = $bindable() } = $props();
+	let {
+		docSlug,
+		unitSlug,
+		noteSlug,
+		noteData,
+		selectedNote,
+		noteType
+	}: {
+		docSlug?: string;
+		unitSlug?: string;
+		noteSlug?: string;
+		noteData?: any;
+		selectedNote?: HTMLElement;
+		noteType?: NoteType;
+	} = $props();
+	// let { docSlug, unitSlug, noteSlug, noteData, selectedNote = $bindable(), noteType } = $props();
 	const unit = unitSlug; // copy to prevent it from updating with URL
 </script>
 
@@ -16,10 +32,15 @@
 	]}
 	style={`margin-top:${MARGIN_NOTEBOX}px; margin-bottom:${MARGIN_NOTEBOX}px`}
 	onclick={() => {
-		handleNoteClick(noteSlug);
-		selectedNote.slug = noteSlug;
+		if (noteType === 'floating') {
+			handleNoteClick(noteSlug);
+			selectedNote.slug = noteSlug;
+		}
 	}}
-	onkeydown={(e) => (e.key === 'Enter' || e.key === ' ' ? handleNoteClick(noteSlug) : null)}
+	onkeydown={(e) =>
+		noteType === 'floating' && (e.key === 'Enter' || e.key === ' ')
+			? handleNoteClick(noteSlug)
+			: null}
 	role="button"
 	tabindex="0"
 	aria-pressed={selectedNote.slug === noteSlug}
