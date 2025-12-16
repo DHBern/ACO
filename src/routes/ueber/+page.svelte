@@ -43,12 +43,12 @@
 		<figure>
 			<img
 				src="{base}/images/IMG_Schwarz_Edition_3.jpg"
-				alt="Fotografie der Schwartz Edition"
+				alt="Fotografie der Schwartz-Edition"
 				class="max-h-[400px] max-w-full"
 			/>
 			<figcaption>
 				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
-				Fotografie der Schwartz Edition
+				Fotografie der Schwartz-Edition
 			</figcaption>
 		</figure>
 	</div>
