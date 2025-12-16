@@ -208,6 +208,13 @@
 			</p>
 			<p><a class="text-surface-50! text-xl underline" href={`${base}/impressum`}>Impressum</a></p>
 
+			<p class="text-surface-50! mt-10 text-xl font-bold">Förderung und Partner</p>
+
+			<ul class="mt-2 mb-10 ml-5 list-disc">
+				<li class="text-lg">Deutsche Forschungsgemeinschaft (DFG)</li>
+				<li class="text-lg">Universität Bonn</li>
+				<li class="text-lg">Universität Bern</li>
+			</ul>
 			<div class="mt-10! flex w-full justify-around gap-x-10">
 				<div class="flex-grow"></div>
 				<div class="flex flex-wrap justify-around gap-x-30 gap-y-10">
