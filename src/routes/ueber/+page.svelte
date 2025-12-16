@@ -1,9 +1,79 @@
 <script>
 	import { base } from '$app/paths';
+	import { Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
+	import { XIcon } from '@lucide/svelte';
+
+	let modalInfo = $state({ path: '', alt: '', caption: '' });
+	let modalVisible = $state(false);
+	function enlargeImage(path, alt, caption) {
+		modalInfo.path = path;
+		modalInfo.alt = alt;
+		modalInfo.caption = caption;
+		modalVisible = true;
+	}
 </script>
 
+{#snippet figure(path, alt, caption, inModal = false)}
+	<button
+		type="button"
+		onclick={() => {
+			enlargeImage(path, alt, caption);
+		}}
+	>
+		<figure
+			aria-label="Open image"
+			type="button"
+			class="mx-0 my-4 max-h-8/10 max-w-8/10 lg:max-h-[400px] lg:max-w-[400px]"
+		>
+			<img src={path} {alt} class="block h-auto w-full rounded" />
+			<figcaption class="mt-2 text-lg text-gray-700">
+				<img src="{base}/icons/cc-license.svg" alt="CC " class="inline-block h-4 w-4" />
+				{caption}
+			</figcaption>
+		</figure>
+	</button>
+{/snippet}
+
+<Dialog
+	open={modalVisible}
+	onOpenChange={() => {
+		modalVisible = !modalVisible;
+	}}
+>
+	<Portal>
+		<Dialog.Backdrop class="bg-surface-50-950/50 fixed inset-0 z-50" />
+		<Dialog.Positioner class="fixed inset-0 z-50 flex items-center justify-center p-4">
+			<Dialog.Content
+				class="bg-surface-50-950 h-full max-h-3/4 w-full max-w-3/4 space-y-4 p-4 shadow-xl"
+			>
+				<header class="w-full justify-end p-2">
+					<Dialog.CloseTrigger>
+						<XIcon class="size-8" />
+					</Dialog.CloseTrigger>
+				</header>
+				<Dialog.Description class="flex h-full items-center justify-center">
+					<!-- <p>Hello</p> -->
+					<figure
+						class="mx-auto my-4 flex max-h-[80vh] w-full max-w-[80vw] flex-col items-center gap-4"
+					>
+						<img
+							src={modalInfo.path}
+							alt={modalInfo.alt}
+							class="h-auto max-h-[calc(60vh-3rem)] w-full object-contain object-center"
+						/>
+						<figcaption class="mt-2 text-2xl text-gray-700">
+							<img src={`${base}/icons/cc-license.svg`} alt="CC " class="inline-block h-6 w-6" />
+							{modalInfo.caption}
+						</figcaption>
+					</figure>
+				</Dialog.Description>
+			</Dialog.Content>
+		</Dialog.Positioner>
+	</Portal>
+</Dialog>
+
 <div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
-	<div class="">
+	<div>
 		<h1 class="h1">Einleitung</h1>
 		<h2 class="h2">
 			Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar und Register.
@@ -40,23 +110,17 @@
 	</div>
 
 	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
-		<figure>
-			<img
-				src="{base}/images/IMG_Schwarz_Edition_3.jpg"
-				alt="Fotografie der Schwartz-Edition"
-				class="max-h-[400px] max-w-full"
-			/>
-			<figcaption>
-				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
-				Fotografie der Schwartz-Edition
-			</figcaption>
-		</figure>
+		{@render figure(
+			`${base}/images/IMG_Schwarz_Edition_3.jpg`,
+			'Fotografie der Schwartz-Edition',
+			'Fotografie der Schwartz-Edition'
+		)}
 	</div>
 </div>
 
 <!-- Über dieses Projekt -->
 <div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
-	<div class="">
+	<div>
 		<h1 class="h1">Über dieses Projekt</h1>
 		<h2 class="h2">Die Akten des Konzils von Ephesus 431.</h2>
 
@@ -102,30 +166,23 @@
 	</div>
 
 	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
-		<figure>
-			<img src="{base}/images/kg_projekt_ephesus.jpg" alt="" />
-			<figcaption>
-				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
-				Projekt Alte Kirchengeschichte_Ephesus Puplic domain SVGRuinen der Marienkirche in Ephesos
-			</figcaption>
-		</figure>
-		<figure>
-			<img
-				src="{base}/images/Apse_mosaics,_1_of_4_-_Santa_Maria_Maggiore_-_Rome,_Italy_-_DSC05723.jpg"
-				alt=""
-			/>
-			<figcaption>
-				<img src="{base}/icons/cc-license.svg" alt="cc-license" />
-				Bogen mit Mosaikzyklus in der römischen Kirche Santa Maria Maggiore. Die auf dem Mosaik enthaltenen
-				Motive betonen zum Teil die ‚Gottesmutterschaft‘ Mariens
-			</figcaption>
-		</figure>
+		{@render figure(
+			`${base}/images/kg_projekt_ephesus.jpg`,
+			'Ruinen der Marienkirche in Ephesos',
+			'Ruinen der Marienkirche in Ephesos'
+		)}
+
+		{@render figure(
+			`${base}/images/Apse_mosaics,_1_of_4_-_Santa_Maria_Maggiore_-_Rome,_Italy_-_DSC05723.jpg`,
+			'Bogen mit Mosaikzyklus',
+			'Bogen mit Mosaikzyklus in der römischen Kirche Santa Maria Maggiore. Die auf dem Mosaik enthaltenen Motive betonen zum Teil die ‚Gottesmutterschaft‘ Mariens'
+		)}
 	</div>
 </div>
 
 <!-- Ansprechpersonen -->
 <div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
-	<div class="">
+	<div>
 		<h1 class="h1">Ansprechpersonen</h1>
 		<p>
 			Ansprechpartner für den inhaltlichen Teil dieses Projekt, das seit Januar 2016 als
@@ -152,21 +209,16 @@
 		</p>
 	</div>
 	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
-		<figure>
-			<img
-				src="https://upload.wikimedia.org/wikipedia/commons/6/68/Concile-Ephese-Fourviere-detail.jpg"
-				alt="Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte."
-			/>
-			<figcaption>
-				<img src="{base}/icons/cc-license.svg" alt="CC license" />
-				Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte
-			</figcaption>
-		</figure>
+		{@render figure(
+			'https://upload.wikimedia.org/wikipedia/commons/6/68/Concile-Ephese-Fourviere-detail.jpg',
+			'Mosaik',
+			'Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte'
+		)}
 	</div>
 
 	<!-- Ansprechpersonen -->
 	<div>
-		<div class="">
+		<div>
 			<h1 class="h1">Förderung und Partner</h1>
 		</div>
 
@@ -177,21 +229,3 @@
 		</ul>
 	</div>
 </div>
-
-<style>
-	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
-
-	figure {
-		@apply mx-0 my-4 max-h-8/10 max-w-8/10 lg:max-h-[400px] lg:max-w-[400px];
-	}
-	figure img {
-		@apply block h-auto w-full rounded;
-	}
-	figcaption {
-		@apply mt-2 text-lg text-gray-700;
-	}
-	figcaption img {
-		@apply inline-block h-4 w-4;
-	}
-</style>
