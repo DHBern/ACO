@@ -4888,7 +4888,7 @@
           "refstring_text": "das … Größe]"
         },
         "CV166-I-2-87-89-Uns-verehren": {
-          "note_content": "Vgl. N: <span data-lang='greek'>εἰς ἕνα κύριον Ἰησοῦν Χριστὸν τὸν υἱὸν τοῦ θεοῦ</span> [...] <span data-lang='greek'>θεὸν ἐκ θεοῦ</span> [...] <span data-lang='greek'>ἐνανθρωπήσαντ</span>α (an einen Herrn Jesus Christus, den Sohn Gottes [...] Gott aus Gott [...], der Mensch geworden ist).",
+          "note_content": "Vgl. N: <span data-lang='greek'>εἰς ἕνα κύριον Ἰησοῦν Χριστὸν τὸν υἱὸν τοῦ θεοῦ</span> [...] <span data-lang='greek'>θεὸν ἐκ θεοῦ</span> [...] <span data-lang='greek'>ἐνανθρωπήσαντα</span> (an einen Herrn Jesus Christus, den Sohn Gottes [...] Gott aus Gott [...], der Mensch geworden ist).",
           "doc_unit": "CV166-I-2",
           "refstring_lines": "87 – 89 ",
           "document": "CV166",
@@ -30258,7 +30258,7 @@
           "refstring_text": "Gehet … Geistes]"
         },
         "CV149-26-1-2-das-Fleisch": {
-          "note_content": "Die modernen Herausgeber und Übersetzer verstehen den Text offenbar so, dass hier auf den einleitenden Satz ein grammatisch damit nicht verbundener Bekenntnistext folgt. Kyrill scheint jedoch, wie man z.B. in <a href='../CV7/7?line=10' data-type='internal_ref' document='CV7' doc_unit='7' document_end='CV7' doc_unit_end='7' line_start='10' line_end='13' debug_cte='39_CV7_dg.xml#r-AWyMgHto 39_CV7_dg.xml#r-AWyMgHto-e'>CV7,7,10 – 13</a> (Dok. 39; ACO I,1,1 S.&nbsp;46,17–20) sehen kann, das erwähnte Mysterium mit Christus gleichzusetzen und den männlichen Artikel ὃς direkt auf das vorangehende neutrale Substantiv zu beziehen.",
+          "note_content": "Die modernen Herausgeber und Übersetzer verstehen den Text offenbar so, dass hier auf den einleitenden Satz ein grammatisch damit nicht verbundener Bekenntnistext folgt. Kyrill scheint jedoch, wie man z.B. in <a href='../CV7/7?line=10' data-type='internal_ref' document='CV7' doc_unit='7' document_end='CV7' doc_unit_end='7' line_start='10' line_end='13' debug_cte='39_CV7_dg.xml#r-AWyMgHto 39_CV7_dg.xml#r-AWyMgHto-e'>CV7,7,10 – 13</a> (Dok. 39; ACO I,1,1 S.&nbsp;46,17–20) sehen kann, das erwähnte Mysterium mit Christus gleichzusetzen und den männlichen Artikel <span data-lang='greek'>ὃς</span> direkt auf das vorangehende neutrale Substantiv zu beziehen.",
           "doc_unit": "CV149-26",
           "refstring_lines": "1 – 2 ",
           "document": "CV149",
@@ -33656,7 +33656,7 @@
           "refstring_text": "damit … waren]"
         },
         "CV149-43-1--Da-ja": {
-          "note_content": "εἰ: bei Paulus eigentlich ἐπεί = denn; die Variante findet sich jedoch bei Kyrill und anderen Kirchenvätern häufiger.",
+          "note_content": "<span data-lang='greek'>εἰ</span>: bei Paulus eigentlich <span data-lang='greek'>ἐπεί</span> = denn; die Variante findet sich jedoch bei Kyrill und anderen Kirchenvätern häufiger.",
           "doc_unit": "CV149-43",
           "refstring_lines": "1",
           "document": "CV149",
@@ -35355,7 +35355,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2025-11-28T11:57:11.879652648+01:00",
+    "generated-on": "2025-12-17T20:36:19.042231096+01:00",
     "description": ""
   }
 }
