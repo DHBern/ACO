@@ -1,4 +1,10 @@
 function insertNoteSpans(text) {
+	// Guard
+	if (!text) {
+		console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generateNoteSpans.js\n\n!!!!!!!!!!!');
+		return text;
+	}
+
 	let openIds = [];
 	let result = '';
 	let lastIndex = 0;
@@ -43,6 +49,12 @@ function insertNoteSpans(text) {
 }
 
 export function generateMainText(text) {
+	// Guard
+	if (!text) {
+		console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generateMainText.js\n\n!!!!!!!!!!!');
+		return text;
+	}
+
 	// Remove line numbers
 	text = text.replace(/<a[^>]*[data-line|data-page]="[^"]*"[^>]*>\u200B?<\/a>/g, '');
 	// Insert spans
