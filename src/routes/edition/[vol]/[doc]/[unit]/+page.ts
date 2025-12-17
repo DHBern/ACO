@@ -1,11 +1,9 @@
 import { metaData, notesData } from '$lib/data/get_alldata_testing.js';
 import { base } from '$app/paths';
-export const prerender = true;
 
-import type { PageServerLoad } from './$types';
-
-export const load: PageServerLoad = async ({ fetch, url, params }) => {
-
+/** @type {import('./$types').PageLoad} */
+export async function load({ fetch, url, params }) {
+	
 	// URL Parameters
 	const slug_doc = params.doc;
 	const slug_unit = params.unit;
