@@ -39,35 +39,34 @@
 			<Switch.HiddenInput />
 		</Switch>
 
-			<Tooltip positioning={{ placement: 'bottom' }}>
-				<Tooltip.Trigger>
-					<Switch
-						class="**:text-lx"
-						name="toggleCopyWithoutLinebreaks"
-						checked={copyWithoutLinebreaks.value}
-						onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
-					>
-						<Switch.Control class="data-[state=checked]:bg-secondary-600-400 bg-surface-200-800">
-							<Switch.Thumb />
-						</Switch.Control>
-						<Switch.Label>Kopiermodus</Switch.Label>
-						<Switch.HiddenInput />
-					</Switch>
-				</Tooltip.Trigger>
-				<Portal>
-					<Tooltip.Positioner>
-						<Tooltip.Content class="card preset-filled-surface-200-800 p-2">
-							<span>Wenn eingeschaltet, werden beim Kopieren Zeilenumbrüche ignoriert.</span>
-							<Tooltip.Arrow
-								class="[--arrow-background:var(--color-surface-200-800)] [--arrow-size:--spacing(2)]"
-							>
-								<Tooltip.ArrowTip />
-							</Tooltip.Arrow>
-						</Tooltip.Content>
-					</Tooltip.Positioner>
-				</Portal>
-			</Tooltip>
-		</div>
+		<Tooltip positioning={{ placement: 'bottom' }}>
+			<Tooltip.Trigger>
+				<Switch
+					class="**:text-lx"
+					name="toggleCopyWithoutLinebreaks"
+					checked={copyWithoutLinebreaks.value}
+					onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
+				>
+					<Switch.Control class="data-[state=checked]:bg-secondary-600-400 bg-surface-200-800">
+						<Switch.Thumb />
+					</Switch.Control>
+					<Switch.Label>Kopiermodus</Switch.Label>
+					<Switch.HiddenInput />
+				</Switch>
+			</Tooltip.Trigger>
+			<Portal>
+				<Tooltip.Positioner>
+					<Tooltip.Content class="card preset-filled-surface-200-800 p-2">
+						<span>Wenn eingeschaltet, werden beim Kopieren Zeilenumbrüche ignoriert.</span>
+						<Tooltip.Arrow
+							class="[--arrow-background:var(--color-surface-200-800)] [--arrow-size:--spacing(2)]"
+						>
+							<Tooltip.ArrowTip />
+						</Tooltip.Arrow>
+					</Tooltip.Content>
+				</Tooltip.Positioner>
+			</Portal>
+		</Tooltip>
 	</div>
 </div>
 {@render children()}
