@@ -254,21 +254,6 @@
 				</li>
 			{/each}
 		</ul>
-		<!-- 
-		<div class="pagination flex justify-around">
-			<div class="flex gap-5">
-				<button
-					class="btn preset-filled-primary-500 rounded-full px-4 py-2"
-					onclick={prevPage}
-					disabled={start === 0}>Zurück</button
-				>
-				<button
-					class="btn preset-filled-primary-500 rounded-full px-4 py-2"
-					onclick={nextPage}
-					disabled={start + rows >= numFoundDocs}>Weiter</button
-				>
-			</div>
-		</div> -->
 	{/if}
 </div>
 
