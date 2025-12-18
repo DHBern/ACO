@@ -23,16 +23,17 @@
 <h1 class="h1">Edition</h1>
 <p>Nachfolgend die Dokumente geordnet nach Band und Dokumententyp.</p>
 
-<div class="bg-surface-50-950 mt-10 flex-row flex-wrap">
+<div class="toc bg-surface-50-950 mt-10 flex-row flex-wrap">
 	<Accordion
 		value={accordionState}
 		onValueChange={(e) => (accordionState = e.value)}
 		multiple
-		class="mb-4 shadow-md"
+		class="innerShadow bg-surface-50 dark:bg-surface-900 mb-4"
 	>
 		<Accordion.Item value="vol1">
 			<h3>
-				<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
+				<Accordion.ItemTrigger
+					class="bg-primary-200/60 dark:bg-primary-500 hover:bg-primary-200 hover:dark:bg-primary-400"
 					><span class="text-surface-950-50 text-2xl font-bold">Band 1</span>
 				</Accordion.ItemTrigger>
 			</h3>
@@ -119,7 +120,8 @@
 		{#each volumes as volume}
 			<Accordion.Item value={volume.slug}>
 				<h3>
-					<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
+					<Accordion.ItemTrigger
+						class="bg-primary-200/60 dark:bg-primary-500 hover:bg-primary-200 hover:dark:bg-primary-400"
 						><span class="text-surface-950-50 text-2xl font-bold">{volume.label}</span>
 					</Accordion.ItemTrigger>
 				</h3>
@@ -132,3 +134,12 @@
 		{/each}
 	</Accordion>
 </div>
+
+<style>
+	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
+
+	.toc :global(.innerShadow) {
+		@apply shadow-md;
+	}
+</style>
