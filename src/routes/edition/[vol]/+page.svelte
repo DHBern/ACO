@@ -17,6 +17,4 @@
 	});
 </script>
 
-<div class="mx-auto max-w-[1500px] py-24">
-	<TOC accordionStateInit={data.vol} />
-</div>
+<TOC accordionStateInit={data.vol} />
