@@ -4,13 +4,10 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
-	import { AppBar, Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
+	import { Switch, AppBar, Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
 	import Abbreviations from './edition/Abbreviations.svelte';
 	import { onMount } from 'svelte';
-	import IconMoon from '@lucide/svelte/icons/moon';
-	import IconSun from '@lucide/svelte/icons/sun';
-	import { Menu, X } from '@lucide/svelte';
+	import { Sun, Moon, Menu, X } from '@lucide/svelte';
 
 	let { children } = $props();
 	let openStateAbbreviations = $state(false);
@@ -76,9 +73,9 @@
 				<Switch.Context>
 					{#snippet children(switch_)}
 						{#if switch_().checked}
-							<IconSun size="14" />
+							<Sun size="14" />
 						{:else}
-							<IconMoon size="14" />
+							<Moon size="14" />
 						{/if}
 					{/snippet}
 				</Switch.Context>

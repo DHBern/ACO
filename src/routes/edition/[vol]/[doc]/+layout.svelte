@@ -1,8 +1,7 @@
 <script>
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import UnitNavigation from './UnitNavigation.svelte';
 	import DocumentMetadata from './DocumentMetadata.svelte';
-	import { Tooltip, Portal } from '@skeletonlabs/skeleton-svelte';
+	import { Tooltip, Portal, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { copyWithoutLinebreaks, marksVisible } from '../../globals.svelte.js';
 
 	let { data, children } = $props();
