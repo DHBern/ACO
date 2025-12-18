@@ -190,14 +190,38 @@
 		</p>
 
 		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-xl">
-			<li>Dr. Thomas Brüggemann (Leiter der Arbeitsstelle)</li>
-			<li>Dr. Sabine Lütkemeyer</li>
-			<li>Dr. Julia Beier</li>
+			<li>
+				<a
+					href="https://www.etf.uni-bonn.de/de/fakultaet/kirchengeschichte/alte-kirchengeschichte/wk"
+					target="_blank"
+					rel="noopener noreferrer">Prof. Dr. Wolfram Kinzig</a
+				>
+			</li>
+			<li>
+				<a
+					href="https://www.etf.uni-bonn.de/de/personen/personen-people/thomas-brueggemann"
+					target="_blank"
+					rel="noopener noreferrer">Dr. Thomas Brüggemann (Leiter der Arbeitsstelle)</a
+				>
+			</li>
+			<li>
+				<a
+					href="https://intern.unibe.ch/dienstleistungen/markenauftritt/logo/index_ger.html"
+					target="_blank"
+					rel="noopener noreferrer">Dr. Sabine Lütkemeyer</a
+				>
+			</li>
+			<li>
+				<a
+					href="https://www.etf.uni-bonn.de/de/fakultaet/kirchengeschichte/alte-kirchengeschichte/team/jb"
+					target="_blank"
+					rel="noopener noreferrer">Dr. Julia Beier</a
+				>
+			</li>
 		</ul>
 
 		<p>
-			Für die technische Umsetzung ist die die Digital Humanities der Universität Bern
-			verantwortlich:
+			Für die technische Umsetzung ist die Digital Humanities der Universität Bern verantwortlich:
 		</p>
 
 		<p class="mt-2 ml-5 text-xl font-bold">
@@ -214,18 +238,5 @@
 			'Mosaik',
 			'Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte'
 		)}
-	</div>
-
-	<!-- Ansprechpersonen -->
-	<div>
-		<div>
-			<h1 class="h1">Förderung und Partner</h1>
-		</div>
-
-		<ul class="mt-2 ml-5 list-disc font-bold **:text-xl">
-			<li>Deutsche Forschungsgemeinschaft (DFG)</li>
-			<li>Universität Bonn</li>
-			<li>Universität Bern</li>
-		</ul>
 	</div>
 </div>

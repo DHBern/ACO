@@ -44,7 +44,7 @@
     </output:serialization-parameters>
   </xsl:variable>
   
-  <xsl:template match="/">    
+  <xsl:template match="/">
     <xsl:variable name="payload">
       <xsl:call-template name="build-json"/>
     </xsl:variable>
@@ -123,7 +123,12 @@
   <!-- some seg elements don't seem to be linked to notes; might need a separate template to process them at some point -->
   <xsl:template match="tei:seg['#'||@xml:id=$docNotes/@targetEnd]" mode="build-text">
     <xsl:variable name="seg-id" select="@xml:id"/>
-    <xsl:apply-templates mode="build-text"/><span data-type="note-end" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),$docNotes[@targetEnd='#'||$seg-id][1]) => util:sanitizeBrackets()}"></span>
+    <xsl:apply-templates mode="build-text"/>
+    <!-- iterate to catch recycled note-ends (with more than one note pointing to) -->
+    <xsl:for-each select="$docNotes[@targetEnd='#'||$seg-id]">
+      <xsl:variable name="pos" select="position()"/>
+      <span data-type="note-end" data-id="{util:noteKey(ancestor::tei:div[@n][1]/@n/data(),$docNotes[@targetEnd='#'||$seg-id][$pos]) => util:sanitizeBrackets()}"></span>
+    </xsl:for-each>
   </xsl:template>
   
   <xsl:template match="tei:hi[@rendition='#i']" mode="build-text">

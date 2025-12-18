@@ -19,11 +19,6 @@ const intro = {
 	footnotes: transformFootnotesIntroduction(introData.footnotes)
 };
 
-export const load: LayoutServerLoad = async () => {
-	return {
-		intro,
-		preface,
-		abbData,
-		litData
-	};
+export const load: LayoutServerLoad = async ({ url, params }) => {
+	return {vol : params.vol, intro, preface, abbData, litData };
 };
