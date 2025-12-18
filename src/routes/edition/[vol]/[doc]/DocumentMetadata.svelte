@@ -9,7 +9,8 @@
 
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible class="mb-4 shadow-md">
 	<Accordion.Item value="metadata">
-		<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
+		<Accordion.ItemTrigger
+			class="bg-primary-200/60 dark:bg-primary-500 hover:bg-primary-200 dark:hover:bg-primary-400"
 			><span class="text-2xl font-bold">Metadaten</span></Accordion.ItemTrigger
 		>
 		<Accordion.ItemContent>

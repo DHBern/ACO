@@ -7,7 +7,7 @@
 	let { data, children } = $props();
 </script>
 
-<div class="containerDocHead mx-auto max-w-[1200px]">
+<div class="containerDocHead mx-auto max-w-[1500px]">
 	<!-- Title -->
 	<h1 class="text-secondary-400-600 mb-2 text-4xl font-bold">
 		{@html data.slug_doc}:
@@ -68,7 +68,6 @@
 		</Tooltip>
 	</div>
 </div>
-{@render children()}
 
 <!-- Content -->
 {@render children()}
