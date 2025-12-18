@@ -9,7 +9,7 @@
 		unitSlug,
 		noteSlug,
 		noteData,
-		selectedNote,
+		selectedNote = $bindable(),
 		noteType
 	}: {
 		docSlug?: string;

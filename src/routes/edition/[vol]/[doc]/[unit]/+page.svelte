@@ -407,6 +407,7 @@
 							{noteSlug}
 							noteData={unit.notes[noteSlug]}
 							bind:selectedNote
+							noteType="floating"
 						></Note>
 					{/each}
 				{/each}
