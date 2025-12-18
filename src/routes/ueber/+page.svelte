@@ -26,7 +26,7 @@
 			class="mx-0 my-4 max-h-8/10 max-w-8/10 lg:max-h-[400px] lg:max-w-[400px]"
 		>
 			<img src={path} {alt} class="block h-auto w-full rounded" />
-			<figcaption class="mt-2 text-lg text-gray-700">
+			<figcaption class="text-surface-950-50 mt-2 text-lg">
 				<img src="{base}/icons/cc-license.svg" alt="CC " class="inline-block h-4 w-4" />
 				{caption}
 			</figcaption>
@@ -61,7 +61,7 @@
 							alt={modalInfo.alt}
 							class="h-auto max-h-[calc(60vh-3rem)] w-full object-contain object-center"
 						/>
-						<figcaption class="mt-2 text-2xl text-gray-700">
+						<figcaption class="text-surface-950-50 mt-2 text-2xl">
 							<img src={`${base}/icons/cc-license.svg`} alt="CC " class="inline-block h-6 w-6" />
 							{modalInfo.caption}
 						</figcaption>
