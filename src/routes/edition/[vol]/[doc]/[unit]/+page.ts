@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import { metaData as mData } from '$lib/data/aco-metadata.json';
 import { notesData as nData } from '$lib/data/aco-notes.json';
 const metaData = await mData;
