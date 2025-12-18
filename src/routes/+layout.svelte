@@ -3,14 +3,14 @@
 	import { base } from '$app/paths';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import '../app.css';
-	import Abbreviations from './edition/Abbreviations.svelte';
+	import Abbreviations from './Abbreviations.svelte';
 	import { onMount } from 'svelte';
 
 	// Icons
 	import IconMoon from '@lucide/svelte/icons/moon';
 	import IconSun from '@lucide/svelte/icons/sun';
 
-	let { children } = $props();
+	let { data, children } = $props();
 	let openStateAbbreviations = $state(false);
 
 	// Lightswitch
@@ -64,7 +64,7 @@
 			<a href={`${base}/edition/1/literatur`}>Literaturverzeichnis</a>
 
 			<!-- Abbreviations -->
-			<Abbreviations bind:openState={openStateAbbreviations} />
+			<Abbreviations bind:openState={openStateAbbreviations} abbData={data.abbData} />
 			<button
 				onclick={() => {
 					openStateAbbreviations = !openStateAbbreviations;

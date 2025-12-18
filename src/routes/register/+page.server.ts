@@ -1,6 +1,7 @@
 export const prerender = true;
 
-import { registerData } from '$lib/data/get_alldata_testing.js';
+import { registerData as rData } from '$lib/data/aco-register.json';
+const registerData = await rData;
 
 import type { PageServerLoad } from './$types';
 

@@ -1,4 +1,8 @@
-import { metaData, notesData } from '$lib/data/get_alldata_testing.js';
+import { metaData as mData } from '$lib/data/aco-metadata.json';
+import { notesData as nData } from '$lib/data/aco-notes.json';
+const metaData = await mData;
+const notesData = await nData;
+
 import { base } from '$app/paths';
 
 /** @type {import('./$types').PageLoad} */

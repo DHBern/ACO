@@ -1,7 +1,7 @@
 <script>
-	import { preface } from '$lib/data/get_alldata_testing';
+	let { data } = $props();
 </script>
 
 <div class="mx-auto max-w-[1500px] py-24">
-	{@html preface.text}
+	{@html data.preface}
 </div>

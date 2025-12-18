@@ -1,9 +1,8 @@
 <script>
 	import { base } from '$app/paths';
-	import { metaData } from '$lib/data/get_alldata_testing.js';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 
-	let { accordionStateInit = 'vol1' } = $props();
+	let { metaData, accordionStateInit = 'vol1' } = $props();
 	let accordionState = $state([accordionStateInit]);
 
 	// The first volume is currently hardcoded

@@ -1,10 +1,9 @@
 <script>
-	import { litData } from '$lib/data/get_alldata_testing.js';
-	let { openState = $bindable(false) } = $props();
+	let { data } = $props();
 </script>
 
 <div class="mx-auto max-w-[1500px] py-24">
-	{@html litData}
+	{@html data.litData}
 </div>
 
 <style>

@@ -1,6 +1,7 @@
 export const prerender = true;
 
-import { metaData } from '$lib/data/get_alldata_testing.js';
+import { metaData as mData } from '$lib/data/aco-metadata.json';
+const metaData = await mData;
 
 import type { LayoutServerLoad } from './$types';
 

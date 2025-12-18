@@ -1,8 +1,7 @@
 <script>
-	import { abbData } from '$lib/data/get_alldata_testing.js';
-	import { X } from '@lucide/svelte';
 	import { Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
-	let { openState = $bindable(false) } = $props();
+	import { X } from '@lucide/svelte';
+	let { openState = $bindable(false), abbData } = $props();
 
 	function drawerClose() {
 		openState = false;

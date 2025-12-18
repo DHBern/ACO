@@ -31,4 +31,3 @@ export async function GET({ params, fetch }) {
 	}
 	return json({ unitText, unitNotes });
 }
-
