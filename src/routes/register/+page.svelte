@@ -6,9 +6,6 @@
 	let accordionPlaces = $state({ value: '' });
 	let accordionPeople = $state({ value: '' });
 
-	const classInnerShadow =
-		'shadow-[inset_0_4px_6px_-1px_rgba(0,0,0,0.1),inset_0_2px_4px_-1px_rgba(0,0,0,0.06)] p-6 bg-white';
-
 	function convertUnit(unit) {
 		if (unit[0] === 'Z') {
 			return `?line=${unit.slice(2)}`;
@@ -79,7 +76,7 @@
 			>
 				Orte
 			</h2>
-			<div class={['h-[70vh] overflow-y-scroll rounded-b-lg p-3', classInnerShadow]}>
+			<div class="innerShadow h-[70vh] overflow-y-scroll rounded-b-lg p-3">
 				{@render accordion(data.places, accordionPlaces)}
 			</div>
 		</div>
@@ -90,7 +87,7 @@
 			>
 				Personen
 			</h2>
-			<div class={['h-[70vh] overflow-y-scroll rounded-b-lg p-3', classInnerShadow]}>
+			<div class="innerShadow h-[70vh] overflow-y-scroll rounded-b-lg p-3">
 				{@render accordion(data.people, accordionPeople)}
 			</div>
 		</div>
@@ -106,5 +103,8 @@
 	}
 	.register :global([data-type='register-unit']) {
 		@apply ml-2;
+	}
+	.innerShadow {
+		@apply bg-white shadow-[inset_0_4px_6px_-1px_rgba(0,0,0,0.1),inset_0_2px_4px_-1px_rgba(0,0,0,0.06)];
 	}
 </style>
