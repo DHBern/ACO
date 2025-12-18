@@ -23,7 +23,7 @@ export function linkifyFootnoteSuperscripts(html) {
 
     const a = doc.createElement('a');
     a.setAttribute('href', `#note-${n}`);
-    a.setAttribute('aria-label', `Zu Fussnote ${n} springen`);
+    a.setAttribute('aria-label', `Zu Fußnote ${n} springen`);
     a.className = 'note-ref';
 
     sup.parentNode.replaceChild(a, sup);

@@ -7,7 +7,7 @@
 <div class="maintext">{@html data.intro.text}</div>
 
 <div class="footnotes mt-10 grid grid-cols-[100px_auto] gap-x-4">
-	<h2 class="h2 col-span-2 col-start-1">Fussnoten</h2>
+	<h2 class="h2 col-span-2 col-start-1">Fußnoten</h2>
 	{#each data.intro.footnotes as footnote}
 		<div id={`note-${footnote.number}`} class="col-span-1 col-start-1">
 			<p class="text-right">
