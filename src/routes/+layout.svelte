@@ -103,11 +103,10 @@
 			<p class="text-surface-contrast-400-600 text-xl font-bold">
 				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar
 			</p>
-			<a href={`${base}/impressum`}>
-				<button class="text-surface-950-50 bg-surface-50-950 w-40 rounded-3xl p-3 font-bold"
-					>Impressum</button
-				>
-			</a>
+			<a
+				href={`${base}/impressum`}
+				class="text-surface-950-50 bg-surface-50-950 w-40 rounded-3xl p-3 font-bold">Impressum</a
+			>
 
 			<div class="my-2 flex w-full justify-around">
 				<div>
