@@ -7,9 +7,10 @@
 	let { data } = $props();
 
 	onMount(() => {
-		if (data.pageInfo.found) {
+		// Redirect to first unit on requested page
+		if (data.pageParam && data.pageParamRedirect.found) {
 			goto(
-				`${base}/edition/${data.vol}/${data.pageInfo.schwartzSlug}/${data.pageInfo.unitSlug}?page=${data.pageInfo.page}`
+				`${base}/edition/${data.vol}/${data.pageParamRedirect.schwartzSlug}/${data.pageParamRedirect.unitSlug}?page=${data.pageParamRedirect.page}`
 			);
 		}
 	});

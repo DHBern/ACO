@@ -28,5 +28,5 @@ export function getFirstUnitOfPage(pageParam, metaData) {
 			}
 		}
 	}
-	return { found: false, a:3 };
+	return { found: false };
 }
