@@ -1,18 +1,17 @@
 <script lang="ts">
+	import '../app.css';
+
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
-	import '../app.css';
+	import { Switch, AppBar, Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
 	import Abbreviations from './edition/Abbreviations.svelte';
 	import { onMount } from 'svelte';
-
-	// Icons
-	import IconMoon from '@lucide/svelte/icons/moon';
-	import IconSun from '@lucide/svelte/icons/sun';
+	import { Sun, Moon, Menu, X } from '@lucide/svelte';
 
 	let { children } = $props();
 	let openStateAbbreviations = $state(false);
+	let openStateMenu = $state(false);
 
 	// Lightswitch
 	let isDark = $state(false);
@@ -26,6 +25,17 @@
 		document.documentElement.setAttribute('data-darkModeState', darkModeState);
 	};
 
+	const links = [
+		{ name: 'Über&nbsp;das&nbsp;Projekt', path: '', slug: '/ueber' },
+		{ name: 'Edition', path: '', slug: '/edition' },
+		{ name: 'Register', path: '', slug: '/register' },
+		{ name: 'Suche', path: '', slug: '/suche' },
+		{ name: 'Literaturverzeichnis', path: '/edition/vol1', slug: '/literatur' },
+		{ name: 'Bibelstellen', path: '', slug: '/bibelstellen' },
+		{ name: 'Geovisualisierung', path: '', slug: '/karte' },
+		{ name: 'Bibliographie', path: '', slug: '/bibliographie' }
+	];
+
 	onMount(() => {
 		// Check the user's preferred color scheme
 		const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -37,66 +47,151 @@
 	});
 </script>
 
+<!-- Modal Abbrev -->
+<Abbreviations bind:openState={openStateAbbreviations} />
+
+<!-- Snippet Abbrev -->
+{#snippet abbreviations()}
+	<button
+		class="hover:decoration-primary-300-700 hover:underline hover:decoration-6"
+		onclick={() => {
+			openStateAbbreviations = !openStateAbbreviations;
+			openStateMenu = false; // close menu
+		}}>Abkürzungsverzeichnis</button
+	>
+{/snippet}
+
+<!-- Snippet Lightswitch -->
+{#snippet lightswitch()}
+	<Switch
+		class="**:text-lx"
+		name="mode"
+		bind:checked={isDark.val}
+		onCheckedChange={handleToggleLightswitch}
+	>
+		<Switch.Control class="data-[state=checked]:bg-secondary-300 bg-surface-200">
+			<Switch.Thumb>
+				<Switch.Context>
+					{#snippet children(switch_)}
+						{#if switch_().checked}
+							<Sun size="14" />
+						{:else}
+							<Moon size="14" />
+						{/if}
+					{/snippet}
+				</Switch.Context>
+			</Switch.Thumb>
+		</Switch.Control>
+		<Switch.HiddenInput />
+	</Switch>
+{/snippet}
+
 <div class="flex min-h-screen flex-col">
 	<!-- Menu -->
-	<header class="bg-primary-400-600 flex flex-none gap-10 text-xl text-slate-50">
-		<!-- ACO-Logo -->
-		<button
-			onclick={() => {
-				goto(base + '/.');
-			}}
-		>
-			<img src="{base}/logos/logo-aco.png" alt="ACO" class="max-h-full max-w-[100px]" />
-		</button>
+	<AppBar class="bg-primary-400-600 flex items-center justify-between px-2 py-0">
+		<!-- ACO-Logo / Home -->
+		<AppBar.Lead class="m-0 flex items-center p-0">
+			<a class="flex items-center py-2" href={`${base}/`}>
+				<img src="{base}/logos/logo-aco.png" alt="ACO" class="mr-5 h-auto w-auto max-w-30" />
+			</a>
+		</AppBar.Lead>
 
 		<!-- Top Navigation Bar -->
-		<nav class="flex w-full items-center justify-around *:mr-10">
-			<div class="flex flex-wrap gap-12">
-				<a href={`${base}/ueber`}>Über das Projekt</a>
-				<a href={`${base}/edition`}>Bände</a>
-				<a href={`${base}/register`}>Register</a>
-				<a href={`${base}/suche`}>Suche</a>
-				<a href={`${base}/bibelstellen`}>Bibelstellen</a>
-				<a href={`${base}/karte`}>Geovisualisierung</a>
-				<a href={`${base}/bibliographie`}>Bibliographie</a>
-			</div>
-			<div class="flex-grow"></div>
+		<AppBar.Headline class="m-0 mr-10">
+			<nav class="">
+				<ul
+					class="text-surface-50 my-8 hidden w-full items-start gap-x-8 gap-y-6 text-xl lg:flex lg:flex-wrap lg:justify-start"
+				>
+					{#each links as link}
+						<li
+							class={[
+								'list-nav-item hover:decoration-primary-300-700 inline-block h-full hover:underline hover:decoration-6',
+								link.slug === `/${page.url.pathname.split('/').pop()}`
+									? 'decoration-secondary-300-700 underline decoration-6'
+									: ''
+							]}
+						>
+							<a href="{base}{link.path}{link.slug}">{@html link.name}</a>
+						</li>
+					{/each}
 
-			<!-- Literautre -->
-			<a href={`${base}/edition/1/literatur`}>Literaturverzeichnis</a>
+					<!-- Abbreviations -->
+					{@render abbreviations()}
+				</ul>
+			</nav>
+			<!-- Trail (Smartphone) -->
+		</AppBar.Headline>
 
-			<!-- Abbreviations -->
-			<Abbreviations bind:openState={openStateAbbreviations} />
-			<button
-				onclick={() => {
-					openStateAbbreviations = !openStateAbbreviations;
-				}}>Abkürzungsverzeichnis</button
-			>
+		<!-- Spacer -->
+		<div class="flex-grow"></div>
 
+		<!-- Menu for Smartphone -->
+		<AppBar.Trail class="mr-4">
 			<!-- Lightswitch -->
-			<Switch
-				class="**:text-lx"
-				name="mode"
-				bind:checked={isDark.val}
-				onCheckedChange={handleToggleLightswitch}
-			>
-				<Switch.Control class="data-[state=checked]:bg-secondary-300 bg-surface-200">
-					<Switch.Thumb>
-						<Switch.Context>
-							{#snippet children(switch_)}
-								{#if switch_().checked}
-									<IconSun size="14" />
-								{:else}
-									<IconMoon size="14" />
-								{/if}
-							{/snippet}
-						</Switch.Context>
-					</Switch.Thumb>
-				</Switch.Control>
-				<Switch.HiddenInput />
-			</Switch>
-		</nav>
-	</header>
+			<div class="hidden lg:block">{@render lightswitch()}</div>
+
+			<!-- Trigger aligned right on small screens -->
+			<div class="flex w-full justify-end lg:hidden">
+				<Dialog open={openStateMenu} onOpenChange={(e) => (openStateMenu = e.open)}>
+					<Dialog.Trigger
+						class="text-surface-50 ml-4 inline-flex items-center justify-center rounded p-2 hover:bg-white/10"
+					>
+						<Menu class="text-surface-50" width="40" height="40" />
+					</Dialog.Trigger>
+
+					<Portal>
+						<Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50" />
+						<Dialog.Positioner class="fixed inset-0 z-50">
+							<Dialog.Content
+								class="bg-primary-400-600 text-surface-50 relative h-full w-full overflow-auto p-3"
+							>
+								<!-- Top bar with title and close in top-right -->
+								<div class="flex items-center justify-between">
+									<Dialog.Title class="text-lg font-semibold">Menu</Dialog.Title>
+
+									<div class="flex">
+										{@render lightswitch()}
+										<!-- Close button top-right -->
+										<Dialog.CloseTrigger
+											class="text-surface-50 ml-4 inline-flex items-center justify-center rounded p-2 hover:bg-white/10"
+											aria-label="Close menu"
+										>
+											<X width="40" height="40" />
+										</Dialog.CloseTrigger>
+									</div>
+								</div>
+
+								<!-- Nav content full height -->
+								<nav class="mt-6">
+									<ul class="flex flex-col gap-1">
+										{#each links as link}
+											<li class="m-2!">
+												<a
+													href={`${base}${link.path}${link.slug}`}
+													onclick={() => {
+														openStateMenu = false; // close Menu
+													}}
+													class="block px-2 py-1 text-lg"
+												>
+													{@html link.name}
+												</a>
+											</li>
+										{/each}
+										<li class="m-2! block px-2 py-1 text-lg">
+											{@render abbreviations()}
+										</li>
+									</ul>
+
+									<!-- <div class="mt-6"> -->
+									<!-- </div> -->
+								</nav>
+							</Dialog.Content>
+						</Dialog.Positioner>
+					</Portal>
+				</Dialog>
+			</div>
+		</AppBar.Trail>
+	</AppBar>
 
 	<!-- Content -->
 	<div
@@ -108,37 +203,47 @@
 		{@render children?.()}
 	</div>
 
-	<footer class="bg-primary-400-600 flex-none py-5 align-middle text-slate-50">
-		<div class="mx-auto flex w-full flex-col items-center justify-center gap-10 py-10">
-			<p class="text-surface-contrast-400-600 text-xl font-bold">
+	<!-- Footer -->
+	<footer class="bg-primary-400-600 flex-none p-6 text-slate-50">
+		<div class="mx-auto w-full justify-center">
+			<p class="text-surface-50! text-xl font-bold">
 				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar
 			</p>
-			<button class="text-surface-950-50 bg-surface-50-950 w-40 rounded-3xl p-3 font-bold"
-				><a href={`${base}/impressum`}>Impressum</a></button
-			>
+			<p><a class="text-surface-50! text-xl underline" href={`${base}/impressum`}>Impressum</a></p>
 
-			<div class="my-2 flex w-full justify-around">
-				<div>
-					<img
-						src="{base}/images-legacy/logos/dfg_logo_foerderung/dfg_logo_schriftzug_blau_foerderung_4c.gif"
-						alt="Logo DFG"
-						class="max-h-[100px] max-w-[200px]"
-					/>
+			<p class="text-surface-50! mt-10 text-xl font-bold">Förderung und Partner</p>
+
+			<ul class="mt-2 mb-10 ml-5 list-disc">
+				<li class="text-lg">Deutsche Forschungsgemeinschaft (DFG)</li>
+				<li class="text-lg">Universität Bonn</li>
+				<li class="text-lg">Universität Bern</li>
+			</ul>
+			<div class="mt-10! flex w-full justify-around gap-x-10">
+				<div class="flex-grow"></div>
+				<div class="flex flex-wrap items-center justify-center gap-x-20 gap-y-10">
+					<div>
+						<img
+							src="{base}/logos/dfg_logo_schriftzug_weiss.png"
+							alt="Logo DFG"
+							class="max-h-[200px] max-w-[400px]"
+						/>
+					</div>
+					<div>
+						<img
+							src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
+							alt="Logo Universität Bonn"
+							class="max-h-[200px] max-w-[300px]"
+						/>
+					</div>
+					<div>
+						<img
+							src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
+							alt="Logo Universität Bern"
+							class="max-h-[200px] max-w-[300px]"
+						/>
+					</div>
 				</div>
-				<div>
-					<img
-						src="{base}/images-legacy/logos/UBo_Logo_Standard/UNI_Bonn_Logo_Standard_RZ_Office.jpg"
-						alt="Logo Universität Bonn"
-						class="max-h-[100px] max-w-[200px]"
-					/>
-				</div>
-				<div>
-					<img
-						src="{base}/images-legacy/logos/Logo_Uni_Bern.png"
-						alt="Logo Universität Bern"
-						class="max-h-[100px] max-w-[200px]"
-					/>
-				</div>
+				<div class="flex-grow"></div>
 			</div>
 		</div>
 	</footer>

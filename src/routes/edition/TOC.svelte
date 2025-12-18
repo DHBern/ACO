@@ -20,24 +20,25 @@
 	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
-<h1 class="h1">Dokumente</h1>
+<h1 class="h1">Edition</h1>
 <p>Nachfolgend die Dokumente geordnet nach Band und Dokumententyp.</p>
 
-<div class="bg-surface-50-950 mt-10 flex-row flex-wrap">
+<div class="toc bg-surface-50-950 mt-10 flex-row flex-wrap">
 	<Accordion
 		value={accordionState}
 		onValueChange={(e) => (accordionState = e.value)}
 		multiple
-		class="mb-4 shadow-md"
+		class="innerShadow bg-surface-50 dark:bg-surface-900 mb-4"
 	>
 		<Accordion.Item value="vol1">
 			<h3>
-				<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
+				<Accordion.ItemTrigger
+					class="bg-primary-200/60 dark:bg-primary-500 hover:bg-primary-200 hover:dark:bg-primary-400"
 					><span class="text-surface-950-50 text-2xl font-bold">Band 1</span>
 				</Accordion.ItemTrigger>
 			</h3>
 			<Accordion.ItemContent>
-				<div class="pt-5 pl-10">
+				<div class="pt-5 pl-5">
 					<p>
 						<a
 							href="{base}/edition/vol1/vorwort"
@@ -52,11 +53,28 @@
 						>
 					</p>
 				</div>
-				<div class="grid grid-cols-2 gap-20 p-10">
+
+				<!-- Sitemap -->
+				<nav class="col-span-2 p-5 lg:hidden">
+					<ul>
+						<li>
+							<p class="text-secondary-500!">
+								<a href="#vol1_doc">&rarr; Sortierung nach ACO-Dokuenten</a>
+							</p>
+						</li>
+						<li>
+							<p class="text-secondary-500!">
+								<a href="#vol1_schwartz">&rarr; Sortierung nach Schwartz</a>
+							</p>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="grid grid-cols-2 gap-x-20 gap-y-5 p-5">
 					<!-- ACO order -->
-					<div class="col-span-1 col-start-1">
+					<div id="vol1_doc" class="col-span-2 col-start-1 lg:col-span-1">
 						<h2 class="h2 mb-4">Dokumente ACO</h2>
-						<div class="pb-10 text-xl">
+						<div class="text-xl lg:pb-10">
 							<ul class="">
 								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="hover:**:text-secondary-700-300 mb-1">
@@ -74,10 +92,10 @@
 					</div>
 
 					<!-- Schwartz order -->
-					<div class="col-span-1 col-start-2">
+					<div id="vol1_schwartz" class="col-span-2 col-start-1 lg:col-span-1 lg:col-start-2">
 						<h2 class="h2 mb-4">Konkordanz Schwartz</h2>
 						{#each types as type (type)}
-							<div class="pb-10 text-xl">
+							<div class="text-xl lg:pb-10">
 								<ul class="">
 									{#each docs[type]
 										.slice()
@@ -102,12 +120,13 @@
 		{#each volumes as volume}
 			<Accordion.Item value={volume.slug}>
 				<h3>
-					<Accordion.ItemTrigger class="bg-primary-200-800/60 hover:bg-primary-200-800"
+					<Accordion.ItemTrigger
+						class="bg-primary-200/60 dark:bg-primary-500 hover:bg-primary-200 hover:dark:bg-primary-400"
 						><span class="text-surface-950-50 text-2xl font-bold">{volume.label}</span>
 					</Accordion.ItemTrigger>
 				</h3>
 				<Accordion.ItemContent
-					><div class="py-5 pl-8">
+					><div class="p-5">
 						<p class="hover:text-primary-400-600 text-surface-950-50">Band in Bearbeitung</p>
 					</div>
 				</Accordion.ItemContent>
@@ -115,3 +134,12 @@
 		{/each}
 	</Accordion>
 </div>
+
+<style>
+	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
+
+	.toc :global(.innerShadow) {
+		@apply shadow-md;
+	}
+</style>
