@@ -90,9 +90,9 @@
 	<AppBar class="bg-primary-400-600 flex items-center justify-between px-2 py-0">
 		<!-- ACO-Logo / Home -->
 		<AppBar.Lead class="m-0 flex items-center p-0">
-			<button class="flex items-center py-2" onclick={() => goto(base + '/')}>
+			<a class="flex items-center py-2" href={`${base}/`}>
 				<img src="{base}/logos/logo-aco.png" alt="ACO" class="mr-5 h-auto w-auto max-w-30" />
-			</button>
+			</a>
 		</AppBar.Lead>
 
 		<!-- Top Navigation Bar -->
@@ -176,8 +176,8 @@
 												</a>
 											</li>
 										{/each}
-										<li class="m-2!">
-											<a class="block px-2 py-1 text-lg">{@render abbreviations()}</a>
+										<li class="m-2! block px-2 py-1 text-lg">
+											{@render abbreviations()}
 										</li>
 									</ul>
 
