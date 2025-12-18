@@ -90,7 +90,7 @@
 	<AppBar class="bg-primary-400-600 flex items-center justify-between px-2 py-0">
 		<!-- ACO-Logo / Home -->
 		<AppBar.Lead class="m-0 flex items-center p-0">
-			<button class="flex items-center py-2" onclick={() => goto(base + '/.')}>
+			<button class="flex items-center py-2" onclick={() => goto(base + '/')}>
 				<img src="{base}/logos/logo-aco.png" alt="ACO" class="mr-5 h-auto w-auto max-w-30" />
 			</button>
 		</AppBar.Lead>
