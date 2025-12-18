@@ -471,10 +471,10 @@
 
 	/* Highlights in Text */
 	.containerText :global(.marksVisible span[data-ids]) {
-		@apply text-surface-950-50 bg-warning-100-900/40 [&.multiple-ids]:bg-warning-300-700/70 cursor-pointer;
+		@apply text-surface-950-50 bg-warning-100/40 dark:bg-warning-700 [&.multiple-ids]:bg-warning-300/70 dark:[&.multiple-ids]:bg-warning-200 cursor-pointer;
 	}
 
 	.containerText :global(.marksVisible span[data-type='mark'].highlighted) {
-		@apply bg-error-200-800 text-surface-950-50;
+		@apply bg-secondary-200 dark:bg-secondary-500! text-surface-950 dark:text-surface-50;
 	}
 </style>

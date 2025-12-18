@@ -26,8 +26,8 @@
 <div
 	data-id={noteSlug}
 	class={[
-		`notebox word-wrap bg-surface-50-950 absolute max-w-[700px]
-		border-4 transition-transform duration-500`,
+		`notebox word-wrap bg-surface-50-950 border-surface-100-900 absolute
+		max-w-[700px] border-4 transition-transform duration-500`,
 		selectedNote.slug === noteSlug && 'highlighted'
 	]}
 	style={`margin-top:${MARGIN_NOTEBOX}px; margin-bottom:${MARGIN_NOTEBOX}px`}
@@ -46,7 +46,9 @@
 	aria-pressed={selectedNote.slug === noteSlug}
 	aria-label="Focus note"
 >
-	<div class="bg-primary-50-950/20 in-[&.highlighted]:bg-error-200-800/20">
+	<div
+		class="bg-primary-50/20 dark:bg-primary-600 in-[&.highlighted]:bg-secondary-200/20 dark:in-[&.highlighted]:bg-secondary-700"
+	>
 		<div class="note-header p-1">
 			<span class="font-bold">{@html unit !== 'text' ? `${unit} | ` : ''}</span>
 			{@html createNoteReferenceString(
@@ -59,8 +61,8 @@
 		</div>
 		<div
 			class={[
-				'bg-primary-400-600/10 h-full w-full px-2 py-1 **:pt-2',
-				' in-[&.highlighted]:border-primary-400-600 in-[&.highlighted]:bg-error-200-800 ',
+				'bg-primary-400/10 dark:bg-primary-800 h-full w-full px-2 py-1 **:pt-2',
+				' in-[&.highlighted]:border-primary-400-600 in-[&.highlighted]:bg-secondary-200 dark:in-[&.highlighted]:bg-secondary-500 ',
 				'**:[&_a]:text-secondary-600-400'
 			]}
 		>
