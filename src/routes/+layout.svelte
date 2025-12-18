@@ -49,11 +49,14 @@
 
 		<!-- Top Navigation Bar -->
 		<nav class="flex w-full items-center justify-around *:mr-10">
-			<div class="flex gap-12">
+			<div class="flex flex-wrap gap-12">
 				<a href={`${base}/ueber`}>Über das Projekt</a>
 				<a href={`${base}/edition`}>Bände</a>
 				<a href={`${base}/register`}>Register</a>
 				<a href={`${base}/suche`}>Suche</a>
+				<a href={`${base}/bibelstellen`}>Bibelstellen</a>
+				<a href={`${base}/karte`}>Geovisualisierung</a>
+				<a href={`${base}/bibliographie`}>Bibliographie</a>
 			</div>
 			<div class="flex-grow"></div>
 
@@ -103,8 +106,9 @@
 			<p class="text-surface-contrast-400-600 text-xl font-bold">
 				Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar
 			</p>
-			<button class="text-surface-950-50 bg-surface-50-950 w-40 rounded-3xl p-3 font-bold"
-				><a href={`${base}/impressum`}>Impressum</a></button
+			<a
+				href={`${base}/impressum`}
+				class="text-surface-950-50 bg-surface-50-950 w-40 rounded-3xl p-3 font-bold">Impressum</a
 			>
 
 			<div class="my-2 flex w-full justify-around">

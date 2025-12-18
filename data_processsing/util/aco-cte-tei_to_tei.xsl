@@ -215,6 +215,12 @@
     </xsl:copy>
   </xsl:template>
   
+  <xsl:template match="hi[@rendition='#rf-griechisch']" mode="heading">
+    <hi rendition="#greek">
+      <xsl:apply-templates mode="heading"/>
+    </hi>
+  </xsl:template>
+  
   <xsl:template match="hi[matches(@rend,'display:none;')]" mode="heading"/>
 
   <!-- mode: metadata -->
@@ -500,7 +506,13 @@
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template match="note//hi[@rendition='#rf-griechisch']" mode="text">
+  <xsl:template match="p/hi[@rendition='#rf-griechisch']|note//hi[@rendition='#rf-griechisch']" mode="text">
+    <hi rendition="#greek">
+      <xsl:apply-templates mode="text"/>
+    </hi>
+  </xsl:template>
+  <!-- special case in CV149 (2 occurrences) -->
+  <xsl:template match="note//hi[@rend='font-family:GFS Neohellenic;']" mode="text">
     <hi rendition="#greek">
       <xsl:apply-templates mode="text"/>
     </hi>

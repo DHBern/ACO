@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="mx-auto grid max-w-[1500px] grid-cols-[1fr] gap-10 py-24 lg:grid-cols-[2fr_1fr]">
+<div class="mx-auto grid max-w-[1500px] grid-cols-[1fr] gap-10 py-12 lg:grid-cols-[2fr_1fr]">
 	<div class="">
 		<h1 class="h1">Einleitung</h1>
 		<h2 class="h2">
@@ -53,7 +53,7 @@
 </div>
 
 <!-- Über dieses Projekt -->
-<div class="grid-colos-[1fr] mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[2fr_1fr]">
+<div class="grid-colos-[1fr] mx-auto grid max-w-[1500px] gap-10 py-12 lg:grid-cols-[2fr_1fr]">
 	<div class="">
 		<h1 class="h1">Über dieses Projekt</h1>
 		<h2 class="h2">Die Akten des Konzils von Ephesus 431.</h2>
@@ -119,7 +119,7 @@
 </div>
 
 <!-- Ansprechpersonen -->
-<div class="mx-auto grid max-w-[1500px] grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
+<div class="mx-auto grid max-w-[1500px] grid-cols-[1fr] gap-10 py-12 lg:grid-cols-[2fr_1fr]">
 	<div class="">
 		<h1 class="h1">Ansprechpersonen</h1>
 		<p>
@@ -128,14 +128,38 @@
 		</p>
 
 		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-xl">
-			<li>Dr. Thomas Brüggemann (Leiter der Arbeitsstelle)</li>
-			<li>Dr. Sabine Lütkemeyer</li>
-			<li>Dr. Julia Beier</li>
+			<li>
+				<a
+					href="https://www.etf.uni-bonn.de/de/fakultaet/kirchengeschichte/alte-kirchengeschichte/wk"
+					target="_blank"
+					rel="noopener noreferrer">Prof. Dr. Wolfram Kinzig</a
+				>
+			</li>
+			<li>
+				<a
+					href="https://www.etf.uni-bonn.de/de/personen/personen-people/thomas-brueggemann"
+					target="_blank"
+					rel="noopener noreferrer">Dr. Thomas Brüggemann (Leiter der Arbeitsstelle)</a
+				>
+			</li>
+			<li>
+				<a
+					href="https://intern.unibe.ch/dienstleistungen/markenauftritt/logo/index_ger.html"
+					target="_blank"
+					rel="noopener noreferrer">Dr. Sabine Lütkemeyer</a
+				>
+			</li>
+			<li>
+				<a
+					href="https://www.etf.uni-bonn.de/de/fakultaet/kirchengeschichte/alte-kirchengeschichte/team/jb"
+					target="_blank"
+					rel="noopener noreferrer">Dr. Julia Beier</a
+				>
+			</li>
 		</ul>
 
 		<p>
-			Für die technische Umsetzung ist die die Digital Humanities der Universität Bern
-			verantwortlich:
+			Für die technische Umsetzung ist die Digital Humanities der Universität Bern verantwortlich:
 		</p>
 
 		<p class="mt-2 mb-10 ml-5 text-xl font-bold">
@@ -157,18 +181,5 @@
 			<img src="{base}/icons/cc-license.svg" alt="cc-license" class="inline-block h-4 w-4" />
 			Detail des Mosaiks in der Basilika von Fourvière in Lyon mit Kyrill von Alexandria in der Mitte.
 		</p>
-	</div>
-
-	<!-- Ansprechpersonen -->
-	<div>
-		<div class="">
-			<h1 class="h1">Förderung und Partner</h1>
-		</div>
-
-		<ul class="mt-2 mb-10 ml-5 list-disc font-bold **:text-xl">
-			<li>Deutsche Forschungsgemeinschaft (DFG)</li>
-			<li>Universität Bonn</li>
-			<li>Universität Bern</li>
-		</ul>
 	</div>
 </div>
