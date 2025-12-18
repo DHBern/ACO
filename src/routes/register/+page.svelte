@@ -20,7 +20,7 @@
 		{#each dataObject.map((el) => el.label) as label, idx}
 			<Accordion.Item value={label}>
 				<h3>
-					<Accordion.ItemTrigger class="hover:bg-primary-200-800"
+					<Accordion.ItemTrigger class="hover:bg-primary-200/60 hover:dark:bg-primary-500"
 						><span class="text-2xl font-bold">{label}</span></Accordion.ItemTrigger
 					>
 				</h3>
@@ -72,22 +72,26 @@
 		<div class="col-span-2 col-start-1 shadow-md lg:col-span-1">
 			<h2
 				id="Orte"
-				class="text-surface-950-50 bg-primary-200-800/60 mt-0! rounded-t-lg p-2 pl-4 text-2xl font-bold"
+				class="text-surface-950-50 bg-primary-200/60 dark:bg-primary-500 mt-0! rounded-t-lg p-2 pl-4 text-2xl font-bold"
 			>
 				Orte
 			</h2>
-			<div class="innerShadow h-[70vh] overflow-y-scroll rounded-b-lg p-3">
+			<div
+				class="innerShadow bg-surface-50 dark:bg-surface-900 h-[70vh] overflow-y-scroll rounded-b-lg p-3"
+			>
 				{@render accordion(data.places, accordionPlaces)}
 			</div>
 		</div>
 		<div class="col-span-2 col-start-1 shadow-md lg:col-span-1 lg:col-start-2">
 			<h2
 				id="Personen"
-				class="text-surface-950-50 bg-primary-200-800/60 mt-0! rounded-t-lg p-2 pl-4 text-2xl font-bold"
+				class="text-surface-950-50 bg-primary-200/60 dark:bg-primary-500 mt-0! rounded-t-lg p-2 pl-4 text-2xl font-bold"
 			>
 				Personen
 			</h2>
-			<div class="innerShadow h-[70vh] overflow-y-scroll rounded-b-lg p-3">
+			<div
+				class="innerShadow bg-surface-50 dark:bg-surface-900 h-[70vh] overflow-y-scroll rounded-b-lg p-3"
+			>
 				{@render accordion(data.people, accordionPeople)}
 			</div>
 		</div>
@@ -99,12 +103,12 @@
 	@reference "@skeletonlabs/skeleton";
 
 	.register :global([data-type='register-doc-key']) {
-		@apply font-bold;
+		@apply text-surface-950-50 font-bold;
 	}
 	.register :global([data-type='register-unit']) {
-		@apply ml-2;
+		@apply text-surface-950-50 ml-2;
 	}
 	.innerShadow {
-		@apply bg-white shadow-[inset_0_4px_6px_-1px_rgba(0,0,0,0.1),inset_0_2px_4px_-1px_rgba(0,0,0,0.06)];
+		@apply shadow-[inset_0_4px_6px_-1px_rgba(0,0,0,0.1),inset_0_2px_4px_-1px_rgba(0,0,0,0.06)];
 	}
 </style>
