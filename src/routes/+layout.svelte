@@ -217,7 +217,7 @@
 			</ul>
 			<div class="mt-10! flex w-full justify-around gap-x-10">
 				<div class="flex-grow"></div>
-				<div class="flex flex-wrap items-center justify-center gap-x-30 gap-y-10">
+				<div class="flex flex-wrap items-center justify-center gap-x-20 gap-y-10">
 					<div>
 						<img
 							src="{base}/logos/dfg_logo_schriftzug_weiss.png"
