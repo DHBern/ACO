@@ -18,6 +18,7 @@
 	let darkModeState = $derived(isDark ? 'dark' : 'light');
 	let isEditionRoute = $derived(
 		page.url.toString().includes('/edition/') &&
+			!page.url.toString().includes('/literatur') &&
 			!page.url.toString().includes('/vorwort') &&
 			!page.url.toString().includes('/einleitung')
 	);
