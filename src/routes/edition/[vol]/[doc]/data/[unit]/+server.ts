@@ -6,7 +6,6 @@ import { textData } from '$lib/data/aco-text.json';
 import { notesData } from '$lib/data/aco-notes.json';
 
 import { json } from '@sveltejs/kit';
-import { transformAnchorsNewTab } from '$lib/functions/protoHTMLconversion/transformAnchorsNewTab';
 
 export const entries: EntryGenerator = () => {
 	return metaData.flatMap((m) => {

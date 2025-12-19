@@ -51,7 +51,7 @@ export function placeNotes(ids) {
 
 		// Move up if overlap with next sibling note
 		if (insertAboveExistingNotes && overlapBottom > 0) {
-			console.log('BOTTOM', id, getInstantTranslateY(el), overlapBottom, getInstantOffsetTop(el, 'atbottom'), getInstantOffsetTop(elNext, 'attop'));
+			// console.log('BOTTOM', id, getInstantTranslateY(el), overlapBottom, getInstantOffsetTop(el, 'atbottom'), getInstantOffsetTop(elNext, 'attop'));
 			setTranslateY(el, getInstantTranslateY(el) - overlapBottom); // move up
 		}
 	});
