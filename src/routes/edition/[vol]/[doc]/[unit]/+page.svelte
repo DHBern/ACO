@@ -29,6 +29,7 @@
 
 	let visibleUnits = $state([]);
 	let latestUnitLoadedDuringCurrentScroll: string | null = $state(null);
+
 	// --- Handle search params ---------------------------
 
 	// Get boundaries of data-line and data-page
@@ -331,9 +332,17 @@
 <!-- container must be a positioned for scroll-to-line to work as expected! -->
 <div
 	bind:this={elContainerContent}
-	class="containerContent bg-surface-50-950 relative h-[calc(100vh*0.8)] w-full overflow-x-scroll p-10 pb-24"
+	class="containerContent bg-surface-50-950 relative mx-auto h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1900px] shadow-md"
 >
-	<div class="grid h-full grid-rows-[1fr_auto_1fr]">
+	<div
+		class="from-surface-900/2 pointer-events-none absolute top-0 right-0 left-0 z-10 h-30 bg-gradient-to-b to-transparent"
+	></div>
+	<div
+		class="from-surface-900/4 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-30 bg-gradient-to-t to-transparent"
+	></div>
+	<div
+		class="grid h-full grid-rows-[1fr_auto_1fr] overflow-visible overflow-x-scroll px-[20px] pb-24"
+	>
 		<!-- Load Button -->
 		{#if loadedUnits[0].prevSlug}
 			<LoadButton
@@ -346,9 +355,7 @@
 			/>
 		{/if}
 		<!-- Units -->
-		<div
-			class="row-span-1 row-start-2 grid grid-cols-[70px_20px_1fr] gap-6 lg:grid-cols-[70px_70px_auto_1fr]"
-		>
+		<div class="row-span-1 row-start-2 grid grid-cols-[75px_25px_auto_1fr] gap-6">
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
 				{#each loadedUnits as unit (unit.slug)}
@@ -400,6 +407,7 @@
 							{noteSlug}
 							noteData={unit.notes[noteSlug]}
 							bind:selectedNote
+							noteType="floating"
 						></Note>
 					{/each}
 				{/each}
@@ -436,20 +444,20 @@
 
 	.containerLineNums :global(a.line-number),
 	.containerPageNums :global(a.page-number) {
-		@apply mr-2 select-none;
+		@apply mr-2 w-10 select-none;
 	}
 
 	/* Anchors for line-numbers and page-numbers */
-	.containerLineNums :global(a.line-number::after),
-	.containerPageNums :global(a.page-number::after) {
-		@apply ml-2 hidden h-4 w-4 bg-[url(/icons/link.svg)] bg-contain bg-no-repeat content-[""];
+	.containerLineNums :global(a.line-number::before),
+	.containerPageNums :global(a.page-number::before) {
+		@apply absolute ml-2 hidden h-4 w-4 -translate-x-7 translate-y-2 bg-[url(/icons/link.svg)] bg-contain bg-no-repeat content-[""];
 	}
-	.containerLineNums :global(a.line-number:hover::after),
-	.containerPageNums :global(a.page-number:hover::after) {
+	.containerLineNums :global(a.line-number:hover::before),
+	.containerPageNums :global(a.page-number:hover::before) {
 		@apply lg:inline-block;
 	}
 	.containerLineNums :global(.lineNumBuffer) {
-		@apply text-surface-950-50/0 select-none;
+		@apply text-surface-950-50/0 inline-block w-10 select-none;
 	}
 
 	/* Text */
@@ -463,10 +471,10 @@
 
 	/* Highlights in Text */
 	.containerText :global(.marksVisible span[data-ids]) {
-		@apply text-surface-950-50 bg-warning-100-900/40 [&.multiple-ids]:bg-warning-300-700/70 cursor-pointer;
+		@apply text-surface-950-50 bg-warning-100/40 dark:bg-warning-700 [&.multiple-ids]:bg-warning-300/70 dark:[&.multiple-ids]:bg-warning-200 cursor-pointer;
 	}
 
 	.containerText :global(.marksVisible span[data-type='mark'].highlighted) {
-		@apply bg-error-200-800 text-surface-950-50;
+		@apply bg-secondary-200 dark:bg-secondary-500! text-surface-950 dark:text-surface-50;
 	}
 </style>

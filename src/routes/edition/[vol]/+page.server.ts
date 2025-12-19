@@ -1,9 +1,8 @@
 import type { PageServerLoad } from './$types';
 import type { EntryGenerator } from './$types';
-export const prerender = true;
+import { getFirstUnitOfPage } from '$lib/functions/protoHTMLconversion/getFirstUnitOfPage';
 
-import { metaData as mData } from '$lib/data/aco-metadata.json';
-const metaData = await mData;
+import { metaData } from '$lib/data/aco-metadata.json';
 
 export const entries: EntryGenerator = () => {
     return metaData.flatMap((m) => {
@@ -13,6 +12,8 @@ export const entries: EntryGenerator = () => {
     });
 };
 
-export const load: PageServerLoad = ({ params }) => {
-	return {vol : params.vol}
+export const load: PageServerLoad = async ({ url, params }) => {
+    const pageParam = url.searchParams.get('page');
+    let pageParamRedirect = getFirstUnitOfPage(pageParam, metaData);
+    return {pageParamRedirect, pageParam, vol : params.vol}
 };

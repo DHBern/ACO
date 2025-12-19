@@ -121,7 +121,7 @@
   
   <xsl:template match="hi">
     <xsl:copy>
-      <xsl:attribute name="rend" select="(@rendition => tokenize('\s+')) ! $classes?(.)"/>
+      <xsl:attribute name="rendition" select="(@rendition => tokenize('\s+')) ! $classes?(.)"/>
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>

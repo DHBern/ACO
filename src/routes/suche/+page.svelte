@@ -121,136 +121,126 @@
 	});
 </script>
 
-<div class="mx-auto max-w-[1500px] py-14">
-	<h1 class="h1">Suche</h1>
+<h1 class="h1">Suche</h1>
 
-	<form
-		onsubmit={onSearchSubmit}
-		class="search-form bg-gray-100-900 flex flex-wrap items-start justify-start gap-10 px-10 py-8"
+<!-- Settings -->
+<form
+	onsubmit={onSearchSubmit}
+	class="search-form bg-gray-100-900 mx-auto flex max-w-[1300px] flex-wrap items-start justify-start gap-10 p-5 py-8 shadow-md"
+>
+	<!-- buffer for large screens to force settings to center-->
+	<div class="hidden flex-grow lg:block"></div>
+
+	<div class="flex flex-col gap-3">
+		<span class="label-text font-bold">Suchbegriff</span>
+		<input class="input" bind:value={query} placeholder="Search text..." />
+	</div>
+	<div class="flex flex-col gap-3">
+		<span class="label-text font-bold">Dokument auswählen</span>
+		<div class="flex flex-wrap gap-3">
+			<select class="select w-40" onchange={resetDocFilterDok} bind:value={docFilterSchwartz}>
+				<option value="ignore"></option>
+				<option value="">Alle Dokumente</option>
+				{#each data.schwartzSlugs as slug}
+					<option value={slug}>{slug}</option>
+				{/each}
+			</select>
+			<select class="select w-40" onchange={resetDocFilterSchwartz} bind:value={docFilterDok}>
+				<option value="ignore"></option>
+				<option value="">Alle Dokumente</option>
+				{#each data.docNums as num}
+					<option value={num}>Dok. {num}</option>
+				{/each}
+			</select>
+		</div>
+	</div>
+
+	<div class="flex flex-col gap-3">
+		<span class="label-text font-bold">Suchen in</span>
+		<div class="flex flex-wrap gap-3">
+			<label class="flex items-center">
+				<input class="checkbox" type="checkbox" bind:checked={checkedSearchText} />
+				<span class="text-label pl-1">Text</span>
+			</label>
+			<label class="flex items-center">
+				<input class="checkbox" type="checkbox" bind:checked={checkedSearchNotes} />
+				<span class="text-label pl-1">Kommentar</span>
+			</label>
+		</div>
+	</div>
+	<button
+		type="submit"
+		class="btn-lg btn preset-filled-surface-900-100 self-center"
+		disabled={loading}>Suchen</button
 	>
-		<div class="flex flex-col gap-3">
-			<span class="label-text font-bold">Suchbegriff</span>
-			<input class="input" bind:value={query} placeholder="Search text..." />
-		</div>
-		<div class="flex flex-col gap-3">
-			<span class="label-text font-bold">Dokument auswählen</span>
-			<div class="flex gap-3">
-				<select class="select w-40" onchange={resetDocFilterDok} bind:value={docFilterSchwartz}>
-					<option value="ignore"></option>
-					<option value="">Alle Dokumente</option>
-					{#each data.schwartzSlugs as slug}
-						<option value={slug}>{slug}</option>
-					{/each}
-				</select>
-				<select class="select w-40" onchange={resetDocFilterSchwartz} bind:value={docFilterDok}>
-					<option value="ignore"></option>
-					<option value="">Alle Dokumente</option>
-					{#each data.docNums as num}
-						<option value={num}>Dok. {num}</option>
-					{/each}
-				</select>
-			</div>
-		</div>
+	<div class="hidden flex-grow lg:block"></div>
+</form>
 
-		<div class="flex flex-col gap-3">
-			<span class="label-text font-bold">Suchen in</span>
-			<div class="flex gap-3">
-				<label class="flex items-center">
-					<input class="checkbox" type="checkbox" bind:checked={checkedSearchText} />
-					<span class="text-label pl-1">Text</span>
-				</label>
-				<label class="flex items-center">
-					<input class="checkbox" type="checkbox" bind:checked={checkedSearchNotes} />
-					<span class="text-label pl-1">Kommentar</span>
-				</label>
-			</div>
-		</div>
-		<button
-			type="submit"
-			class="btn-lg btn preset-filled-surface-900-100 self-center"
-			disabled={loading}>Suchen</button
-		>
-	</form>
-	<div class="searchResults mx-auto max-w-[1300px]">
-		{#if loading}
-			<p>Bitte warten…</p>
-		{:else}
-			<p class="p-5 text-center">{numFoundHighlights} Treffer in {numFoundDocs} Dokumenten</p>
-			<ul>
-				{#each docs as doc}
-					<li>
-						<!-- Document -->
-						<a
-							href={`${base}/edition/vol1/${doc.aco_schwartzSlug}/${doc.aco_unit}${doc.aco_type === 'aco-note' ? `?line=${doc.aco_noteLineStart}` : ''}`}
-							target="_blank"
-							rel="noopener noreferrer"
+<!-- Results -->
+<div class="searchResults mx-auto max-w-[1300px]">
+	{#if loading}
+		<p>Bitte warten…</p>
+	{:else}
+		<p class="p-5 text-left">{numFoundHighlights} Treffer in {numFoundDocs} Dokumenten</p>
+		<ul>
+			{#each docs as doc}
+				<li>
+					<!-- Document -->
+					<a
+						href={`${base}/edition/vol1/${doc.aco_schwartzSlug}/${doc.aco_unit}${doc.aco_type === 'aco-note' ? `?line=${doc.aco_noteLineStart}` : ''}`}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div
+							class={[
+								'm-2 border-5 border-black',
+								doc.aco_type === 'aco-unit' && 'border-primary-500/30',
+								doc.aco_type === 'aco-note' && 'border-secondary-500/30'
+							]}
 						>
+							<!-- Header -->
 							<div
 								class={[
-									'm-2 border-5 border-black',
-									doc.aco_type === 'aco-unit' && 'border-primary-500/30',
-									doc.aco_type === 'aco-note' && 'border-secondary-500/30'
+									'px-3 py-1 text-xl',
+									doc.aco_type === 'aco-unit' && 'bg-primary-300/30',
+									doc.aco_type === 'aco-note' && 'bg-secondary-300/30'
 								]}
 							>
-								<!-- Header -->
-								<div
-									class={[
-										'px-3 py-1 text-xl',
-										doc.aco_type === 'aco-unit' && 'bg-primary-300/30',
-										doc.aco_type === 'aco-note' && 'bg-secondary-300/30'
-									]}
-								>
-									<strong>
-										{doc.aco_type === 'aco-note' ? 'Kommentar in ' : ''}
-										{doc.aco_schwartzSlug}{doc.aco_unit !== 'text' ? `/${doc.aco_unit}` : ''}:
-										<span class="ml-1">{doc.aco_docTitle}</span>
-									</strong>
-								</div>
-								<!-- Results -->
-								<div class="p-3">
-									{#if highlighting[doc.id] && highlighting[doc.id].aco_text_bare}
-										{#each highlighting[doc.id].aco_text_bare as hl, idx}
-											<div
-												class={[
-													'm-2 p-3',
-													doc.aco_type === 'aco-unit' &&
-														'bg-primary-500/8 border-primary-500/10 border-2',
-													doc.aco_type === 'aco-note' &&
-														'bg-secondary-500/8 border-secondary-500/10 border-2'
-												]}
-											>
-												<p>{@html hl}</p>
-											</div>
-										{/each}
-									{:else}
-										<p>
-											{(doc.aco_text_bare || '').slice(0, 8) +
-												((doc.aco_text_bare || '').length > 8 ? '\n…' : '')}
-										</p>
-									{/if}
-								</div>
+								<strong>
+									{doc.aco_type === 'aco-note' ? 'Kommentar in ' : ''}
+									{doc.aco_schwartzSlug}{doc.aco_unit !== 'text' ? `/${doc.aco_unit}` : ''}:
+									<span class="ml-1">{doc.aco_docTitle}</span>
+								</strong>
 							</div>
-						</a>
-					</li>
-				{/each}
-			</ul>
-
-			<div class="pagination flex justify-around">
-				<div class="flex gap-5">
-					<button
-						class="btn preset-filled-primary-500 rounded-full px-4 py-2"
-						onclick={prevPage}
-						disabled={start === 0}>Zurück</button
-					>
-					<button
-						class="btn preset-filled-primary-500 rounded-full px-4 py-2"
-						onclick={nextPage}
-						disabled={start + rows >= numFoundDocs}>Weiter</button
-					>
-				</div>
-			</div>
-		{/if}
-	</div>
+							<!-- Results -->
+							<div class="p-3">
+								{#if highlighting[doc.id] && highlighting[doc.id].aco_text_bare}
+									{#each highlighting[doc.id].aco_text_bare as hl, idx}
+										<div
+											class={[
+												'm-2 p-3',
+												doc.aco_type === 'aco-unit' &&
+													'bg-primary-500/8 border-primary-500/10 border-2',
+												doc.aco_type === 'aco-note' &&
+													'bg-secondary-500/8 border-secondary-500/10 border-2'
+											]}
+										>
+											<p>{@html hl}</p>
+										</div>
+									{/each}
+								{:else}
+									<p>
+										{(doc.aco_text_bare || '').slice(0, 8) +
+											((doc.aco_text_bare || '').length > 8 ? '\n…' : '')}
+									</p>
+								{/if}
+							</div>
+						</div>
+					</a>
+				</li>
+			{/each}
+		</ul>
+	{/if}
 </div>
 
 <style>

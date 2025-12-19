@@ -1,31 +1,54 @@
-<script>
+<script lang="ts">
 	import { MARGIN_NOTEBOX } from '$lib/constants/constants';
 	import { handleNoteClick } from '$lib/functions/floatingApparatus';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
+	type NoteType = 'floating' | 'bottom';
 
-	let { docSlug, unitSlug, noteSlug, noteData, selectedNote = $bindable() } = $props();
+	let {
+		docSlug,
+		unitSlug,
+		noteSlug,
+		noteData,
+		selectedNote = $bindable(),
+		noteType
+	}: {
+		docSlug?: string;
+		unitSlug?: string;
+		noteSlug?: string;
+		noteData?: any;
+		selectedNote?: HTMLElement;
+		noteType?: NoteType;
+	} = $props();
+	// let { docSlug, unitSlug, noteSlug, noteData, selectedNote = $bindable(), noteType } = $props();
 	const unit = unitSlug; // copy to prevent it from updating with URL
 </script>
 
 <div
 	data-id={noteSlug}
 	class={[
-		`notebox word-wrap bg-surface-50-950 absolute max-w-[700px]
-		border-4 transition-transform duration-500`,
+		`notebox word-wrap bg-surface-50-950 border-surface-100-900 absolute
+		max-w-[700px] border-4 transition-transform duration-500`,
 		selectedNote.slug === noteSlug && 'highlighted'
 	]}
 	style={`margin-top:${MARGIN_NOTEBOX}px; margin-bottom:${MARGIN_NOTEBOX}px`}
 	onclick={() => {
-		handleNoteClick(noteSlug);
-		selectedNote.slug = noteSlug;
+		if (noteType === 'floating') {
+			handleNoteClick(noteSlug);
+			selectedNote.slug = noteSlug;
+		}
 	}}
-	onkeydown={(e) => (e.key === 'Enter' || e.key === ' ' ? handleNoteClick(noteSlug) : null)}
+	onkeydown={(e) =>
+		noteType === 'floating' && (e.key === 'Enter' || e.key === ' ')
+			? handleNoteClick(noteSlug)
+			: null}
 	role="button"
 	tabindex="0"
 	aria-pressed={selectedNote.slug === noteSlug}
 	aria-label="Focus note"
 >
-	<div class="bg-primary-50-950/20 in-[&.highlighted]:bg-error-200-800/20">
+	<div
+		class="bg-primary-50/20 dark:bg-primary-600 in-[&.highlighted]:bg-secondary-200/20 dark:in-[&.highlighted]:bg-secondary-700"
+	>
 		<div class="note-header p-1">
 			<span class="font-bold">{@html unit !== 'text' ? `${unit} | ` : ''}</span>
 			{@html createNoteReferenceString(
@@ -38,8 +61,8 @@
 		</div>
 		<div
 			class={[
-				'bg-primary-400-600/10 h-full w-full px-2 py-1 **:pt-2',
-				' in-[&.highlighted]:border-primary-400-600 in-[&.highlighted]:bg-error-200-800 ',
+				'bg-primary-400/10 dark:bg-primary-800 h-full w-full px-2 py-1 **:pt-2',
+				' in-[&.highlighted]:border-primary-400-600 in-[&.highlighted]:bg-secondary-200 dark:in-[&.highlighted]:bg-secondary-500 ',
 				'**:[&_a]:text-secondary-600-400'
 			]}
 		>

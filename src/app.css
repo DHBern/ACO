@@ -46,7 +46,7 @@
 }
 
 h1 {
-	@apply text-secondary-400 my-5;
+	@apply text-secondary-400 my-5 mt-15;
 }
 h2 {
 	@apply mt-10;
