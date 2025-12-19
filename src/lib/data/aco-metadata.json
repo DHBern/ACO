@@ -178,6 +178,26 @@
       "slug": "CV1"
     },
     {
+      "acoDocLabel": "Dok. 6",
+      "unitSlugs": [ "text" ],
+      "schwartzSlug": "CPal21",
+      "schwartzNum": "21",
+      "type": "CPal",
+      "title": "Nestorius’ Reaktion auf die Angriffe Kyrills ( <em>sermo</em> 10)",
+      "pageLimits": { "text":[ "43", "54" ] },
+      "content": {
+        "head": "<p><span data-type='head_key'>Edition:</span> Collectio Palatina 21, ACO I,5 S. 31,1–37,27; ältere Edd.: Garnier (1673), Bd. 2 S. 33–41; Baluze (1684), S. 56–70; PL 48, Sp. 789–801; Loofs, Nestoriana S. 264–277 </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> – </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel, Marius Mercator (Übers.)] </p> <p><span data-type='head_key'>Datierung:</span> Frühjahr 429 </p> <p><span data-type='head_key'>Griech. Original:</span> Nur in einzelnen Fragmenten erhalten (s. Loofs, Nestoriana S. 264–277) </p> <p><span data-type='head_key'>Weitere lat. Fassungen:</span> Zu weiteren lateinischen Versionen einzelner Abschnitte, die auch in Collectio Palatina 29 erscheinen, s. unten die jeweiligen Angaben </p> <p><span data-type='head_key'>Literatur:</span> Wessel (2004), S. 242–245; Konoppa (2005), S. 227–239 </p>",
+        "footnotes_head": [  ],
+        "inhalt": "<p><span data-type='head_key'>Inhalt:</span> Nestorius reagiert in dieser Predigt auf die Angriffe Kyrills, die dieser besonders in seinem Brief an die Mönche (CV1 [Dok. 5]) gegen ihn formuliert. Nachdem er seiner Empörung hierüber Aus­druck verliehen hat, bietet er seiner Gemeinde eine ausführliche Widerlegung der Lehre von der Identität Christi mit dem göttlichen Wort, indem er dieser die ‚richtige‘ Lehre von den zwei Naturen Christi gegenüberstellt, die er mit zahlreichen Bibelzitaten belegt.</p>"
+      },
+      "unitLabelsLong": [ "text" ],
+      "acoDocNum": "6",
+      "pageStart": "43",
+      "pageEnd": "54",
+      "unitLabels": [ "text" ],
+      "slug": "CPal21"
+    },
+    {
       "acoDocLabel": "Dok. 7",
       "unitSlugs": [ "1", "2", "3" ],
       "schwartzSlug": "CVer3",
@@ -1809,24 +1829,6 @@
     },
     {
       "schwartzSlug": "#",
-      "schwartzNum": "21",
-      "acoDocNum": "6",
-      "acoDocLabel": "Dok. 6",
-      "type": "CPal",
-      "title": "Nestorius’ Reaktion auf die Angriffe Kyrills (sermo 10) (in Entwicklung)",
-      "slug": "CPal21",
-      "unitSlugs": [],
-      "unitLabelsLong": [],
-      "unitLabels": [
-        ""
-      ],
-      "content": {
-        "head": "error during input processing (structural anomalies)",
-        "inhalt": ""
-      }
-    },
-    {
-      "schwartzSlug": "#",
       "schwartzNum": "22",
       "acoDocNum": "8",
       "acoDocLabel": "Dok. 8",
@@ -1865,7 +1867,7 @@
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2025-12-19T21:07:26.867199535+01:00",
+    "generated-on": "2025-12-19T21:49:57.716761847+01:00",
     "description": ""
   }
 }
