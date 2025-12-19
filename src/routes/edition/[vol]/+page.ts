@@ -1,4 +1,3 @@
-import type { PageServerLoad } from './$types';
 import type { EntryGenerator } from './$types';
 import { getFirstUnitOfPage } from '$lib/functions/protoHTMLconversion/getFirstUnitOfPage';
 
@@ -12,7 +11,7 @@ export const entries: EntryGenerator = () => {
     });
 };
 
-export const load: PageServerLoad = async ({ url, params }) => {
+export async function load({ url, params }) {
     const pageParam = url.searchParams.get('page');
     let pageParamRedirect = getFirstUnitOfPage(pageParam, metaData);
     return {pageParamRedirect, pageParam, vol : params.vol}
