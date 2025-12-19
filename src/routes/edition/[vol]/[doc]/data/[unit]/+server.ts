@@ -24,10 +24,10 @@ export async function GET({ params, fetch }) {
 	const unitText = textData?.[params.doc]?.[params.unit] || null;
 	const unitNotes = notesData?.[params.doc]?.[params.unit] || null;
 	if (unitText === null) {
-		console.error(`\n\n!!!!!!!!!!!!!!!!!!!!!!!!!\n\nNo text found for ${params.doc}/${params.unit}. Check consistency accross datasets!\n\n!!!!!!!!!!!!!!!!!!!!!!!!!`)
+		// console.error(`\n\n!!!!!!!!!!!!!!!!!!!!!!!!!\n\nNo text found for ${params.doc}/${params.unit}. Check consistency accross datasets!\n\n!!!!!!!!!!!!!!!!!!!!!!!!!`)
 	}
 	if (unitNotes === null) {
-		console.error(`\n\n!!!!!!!!!!!!!!!!!!!!!!!!!\n\nNo notes found for ${params.doc}/${params.unit}. Check consistency accross datasets!\n\n!!!!!!!!!!!!!!!!!!!!!!!!!`)
+		// console.error(`\n\n!!!!!!!!!!!!!!!!!!!!!!!!!\n\nNo notes found for ${params.doc}/${params.unit}. Check consistency accross datasets!\n\n!!!!!!!!!!!!!!!!!!!!!!!!!`)
 	}
 	return json({ unitText, unitNotes });
 }

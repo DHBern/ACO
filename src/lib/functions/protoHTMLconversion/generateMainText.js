@@ -1,7 +1,7 @@
 function insertNoteSpans(text) {
 	// Guard
 	if (!text) {
-		console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generateNoteSpans.js\n\n!!!!!!!!!!!');
+		// console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generateNoteSpans.js\n\n!!!!!!!!!!!');
 		return text;
 	}
 
@@ -51,7 +51,7 @@ function insertNoteSpans(text) {
 export function generateMainText(text) {
 	// Guard
 	if (!text) {
-		console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generateMainText.js\n\n!!!!!!!!!!!');
+		// console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generateMainText.js\n\n!!!!!!!!!!!');
 		return text;
 	}
 

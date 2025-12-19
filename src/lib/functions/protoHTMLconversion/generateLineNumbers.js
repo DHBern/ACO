@@ -1,7 +1,7 @@
 export function generateLineNumbers(text, path) {
 	// Guard
 	if (!text) {
-		console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generateLineNumbers.js\n\n!!!!!!!!!!!');
+		// console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generateLineNumbers.js\n\n!!!!!!!!!!!');
 		return text;
 	}
 

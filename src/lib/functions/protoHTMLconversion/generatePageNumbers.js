@@ -1,7 +1,7 @@
 export function generatePageNumbers(text, path) {
 	// Guard
 	if (!text) {
-		console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generatePageNumbers.js\n\n!!!!!!!!!!!');
+		// console.warn('!!!!!!\n\nUNDEFINED TEXT FOUND in generatePageNumbers.js\n\n!!!!!!!!!!!');
 		return text;
 	}
 
