@@ -16944,7 +16944,7 @@
           "refstring_text": "dort]"
         },
         "CVer2-15-7-8-Auch-wolltest": {
-          "note_content": "Gemeint sind die von Nestorius in <a href='../CVer3/1?line=5' data-type='internal_ref' document='CVer3' doc_unit='1' document_end='CVer3' doc_unit_end='1' line_start='5' line_end='22' debug_cte='07_CVer3_dg.xml#r-AWyHBThy 07_CVer3_dg.xml#r-AWyHBThy-e'>CVer3,1,5 – 22</a>; ACO I,2 S. 12,22–13,6 (Dok. 7), <a href='' data-type='internal_ref' document='' doc_unit='' document_end='' doc_unit_end='' line_start='' line_end='' debug_cte='22_CVer4_dg.xml#r-AWyHBwYL 22_CVer4_dg.xml#r-AWyHBwYL-e'>CVer4,1,2 – 22</a>, ACO I,2 S. 14,5–19 (Dok. 22) erwähnten Pelagianer. Vgl. auch unten Anm. zu <a href='../CVer2/16?line=8' data-type='internal_ref' document='CVer2' doc_unit='16' document_end='CVer2' doc_unit_end='16' line_start='8' line_end='9' debug_cte='#w2644s #w2657'>CVer2,16,8 – 9</a>.",
+          "note_content": "Gemeint sind die von Nestorius in <a href='../CVer3/1?line=5' data-type='internal_ref' document='CVer3' doc_unit='1' document_end='CVer3' doc_unit_end='1' line_start='5' line_end='22' debug_cte='07_CVer3_dg.xml#r-AWyHBThy 07_CVer3_dg.xml#r-AWyHBThy-e'>CVer3,1,5 – 22</a>; ACO I,2 S. 12,22–13,6 (Dok. 7), <a href='../CVer4/1?line=2' data-type='internal_ref' document='CVer4' doc_unit='1' document_end='CVer4' doc_unit_end='1' line_start='2' line_end='22' debug_cte='22_CVer4_dg.xml#r-AWyHBwYL 22_CVer4_dg.xml#r-AWyHBwYL-e'>CVer4,1,2 – 22</a>, ACO I,2 S. 14,5–19 (Dok. 22) erwähnten Pelagianer. Vgl. auch unten Anm. zu <a href='../CVer2/16?line=8' data-type='internal_ref' document='CVer2' doc_unit='16' document_end='CVer2' doc_unit_end='16' line_start='8' line_end='9' debug_cte='#w2644s #w2657'>CVer2,16,8 – 9</a>.",
           "doc_unit": "CVer2-15",
           "refstring_lines": "7 – 8 ",
           "document": "CVer2",
@@ -17951,6 +17951,79 @@
           "line_end": "24",
           "text_start": "Denn",
           "refstring_text": "Denn … Maria]"
+        }
+      },
+      "3": {  }
+    },
+    "CVer4": {
+      "1": {
+        "CVer4-1-2-3-Oft-beanspruchen": {
+          "note_content": "Erhalten ist außer diesem Brief nur der erste, s. CVer3, ACO I,2 S. 12,19–14,3 (Dok. 7). Krannich (2005, S. 110 Anm. 8) hält es nicht für ausgeschlossen, dass Nestorius hier nur auf seinen ersten Brief an Coelestin anspielt.",
+          "doc_unit": "CVer4-1",
+          "refstring_lines": "2 – 3 ",
+          "document": "CVer4",
+          "text_end": "beanspruchen",
+          "line_start": "2",
+          "line_end": "3",
+          "text_start": "Oft",
+          "refstring_text": "Oft … beanspruchen]"
+        },
+        "CVer4-1-2-3-Julian-beanspruchen": {
+          "note_content": "Zu Julian und seinen Anhängern s. Anm. zu <a href='../CVer3/1?line=5' data-type='internal_ref' document='CVer3' doc_unit='1' document_end='CVer3' doc_unit_end='1' line_start='5' line_end='5' debug_cte='07_CVer3_dg.xml#r-AWyBmHAJ 07_CVer3_dg.xml#r-AWyBmHAJ-e'>CVer3,1,5</a> (Dok. 7).",
+          "doc_unit": "CVer4-1",
+          "refstring_lines": "2 – 3 ",
+          "document": "CVer4",
+          "text_end": "beanspruchen",
+          "line_start": "2",
+          "line_end": "3",
+          "text_start": "Julian",
+          "refstring_text": "Julian … beanspruchen]"
+        },
+        "CVer4-1-2--1-": {
+          "note_content": "Zum Fehlen eines Grußes am Anfang des Briefes s. Anm. zu <a href='../CVer3/1?line=2' data-type='internal_ref' document='CVer3' doc_unit='1' document_end='CVer3' doc_unit_end='1' line_start='2' line_end='2' debug_cte='07_CVer3_dg.xml#r-AWyBmARV 07_CVer3_dg.xml#r-AWyBmARV-e'>CVer3,1,2</a> (Dok. 7).",
+          "doc_unit": "CVer4-1",
+          "refstring_lines": "2",
+          "document": "CVer4",
+          "text_end": "1",
+          "line_start": "2",
+          "line_end": "2",
+          "text_start": "1",
+          "refstring_text": "1]"
+        }
+      },
+      "2": {
+        "CVer4-2-11-12-beide-werden": {
+          "note_content": "Hierzu Vogt (1975), S. 89f.: „Mit diesem Satz ist einerseits die endgültige Definition von Chalkedon wenigstens teilweise vorweggenommen, andererseits das Wesentliche der westlichen Christologie ausgesprochen. Nestorius durfte wirklich annehmen, damit in Rom Zustimmung zu finden.“",
+          "doc_unit": "CVer4-2",
+          "refstring_lines": "11 – 12 ",
+          "document": "CVer4",
+          "text_end": "werden",
+          "line_start": "11",
+          "line_end": "12",
+          "text_start": "beide",
+          "refstring_text": "beide … werden]"
+        },
+        "CVer4-2-16--Maria-": {
+          "note_content": "Schwartz nimmt eine Lücke hinter <em>Maria</em> a",
+          "doc_unit": "CVer4-2",
+          "refstring_lines": "16",
+          "document": "CVer4",
+          "text_end": "Maria",
+          "line_start": "16",
+          "line_end": "16",
+          "text_start": "Maria",
+          "refstring_text": "Maria]"
+        },
+        "CVer4-2-14-16-Wir-Maria": {
+          "note_content": "Wie in CVer3 (ACO I,2 S. 13,20f.) zitiert Nestorius hier nicht das Nizänum, sondern das Konstantinopolitanum, vgl. Anm. zu <a href='../CVer3/2?line=22' data-type='internal_ref' document='CVer3' doc_unit='2' document_end='CVer3' doc_unit_end='2' line_start='22' line_end='22' debug_cte='07_CVer3_dg.xml#r-AWyBmLvG 07_CVer3_dg.xml#r-AWyBmLvG-e'>CVer3,2,22</a> (Dok. 7).",
+          "doc_unit": "CVer4-2",
+          "refstring_lines": "14 – 16 ",
+          "document": "CVer4",
+          "text_end": "Maria",
+          "line_start": "14",
+          "line_end": "16",
+          "text_start": "Wir",
+          "refstring_text": "Wir … Maria]"
         }
       },
       "3": {  }
@@ -35355,7 +35428,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2025-12-17T20:36:19.042231096+01:00",
+    "generated-on": "2025-12-19T11:50:20.390706701+01:00",
     "description": ""
   }
 }
