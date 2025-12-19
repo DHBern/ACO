@@ -1,4 +1,4 @@
-export const prerender = true;
+export const prerender = false;
 
 import { metaDocs } from '$lib/data/aco-meta-docs.json';
 import type { LayoutLoad } from '../$types';
@@ -19,5 +19,5 @@ const intro = {
 };
 
 export const load: LayoutLoad = async ({ params }) => {
-	return {vol : params.vol, intro, preface, abbData, litData };
+	return { vol: params.vol, intro, preface, abbData, litData };
 };
