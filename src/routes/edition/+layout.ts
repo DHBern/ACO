@@ -1,7 +1,5 @@
 export const prerender = true;
-import { metaData as mData } from '$lib/data/aco-metadata.json';
-
-const metaData = await mData;
+import { metaData } from '$lib/data/aco-metadata.json';
 
 export async function load() {
 	return { metaData };

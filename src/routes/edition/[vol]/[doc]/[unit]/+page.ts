@@ -1,9 +1,7 @@
 export const prerender = true;
 
-import { metaData as mData } from '$lib/data/aco-metadata.json';
-import { notesData as nData } from '$lib/data/aco-notes.json';
-const metaData = await mData;
-const notesData = await nData;
+import { metaData } from '$lib/data/aco-metadata.json';
+import { notesData } from '$lib/data/aco-notes.json';
 
 import { base } from '$app/paths';
 

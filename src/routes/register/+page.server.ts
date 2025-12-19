@@ -1,11 +1,10 @@
 export const prerender = true;
 
-import { registerData as rData } from '$lib/data/aco-register.json';
-const registerData = await rData;
+import { registerData } from '$lib/data/aco-register.json';
 
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ fetch, params }) => {
+export const load: PageServerLoad = async () => {
 
 	// Get corresponding data
 	const places = registerData.Orte;
