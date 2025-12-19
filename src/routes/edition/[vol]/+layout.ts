@@ -1,7 +1,7 @@
 export const prerender = true;
 
 import { metaDocs } from '$lib/data/aco-meta-docs.json';
-import type { LayoutServerLoad } from './$types';
+import type { LayoutLoad } from '../$types';
 
 import { linkifyFootnoteSuperscripts } from '$lib/functions/protoHTMLconversion/linkifyFootnoteSuperscripts';
 import { transformFootnotesIntroduction } from '$lib/functions/protoHTMLconversion/transformFootnotesIntroduction';
@@ -18,6 +18,6 @@ const intro = {
 	footnotes: transformFootnotesIntroduction(introData.footnotes)
 };
 
-export const load: LayoutServerLoad = async ({ params }) => {
+export const load: LayoutLoad = async ({ params }) => {
 	return {vol : params.vol, intro, preface, abbData, litData };
 };
