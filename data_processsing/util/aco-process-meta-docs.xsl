@@ -63,7 +63,7 @@
     
     <xsl:message select="$payload"/>
     
-    <map key="{@xml:id => tokenize('_') => reverse() => head() => util:sanitizeBrackets()}" xmlns="http://www.w3.org/2005/xpath-functions">
+    <map key="{@xml:id => tokenize('_') => reverse() => head() => util:sanitizeBrackets() => normalize-unicode('NFD')}" xmlns="http://www.w3.org/2005/xpath-functions">
       <string key="text">
         <xsl:sequence select="serialize($payload,$util:serialization-parameters) => normalize-space()"/>
       </string>
@@ -102,8 +102,14 @@
   </xsl:template>
   
   <!-- inline -->
-  <xsl:template match="hi" mode="meta-docs-html">
+  <xsl:template match="hi[not(@rendition='@greek')]" mode="meta-docs-html">
     <span class="{@rend => replace('#','')}">
+      <xsl:apply-templates mode="meta-docs-html"/>
+    </span>
+  </xsl:template>
+  
+  <xsl:template match="hi[@rendition='#greek']" mode="meta-docs-html">
+    <span data-lang="greek">
       <xsl:apply-templates mode="meta-docs-html"/>
     </span>
   </xsl:template>
@@ -153,7 +159,7 @@
   <xsl:template match="ref[@type='footnotereference']" mode="meta-docs-html">
     <xsl:variable name="fn-target" select="@target => replace('#','')"/>
     <xsl:variable name="targeted-fn" select="//anchor[contains(@xml:id,$fn-target)]/following-sibling::note[1]/@n"/>
-    <a href="#{$targeted-fn}">{$targeted-fn}</a>
+    <a href="#ref-{$targeted-fn}">{$targeted-fn}</a>
   </xsl:template>
   
   <xsl:template match="note" mode="meta-docs-html">
