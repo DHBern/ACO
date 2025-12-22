@@ -77,13 +77,21 @@
        Instead upward-projection to the rescue.
   -->
   
+  <xsl:mode name="tei-data-fixup" on-no-match="shallow-copy"/>
   <xsl:mode name="uwp" on-no-match="shallow-copy"/>
   <xsl:mode name="uwp-split" on-no-match="shallow-copy"/>
   
   <xsl:mode name="move-acoTitle" on-no-match="shallow-copy"/>
     
+  <!-- fixing some unexpected data structures to keep downstream processing sane;
+       this is highly case-specific and not meant to be extended beyond things 
+       that really need fixing on input level -->
+  <xsl:variable name="tei-data-fixup">
+    <xsl:apply-templates select="/" mode="tei-data-fixup"/>
+  </xsl:variable>
+  
   <xsl:variable name="tei-with-chapter-divs">
-    <xsl:apply-templates select="/" mode="uwp"/>
+    <xsl:apply-templates select="$tei-data-fixup" mode="uwp"/>
   </xsl:variable>
   
   <xsl:template match="body/div" mode="uwp">
@@ -120,6 +128,24 @@
     </xsl:if>
   </xsl:template>
   
+  <!-- tei-data-fixup -->
+  <!-- fixup case 1 -->
+  <xsl:template match="div[p/milestone[@n='CV150,168']]/head" mode="tei-data-fixup">
+    <xsl:comment>chapter milestone added by tei-data-fixup template</xsl:comment>
+    <head rendition="#rp-heading_3"><milestone n="-" unit="chapterline"/><milestone n="-" unit="line"/><milestone n="CV150,168" unit="chapter"/><emph n="CV150,168"><hi rend="display:none;"
+          >CV150,168</hi></emph>Aus dem zweiten [Brief] an die Korinther</head>
+  </xsl:template>
+  <xsl:template match="div[p/milestone[@n='CV150,168']]/p[@rendition='#rp-p']/milestone[@unit='chapter']" mode="tei-data-fixup"/>
+  <xsl:template match="div[p/milestone[@n='CV150,168']]/p[@rendition='#rp-p']/emph[@n='CV150,168']" mode="tei-data-fixup"/>
+  
+  <!-- fixup case 2 -->
+  <xsl:template match="div[p/milestone[@n='CV150,224']]/head" mode="tei-data-fixup">
+    <head rendition="#rp-heading_3"><milestone n="-" unit="chapterline"/><milestone n="-" unit="line"/><milestone n="CV150,224" unit="chapter"/><emph n="CV150,224"><hi rend="display:none;"
+          >CV150,224</hi></emph>Aus dem Evangelium nach Lukas</head>
+  </xsl:template>
+  <xsl:template match="div[p/milestone[@n='CV150,224']]/p[@rendition='#rp-p']/milestone[@unit='chapter']" mode="tei-data-fixup"/>
+  <xsl:template match="div[p/milestone[@n='CV150,224']]/p[@rendition='#rp-p']/emph[@n='CV150,168']" mode="tei-data-fixup"/>
+  
   
   <!-- processing -->
   
@@ -146,6 +172,8 @@
         <body>
           <xsl:call-template name="heading"/>
           <xsl:call-template name="metadata"/>
+          <!-- debug: make context after uwp visible -->
+<!--          <xsl:copy-of select="$tei-with-chapter-divs/TEI/text"></xsl:copy-of>-->
           <xsl:apply-templates select="$tei-with-chapter-divs/TEI/text" mode="text"/>
         </body>
       </text>
@@ -159,9 +187,9 @@
 
     <!-- move acoTitle out of chapter div -->
     <!-- TODO: still needed? -->
-    <xsl:variable name="generated">
+    <!--<xsl:variable name="generated">
       <xsl:apply-templates select="$generated" mode="move-acoTitle"/>
-    </xsl:variable>
+    </xsl:variable>-->
 
     <!--<xsl:result-document href="output/generated.xml">
       <xsl:sequence select="$generated"/>
@@ -180,7 +208,7 @@
   </xsl:template>
   
   
-  <xsl:template match="div[ab[@type='acoTitle']]" mode="move-acoTitle">
+  <!--<xsl:template match="div[ab[@type='acoTitle']]" mode="move-acoTitle">
     <div n="{/TEI/@xml:id => tokenize('_') => reverse() => head()}-acoTitle">
       <xsl:copy-of select="ab[@type='acoTitle']"/>
     </div>
@@ -188,7 +216,7 @@
       <xsl:copy-of select="@*"/>
       <xsl:apply-templates select="node() except ab[@type='acoTitle']" mode="move-acoTitle"/>
     </xsl:copy>
-  </xsl:template>
+  </xsl:template>-->
   
   
   <!-- mode: heading -->
@@ -285,9 +313,17 @@
   <xsl:template match="div[ab|p[not(@rendition='#rp-kopf')]]" mode="text">
     <xsl:copy>
       <xsl:copy-of select="@*"/>
-      <xsl:attribute name="n" select=".//milestone[@unit='chapter']/@n"/>
+      <xsl:attribute name="n" select="(.//milestone[@unit='chapter']/@n |
+        (: cover cases in CV150 :)
+        preceding-sibling::div[1][head][not(p|ab)]//milestone[@unit='chapter']/@n
+        )[1]"/>
       <xsl:sequence select=".//milestone[@unit='chapter']"/>
       <xsl:comment>&lt;pb n="{(.//milestone[@unit='page'])[1]/@n -1}"/></xsl:comment>
+      <!-- handling some titles of CV150 -->
+      <xsl:for-each select="preceding-sibling::div[1][head][not(p|ab)]">
+        <xsl:sequence select=".//milestone[@unit='chapter']"/>
+        <xsl:apply-templates mode="text"/>
+      </xsl:for-each>
       <xsl:choose>
         <!-- case: CV166, CV149 -->
         <xsl:when test="div">
@@ -311,25 +347,48 @@
     </xsl:copy>
   </xsl:template>
   
+  <xsl:template match="div[head][not(p|ab)]" mode="text"/>
+  
   <xsl:template match="div[p[@rendition='#rp-kopf']]" mode="text"/>
   
-  <xsl:template match="p[@rendition='#rp-Einleitungstext'][preceding-sibling::p[1][@rendition='#rp-kopf']]" mode="text">
+  <xsl:template match="p[@rendition='#rp-Einleitungstext'][not(preceding-sibling::p)]" mode="text">
+    <ab type="acoTitle">
+      <xsl:apply-templates select="preceding::milestone[@unit='chapterline'][1]" mode="text"/>
+      <xsl:apply-templates mode="text"/>
+    </ab>
+  </xsl:template>
+  
+  <xsl:template match="p[@rendition='#rp-Einleitungstext'][preceding-sibling::p]" mode="text">
+    <ab type="acoInnerTitle">
+      <xsl:apply-templates mode="text"/>
+    </ab>
+  </xsl:template>
+  
+  <xsl:template match="head[@rendition='#rp-heading_3'][matches(.,'\S')]" mode="text">
+    <ab type="acoInnerTitle">
+      <xsl:apply-templates mode="text"/>
+    </ab>
+  </xsl:template>
+   
+  <!--<xsl:template match="p[@rendition='#rp-Einleitungstext'][preceding-sibling::p[1][@rendition='#rp-kopf']]" mode="text">
     <ab type="acoTitle">
       <xsl:apply-templates mode="text"/>
     </ab>
   </xsl:template>
   
   <xsl:template match="p[@rendition='#rp-Einleitungstext'][matches(.,'\S')][not(preceding-sibling::p[1][@rendition='#rp-kopf'])]" mode="text">
-    <p>
+    <ab type="acoInnerTitle">
       <xsl:apply-templates mode="text"/>
-    </p>
-  </xsl:template>
+    </ab>
+  </xsl:template>-->
+  
   
   <xsl:template match="head[@rendition='#rp-heading_2'][matches(.,'\S')]" mode="text">
     <p>
       <xsl:apply-templates mode="text"/>
     </p>
   </xsl:template>
+  
   
   <!-- 
   ## `p/@rendition`
@@ -361,8 +420,9 @@
       <xsl:if test="@rendition='#rp-p_leerzeile_darüber'">
         <xsl:attribute name="rend">#reglet</xsl:attribute>
       </xsl:if>
-      <xsl:if test=".//milestone[@unit='chapterline'][1][@n=2]">
-        <lb n="1"/>
+      <!--<xsl:if test=".//milestone[@unit='chapterline'][1][@n=2]">-->
+      <xsl:if test=".//milestone[@unit='chapterline'][1][@n=2] and preceding::p[1][matches(ancestor-or-self::*/@rendition => string-join(),'#rp-p')][not(.//milestone[@unit='chapterline'])]">
+        <lb n="1"/><xsl:comment>synthesised!</xsl:comment>
       </xsl:if>
       <xsl:apply-templates mode="text"/>
     </p>
@@ -540,7 +600,7 @@
   
   
   <xsl:template match="note[@place='left' or @place='right']//text()" mode="text"/>
-  <xsl:template match="head[not(@rendition='#rp-heading_2')]//text()" mode="text"/>
+  <xsl:template match="head[not(matches(@rendition,'#rp-heading_\d'))]//text()" mode="text"/>
   <xsl:template match="hi[contains(@rend,'display:none;')]//text()" mode="text"/>
   <xsl:template match="p[@rendition='#rp-kopf']//text()" mode="text"/>
   

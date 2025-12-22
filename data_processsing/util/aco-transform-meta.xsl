@@ -116,12 +116,15 @@
     '#rf-griechisch_unterstrichen' : '#greek #underlined',
     '#rf-kursiv' : '#italic',
     '#rf-unterstrichen_kursiv' : '#underlined #italic',
-    '#rf-hochgestellt' : '#sup'
+    '#rf-hochgestellt' : '#sup',
+    '#rf-superscript' : '#sup'
     }"/>
   
   <xsl:template match="hi">
     <xsl:copy>
-      <xsl:attribute name="rendition" select="(@rendition => tokenize('\s+')) ! $classes?(.)"/>
+      <xsl:if test="@rendition">
+        <xsl:attribute name="rendition" select="(@rendition => tokenize('\s+')) ! $classes?(.)"/>
+      </xsl:if>
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>

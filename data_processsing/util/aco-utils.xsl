@@ -45,10 +45,10 @@
       <xsl:sequence select="$note/tei:mentioned/@n/data() => tokenize('–') => tail() => normalize-space() => replace(',','_') => replace('.*?(\d+).*?','$1')"/>
       <!-- start word -->
       <xsl:sequence select="'-'"/>
-      <xsl:sequence select="$note/tei:mentioned/text() => string-join('') => tokenize('…') => head() => replace('\]','') => normalize-space() => util:undoSuperscript()"/>
+      <xsl:sequence select="$note/tei:mentioned//text() => string-join('') => tokenize('…') => head() => replace('\]','') => normalize-space() => util:undoSuperscript()"/>
       <!-- end word -->
       <xsl:sequence select="'-'"/>
-      <xsl:sequence select="$note/tei:mentioned/text() => string-join('') => tokenize('…') => tail()=> string-join('') => substring-before(']') => normalize-space() => util:undoSuperscript()"/>
+      <xsl:sequence select="$note/tei:mentioned//text() => string-join('') => tokenize('…') => tail()=> string-join('') => substring-before(']') => normalize-space() => util:undoSuperscript()"/>
     </xsl:variable>
     <xsl:sequence select="$noteKey => util:trimSpace() => util:trimShy() => util:sanitizeForJS()"/>   
   </xsl:function>
@@ -97,6 +97,17 @@
     <xsl:param name="input"/>
     <xsl:sequence select="$input 
       => replace('^(aco_)?(\d+_(CVe?r?|CPal|CU)\d+).*','$2')"/> 
+  </xsl:function>
+  
+  <xsl:function name="util:teiId">
+    <xsl:param name="teiId" as="xs:string"/>
+    <xsl:sequence select="$teiId => tokenize('_') => reverse() => head() => replace(',','-') => util:sanitizeBrackets()"/>
+  </xsl:function>
+  
+  <xsl:function name="util:divId">
+    <xsl:param name="divN" as="xs:string?"/>
+    <xsl:param name="teiId" as="xs:string"/>
+    <xsl:sequence select="($divN => replace(',','-') => substring-after($teiId||'-'), 'text')[matches(.,'\S')][1] => util:sanitizeForJS() => util:sanitizeBrackets()"/>
   </xsl:function>
   
   <!-- turning targets into working pointers (via accumulated-pointer-targets) -->

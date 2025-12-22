@@ -100,11 +100,21 @@
     </section>
   </xsl:template>
   
-  <xsl:template match="tei:p|tei:ab" mode="build-text">
+  
+  <xsl:template match="tei:ab" mode="build-text">
+    <p>
+      <span data-type="title">
+        <xsl:apply-templates mode="build-text"/>
+      </span>
+    </p>
+  </xsl:template>
+  
+  <xsl:template match="tei:p" mode="build-text">
     <p>
       <xsl:apply-templates mode="build-text"/>
     </p>
   </xsl:template>
+  
   
   <xsl:template match="tei:lb" mode="build-text" xml:space="preserve">
     <xsl:if test="preceding-sibling::node()[matches(.,'\S')]"><xsl:if test="@type='hyphen'"><span data-hyphen="">‐</span></xsl:if><br/></xsl:if><a data-line="{@n}">&#8203;</a><xsl:apply-templates mode="build-text"/>

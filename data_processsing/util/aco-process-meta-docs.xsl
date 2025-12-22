@@ -63,7 +63,7 @@
     
     <xsl:message select="$payload"/>
     
-    <map key="{@xml:id => tokenize('_') => reverse() => head() => util:sanitizeBrackets() => normalize-unicode('NFD')}" xmlns="http://www.w3.org/2005/xpath-functions">
+    <map key="{@xml:id => tokenize('_') => reverse() => head() => util:sanitizeBrackets() => normalize-unicode('NFKD')}" xmlns="http://www.w3.org/2005/xpath-functions">
       <string key="text">
         <xsl:sequence select="serialize($payload,$util:serialization-parameters) => normalize-space()"/>
       </string>
