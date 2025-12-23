@@ -100,7 +100,7 @@
       <map key="pageLimits">
         <xsl:for-each select=".//tei:text/tei:body/tei:div">
           <array key="{if (contains(@n,',')) then @n => tokenize(',') => tail() => string-join('-') => util:sanitizeForJS() else 'text'}">
-            <string>{preceding::tei:pb[@n][1]/@n}</string>
+            <string>{(tei:pb[@type='synthesised']/@n,preceding::tei:pb[@n/data()][1]/@n)[1]}</string>
             <string>{if (.//tei:pb) then (.//tei:pb/@n) => reverse() => head() else preceding::tei:pb[@n][1]/@n}</string>
           </array>
         </xsl:for-each>
@@ -141,11 +141,13 @@
             <!-- if there are numbers in brackets such as "(1)" or "[2]" at the begin of the chapter take these -->
             <xsl:choose>
               <xsl:when test="matches(.,'^[\[\(]+\d+[\]\)]+')">
-                <string>{. => substring-before(' ')}</string>
+                <string>{. => replace('(^[\[\(]+\d+[\]\)]+).*','$1') => normalize-space()}</string>
               </xsl:when>
               <!-- the bracket expression might follow later (e.g. CV18) -->
               <xsl:when test="$div/tei:p/tei:lb/following-sibling::text()[1][matches(.,'^[\[\(]+\d+[\]\)]+')]">
-                <string>{$div/tei:p/tei:lb/following-sibling::text()[1][matches(.,'^[\[\(]+\d+[\]\)]+')]}</string>
+                <xsl:for-each select="$div/tei:p/tei:lb/following-sibling::text()[1][matches(.,'^[\[\(]+\d+[\]\)]+')]">
+                  <string>{. => replace('(^[\[\(]+\d+[\]\)]+).*','$1') => normalize-space()}</string>
+                </xsl:for-each>
               </xsl:when>
               <xsl:otherwise>
                 <string>text</string>
