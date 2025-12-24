@@ -33260,6 +33260,17 @@
           "text_start": "Einer",
           "refstring_text": "Einer … hat]"
         } },
+      "159": { "CV150-159-1-4-Weil-hatten":{
+          "note_content": "1 Petr 3,18–20.",
+          "doc_unit": "CV150-159",
+          "refstring_lines": "1 – 4 ",
+          "document": "CV150",
+          "text_end": "hatten",
+          "line_start": "1",
+          "line_end": "4",
+          "text_start": "Weil",
+          "refstring_text": "Weil … hatten]"
+        } },
       "50": { "CV150-50-1-2-Ich-Christi":{
           "note_content": "1 Kor 9,20f. unter Auslassung der Worte <span data-lang='greek'>τοῖς Ἰουδαίοις ὡς Ἰουδαῖος, ἵνα Ἰουδαίους κερδήσω· τοῖς ὑπὸ νόμον ὡς ὑπὸ νόμον, μὴ ὢν αὐτὸς ὑπὸ νόμον, ἵνα τοὺς ὑπὸ νόμον κερδήσω</span> (den Juden wie ein Jude, damit ich Juden gewinne; denen, die unter dem Gesetz sind, wie einer unter dem Gesetz, obwohl ich selbst nicht unter dem Gesetz bin, damit ich die unter dem Gesetz gewinne), also gewissermaßen des spezifischen Inhaltes von 9,20.",
           "doc_unit": "CV150-50",
@@ -35712,17 +35723,6 @@
           "refstring_text": "Da … leugnen]"
         }
       },
-      "text": { "-1-4-Weil-hatten":{
-          "note_content": "1 Petr 3,18–20.",
-          "doc_unit": "",
-          "refstring_lines": "1 – 4 ",
-          "document": "CV150",
-          "text_end": "hatten",
-          "line_start": "1",
-          "line_end": "4",
-          "text_start": "Weil",
-          "refstring_text": "Weil … hatten]"
-        } },
       "95": {
         "CV150-95-1-5-Als-erretten": {
           "note_content": "Mt 1,20f.",
@@ -44346,7 +44346,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2025-12-22T23:18:50.597763439+01:00",
+    "generated-on": "2025-12-24T02:13:22.973004482+01:00",
     "description": ""
   }
 }
