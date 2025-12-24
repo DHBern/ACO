@@ -2705,6 +2705,24 @@
       "pageEnd": "NaN",
       "unitLabels": [ "text" ],
       "slug": "CV23"
+    },
+    {
+      "schwartzSlug": "CV22",
+      "schwartzNum": "22",
+      "acoDocNum": "8",
+      "acoDocLabel": "Dok. 8",
+      "type": "CV",
+      "title": "Kyrills Brief an die Apokrisiare in Konstantinopel (in Entwicklung)",
+      "slug": "CV22",
+      "unitSlugs": [],
+      "unitLabelsLong": [],
+      "unitLabels": [
+        ""
+      ],
+      "content": {
+        "head": "error during input processing (structural anomalies)",
+        "inhalt": ""
+      }
     }
   ],
   "meta": {
