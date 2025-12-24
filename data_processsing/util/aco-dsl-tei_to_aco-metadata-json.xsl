@@ -94,13 +94,12 @@
         </xsl:variable>
         <xsl:text>{$build-title => tokenize(',\s') => tail() => string-join(', ') => normalize-space()}</xsl:text>
       </string>
-<!-- TODO: make sure the currently commented page breaks (with page number) are somehow part of the data; check that the starts are set correctly-->
       <string key="pageStart">{(.//tei:pb/@n) => head()}</string>
       <string key="pageEnd">{(.//tei:pb/@n) => reverse() =>  head()}</string>
       <map key="pageLimits">
         <xsl:for-each select=".//tei:text/tei:body/tei:div">
           <array key="{if (contains(@n,',')) then @n => tokenize(',') => tail() => string-join('-') => util:sanitizeForJS() else 'text'}">
-            <string>{(tei:pb[@type='synthesised']/@n,preceding::tei:pb[@n/data()][1]/@n)[1]}</string>
+            <string>{(.//text()[matches(.,'\S')])[1]/preceding::tei:pb[@n/data()][1]/@n}</string>
             <string>{if (.//tei:pb) then (.//tei:pb/@n) => reverse() => head() else preceding::tei:pb[@n][1]/@n}</string>
           </array>
         </xsl:for-each>
@@ -141,12 +140,12 @@
             <!-- if there are numbers in brackets such as "(1)" or "[2]" at the begin of the chapter take these -->
             <xsl:choose>
               <xsl:when test="matches(.,'^[\[\(]+\d+[\]\)]+')">
-                <string>{. => replace('(^[\[\(]+\d+[\]\)]+).*','$1') => normalize-space()}</string>
+                <string>{. => replace('(^[\[\(]+\d+[\]\)]+).*','$1','s') => normalize-space()}</string>
               </xsl:when>
               <!-- the bracket expression might follow later (e.g. CV18) -->
               <xsl:when test="$div/tei:p/tei:lb/following-sibling::text()[1][matches(.,'^[\[\(]+\d+[\]\)]+')]">
                 <xsl:for-each select="$div/tei:p/tei:lb/following-sibling::text()[1][matches(.,'^[\[\(]+\d+[\]\)]+')]">
-                  <string>{. => replace('(^[\[\(]+\d+[\]\)]+).*','$1') => normalize-space()}</string>
+                  <string>{. => replace('(^[\[\(]+\d+[\]\)]+).*','$1','s') => normalize-space()}</string>
                 </xsl:for-each>
               </xsl:when>
               <xsl:otherwise>

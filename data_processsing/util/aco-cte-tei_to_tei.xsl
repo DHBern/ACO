@@ -129,6 +129,16 @@
   </xsl:template>
   
   <!-- tei-data-fixup -->
+  <!-- fixup case 0 -->
+  <!-- page milestones are placed before chapter milestones in the input; this needs to be reversed so page information is not
+       lost in subsequent chapter-based upward-projection -->
+  <xsl:template match="milestone[@unit='chapter']" mode="tei-data-fixup">
+    <xsl:copy-of select="."/>
+    <xsl:if test="preceding-sibling::*[position() le 3]/self::milestone[@unit='page']">
+      <xsl:copy-of select="preceding-sibling::*[position() le 3]/self::milestone[@unit='page']"/>
+    </xsl:if>
+  </xsl:template>
+  
   <!-- fixup case 1 -->
   <xsl:template match="div[p/milestone[@n='CV150,168']]/head" mode="tei-data-fixup">
     <xsl:comment>chapter milestone added by tei-data-fixup template</xsl:comment>
@@ -172,6 +182,8 @@
         <body>
           <xsl:call-template name="heading"/>
           <xsl:call-template name="metadata"/>
+          <!-- debug: make context after tei-data-fixup visible -->
+<!--          <xsl:copy-of select="$tei-data-fixup/TEI/text"></xsl:copy-of>-->
           <!-- debug: make context after uwp visible -->
 <!--          <xsl:copy-of select="$tei-with-chapter-divs/TEI/text"></xsl:copy-of>-->
           <xsl:apply-templates select="$tei-with-chapter-divs/TEI/text" mode="text"/>
@@ -315,12 +327,13 @@
       <xsl:copy-of select="@*"/>
       <xsl:attribute name="n" select="(.//milestone[@unit='chapter']/@n |
         (: cover cases in CV150 :)
-        preceding-sibling::div[1][head][not(p|ab)]//milestone[@unit='chapter']/@n
+        preceding-sibling::div[1][head][not(p|ab)]//milestone[@unit='chapter']/@n |
+        (: cover CV150,159 :)
+        preceding-sibling::div[2][head][not(p|ab)]//milestone[@unit='chapter']/@n
         )[1]"/>
       <xsl:sequence select=".//milestone[@unit='chapter']"/>
-      <xsl:comment>&lt;pb n="{(.//milestone[@unit='page'])[1]/@n -1}"/></xsl:comment>
-      <!-- handling some titles of CV150 -->
-      <xsl:for-each select="preceding-sibling::div[1][head][not(p|ab)]">
+      <!-- handling some titles of CV150 (CV150,159 requires two preceding titles) -->
+      <xsl:for-each select="preceding-sibling::div[position() le 2][head][not(p|ab)]">
         <xsl:sequence select=".//milestone[@unit='chapter']"/>
         <xsl:apply-templates mode="text"/>
       </xsl:for-each>
