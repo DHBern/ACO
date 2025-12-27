@@ -99,7 +99,7 @@
       <map key="pageLimits">
         <xsl:for-each select=".//tei:text/tei:body/tei:div">
           <array key="{if (contains(@n,',')) then @n => tokenize(',') => tail() => string-join('-') => util:sanitizeForJS() else 'text'}">
-            <string>{(.//text()[matches(.,'\S')])[1]/preceding::tei:pb[@n/data()][1]/@n}</string>
+            <string>{(.//text()[matches(.,'\S')][not(ancestor::metamark)])[1]/preceding::tei:pb[@n/data()][1]/@n}</string>
             <string>{if (.//tei:pb) then (.//tei:pb/@n) => reverse() => head() else preceding::tei:pb[@n][1]/@n}</string>
           </array>
         </xsl:for-each>

@@ -115,9 +115,10 @@
     </p>
   </xsl:template>
   
+  <xsl:template match="tei:metamark" mode="build-text"/>
   
   <xsl:template match="tei:lb" mode="build-text" xml:space="preserve">
-    <xsl:if test="preceding-sibling::node()[matches(.,'\S')]"><xsl:if test="@type='hyphen'"><span data-hyphen="">‐</span></xsl:if><br/></xsl:if><a data-line="{@n}">&#8203;</a><xsl:apply-templates mode="build-text"/>
+    <xsl:if test="preceding-sibling::node()[matches(.,'\S')] and not(@n='1')"><xsl:if test="@type='hyphen'"><span data-hyphen="">‐</span></xsl:if><br/></xsl:if><a data-line="{@n}">&#8203;</a><xsl:apply-templates mode="build-text"/>
   </xsl:template>
   
   <xsl:template match="tei:pb[@n/data()]" mode="build-text" xml:space="preserve">

@@ -134,9 +134,16 @@
        lost in subsequent chapter-based upward-projection -->
   <xsl:template match="milestone[@unit='chapter']" mode="tei-data-fixup">
     <xsl:copy-of select="."/>
-    <xsl:if test="preceding-sibling::*[position() le 3]/self::milestone[@unit='page']">
+<!--    <xsl:if test="preceding-sibling::*[position() le 3]/self::milestone[@unit='page']">-->
       <xsl:copy-of select="preceding-sibling::*[position() le 3]/self::milestone[@unit='page']"/>
-    </xsl:if>
+      <xsl:copy-of select="preceding-sibling::*[position() le 4]/self::milestone[@unit='chapterline'][@n='1']"/>
+      <xsl:copy-of select="preceding-sibling::*[position() le 3]/self::note[@place='left']"/>
+    
+    <!-- in some documents the milestones are wrapped in hi -->
+    <xsl:copy-of select="preceding-sibling::*[position() le 3]/self::hi/milestone[@unit='page']"/>
+    <xsl:copy-of select="preceding-sibling::*[position() le 3]/self::hi/milestone[@unit='chapterline'][@n='1']"/>
+    
+    <!--</xsl:if>-->
   </xsl:template>
   
   <!-- fixup case 1 -->
@@ -145,16 +152,16 @@
     <head rendition="#rp-heading_3"><milestone n="-" unit="chapterline"/><milestone n="-" unit="line"/><milestone n="CV150,168" unit="chapter"/><emph n="CV150,168"><hi rend="display:none;"
           >CV150,168</hi></emph>Aus dem zweiten [Brief] an die Korinther</head>
   </xsl:template>
-  <xsl:template match="div[p/milestone[@n='CV150,168']]/p[@rendition='#rp-p']/milestone[@unit='chapter']" mode="tei-data-fixup"/>
-  <xsl:template match="div[p/milestone[@n='CV150,168']]/p[@rendition='#rp-p']/emph[@n='CV150,168']" mode="tei-data-fixup"/>
+  <xsl:template match="div[p/milestone[@n='CV150,168']]/p[@rendition='#rp-p'][1]/milestone[@unit='chapter']" mode="tei-data-fixup"/>
+  <xsl:template match="div[p/milestone[@n='CV150,168']]/p[@rendition='#rp-p'][1]/emph[@n='CV150,168']" mode="tei-data-fixup"/>
   
   <!-- fixup case 2 -->
   <xsl:template match="div[p/milestone[@n='CV150,224']]/head" mode="tei-data-fixup">
     <head rendition="#rp-heading_3"><milestone n="-" unit="chapterline"/><milestone n="-" unit="line"/><milestone n="CV150,224" unit="chapter"/><emph n="CV150,224"><hi rend="display:none;"
           >CV150,224</hi></emph>Aus dem Evangelium nach Lukas</head>
   </xsl:template>
-  <xsl:template match="div[p/milestone[@n='CV150,224']]/p[@rendition='#rp-p']/milestone[@unit='chapter']" mode="tei-data-fixup"/>
-  <xsl:template match="div[p/milestone[@n='CV150,224']]/p[@rendition='#rp-p']/emph[@n='CV150,168']" mode="tei-data-fixup"/>
+  <xsl:template match="div[p/milestone[@n='CV150,224']]/p[@rendition='#rp-p'][1]/milestone[@unit='chapter']" mode="tei-data-fixup"/>
+  <xsl:template match="div[p/milestone[@n='CV150,224']]/p[@rendition='#rp-p'][1]/emph[@n='CV150,168']" mode="tei-data-fixup"/>
   
   
   <!-- processing -->
@@ -366,7 +373,9 @@
   
   <xsl:template match="p[@rendition='#rp-Einleitungstext'][not(preceding-sibling::p)]" mode="text">
     <ab type="acoTitle">
-      <xsl:apply-templates select="preceding::milestone[@unit='chapterline'][1]" mode="text"/>
+      <xsl:if test="not(.//milestone[@unit='chapterline' and @n='1'])">
+        <xsl:apply-templates select="preceding::milestone[@unit='chapterline'][1]" mode="text"/>
+      </xsl:if>
       <xsl:apply-templates mode="text"/>
     </ab>
   </xsl:template>
@@ -434,7 +443,8 @@
         <xsl:attribute name="rend">#reglet</xsl:attribute>
       </xsl:if>
       <!--<xsl:if test=".//milestone[@unit='chapterline'][1][@n=2]">-->
-      <xsl:if test=".//milestone[@unit='chapterline'][1][@n=2] and preceding::p[1][matches(ancestor-or-self::*/@rendition => string-join(),'#rp-p')][not(.//milestone[@unit='chapterline'])]">
+      <xsl:if test="(.//milestone[@unit='chapterline'])[1][@n=2] and 
+        not(./preceding-sibling::p[1][matches(@rendition,'#rp-[p|Einleitungstext]')]//milestone[@unit='chapterline'])">
         <lb n="1"/><xsl:comment>synthesised!</xsl:comment>
       </xsl:if>
       <xsl:apply-templates mode="text"/>
@@ -481,6 +491,12 @@
       <xsl:apply-templates select="@targetEnd" mode="text"/>
       <xsl:apply-templates mode="text"/>
     </xsl:copy>
+  </xsl:template>
+  
+  <xsl:template match="note[@place=('left','right')]" mode="text">
+    <metamark place="{@place/data()}">
+        <xsl:apply-templates mode="text"/>
+    </metamark>
   </xsl:template>
   
   <xsl:template match="note/p" mode="text">
@@ -605,6 +621,13 @@
         </xsl:copy>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template match="note//hi[matches(@rend,'font-size:9.5pt;')][matches(.//text(),'\S')]" mode="text">
+    <xsl:copy-of select="."/>
+  </xsl:template>
+  <xsl:template match="note//hi[matches(@rend,'font-weight:bold;')][matches(.//text(),'\S')]" mode="text">
+    <xsl:copy-of select="."/>
   </xsl:template>
   
   <xsl:template match="ref" mode="text">
