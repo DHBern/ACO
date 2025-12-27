@@ -2726,6 +2726,7 @@
         "head": "error during input processing (structural anomalies)",
         "inhalt": ""
       }
+    }
   ],
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
