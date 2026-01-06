@@ -222,6 +222,35 @@
       "slug": "CVer3"
     },
     {
+      "acoDocLabel": "Dok. NaN",
+      "unitSlugs": [ "text", "1", "2", "3", "4", "5", "6", "7" ],
+      "schwartzSlug": "CV22",
+      "schwartzNum": "22",
+      "type": "CV",
+      "title": "Kyrills Brief an die Apokrisiare in Konstantinopel",
+      "pageLimits": {
+        "1": [ "58", "59" ],
+        "2": [ "59", "60" ],
+        "3": [ "60", "60" ],
+        "4": [ "61", "61" ],
+        "5": [ "61", "61" ],
+        "6": [ "61", "62" ],
+        "7": [ "62", "66" ],
+        "text": [ "58", "58" ]
+      },
+      "content": {
+        "head": "<p><span data-type='head_key'>Edition: Collectio Vaticana 22, ACO I,1,1 S. 110,3–112,20; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 331–338; Coleti (1728–1734), Bd. 3 Sp. 882–888; Mansi, Bd. 4 Sp. 1004–1008; PG 77, Sp. 64–69</span> Edition: Collectio Vaticana 22, ACO I,1,1 S. 110,3–112,20; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 331–338; Coleti (1728–1734), Bd. 3 Sp. 882–888; Mansi, Bd. 4 Sp. 1004–1008; PG 77, Sp. 64–69 </p> <p><span data-type='head_key'>Verzeichnisnummern: CPG 5309</span> Verzeichnisnummern: CPG 5309 </p> <p><span data-type='head_key'>Verfasser: Kyrill von Alexandria</span> Verfasser: Kyrill von Alexandria </p> <p><span data-type='head_key'>Datierung: 429</span> Datierung: 429 </p> <p><span data-type='head_key'>Lat. Übersetzungen: Eine weitere, zum Teil deutlich abweichende Rezension des Briefes findet sich als Teil des ‚Commonitoriums‘ des Marius Mercator in lat. Übersetzung in der Collectio Palati­na (CPal28, ACO I,5 S. 52–55). Diese wird hier im Folgenden, wo es aufgrund der Differenz nötig erscheint, im Kommentar als Parallele angeführt und im letzten Kapitel in synoptischer Darstellung präsentiert.</span> Lat. Übersetzungen: Eine weitere, zum Teil deutlich abweichende Rezension des Briefes findet sich als Teil des ‚Commonitoriums‘ des Marius Mercator in lat. Übersetzung in der Collectio Palati­na (CPal28, ACO I,5 S. 52–55). Diese wird hier im Folgenden, wo es aufgrund der Differenz nötig erscheint, im Kommentar als Parallele angeführt und im letzten Kapitel in synoptischer Darstellung präsentiert. </p> <p><span data-type='head_key'>Literatur: Price/Graumann (2020), S. 104–108</span> Literatur: Price/Graumann (2020), S. 104–108 </p>",
+        "footnotes_head": [  ],
+        "inhalt": "<p><span data-type='head_key'>Inhalt: Kyrill reagiert auf ein Schreiben, das ihm seine Apokrisiare zugesandt haben, um ihm von den aktuellen Entwicklungen in Konstantinopel zu berichten und ihm angesichts dessen mögliche Maßnahmen zu unterbreiten. Der Angeschriebene bezieht zu den Vor­würfen Stellung, die in der Kaiserstadt von seinen Gegnern gegen ihn vorgebracht werden, und gibt seinen Botschaftern Anweisungen, wie im Weiteren zu verfahren sei.</span> Inhalt: Kyrill reagiert auf ein Schreiben, das ihm seine Apokrisiare zugesandt haben, um ihm von den aktuellen Entwicklungen in Konstantinopel zu berichten und ihm angesichts dessen mögliche Maßnahmen zu unterbreiten. Der Angeschriebene bezieht zu den Vor­würfen Stellung, die in der Kaiserstadt von seinen Gegnern gegen ihn vorgebracht werden, und gibt seinen Botschaftern Anweisungen, wie im Weiteren zu verfahren sei.</p>"
+      },
+      "unitLabelsLong": [ "text", "1", "2", "3", "4", "5", "6", "7" ],
+      "acoDocNum": "NaN",
+      "pageStart": "58",
+      "pageEnd": "66",
+      "unitLabels": [ "text", "(1)", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)" ],
+      "slug": "CV22"
+    },
+    {
       "acoDocLabel": "Dok. 9",
       "unitSlugs": [ "text" ],
       "schwartzSlug": "CV20",
@@ -330,9 +359,9 @@
       "title": "Predigt des Nestorius gegen die Pelagianer (sermo 28 [Auszüge])",
       "pageLimits": { "text":[ "81", "82" ] },
       "content": {
-        "head": "<p><span data-type='head_key'></span> </p> <p><span data-type='head_key'></span> </p> <p><span data-type='head_key'></span> </p> <p><span data-type='head_key'></span> </p> <p><span data-type='head_key'></span> </p> <p><span data-type='head_key'></span> </p> <p><span data-type='head_key'></span> </p> <p><span data-type='head_key'></span> </p>",
+        "head": "<p><span data-type='head_key'>Edition: Collectio Palatina 32, ACO I,5 S. 62,20–63,10; ältere Edd.: Garnier (1673), Bd. 1 S. 83f.; Baluze (1684), S. 124f.; PL 48, Sp. 202–204; Loofs, Nestoriana S. 341–344</span> Edition: Collectio Palatina 32, ACO I,5 S. 62,20–63,10; ältere Edd.: Garnier (1673), Bd. 1 S. 83f.; Baluze (1684), S. 124f.; PL 48, Sp. 202–204; Loofs, Nestoriana S. 341–344 </p> <p><span data-type='head_key'>Verzeichnisnummern: –</span> Verzeichnisnummern: – </p> <p><span data-type='head_key'>Verfasser: Nestorius von Konstantinopel, Marius Mercator (Übers.)</span> Verfasser: Nestorius von Konstantinopel, Marius Mercator (Übers.) </p> <p><span data-type='head_key'>Datierung: Spätestens 429 (zur Datierung s. oben S. )</span> Datierung: Spätestens 429 (zur Datierung s. oben S. XXVIII,9 – XXIX,2) </p> <p><span data-type='head_key'>Griech. Original: S. Loofs, Nestoriana S. 342–344</span> Griech. Original: S. Loofs, Nestoriana S. 342–344 </p> <p><span data-type='head_key'>Weitere lat. Fassungen: – </span> Weitere lat. Fassungen: – </p> <p><span data-type='head_key'>Literatur: Konoppa (2005), S. 321–327 </span> Literatur: Konoppa (2005), S. 321–327 </p>",
         "footnotes_head": [  ],
-        "inhalt": ""
+        "inhalt": "<p><span data-type='head_key'>Inhalt: Die Predigt behandelt die erste Versuchung Christi. Marius Mercator bietet fünf Ab­schnitte daraus: die Erkenntnis Gottes als erleuchtendes und belebendes Licht; Christus als Befreier von den beiden vom Teufel herrührenden Arten des Todes, dem aus der Sünde und dem aus der Verachtung der Erkenntnis Gottes; Erhebung des Menschen durch das Ringen Jesu mit dem Teufel in der Wüste; Gott als Lebenspender über die materielle Nahrung hinaus; Erneuerung der menschlichen Natur durch Jesus in Bezug auf beide Vergehen, nämlich Sünde und Un­glaube.</span> Inhalt: Die Predigt behandelt die erste Versuchung Christi. Marius Mercator bietet fünf Ab­schnitte daraus: die Erkenntnis Gottes als erleuchtendes und belebendes Licht; Christus als Befreier von den beiden vom Teufel herrührenden Arten des Todes, dem aus der Sünde und dem aus der Verachtung der Erkenntnis Gottes; Erhebung des Menschen durch das Ringen Jesu mit dem Teufel in der Wüste; Gott als Lebenspender über die materielle Nahrung hinaus; Erneuerung der menschlichen Natur durch Jesus in Bezug auf beide Vergehen, nämlich Sünde und Un­glaube.</p>"
       },
       "unitLabelsLong": [ "text" ],
       "acoDocNum": "14",
@@ -2708,30 +2737,12 @@
       "pageEnd": "NaN",
       "unitLabels": [ "text" ],
       "slug": "CV23"
-    },
-    {
-      "schwartzSlug": "CV22",
-      "schwartzNum": "22",
-      "acoDocNum": "8",
-      "acoDocLabel": "Dok. 8",
-      "type": "CV",
-      "title": "Kyrills Brief an die Apokrisiare in Konstantinopel (in Entwicklung)",
-      "slug": "CV22",
-      "unitSlugs": [],
-      "unitLabelsLong": [],
-      "unitLabels": [
-        ""
-      ],
-      "content": {
-        "head": "error during input processing (structural anomalies)",
-        "inhalt": ""
-      }
     }
   ],
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2025-12-27T23:20:11.604993701+01:00",
+    "generated-on": "2026-01-06T13:22:15.338321409+01:00",
     "description": ""
   }
 }
