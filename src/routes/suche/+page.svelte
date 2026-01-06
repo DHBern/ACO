@@ -3,9 +3,9 @@
 	import { base } from '$app/paths';
 
 	const baseURL = 'https://solr.dsl.unibe.ch/solr/aco-dev/select';
-	let query = $state('Kyrill* AND Nestor*');
-	let docFilterSchwartz = $state('');
-	let docFilterDok = $state('');
+	let query = $state('');
+	let docFilterSchwartz = $state('ignore');
+	let docFilterDok = $state('ignore');
 	let start = $state(0);
 	let rows = 999999;
 	let groups = $state([]);
@@ -133,10 +133,10 @@
 
 	<div class="flex flex-col gap-3">
 		<span class="label-text font-bold">Suchbegriff</span>
-		<input class="input" bind:value={query} placeholder="Search text..." />
+		<input class="input" bind:value={query} placeholder="Suchbegriffe eingeben..." />
 	</div>
 	<div class="flex flex-col gap-3">
-		<span class="label-text font-bold">Dokument auswählen</span>
+		<span class="label-text font-bold">Dokument auswählen (Schwartz oder ACO)</span>
 		<div class="flex flex-wrap gap-3">
 			<select class="select w-40" onchange={resetDocFilterDok} bind:value={docFilterSchwartz}>
 				<option value="ignore"></option>
