@@ -127,7 +127,7 @@
 
 		const oldHeight = rectMainText.height;
 
-		await goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[0].prevSlug}`, {
+		await goto(`${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${loadedUnits[0].prevSlug}`, {
 			noScroll: true,
 			keepFocus: true,
 			replaceState: true
@@ -153,7 +153,7 @@
 		if (!loadedUnits[loadedUnits.length - 1].nextSlug) return;
 		latestUnitLoadedDuringCurrentScroll = loadedUnits[loadedUnits.length - 1].nextSlug;
 		await goto(
-			`${base}/edition/${data.slug_vol}/${data.slug_doc}/${loadedUnits[loadedUnits.length - 1].nextSlug}`,
+			`${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${loadedUnits[loadedUnits.length - 1].nextSlug}`,
 			{
 				noScroll: true,
 				keepFocus: true,
@@ -236,7 +236,7 @@
 			});
 			// update URL
 			if (!newSlugUnit || !finishedInitScroll) return;
-			goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${newSlugUnit}`, {
+			goto(`${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${newSlugUnit}`, {
 				replaceState: true,
 				noScroll: true,
 				keepFocus: true
@@ -359,7 +359,7 @@
 			<!-- Page Numbers -->
 			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
 				{#each loadedUnits as unit (unit.slug)}
-					{@const path = `${base}/edition/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
+					{@const path = `${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
 					{@html generatePageNumbers(unit.text, path)}
 				{/each}
 			</div>
@@ -367,7 +367,7 @@
 			<!-- Line Numbers -->
 			<div class="containerLineNums col-span-1 col-start-2" data-sveltekit-noscroll>
 				{#each loadedUnits as unit (unit.slug)}
-					{@const path = `${base}/edition/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
+					{@const path = `${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
 					{@html generateLineNumbers(unit.text, path)}
 				{/each}
 			</div>

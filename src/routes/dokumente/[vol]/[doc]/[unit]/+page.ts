@@ -17,7 +17,7 @@ export async function load({ fetch, url, params }) {
 
 	// Load data from +server.ts
 	const unitData = await fetch(
-		`${base}/edition/${params.vol}/${params.doc}/data/${params.unit}`
+		`${base}/dokumente/${params.vol}/${params.doc}/data/${params.unit}`
 	).then((r) => {
 		return r.json();
 	});

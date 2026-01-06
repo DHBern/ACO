@@ -135,7 +135,7 @@
           </xsl:variable>
           <!-- adjust targets for vol 1 -->
           <xsl:attribute name="href">
-            <xsl:sequence select="$processed-targets[name()='href']/data() => replace('\.\./','/edition/vol1/')"/>
+            <xsl:sequence select="$processed-targets[name()='href']/data() => replace('\.\./','/dokumente/vol1/')"/>
           </xsl:attribute>
           <xsl:sequence select="$processed-targets[name()!='href']"/>
         </xsl:otherwise>

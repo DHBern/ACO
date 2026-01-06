@@ -187,7 +187,7 @@
 				<li>
 					<!-- Document -->
 					<a
-						href={`${base}/edition/vol1/${doc.aco_schwartzSlug}/${doc.aco_unit}${doc.aco_type === 'aco-note' ? `?line=${doc.aco_noteLineStart}` : ''}`}
+						href={`${base}/dokumente/vol1/${doc.aco_schwartzSlug}/${doc.aco_unit}${doc.aco_type === 'aco-note' ? `?line=${doc.aco_noteLineStart}` : ''}`}
 						target="_blank"
 						rel="noopener noreferrer"
 					>

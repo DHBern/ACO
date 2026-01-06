@@ -16,8 +16,8 @@
 	// Lightswitch
 	let isDark = $state(false);
 	let darkModeState = $derived(isDark ? 'dark' : 'light');
-	let isEditionRoute = $derived(
-		page.url.toString().includes('/edition/') &&
+	let isDocumentsRoute = $derived(
+		page.url.toString().includes('/dokumente/') &&
 			!page.url.toString().includes('/literatur') &&
 			!page.url.toString().includes('/vorwort') &&
 			!page.url.toString().includes('/einleitung')
@@ -32,10 +32,10 @@
 
 	const links = [
 		{ name: 'Über&nbsp;das&nbsp;Projekt', path: '', slug: '/ueber' },
-		{ name: 'Edition', path: '', slug: '/edition' },
+		{ name: 'Bände', path: '', slug: '/dokumente' },
 		{ name: 'Register', path: '', slug: '/register' },
 		{ name: 'Suche', path: '', slug: '/suche' },
-		{ name: 'Literaturverzeichnis', path: '/edition/vol1', slug: '/literatur' },
+		{ name: 'Literaturverzeichnis', path: '/dokumente/vol1', slug: '/literatur' },
 		{ name: 'Bibelstellen', path: '', slug: '/bibelstellen' },
 		{ name: 'Geovisualisierung', path: '', slug: '/karte' },
 		{ name: 'Bibliographie', path: '', slug: '/bibliographie' }
@@ -202,7 +202,7 @@
 	<div
 		class={[
 			'mx-auto min-h-screen w-full flex-1 overflow-auto px-5 pt-10',
-			isEditionRoute ? 'max-w-full pb-15' : 'max-w-[1500px] pb-30'
+			isDocumentsRoute ? 'max-w-full pb-15' : 'max-w-[1500px] pb-30'
 		]}
 	>
 		{@render children?.()}

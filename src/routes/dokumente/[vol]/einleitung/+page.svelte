@@ -2048,7 +2048,7 @@
 				schon zu einem wesentlich früheren Zeitpunkt, nämlich in seiner mutmaßlich ersten Predigt
 				gegen den <span data-lang="greek">θεοτόκος</span>-Begriff (vgl.
 				<a
-					href="/edition/vol1/CPal20/text?line=42"
+					href="/dokumente/vol1/CPal20/text?line=42"
 					data-type="internal_ref"
 					document="CPal20"
 					doc_unit="text"
@@ -2218,7 +2218,7 @@
 			<p>
 				Eusebius fordert ausdrücklich jeden Empfänger seiner Schrift dazu auf, sie sowohl im Klerus
 				als auch unter den Laien weiter zu verbreiten (Vgl. <a
-					href="/edition/vol1/CV18/1?line=4"
+					href="/dokumente/vol1/CV18/1?line=4"
 					data-type="internal_ref"
 					document="CV18"
 					doc_unit="1"
@@ -2497,7 +2497,7 @@
 				Dem Brief selbst lässt sich nicht entnehmen, wo genau die Mönche zu verorten sind, an die er
 				adressiert ist. In seinem einige Zeit später verfassten Brief an den römischen Bischof
 				Coelestin gibt Kyrill dann die Klöster in Ägypten als Empfänger an (vgl. <a
-					href="/edition/vol1/CV144/4?line=1"
+					href="/dokumente/vol1/CV144/4?line=1"
 					data-type="internal_ref"
 					document="CV144"
 					doc_unit="4"
@@ -2540,7 +2540,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV1/3?line=2"
+					href="/dokumente/vol1/CV1/3?line=2"
 					data-type="internal_ref"
 					document="CV1"
 					doc_unit="3"
@@ -2618,7 +2618,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV1/10?line=26"
+					href="/dokumente/vol1/CV1/10?line=26"
 					data-type="internal_ref"
 					document="CV1"
 					doc_unit="10"
@@ -2664,7 +2664,7 @@
 					>ἆρ’ οὖν, εἰπέ μοι, θεότητος μήτηρ γέγονεν ἡ παρθένος</span
 				>:
 				<a
-					href="/edition/vol1/CV1/12?line=1"
+					href="/dokumente/vol1/CV1/12?line=1"
 					data-type="internal_ref"
 					document="CV1"
 					doc_unit="12"
@@ -2711,7 +2711,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. z.B. <a
-					href="/edition/vol1/CV2/1?line=3"
+					href="/dokumente/vol1/CV2/1?line=3"
 					data-type="internal_ref"
 					document="CV2"
 					doc_unit="1"
@@ -2754,7 +2754,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV2/3?line=1"
+					href="/dokumente/vol1/CV2/3?line=1"
 					data-type="internal_ref"
 					document="CV2"
 					doc_unit="3"
@@ -3092,7 +3092,7 @@
 				Während sich CV7 (Dok. 39) recht eindeutig in erster Linie an Theodosius richtet, lässt es
 				sich bei CV149 (Dok. 41) und CV150 (Dok. 40) nicht mit Sicherheit ausmachen, wer die genauen
 				Adressatinnen sind. Vgl. hierzu auch Anm. zu <a
-					href="/edition/vol1/CV149/1?line=10"
+					href="/dokumente/vol1/CV149/1?line=10"
 					data-type="internal_ref"
 					document="CV149"
 					doc_unit="1"
@@ -3148,7 +3148,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV25/3?line=1"
+					href="/dokumente/vol1/CV25/3?line=1"
 					data-type="internal_ref"
 					document="CV25"
 					doc_unit="3"
@@ -3194,7 +3194,7 @@
 				hatte ihm in diesem Schreiben mitgeteilt, dass Nestorius eine Frist von zehn Tagen zu setzen
 				sei, seine in Frage stehenden Lehrmeinungen zu widerrufen, und seinem alexandrinischen
 				Amtsbruder ansonsten die Handlungsvollmacht in dem Fall übertragen (vgl. <a
-					href="/edition/vol1/CVer1/7?line=2"
+					href="/dokumente/vol1/CVer1/7?line=2"
 					data-type="internal_ref"
 					document="CVer1"
 					doc_unit="7"
@@ -3217,7 +3217,7 @@
 				als er sich zur Einberufung entschloss. Jedenfalls will er aber mit ihr ausdrücklich
 				verhindern, dass es zu irgendwelchen gesonderten Beschlüssen kommt (vgl.
 				<a
-					href="/edition/vol1/CV25/3?line=7"
+					href="/dokumente/vol1/CV25/3?line=7"
 					data-type="internal_ref"
 					document="CV25"
 					doc_unit="3"
@@ -3260,7 +3260,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV25/2?line=11"
+					href="/dokumente/vol1/CV25/2?line=11"
 					data-type="internal_ref"
 					document="CV25"
 					doc_unit="2"
@@ -3832,7 +3832,7 @@
 				hier seine [sc. des Nestorius] erste, in der Kirche an die Gemeinde [gerichtete] gottlose
 				Predigt, mit der er bezüglich der Fleischwerdung des Herrn übel gestrauchelt und kläglich
 				gestürzt ist.“ Eine Übersetzung dieser Vorbemerkung findet sich in Anm. zu <a
-					href="/edition/vol1/CPal20/text?line=1"
+					href="/dokumente/vol1/CPal20/text?line=1"
 					data-type="internal_ref"
 					document="CPal20"
 					doc_unit="text"
@@ -3969,7 +3969,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Die Episode ist überliefert in Kyrill, Contra Nestorium (<a
-					href="/edition/vol1/CV166/I-5?line=48"
+					href="/dokumente/vol1/CV166/I-5?line=48"
 					data-type="internal_ref"
 					document="CV166"
 					doc_unit="I-5"
@@ -4013,7 +4013,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV18/1?line=7"
+					href="/dokumente/vol1/CV18/1?line=7"
 					data-type="internal_ref"
 					document="CV18"
 					doc_unit="1"
@@ -4233,7 +4233,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				S. <a
-					href="/edition/vol1/CV19/1?line=3"
+					href="/dokumente/vol1/CV19/1?line=3"
 					data-type="internal_ref"
 					document="CV19"
 					doc_unit="1"
@@ -4341,7 +4341,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV19/1?line=8"
+					href="/dokumente/vol1/CV19/1?line=8"
 					data-type="internal_ref"
 					document="CV19"
 					doc_unit="1"
@@ -4833,7 +4833,7 @@
 			<p>
 				Dafür, dass auch der Papst dies für einen Vorwand hielt, sprechen dessen Worte in seinem
 				Brief vom 10. August 430 an Nestorius (<a
-					href="/edition/vol1/CVer2/16?line=8"
+					href="/dokumente/vol1/CVer2/16?line=8"
 					data-type="internal_ref"
 					document="CVer2"
 					doc_unit="16"
@@ -4848,7 +4848,7 @@
 				danach gefragt, was damals gegen sie verhandelt wurde, wo es [doch] gewiss ist, dass die
 				Akten damals durch den katholischen Bischof Attikos von dort an uns geschickt wurden?“, und
 				(<a
-					href="/edition/vol1/CVer2/16?line=16"
+					href="/dokumente/vol1/CVer2/16?line=16"
 					data-type="internal_ref"
 					document="CVer2"
 					doc_unit="16"
@@ -4931,7 +4931,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CVer4/1?line=2"
+					href="/dokumente/vol1/CVer4/1?line=2"
 					data-type="internal_ref"
 					document="CVer4"
 					doc_unit="1"
@@ -5302,7 +5302,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV21/text?line=4"
+					href="/dokumente/vol1/CV21/text?line=4"
 					data-type="internal_ref"
 					document="CV21"
 					doc_unit="text"
@@ -5345,7 +5345,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV21/text?line=10"
+					href="/dokumente/vol1/CV21/text?line=10"
 					data-type="internal_ref"
 					document="CV21"
 					doc_unit="text"
@@ -5394,7 +5394,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				CV16, ACO I,1,1 S.&nbsp;98f. (Dok. 11; CPG 5314), hier <a
-					href="/edition/vol1/CV16/text?line=7"
+					href="/dokumente/vol1/CV16/text?line=7"
 					data-type="internal_ref"
 					document="CV16"
 					doc_unit="text"
@@ -5413,7 +5413,7 @@
 				öffentliche Auftreten des Dorotheos dient Kyrill auch später in seinem Brief an Coelestin
 				dazu, dem Papst die Zustände in Konstantinopel als unhaltbar vorzuführen, vgl.
 				<a
-					href="/edition/vol1/CV144/3?line=1"
+					href="/dokumente/vol1/CV144/3?line=1"
 					data-type="internal_ref"
 					document="CV144"
 					doc_unit="3"
@@ -5434,7 +5434,7 @@
 				genaue Ausführungen zu den Auswirkungen des Ereignisses auf das kirchliche Leben in der
 				Kaiserstadt folgen, sondern auch durchblicken, dass Dorotheos auf Anweisung des Nestorius
 				als dessen Werkzeug handelte (<a
-					href="/edition/vol1/CV144/6?line=13"
+					href="/dokumente/vol1/CV144/6?line=13"
 					data-type="internal_ref"
 					document="CV144"
 					doc_unit="6"
@@ -5573,7 +5573,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Eine Übersetzung des Dokumentes findet sich in Anm. zu <a
-					href="/edition/vol1/CPal31/text?line=1"
+					href="/dokumente/vol1/CPal31/text?line=1"
 					data-type="internal_ref"
 					document="CPal31"
 					doc_unit="text"
@@ -5679,7 +5679,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CPal31/text?line=3"
+					href="/dokumente/vol1/CPal31/text?line=3"
 					data-type="internal_ref"
 					document="CPal31"
 					doc_unit="text"
@@ -5722,7 +5722,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CPal31/text?line=107"
+					href="/dokumente/vol1/CPal31/text?line=107"
 					data-type="internal_ref"
 					document="CPal31"
 					doc_unit="text"
@@ -5891,7 +5891,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV2/3?line=1"
+					href="/dokumente/vol1/CV2/3?line=1"
 					data-type="internal_ref"
 					document="CV2"
 					doc_unit="3"
@@ -5981,7 +5981,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CVer2/4?line=1"
+					href="/dokumente/vol1/CVer2/4?line=1"
 					data-type="internal_ref"
 					document="CVer2"
 					doc_unit="4"
@@ -5995,7 +5995,7 @@
 				>, ACO I,2 S.&nbsp;8,5f. (Dok. 30). Vgl. die einleitenden Worte zu CVer2 in der
 				<em>Collectio Casinensis</em>, ACO I,3 S.&nbsp;37,3f. (zit. in Anm zu
 				<a
-					href="/edition/vol1/CVer2/1?line=16"
+					href="/dokumente/vol1/CVer2/1?line=16"
 					data-type="internal_ref"
 					document="CVer2"
 					doc_unit="1"
@@ -6009,7 +6009,7 @@
 				>): „Als aber der Erzbischof Roms, Coelestin, die ihm von Nestorius selbst durch Antiochus
 				[überbrachten] Quaternionen mit [seinen] Darlegungen empfing […]“ und
 				<a
-					href="/edition/vol1/CVer6/3?line=5"
+					href="/dokumente/vol1/CVer6/3?line=5"
 					data-type="internal_ref"
 					document="CVer6"
 					doc_unit="3"
@@ -6026,7 +6026,7 @@
 				an uns gesandten [und] durch die Unterschrift des Autors selbst gesicherten Briefe so
 				offenbar geworden, dass nicht länger gezweifelt warden kann.“ Vgl. auch die Äußerungen
 				Kyrills in seinen Briefen an Johannes von Antiochia (<a
-					href="/edition/vol1/CV13/text?line=15"
+					href="/dokumente/vol1/CV13/text?line=15"
 					data-type="internal_ref"
 					document="CV13"
 					doc_unit="text"
@@ -6041,7 +6041,7 @@
 				absonderlichen Dinge abfasste, einen langen Brief an meinen Herrn, den überaus frommen
 				Bischof der Kirche von Rom Coelestin geschrieben […]. Ferner verschickte er auch
 				Quaternionen mit seinen eigenen Deutungen [...]“, und an Juvenal von Jerusalem (<a
-					href="/edition/vol1/CV15/text?line=27"
+					href="/dokumente/vol1/CV15/text?line=27"
 					data-type="internal_ref"
 					document="CV15"
 					doc_unit="text"
@@ -6064,7 +6064,7 @@
 				und CVer4, sie hätten Coelestin aber bereits vorgelegen, als der Gesandte Kyrills,
 				Poseidonios, mit dem Dossier in Rom eintraf (zu den Dokumenten des Dossiers vgl. Anm. zu
 				<a
-					href="/edition/vol1/CU4/text?line=47"
+					href="/dokumente/vol1/CU4/text?line=47"
 					data-type="internal_ref"
 					document="CU4"
 					doc_unit="text"
@@ -6078,7 +6078,7 @@
 				>
 				[Dok. 28]). Für diese Reihenfolge spricht, dass Nestorius in seinem zweiten überlieferten Schreiben
 				zwar von mehreren Briefen spricht, die er an den Papst geschickt habe (<a
-					href="/edition/vol1/CVer4/1?line=2"
+					href="/dokumente/vol1/CVer4/1?line=2"
 					data-type="internal_ref"
 					document="CVer4"
 					doc_unit="1"
@@ -6184,7 +6184,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Zu Lampon s. auch Anm. zu <a
-					href="/edition/vol1/CV3/text?line=4"
+					href="/dokumente/vol1/CV3/text?line=4"
 					data-type="internal_ref"
 					document="CV3"
 					doc_unit="text"
@@ -6256,7 +6256,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. etwa <a
-					href="/edition/vol1/CV143/4?line=1"
+					href="/dokumente/vol1/CV143/4?line=1"
 					data-type="internal_ref"
 					document="CV143"
 					doc_unit="4"
@@ -6272,7 +6272,7 @@
 				Rechtgläubigen in euren, der rechtgläubigen und überaus frommen Kaiser Zeiten von Häretikern
 				zum Ehebruch verführt wird […]“, und
 				<a
-					href="/edition/vol1/CV143/4?line=20"
+					href="/dokumente/vol1/CV143/4?line=20"
 					data-type="internal_ref"
 					document="CV143"
 					doc_unit="4"
@@ -6317,7 +6317,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV143/4?line=6"
+					href="/dokumente/vol1/CV143/4?line=6"
 					data-type="internal_ref"
 					document="CV143"
 					doc_unit="4"
@@ -6334,7 +6334,7 @@
 				vollbringt, dass er die Priester in der Verkündung des wahren Glaubens zurückgewinnt, bevor
 				sich die widerrechtliche Lehre ausbreitet“, und
 				<a
-					href="/edition/vol1/CV143/5?line=10"
+					href="/dokumente/vol1/CV143/5?line=10"
 					data-type="internal_ref"
 					document="CV143"
 					doc_unit="5"
@@ -6470,7 +6470,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV143/4?line=30"
+					href="/dokumente/vol1/CV143/4?line=30"
 					data-type="internal_ref"
 					document="CV143"
 					doc_unit="4"
@@ -6581,7 +6581,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CPal35/text?line=15"
+					href="/dokumente/vol1/CPal35/text?line=15"
 					data-type="internal_ref"
 					document="CPal35"
 					doc_unit="text"
@@ -6598,7 +6598,7 @@
 				[Anhängern] desselben orthodoxen Bekenntnisses.“ Zu dem hier angesprochenen Konzil s. Anm.
 				zu
 				<a
-					href="/edition/vol1/CPal35/text?line=16"
+					href="/dokumente/vol1/CPal35/text?line=16"
 					data-type="internal_ref"
 					document="CPal35"
 					doc_unit="text"
@@ -6641,7 +6641,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV5/8?line=7"
+					href="/dokumente/vol1/CV5/8?line=7"
 					data-type="internal_ref"
 					document="CV5"
 					doc_unit="8"
@@ -6657,7 +6657,7 @@
 				Gedankengut pflegten, oder vielleicht durch Kirchenleute Deiner Zuneigung […].“ Vgl. hierzu
 				Anm. zu
 				<a
-					href="/edition/vol1/CV5/8?line=8"
+					href="/dokumente/vol1/CV5/8?line=8"
 					data-type="internal_ref"
 					document="CV5"
 					doc_unit="8"
@@ -6700,7 +6700,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CU4/text?line=35"
+					href="/dokumente/vol1/CU4/text?line=35"
 					data-type="internal_ref"
 					document="CU4"
 					doc_unit="text"
@@ -6753,7 +6753,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Zum Dossier vgl. Anm. zu <a
-					href="/edition/vol1/CU4/text?line=47"
+					href="/dokumente/vol1/CU4/text?line=47"
 					data-type="internal_ref"
 					document="CU4"
 					doc_unit="text"
@@ -6798,7 +6798,7 @@
 				Freilich kann eine spätere Datierung nicht gänzlich ausgeschlossen werden. So macht Graumann
 				(2002a, S.&nbsp;313f.) darauf aufmerksam, dass Basilius’ Väterliste, in der er Vertreter des
 				rechten Glaubens anführt (<a
-					href="/edition/vol1/CV143/1?line=18"
+					href="/dokumente/vol1/CV143/1?line=18"
 					data-type="internal_ref"
 					document="CV143"
 					doc_unit="1"
@@ -6882,7 +6882,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				PL 48, Sp. 182f. Zu Einzelheiten s. auch Anm. zu <a
-					href="/edition/vol1/CPal35/text?line=16"
+					href="/dokumente/vol1/CPal35/text?line=16"
 					data-type="internal_ref"
 					document="CPal35"
 					doc_unit="text"
@@ -7016,7 +7016,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CVer4/3?line=4"
+					href="/dokumente/vol1/CVer4/3?line=4"
 					data-type="internal_ref"
 					document="CVer4"
 					doc_unit="3"
@@ -7059,7 +7059,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CVer2/3?line=1"
+					href="/dokumente/vol1/CVer2/3?line=1"
 					data-type="internal_ref"
 					document="CVer2"
 					doc_unit="3"
@@ -7072,7 +7072,7 @@
 					rel="noopener noreferrer">CVer2,3,1 – 6</a
 				>, ACO I,2 S.&nbsp;7,21–25 (Dok. 30). Zu den Dokumenten des Dossiers vgl. Anm. zu
 				<a
-					href="/edition/vol1/CU4/text?line=47"
+					href="/dokumente/vol1/CU4/text?line=47"
 					data-type="internal_ref"
 					document="CU4"
 					doc_unit="text"
@@ -7238,7 +7238,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV144/4?line=15"
+					href="/dokumente/vol1/CV144/4?line=15"
 					data-type="internal_ref"
 					document="CV144"
 					doc_unit="4"
@@ -7283,7 +7283,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CVer2/9?line=1"
+					href="/dokumente/vol1/CVer2/9?line=1"
 					data-type="internal_ref"
 					document="CVer2"
 					doc_unit="9"
@@ -7393,7 +7393,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV5/8?line=13"
+					href="/dokumente/vol1/CV5/8?line=13"
 					data-type="internal_ref"
 					document="CV5"
 					doc_unit="8"
@@ -7679,7 +7679,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Zu den Dokumenten des Dossiers vgl. auch Anm. zu <a
-					href="/edition/vol1/CU4/text?line=47"
+					href="/dokumente/vol1/CU4/text?line=47"
 					data-type="internal_ref"
 					document="CU4"
 					doc_unit="text"
@@ -7751,7 +7751,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Die Bemerkung Kyrills in seinem ersten Brief an Nestorius (<a
-					href="/edition/vol1/CV2/3?line=1"
+					href="/dokumente/vol1/CV2/3?line=1"
 					data-type="internal_ref"
 					document="CV2"
 					doc_unit="3"
@@ -7767,7 +7767,7 @@
 				nahe, es habe bereits vorher Kontakte zwischen Alexandria und Rom gegeben. Doch existieren
 				diesbezüglich keine weiteren Quellen. In
 				<a
-					href="/edition/vol1/CV144/1?line=14"
+					href="/dokumente/vol1/CV144/1?line=14"
 					data-type="internal_ref"
 					document="CV144"
 					doc_unit="1"
@@ -7785,7 +7785,7 @@
 				unter den Mitdienern, da ich der Meinung war, dass Voreiligkeit in dieser Situation nicht in
 				dem Bereich läge, der frei von Tadel wäre.“ Zu dieser Frage vgl. auch Anm. zu
 				<a
-					href="/edition/vol1/CV2/3?line=2"
+					href="/dokumente/vol1/CV2/3?line=2"
 					data-type="internal_ref"
 					document="CV2"
 					doc_unit="3"
@@ -7931,7 +7931,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Zu den Dokumenten des Dossiers vgl. auch Anm. zu <a
-					href="/edition/vol1/CU4/text?line=47"
+					href="/dokumente/vol1/CU4/text?line=47"
 					data-type="internal_ref"
 					document="CU4"
 					doc_unit="text"
@@ -8141,7 +8141,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				S. <a
-					href="/edition/vol1/CVer1/7?line=1"
+					href="/dokumente/vol1/CVer1/7?line=1"
 					data-type="internal_ref"
 					document="CVer1"
 					doc_unit="7"
@@ -8166,7 +8166,7 @@
 				Urteils weicht etwas von den drei anderen ebenfalls voneinander abweichenden Fassungen in
 				den anderen Briefen vom 10. August 430 ab: So lautet es in
 				<a
-					href="/edition/vol1/CVer2/18?line=9"
+					href="/dokumente/vol1/CVer2/18?line=9"
 					data-type="internal_ref"
 					document="CVer2"
 					doc_unit="18"
@@ -8207,7 +8207,7 @@
 				seiner Bekanntmachung hinzuzurechnen ist, in einem öffentlichen und schriftlichen Bekenntnis
 				verdammst, wirst du von der ganzen katholischen Kirche exkommuniziert werden“, und in
 				<a
-					href="/edition/vol1/CVer6/5?line=8"
+					href="/dokumente/vol1/CVer6/5?line=8"
 					data-type="internal_ref"
 					document="CVer6"
 					doc_unit="5"
@@ -8257,7 +8257,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CVer1/7?line=12"
+					href="/dokumente/vol1/CVer1/7?line=12"
 					data-type="internal_ref"
 					document="CVer1"
 					doc_unit="7"
@@ -8596,7 +8596,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CVer6/1?line=3"
+					href="/dokumente/vol1/CVer6/1?line=3"
 					data-type="internal_ref"
 					document="CVer6"
 					doc_unit="1"
@@ -8611,7 +8611,7 @@
 				<em
 					>Caelestinus episcopus Iohanni Iuvenali Rufo et Flaviano episcopis per Orientem a pari</em
 				>. Vgl. auch die Ankündigung dieser Schreiben im Brief Coelestins an Kyrill (<a
-					href="/edition/vol1/CVer1/7?line=12"
+					href="/dokumente/vol1/CVer1/7?line=12"
 					data-type="internal_ref"
 					document="CVer1"
 					doc_unit="7"
@@ -8684,7 +8684,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CVer6/5?line=15"
+					href="/dokumente/vol1/CVer6/5?line=15"
 					data-type="internal_ref"
 					document="CVer6"
 					doc_unit="5"
@@ -8888,7 +8888,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV14/2?line=4"
+					href="/dokumente/vol1/CV14/2?line=4"
 					data-type="internal_ref"
 					document="CV14"
 					doc_unit="2"
@@ -8970,7 +8970,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. hierzu auch Anm. zu <a
-					href="/edition/vol1/CV14/2?line=8"
+					href="/dokumente/vol1/CV14/2?line=8"
 					data-type="internal_ref"
 					document="CV14"
 					doc_unit="2"
@@ -9049,7 +9049,7 @@
 				S.&nbsp;235f.). Eine Übersetzung dieser <em>Praefatio</em> ins Deutsche findet sich in Anm.
 				zu
 				<a
-					href="/edition/vol1/CV6/1?line=1"
+					href="/dokumente/vol1/CV6/1?line=1"
 					data-type="internal_ref"
 					document="CV6"
 					doc_unit="1"
@@ -9092,7 +9092,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Zu den Anathematismen vgl. auch Anm. zu <a
-					href="/edition/vol1/CV6/12?line=4"
+					href="/dokumente/vol1/CV6/12?line=4"
 					data-type="internal_ref"
 					document="CV6"
 					doc_unit="12"
@@ -9210,7 +9210,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				In <a
-					href="/edition/vol1/CV24/text?line=7"
+					href="/dokumente/vol1/CV24/text?line=7"
 					data-type="internal_ref"
 					document="CV24"
 					doc_unit="text"
@@ -9225,7 +9225,7 @@
 				ägyptischen Diözese zusammengekommen ist, grüßen die geliebten und ersehnten Presbyter und
 				Diakone und das Volk von Konstantinopel im Herrn“, und
 				<a
-					href="/edition/vol1/CV24/text?line=20"
+					href="/dokumente/vol1/CV24/text?line=20"
 					data-type="internal_ref"
 					document="CV24"
 					doc_unit="text"
@@ -9242,7 +9242,7 @@
 				müssen, dass […] er keinen Ort der Gemeinschaft mit den Priestern Gottes habe, sondern allen
 				fremd sein soll“, und in
 				<a
-					href="/edition/vol1/CV145/text?line=2"
+					href="/dokumente/vol1/CV145/text?line=2"
 					data-type="internal_ref"
 					document="CV145"
 					doc_unit="text"
@@ -9257,7 +9257,7 @@
 				zusammengetreten ist, grüßen die überaus frommen und gottesfürchtigen Väter der Klöster im
 				großen Konstantinopel im Herrn“, und
 				<a
-					href="/edition/vol1/CV145/text?line=24"
+					href="/dokumente/vol1/CV145/text?line=24"
 					data-type="internal_ref"
 					document="CV145"
 					doc_unit="text"
@@ -9489,7 +9489,7 @@
 				CV7, ACO I,1,1 S.&nbsp;42–72 (Dok. 39; CPG 5218). Obwohl die Schrift offiziell an den Kaiser
 				adressiert ist, äußert Kyrill an etwas späterer Stelle, dass sie auch an die Kaiserinnen
 				gerichtet sei (<a
-					href="/edition/vol1/CV7/4?line=4"
+					href="/dokumente/vol1/CV7/4?line=4"
 					data-type="internal_ref"
 					document="CV7"
 					doc_unit="4"
@@ -9583,7 +9583,7 @@
 				>
 				(Dok. 40) und zu
 				<a
-					href="/edition/vol1/CV149/1?line=10"
+					href="/dokumente/vol1/CV149/1?line=10"
 					data-type="internal_ref"
 					document="CV149"
 					doc_unit="1"
@@ -9684,7 +9684,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV25/2?line=8"
+					href="/dokumente/vol1/CV25/2?line=8"
 					data-type="internal_ref"
 					document="CV25"
 					doc_unit="2"
@@ -9735,7 +9735,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. <a
-					href="/edition/vol1/CV8/5?line=1"
+					href="/dokumente/vol1/CV8/5?line=1"
 					data-type="internal_ref"
 					document="CV8"
 					doc_unit="5"
@@ -9809,7 +9809,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				<a
-					href="/edition/vol1/CV8/3?line=2"
+					href="/dokumente/vol1/CV8/3?line=2"
 					data-type="internal_ref"
 					document="CV8"
 					doc_unit="3"
@@ -9892,7 +9892,7 @@
 		<div class="s-Q0jtzNDKPuIC col-span-1 col-start-2">
 			<p>
 				Vgl. CCas20 (Vorbemerkung), ACO I,3 S.&nbsp;47,9–13, vgl. Anm. zu <a
-					href="/edition/vol1/CV8/text?line=23"
+					href="/dokumente/vol1/CV8/text?line=23"
 					data-type="internal_ref"
 					document="CV8"
 					doc_unit="text"

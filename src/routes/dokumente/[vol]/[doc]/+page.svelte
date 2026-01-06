@@ -7,7 +7,7 @@
 	let { data } = $props();
 
 	onMount(() => {
-		goto(`${base}/edition/${data.slug_vol}/${data.slug_doc}/${data.docMetadata.slugs?.[0]}`);
+		goto(`${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${data.docMetadata.slugs?.[0]}`);
 		// replaceState(`./${data.slug_doc}/${data.docMetadata.slugs?.[0]}`, ()=>{});
 	});
 </script>

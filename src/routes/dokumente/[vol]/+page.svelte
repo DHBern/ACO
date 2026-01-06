@@ -10,11 +10,11 @@
 		// Redirect to first unit on requested page
 		if (data.pageParam && data.pageParamRedirect.found) {
 			goto(
-				`${base}/edition/${data.vol}/${data.pageParamRedirect.schwartzSlug}/${data.pageParamRedirect.unitSlug}?page=${data.pageParamRedirect.page}`,
+				`${base}/dokumente/${data.vol}/${data.pageParamRedirect.schwartzSlug}/${data.pageParamRedirect.unitSlug}?page=${data.pageParamRedirect.page}`,
 				{ replaceState: true }
 			);
 		}
 	});
 </script>
 
-	<TOC metaData={data.metaData} accordionStateInit={data.vol} />
+<TOC metaData={data.metaData} accordionStateInit={data.vol} />

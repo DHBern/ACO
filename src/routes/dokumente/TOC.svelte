@@ -19,7 +19,7 @@
 	docs.CU = metaData.filter(({ type: t }) => t === 'CU');
 </script>
 
-<h1 class="h1">Edition</h1>
+<h1 class="h1">Dokumente</h1>
 <p>Nachfolgend die Dokumente geordnet nach Band und Dokumententyp.</p>
 
 <div class="toc bg-surface-50-950 mt-10 flex-row flex-wrap">
@@ -40,13 +40,13 @@
 				<div class="pt-5 pl-5">
 					<p>
 						<a
-							href="{base}/edition/vol1/vorwort"
+							href="{base}/dokumente/vol1/vorwort"
 							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold">Vorwort</a
 						>
 					</p>
 					<p>
 						<a
-							href="{base}/edition/vol1/einleitung"
+							href="{base}/dokumente/vol1/einleitung"
 							class="hover:text-secondary-700-300 text-surface-950-50 text-xl font-bold"
 							>Einleitung</a
 						>
@@ -77,7 +77,7 @@
 							<ul class="">
 								{#each metaData.slice().sort((a, b) => a.acoDocNum - b.acoDocNum) as doc (doc.slug)}
 									<li class="hover:**:text-secondary-700-300 mb-1">
-										<a href="{base}/edition/vol1/{doc.slug}/{doc.unitSlugs[0]}">
+										<a href="{base}/dokumente/vol1/{doc.slug}/{doc.unitSlugs[0]}">
 											<span class="text-surface-950-50 font-bold">{doc.acoDocLabel}:</span>
 											<span class="text-surface-950-50">{@html doc.title}</span>
 											<span class="ml-1">
@@ -100,7 +100,7 @@
 										.slice()
 										.sort((a, b) => a.schwartzNum - b.schwartzNum) as doc (doc.slug)}
 										<li class="hover:**:text-secondary-700-300 mb-1">
-											<a href="{base}/edition/vol1/{doc.slug}/{doc.unitSlugs[0]}">
+											<a href="{base}/dokumente/vol1/{doc.slug}/{doc.unitSlugs[0]}">
 												<span class="text-surface-950-50 font-bold">{doc.slug}:</span>
 												<span class="text-surface-950-50">{@html doc.title}</span>
 												<span class="ml-1">
