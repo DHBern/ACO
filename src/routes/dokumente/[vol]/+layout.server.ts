@@ -7,7 +7,7 @@ import { linkifyFootnoteSuperscripts } from '$lib/functions/protoHTMLconversion/
 import { transformFootnotesIntroduction } from '$lib/functions/protoHTMLconversion/transformFootnotesIntroduction';
 
 const litData = metaDocs.Literaturverzeichnis.text;
-const abbData = metaDocs.Abkürzungsverzeichnis.text;
+const abbData = metaDocs.Abkürzungsverzeichnis.text;
 const prefData = metaDocs.Vorwort;
 const introData = metaDocs.Einleitung;
 
