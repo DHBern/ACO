@@ -76,7 +76,7 @@
 	<div>
 		<h1 class="h1">Einleitung</h1>
 		<h2 class="h2">
-			Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar und Register.
+			Die Akten des Konzils von Ephesus 431. Übersetzung, Einleitung, Kommentar und Register
 		</h2>
 
 		<p class="w-full">
@@ -122,7 +122,7 @@
 <div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
 	<div>
 		<h1 class="h1">Über dieses Projekt</h1>
-		<h2 class="h2">Die Akten des Konzils von Ephesus 431.</h2>
+		<h2 class="h2">Die Akten des Konzils von Ephesus 431</h2>
 
 		<p>
 			Die Akten des III. Ökumenischen Konzils von Ephesus, das im Jahre 431 abgehalten wurde, bilden
@@ -231,6 +231,8 @@
 			Muesmattstrasse 45<br />
 			3012 Bern
 		</p>
+		<br />
+		<p>DFG-Fördernummer: 282331637</p>
 	</div>
 	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
 		{@render figure(
