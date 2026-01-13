@@ -12,14 +12,14 @@
 		<div id={`note-${footnote.number}`} class="col-span-1 col-start-1">
 			<p class="text-right">
 				<sup>{@html footnote.number}</sup>
-				<!-- <a
+				<a
 					href={'#ref-' + footnote.number}
 					aria-label={'Back to note ' + footnote.number}
 					class="back-link inline-block"
 					title="Back to note"
 				>
 					<ArrowUpIcon size="24" />
-				</a> -->
+				</a>
 			</p>
 		</div>
 		<div class="col-span-1 col-start-2">
