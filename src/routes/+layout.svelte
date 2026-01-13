@@ -37,8 +37,7 @@
 		{ name: 'Suche', path: '', slug: '/suche' },
 		{ name: 'Literaturverzeichnis', path: '/dokumente/vol1', slug: '/literatur' },
 		{ name: 'Bibelstellen', path: '', slug: '/bibelstellen' },
-		{ name: 'Geovisualisierung', path: '', slug: '/karte' },
-		{ name: 'Bibliographie', path: '', slug: '/bibliographie' }
+		{ name: 'Geovisualisierung', path: '', slug: '/karte' }
 	];
 
 	onMount(() => {
