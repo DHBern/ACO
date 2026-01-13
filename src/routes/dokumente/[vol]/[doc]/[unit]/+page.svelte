@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import { onMount, tick } from 'svelte';
-	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
+	import { annotVisible, copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
 	import { useSearchParams } from 'runed/kit';
 	import { z } from 'zod';
@@ -355,9 +355,16 @@
 			/>
 		{/if}
 		<!-- Units -->
-		<div class="row-span-1 row-start-2 grid grid-cols-[75px_25px_auto_1fr] gap-6">
+		<div
+			class={[
+				'row-span-1 row-start-2 mx-auto grid w-full gap-6',
+				annotVisible.value
+					? 'grid-cols-[auto_75px_25px_auto_1fr]'
+					: 'grid-cols-[auto_75px_25px_auto_0px]'
+			]}
+		>
 			<!-- Page Numbers -->
-			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
+			<div class="containerPageNums col-span-1 col-start-2" data-sveltekit-noscroll>
 				{#each loadedUnits as unit (unit.slug)}
 					{@const path = `${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
 					{@html generatePageNumbers(unit.text, path)}
@@ -365,7 +372,7 @@
 			</div>
 
 			<!-- Line Numbers -->
-			<div class="containerLineNums col-span-1 col-start-2" data-sveltekit-noscroll>
+			<div class="containerLineNums col-span-1 col-start-3" data-sveltekit-noscroll>
 				{#each loadedUnits as unit (unit.slug)}
 					{@const path = `${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
 					{@html generateLineNumbers(unit.text, path)}
@@ -376,7 +383,7 @@
 			<div
 				bind:this={mainTextContainer}
 				class={[
-					'containerText maintext relative col-span-1 col-start-3',
+					'containerText maintext relative col-start-4',
 					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 				]}
 			>
@@ -395,7 +402,7 @@
 			<!-- Notes -->
 			<div
 				class={[
-					'containerNotes relative col-span-3 col-start-1 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
+					'containerNotes relative col-span-3 col-start-2 transition-all duration-1000 lg:col-span-1 lg:col-start-5 lg:row-span-2 lg:row-start-1',
 					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 				]}
 			>
@@ -412,7 +419,6 @@
 					{/each}
 				{/each}
 			</div>
-
 			<!-- Popups for multiple notes over same place -->
 			{#if multiMarkPopupStore.slugs.length > 0}
 				<MultiMarkPopup
@@ -470,11 +476,11 @@
 	}
 
 	/* Highlights in Text */
-	.containerText :global(.marksVisible span[data-ids]) {
+	.containerText :global(.annotVisible span[data-ids]) {
 		@apply text-surface-950-50 bg-warning-100/40 dark:bg-warning-700 [&.multiple-ids]:bg-warning-300/70 dark:[&.multiple-ids]:bg-warning-200 cursor-pointer;
 	}
 
-	.containerText :global(.marksVisible span[data-type='mark'].highlighted) {
+	.containerText :global(.annotVisible span[data-type='mark'].highlighted) {
 		@apply bg-secondary-200 dark:bg-secondary-500! text-surface-950 dark:text-surface-50;
 	}
 </style>

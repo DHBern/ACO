@@ -2,6 +2,7 @@
 	import { MARGIN_NOTEBOX } from '$lib/constants/constants';
 	import { handleNoteClick } from '$lib/functions/floatingApparatus';
 	import { createNoteReferenceString } from '$lib/functions/protoHTMLconversion/createNoteReferenceString';
+	import { annotVisible } from '../../../globals.svelte';
 	type NoteType = 'floating' | 'bottom';
 
 	let {
@@ -26,6 +27,7 @@
 <div
 	data-id={noteSlug}
 	class={[
+		!annotVisible.value && 'hidden',
 		`notebox word-wrap bg-surface-50-950 border-surface-100-900 absolute
 		max-w-[700px] border-4 transition-transform duration-500`,
 		selectedNote.slug === noteSlug && 'highlighted'

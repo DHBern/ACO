@@ -2,7 +2,7 @@
 	import UnitNavigation from './UnitNavigation.svelte';
 	import DocumentMetadata from './DocumentMetadata.svelte';
 	import { Tooltip, Portal, Switch } from '@skeletonlabs/skeleton-svelte';
-	import { copyWithoutLinebreaks, marksVisible } from '../../globals.svelte.js';
+	import { copyWithoutLinebreaks, annotVisible } from '../../globals.svelte.js';
 
 	let { data, children } = $props();
 </script>
@@ -27,14 +27,14 @@
 	<div class="my-5 flex justify-center gap-5 align-middle">
 		<Switch
 			class="**:text-lx"
-			name="toggleMarksVisible"
-			checked={marksVisible.value}
-			onCheckedChange={(e) => (marksVisible.value = e.checked)}
+			name="toggleAnnotVisible"
+			checked={annotVisible.value}
+			onCheckedChange={(e) => (annotVisible.value = e.checked)}
 		>
 			<Switch.Control class="data-[state=checked]:bg-secondary-600-400 bg-surface-200-800">
 				<Switch.Thumb />
 			</Switch.Control>
-			<Switch.Label>Markierungen</Switch.Label>
+			<Switch.Label>Anmerkungen</Switch.Label>
 			<Switch.HiddenInput />
 		</Switch>
 
