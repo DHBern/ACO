@@ -2,7 +2,6 @@
 	import { ArrowUpIcon } from '@lucide/svelte';
 
 	let { data } = $props();
-	console.log(data.intro);
 </script>
 
 <div class="maintext">{@html data.intro?.text}</div>
