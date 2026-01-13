@@ -1,7 +1,7 @@
 import { JSDOM } from 'jsdom';
 import { base } from '$app/paths';
 
-export function transformAnchorsNewTab(html) {
+export function transformAnchors(html) {
 	// Wrap in a container to preserve fragment structure
 	const dom = new JSDOM(`<div id="__ta_container__">${html}</div>`);
 	const doc = dom.window.document;
