@@ -32,7 +32,7 @@
 									<span data-type="register-doc-key">{docKey}</span>
 									{#each dataObject[idx]['loc-s'][docKey] as unit}
 										<a
-											href={`${base}/dokumente/1/${docKey}${convertUnit(unit)}`}
+											href={`${base}/dokumente/vol1/${docKey}${convertUnit(unit)}`}
 											data-type="register-unit"
 											target="_blank"
 											rel="noopener noreferrer">{unit}</a
