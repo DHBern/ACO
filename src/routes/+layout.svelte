@@ -68,7 +68,7 @@
 <!-- Snippet Lightswitch -->
 {#snippet lightswitch()}
 	<Switch
-		class="**:text-lx"
+		class="**:text-lg"
 		name="mode"
 		bind:checked={isDark.val}
 		onCheckedChange={handleToggleLightswitch}

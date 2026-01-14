@@ -3,6 +3,7 @@
 	import DocumentMetadata from './DocumentMetadata.svelte';
 	import { Tooltip, Portal, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { copyWithoutLinebreaks, annotVisible } from '../../globals.svelte.js';
+	import { InfoIcon } from '@lucide/svelte';
 
 	let { data, children } = $props();
 </script>
@@ -26,7 +27,7 @@
 	<!-- Settings -->
 	<div class="my-5 flex justify-center gap-5 align-middle">
 		<Switch
-			class="**:text-lx"
+			class="**:text-lg"
 			name="toggleAnnotVisible"
 			checked={annotVisible.value}
 			onCheckedChange={(e) => (annotVisible.value = e.checked)}
@@ -41,7 +42,7 @@
 		<Tooltip positioning={{ placement: 'bottom' }}>
 			<Tooltip.Trigger>
 				<Switch
-					class="**:text-lx"
+					class="**:text-lg"
 					name="toggleCopyWithoutLinebreaks"
 					checked={copyWithoutLinebreaks.value}
 					onCheckedChange={(e) => (copyWithoutLinebreaks.value = e.checked)}
@@ -49,7 +50,11 @@
 					<Switch.Control class="data-[state=checked]:bg-secondary-600-400 bg-surface-200-800">
 						<Switch.Thumb />
 					</Switch.Control>
-					<Switch.Label>Kopiermodus</Switch.Label>
+					<Switch.Label
+						>Kopiermodus
+						<InfoIcon color="grey" class="ml-1 inline-block"></InfoIcon>
+					</Switch.Label>
+
 					<Switch.HiddenInput />
 				</Switch>
 			</Tooltip.Trigger>
