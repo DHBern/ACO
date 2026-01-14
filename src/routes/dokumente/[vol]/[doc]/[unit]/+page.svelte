@@ -335,10 +335,10 @@
 	class="containerContent bg-surface-50-950 relative mx-auto h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1900px] shadow-md"
 >
 	<div
-		class="from-surface-900/2 pointer-events-none absolute top-0 right-0 left-0 z-10 h-30 bg-gradient-to-b to-transparent"
+		class="from-surface-900/2 pointer-events-none absolute top-0 right-0 left-0 z-10 h-30 bg-linear-to-b to-transparent"
 	></div>
 	<div
-		class="from-surface-900/4 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-30 bg-gradient-to-t to-transparent"
+		class="from-surface-900/4 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-30 bg-linear-to-t to-transparent"
 	></div>
 	<div
 		class="grid h-full grid-rows-[1fr_auto_1fr] overflow-visible overflow-x-scroll px-[20px] pb-24"
