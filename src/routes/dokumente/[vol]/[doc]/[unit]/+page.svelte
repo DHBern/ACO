@@ -26,6 +26,7 @@
 	let finishedInitScroll = $state(false);
 	let finishedInitLoading = $state(false);
 	let elContainerContent = $state<HTMLElement>();
+	let elContainerContentInner = $state<HTMLElement>();
 
 	let visibleUnits = $state([]);
 	let latestUnitLoadedDuringCurrentScroll: string | null = $state(null);
@@ -284,13 +285,13 @@
 			);
 
 			// scroll content
-			const elContainer = document.querySelector('.containerContent');
 			if (page.url.searchParams.get('line')) {
 				const elLine = document.querySelector(
 					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
 				);
 				// elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
-				elContainer?.scrollTo({
+				console.log('toptoptop', elLine?.offsetTop, elContainerContentInner?.classList);
+				elContainerContentInner?.scrollTo({
 					top: elLine?.offsetTop,
 					behavior: 'smooth'
 				});
@@ -298,8 +299,8 @@
 				const elPage = document.querySelector(
 					`[data-unit='${data.slug_unit}'] [data-page='${params.page}']`
 				);
-				// elPage.scrollIntoView({ behavior: 'smooth', block:'center'});
-				elContainer?.scrollTo({
+				// elPage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+				elContainerContentInner?.scrollTo({
 					top: elPage?.offsetTop,
 					behavior: 'smooth'
 				});
@@ -332,7 +333,7 @@
 <!-- container must be a positioned for scroll-to-line to work as expected! -->
 <div
 	bind:this={elContainerContent}
-	class="containerContent bg-surface-50-950 relative mx-auto h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1900px] shadow-md"
+	class="bg-surface-50-950 relative mx-auto h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1900px] shadow-md"
 >
 	<div
 		class="from-surface-900/2 pointer-events-none absolute top-0 right-0 left-0 z-10 h-30 bg-linear-to-b to-transparent"
@@ -340,8 +341,11 @@
 	<div
 		class="from-surface-900/4 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-30 bg-linear-to-t to-transparent"
 	></div>
+
+	<!-- .containerContentInner is queried in handleNoteClick.js -->
 	<div
-		class="grid h-full grid-rows-[1fr_auto_1fr] overflow-visible overflow-x-scroll px-[20px] pb-24"
+		class="containerContentInner grid h-full grid-rows-[1fr_auto_1fr] overflow-visible overflow-x-scroll px-[20px] pb-24"
+		bind:this={elContainerContentInner}
 	>
 		<!-- Load Button -->
 		{#if loadedUnits[0].prevSlug}
