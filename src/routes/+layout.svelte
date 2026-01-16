@@ -61,7 +61,8 @@
 		onclick={() => {
 			openStateAbbreviations = !openStateAbbreviations;
 			openStateMenu = false; // close menu
-		}}>Abkürzungsverzeichnis</button
+		}}
+		>Abkürzungsverzeichnis</button
 	>
 {/snippet}
 
@@ -92,7 +93,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<!-- Menu -->
-	<AppBar class="bg-primary-400-600 flex items-center justify-between px-2 py-0">
+	<AppBar class="bg-primary-400-600 flex flex-row items-center justify-between px-2 py-0">
 		<!-- ACO-Logo / Home -->
 		<AppBar.Lead class="m-0 flex items-center p-0">
 			<a class="flex items-center py-2" href={`${base}/`}>
