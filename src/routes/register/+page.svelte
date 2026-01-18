@@ -8,7 +8,8 @@
 
 	function convertUnit(unit) {
 		if (unit[0] === 'Z') {
-			return `?line=${unit.slice(2)}`;
+			//! Beware: This assumes that line-references are only present in single-unit documents (i.e. unit="text"), which is true for Band I but may change in Band II/III
+			return `/text/?line=${unit.slice(2)}`;
 		} else {
 			return `/${unit}`;
 		}
