@@ -5,9 +5,6 @@
 	import { onMount, tick } from 'svelte';
 	import { annotVisible, copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
-	import { useSearchParams } from 'runed/kit';
-	import { z } from 'zod';
-
 	import LoadButton from './LoadButton.svelte';
 	import Note from './Note.svelte';
 	import TextUnit from './TextUnit.svelte';
@@ -31,58 +28,6 @@
 	let visibleUnits = $state([]);
 	let latestUnitLoadedDuringCurrentScroll: string | null = $state(null);
 
-	// --- Handle search params ---------------------------
-
-	// Get boundaries of data-line and data-page
-	function getCurrentMinMaxAttribute(html, minmax: 'min' | 'max', attr = '') {
-		if (!html) return 0;
-		const re = new RegExp(`data-${attr}=['"]?(\\d+)['"]?`, 'g');
-		let match;
-		if (minmax === 'max') {
-			let max = 0;
-			while ((match = re.exec(html)) !== null) {
-				const v = Number(match[1]);
-				if (v > max) max = v;
-			}
-			return max;
-		} else if (minmax === 'min') {
-			let min = 1e9;
-			while ((match = re.exec(html)) !== null) {
-				const v = Number(match[1]);
-				if (v < min) min = v;
-			}
-			return min;
-		}
-	}
-	const maxLine = getCurrentMinMaxAttribute(data.unitText, 'max', 'line'); // runtime number
-	const maxPage = getCurrentMinMaxAttribute(data.unitText, 'max', 'page'); // runtime number
-	const minPage = getCurrentMinMaxAttribute(data.unitText, 'min', 'page'); // runtime number
-
-	// Runed useSearchParams
-	const params = useSearchParams(
-		z.object({
-			line: z.coerce
-				.number()
-				.int()
-				.default(1)
-				// clamp between 1 and maxLine
-				.transform((n) => {
-					// guard NaN from z.coerce; default to 1
-					const v = Number.isFinite(n) ? n : 1;
-					return Math.min(Math.max(v, 1), maxLine);
-				}),
-			page: z.coerce
-				.number()
-				.int()
-				.default(1)
-				// clamp between 1 and maxPage
-				.transform((n) => {
-					// guard NaN from z.coerce; default to 1
-					const v = Number.isFinite(n) ? n : 1;
-					return Math.min(Math.max(v, minPage), maxPage);
-				})
-		})
-	);
 
 	// --- Collect Loaded Units in Array ---------------------------
 
@@ -287,18 +232,18 @@
 			// scroll content
 			if (page.url.searchParams.get('line')) {
 				const elLine = document.querySelector(
-					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
+					`[data-unit='${data.slug_unit}'] [data-line='${page.url.searchParams.get('line')}']`
 				);
-				// elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				// elLine.scrollIntoView({ behavior: 'smooth', block: 'start' }); // fallback (less precise)
 				elContainerContentInner?.scrollTo({
 					top: elLine?.offsetTop,
 					behavior: 'smooth'
 				});
 			} else if (page.url.searchParams.get('page')) {
 				const elPage = document.querySelector(
-					`[data-unit='${data.slug_unit}'] [data-page='${params.page}']`
+					`[data-unit='${data.slug_unit}'] [data-page='${page.url.searchParams.get('page')}']`
 				);
-				// elPage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+				// elPage.scrollIntoView({ behavior: 'smooth', block: 'center' }); // fallback (less precise)
 				elContainerContentInner?.scrollTo({
 					top: elPage?.offsetTop,
 					behavior: 'smooth'
