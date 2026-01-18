@@ -290,7 +290,6 @@
 					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
 				);
 				// elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
-				console.log('toptoptop', elLine?.offsetTop, elContainerContentInner?.classList);
 				elContainerContentInner?.scrollTo({
 					top: elLine?.offsetTop,
 					behavior: 'smooth'
