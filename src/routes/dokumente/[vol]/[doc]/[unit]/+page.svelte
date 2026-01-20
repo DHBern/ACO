@@ -402,9 +402,13 @@
 	}
 
 	/* Anchors for line-numbers and page-numbers */
+	.containerLineNums :global(a.line-number),
+	.containerPageNums :global(a.page-number){
+		@apply relative; /* this makes sure ::before is positioned relative to the line/page number (and not the scroll container) */
+	}
 	.containerLineNums :global(a.line-number::before),
 	.containerPageNums :global(a.page-number::before) {
-		@apply absolute ml-2 hidden h-4 w-4 -translate-x-7 translate-y-2 bg-[url(/icons/link.svg)] bg-contain bg-no-repeat content-[""];
+		@apply absolute ml-2 top-2 mr-2 right-full hidden h-4 w-4 bg-[url(/icons/link.svg)] bg-contain bg-no-repeat content-[""];
 	}
 	.containerLineNums :global(a.line-number:hover::before),
 	.containerPageNums :global(a.page-number:hover::before) {
@@ -412,6 +416,9 @@
 	}
 	.containerLineNums :global(.lineNumBuffer) {
 		@apply text-surface-950-50/0 inline-block w-10 select-none;
+	}
+	.containerLineNums :global(.lineNumBuffer:hover) {
+		@apply text-surface-950-50/50;
 	}
 
 	/* Text */

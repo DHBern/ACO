@@ -15,7 +15,7 @@ export function generateLineNumbers(text, path) {
 	let numbersText = linesText.replace(
 		/<a data-line='(\d+)'>\u200B?<\/a>/g,
 		(_match, lineNumber) => {
-			return `<a class="line-number" href="${path}?line=${lineNumber}" data-line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : "<span class='lineNumBuffer'></span>"}</a>`;
+			return `<a class="line-number" href="${path}?line=${lineNumber}" data-line="${lineNumber}">${!(lineNumber % 5) ? lineNumber : `<span class='lineNumBuffer'>${lineNumber}</span>`}</a>`;
 		}
 	);
 
