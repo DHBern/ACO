@@ -127,6 +127,9 @@
             <!--<xsl:when test="matches(.,'\S')">
               <string>{.}</string>
             </xsl:when>-->
+            <xsl:when test="not(parent::tei:div//tei:p)">
+              <string>{.}</string>
+            </xsl:when>
             <xsl:otherwise>
               <string>text</string>
             </xsl:otherwise>
