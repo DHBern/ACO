@@ -30239,17 +30239,6 @@
           "text_start": "in",
           "refstring_text": "in … übertragen]"
         },
-        "CV22-8-xxiv-xxix⁠⁠-Wenn-schicken": {
-          "note_content": "Auch in seinem ersten Brief an Nestorius stellt Kyrill ein Einlenken desselben, speziell die Anerkennung des <span data-lang='greek'>θεοτόκος</span>-Titels, als Bedingung dafür heraus, dass wieder Friede in der Kirche einkehren könne (vgl. <a>CV2,3,14 – 19</a>, ACO I,1,1 S.&nbsp;24,24–27 [Dok. 18]). Anders als hier gibt er jedoch dort keine Form vor, wie dies zu geschehen hab",
-          "doc_unit": "CV22-8",
-          "refstring_lines": "xxiv – xxix ⁠⁠",
-          "document": "CV22",
-          "text_end": "schicken",
-          "line_start": "xxiv",
-          "line_end": "xxix⁠⁠",
-          "text_start": "Wenn",
-          "refstring_text": "Wenn … schicken]"
-        },
         "CV22-8-27-29⁠⁠-werde-Ruhe": {
           "note_content": "Ps 131(132),4. Der Vers schließt dort eigentlich mit den Worten: <span data-lang='greek'>ἕως οὗ εὕρω τόπον τῷ κυρίῳ, σκήνωμα τῷ θεῷ Ιακωβ</span> (bis ich eine Stätte finde für den Herrn, eine Wohnung für den Gott Jakobs).",
           "doc_unit": "CV22-8",
@@ -30260,17 +30249,6 @@
           "line_end": "29⁠⁠",
           "text_start": "werde",
           "refstring_text": "werde … Ruhe]"
-        },
-        "CV22-8-xix-xxix⁠⁠-Der-schicken": {
-          "note_content": "Vgl. oben den Beginn von Kap. 7.",
-          "doc_unit": "CV22-8",
-          "refstring_lines": "xix – xxix ⁠⁠",
-          "document": "CV22",
-          "text_end": "schicken",
-          "line_start": "xix",
-          "line_end": "xxix⁠⁠",
-          "text_start": "Der",
-          "refstring_text": "Der … schicken]"
         },
         "CV22-8-1-39⁠⁠-Das-mich": {
           "note_content": "Die lat. Fassung des Briefes bietet einen vollkommen anderen Schluss als die grie­chische, weswegen die Schlusskapitel hier in Synopse präsentiert werden sollen. Während in CV22 von einem Schreiben die Rede ist, welches die Apokrisiare Kyrill zur Begutachtung zugesandt hatten, und in der Reaktion darauf das schon angesprochene Thema eines möglichen Prozesses ge­gen den Alexandriner unter dem Vorsitz von Nestorius (vgl. oben <a>CV22,6,5 – 14</a>) noch einmal auf­genommen wird, wird in CPal28 die ebenfalls im Vorangegangenen schon angesprochene Bereit­schaft Kyrills, Frieden zu schließen, wenn sein Gegner widerrufen sollte (vgl. oben <a>CV22,7,1 – 3</a>), noch einmal betont und ausführlicher formuliert. Für das daraus entstehende Problem hat es bereits verschiedene Lösungsansätze gegeben. So hält Garnier, der Erstherausgeber der Werke des Marius Mercator, den griechischen Schluss für ein dem eigentlichen Brief zunächst lose angefügtes Post­scrip­tum (schedula), welches den ursprünglichen Schluss in der Überlieferung verdrängt habe (vgl. Garnier [1673], Bd.&nbsp;2 S.&nbsp;55f. [= PL 48, Sp.&nbsp;815f.]). Auch Loofs hält den im Griechischen überlieferten Schluss nicht für den ursprünglichen und vermutet in ihm ein separates Schreiben, welches ei­gent­lich vor dem Brief an die Apokrisiare verfasst worden sei (vgl. Loofs [1914], S.&nbsp;32–41). Schwartz, der im Gegensatz zu Loofs schon den Liber Heraclidis des Nestorius kannte, in welchem dieser den griechischen Schluss des Briefes zitiert (vgl. ebd. S.&nbsp;154–156), geht hingegen davon aus, dass eben­die­ser auch der ursprüngliche sei. In dem Schluss der lat. Fassung sieht er eine nachträgliche Ab­än­de­rung, welche von den Apokrisiaren angebracht worden sei, um den Verfasser des Briefes in einem günstigeren Licht erscheinen zu lassen, bevor sie das Schriftstück dem in Kon­stantinopel weilenden Marius Mercator zur Übersetzung übergeben hätten (vgl. Schwartz [1928], S.&nbsp;5 Anm. 2). Vergleicht man die beiden Schlusspartien miteinander, so fällt ins Auge, dass in der Betonung der Bereitschaft, im Kampf um den Glauben notfalls bis zum Äußersten gehen zu wol­len, ihrerseits beide auffällig ähnlich schließen. Diese Beobachtung könnte zusammen mit dem Umstand, dass in beiden Partien auf zuvor schon Erwähntes Bezug genommen wird, auf jeden Fall dafür sprechen, dass wir es hier tatsächlich mit zwei unterschiedlichen Schlüssen zu einem ansonsten im Wesentlichen gleich­lau­ten­den Brief zu tun haben. Die so entstandenen Versionen dürften dann natürlich auch für unter­schied­liche Zwecke bestimmt gewesen sein. Darüber hinaus dürfte aber jegliche Spekulation schwierig werden.",
@@ -30283,9 +30261,9 @@
           "text_start": "Das",
           "refstring_text": "Das … mich]"
         },
-        "CV22-8-ix-xi⁠⁠-Meinen-euch": {
+        "CPal28-ix-xi⁠⁠-Meinen-euch": {
           "note_content": "Joh 14,27.",
-          "doc_unit": "CV22-8",
+          "doc_unit": "CPal28",
           "refstring_lines": "ix – xi ⁠⁠",
           "document": "CV22",
           "text_end": "euch",
@@ -30293,6 +30271,28 @@
           "line_end": "xi⁠⁠",
           "text_start": "Meinen",
           "refstring_text": "Meinen … euch]"
+        },
+        "CPal28-xxiv-xxix⁠⁠-Wenn-schicken": {
+          "note_content": "Auch in seinem ersten Brief an Nestorius stellt Kyrill ein Einlenken desselben, speziell die Anerkennung des <span data-lang='greek'>θεοτόκος</span>-Titels, als Bedingung dafür heraus, dass wieder Friede in der Kirche einkehren könne (vgl. <a>CV2,3,14 – 19</a>, ACO I,1,1 S.&nbsp;24,24–27 [Dok. 18]). Anders als hier gibt er jedoch dort keine Form vor, wie dies zu geschehen hab",
+          "doc_unit": "CPal28",
+          "refstring_lines": "xxiv – xxix ⁠⁠",
+          "document": "CV22",
+          "text_end": "schicken",
+          "line_start": "xxiv",
+          "line_end": "xxix⁠⁠",
+          "text_start": "Wenn",
+          "refstring_text": "Wenn … schicken]"
+        },
+        "CPal28-xix-xxix⁠⁠-Der-schicken": {
+          "note_content": "Vgl. oben den Beginn von Kap. 7.",
+          "doc_unit": "CPal28",
+          "refstring_lines": "xix – xxix ⁠⁠",
+          "document": "CV22",
+          "text_end": "schicken",
+          "line_start": "xix",
+          "line_end": "xxix⁠⁠",
+          "text_start": "Der",
+          "refstring_text": "Der … schicken]"
         },
         "CV22-8-33-35⁠⁠-Bald-ist‌1": {
           "note_content": "Es lässt sich nicht mit Sicherheit sagen, welche Schriften Kyrill mit dieser Äußerung im Blick hat. Nimmt man seine Aussage von oben (vgl. <a>CV22,5,6 – 7</a>) ernst, hatte er zum Zeitpunkt der Abfassung dieses Briefes noch gar keine Kor­res­pon­denz mit Nestorius. Dann könnte sich die Äußerung u.a. auf jeden Fall auf die anstehende Kontaktaufnahme mit diesem beziehen (vgl. auch Price/Graumann [2020], S.&nbsp;108 Anm. 50), also seinen ersten Brief an ihn, in welchem im Übrigen ebenso wie hier die Verbreitung des Briefes an die Mönche (CV1 [Dok. 5]) in Konstantinopel thematisiert wird (vgl. <a>CV2,1,3 – 8</a>, ACO I,1,1 S.&nbsp;23,26–24,3 [Dok. 18]",
@@ -44958,7 +44958,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2026-01-20T16:20:51.009796112+01:00",
+    "generated-on": "2026-01-20T20:47:52.994656472+01:00",
     "description": ""
   }
 }
