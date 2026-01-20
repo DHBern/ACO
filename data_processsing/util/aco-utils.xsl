@@ -122,7 +122,8 @@
       
       <xsl:choose>
         <xsl:when test="matches($target/data(),'^(.+_dg\.xml#r-.+)')">
-          <xsl:sequence select="($target => tokenize('\s')) ! replace(.,'_dg\.xml','')"/>
+          <!-- 08[a-c]: 2 column case; inclusion case; dropping the a-c suffix -->
+          <xsl:sequence select="($target => tokenize('\s')) ! replace(.,'_dg\.xml','') ! replace(.,'08[a-c]_','08_')"/>
         </xsl:when>
         <xsl:when test="matches($target/data(),'^(#w\d+s?\s?){1,2}')">
           <xsl:sequence select="$target => tokenize('\s')"/>
@@ -160,7 +161,7 @@
 <!--          <xsl:message use-when="$verbose">input: {$input} / doc: {$doc} / key: {$key} / key_end: {$key_end}</xsl:message>-->
         </xsl:when>
         <xsl:otherwise>
-          <xsl:message>NB target creation failed; case not covered: {$context}</xsl:message>
+          <xsl:message>NB target creation failed; case not covered: {$context}; $target-sequence: {$target-sequence}</xsl:message>
         </xsl:otherwise>
       </xsl:choose>
       
