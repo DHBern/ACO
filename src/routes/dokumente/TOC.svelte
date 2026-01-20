@@ -1,6 +1,9 @@
 <script>
+	import { enhance } from '$app/forms';
+	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
+	import { preventDefault } from 'svelte/legacy';
 
 	let { metaData, accordionStateInit = 'vol1' } = $props();
 	let accordionState = $state([accordionStateInit]);
@@ -10,6 +13,8 @@
 		{ slug: 'vol2', label: 'Band 2', number: 2 },
 		{ slug: 'vol3', label: 'Band 3', number: 3 }
 	];
+
+	let gotoPageNum = $state(0);
 
 	const types = ['CV', 'CPal', 'CVer', 'CU'];
 	let docs = {};
@@ -52,7 +57,13 @@
 						>
 					</p>
 				</div>
-
+				<div class="pt-5 pl-5">
+					<form class="flex gap-3 items-end" method="POST" use:enhance>
+						<span class="text-surface-950-50 text-xl">Zu Seite springen:</span>
+						<input class="w-20 input" type="number" min="0" max="533" bind:value={gotoPageNum} placeholder="1" />
+						<button class="btn shrink h-10 preset-filled-secondary-500" onclick={()=>{goto(`${base}/dokumente/vol1?page=${gotoPageNum}`)}}>Anzeigen</button>
+					</form>
+				</div>
 				<!-- Sitemap -->
 				<nav class="col-span-2 p-5 lg:hidden">
 					<ul>
