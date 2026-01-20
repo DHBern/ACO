@@ -36,7 +36,7 @@
   
   <xsl:template match="/">
     
-    <xsl:message select="$accumulated-pointer-targets"></xsl:message>
+    <xsl:message select="$accumulated-pointer-targets"/>
     
     <xsl:variable name="payload">
       <map xmlns="http://www.w3.org/2005/xpath-functions">

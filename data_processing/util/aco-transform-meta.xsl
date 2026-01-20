@@ -77,6 +77,15 @@
     </pb>
   </xsl:template>
   
+  <xsl:template match="head[contains(.//text(),'Eine vorläufige Einleitung')]">
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <!-- add missing page information -->
+      <pb n="XI"/>
+      <xsl:apply-templates select="node()"/>
+    </xsl:copy>
+  </xsl:template>
+  
   <xsl:template match="p[@rendition=('#rp-p','#rp-p_lz','#rd-Text')]">
     <p>
       <xsl:if test="@rendition='#rp-p_lz'">

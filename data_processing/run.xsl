@@ -135,7 +135,6 @@
           <!-- add a step to comment DTD declarations (using uparsed text)? or pre-process externally -->
           
           <xsl:map-entry key="$filename">
-            <!-- TODO transform meta files to something useful (simplify as much as possible) -->
             <xsl:sequence select="dsl:transform-meta(.)"/>
           </xsl:map-entry>
         </xsl:for-each>
