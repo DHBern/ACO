@@ -22,5 +22,6 @@ export function generateLineNumbers(text, path) {
 	// Escape-Hatch: Fill empty <p> with a non-breaking whitespace such that they don't collapse to zero-height
 	// This is needed in irregular/inconsistent situations, where <p> does not contain a line-break ancor-tag.
 	numbersText = numbersText.replace(/<p>\s*<\/p>/g, '<p>&nbsp;</p>');
+	
 	return numbersText;
 }
