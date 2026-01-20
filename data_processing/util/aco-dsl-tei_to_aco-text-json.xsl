@@ -70,13 +70,24 @@
   <xsl:template match="tei:TEI">
     <xsl:variable name="textId" select="@xml:id => tokenize('_') => reverse() => head() => replace(',','-')"/>
     <map key="{$textId => util:sanitizeForJS() => util:sanitizeBrackets()}">
-      <xsl:for-each select="tei:text/tei:body/tei:div">
-        <string key="{if (contains(@n,',')) then @n => replace(',','-') => substring-after($textId||'-') => util:sanitizeForJS() => util:sanitizeBrackets() else 'text'}">
+      <xsl:for-each select="tei:text/tei:body/tei:div[.//p]">
+        <string key="{if (contains(@n,',')) 
+          then @n => replace(',','-') => substring-after($textId||'-') => util:sanitizeForJS() => util:sanitizeBrackets() 
+          else 'text'}">
           <xsl:variable name="build-text">
             <xsl:apply-templates select="." mode="build-text"/>
           </xsl:variable>
           <xsl:sequence select="serialize($build-text,$serialization-parameters) => normalize-space()"/>
 <!--          <xsl:text>{$build-text => normalize-space()}</xsl:text>-->
+        </string>
+      </xsl:for-each>
+      <!-- some chapters consist of just a title, e.g. CV22 -->
+      <xsl:for-each select="tei:text/tei:body/tei:div[not(.//p)]">
+        <string key="{@n}">
+          <xsl:variable name="build-text">
+            <xsl:apply-templates select="." mode="build-text"/>
+          </xsl:variable>
+          <xsl:sequence select="serialize($build-text,$serialization-parameters) => normalize-space()"/>
         </string>
       </xsl:for-each>
     </map>
