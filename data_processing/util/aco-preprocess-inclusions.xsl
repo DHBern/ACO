@@ -44,11 +44,17 @@
   
   <!-- prefix IDs to make them corpus-wide unique -->
   <xsl:template match="@xml:id">
-    <xsl:attribute name="{name()}" select="($prefix => replace('^\d*[a-z]?_',''),.) => string-join('_') => concat(if (parent::anchor) then '_anchor' else '')"/>
+    <xsl:attribute name="{name()}" select="($prefix => replace('^\d*[a-z]?_',''),.) => string-join('_') 
+      => concat(if (parent::anchor) then '_anchor' else '')
+      (: w182 also occurs in 08a_CV22.xml, thus making it unique :)
+      => replace('w182','w182x')"/>
   </xsl:template>
   <xsl:template match="@target[contains(.,'#')]|@targetEnd">
     <xsl:variable name="anchor" select="if (parent::anchor) then '_anchor' else ''"/>
-    <xsl:attribute name="{name()}" select="(. => tokenize('\s')) ! ('#'||($prefix => replace('^\d*[a-c]?_',''),. => substring-after('#')) => string-join('_') => concat($anchor))"/>
+    <xsl:attribute name="{name()}" select="(. => tokenize('\s')) ! 
+      ('#'||($prefix => replace('^\d*[a-c]?_',''),. => substring-after('#')) => string-join('_') => concat($anchor))
+      (: w182 also occurs in 08a_CV22.xml, thus making it unique :)
+      ! replace(.,'w182','w182x')"/>
   </xsl:template>
   
   <!-- CPal28 uses line milestones instead of chapterline -->
