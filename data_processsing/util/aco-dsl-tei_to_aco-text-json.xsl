@@ -82,7 +82,7 @@
     </map>
   </xsl:template>
   
-  <xsl:template match="tei:div" mode="build-text">
+  <xsl:template match="tei:div[not(matches(@type,'^col'))]" mode="build-text">
     <xsl:variable name="textId" select="ancestor::tei:TEI[1]/@xml:id => tokenize('_') => reverse() => head() => replace(',','-')"/>
     <section>
       <xsl:attribute name="data-unit">
@@ -100,6 +100,17 @@
     </section>
   </xsl:template>
   
+  <xsl:template match="tei:div[@type='columned']" mode="build-text">
+    <div data-type="multicol-wrapper" data-ncol="2">
+      <xsl:apply-templates mode="build-text"/>
+    </div>
+  </xsl:template>
+  
+  <xsl:template match="tei:div[matches(@type,'^col\d$')]" mode="build-text">
+    <div data-col="{@type => substring-after('col')}" data-doc="{div/@n}">
+      <xsl:apply-templates mode="build-text"/>
+    </div>
+  </xsl:template>
   
   <xsl:template match="tei:ab" mode="build-text">
     <p>

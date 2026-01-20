@@ -3,6 +3,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+  xmlns:map="http://www.w3.org/2005/xpath-functions/map"
   xmlns:dsl="https://dsl.unibe.ch"
   exclude-result-prefixes="dsl xs xd"
   xpath-default-namespace="http://www.tei-c.org/ns/1.0"
@@ -17,6 +18,8 @@
   </xd:doc>
   
   <xsl:output indent="true"/>
+  
+  <xsl:param name="inclusions-map" as="map(*)" static="true" select="map{}"/>
   
   <xsl:mode name="text" on-no-match="shallow-skip"/>
   <xsl:mode name="heading" on-no-match="shallow-skip"/>
@@ -166,7 +169,7 @@
   
   <!-- processing -->
   
-  <xsl:variable name="prefix" select="base-uri() => tokenize('/') => reverse() => head() => replace('\.xml','')"/>
+  <xsl:variable name="prefix" select="if (matches(base-uri(),'08a_')) then '08_CV22' else base-uri() => tokenize('/') => reverse() => head() => replace('\.xml','')"/>
   
   <xsl:variable name="generated">
     <xsl:processing-instruction name="xml-model">href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:processing-instruction>
@@ -281,10 +284,10 @@
   <xsl:template match="p[@rendition='#rp-kopf']" mode="metadata">
     <item>
       <title>
-        <xsl:apply-templates select="hi[@rendition='#rf-kursiv_fett']" mode="metadata"/>
+        <xsl:apply-templates select="hi[@rendition='#rf-kursiv_fett' or matches(@rend,'font-style:italic;')]" mode="metadata"/>
       </title>
       <p>
-        <xsl:apply-templates select="hi[@rendition=('#rf-kursiv','#rf-griechisch')]" mode="metadata"/>
+        <xsl:apply-templates select="hi[@rendition=('#rf-kursiv','#rf-griechisch') or matches(@rend,'font-style:italic;')]" mode="metadata"/>
       </p>
     </item>
   </xsl:template>
@@ -323,9 +326,17 @@
   
   <!-- prefix IDs to make them corpus-wide unique -->
   <xsl:template match="@xml:id" mode="text">
-    <xsl:attribute name="{name()}" select="($prefix => replace('^\d*_',''),.) => string-join('_') => concat(if (parent::anchor) then '_anchor' else '')"/>
+    <xsl:choose>
+      <!-- special treatment for included files -->
+      <xsl:when test="matches(.,'(CV22)|(CPal28)')">
+        <xsl:copy-of select="."/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:attribute name="{name()}" select="($prefix => replace('^\d*[a-z]?_',''),.) => string-join('_') => concat(if (parent::anchor) then '_anchor' else '')"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
-  <xsl:template match="@target[starts-with(.,'#')]|@targetEnd" mode="text">
+  <xsl:template match="@target[starts-with(.,'#')]|@targetEnd[not(matches(.,'(CV22)|(CPal28)'))]" mode="text">
     <xsl:attribute name="{name()}" select="'#'||($prefix => replace('^\d*_',''),. => replace('#','')) => string-join('_') => concat(if (parent::anchor) then '_anchor' else '')"/>
   </xsl:template>
   
@@ -365,6 +376,20 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:copy>
+    <!-- two column layout in CV22,8 -->
+    <xsl:if test=".//milestone[@unit='chapter'][@n='CV22,7']">
+<!--      <xsl:apply-templates mode="text"/>-->
+      <xsl:variable name="col1" as="node()" select="map:get($inclusions-map,'08b_CV22.xml')?('step2')"/>
+      <div type="columned" n="{$col1//body//milestone[@unit='chapter']/@n}">
+        <div type="col1">
+          <xsl:sequence select="$col1//body//div[matches(@n,'\S')]"/>
+        </div>
+        <cb/>
+        <div type="col2">
+          <xsl:sequence select="map:get($inclusions-map,'08c_CPal28-8.xml')?('step2')//body//div[matches(@n,'\S')]"/>
+        </div>
+      </div>
+    </xsl:if>
   </xsl:template>
   
   <xsl:template match="div[head][not(p|ab)]" mode="text"/>
@@ -434,7 +459,7 @@
 
   -->
   
-  <xsl:template match="p[@rendition=('#rp-p','#rp-p_leerzeile_darüber','#rp-Blockzitat')][matches(.,'\S')]" mode="text">
+  <xsl:template match="p[@rendition=('#rp-p','#rp-p_leerzeile_darüber','#rp-Blockzitat','#rp-p_2spaltig_links','#rp-p_2spaltig_rechts')][matches(.,'\S')]" mode="text">
     <p>
       <xsl:if test="@rendition='#rp-Blockzitat'">
         <xsl:attribute name="rend">#blockquote</xsl:attribute>

@@ -33,6 +33,58 @@
   
   <xsl:param name="file-dir" static="true" select="'input-dev-new-export'"/>
 
+  <!-- two partial files require pre-processing for later inclusion (left and right column of CV22,8 -->
+  <xsl:variable name="inclusions-pre-processed" as="map(*)">
+    <xsl:map>     
+      <xsl:for-each select="uri-collection($file-dir||'/inclusions?select=*.xml')">
+        <xsl:variable name="filename" as="xs:string" select="(. => tokenize('/'))[last()]"/>
+        <!-- add a step to comment DTD declarations (using uparsed text)? or pre-process externally -->
+        <xsl:map-entry key="$filename">
+          <xsl:map>
+            <!-- step 0 -->
+            <!-- insert chapter div -->
+            <xsl:variable name="step0" as="node()">
+              <xsl:sequence select="transform(
+                map {
+                'stylesheet-location' : 'util/aco-preprocess-inclusions.xsl',
+                'source-node' : doc(.)
+                })?output
+                "/>
+            </xsl:variable>
+            <xsl:map-entry key="'step0'">
+              <xsl:sequence select="$step0"/>
+            </xsl:map-entry>
+            
+            <!-- step 1 -->
+            <!-- transform to TEI base format -->
+            <xsl:variable name="step1" as="node()">
+              <xsl:sequence select="transform(
+                map {
+                'stylesheet-location' : 'util/aco-cte-tei_to_tei.xsl',
+                'source-node' : $step0
+                })?output
+                "/>
+            </xsl:variable>
+            <xsl:map-entry key="'step1'">
+              <xsl:sequence select="$step1"/>
+            </xsl:map-entry>
+            
+            <!-- step 2 -->
+            <!-- move/reposition notes to comply with frontend requirements -->              
+            <xsl:variable name="step2" as="node()" select="dsl:step2($step1)"/>
+            <xsl:map-entry key="'step2'">
+              <xsl:sequence select="$step2" use-when="$cte-apparatus-export-method='old-style-follow'"/>
+              <!-- skipping repositioning due to new output structure -->
+              <xsl:sequence select="$step1" use-when="$cte-apparatus-export-method='old-style-precede'"/>
+            </xsl:map-entry>
+            
+          </xsl:map>  
+        </xsl:map-entry>
+        
+      </xsl:for-each>
+    </xsl:map>
+  </xsl:variable>
+  
   <xsl:template name="xsl:initial-template">
 
     <xsl:variable name="basepath" select="base-uri() =>tokenize('/') => reverse() => tail() =>reverse() => string-join('/')"/>
@@ -41,21 +93,21 @@
       <xsl:map>
         
         <xsl:for-each select="uri-collection($file-dir||'?select=*.xml')">
-    
+          
           <xsl:variable name="filename" as="xs:string" select="(. => tokenize('/'))[last()]"/>
-    
+          
           <!-- add a step to comment DTD declarations (using uparsed text)? or pre-process externally -->
-    
+          
           <xsl:map-entry key="$filename">
             <xsl:map>
-
+              
               <!-- step 1 -->
               <!-- transform to TEI base format -->
               <xsl:variable name="step1" as="node()" select="dsl:step1(.)"/>
               <xsl:map-entry key="'step1'">
                 <xsl:sequence select="$step1"/>
               </xsl:map-entry>
-
+              
               <!-- step 2 -->
               <!-- move/reposition notes to comply with frontend requirements -->              
               <xsl:variable name="step2" as="node()" select="dsl:step2($step1)"/>
@@ -72,7 +124,7 @@
         
       </xsl:map>
     </xsl:variable>
-    
+
     <xsl:variable name="meta-processed" as="map(*)">
       <xsl:map>
         
@@ -89,6 +141,7 @@
         </xsl:for-each>
       </xsl:map>
     </xsl:variable>
+    
     
     <xsl:variable name="tei-corpus" as="node()">
       <xsl:sequence select="transform(
@@ -233,7 +286,10 @@
     <xsl:sequence select="transform(
       map {
       'stylesheet-location' : 'util/aco-cte-tei_to_tei.xsl',
-      'source-node' : doc($uri)
+      'source-node' : doc($uri),
+      'static-params': map{ 
+      QName('', 'inclusions-map') : $inclusions-pre-processed
+      }
       })?output
       "/>
   </xsl:function>
