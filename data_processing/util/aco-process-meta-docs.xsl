@@ -147,7 +147,9 @@
   <xsl:template match="ref[contains(@rend,'page')]" mode="meta-docs-html">
     <xsl:variable name="page-target" select="@target => replace('^#(.*?)\s.*','$1')"/>
     <xsl:variable name="targeted-page" select="//anchor[contains(@xml:id,$page-target)]/preceding::pb[1]/@n"/>
-    <a href="#page-{$targeted-page}">
+    <xsl:variable name="targeted-page-refined" select="if (matches($targeted-page,'\S')) then $targeted-page else 'XI'"/>
+      
+    <a href="#page-{$targeted-page-refined}">
       <xsl:apply-templates mode="meta-docs-html"/>
     </a>
   </xsl:template>
