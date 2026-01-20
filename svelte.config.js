@@ -11,7 +11,7 @@ const config = {
 		prerender: {
 			handleHttpError: 'warn', //consider removing for production
 			handleMissingId: 'warn', //consider removing for production
-			handleUnseenRoutes: 'warn'
+			handleUnseenRoutes: 'warn' //consider removing for production
 		},
 		adapter: adapter({
 			fallback: '404.html'
