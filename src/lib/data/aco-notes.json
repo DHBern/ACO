@@ -29898,7 +29898,7 @@
           "refstring_text": "über … seien]"
         },
         "CV22-2-10-12-Wie-hat‌1": {
-          "note_content": "Vgl. z.B. oben <a href='' data-type='internal_ref' document='' doc_unit='' document_end='' doc_unit_end='' line_start='' line_end='' debug_cte='#w299s #w322'>CV22,1,11 – 13</a> mit Anm.",
+          "note_content": "Vgl. z.B. oben <a href='../CV22/1?line=11' data-type='internal_ref' document='CV22' doc_unit='1' document_end='CV22' doc_unit_end='1' line_start='11' line_end='13' debug_cte='#w299s #w322'>CV22,1,11 – 13</a> mit Anm.",
           "doc_unit": "CV22-2",
           "refstring_lines": "10 – 12 ",
           "document": "CV22",
@@ -30047,7 +30047,7 @@
           "refstring_text": "Attikos]"
         },
         "CV22-5-6-7-Ich-ihm": {
-          "note_content": "Vgl. CV118,27, ACO I,1,3 S.&nbsp;88,18, wo Kyrill in nämlichem Kontext in sehr ähnlicher Weise über das Verhältnis seiner Gegner zu ihm selbst spricht. Aus der Bemerkung wird außerdem deutlich, dass Kyrill anscheinend weder seine Osterhomilie aus dem Jahre 429 (Hom. pasch. 17) noch seinen oben erwähnten Brief an die Mönche (vgl. <a href='' data-type='internal_ref' document='' doc_unit='' document_end='' doc_unit_end='' line_start='' line_end='' debug_cte='#w199s #w204'>CV22,1,3</a>), in denen er jeweils eindeutig Stellung zu Thesen des Nestorius bezieht, ohne diesen dabei allerdings namentlich zu nennen, als Korrespondenz mit dem Bischof von Konstantinopel verstanden wissen will (vgl. hierzu auch Price/Graumann [2020], S.&nbsp;106 Anm. 45).",
+          "note_content": "Vgl. CV118,27, ACO I,1,3 S.&nbsp;88,18, wo Kyrill in nämlichem Kontext in sehr ähnlicher Weise über das Verhältnis seiner Gegner zu ihm selbst spricht. Aus der Bemerkung wird außerdem deutlich, dass Kyrill anscheinend weder seine Osterhomilie aus dem Jahre 429 (Hom. pasch. 17) noch seinen oben erwähnten Brief an die Mönche (vgl. <a href='../CV22/1?line=3' data-type='internal_ref' document='CV22' doc_unit='1' document_end='CV22' doc_unit_end='1' line_start='3' line_end='3' debug_cte='#w199s #w204'>CV22,1,3</a>), in denen er jeweils eindeutig Stellung zu Thesen des Nestorius bezieht, ohne diesen dabei allerdings namentlich zu nennen, als Korrespondenz mit dem Bischof von Konstantinopel verstanden wissen will (vgl. hierzu auch Price/Graumann [2020], S.&nbsp;106 Anm. 45).",
           "doc_unit": "CV22-5",
           "refstring_lines": "6 – 7 ",
           "document": "CV22",
@@ -30115,7 +30115,7 @@
           "refstring_text": "soll … wird]"
         },
         "CV22-6-4--der-hat": {
-          "note_content": "Vgl. oben <a href='' data-type='internal_ref' document='' doc_unit='' document_end='' doc_unit_end='' line_start='' line_end='' debug_cte='#w690s #w696'>CV22,3,2</a>.",
+          "note_content": "Vgl. oben <a href='../CV22/3?line=2' data-type='internal_ref' document='CV22' doc_unit='3' document_end='CV22' doc_unit_end='3' line_start='2' line_end='2' debug_cte='#w690s #w696'>CV22,3,2</a>.",
           "doc_unit": "CV22-6",
           "refstring_lines": "4",
           "document": "CV22",
@@ -30127,27 +30127,16 @@
         }
       },
       "7": {
-        "CV22-7-33-35⁠⁠-Bald-ist‌1": {
-          "note_content": "Es lässt sich nicht mit Sicherheit sagen, welche Schriften Kyrill mit dieser Äußerung im Blick hat. Nimmt man seine Aussage von oben (vgl. <a>CV22,5,6 – 7</a>) ernst, hatte er zum Zeitpunkt der Abfassung dieses Briefes noch gar keine Kor­res­pon­denz mit Nestorius. Dann könnte sich die Äußerung u.a. auf jeden Fall auf die anstehende Kontaktaufnahme mit diesem beziehen (vgl. auch Price/Graumann [2020], S.&nbsp;108 Anm. 50), also seinen ersten Brief an ihn, in welchem im Übrigen ebenso wie hier die Verbreitung des Briefes an die Mönche (CV1 [Dok. 5]) in Konstantinopel thematisiert wird (vgl. <a href='../CV2/1?line=3' data-type='internal_ref' document='CV2' doc_unit='1' document_end='CV2' doc_unit_end='1' line_start='3' line_end='8' debug_cte='18_CV2_dg.xml#r-AWxwLPdG 18_CV2_dg.xml#r-AWxwLPdG-e'>CV2,1,3 – 8</a>, ACO I,1,1 S.&nbsp;23,26–24,3 [Dok. 18]",
+        "CV22-7-6-9-dass-gefunden": {
+          "note_content": "Der überlieferte Text (<span data-lang='greek'>ἐπειδὴ δὲ αἰτιᾶται</span>) <span data-lang='greek'>ὡς λέξιν ἀσυνήθη εἴρηκεν ἡ γραφὴ ἢ γοῦν ἡ ἁγία σύνοδος θεοτόκον ὀνομάσασα τὴν ἁγίαν παρθένον, ἐρωτάσθωσαν αὐτοὶ ποῦ Χριστοτόκον ἢ θεοδόχον γεγραμμένον</span> ergibt, wie auch schon von Schwartz festgestellt wurde, in dem ge­ge­be­nen Zusammenhang nur schwerlich einen Sinn. Die hier vorliegende Übersetzung basiert auf einem Konkjekturvorschlag von Christoph Riedweg und stellt einen Versuch dar, den griechischen Wortbestand mit der deutlich divergierenden lat. Überlieferung dieser Stelle in Einklang zu bringen; er lautet: <span data-lang='greek'>ἐπειδὴ δὲ αἰτιᾶται ὡς λέξιν ἀσυνήθη [εἴρηκεν ἡ γραφὴ ἢ γοῦν ἡ ἁγία σύνοδος ὀνομάσασα τὴν ἁγίαν παρθένον] </span>〈<span data-lang='greek'>τὸ</span>〉<span data-lang='greek'> θεοτόκον, ἐρωτάσθωσαν αὐτοὶ ποῦ Χριστοτόκον </span>〈<span data-lang='greek'>εἴρηκεν ἡ γραφὴ ὀνομά­σα­σα τὴν ἁγίαν παρθένον ἢ γοῦν ἡ ἁγία σύνοδος</span>〉<span data-lang='greek'> </span>〈<span data-lang='greek'>ἢ ποῦ εὗρον</span>〉<span data-lang='greek'> θεοδόχον γεγραμμένον</span>. In CPal28 (ACO I,5 S.&nbsp;54,17–21) wird der entsprechende Abschnitt wie folgt wiedergegeben: nam quia causatur locutionem inconsuetam flagitari, dei puerperam, id est theotocon virginem sanctam, dicat nobis ipse interrogatus ubi genetricem Christi id est <span data-lang='greek'>ΧΡΙ</span>Ϲ<span data-lang='greek'>ΤΟΤΟΚΟΝ</span>, scribtura loquatur? aut ullum episcopale con­ci­lium <span data-lang='greek'>ΘΕΟΔΟΧΟΝ</span>, id est susceptricem vel capacem deitatis formam nominauerit Christum? (Denn weil er beklagt, dass auf einen ungewöhnlichen Begriff gedrungen werde, [nämlich] dass die heilige Jungfrau ‚Gottesgebärerin‘, d.h. <span data-lang='greek'>θεοτόκος</span>, [zu nennen sei], soll uns der Gefragte selbst sagen, wo die Schrift von der Christusgebärerin, d.h. <span data-lang='greek'>χριστοτόκος</span>, spricht. Oder hat irgendein bischöfliches Konzil sie <span data-lang='greek'>θεοδόχος</span> genannt, d.h. befähigt oder tauglich, die Gestalt der Gottheit, [nämlich] Christus, aufzunehmen?).",
           "doc_unit": "CV22-7",
-          "refstring_lines": "33 – 35 ⁠⁠",
+          "refstring_lines": "6 – 9 ",
           "document": "CV22",
-          "text_end": "ist‌¹",
-          "line_start": "33",
-          "line_end": "35⁠⁠",
-          "text_start": "Bald",
-          "refstring_text": "Bald … ist‌¹]"
-        },
-        "CV22-7-27-29⁠⁠-werde-Ruhe": {
-          "note_content": "Ps 131(132),4. Der Vers schließt dort eigentlich mit den Worten: <span data-lang='greek'>ἕως οὗ εὕρω τόπον τῷ κυρίῳ, σκήνωμα τῷ θεῷ Ιακωβ</span> (bis ich eine Stätte finde für den Herrn, eine Wohnung für den Gott Jakobs).",
-          "doc_unit": "CV22-7",
-          "refstring_lines": "27 – 29 ⁠⁠",
-          "document": "CV22",
-          "text_end": "Ruhe",
-          "line_start": "27",
-          "line_end": "29⁠⁠",
-          "text_start": "werde",
-          "refstring_text": "werde … Ruhe]"
+          "text_end": "gefunden",
+          "line_start": "6",
+          "line_end": "9",
+          "text_start": "dass",
+          "refstring_text": "dass … gefunden]"
         },
         "CV22-7-5--dass-verliert": {
           "note_content": "<span data-lang='greek'>ὡς μολύνεσθαι τὸν ἀναγινώσκοντα</span>: in CPal28 (ACO I,5 S.&nbsp;54,16f.): ut merito de his qui eum scripserunt, dicatur quia principatum in blasphemiis tenent (dass von denen, die ihn geschrieben haben, mit Recht gesagt wird, dass sie den ersten Rang unter den Gotteslästerern einnehmen).",
@@ -30160,6 +30149,17 @@
           "text_start": "dass",
           "refstring_text": "dass … verliert]"
         },
+        "CV22-7-10-11-Wir-betrachten": {
+          "note_content": "Vgl. Loofs, Nestoriana S.&nbsp;276,4f.",
+          "doc_unit": "CV22-7",
+          "refstring_lines": "10 – 11 ",
+          "document": "CV22",
+          "text_end": "betrachten",
+          "line_start": "10",
+          "line_end": "11",
+          "text_start": "Wir",
+          "refstring_text": "Wir … betrachten]"
+        },
         "CV22-7-3--indem-benutzen": {
           "note_content": "<span data-lang='greek'>ξενοεποῦντες</span>: Hapax legomenon.",
           "doc_unit": "CV22-7",
@@ -30171,16 +30171,16 @@
           "text_start": "indem",
           "refstring_text": "indem … benutzen]"
         },
-        "CV22-7-12-16⁠⁠-in-übertragen": {
-          "note_content": "Vgl. <a>CV22,6,5 – 14</a>.",
+        "CV22-7-3--den-herbeirufen": {
+          "note_content": "Vgl. Spr 18,6.",
           "doc_unit": "CV22-7",
-          "refstring_lines": "12 – 16 ⁠⁠",
+          "refstring_lines": "3",
           "document": "CV22",
-          "text_end": "übertragen",
-          "line_start": "12",
-          "line_end": "16⁠⁠",
-          "text_start": "in",
-          "refstring_text": "in … übertragen]"
+          "text_end": "herbeirufen",
+          "line_start": "3",
+          "line_end": "3",
+          "text_start": "den",
+          "refstring_text": "den … herbeirufen]"
         },
         "CV22-7-9-10-Zudem-eingebracht": {
           "note_content": "Dem hier zur Sprache gebrachten Punkt gehen in CPal 28 (ACO I,5 S.&nbsp;54,21–24) noch folgende Worte voraus: in illo enim quaternio quem huc misit nosque vehementer offendit, ita est: <span data-lang='greek'>ΤΗΝ ΘΕΟΔΟΧΟΝ ΤΩΙ ΘΕΩΙ ΣΥΝΘΕΟΛΟΓΩΜΕΝ ΜΟΡΦΗΝ</span>, id est suscep­tri­cem dei formam una ac pari qua deum verbum, deitatis ratione veneremur (Denn in jenem Quaternio, den er hierher geschickt hat und der heftigen Anstoß bei uns erregt, heißt es fol­gen­der­maßen: <span data-lang='greek'>τὴν θεοδόχον τῷ θεῷ λόγῳ συνθεολογῶμεν μορφήν</span>, d.h. wir sollen die Gestalt, die zur Aufnahme Gottes fähig ist, zusammen und auf die gleiche Weise wie das göttliche Wort als Gottheit verehren). Diese offenbar auf die leibliche Gestalt Christi, eben seine <span data-lang='greek'>μορφή</span> bezogene Möglichkeit, den <span data-lang='greek'>θεοδόχος</span>-Begriff zu verwenden, die in der lat. Fassung auch schon im vorangegangenen Satz thematisiert wurde, fehlt in der griechischen Überlieferung gänzlich: Hier geht es ausschließlich um die Anwendung des Begriffes auf Maria, welche im Folgenden in beiden Fassungen als einzige auch noch weiter erörtert werden soll.",
@@ -30192,17 +30192,6 @@
           "line_end": "10",
           "text_start": "Zudem",
           "refstring_text": "Zudem … eingebracht]"
-        },
-        "CV22-7-1-39⁠⁠-Das-mich": {
-          "note_content": "Die lat. Fassung des Briefes bietet einen vollkommen anderen Schluss als die grie­chische, weswegen die Schlusskapitel hier in Synopse präsentiert werden sollen. Während in CV22 von einem Schreiben die Rede ist, welches die Apokrisiare Kyrill zur Begutachtung zugesandt hatten, und in der Reaktion darauf das schon angesprochene Thema eines möglichen Prozesses ge­gen den Alexandriner unter dem Vorsitz von Nestorius (vgl. oben <a>CV22,6,5 – 14</a>) noch einmal auf­genommen wird, wird in CPal28 die ebenfalls im Vorangegangenen schon angesprochene Bereit­schaft Kyrills, Frieden zu schließen, wenn sein Gegner widerrufen sollte (vgl. oben <a>CV22,7,1 – 3</a>), noch einmal betont und ausführlicher formuliert. Für das daraus entstehende Problem hat es bereits verschiedene Lösungsansätze gegeben. So hält Garnier, der Erstherausgeber der Werke des Marius Mercator, den griechischen Schluss für ein dem eigentlichen Brief zunächst lose angefügtes Post­scrip­tum (schedula), welches den ursprünglichen Schluss in der Überlieferung verdrängt habe (vgl. Garnier [1673], Bd.&nbsp;2 S.&nbsp;55f. [= PL 48, Sp.&nbsp;815f.]). Auch Loofs hält den im Griechischen überlieferten Schluss nicht für den ursprünglichen und vermutet in ihm ein separates Schreiben, welches ei­gent­lich vor dem Brief an die Apokrisiare verfasst worden sei (vgl. Loofs [1914], S.&nbsp;32–41). Schwartz, der im Gegensatz zu Loofs schon den Liber Heraclidis des Nestorius kannte, in welchem dieser den griechischen Schluss des Briefes zitiert (vgl. ebd. S.&nbsp;154–156), geht hingegen davon aus, dass eben­die­ser auch der ursprüngliche sei. In dem Schluss der lat. Fassung sieht er eine nachträgliche Ab­än­de­rung, welche von den Apokrisiaren angebracht worden sei, um den Verfasser des Briefes in einem günstigeren Licht erscheinen zu lassen, bevor sie das Schriftstück dem in Kon­stantinopel weilenden Marius Mercator zur Übersetzung übergeben hätten (vgl. Schwartz [1928], S.&nbsp;5 Anm. 2). Vergleicht man die beiden Schlusspartien miteinander, so fällt ins Auge, dass in der Betonung der Bereitschaft, im Kampf um den Glauben notfalls bis zum Äußersten gehen zu wol­len, ihrerseits beide auffällig ähnlich schließen. Diese Beobachtung könnte zusammen mit dem Umstand, dass in beiden Partien auf zuvor schon Erwähntes Bezug genommen wird, auf jeden Fall dafür sprechen, dass wir es hier tatsächlich mit zwei unterschiedlichen Schlüssen zu einem ansonsten im Wesentlichen gleich­lau­ten­den Brief zu tun haben. Die so entstandenen Versionen dürften dann natürlich auch für unter­schied­liche Zwecke bestimmt gewesen sein. Darüber hinaus dürfte aber jegliche Spekulation schwierig werden.",
-          "doc_unit": "CV22-7",
-          "refstring_lines": "1 – 39 ⁠⁠",
-          "document": "CV22",
-          "text_end": "mich",
-          "line_start": "1",
-          "line_end": "39⁠⁠",
-          "text_start": "Das",
-          "refstring_text": "Das … mich]"
         },
         "CV22-7-2-3-solche-herbeirufen": {
           "note_content": "<span data-lang='greek'>ἐὰν ὁμολογηθῇ ἡ πίστις ὀρθὴ καὶ παύσωνται τοῦ λέγειν τοιαῦτα ἅπερ ξενοεποῦντες ἐπικαλοῦνται θάνατον</span>: in CPal28 (ACO I,5 S.&nbsp;54,15f.): vel si talia cesset tandem ali­quan­do praedicare (oder wenn er endlich darauf verzichtet, solches zu verkünden).",
@@ -30236,10 +30225,45 @@
           "line_end": "14",
           "text_start": "den",
           "refstring_text": "den … genannt]"
+        }
+      },
+      "8": {
+        "CV22-8-12-16⁠⁠-in-übertragen": {
+          "note_content": "Vgl. <a>CV22,6,5 – 14</a>.",
+          "doc_unit": "CV22-8",
+          "refstring_lines": "12 – 16 ⁠⁠",
+          "document": "CV22",
+          "text_end": "übertragen",
+          "line_start": "12",
+          "line_end": "16⁠⁠",
+          "text_start": "in",
+          "refstring_text": "in … übertragen]"
         },
-        "CV22-7-ix-xi⁠⁠-Meinen-euch": {
+        "CV22-8-27-29⁠⁠-werde-Ruhe": {
+          "note_content": "Ps 131(132),4. Der Vers schließt dort eigentlich mit den Worten: <span data-lang='greek'>ἕως οὗ εὕρω τόπον τῷ κυρίῳ, σκήνωμα τῷ θεῷ Ιακωβ</span> (bis ich eine Stätte finde für den Herrn, eine Wohnung für den Gott Jakobs).",
+          "doc_unit": "CV22-8",
+          "refstring_lines": "27 – 29 ⁠⁠",
+          "document": "CV22",
+          "text_end": "Ruhe",
+          "line_start": "27",
+          "line_end": "29⁠⁠",
+          "text_start": "werde",
+          "refstring_text": "werde … Ruhe]"
+        },
+        "CV22-8-1-39⁠⁠-Das-mich": {
+          "note_content": "Die lat. Fassung des Briefes bietet einen vollkommen anderen Schluss als die grie­chische, weswegen die Schlusskapitel hier in Synopse präsentiert werden sollen. Während in CV22 von einem Schreiben die Rede ist, welches die Apokrisiare Kyrill zur Begutachtung zugesandt hatten, und in der Reaktion darauf das schon angesprochene Thema eines möglichen Prozesses ge­gen den Alexandriner unter dem Vorsitz von Nestorius (vgl. oben <a>CV22,6,5 – 14</a>) noch einmal auf­genommen wird, wird in CPal28 die ebenfalls im Vorangegangenen schon angesprochene Bereit­schaft Kyrills, Frieden zu schließen, wenn sein Gegner widerrufen sollte (vgl. oben <a>CV22,7,1 – 3</a>), noch einmal betont und ausführlicher formuliert. Für das daraus entstehende Problem hat es bereits verschiedene Lösungsansätze gegeben. So hält Garnier, der Erstherausgeber der Werke des Marius Mercator, den griechischen Schluss für ein dem eigentlichen Brief zunächst lose angefügtes Post­scrip­tum (schedula), welches den ursprünglichen Schluss in der Überlieferung verdrängt habe (vgl. Garnier [1673], Bd.&nbsp;2 S.&nbsp;55f. [= PL 48, Sp.&nbsp;815f.]). Auch Loofs hält den im Griechischen überlieferten Schluss nicht für den ursprünglichen und vermutet in ihm ein separates Schreiben, welches ei­gent­lich vor dem Brief an die Apokrisiare verfasst worden sei (vgl. Loofs [1914], S.&nbsp;32–41). Schwartz, der im Gegensatz zu Loofs schon den Liber Heraclidis des Nestorius kannte, in welchem dieser den griechischen Schluss des Briefes zitiert (vgl. ebd. S.&nbsp;154–156), geht hingegen davon aus, dass eben­die­ser auch der ursprüngliche sei. In dem Schluss der lat. Fassung sieht er eine nachträgliche Ab­än­de­rung, welche von den Apokrisiaren angebracht worden sei, um den Verfasser des Briefes in einem günstigeren Licht erscheinen zu lassen, bevor sie das Schriftstück dem in Kon­stantinopel weilenden Marius Mercator zur Übersetzung übergeben hätten (vgl. Schwartz [1928], S.&nbsp;5 Anm. 2). Vergleicht man die beiden Schlusspartien miteinander, so fällt ins Auge, dass in der Betonung der Bereitschaft, im Kampf um den Glauben notfalls bis zum Äußersten gehen zu wol­len, ihrerseits beide auffällig ähnlich schließen. Diese Beobachtung könnte zusammen mit dem Umstand, dass in beiden Partien auf zuvor schon Erwähntes Bezug genommen wird, auf jeden Fall dafür sprechen, dass wir es hier tatsächlich mit zwei unterschiedlichen Schlüssen zu einem ansonsten im Wesentlichen gleich­lau­ten­den Brief zu tun haben. Die so entstandenen Versionen dürften dann natürlich auch für unter­schied­liche Zwecke bestimmt gewesen sein. Darüber hinaus dürfte aber jegliche Spekulation schwierig werden.",
+          "doc_unit": "CV22-8",
+          "refstring_lines": "1 – 39 ⁠⁠",
+          "document": "CV22",
+          "text_end": "mich",
+          "line_start": "1",
+          "line_end": "39⁠⁠",
+          "text_start": "Das",
+          "refstring_text": "Das … mich]"
+        },
+        "CPal28-ix-xi⁠⁠-Meinen-euch": {
           "note_content": "Joh 14,27.",
-          "doc_unit": "CV22-7",
+          "doc_unit": "CPal28",
           "refstring_lines": "ix – xi ⁠⁠",
           "document": "CV22",
           "text_end": "euch",
@@ -30248,31 +30272,9 @@
           "text_start": "Meinen",
           "refstring_text": "Meinen … euch]"
         },
-        "CV22-7-6-9-dass-gefunden": {
-          "note_content": "Der überlieferte Text (<span data-lang='greek'>ἐπειδὴ δὲ αἰτιᾶται</span>) <span data-lang='greek'>ὡς λέξιν ἀσυνήθη εἴρηκεν ἡ γραφὴ ἢ γοῦν ἡ ἁγία σύνοδος θεοτόκον ὀνομάσασα τὴν ἁγίαν παρθένον, ἐρωτάσθωσαν αὐτοὶ ποῦ Χριστοτόκον ἢ θεοδόχον γεγραμμένον</span> ergibt, wie auch schon von Schwartz festgestellt wurde, in dem ge­ge­be­nen Zusammenhang nur schwerlich einen Sinn. Die hier vorliegende Übersetzung basiert auf einem Konkjekturvorschlag von Christoph Riedweg und stellt einen Versuch dar, den griechischen Wortbestand mit der deutlich divergierenden lat. Überlieferung dieser Stelle in Einklang zu bringen; er lautet: <span data-lang='greek'>ἐπειδὴ δὲ αἰτιᾶται ὡς λέξιν ἀσυνήθη [εἴρηκεν ἡ γραφὴ ἢ γοῦν ἡ ἁγία σύνοδος ὀνομάσασα τὴν ἁγίαν παρθένον] </span>〈<span data-lang='greek'>τὸ</span>〉<span data-lang='greek'> θεοτόκον, ἐρωτάσθωσαν αὐτοὶ ποῦ Χριστοτόκον </span>〈<span data-lang='greek'>εἴρηκεν ἡ γραφὴ ὀνομά­σα­σα τὴν ἁγίαν παρθένον ἢ γοῦν ἡ ἁγία σύνοδος</span>〉<span data-lang='greek'> </span>〈<span data-lang='greek'>ἢ ποῦ εὗρον</span>〉<span data-lang='greek'> θεοδόχον γεγραμμένον</span>. In CPal28 (ACO I,5 S.&nbsp;54,17–21) wird der entsprechende Abschnitt wie folgt wiedergegeben: nam quia causatur locutionem inconsuetam flagitari, dei puerperam, id est theotocon virginem sanctam, dicat nobis ipse interrogatus ubi genetricem Christi id est <span data-lang='greek'>ΧΡΙ</span>Ϲ<span data-lang='greek'>ΤΟΤΟΚΟΝ</span>, scribtura loquatur? aut ullum episcopale con­ci­lium <span data-lang='greek'>ΘΕΟΔΟΧΟΝ</span>, id est susceptricem vel capacem deitatis formam nominauerit Christum? (Denn weil er beklagt, dass auf einen ungewöhnlichen Begriff gedrungen werde, [nämlich] dass die heilige Jungfrau ‚Gottesgebärerin‘, d.h. <span data-lang='greek'>θεοτόκος</span>, [zu nennen sei], soll uns der Gefragte selbst sagen, wo die Schrift von der Christusgebärerin, d.h. <span data-lang='greek'>χριστοτόκος</span>, spricht. Oder hat irgendein bischöfliches Konzil sie <span data-lang='greek'>θεοδόχος</span> genannt, d.h. befähigt oder tauglich, die Gestalt der Gottheit, [nämlich] Christus, aufzunehmen?).",
-          "doc_unit": "CV22-7",
-          "refstring_lines": "6 – 9 ",
-          "document": "CV22",
-          "text_end": "gefunden",
-          "line_start": "6",
-          "line_end": "9",
-          "text_start": "dass",
-          "refstring_text": "dass … gefunden]"
-        },
-        "CV22-7-10-11-Wir-betrachten": {
-          "note_content": "Vgl. Loofs, Nestoriana S.&nbsp;276,4f.",
-          "doc_unit": "CV22-7",
-          "refstring_lines": "10 – 11 ",
-          "document": "CV22",
-          "text_end": "betrachten",
-          "line_start": "10",
-          "line_end": "11",
-          "text_start": "Wir",
-          "refstring_text": "Wir … betrachten]"
-        },
-        "CV22-7-xxiv-xxix⁠⁠-Wenn-schicken": {
-          "note_content": "Auch in seinem ersten Brief an Nestorius stellt Kyrill ein Einlenken desselben, speziell die Anerkennung des <span data-lang='greek'>θεοτόκος</span>-Titels, als Bedingung dafür heraus, dass wieder Friede in der Kirche einkehren könne (vgl. <a href='../CV2/3?line=14' data-type='internal_ref' document='CV2' doc_unit='3' document_end='CV2' doc_unit_end='3' line_start='14' line_end='19' debug_cte='18_CV2_dg.xml#r-AWxxWnrN 18_CV2_dg.xml#r-AWxxWnrN-e'>CV2,3,14 – 19</a>, ACO I,1,1 S.&nbsp;24,24–27 [Dok. 18]). Anders als hier gibt er jedoch dort keine Form vor, wie dies zu geschehen hab",
-          "doc_unit": "CV22-7",
+        "CPal28-xxiv-xxix⁠⁠-Wenn-schicken": {
+          "note_content": "Auch in seinem ersten Brief an Nestorius stellt Kyrill ein Einlenken desselben, speziell die Anerkennung des <span data-lang='greek'>θεοτόκος</span>-Titels, als Bedingung dafür heraus, dass wieder Friede in der Kirche einkehren könne (vgl. <a>CV2,3,14 – 19</a>, ACO I,1,1 S.&nbsp;24,24–27 [Dok. 18]). Anders als hier gibt er jedoch dort keine Form vor, wie dies zu geschehen hab",
+          "doc_unit": "CPal28",
           "refstring_lines": "xxiv – xxix ⁠⁠",
           "document": "CV22",
           "text_end": "schicken",
@@ -30281,20 +30283,9 @@
           "text_start": "Wenn",
           "refstring_text": "Wenn … schicken]"
         },
-        "CV22-7-3--den-herbeirufen": {
-          "note_content": "Vgl. Spr 18,6.",
-          "doc_unit": "CV22-7",
-          "refstring_lines": "3",
-          "document": "CV22",
-          "text_end": "herbeirufen",
-          "line_start": "3",
-          "line_end": "3",
-          "text_start": "den",
-          "refstring_text": "den … herbeirufen]"
-        },
-        "CV22-7-xix-xxix⁠⁠-Der-schicken": {
+        "CPal28-xix-xxix⁠⁠-Der-schicken": {
           "note_content": "Vgl. oben den Beginn von Kap. 7.",
-          "doc_unit": "CV22-7",
+          "doc_unit": "CPal28",
           "refstring_lines": "xix – xxix ⁠⁠",
           "document": "CV22",
           "text_end": "schicken",
@@ -30302,6 +30293,17 @@
           "line_end": "xxix⁠⁠",
           "text_start": "Der",
           "refstring_text": "Der … schicken]"
+        },
+        "CV22-8-33-35⁠⁠-Bald-ist‌1": {
+          "note_content": "Es lässt sich nicht mit Sicherheit sagen, welche Schriften Kyrill mit dieser Äußerung im Blick hat. Nimmt man seine Aussage von oben (vgl. <a>CV22,5,6 – 7</a>) ernst, hatte er zum Zeitpunkt der Abfassung dieses Briefes noch gar keine Kor­res­pon­denz mit Nestorius. Dann könnte sich die Äußerung u.a. auf jeden Fall auf die anstehende Kontaktaufnahme mit diesem beziehen (vgl. auch Price/Graumann [2020], S.&nbsp;108 Anm. 50), also seinen ersten Brief an ihn, in welchem im Übrigen ebenso wie hier die Verbreitung des Briefes an die Mönche (CV1 [Dok. 5]) in Konstantinopel thematisiert wird (vgl. <a>CV2,1,3 – 8</a>, ACO I,1,1 S.&nbsp;23,26–24,3 [Dok. 18]",
+          "doc_unit": "CV22-8",
+          "refstring_lines": "33 – 35 ⁠⁠",
+          "document": "CV22",
+          "text_end": "ist‌¹",
+          "line_start": "33",
+          "line_end": "35⁠⁠",
+          "text_start": "Bald",
+          "refstring_text": "Bald … ist‌¹]"
         }
       },
       "text": { "CV22-10---":{
@@ -44956,7 +44958,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2026-01-06T13:22:34.962927514+01:00",
+    "generated-on": "2026-01-20T01:09:59.232284011+01:00",
     "description": ""
   }
 }

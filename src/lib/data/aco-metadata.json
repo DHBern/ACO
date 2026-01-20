@@ -222,8 +222,8 @@
       "slug": "CVer3"
     },
     {
-      "acoDocLabel": "Dok. NaN",
-      "unitSlugs": [ "text", "1", "2", "3", "4", "5", "6", "7" ],
+      "acoDocLabel": "Dok. 8",
+      "unitSlugs": [ "text", "1", "2", "3", "4", "5", "6", "7", "8" ],
       "schwartzSlug": "CV22",
       "schwartzNum": "22",
       "type": "CV",
@@ -235,7 +235,8 @@
         "4": [ "61", "61" ],
         "5": [ "61", "61" ],
         "6": [ "61", "62" ],
-        "7": [ "62", "66" ],
+        "7": [ "62", "63" ],
+        "8": [ "63", "66" ],
         "text": [ "58", "58" ]
       },
       "content": {
@@ -243,11 +244,11 @@
         "footnotes_head": [  ],
         "inhalt": "<p><span data-type='head_key'>Inhalt: Kyrill reagiert auf ein Schreiben, das ihm seine Apokrisiare zugesandt haben, um ihm von den aktuellen Entwicklungen in Konstantinopel zu berichten und ihm angesichts dessen mögliche Maßnahmen zu unterbreiten. Der Angeschriebene bezieht zu den Vor­würfen Stellung, die in der Kaiserstadt von seinen Gegnern gegen ihn vorgebracht werden, und gibt seinen Botschaftern Anweisungen, wie im Weiteren zu verfahren sei.</span> Inhalt: Kyrill reagiert auf ein Schreiben, das ihm seine Apokrisiare zugesandt haben, um ihm von den aktuellen Entwicklungen in Konstantinopel zu berichten und ihm angesichts dessen mögliche Maßnahmen zu unterbreiten. Der Angeschriebene bezieht zu den Vor­würfen Stellung, die in der Kaiserstadt von seinen Gegnern gegen ihn vorgebracht werden, und gibt seinen Botschaftern Anweisungen, wie im Weiteren zu verfahren sei.</p>"
       },
-      "unitLabelsLong": [ "text", "1", "2", "3", "4", "5", "6", "7" ],
-      "acoDocNum": "NaN",
+      "unitLabelsLong": [ "text", "1", "2", "3", "4", "5", "6", "7", "8" ],
+      "acoDocNum": "8",
       "pageStart": "58",
       "pageEnd": "66",
-      "unitLabels": [ "text", "(1)", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)" ],
+      "unitLabels": [ "text", "(1)", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)", "text" ],
       "slug": "CV22"
     },
     {
@@ -2742,7 +2743,7 @@
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2026-01-06T13:22:15.338321409+01:00",
+    "generated-on": "2026-01-20T01:09:40.644577726+01:00",
     "description": ""
   }
 }
