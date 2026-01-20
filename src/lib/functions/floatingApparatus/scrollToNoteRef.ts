@@ -1,5 +1,5 @@
 export function scrollToNoteRef(id) {	
-    const elContainer = document.querySelector('.containerContent');
+    const elContainer = document.querySelector('.containerContentInner');
     const elNoteRef = document.querySelector(`[data-type=note-start][data-id=${id}]`);
 
     // Scroll to note

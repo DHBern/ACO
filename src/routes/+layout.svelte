@@ -37,8 +37,7 @@
 		{ name: 'Suche', path: '', slug: '/suche' },
 		{ name: 'Literaturverzeichnis', path: '/dokumente/vol1', slug: '/literatur' },
 		{ name: 'Bibelstellen', path: '', slug: '/bibelstellen' },
-		{ name: 'Geovisualisierung', path: '', slug: '/karte' },
-		{ name: 'Bibliographie', path: '', slug: '/bibliographie' }
+		{ name: 'Geovisualisierung', path: '', slug: '/karte' }
 	];
 
 	onMount(() => {
@@ -62,14 +61,15 @@
 		onclick={() => {
 			openStateAbbreviations = !openStateAbbreviations;
 			openStateMenu = false; // close menu
-		}}>Abkürzungsverzeichnis</button
+		}}
+		>Abkürzungsverzeichnis</button
 	>
 {/snippet}
 
 <!-- Snippet Lightswitch -->
 {#snippet lightswitch()}
 	<Switch
-		class="**:text-lx"
+		class="**:text-lg"
 		name="mode"
 		bind:checked={isDark.val}
 		onCheckedChange={handleToggleLightswitch}
@@ -93,7 +93,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<!-- Menu -->
-	<AppBar class="bg-primary-400-600 flex items-center justify-between px-2 py-0">
+	<AppBar class="bg-primary-400-600 flex flex-row items-center justify-between px-2 py-0">
 		<!-- ACO-Logo / Home -->
 		<AppBar.Lead class="m-0 flex items-center p-0">
 			<a class="flex items-center py-2" href={`${base}/`}>

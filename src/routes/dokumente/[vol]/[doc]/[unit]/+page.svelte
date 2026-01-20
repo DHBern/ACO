@@ -3,10 +3,7 @@
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import { onMount, tick } from 'svelte';
-	import { copyWithoutLinebreaks } from '../../../globals.svelte.js';
-
-	import { useSearchParams } from 'runed/kit';
-	import { z } from 'zod';
+	import { annotVisible, copyWithoutLinebreaks } from '../../../globals.svelte.js';
 
 	import LoadButton from './LoadButton.svelte';
 	import Note from './Note.svelte';
@@ -26,62 +23,11 @@
 	let finishedInitScroll = $state(false);
 	let finishedInitLoading = $state(false);
 	let elContainerContent = $state<HTMLElement>();
+	let elContainerContentInner = $state<HTMLElement>();
 
 	let visibleUnits = $state([]);
 	let latestUnitLoadedDuringCurrentScroll: string | null = $state(null);
 
-	// --- Handle search params ---------------------------
-
-	// Get boundaries of data-line and data-page
-	function getCurrentMinMaxAttribute(html, minmax: 'min' | 'max', attr = '') {
-		if (!html) return 0;
-		const re = new RegExp(`data-${attr}=['"]?(\\d+)['"]?`, 'g');
-		let match;
-		if (minmax === 'max') {
-			let max = 0;
-			while ((match = re.exec(html)) !== null) {
-				const v = Number(match[1]);
-				if (v > max) max = v;
-			}
-			return max;
-		} else if (minmax === 'min') {
-			let min = 1e9;
-			while ((match = re.exec(html)) !== null) {
-				const v = Number(match[1]);
-				if (v < min) min = v;
-			}
-			return min;
-		}
-	}
-	const maxLine = getCurrentMinMaxAttribute(data.unitText, 'max', 'line'); // runtime number
-	const maxPage = getCurrentMinMaxAttribute(data.unitText, 'max', 'page'); // runtime number
-	const minPage = getCurrentMinMaxAttribute(data.unitText, 'min', 'page'); // runtime number
-
-	// Runed useSearchParams
-	const params = useSearchParams(
-		z.object({
-			line: z.coerce
-				.number()
-				.int()
-				.default(1)
-				// clamp between 1 and maxLine
-				.transform((n) => {
-					// guard NaN from z.coerce; default to 1
-					const v = Number.isFinite(n) ? n : 1;
-					return Math.min(Math.max(v, 1), maxLine);
-				}),
-			page: z.coerce
-				.number()
-				.int()
-				.default(1)
-				// clamp between 1 and maxPage
-				.transform((n) => {
-					// guard NaN from z.coerce; default to 1
-					const v = Number.isFinite(n) ? n : 1;
-					return Math.min(Math.max(v, minPage), maxPage);
-				})
-		})
-	);
 
 	// --- Collect Loaded Units in Array ---------------------------
 
@@ -284,22 +230,21 @@
 			);
 
 			// scroll content
-			const elContainer = document.querySelector('.containerContent');
 			if (page.url.searchParams.get('line')) {
 				const elLine = document.querySelector(
-					`[data-unit='${data.slug_unit}'] [data-line='${params.line}']`
+					`[data-unit='${data.slug_unit}'] [data-line='${page.url.searchParams.get('line')}']`
 				);
-				// elLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
-				elContainer?.scrollTo({
+				// elLine.scrollIntoView({ behavior: 'smooth', block: 'start' }); // fallback (less precise)
+				elContainerContentInner?.scrollTo({
 					top: elLine?.offsetTop,
 					behavior: 'smooth'
 				});
 			} else if (page.url.searchParams.get('page')) {
 				const elPage = document.querySelector(
-					`[data-unit='${data.slug_unit}'] [data-page='${params.page}']`
+					`[data-unit='${data.slug_unit}'] [data-page='${page.url.searchParams.get('page')}']`
 				);
-				// elPage.scrollIntoView({ behavior: 'smooth', block:'center'});
-				elContainer?.scrollTo({
+				// elPage.scrollIntoView({ behavior: 'smooth', block: 'center' }); // fallback (less precise)
+				elContainerContentInner?.scrollTo({
 					top: elPage?.offsetTop,
 					behavior: 'smooth'
 				});
@@ -332,16 +277,19 @@
 <!-- container must be a positioned for scroll-to-line to work as expected! -->
 <div
 	bind:this={elContainerContent}
-	class="containerContent bg-surface-50-950 relative mx-auto h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1900px] shadow-md"
+	class="bg-surface-50-950 relative mx-auto h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1900px] shadow-md"
 >
 	<div
-		class="from-surface-900/2 pointer-events-none absolute top-0 right-0 left-0 z-10 h-30 bg-gradient-to-b to-transparent"
+		class="from-surface-900/2 pointer-events-none absolute top-0 right-0 left-0 z-10 h-30 bg-linear-to-b to-transparent"
 	></div>
 	<div
-		class="from-surface-900/4 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-30 bg-gradient-to-t to-transparent"
+		class="from-surface-900/4 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-30 bg-linear-to-t to-transparent"
 	></div>
+
+	<!-- .containerContentInner is queried in handleNoteClick.js -->
 	<div
-		class="grid h-full grid-rows-[1fr_auto_1fr] overflow-visible overflow-x-scroll px-[20px] pb-24"
+		class="containerContentInner grid h-full grid-rows-[1fr_auto_1fr] overflow-visible overflow-x-scroll px-[20px] pb-24"
+		bind:this={elContainerContentInner}
 	>
 		<!-- Load Button -->
 		{#if loadedUnits[0].prevSlug}
@@ -355,9 +303,16 @@
 			/>
 		{/if}
 		<!-- Units -->
-		<div class="row-span-1 row-start-2 grid grid-cols-[75px_25px_auto_1fr] gap-6">
+		<div
+			class={[
+				'row-span-1 row-start-2 mx-auto grid w-full gap-6',
+				annotVisible.value
+					? 'grid-cols-[auto_75px_25px_auto_1fr]'
+					: 'grid-cols-[auto_75px_25px_auto_0px]'
+			]}
+		>
 			<!-- Page Numbers -->
-			<div class="containerPageNums col-span-1 col-start-1" data-sveltekit-noscroll>
+			<div class="containerPageNums col-span-1 col-start-2" data-sveltekit-noscroll>
 				{#each loadedUnits as unit (unit.slug)}
 					{@const path = `${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
 					{@html generatePageNumbers(unit.text, path)}
@@ -365,7 +320,7 @@
 			</div>
 
 			<!-- Line Numbers -->
-			<div class="containerLineNums col-span-1 col-start-2" data-sveltekit-noscroll>
+			<div class="containerLineNums col-span-1 col-start-3" data-sveltekit-noscroll>
 				{#each loadedUnits as unit (unit.slug)}
 					{@const path = `${base}/dokumente/${data.slug_vol}/${data.slug_doc}/${unit.slug}`}
 					{@html generateLineNumbers(unit.text, path)}
@@ -376,7 +331,7 @@
 			<div
 				bind:this={mainTextContainer}
 				class={[
-					'containerText maintext relative col-span-1 col-start-3',
+					'containerText maintext relative col-start-4',
 					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 				]}
 			>
@@ -395,7 +350,7 @@
 			<!-- Notes -->
 			<div
 				class={[
-					'containerNotes relative col-span-3 col-start-1 transition-all duration-1000 lg:col-span-1 lg:col-start-4 lg:row-span-2 lg:row-start-1',
+					'containerNotes relative col-span-3 col-start-2 transition-all duration-1000 lg:col-span-1 lg:col-start-5 lg:row-span-2 lg:row-start-1',
 					copyWithoutLinebreaks.value && 'copyWithoutLinebreaks'
 				]}
 			>
@@ -412,7 +367,6 @@
 					{/each}
 				{/each}
 			</div>
-
 			<!-- Popups for multiple notes over same place -->
 			{#if multiMarkPopupStore.slugs.length > 0}
 				<MultiMarkPopup
@@ -470,11 +424,11 @@
 	}
 
 	/* Highlights in Text */
-	.containerText :global(.marksVisible span[data-ids]) {
+	.containerText :global(.annotVisible span[data-ids]) {
 		@apply text-surface-950-50 bg-warning-100/40 dark:bg-warning-700 [&.multiple-ids]:bg-warning-300/70 dark:[&.multiple-ids]:bg-warning-200 cursor-pointer;
 	}
 
-	.containerText :global(.marksVisible span[data-type='mark'].highlighted) {
+	.containerText :global(.annotVisible span[data-type='mark'].highlighted) {
 		@apply bg-secondary-200 dark:bg-secondary-500! text-surface-950 dark:text-surface-50;
 	}
 </style>

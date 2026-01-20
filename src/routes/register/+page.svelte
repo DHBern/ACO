@@ -8,7 +8,8 @@
 
 	function convertUnit(unit) {
 		if (unit[0] === 'Z') {
-			return `?line=${unit.slice(2)}`;
+			//! Beware: This assumes that line-references are only present in single-unit documents (i.e. unit="text"), which is true for Band I but may change in Band II/III
+			return `/text?line=${unit.slice(2)}`;
 		} else {
 			return `/${unit}`;
 		}
@@ -32,7 +33,7 @@
 									<span data-type="register-doc-key">{docKey}</span>
 									{#each dataObject[idx]['loc-s'][docKey] as unit}
 										<a
-											href={`${base}/dokumente/1/${docKey}${convertUnit(unit)}`}
+											href={`${base}/dokumente/vol1/${docKey}${convertUnit(unit)}`}
 											data-type="register-unit"
 											target="_blank"
 											rel="noopener noreferrer">{unit}</a

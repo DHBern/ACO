@@ -7,7 +7,7 @@
 	import { generateMainText } from '$lib/functions/protoHTMLconversion';
 	import { extractNoteIds } from '$lib/functions/protoHTMLconversion/extractNoteIds.js';
 	import { onMount } from 'svelte';
-	import { marksVisible } from '../../../globals.svelte.js';
+	import { annotVisible } from '../../../globals.svelte.js';
 
 	let {
 		slug,
@@ -69,7 +69,7 @@
 
 <!-- 'whitespace-nowrap' instead of 'truncate' would make text overflow -->
 <div
-	class={['truncate', marksVisible.value && 'marksVisible']}
+	class={['truncate', annotVisible.value && 'annotVisible']}
 	data-unit={slug}
 	use:addSpanHandlers
 	bind:this={el}
