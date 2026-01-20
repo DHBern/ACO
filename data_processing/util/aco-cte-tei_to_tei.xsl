@@ -284,10 +284,10 @@
   <xsl:template match="p[@rendition='#rp-kopf']" mode="metadata">
     <item>
       <title>
-        <xsl:apply-templates select="hi[@rendition='#rf-kursiv_fett' or matches(@rend,'font-style:italic;')]" mode="metadata"/>
+        <xsl:apply-templates select="hi[@rendition='#rf-kursiv_fett' or matches(@rend,'font-style:italic;font-weight:bold;')]" mode="metadata"/>
       </title>
       <p>
-        <xsl:apply-templates select="hi[@rendition=('#rf-kursiv','#rf-griechisch') or matches(@rend,'font-style:italic;')]" mode="metadata"/>
+        <xsl:apply-templates select="hi[@rendition=('#rf-kursiv','#rf-griechisch') or matches(@rend,'font-style:italic;$')]" mode="metadata"/>
       </p>
     </item>
   </xsl:template>
