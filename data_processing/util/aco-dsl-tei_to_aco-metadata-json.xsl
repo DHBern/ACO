@@ -111,6 +111,9 @@
             <xsl:when test="contains(.,',')">
               <string>{. => tokenize(',') => tail() => string-join('-') => util:sanitizeForJS()}</string>
             </xsl:when>
+            <xsl:when test="not(parent::tei:div//tei:p)">
+              <string>{.}</string>
+            </xsl:when>
             <xsl:otherwise>
               <string>text</string>
             </xsl:otherwise>
@@ -151,8 +154,15 @@
                   <string>{. => replace('(^[\[\(]+\d+[\]\)]+).*','$1','s') => normalize-space()}</string>
                 </xsl:for-each>
               </xsl:when>
-              <xsl:otherwise>
+              <!-- special case: CV22 -->
+              <xsl:when test="matches(.,'^[\[\(]+\d+.+?[\]\)]+')">
+                <string>{. => replace('(^[\[\(]+\d+.+?[\]\)]+).*','$1','s') => normalize-space()}</string>
+              </xsl:when>
+              <xsl:when test="$div//tei:p">
                 <string>text</string>
+              </xsl:when>
+              <xsl:otherwise>
+                <string>{$div/@n}</string>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:for-each>
