@@ -468,9 +468,9 @@
         <xsl:attribute name="rend">#reglet</xsl:attribute>
       </xsl:if>
       <!--<xsl:if test=".//milestone[@unit='chapterline'][1][@n=2]">-->
-      <xsl:if test="(.//milestone[@unit='chapterline'])[1][@n=2] and 
+      <xsl:if test="(.//milestone[@unit='chapterline'])[1][@n='2' or @n='ii'] and 
         not(./preceding-sibling::p[1][matches(@rendition,'#rp-[p|Einleitungstext]')]//milestone[@unit='chapterline'])">
-        <lb n="1"/><xsl:comment>synthesised!</xsl:comment>
+        <lb n="{if ((.//milestone[@unit='chapterline'])[1][@n='ii']) then 'i' else '1'}"/><xsl:comment>synthesised!</xsl:comment>
       </xsl:if>
       <xsl:apply-templates mode="text"/>
     </p>

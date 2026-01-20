@@ -50,5 +50,18 @@
     <xsl:variable name="anchor" select="if (parent::anchor) then '_anchor' else ''"/>
     <xsl:attribute name="{name()}" select="(. => tokenize('\s')) ! ('#'||($prefix => replace('^\d*[a-c]?_',''),. => substring-after('#')) => string-join('_') => concat($anchor))"/>
   </xsl:template>
+  
+  <!-- CPal28 uses line milestones instead of chapterline -->
+  <xsl:template match="milestone[@unit='line']">
+    <xsl:copy-of select="."/>
+    <xsl:if test="$prefix[contains(.,'CPal28')]">
+      <milestone unit="chapterline">
+        <xsl:sequence select="@* except @unit"/>
+      </milestone>
+    </xsl:if>
+  </xsl:template>
+  <xsl:template match="milestone[@unit='chapterline']/@unit">
+    <xsl:attribute name="unit" select="if ($prefix[contains(.,'CPal28')]) then 'chapterline-orig' else data()"/>
+  </xsl:template>
     
 </xsl:transform>
