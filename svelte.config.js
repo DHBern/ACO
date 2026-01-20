@@ -9,6 +9,8 @@ const config = {
 
 	kit: {
 		prerender: {
+			handleHttpError: 'warn', //consider removing for production
+			handleMissingId: 'warn', //consider removing for production
 			handleUnseenRoutes: 'warn'
 		},
 		adapter: adapter({
