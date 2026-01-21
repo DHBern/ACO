@@ -69,8 +69,7 @@
 				'**:[&_a]:text-secondary-600-400'
 			]}
 		>
-		<!-- //! Ad-hoc replace some of the content -->
-			<p>{@html noteData.note_content.replace('∙','·')}</p>
+			<p>{@html noteData.note_content}</p>
 		</div>
 	</div>
 </div>
