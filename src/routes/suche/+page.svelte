@@ -21,7 +21,7 @@
 	
 	let { data } = $props();
 	
-	let isInfoVisible = $state(true);
+	let isInfoVisible = $state(false);
 	
 	async function search() {
 		if (!query) return;
