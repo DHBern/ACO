@@ -158,9 +158,9 @@
               <xsl:when test="matches(.,'^[\[\(]+\d+.+?[\]\)]+')">
                 <string>{. => replace('(^[\[\(]+\d+.+?[\]\)]+).*','$1','s') => normalize-space()}</string>
               </xsl:when>
-              <xsl:when test="$div//tei:p">
-                <string>text</string>
-              </xsl:when>
+              <!--<xsl:when test="$div//tei:p">
+                <string/>
+              </xsl:when>-->
               <xsl:otherwise>
                 <string>{$div/@n}</string>
               </xsl:otherwise>
