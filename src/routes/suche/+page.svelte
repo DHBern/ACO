@@ -209,7 +209,7 @@
 		<h4 class="h5 mt-15">Nach Dokumenten filtern</h4>
 		<p class="text-base!">Standardmäßig wird in allen Dokumenten gesucht. Mit den beiden Dropdown-Menüs können Sie die Suche jedoch auch auf ein bestimmtes Dokument einschränken. Verwenden Sie das Dropdown-Menü links für die Dokumentenamen nach Schwartz (z.B. CV5) oder das Dropdown-Menü rechts für ACO-Dokumentenummern (z.B. Dok. 24).</p>
 		<h4 class="h5 mt-15">Suchen im Haupttext und in den Anmerkungen</h4>
-		<p class="text-base!">Mit den zwei Checkboxen <code class="font-bold">Text</code> und <code class="font-bold">Anmerkungen</code> können Sie die Suche auf den Haupttext und/oder die darin enthaltenen Anmerkungen eingrenzen. Die Suchresultate in blauen Kästchen entstammen dem  und solche in orangenen Kästchen den Anmerkungen.</p>
+		<p class="text-base!">Mit den zwei Checkboxen <code class="font-bold">Text</code> und <code class="font-bold">Anmerkungen</code> können Sie die Suche auf den Haupttext und/oder die darin enthaltenen Anmerkungen eingrenzen. Die Suchresultate in blauen Kästchen entstammen dem Haupttext und solche in orangenen Kästchen den Anmerkungen.</p>
 	</div>
 </div>
 
