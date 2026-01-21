@@ -199,6 +199,9 @@
     </xsl:copy>
   </xsl:template>
   
+  <!-- correcting character mis-representation: CTE exports contain a character that is meant to represent 'ano teleia'/U+00B7 but actually is the bullet operator/U+2219 -->
+  <xsl:template match="text()">{. => replace('∙','·')}</xsl:template>
+  
  
  
   <!--<xsl:template match="hi[matches(@rendition,'#rf-griechisch')]">

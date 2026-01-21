@@ -669,6 +669,7 @@
   <xsl:template match="hi[contains(@rend,'display:none;')]//text()" mode="text"/>
   <xsl:template match="p[@rendition='#rp-kopf']//text()" mode="text"/>
   
-  <xsl:template match="text()" mode="text">{.}</xsl:template>
+  <!-- correcting character mis-representation: CTE exports contain a character that is meant to represent 'ano teleia'/U+00B7 but actually is the bullet operator/U+2219 -->
+  <xsl:template match="text()" mode="text">{. =>  replace('∙','·')}</xsl:template>
   
 </xsl:stylesheet>
