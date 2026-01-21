@@ -126,6 +126,9 @@
   <xsl:template match="tei:ab" mode="build-text">
     <p>
       <span data-type="title">
+        <xsl:if test="@subtype='smaller'">
+          <xsl:attribute name="data-size" select="'small'"/>
+        </xsl:if>
         <xsl:apply-templates mode="build-text"/>
       </span>
     </p>

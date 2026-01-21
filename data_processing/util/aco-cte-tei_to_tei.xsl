@@ -397,7 +397,7 @@
   <xsl:template match="div[p[@rendition='#rp-kopf']]" mode="text"/>
   
   <xsl:template match="p[@rendition='#rp-Einleitungstext'][not(preceding-sibling::p)]" mode="text">
-    <ab type="acoTitle">
+    <ab type="acoTitle" subtype="smaller">
       <xsl:if test="not(.//milestone[@unit='chapterline' and @n='1'])">
         <xsl:apply-templates select="preceding::milestone[@unit='chapterline'][1]" mode="text"/>
       </xsl:if>
