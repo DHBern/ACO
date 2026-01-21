@@ -184,7 +184,7 @@
 	</form>
 	<!-- Info-Box -->
 	<div class={[!isInfoVisible && "hidden","mx-20 mt-5 mb-10"]}>
-		<h3 class="h4">Kurze Anleitung für die Suche</h3>
+		<h3 class="h4">Anleitung für die Suche</h3>
 		<h4 class="h5 mt-7">Suchbegriffe eingeben</h4>
 		<p class="text-base!">In der Suchfunktion können Sie verschiedene Suchbegriffe verwenden, um Ihre Ergebnisse zu verfeinern. Hier sind einige grundlegende Suchfunktionen:</p>
 		<ul class="list-disc ml-10">
