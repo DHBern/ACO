@@ -487,6 +487,10 @@
     </lb>
   </xsl:template>
   
+  <xsl:template match="lb" mode="text">
+    <xsl:copy-of select="."/>
+  </xsl:template>
+  
   <xsl:template match="milestone[@unit='page']" mode="text">
     <pb n="{@n}"/>
   </xsl:template>
