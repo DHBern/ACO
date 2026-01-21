@@ -17,11 +17,12 @@
 		unitSlug?: string;
 		noteSlug?: string;
 		noteData?: any;
-		selectedNote?: HTMLElement;
+		selectedNote?: any;
 		noteType?: NoteType;
 	} = $props();
 	// let { docSlug, unitSlug, noteSlug, noteData, selectedNote = $bindable(), noteType } = $props();
 	const unit = unitSlug; // copy to prevent it from updating with URL
+
 </script>
 
 <div
