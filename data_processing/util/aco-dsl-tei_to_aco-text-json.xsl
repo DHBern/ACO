@@ -206,8 +206,10 @@
       => replace('(data-line=.{7,13}/a>)\s+','$1')
       (: purge whitespace before hyphen :)
       => replace('\s(.span data-hyphen=)','$1')
-      (: non-breaking space between note spans :)
-      => replace('(data-id=.*?/>)\s+(&lt;.*?data-id=.*?/>)','$1&#xA0;$2')
+      (: non-breaking space between note spans :) (: problem: nbsp/blank don't survive minification in the static build :)
+      (: => replace('(data-id=.*?/>)\s+(&lt;.*?data-id=.*?/>)','$1&#xA0;$2') :)
+      (: put space between non-self-closing span :)
+      => replace('(data-id=[^/]*)/>\s+(&lt;.*?data-id=.*?/>)','$1/> &lt;span/> $2')
       "/>
   </xsl:function>
   
