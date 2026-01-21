@@ -102,6 +102,7 @@
 		e.preventDefault();
 		start = 0;
 		search();
+		isInfoVisible = false;
 	}
 	function nextPage() {
 		start += rows;
@@ -177,7 +178,7 @@
 			class="btn-lg btn preset-filled-surface-900-100 self-center"
 			disabled={loading}>Suchen</button
 		>
-		<button onclick={()=>{isInfoVisible = !isInfoVisible}} class="m-0 p-0 self-center">
+		<button onclick={(e)=>{e.preventDefault(); isInfoVisible = !isInfoVisible;}} class="m-0 p-0 self-center">
 			<InfoIcon color="grey" class="ml-1 inline-block"></InfoIcon>
 		</button>
 		<div class="hidden flex-grow lg:block"></div>
