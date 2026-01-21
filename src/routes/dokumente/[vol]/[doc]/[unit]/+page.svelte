@@ -299,7 +299,7 @@
 				{data}
 				{loadedUnits}
 				clickHandler={handleAddPrevUnit}
-				classes="row-span-1 row-start-1"
+				classes={["row-span-1 row-start-1", !annotVisible.value && "transform translate-x-[22%]"]}
 			/>
 		{/if}
 		<!-- Units -->
@@ -386,7 +386,7 @@
 				{data}
 				{loadedUnits}
 				clickHandler={handleAddNextUnit}
-				classes="row-span-1 row-start-3"
+				classes={["row-span-1 row-start-1", !annotVisible.value && "transform translate-x-[22%]"]}
 			/>
 		{/if}
 	</div>
