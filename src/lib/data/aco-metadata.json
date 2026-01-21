@@ -17,7 +17,7 @@
       "acoDocNum": "1",
       "pageStart": "3",
       "pageEnd": "6",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CPal20" ],
       "slug": "CPal20"
     },
     {
@@ -98,7 +98,7 @@
       "acoDocNum": "4",
       "pageStart": "17",
       "pageEnd": "20",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CPal22" ],
       "slug": "CPal22"
     },
     {
@@ -194,7 +194,7 @@
       "acoDocNum": "6",
       "pageStart": "43",
       "pageEnd": "54",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CPal21" ],
       "slug": "CPal21"
     },
     {
@@ -218,7 +218,7 @@
       "acoDocNum": "7",
       "pageStart": "55",
       "pageEnd": "57",
-      "unitLabels": [ "text", "(2)", "(3)" ],
+      "unitLabels": [ "CVer3,1", "(2)", "(3)" ],
       "slug": "CVer3"
     },
     {
@@ -268,7 +268,7 @@
       "acoDocNum": "9",
       "pageStart": "66",
       "pageEnd": "67",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV20" ],
       "slug": "CV20"
     },
     {
@@ -288,7 +288,7 @@
       "acoDocNum": "10",
       "pageStart": "68",
       "pageEnd": "69",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV21" ],
       "slug": "CV21"
     },
     {
@@ -308,7 +308,7 @@
       "acoDocNum": "11",
       "pageStart": "70",
       "pageEnd": "71",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV16" ],
       "slug": "CV16"
     },
     {
@@ -328,7 +328,7 @@
       "acoDocNum": "12",
       "pageStart": "72",
       "pageEnd": "75",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV17" ],
       "slug": "CV17"
     },
     {
@@ -348,7 +348,7 @@
       "acoDocNum": "13",
       "pageStart": "76",
       "pageEnd": "80",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CPal31" ],
       "slug": "CPal31"
     },
     {
@@ -368,7 +368,7 @@
       "acoDocNum": "14",
       "pageStart": "81",
       "pageEnd": "82",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CPal32" ],
       "slug": "CPal32"
     },
     {
@@ -415,7 +415,7 @@
       "acoDocNum": "16",
       "pageStart": "85",
       "pageEnd": "87",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CPal34" ],
       "slug": "CPal34"
     },
     {
@@ -435,7 +435,7 @@
       "acoDocNum": "17",
       "pageStart": "88",
       "pageEnd": "97",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CPal36" ],
       "slug": "CPal36"
     },
     {
@@ -485,7 +485,7 @@
       "acoDocNum": "19",
       "pageStart": "NaN",
       "pageEnd": "NaN",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV3" ],
       "slug": "CV3"
     },
     {
@@ -531,7 +531,7 @@
       "acoDocNum": "21",
       "pageStart": "108",
       "pageEnd": "109",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CPal35" ],
       "slug": "CPal35"
     },
     {
@@ -555,7 +555,7 @@
       "acoDocNum": "22",
       "pageStart": "110",
       "pageEnd": "111",
-      "unitLabels": [ "text", "(2)", "(3)" ],
+      "unitLabels": [ "CVer4,1", "(2)", "(3)" ],
       "slug": "CVer4"
     },
     {
@@ -789,7 +789,7 @@
       "pageStart": "123",
       "pageEnd": "282",
       "unitLabels": [
-        "text",
+        "CV166,I,Praef.",
         "(1)",
         "(2)",
         "(3)",
@@ -800,7 +800,7 @@
         "(8)",
         "(9)",
         "(10)",
-        "text",
+        "CV166,II,Praef.",
         "(1)",
         "(2)",
         "(3)",
@@ -815,14 +815,14 @@
         "(12)",
         "(13)",
         "(14)",
-        "text",
+        "CV166,III,Praef.",
         "(1)",
         "(2)",
         "(3)",
         "(4)",
         "(5)",
         "(6)",
-        "text",
+        "CV166,IV,Praef.",
         "(1)",
         "(2)",
         "(3)",
@@ -830,7 +830,7 @@
         "(5)",
         "(6)",
         "(7)",
-        "text",
+        "CV166,V,Praef.",
         "(1)",
         "(2)",
         "(3)",
@@ -928,28 +928,28 @@
       "pageStart": "283",
       "pageEnd": "293",
       "unitLabels": [
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text",
-        "text"
+        "CPal29,I",
+        "CPal29,II",
+        "CPal29,III",
+        "CPal29,IV",
+        "CPal29,V",
+        "CPal29,VI",
+        "CPal29,VII",
+        "CPal29,VIII",
+        "CPal29,IX",
+        "CPal29,X",
+        "CPal29,XI",
+        "CPal29,XII",
+        "CPal29,XIII",
+        "CPal29,XIV",
+        "CPal29,XV",
+        "CPal29,XVI",
+        "CPal29,XVII",
+        "CPal29,XVIII",
+        "CPal29,XIX",
+        "CPal29,XX",
+        "CPal29,XXI",
+        "CPal29,XXII"
       ],
       "slug": "CPal29"
     },
@@ -997,7 +997,7 @@
       "acoDocNum": "28",
       "pageStart": "299",
       "pageEnd": "301",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CU4" ],
       "slug": "CU4"
     },
     {
@@ -1197,7 +1197,7 @@
       "acoDocNum": "33",
       "pageStart": "327",
       "pageEnd": "328",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV13" ],
       "slug": "CV13"
     },
     {
@@ -1217,7 +1217,7 @@
       "acoDocNum": "34",
       "pageStart": "329",
       "pageEnd": "330",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV15" ],
       "slug": "CV15"
     },
     {
@@ -1301,7 +1301,7 @@
       "acoDocNum": "37",
       "pageStart": "351",
       "pageEnd": "353",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV24" ],
       "slug": "CV24"
     },
     {
@@ -1321,7 +1321,7 @@
       "acoDocNum": "38",
       "pageStart": "354",
       "pageEnd": "355",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV145" ],
       "slug": "CV145"
     },
     {
@@ -2736,14 +2736,14 @@
       "acoDocNum": "44",
       "pageStart": "NaN",
       "pageEnd": "NaN",
-      "unitLabels": [ "text" ],
+      "unitLabels": [ "CV23" ],
       "slug": "CV23"
     }
   ],
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2026-01-21T20:19:25.899713424+01:00",
+    "generated-on": "2026-01-21T20:36:03.321353703+01:00",
     "description": ""
   }
 }
