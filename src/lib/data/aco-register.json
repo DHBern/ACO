@@ -444,12 +444,12 @@
           "CV13": [ "CV13,Z.4" ],
           "CV24": [ "CV24,Z.1", "CV24,Z.9" ],
           "CVer2": [ "CVer2,1", "CVer2,18" ],
-          "Pal36": [ "Pal36,Z.2", "Pal36,Z.10", "Pal36,Z.45", "Pal36,Z.76", "Pal36,Z.158f" ],
           "CVer5": [ "CVer5,1", "CVer5,23" ],
           "CV150": [ "CV150,15" ],
-          "CVer6": [ "CVer6,3" ]
+          "CVer6": [ "CVer6,3" ],
+          "CPal36": [ "CPal36,Z.2", "CPal36,Z.10", "CPal36,Z.45", "CPal36,Z.76", "CPal36,Z.158f" ]
         },
-        "print": "CV13,Z.4; CV17,Z.5.39; CV18,1; CV19,1; CV24,Z.1.9; CV25,3; CV144,1.3.4.5; CV145,Z.1.3; CV150,15; CVer1,1; CVer2,1.18; CVer5,1.23; CVer6,3; Pal36,Z.2.10.45.76.158f.",
+        "print": "CV13,Z.4; CV17,Z.5.39; CV18,1; CV19,1; CV24,Z.1.9; CV25,3; CV144,1.3.4.5; CV145,Z.1.3; CV150,15; CVer1,1; CVer2,1.18; CVer5,1.23; CVer6,3; CPal36,Z.2.10.45.76.158f.",
         "loc-s": {
           "CV19": [ "1" ],
           "CV18": [ "1" ],
@@ -461,10 +461,10 @@
           "CV13": [ "Z.4" ],
           "CV24": [ "Z.1", "Z.9" ],
           "CVer2": [ "1", "18" ],
-          "Pal36": [ "Z.2", "Z.10", "Z.45", "Z.76", "Z.158f" ],
           "CVer5": [ "1", "23" ],
           "CV150": [ "15" ],
-          "CVer6": [ "3" ]
+          "CVer6": [ "3" ],
+          "CPal36": [ "Z.2", "Z.10", "Z.45", "Z.76", "Z.158f" ]
         },
         "label": "Konstantinopel"
       },
@@ -2864,7 +2864,7 @@
   "meta": {
     "generated-by": "aco-process-indices.xsl",
     "task": "",
-    "generated-on": "2026-01-21T18:21:18.209038071+01:00",
+    "generated-on": "2026-01-21T20:19:49.761377907+01:00",
     "description": ""
   }
 }
