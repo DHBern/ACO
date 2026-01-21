@@ -203,7 +203,7 @@
     <xsl:param name="input"/>
     <xsl:sequence select="$input
       (: purge whitespace after linebreak :)
-      => replace('(data-line=.{7,10}/a>)\s+','$1')
+      => replace('(data-line=.{7,13}/a>)\s+','$1')
       (: purge whitespace before hyphen :)
       => replace('\s(.span data-hyphen=)','$1')
       (: non-breaking space between note spans :)
