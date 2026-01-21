@@ -176,7 +176,7 @@
                   'id'      : $id,
                   'chapter' : if ($chapter = '') then () else $chapter,
                   'line'    : if ($line = '') then () else $line,
-                  'target'  : '../'||$docId||'/'||($chapter[normalize-space()],'text')[1]||'?line='||$line,
+                  'target'  : '../'||$docId||'/'||($chapter[normalize-space()],'text')[1] => replace('\.','')||'?line='||$line,
                   'context' : $r => string() => normalize-space()
                   },
                 $existing := $acc => map:get($key)
