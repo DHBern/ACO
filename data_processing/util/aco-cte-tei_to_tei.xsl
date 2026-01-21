@@ -406,7 +406,7 @@
   </xsl:template>
   
   <xsl:template match="p[@rendition='#rp-Einleitungstext'][preceding-sibling::p]" mode="text">
-    <ab type="acoInnerTitle">
+    <ab type="acoInnerTitle" subtype="smaller">
       <xsl:apply-templates mode="text"/>
     </ab>
   </xsl:template>
