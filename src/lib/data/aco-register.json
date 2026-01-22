@@ -508,12 +508,12 @@
       },
       {
         "loc": {
-          "CV36": [ "CV36,Z.17" ],
+          "CPal36": [ "CPal36,Z.17" ],
           "CV143": [ "CV143,1" ]
         },
-        "print": "CV143,1; CV36,Z.17",
+        "print": "CV143,1; CPal36,Z.17",
         "loc-s": {
-          "CV36": [ "Z.17" ],
+          "CPal36": [ "Z.17" ],
           "CV143": [ "1" ]
         },
         "label": "Mailand"
@@ -2864,7 +2864,7 @@
   "meta": {
     "generated-by": "aco-process-indices.xsl",
     "task": "",
-    "generated-on": "2026-01-22T00:41:22.546619004+01:00",
+    "generated-on": "2026-01-22T09:44:07.175056651+01:00",
     "description": ""
   }
 }
