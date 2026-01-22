@@ -206,7 +206,7 @@
 			</li>
 			<li>
 				<a
-					href="https://intern.unibe.ch/dienstleistungen/markenauftritt/logo/index_ger.html"
+					href="https://www.etf.uni-bonn.de/de/personen/personen-people/sabine-luetkemeyer"
 					target="_blank"
 					rel="noopener noreferrer">Dr. Sabine Lütkemeyer</a
 				>
