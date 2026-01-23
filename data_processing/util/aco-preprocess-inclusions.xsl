@@ -57,7 +57,7 @@
       ! replace(.,'w182','w182x')"/>
   </xsl:template>
   
-  <!-- CPal28 uses line milestones instead of chapterline -->
+  <!-- CPal28 uses line milestones instead of chapterline (containing roman numerals) -->
   <xsl:template match="milestone[@unit='line']">
     <xsl:copy-of select="."/>
     <xsl:if test="$prefix[contains(.,'CPal28')]">

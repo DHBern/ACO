@@ -481,7 +481,7 @@
   <xsl:template match="milestone[@unit='chapterline']" mode="text">
     <xsl:sequence select="$newline"/>
     <lb n="{@n}">
-      <xsl:if test="matches(preceding-sibling::node()[1],'&#173;$')">
+      <xsl:if test="matches(preceding-sibling::text()[1],'&#173;$')">
         <xsl:attribute name="type" select="'hyphen'"/>
       </xsl:if>
     </lb>
