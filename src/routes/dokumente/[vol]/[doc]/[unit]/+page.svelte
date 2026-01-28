@@ -438,4 +438,10 @@
 	.containerText :global(.annotVisible span[data-type='mark'].highlighted) {
 		@apply bg-secondary-200 dark:bg-secondary-500! text-surface-950 dark:text-surface-50;
 	}
+
+	/* Titles */
+	.containerText :global(span[data-type=title][data-size=small]) {
+		@apply text-base;
+	}
+
 </style>
