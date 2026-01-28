@@ -56,7 +56,7 @@
 					</p>
 				</div>
 				<div class="pt-5 pl-5">
-					<form class="flex gap-3 items-end" onsubmit={(ev)=>{ev.preventDefault(); goto(`${base}/dokumente/vol1?page=${gotoPageNum}`);}}>
+					<form class="flex gap-3 flex-wrap items-end" onsubmit={(ev)=>{ev.preventDefault(); goto(`${base}/dokumente/vol1?page=${gotoPageNum}`);}}>
 						<span class="text-surface-950-50 text-xl">Zu Seite springen:</span>
 						<input class="w-20 input" type="number" min="0" max="533" bind:value={gotoPageNum} placeholder="1" />
 						<button class="btn shrink h-10 preset-filled-secondary-500" type="submit">Anzeigen</button>
