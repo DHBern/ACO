@@ -67,7 +67,7 @@
 					<ul>
 						<li>
 							<p class="text-secondary-500!">
-								<a href="#vol1_doc">&rarr; Sortierung nach ACO-Dokuenten</a>
+								<a href="#vol1_doc">&rarr; Sortierung nach ACO-Dokumenten</a>
 							</p>
 						</li>
 						<li>
