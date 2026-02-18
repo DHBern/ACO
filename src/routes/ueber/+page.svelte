@@ -120,6 +120,7 @@
 
 <!-- Über dieses Projekt -->
 <div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
+	
 	<div>
 		<h1 class="h1">Über dieses Projekt</h1>
 		<h2 class="h2">Die Akten des Konzils von Ephesus 431</h2>
@@ -164,8 +165,8 @@
 			Akten soll schließlich in gedruckter und digitaler Form veröffentlicht werden.
 		</p>
 	</div>
-
-	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
+	
+		<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
 		{@render figure(
 			`${base}/images/kg_projekt_ephesus.jpg`,
 			'Ruinen der Marienkirche in Ephesos',
@@ -178,6 +179,12 @@
 			'Bogen mit Mosaikzyklus in der römischen Kirche Santa Maria Maggiore. Die auf dem Mosaik enthaltenen Motive betonen zum Teil die ‚Gottesmutterschaft‘ Mariens'
 		)}
 	</div>
+
+	<div class="bg-secondary-100-900 border-l-8 border-secondary-500 text-yellow-700 pt-1 pb-5 px-5 my-1" role="alert">
+		<p class="font-bold">Hinweis:</p>
+		<p>Diese Webseite befindet sich derzeit im Aufbau.</p>
+	</div>
+
 </div>
 
 <!-- Ansprechpersonen -->

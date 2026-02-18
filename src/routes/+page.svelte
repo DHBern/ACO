@@ -9,3 +9,8 @@
 	Sprache zu übersetzen, chronologisch zu ordnen und zu kommentieren. Das Projekt wird von der DFG
 	gefördert und ist als Langfristvorhaben auf einen Zeitraum von zehn Jahren angesetzt (2016–2026).
 </p>
+
+<div class="bg-secondary-100-900 border-l-8 border-secondary-500 text-yellow-700 pt-1 pb-5 px-5 my-15" role="alert">
+  <p class="font-bold">Hinweis:</p>
+  <p>Diese Webseite befindet sich derzeit im Aufbau.</p>
+</div>
