@@ -71,7 +71,7 @@
 	<Switch
 		class="**:text-lg"
 		name="mode"
-		bind:checked={isDark.val}
+		checked={isDark}
 		onCheckedChange={handleToggleLightswitch}
 	>
 		<Switch.Control class="data-[state=checked]:bg-secondary-300 bg-surface-200">
@@ -124,7 +124,6 @@
 					{@render abbreviations()}
 				</ul>
 			</nav>
-			<!-- Trail (Smartphone) -->
 		</AppBar.Headline>
 
 		<!-- Spacer -->
