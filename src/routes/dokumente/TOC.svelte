@@ -1,6 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
+	import { base, resolve } from '$app/paths';
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 
 	let { metaData, accordionStateInit = 'vol1' } = $props();
@@ -55,13 +55,13 @@
 						>
 					</p>
 				</div>
-				<!-- <div class="pt-5 pl-5">
-					<form class="flex gap-3 flex-wrap items-end" onsubmit={(ev)=>{ev.preventDefault(); goto(`${base}/dokumente/vol1?page=${gotoPageNum}`);}}>
+				<div class="pt-5 pl-5">
+					<form class="flex gap-3 flex-wrap items-end" onsubmit={(ev)=>{ev.preventDefault(); goto(resolve(`/dokumente/vol1?page=${gotoPageNum}`));}}>
 						<span class="text-surface-950-50 text-xl">Zu Seite springen:</span>
 						<input class="w-20 input" type="number" min="0" max="533" bind:value={gotoPageNum} placeholder="1" />
 						<button class="btn shrink h-10 preset-filled-secondary-500" type="submit">Anzeigen</button>
 					</form>
-				</div> -->
+				</div>
 				<!-- Sitemap -->
 				<nav class="col-span-2 p-5 lg:hidden">
 					<ul>
