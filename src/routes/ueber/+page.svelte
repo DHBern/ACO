@@ -121,7 +121,6 @@
 
 <!-- Über dieses Projekt -->
 <div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
-	
 	<div>
 		<h1 class="h1">Über dieses Projekt</h1>
 		<h2 class="h2">Die Akten des Konzils von Ephesus 431</h2>
@@ -167,7 +166,7 @@
 		</p>
 	</div>
 	
-		<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
+	<div class="mt-5 flex w-full flex-col items-center gap-10 lg:mt-34">
 		{@render figure(
 			`${base}/images/kg_projekt_ephesus.jpg`,
 			'Ruinen der Marienkirche in Ephesos',
