@@ -50,8 +50,8 @@ span[data-lang='greek'] {
 	font-family: 'Gentium Plus', serif;
 	font-weight: 400;
 	font-style: normal;
-	/* font-size: 23px matches size of default OpenSans body text on a Linux Firefox */
-	font-size: 23px; 
+	/* font-size ≈ 23px (1.4375rem) to match default OpenSans body text at 16px root size */
+	font-size: 1.4375rem;
 }
 
 /* Heading */
