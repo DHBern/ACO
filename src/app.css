@@ -27,10 +27,6 @@
 	}
 }
 
-* {
-	font-family: 'OpenSans', sans-serif;
-}
-
 h1 {
 	@apply text-secondary-400 my-5 mt-15;
 }
