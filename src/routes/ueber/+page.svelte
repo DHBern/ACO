@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import { Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
 	import { XIcon } from '@lucide/svelte';
+	import SiteUnderConstruction from '$lib/SiteUnderConstruction.svelte';
 
 	let modalInfo = $state({ path: '', alt: '', caption: '' });
 	let modalVisible = $state(false);
@@ -180,10 +181,7 @@
 		)}
 	</div>
 
-	<div class="bg-secondary-100-900 border-l-8 border-secondary-500 text-yellow-700 pt-1 pb-5 px-5 my-1" role="alert">
-		<p class="font-bold">Hinweis:</p>
-		<p>Diese Webseite befindet sich derzeit im Aufbau.</p>
-	</div>
+	<SiteUnderConstruction />
 
 </div>
 
