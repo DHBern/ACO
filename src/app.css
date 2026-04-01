@@ -27,6 +27,25 @@
 	}
 }
 
+@font-face {
+	font-family: 'NotoSans';
+	src: url('/fonts/NotoSans/NotoSans-Regular.ttf') format('ttf');
+	font-weight: 300 700;
+	font-stretch: 75% 125%;
+	font-style: normal;
+	font-display: swap;
+	font-named-instance: 'Regular';
+}
+@font-face {
+	font-family: 'GentiumPlus';
+	src: url('/fonts/GentiumPlus/GentiumPlus-Regular.ttf') format('ttf');
+	font-weight: 300 700;
+	font-stretch: 75% 125%;
+	font-style: normal;
+	font-display: swap;
+	font-named-instance: 'Regular';
+}
+
 h1 {
 	@apply text-secondary-400 my-5 mt-15;
 }
