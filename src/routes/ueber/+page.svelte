@@ -121,6 +121,7 @@
 
 <!-- Über dieses Projekt -->
 <div class="grid grid-cols-[1fr] gap-10 lg:grid-cols-[2fr_1fr]">
+	
 	<div>
 		<h1 class="h1">Über dieses Projekt</h1>
 		<h2 class="h2">Die Akten des Konzils von Ephesus 431</h2>
