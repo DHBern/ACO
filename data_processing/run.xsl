@@ -31,7 +31,7 @@
   <!-- old-style-precede (default), old-style-follow, app-tags (not implemented) -->
   <xsl:param name="cte-apparatus-export-method" static="true" select="'old-style-precede'"/>
   
-  <xsl:param name="file-dir" static="true" select="'input-dev-new-export'"/>
+  <xsl:param name="file-dir" static="true" select="'input-dir'"/>
 
   <!-- two partial files require pre-processing for later inclusion (left and right column of CV22,8 -->
   <xsl:variable name="inclusions-pre-processed" as="map(*)">
@@ -109,12 +109,19 @@
               </xsl:map-entry>
               
               <!-- step 2 -->
-              <!-- move/reposition notes to comply with frontend requirements -->              
+              <!-- make liber explicit in identifiers/references -->
               <xsl:variable name="step2" as="node()" select="dsl:step2($step1)"/>
               <xsl:map-entry key="'step2'">
-                <xsl:sequence select="$step2" use-when="$cte-apparatus-export-method='old-style-follow'"/>
+                <xsl:sequence select="$step2"/>
+              </xsl:map-entry>
+
+              <!-- step 3 -->
+              <!-- move/reposition notes to comply with frontend requirements -->
+              <xsl:variable name="step3" as="node()" select="dsl:step3($step2)"/>
+              <xsl:map-entry key="'step3'">
+                <xsl:sequence select="$step3" use-when="$cte-apparatus-export-method='old-style-follow'"/>
                 <!-- skipping repositioning due to new output structure -->
-                <xsl:sequence select="$step1" use-when="$cte-apparatus-export-method='old-style-precede'"/>
+                <xsl:sequence select="$step2" use-when="$cte-apparatus-export-method='old-style-precede'"/>
               </xsl:map-entry>
               
             </xsl:map>  
@@ -150,7 +157,7 @@
         'static-params': map{
         QName('', 'files-map') : $tei-pre-processed,
         QName('', 'meta-map') : $meta-processed,
-        QName('', 'use-step') : 'step2' }
+        QName('', 'use-step') : 'step3' }
         })?output
         "/>
     </xsl:variable>
@@ -294,6 +301,16 @@
   </xsl:function>
   
   <xsl:function name="dsl:step2">
+    <xsl:param name="input" as="node()"/>
+    <xsl:sequence select="transform(
+      map {
+      'stylesheet-location' : 'util/tei_to_tei-with-explicit-libri.xsl',
+      'source-node' : $input
+      })?output
+      "/>
+  </xsl:function>
+
+  <xsl:function name="dsl:step3">
     <xsl:param name="input" as="node()"/>
     <xsl:sequence select="transform(
       map {

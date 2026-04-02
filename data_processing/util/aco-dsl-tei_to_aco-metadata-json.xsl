@@ -125,13 +125,13 @@
         <xsl:for-each select=".//tei:text/tei:body/tei:div/@n">
           <xsl:choose>
             <xsl:when test="contains(.,',')">
-              <string>{. => tokenize(',') => tail()}</string>
+              <string>{(. => tokenize(',') => tail()) ! replace(.,'lib','')}</string>
             </xsl:when>
             <!--<xsl:when test="matches(.,'\S')">
               <string>{.}</string>
             </xsl:when>-->
             <xsl:when test="not(parent::tei:div//tei:p)">
-              <string>{.}</string>
+              <string>{. ! replace(.,'lib','')}</string>
             </xsl:when>
             <xsl:otherwise>
               <string>text</string>
@@ -162,7 +162,7 @@
                 <string/>
               </xsl:when>-->
               <xsl:otherwise>
-                <string>{$div/@n}</string>
+                <string>{$div/@n => replace('lib','')}</string>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:for-each>

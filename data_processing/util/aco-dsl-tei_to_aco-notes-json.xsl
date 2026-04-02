@@ -67,21 +67,21 @@
   </xsl:template>
   
   <xsl:template match="tei:TEI">
-    <xsl:variable name="tei-id" select="@xml:id => tokenize('_') => reverse() => head() => replace(',','-')"/>
-    <map key="{$tei-id => util:sanitizeBrackets()}">
+    <xsl:variable name="tei-id" select="util:teiId(@xml:id)"/>
+    <map key="{util:teiId(@xml:id)}">
       <xsl:for-each select="tei:text/tei:body/tei:div">
-        <xsl:variable name="divId" select="@n => replace(',','-')"/>
-        <map key="{($divId => substring-after($tei-id||'-'), 'text')[matches(.,'\S')][1] => util:sanitizeForJS() => util:sanitizeBrackets()}">
+        <map key="{util:divId(@n,$tei-id)}">  
           <xsl:for-each select=".//tei:note">
             <xsl:call-template name="note">
               <xsl:with-param name="teiId" select="$tei-id"/>
-              <xsl:with-param name="divId" select="$divId"/>
+              <xsl:with-param name="divId" select="ancestor::div[@n][1]/@n => replace(',','-')"/>
               <xsl:with-param name="note" select="."/>
             </xsl:call-template>
           </xsl:for-each>
         </map>
       </xsl:for-each>
     </map>
+
   </xsl:template>
   
   <xsl:template name="note">
