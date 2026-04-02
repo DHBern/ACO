@@ -2,7 +2,7 @@
 	import TOC from '../TOC.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import { base, resolve } from '$app/paths';
+	import { resolve } from '$app/paths';
 
 	let { data } = $props();
 
