@@ -1,3 +1,4 @@
+export const prerender = false;
 import type { EntryGenerator } from './$types';
 import { getFirstUnitOfPage } from '$lib/functions/protoHTMLconversion/getFirstUnitOfPage';
 
