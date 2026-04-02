@@ -136,31 +136,35 @@
 		<!-- buffer for large screens to force settings to center-->
 		<div class="hidden flex-grow lg:block"></div>
 
-		<div class="flex flex-col gap-3">
+		<div class="flex flex-col gap-3 justify-between h-[100px]">
 			<span class="label-text font-bold">Suchbegriff</span>
 			<input class="input" bind:value={query} placeholder="Suchbegriffe eingeben..." />
 		</div>
-		<div class="flex flex-col gap-3">
-			<span class="label-text font-bold">Dokument auswählen (Schwartz oder ACO)</span>
-			<div class="flex flex-wrap gap-3">
+		<div class="flex flex-col gap-3 justify-between h-[100px]">
+			<span class="label-text font-bold">Dokument auswählen</span>
+			<div class="flex flex-wrap gap-3 ">
+				<label>Coll.-Nr.
 				<select class="select w-40" onchange={resetDocFilterDok} bind:value={docFilterSchwartz}>
-					<option value="ignore"></option>
+					<!-- <option value="ignore"></option> -->
 					<option value="">Alle Dokumente</option>
 					{#each data.schwartzSlugs as slug}
-						<option value={slug}>{slug}</option>
+					<option value={slug}>{slug}</option>
 					{/each}
 				</select>
+				</label>
+				<label>Dok.-Nr.
 				<select class="select w-40" onchange={resetDocFilterSchwartz} bind:value={docFilterDok}>
-					<option value="ignore"></option>
+					<!-- <option value="ignore"></option> -->
 					<option value="">Alle Dokumente</option>
 					{#each data.docNums as num}
 						<option value={num}>Dok. {num}</option>
 					{/each}
 				</select>
+				</label>
 			</div>
 		</div>
 
-		<div class="flex flex-col gap-3">
+		<div class="flex flex-col gap-3 justify-between h-[100px]">
 			<span class="label-text font-bold">Suchen in</span>
 			<div class="flex flex-wrap gap-3">
 				<label class="flex items-center">
