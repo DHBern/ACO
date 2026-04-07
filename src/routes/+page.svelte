@@ -1,5 +1,5 @@
 <script>
-	import SiteUnderConstruction from "$lib/SiteUnderConstruction.svelte";
+	import SiteUnderConstruction from '$lib/SiteUnderConstruction.svelte';
 
 </script>
 <h1 class="h1">Projekt ACO</h1>
