@@ -475,7 +475,7 @@
       "schwartzNum": "3",
       "type": "CV",
       "title": "Nestorius’ erster Brief an Kyrill",
-      "pageLimits": { "text":[ "NaN", "NaN" ] },
+      "pageLimits": { "text":[ "100", "100" ] },
       "content": {
         "head": "<p><span data-type='head_key'>Edition:</span> Collectio Vaticana 3, ACO I,1,1 S. 25,6–16; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 3125; Coleti (1728–1734), Bd. 3 Sp. 865–868; Mansi, Bd. 4 Sp. 885; PG 77, Sp. 44; Loofs, Nestoriana S. 168f. </p> <p><span data-type='head_key'>Verzeichnisnummern:</span> CPG 5666 </p> <p><span data-type='head_key'>Verfasser:</span> Nestorius von Konstantinopel </p> <p><span data-type='head_key'>Datierung: </span> Ende 429 </p> <p><span data-type='head_key'>Lat. Übersetzungen:</span> Collectio Casinensis 2, ACO I,3 S. 17 </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 115 </p>",
         "footnotes_head": [  ],
@@ -483,8 +483,8 @@
       },
       "unitLabelsLong": [ "text" ],
       "acoDocNum": "19",
-      "pageStart": "NaN",
-      "pageEnd": "NaN",
+      "pageStart": "100",
+      "pageEnd": "100",
       "unitLabels": [ "CV3" ],
       "slug": "CV3"
     },
@@ -2726,7 +2726,7 @@
       "schwartzNum": "23",
       "type": "CV",
       "title": "<em>Sacra</em> an Akakios von Beroia und andere",
-      "pageLimits": { "text":[ "NaN", "NaN" ] },
+      "pageLimits": { "text":[ "533", "533" ] },
       "content": {
         "head": "<p><span data-type='head_key'>Edition: </span> Collectio Vaticana 23, ACO I,1,1 S. 112,21–31; ältere Edd.: Labbé/Cossart (1671–1672), Bd. 3 Sp. 108­7; Mansi, Bd. 5 Sp. 284 </p> <p><span data-type='head_key'>Verzeichnisnummern: </span> CPG 8653 </p> <p><span data-type='head_key'>Verfasser:</span> die Kaiser Theodosius und Valentinianus </p> <p><span data-type='head_key'>Datierung:</span> November 430 </p> <p><span data-type='head_key'>Lat. Übersetzungen: </span> – </p> <p><span data-type='head_key'>Literatur: </span> Price/Graumann (2020), S. 201f. </p>",
         "footnotes_head": [  ],
@@ -2734,8 +2734,8 @@
       },
       "unitLabelsLong": [ "text" ],
       "acoDocNum": "44",
-      "pageStart": "NaN",
-      "pageEnd": "NaN",
+      "pageStart": "533",
+      "pageEnd": "533",
       "unitLabels": [ "CV23" ],
       "slug": "CV23"
     }
@@ -2743,7 +2743,7 @@
   "meta": {
     "generated-by": "aco-dsl-tei_to_aco-metadata-json.xsl",
     "task": "",
-    "generated-on": "2026-04-02T23:34:59.602687618+02:00",
+    "generated-on": "2026-04-07T22:26:18.876829791+02:00",
     "description": ""
   }
 }
