@@ -181,7 +181,7 @@
 		)}
 	</div>
 
-	<SiteUnderConstruction />
+	<SiteUnderConstruction classes="my-1"/>
 
 </div>
 
