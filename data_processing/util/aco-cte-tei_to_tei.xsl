@@ -248,7 +248,19 @@
   </xsl:template>
   
   <xsl:template match="head[@rendition='#rp-heading_1']" mode="heading">
-    <pb n="{following::milestone[@unit='page'][1]/@n => number() -1}"/>
+    <xsl:choose>
+      <!-- special case: very short text (page number cannot be infered from following page) -->
+      <xsl:when test="matches($prefix,'_CV3$')">
+        <pb n="100"/>
+      </xsl:when>
+      <!-- special case: very short text (page number cannot be infered from following page) -->
+      <xsl:when test="matches($prefix,'_CV23$')">
+        <pb n="533"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <pb n="{following::milestone[@unit='page'][1]/@n => number() -1}"/>
+      </xsl:otherwise>
+    </xsl:choose>
     <head n="{note[@type='doc' or @place='right']/p//text()}">
       <xsl:apply-templates mode="heading"/>
     </head>
