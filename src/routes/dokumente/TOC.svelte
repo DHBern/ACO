@@ -69,7 +69,7 @@
 						}}
 					>
 						<span class="text-surface-950-50 text-xl">Zu Seite springen:</span>
-						<input class="w-20 input" type="number" min="0" max="533" bind:value={gotoPageNum} placeholder="1" />
+						<input class="w-20 input" type="number" min="3" max="533" bind:value={gotoPageNum} placeholder="1" />
 						<button class="btn shrink h-10 preset-filled-secondary-500" type="submit">Anzeigen</button>
 					</form>
 				</div>
