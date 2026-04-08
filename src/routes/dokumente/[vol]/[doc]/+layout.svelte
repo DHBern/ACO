@@ -11,7 +11,7 @@
 <div class="containerDocHead mx-auto max-w-[1500px]">
 	<!-- Title -->
 	<h1 class="text-secondary-400-600 mb-2 text-4xl font-bold">
-		{@html data.slug_doc}:
+		{@html data.slug_doc} ({@html data.docMetadata.acoDocLabel}):
 		{@html data.docMetadata.toc_title}
 	</h1>
 

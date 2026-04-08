@@ -14,6 +14,7 @@ export const load: LayoutLoad = async ({params}) => {
 
 	const docMetadata = {
 		slugs: doc?.unitSlugs || [],
+		acoDocLabel: doc?.acoDocLabel || [],
 		labels: doc?.unitLabelsLong || [],
 		content: doc?.content || '',
 		toc_title: doc?.title || ''
