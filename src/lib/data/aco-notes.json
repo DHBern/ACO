@@ -17282,17 +17282,6 @@
           "line_end": "4",
           "text_start": "solche Schriftstücke",
           "refstring_text": "solche Schriftstücke]"
-        },
-        "CVer2-3-16--4-": {
-          "note_content": "Es wurde immer wieder hervorgehoben, dass Coelestin an keiner Stelle des Briefes – wie auch in keinem seiner anderen Briefe in der Causa Nestorius – ausführt, was genau an der Lehre des Nestorius verwerflich ist, und dass er sich auch nicht konstruktiv in den christologischen Streit eingebracht hat (vgl. etwa Caspar [1930–1933], Bd. 1 S.&nbsp;397f.; Graumann [2002b], S.&nbsp;490f.; Krannich [2005], S.&nbsp;6, 108 u. 134; Bevan [2016], S.&nbsp;133). Coelestin bewegt sich hier vielmehr stilistisch ganz in der Tradition des bei den Päpsten besonders beliebten „erbaulichen Mahn- und Trostbriefes“, den Coelestin in all seinen späteren Briefen pflegt, s. Getzeny (1922), S.&nbsp;48–50. Dass Coelestin sich mit seiner Art des Umgangs mit dem christologischen Problem ganz in der päpstlichen Tradition bewegt, betont auch Caspar (1930–1933), Bd. 1 S.&nbsp;398 Anm. 1.",
-          "doc_unit": "CVer2-3",
-          "refstring_lines": "16",
-          "document": "CVer2",
-          "text_end": "4",
-          "line_start": "16",
-          "line_end": "16",
-          "text_start": "4",
-          "refstring_text": "4]"
         }
       },
       "4": {
@@ -17317,6 +17306,17 @@
           "line_end": "2",
           "text_start": "Wir",
           "refstring_text": "Wir … haben]"
+        },
+        "CVer2-4-1--4-": {
+          "note_content": "Es wurde immer wieder hervorgehoben, dass Coelestin an keiner Stelle des Briefes – wie auch in keinem seiner anderen Briefe in der Causa Nestorius – ausführt, was genau an der Lehre des Nestorius verwerflich ist, und dass er sich auch nicht konstruktiv in den christologischen Streit eingebracht hat (vgl. etwa Caspar [1930–1933], Bd. 1 S.&nbsp;397f.; Graumann [2002b], S.&nbsp;490f.; Krannich [2005], S.&nbsp;6, 108 u. 134; Bevan [2016], S.&nbsp;133). Coelestin bewegt sich hier vielmehr stilistisch ganz in der Tradition des bei den Päpsten besonders beliebten „erbaulichen Mahn- und Trostbriefes“, den Coelestin in all seinen späteren Briefen pflegt, s. Getzeny (1922), S.&nbsp;48–50. Dass Coelestin sich mit seiner Art des Umgangs mit dem christologischen Problem ganz in der päpstlichen Tradition bewegt, betont auch Caspar (1930–1933), Bd. 1 S.&nbsp;398 Anm. 1.",
+          "doc_unit": "CVer2-4",
+          "refstring_lines": "1",
+          "document": "CVer2",
+          "text_end": "4",
+          "line_start": "1",
+          "line_end": "1",
+          "text_start": "4",
+          "refstring_text": "4]"
         }
       },
       "5": {
@@ -44958,7 +44958,7 @@
   "meta": {
     "generated-by": "",
     "task": "",
-    "generated-on": "2026-04-07T22:26:43.362612322+02:00",
+    "generated-on": "2026-04-08T20:50:37.207020694+02:00",
     "description": ""
   }
 }
