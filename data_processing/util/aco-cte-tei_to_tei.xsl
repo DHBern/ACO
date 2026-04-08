@@ -166,6 +166,16 @@
   <xsl:template match="div[p/milestone[@n='CV150,224']]/p[@rendition='#rp-p'][1]/milestone[@unit='chapter']" mode="tei-data-fixup"/>
   <xsl:template match="div[p/milestone[@n='CV150,224']]/p[@rendition='#rp-p'][1]/emph[@n='CV150,168']" mode="tei-data-fixup"/>
   
+  <!-- fixup case 3 -->
+  <xsl:template match="div/p[milestone[@unit='page' and @n='308']]" mode="tei-data-fixup">
+    <xsl:comment>chapter milestone added by tei-data-fixup template</xsl:comment>
+    <milestone n="CVer2,4" unit="chapter"/>
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates mode="tei-data-fixup"/>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="div/p/milestone[@unit='chapter' and @n='CVer2,4']" mode="tei-data-fixup"/>
   
   <!-- processing -->
   
@@ -251,7 +261,7 @@
     <xsl:choose>
       <!-- special case: very short text (page number cannot be infered from following page) -->
       <xsl:when test="matches($prefix,'_CV3$')">
-        <pb n="100"/>
+        <pb n="101"/>
       </xsl:when>
       <!-- special case: very short text (page number cannot be infered from following page) -->
       <xsl:when test="matches($prefix,'_CV23$')">

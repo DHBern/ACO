@@ -59,6 +59,10 @@
   
   <!-- CPal28 uses line milestones instead of chapterline (containing roman numerals) -->
   <xsl:template match="milestone[@unit='line']">
+    <!-- no pb in input data for first page -->
+    <xsl:if test="@n='i' or @n='1' and not(preceding-sibling::*[1]/self::milestone[@unit='page'])">
+      <milestone unit="page" n="{if (matches($prefix,'CPal28')) then '64b' else '64'}"/>
+    </xsl:if>
     <xsl:copy-of select="."/>
     <xsl:if test="$prefix[contains(.,'CPal28')]">
       <milestone unit="chapterline">
@@ -68,6 +72,18 @@
   </xsl:template>
   <xsl:template match="milestone[@unit='chapterline']/@unit">
     <xsl:attribute name="unit" select="if ($prefix[contains(.,'CPal28')]) then 'chapterline-orig' else data()"/>
+  </xsl:template>
+  
+  <xsl:template match="milestone[@unit='page']">
+    <!-- make existing pb distinguishable for second column -->
+    <xsl:choose>
+      <xsl:when test="matches($prefix,'CPal28')">
+        <milestone unit="page" n="65b"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy-of select="."/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
     
 </xsl:transform>

@@ -142,7 +142,7 @@
       <array key="unitLabels">
         <xsl:for-each select=".//tei:text/tei:body/tei:div">
           <xsl:variable name="div" select="."/>
-          <xsl:for-each select="(.//text()[matches(.,'\S')])[1]">
+          <xsl:for-each select="(.//text()[not(ancestor::note)][matches(.,'\S')])[1]">
             <!-- if there are numbers in brackets such as "(1)" or "[2]" at the begin of the chapter take these -->
             <xsl:choose>
               <xsl:when test="matches(.,'^[\[\(]+\d+[\]\)]+')">
