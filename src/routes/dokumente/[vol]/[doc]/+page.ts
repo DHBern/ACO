@@ -1,4 +1,4 @@
-export const prerender = false;
+export const prerender = true;
 import type { EntryGenerator } from './$types';
 
 import { metaData } from '$lib/data/aco-metadata.json';

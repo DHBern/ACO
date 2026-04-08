@@ -3,14 +3,20 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
+	import { getFirstUnitOfPage } from '$lib/functions/protoHTMLconversion/getFirstUnitOfPage';
+
 
 	let { data } = $props();
 
+	const pageParam = $derived(page.url.searchParams.get('page'));
+	let pageParamRedirect = $derived(getFirstUnitOfPage(pageParam, data.metaData));
+	
 	onMount(() => {
 		// Redirect to first unit on requested page
-		if (data.pageParam && data.pageParamRedirect.found) {
+		if (pageParam && pageParamRedirect.found) {
 			goto(
-				resolve(`/dokumente/${data.vol}/${data.pageParamRedirect.schwartzSlug}/${data.pageParamRedirect.unitSlug}?page=${data.pageParamRedirect.page}`),
+				resolve(`/dokumente/${data.vol}/${pageParamRedirect.schwartzSlug}/${pageParamRedirect.unitSlug}?page=${pageParamRedirect.page}`),
 				{ replaceState: true }
 			);
 		}
