@@ -1,5 +1,3 @@
-export const prerender = true;
-
 import { metaDocs } from '$lib/data/aco-meta-docs.json';
 import type { LayoutServerLoad } from './$types';
 
@@ -14,10 +12,10 @@ const introData = metaDocs.Einleitung;
 // Modify protoHTML
 const preface = prefData;
 const intro = {
-    text: linkifyFootnoteSuperscripts(introData.text),
-    footnotes: transformFootnotesIntroduction(introData.footnotes)
+	text: linkifyFootnoteSuperscripts(introData.text),
+	footnotes: transformFootnotesIntroduction(introData.footnotes)
 };
 
 export const load: LayoutServerLoad = async () => {
-    return { intro, preface, abbData, litData };
+	return { intro, preface, abbData, litData };
 };
