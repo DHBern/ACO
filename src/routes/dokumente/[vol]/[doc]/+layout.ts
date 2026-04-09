@@ -1,14 +1,12 @@
-export const prerender = true;
-
 import { metaData } from '$lib/data/aco-metadata.json';
 
 import type { LayoutLoad } from '../../$types';
 
-export const load: LayoutLoad = async ({params}) => {
+export const load: LayoutLoad = async ({ params }) => {
 	// URL Parameters
 	const slug_vol = params.vol;
 	const slug_doc = params.doc;
-		
+
 	// Get corresponding data
 	const doc = metaData.find(({ slug: s }) => s === slug_doc);
 
@@ -23,6 +21,6 @@ export const load: LayoutLoad = async ({params}) => {
 	return {
 		slug_vol,
 		slug_doc,
-		docMetadata,
+		docMetadata
 	};
-}
+};
