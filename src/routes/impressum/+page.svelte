@@ -53,7 +53,7 @@
 				href="https://www.uni-bonn.de/de/impressum"
 				target="_blank"
 				rel="noopener noreferrer">Impressum der Universität Bonn</a
-			>
+			>.
 		</p>
 	</div>
 </div>
