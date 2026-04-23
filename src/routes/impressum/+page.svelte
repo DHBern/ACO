@@ -47,7 +47,7 @@
 		</p>
 
 		<p class="mt-10">
-			Wir verweisen Sie ausserdem auf das
+			Wir verweisen außerdem auf das
 			<a
 				class="text-secondary-500"
 				href="https://www.uni-bonn.de/de/impressum"
