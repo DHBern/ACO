@@ -82,8 +82,9 @@
 
 		// Update scrollposition to where user was before new unit was loaded
 		const newHeight =
-			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
+		document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
 		elContainerContentInner.scrollTo({ top: newHeight - oldHeight, behavior: 'instant' });
+		console.log('ssss', newHeight, oldHeight, newHeight-oldHeight)
 
 		// Reset the top-reference of all preexisting notes
 		loadedUnits.slice(1).forEach((unit) => {
@@ -132,7 +133,7 @@
 	async function loadMore(oldURL: string | undefined = undefined) {
 		// if-if (instead of if-elseif) is important since
 		// 	(1) both buttons can be visible
-		//  (2) inViewportNext can stay get stuck 'true' after scrolling to the bottom, which leads to button element being destroyed.
+		//  (2) inViewportNext can get stuck 'true' after scrolling to the bottom, which leads to button element being destroyed.
 		if (inViewportNext.current) {
 			await handleAddNextUnit();
 			if (oldURL) {
@@ -152,7 +153,7 @@
 		inViewportPrev.current; // track changes for effect
 		inViewportNext.current; // track changes for effect
 		tick().then(() => {
-			if (finishedInitScroll && finishedInitLoading) {
+			if (finishedInitScroll && finishedInitLoading && lastScrollSource === 'containerInner') {
 				loadMore();
 			}
 		});
@@ -208,11 +209,23 @@
 
 	// --- Handle Initial Scroll of window and content (depending on Search Params) ---------------------------
 
-	// Runed ScrollState for Initial Scroll of Window
+	// Track which scroll input caused a loadButton to enter viewport
+	let lastScrollSource: 'containerInner' | 'window' | null = null;
+	let scrollSourceTimeout: ReturnType<typeof setTimeout> | null = null;
+		
+	function markScrollSource(src: 'containerInner' | 'window') {
+		lastScrollSource = src;
+		if (scrollSourceTimeout) clearTimeout(scrollSourceTimeout);
+		scrollSourceTimeout = setTimeout(() => (lastScrollSource = null), 200);
+	}
+
+	// Runed ScrollState on Window
 	const scrollStateInitWindow = new ScrollState({
 		element: () => window,
 		behavior: 'smooth',
+		onScroll: () => markScrollSource('window'),
 		onStop: async () => {
+			// handle initial scroll
 			if (finishedInitScroll) return;
 			const oldURL = `${page.url.pathname}${page.url.search}`;
 			await loadMore(oldURL);
@@ -220,7 +233,15 @@
 			finishedInitScroll = true;
 		}
 	});
+	
+	// Runed ScrollState on Container
+	const containerScroll = new ScrollState({
+		element: () => (elContainerContentInner as HTMLElement),
+		onScroll: () => markScrollSource('containerInner'),
+		onStop: () => markScrollSource('containerInner'),
+	});
 
+	
 	function initialScroll() {
 		if (page.url.searchParams.get('line') || page.url.searchParams.get('page')) {
 			// scroll window to document content
@@ -274,7 +295,7 @@
 	}}
 />
 
-<!-- container must be a positioned for scroll-to-line to work as expected! -->
+<!-- container must be positioned for scroll-to-line to work as expected! -->
 <div
 	bind:this={elContainerContent}
 	class="bg-surface-50-950 relative mx-auto h-[calc(100vh*0.8)] w-[calc(100%-40px)] max-w-[1900px] shadow-md"
