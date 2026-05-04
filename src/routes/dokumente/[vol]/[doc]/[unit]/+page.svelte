@@ -83,7 +83,7 @@
 		// Update scrollposition to where user was before new unit was loaded
 		const newHeight =
 			document.querySelector('.containerText')?.getBoundingClientRect().height || oldHeight;
-		elContainerContent.scrollTo({ top: newHeight - oldHeight, behavior: 'instant' });
+		elContainerContentInner.scrollTo({ top: newHeight - oldHeight, behavior: 'instant' });
 
 		// Reset the top-reference of all preexisting notes
 		loadedUnits.slice(1).forEach((unit) => {
